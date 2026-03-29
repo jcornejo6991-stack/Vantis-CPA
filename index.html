@@ -248,6 +248,42 @@
       background: rgba(10, 53, 33, 0.08);
     }
 
+    /* Sideways dropdown for niches */
+    .nav-dropdown-sideways {
+      position: relative;
+    }
+    .nav-dropdown-submenu {
+      position: absolute;
+      left: 100%;
+      top: 0;
+      background: rgba(5, 40, 24, 0.95);
+      border-radius: 8px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      display: none;
+      margin-left: 4px;
+      min-width: 180px;
+      z-index: 1000;
+    }
+    .nav-dropdown-sideways:hover .nav-dropdown-submenu {
+      opacity: 1;
+      visibility: visible;
+      display: block;
+    }
+    .nav-dropdown-submenu a {
+      display: block;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.15s ease;
+    }
+    .nav-dropdown-submenu a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
     .nav-contact {
       display: flex;
       flex-direction: column;
@@ -1126,37 +1162,49 @@ const practicesData = {
     </a>
 
     <ul class="nav-links" role="list">
-      <!-- Practice Dropdowns -->
-      <li class="nav-dropdown" id="nav-practices">
-        <!-- Will be populated by JavaScript -->
+      <li class="nav-dropdown">
+        <a href="#">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="#services">Tax Strategy</a>
+          <a href="#services">Compliance</a>
+          <a href="#services">Advisory</a>
+        </div>
       </li>
+
+      <li class="nav-dropdown" id="nav-industries">
+        <a href="#">Industries</a>
+        <div class="nav-dropdown-menu" id="industries-menu">
+          <!-- Will be populated by JavaScript -->
+        </div>
+      </li>
+
       <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
       <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
     </ul>
 
     <script>
-      // Render practice dropdowns in nav
-      const navPractices = document.getElementById('nav-practices');
+      // Render industries with niche submenus in nav
+      const industriesMenu = document.getElementById('industries-menu');
       Object.values(practicesData).forEach(practice => {
         const li = document.createElement('li');
-        li.className = 'nav-dropdown';
+        li.className = 'nav-dropdown nav-dropdown-sideways';
 
         const link = document.createElement('a');
         link.href = practice.href;
         link.textContent = practice.name;
         li.appendChild(link);
 
-        const menu = document.createElement('div');
-        menu.className = 'nav-dropdown-menu';
+        const submenu = document.createElement('div');
+        submenu.className = 'nav-dropdown-submenu';
         practice.niches.forEach(niche => {
           const nicheLink = document.createElement('a');
           nicheLink.href = niche.href;
           nicheLink.textContent = niche.name;
-          menu.appendChild(nicheLink);
+          submenu.appendChild(nicheLink);
         });
-        li.appendChild(menu);
+        li.appendChild(submenu);
 
-        navPractices.appendChild(li);
+        industriesMenu.appendChild(li);
       });
     </script>
 
