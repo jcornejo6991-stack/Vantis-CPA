@@ -175,7 +175,7 @@
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 40px;
+      gap: 80px;
       list-style: none;
       margin: 0 auto;
       position: relative;
@@ -209,7 +209,7 @@
     }
     .nav-dropdown-menu {
       position: absolute;
-      top: calc(100% + 12px);
+      top: calc(100% + 16px);
       left: 0;
       background: #fff;
       border: 1px solid #e0e0e0;
@@ -220,13 +220,18 @@
       gap: 0;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.2s, visibility 0.2s;
+      transition: opacity 0.3s, visibility 0.3s;
       z-index: 9999;
       min-width: 200px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       pointer-events: none;
     }
     .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+    .nav-dropdown-menu:hover {
       opacity: 1;
       visibility: visible;
       pointer-events: auto;
@@ -252,7 +257,7 @@
     }
     .nav-dropdown-submenu {
       position: absolute;
-      left: calc(100% + 12px);
+      left: calc(100% + 16px);
       top: 0;
       background: #fff;
       border: 1px solid #e0e0e0;
@@ -260,7 +265,7 @@
       padding: 8px 0;
       opacity: 0;
       visibility: hidden;
-      transition: opacity 0.2s ease, visibility 0.2s ease;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
       display: none;
       min-width: 180px;
       z-index: 1000;
