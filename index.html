@@ -730,6 +730,49 @@
     }
     .industry-card:hover .industry-link { gap: 8px; }
 
+    .industry-card-wrapper {
+      position: relative;
+    }
+    .industry-dropdown {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(5, 40, 24, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 12px;
+      min-width: 200px;
+      margin-top: 8px;
+      padding: 8px 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.2s ease, visibility 0.2s ease;
+      z-index: 10;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .industry-card-wrapper:hover .industry-dropdown {
+      opacity: 1;
+      visibility: visible;
+    }
+    .industry-sub-niche {
+      display: block;
+      padding: 10px 16px;
+      color: #fff;
+      font-size: 13px;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+    .industry-sub-niche:hover {
+      background: rgba(255, 255, 255, 0.1);
+      color: #fff;
+    }
+    .industry-sub-niche:first-child {
+      padding-top: 12px;
+    }
+    .industry-sub-niche:last-child {
+      padding-bottom: 12px;
+    }
+
     /* ─── ABOUT ─── */
     .about { padding: 80px 0; background: linear-gradient(to bottom, var(--bg) 0%, #fff 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
     .about-header { margin-bottom: 48px; }
