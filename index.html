@@ -1089,8 +1089,14 @@
     .footer-legal a { font-size: 13px; color: #3a6b4f; text-decoration: none; }
     .footer-legal a:hover { color: #7aaa8f; }
 
+    /* Desktop: no wrap */
+    .services-header .section-subheading { white-space: nowrap; }
+    .industries-header .section-subheading { white-space: nowrap; }
+
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
+      .services-header .section-subheading { white-space: normal; }
+      .industries-header .section-subheading { white-space: normal; }
       .diff-grid { grid-template-columns: 1fr 1fr; }
       .services-grid { grid-template-columns: 1fr 1fr; }
       .about-grid { grid-template-columns: 1fr; gap: 36px; }
