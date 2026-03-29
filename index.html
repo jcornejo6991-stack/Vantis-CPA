@@ -96,14 +96,17 @@
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
+      padding-top: var(--nav-height);
     }
 
     /* ─── NAV ─── */
     .nav {
-      position: sticky;
+      position: fixed;
       top: 0;
+      left: 0;
+      right: 0;
       z-index: 100;
-      background: #052818;
+      background: rgba(5, 40, 24, 0.95);
       border-bottom: none;
       border-radius: 0;
       height: var(--nav-height);
