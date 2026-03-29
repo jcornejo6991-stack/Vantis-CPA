@@ -1369,32 +1369,55 @@ const practicesData = {
       <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Serve</h2>
       <p class="section-subheading fade-up fade-up-d2">We've built dedicated practices for clients with specific needs. Select your situation for a tailored experience.</p>
     </div>
-    <div class="industries-grid">
+    <div class="industries-grid" id="industries-grid">
+      <!-- Will be populated by JavaScript -->
+    </div>
 
-      <a href="/founders/" class="industry-card fade-up fade-up-d1" data-accent="founders">
-        <h3 class="industry-title">Founders &amp; Investors</h3>
-        <p class="industry-desc">Startup founders, day traders, crypto holders, and e-commerce sellers. Equity compensation planning, crypto tax, entity structuring, and investor-ready financials.</p>
-        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
-      </a>
+    <script>
+      // Render industries from practicesData
+      const industriesGrid = document.getElementById('industries-grid');
+      Object.values(practicesData).forEach((practice, index) => {
+        const delayClass = `fade-up-d${index + 1}`;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'industry-card-wrapper';
 
-      <a href="/expats/" class="industry-card fade-up fade-up-d2" data-accent="expats">
-        <h3 class="industry-title">US Expats</h3>
-        <p class="industry-desc">Americans living and working abroad. Foreign Earned Income Exclusion, Foreign Tax Credit, FBAR, Streamlined Filing Procedures, and treaty positions handled correctly.</p>
-        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
-      </a>
+        const card = document.createElement('a');
+        card.href = practice.href;
+        card.className = `industry-card fade-up ${delayClass}`;
+        card.setAttribute('data-accent', practice.accent);
 
-      <a href="/latam/" class="industry-card fade-up fade-up-d3" data-accent="latam">
-        <h3 class="industry-title">Latin American Families</h3>
-        <p class="industry-desc">LATAM investors and families with US presence. FIRPTA withholding, Form 5472, cross-border structures, and full bilingual (EN/ES) service throughout the engagement.</p>
-        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
-      </a>
+        const title = document.createElement('h3');
+        title.className = 'industry-title';
+        title.textContent = practice.name;
+        card.appendChild(title);
 
-      <a href="/local/" class="industry-card fade-up fade-up-d4" data-accent="local">
-        <h3 class="industry-title">South Florida Business</h3>
-        <p class="industry-desc">Local business owners, contractors, and real estate investors. S-Corp elections, cost segregation studies, full back-office support, and year-round advisory.</p>
-        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
-      </a>
+        const desc = document.createElement('p');
+        desc.className = 'industry-desc';
+        desc.textContent = practice.niches.map(n => n.name).join(', ') + '. Click to explore.';
+        card.appendChild(desc);
 
+        const link = document.createElement('span');
+        link.className = 'industry-link';
+        link.innerHTML = 'Explore <span aria-hidden="true">&#8594;</span>';
+        card.appendChild(link);
+
+        wrapper.appendChild(card);
+
+        // Add dropdown
+        const dropdown = document.createElement('div');
+        dropdown.className = 'industry-dropdown';
+        practice.niches.forEach(niche => {
+          const nicheLink = document.createElement('a');
+          nicheLink.href = niche.href;
+          nicheLink.className = 'industry-sub-niche';
+          nicheLink.textContent = niche.name;
+          dropdown.appendChild(nicheLink);
+        });
+        wrapper.appendChild(dropdown);
+
+        industriesGrid.appendChild(wrapper);
+      });
+    </script>
     </div>
   </div>
 </section>
