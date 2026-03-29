@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Payroll for Expat Employers & Self-Employed — Vantis CPA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Payroll and self-employment tax guidance for expats. SE tax analysis, Social Security Totalization Agreements, W-2 for foreign postings, and 1099 coordination. Licensed CPA.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vantiscpa.com/expats/payroll.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Payroll for Expat Employers & Self-Employed — Vantis CPA">
+<meta property="og:description" content="Self-employment tax analysis, Totalization Agreement review, and payroll compliance for Americans working abroad as employees or self-employed.">
+<meta property="og:url" content="https://vantiscpa.com/expats/payroll.html">
+<meta property="og:site_name" content="Vantis CPA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Payroll for Expat Employers & Self-Employed — Vantis CPA">
+<meta name="twitter:description" content="SE tax, Totalization Agreements, and payroll for Americans living and working abroad.">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --accent:       #2c5f8a;
+    --accent-light: #e8f0f7;
+    --bg:           #f4f5f7;
+    --text-dark:    #1a2035;
+    --text-mid:     #4a5568;
+    --text-body:    #5a6078;
+    --white:        #ffffff;
+    --border:       rgba(26,32,53,0.09);
+    --shadow:       0 2px 16px rgba(26,32,53,0.07);
+    --card-radius:  14px;
+    --serif:        'Playfair Display', Georgia, serif;
+    --sans:         'Inter', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-body); font-family: var(--sans); font-weight: 400; line-height: 1.7; font-size: 16px; overflow-x: hidden; }
+
+  #nav { position: sticky; top: 12px; z-index: 100; display: flex; align-items: center; justify-content: space-between; background: #1e2556; border-radius: 40px; margin: 12px 20px 0; padding: 10px 20px 10px 14px; box-shadow: 0 4px 24px rgba(26,32,53,0.18); }
+  .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .nav-brand-mark { width: 32px; height: 32px; background: var(--accent); color: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 13px; font-weight: 600; letter-spacing: 0.03em; flex-shrink: 0; }
+  .nav-brand-name { font-family: var(--sans); font-size: 14px; font-weight: 500; color: #fff; letter-spacing: -0.01em; }
+  .nav-right { display: flex; align-items: center; gap: 16px; }
+  .nav-back { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); text-decoration: none; transition: color 0.2s; }
+  .nav-back:hover { color: #fff; }
+  .nav-cta { font-size: 13px; font-weight: 600; color: #fff; text-decoration: none; background: var(--accent); border-radius: 20px; padding: 5px 14px; transition: background 0.2s; }
+  .nav-cta:hover { background: #245075; }
+
+  .section { padding: 80px 20px; }
+  .container { max-width: 1060px; margin: 0 auto; }
+  .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .section-headline { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); font-weight: 700; color: var(--text-dark); line-height: 1.25; letter-spacing: -0.02em; margin-bottom: 16px; }
+  .section-sub { font-size: 16px; color: var(--text-body); max-width: 600px; margin-bottom: 48px; }
+
+  #hero { padding: 96px 20px 80px; background: var(--white); border-bottom: 1px solid var(--border); }
+  #hero .container { max-width: 760px; text-align: center; }
+  .hero-eyebrow { display: inline-block; font-size: 12px; font-weight: 600; letter-spacing: 0.11em; text-transform: uppercase; color: var(--accent); background: var(--accent-light); border-radius: 20px; padding: 5px 14px; margin-bottom: 28px; }
+  .hero-headline { font-family: var(--serif); font-size: clamp(32px, 5vw, 54px); font-weight: 700; color: var(--text-dark); line-height: 1.18; letter-spacing: -0.02em; margin-bottom: 24px; }
+  .hero-headline em { font-style: italic; color: var(--accent); }
+  .hero-sub { font-size: 17px; line-height: 1.75; color: var(--text-body); max-width: 580px; margin: 0 auto 36px; }
+  .btn-primary { display: inline-block; background: var(--accent); color: #fff; font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; text-decoration: none; transition: background 0.2s, transform 0.15s; border: none; cursor: pointer; }
+  .btn-primary:hover { background: #245075; transform: translateY(-1px); }
+
+  #included { background: var(--white); }
+  .cards-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+  .card { background: var(--bg); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 28px 24px; transition: box-shadow 0.2s, transform 0.2s; }
+  .card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .card-icon { width: 40px; height: 40px; background: var(--accent-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 16px; }
+  .card-title { font-family: var(--serif); font-size: 17px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+  .card-body { font-size: 14px; line-height: 1.65; color: var(--text-body); }
+
+  #how { background: var(--bg); }
+  .steps-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; position: relative; }
+  .steps-row::before { content: ''; position: absolute; top: 24px; left: calc(16.66% + 16px); right: calc(16.66% + 16px); height: 1px; background: linear-gradient(90deg, var(--accent) 0%, var(--accent-light) 100%); opacity: 0.3; }
+  .step { text-align: center; padding: 0 8px; }
+  .step-num { width: 48px; height: 48px; background: var(--accent); color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 700; margin: 0 auto 20px; font-family: var(--serif); }
+  .step-title { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--text-dark); margin-bottom: 10px; }
+  .step-body { font-size: 14px; line-height: 1.65; color: var(--text-body); }
+
+  #situations { background: var(--white); }
+  .situations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .situation-card { background: var(--accent-light); border-radius: var(--card-radius); padding: 28px 24px; border-left: 3px solid var(--accent); }
+  .situation-tag { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .situation-scenario { font-family: var(--serif); font-size: 16px; font-weight: 600; color: var(--text-dark); line-height: 1.4; margin-bottom: 10px; }
+  .situation-body { font-size: 14px; line-height: 1.65; color: var(--text-mid); }
+
+  #related { background: var(--bg); }
+  .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+  .related-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--card-radius); padding: 28px 24px; text-decoration: none; display: block; transition: box-shadow 0.2s, transform 0.2s; }
+  .related-card:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+  .related-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+  .related-title { font-family: var(--serif); font-size: 18px; font-weight: 600; color: var(--text-dark); margin-bottom: 8px; }
+  .related-body { font-size: 14px; line-height: 1.65; color: var(--text-body); }
+  .related-arrow { display: inline-block; margin-top: 14px; font-size: 13px; font-weight: 600; color: var(--accent); }
+
+  #intake { background: #1a2035; color: #fff; padding: 80px 20px; }
+  #intake .container { max-width: 640px; text-align: center; }
+  .intake-label { font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-light); margin-bottom: 14px; }
+  .intake-headline { font-family: var(--serif); font-size: clamp(26px, 3.5vw, 36px); font-weight: 700; color: #fff; margin-bottom: 12px; letter-spacing: -0.02em; }
+  .intake-sub { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 40px; }
+  .intake-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .form-field { display: flex; flex-direction: column; gap: 6px; }
+  .form-field label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); letter-spacing: 0.04em; }
+  .form-field input, .form-field textarea { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; color: #fff; font-family: var(--sans); font-size: 15px; padding: 12px 14px; outline: none; transition: border-color 0.2s; width: 100%; }
+  .form-field input::placeholder, .form-field textarea::placeholder { color: rgba(255,255,255,0.3); }
+  .form-field input:focus, .form-field textarea:focus { border-color: var(--accent); }
+  .form-field textarea { resize: vertical; min-height: 110px; }
+  .btn-submit { background: var(--accent); color: #fff; font-size: 15px; font-weight: 600; padding: 14px 32px; border-radius: 30px; border: none; cursor: pointer; transition: background 0.2s, transform 0.15s; margin-top: 6px; align-self: center; }
+  .btn-submit:hover { background: #245075; transform: translateY(-1px); }
+  .form-success { display: none; background: rgba(44,95,138,0.25); border: 1px solid var(--accent); border-radius: var(--card-radius); padding: 32px; text-align: center; color: #fff; }
+  .form-success h3 { font-family: var(--serif); font-size: 22px; margin-bottom: 10px; }
+  .form-success p { font-size: 15px; color: rgba(255,255,255,0.75); }
+
+  footer { background: #1a2035; border-top: 1px solid rgba(255,255,255,0.06); padding: 48px 20px; color: rgba(255,255,255,0.55); font-size: 14px; }
+  footer .container { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px; }
+  .footer-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .footer-brand-mark { width: 28px; height: 28px; background: var(--accent); color: #fff; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 11px; font-weight: 600; }
+  .footer-brand-name { font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.7); }
+  .footer-contact { line-height: 1.8; }
+  .footer-phone { color: var(--accent); font-weight: 600; text-decoration: none; font-size: 15px; display: block; }
+  .footer-email { color: rgba(255,255,255,0.55); text-decoration: none; }
+  .footer-email:hover { color: rgba(255,255,255,0.85); }
+  .footer-nav { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+  .footer-link { color: rgba(255,255,255,0.55); text-decoration: none; font-size: 13px; transition: color 0.2s; }
+  .footer-link:hover { color: rgba(255,255,255,0.85); }
+  .footer-copy { width: 100%; text-align: center; margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 12px; }
+
+  .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+  @media (max-width: 640px) {
+    .steps-row { grid-template-columns: 1fr; gap: 24px; }
+    .steps-row::before { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-nav { align-items: flex-start; }
+    footer .container { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="/expats/" class="nav-brand">
+    <div class="nav-brand-mark">V</div>
+    <span class="nav-brand-name">Vantis</span>
+  </a>
+  <div class="nav-right">
+    <a href="/expats/" class="nav-back">← Expats</a>
+    <a href="/" class="nav-cta">Vantis ↗</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-eyebrow">US Expat Employment Services</div>
+    <h1 class="hero-headline">Payroll for Expat Employers<br><em>&amp; Self-Employed</em></h1>
+    <p class="hero-sub">Self-employment tax and payroll compliance look different when you live abroad. Whether you're a remote employee, a freelancer with 1099s, or an employer with a foreign posting, we clarify what you owe — and what you might not have to pay at all.</p>
+    <a href="#intake" class="btn-primary">Start Your Intake</a>
+  </div>
+</section>
+
+<section id="included" class="section">
+  <div class="container">
+    <div class="section-label">What's Included</div>
+    <h2 class="section-headline">Payroll and SE tax guidance designed for expats</h2>
+    <p class="section-sub">Expat employment situations don't fit the standard payroll template. We work through the specific rules that apply to your situation — including treaties that can eliminate double taxation on Social Security.</p>
+    <div class="cards-grid">
+      <div class="card fade-up">
+        <div class="card-icon">📝</div>
+        <div class="card-title">Self-Employment Tax Analysis for Expats</div>
+        <div class="card-body">US citizens abroad are generally still subject to SE tax on self-employment income — but Totalization Agreements with certain countries may reduce or eliminate this obligation. We analyze your specific country and income situation.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-icon">🤝</div>
+        <div class="card-title">Social Security Totalization Agreement Review</div>
+        <div class="card-body">The US has Totalization Agreements with 30+ countries that coordinate Social Security coverage and prevent double contributions. We review your eligibility and help you obtain the certificate of coverage if you qualify for an exemption.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-icon">📋</div>
+        <div class="card-title">W-2 for US Employer with Foreign Posting</div>
+        <div class="card-body">If you're a US employer who has posted an employee abroad, their W-2 requires special handling — including foreign wages, tax equalization adjustments, and FICA treatment under any applicable Totalization Agreement.</div>
+      </div>
+      <div class="card fade-up">
+        <div class="card-icon">🧾</div>
+        <div class="card-title">1099 Coordination for Expat Contractors</div>
+        <div class="card-body">Multiple 1099s from US clients, combined with foreign wages or contract income, create SE tax complexity. We reconcile all income sources, apply the correct SE tax treatment, and document your filing position.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="section">
+  <div class="container">
+    <div class="section-label">Process</div>
+    <h2 class="section-headline">How we work through your payroll situation</h2>
+    <p class="section-sub">Payroll and SE tax questions for expats require analysis before action. Here's how we approach it.</p>
+    <div class="steps-row">
+      <div class="step fade-up">
+        <div class="step-num">1</div>
+        <div class="step-title">Situation Analysis</div>
+        <div class="step-body">We review your employment arrangement, country of residence, income sources, and any existing employer payroll setup to determine exactly which SE tax rules and agreements apply to your situation.</div>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">2</div>
+        <div class="step-title">Totalization &amp; SE Tax Strategy</div>
+        <div class="step-body">Where a Totalization Agreement applies, we help you obtain a Certificate of Coverage from Social Security Administration and document the exemption. Where SE tax is owed, we compute the correct amount and any available deductions.</div>
+      </div>
+      <div class="step fade-up">
+        <div class="step-num">3</div>
+        <div class="step-title">Filing &amp; Documentation</div>
+        <div class="step-body">We prepare Schedule SE and all related schedules, coordinate with your overall expat tax return, and provide documentation of your SE tax position for your records and any future IRS inquiries.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="situations" class="section">
+  <div class="container">
+    <div class="section-label">Common Situations</div>
+    <h2 class="section-headline">We've seen this before</h2>
+    <p class="section-sub">Employment situations abroad create confusion around SE tax obligations. These are the most common scenarios we resolve.</p>
+    <div class="situations-grid">
+      <div class="situation-card fade-up">
+        <div class="situation-tag">Situation 1</div>
+        <div class="situation-scenario">Expat working remotely for a US employer, unsure about SE tax</div>
+        <div class="situation-body">If you're a W-2 employee of a US company working remotely from abroad, you're generally not subject to SE tax — but your FICA treatment depends on your employment agreement and whether a Totalization Agreement applies to your host country. The details matter.</div>
+      </div>
+      <div class="situation-card fade-up">
+        <div class="situation-tag">Situation 2</div>
+        <div class="situation-scenario">American abroad with both US and foreign employment income</div>
+        <div class="situation-body">When you have a W-2 from a US employer and wages from a foreign employer in the same year, the FICA and SE tax treatment of each income stream is separate. We analyze both and prevent overpayment of Social Security contributions.</div>
+      </div>
+      <div class="situation-card fade-up">
+        <div class="situation-tag">Situation 3</div>
+        <div class="situation-scenario">Expat consultant with multiple 1099s and foreign contract wages</div>
+        <div class="situation-body">Multiple US clients issuing 1099s, combined with foreign contract income, creates a complex SE tax calculation. We consolidate all self-employment income, apply the correct deductions, and document the FEIE interaction with SE tax correctly.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="related" class="section">
+  <div class="container">
+    <div class="section-label">Related Issues</div>
+    <h2 class="section-headline">Connected expat employment issues</h2>
+    <p class="section-sub">These topics frequently come up during expat payroll and SE tax work. We handle them as part of an integrated engagement.</p>
+    <div class="related-grid">
+      <a href="/expats/totalization.html" class="related-card fade-up">
+        <div class="related-label">Treaty Issue</div>
+        <div class="related-title">Social Security Totalization Agreements</div>
+        <div class="related-body">Totalization Agreements with 30+ countries can eliminate the requirement to pay Social Security taxes in both the US and the host country. Qualifying and obtaining a certificate of coverage requires specific documentation and timelines.</div>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+      <a href="/expats/se-tax.html" class="related-card fade-up">
+        <div class="related-label">Tax Issue</div>
+        <div class="related-title">Self-Employment Tax Abroad</div>
+        <div class="related-body">The FEIE reduces your income tax — but does not reduce self-employment tax. This surprises many expat freelancers who expected their exclusion to eliminate their entire US tax liability. Understanding the interaction is essential for accurate estimated payments.</div>
+        <span class="related-arrow">Learn more →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="intake">
+  <div class="container">
+    <div class="intake-label">Get Started</div>
+    <h2 class="intake-headline">Tell us about your situation</h2>
+    <p class="intake-sub">No commitment required. We'll review what you send and follow up within one business day with next steps and transparent pricing.</p>
+    <form class="intake-form" id="intakeForm">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+      </div>
+      <div class="form-field">
+        <label for="country">Country of Residence</label>
+        <input type="text" id="country" name="country" placeholder="Where are you currently living?">
+      </div>
+      <div class="form-field">
+        <label for="situation">Your Situation</label>
+        <textarea id="situation" name="situation" placeholder="Tell us about your employment arrangement — W-2 employee, self-employed, 1099 contractor, US employer posting abroad, or a mix..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Send My Intake →</button>
+    </form>
+    <div class="form-success" id="formSuccess">
+      <h3>We received your intake.</h3>
+      <p>Someone from our team will follow up within one business day. Check your inbox — and your spam folder just in case.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <a href="/expats/" class="footer-brand">
+      <div class="footer-brand-mark">V</div>
+      <span class="footer-brand-name">Vantis CPA</span>
+    </a>
+    <div class="footer-contact">
+      <a href="tel:+17274551016" class="footer-phone">(727) 455-1016</a>
+      <a href="mailto:info@vantiscpa.com" class="footer-email">info@vantiscpa.com</a>
+    </div>
+    <div class="footer-nav">
+      <a href="/expats/" class="footer-link">← Back to Expats</a>
+      <a href="/" class="footer-link">Vantis ↗</a>
+    </div>
+    <div class="footer-copy">© 2025 Vantis CPA. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  document.getElementById('intakeForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const btn = this.querySelector('.btn-submit');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+    try {
+      await fetch('https://formspree.io/f/expat-payroll', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({ name: this.name.value, email: this.email.value, country: this.country.value, situation: this.situation.value, page: 'expats/payroll' })
+      });
+    } catch(err) {}
+    this.style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>

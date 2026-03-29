@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Vantis CPA</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #eef0f4;
+      --navy: #1e2556;
+      --navy2: #2d3561;
+      --text-body: #5a6078;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .monogram {
+      width: 56px;
+      height: 56px;
+      background: var(--navy);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 40px;
+    }
+    .monogram span {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #eef0f4;
+      letter-spacing: 1px;
+    }
+
+    .code {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-body);
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 400;
+      line-height: 1.1;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--text-body);
+      line-height: 1.7;
+      max-width: 360px;
+      margin: 0 auto 40px;
+    }
+
+    a.home-link {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: var(--navy);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(30,37,86,0.25);
+      padding-bottom: 2px;
+      transition: border-color 0.2s;
+    }
+    a.home-link:hover { border-color: var(--navy); }
+  </style>
+</head>
+<body>
+  <div class="monogram"><span>V</span></div>
+  <div class="code">404</div>
+  <h1>Page not found.</h1>
+  <p>The page you're looking for doesn't exist or may have moved.</p>
+  <a href="index.html" class="home-link">Return to Vantis →</a>
+</body>
+</html>

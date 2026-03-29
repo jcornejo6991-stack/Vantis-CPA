@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>South Florida Business CPA — Vantis CPA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="South Florida CPA for contractors, real estate investors, and business owners. S-corp elections, cost segregation, entity structure, and year-round tax strategy. No surprises.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://vantiscpa.com/local/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="South Florida Business CPA — Vantis CPA">
+<meta property="og:description" content="Local CPA for South Florida contractors, real estate investors, and business owners. Proactive, year-round tax strategy. No surprises.">
+<meta property="og:url" content="https://vantiscpa.com/local/">
+<meta property="og:site_name" content="Vantis CPA">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="South Florida Business CPA — Vantis CPA">
+<meta name="twitter:description" content="S-corp elections, cost segregation, and year-round tax strategy for South Florida businesses. Local CPA. Responsive. No surprises.">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["AccountingService", "LocalBusiness"],
+  "name": "Vantis CPA",
+  "description": "CPA and tax advisory for South Florida contractors, real estate investors, and business owners. S-corp election, entity structure, cost segregation, and year-round tax planning.",
+  "url": "https://vantiscpa.com/local/",
+  "telephone": "+17274551016",
+  "email": "info@vantiscpa.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "FL",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {"@type": "City", "name": "Miami", "addressRegion": "FL"},
+    {"@type": "City", "name": "Fort Lauderdale", "addressRegion": "FL"},
+    {"@type": "City", "name": "Boca Raton", "addressRegion": "FL"},
+    {"@type": "City", "name": "West Palm Beach", "addressRegion": "FL"},
+    {"@type": "City", "name": "Naples", "addressRegion": "FL"},
+    {"@type": "City", "name": "Coral Gables", "addressRegion": "FL"}
+  ],
+  "knowsLanguage": "en",
+  "hasCredential": "Licensed CPA, Florida",
+  "serviceType": ["S-Corp Election", "Cost Segregation", "Entity Formation", "Business Tax Return", "Bookkeeping", "Tax Planning", "Payroll", "Sales Tax Compliance"]
+}
+</script>
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:         #1e2556;
+  --navy-dark:    #141840;
+  --accent:       #2d6a4f;
+  --accent-mid:   #255c43;
+  --accent-light: #e8f2ee;
+  --bg:           #f4f5f7;
+  --white:        #ffffff;
+  --text:         #1a2035;
+  --text-body:    #5a6078;
+  --text-muted:   #8a8fa8;
+  --border:       rgba(26,32,53,0.09);
+  --shadow:       0 2px 16px rgba(26,32,53,0.07);
+  --shadow-md:    0 6px 28px rgba(26,32,53,0.11);
+  --shadow-lg:    0 12px 48px rgba(26,32,53,0.14);
+  --r-card:       14px;
+  --serif:        'Playfair Display', Georgia, serif;
+  --sans:         'Inter', system-ui, sans-serif;
+  --max:          1288px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+.container { max-width: var(--max); margin: 0 auto; padding: 0 34px; }
+
+/* ── NAVIGATION ── */
+#nav {
+  position: sticky;
+  top: 12px;
+  z-index: 100;
+  background: var(--navy);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 20px 10px 20px;
+  margin: 12px 20px 0;
+  border-radius: 40px;
+  box-shadow: 0 4px 24px rgba(20,24,64,0.22);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+#nav.scrolled {
+  background: var(--navy-dark);
+  box-shadow: 0 8px 32px rgba(10,15,40,0.34);
+}
+
+.nav-brand {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  white-space: nowrap;
+}
+.nav-brand-mark {
+  width: 30px; height: 30px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+}
+.nav-brand-name {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  letter-spacing: 0.01em;
+}
+
+.nav-right { display: flex; align-items: center; }
+.nav-back {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  padding: 7px 14px;
+  border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.18s, color 0.18s;
+  white-space: nowrap;
+}
+.nav-back:hover { color: #fff; background: rgba(255,255,255,0.1); }
+
+/* ── TYPOGRAPHY ── */
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--serif);
+  color: var(--text);
+  line-height: 1.25;
+}
+
+/* ── FADE UP ANIMATION ── */
+.fade-up {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.62s ease, transform 0.62s ease;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.fade-up.delay-1 { transition-delay: 0.08s; }
+.fade-up.delay-2 { transition-delay: 0.16s; }
+.fade-up.delay-3 { transition-delay: 0.24s; }
+.fade-up.delay-4 { transition-delay: 0.32s; }
+
+/* ── HERO ── */
+#hero {
+  padding: 100px 0 80px;
+  text-align: center;
+}
+.hero-inner { max-width: 780px; margin: 0 auto; }
+
+#hero h1 {
+  font-size: clamp(38px, 5.5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin-bottom: 24px;
+  line-height: 1.15;
+}
+#hero h1 em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.8;
+  color: var(--text-body);
+  max-width: 640px;
+  margin: 0 auto 36px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 16px 36px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 20px rgba(45,106,79,0.28);
+  letter-spacing: 0.01em;
+}
+.btn-primary:hover {
+  background: var(--accent-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(45,106,79,0.36);
+}
+.btn-primary:active { transform: translateY(0); }
+
+.hero-trust {
+  margin-top: 28px;
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.hero-trust span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero-trust span::before {
+  content: '·';
+  color: var(--accent);
+  font-size: 18px;
+  line-height: 1;
+}
+.hero-trust span:first-child::before { display: none; }
+
+/* ── SECTION COMMON ── */
+section { padding: 80px 0; }
+
+.section-label {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 14px;
+  display: block;
+}
+.section-title {
+  font-size: clamp(28px, 3.5vw, 40px);
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.section-sub {
+  font-size: 17px;
+  color: var(--text-body);
+  max-width: 560px;
+  line-height: 1.75;
+}
+
+/* ── WARNING SIGNS ── */
+#warnings {
+  background: var(--text);
+  padding: 80px 0;
+}
+#warnings .section-label { color: #a8c5b5; }
+#warnings .section-title { color: #fff; }
+
+.warnings-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2px;
+  margin-top: 48px;
+  border-radius: var(--r-card);
+  overflow: hidden;
+}
+
+.warning-card {
+  background: rgba(255,255,255,0.04);
+  padding: 36px 40px;
+  border: 1px solid rgba(255,255,255,0.07);
+  transition: background 0.22s;
+}
+.warning-card:hover { background: rgba(255,255,255,0.07); }
+
+.warning-num {
+  font-family: var(--serif);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--accent-light);
+  opacity: 0.5;
+  margin-bottom: 12px;
+  display: block;
+}
+.warning-title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 14px;
+  line-height: 1.3;
+}
+.warning-body {
+  font-size: 15px;
+  color: rgba(255,255,255,0.58);
+  line-height: 1.75;
+}
+
+/* ── WHY US ── */
+#why-us { background: var(--bg); }
+.why-us-header { margin-bottom: 48px; }
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why-card {
+  background: var(--white);
+  border-radius: var(--r-card);
+  padding: 36px 32px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  transition: box-shadow 0.22s, transform 0.22s;
+}
+.why-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.why-icon {
+  width: 44px; height: 44px;
+  background: var(--accent-light);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.why-icon svg { width: 22px; height: 22px; color: var(--accent); }
+
+.why-card h3 {
+  font-size: 19px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+.why-card p {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.75;
+}
+
+/* ── SERVICES GRID ── */
+#services { background: #eef0f4; }
+.services-header { margin-bottom: 48px; }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--r-card);
+  padding: 30px 28px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.22s, transform 0.22s, border-color 0.22s;
+}
+.service-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: rgba(45,106,79,0.2);
+}
+
+.service-card-title {
+  font-family: var(--serif);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.service-card-body {
+  font-size: 14px;
+  color: var(--text-body);
+  line-height: 1.72;
+  margin-bottom: 20px;
+  flex: 1;
+}
+.service-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.tag {
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.02em;
+}
+
+.service-arrow {
+  margin-top: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+/* ── ISSUE SPOTLIGHTS ── */
+#spotlights { background: var(--bg); }
+.spotlights-header { margin-bottom: 48px; }
+
+.spotlights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.spotlight-card {
+  background: var(--white);
+  border-radius: var(--r-card);
+  padding: 42px 40px;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.22s, transform 0.22s;
+  position: relative;
+  overflow: hidden;
+}
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: var(--accent);
+}
+.spotlight-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.spotlight-card h3 {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.spotlight-card p {
+  font-size: 15px;
+  color: var(--text-body);
+  line-height: 1.78;
+  margin-bottom: 28px;
+  flex: 1;
+}
+.spotlight-cta {
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.01em;
+}
+
+/* ── INTAKE FORM ── */
+#intake {
+  background: var(--text);
+  padding: 96px 0;
+}
+.intake-inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+#intake .section-label { color: #a8c5b5; }
+#intake .section-title { color: #fff; }
+#intake .section-sub { color: rgba(255,255,255,0.58); }
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.form-full { grid-column: 1 / -1; }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.form-group label {
+  font-family: var(--sans);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.55);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-family: var(--sans);
+  font-size: 15px;
+  color: #fff;
+  outline: none;
+  transition: border-color 0.18s, background 0.18s;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
+.form-group select option { background: #1a2035; color: #fff; }
+.form-group textarea { resize: vertical; min-height: 110px; line-height: 1.6; }
+.form-group input::placeholder,
+.form-group textarea::placeholder { color: rgba(255,255,255,0.28); }
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: rgba(45,106,79,0.7);
+  background: rgba(255,255,255,0.1);
+}
+
+.form-privacy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.38);
+  margin-top: 8px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.form-submit-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.btn-submit {
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  padding: 16px 52px;
+  cursor: pointer;
+  transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 20px rgba(45,106,79,0.35);
+  letter-spacing: 0.01em;
+}
+.btn-submit:hover {
+  background: var(--accent-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 28px rgba(45,106,79,0.45);
+}
+.btn-submit:active { transform: translateY(0); }
+
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 32px;
+  background: rgba(45,106,79,0.18);
+  border: 1px solid rgba(45,106,79,0.35);
+  border-radius: var(--r-card);
+  color: #fff;
+  margin-top: 24px;
+}
+.form-success h4 {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.form-success p { color: rgba(255,255,255,0.65); font-size: 15px; }
+
+/* ── FOOTER ── */
+#footer {
+  background: var(--navy-dark);
+  padding: 48px 0;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-contact {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-contact a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footer-contact a:hover { color: #fff; }
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+.footer-back {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  padding: 7px 14px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 24px;
+  transition: color 0.18s, background 0.18s;
+}
+.footer-back:hover { color: #fff; background: rgba(255,255,255,0.07); }
+
+.footer-copy {
+  font-size: 12px;
+  color: rgba(255,255,255,0.28);
+  text-align: right;
+}
+
+/* ── DIVIDER ── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .container { padding: 0 24px; }
+
+  #nav { margin: 10px 12px 0; padding: 10px 16px; }
+  .nav-brand-name { font-size: 13px; }
+
+  .warnings-grid { grid-template-columns: 1fr; }
+  .why-us-grid { grid-template-columns: 1fr; gap: 14px; }
+  .services-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .spotlights-grid { grid-template-columns: 1fr; }
+
+  .form-grid { grid-template-columns: 1fr; }
+  .form-full { grid-column: 1 / -1; }
+
+  #hero { padding: 72px 0 60px; }
+  .hero-sub { font-size: 16px; }
+
+  .warning-card { padding: 28px 28px; }
+  .spotlight-card { padding: 32px 28px; }
+
+  .footer-inner { flex-direction: column; align-items: flex-start; }
+  .footer-right { align-items: flex-start; }
+  .footer-copy { text-align: left; }
+}
+
+@media (max-width: 600px) {
+  .container { padding: 0 18px; }
+
+  #nav { margin: 8px 8px 0; }
+  .nav-brand-name { display: none; }
+
+  .services-grid { grid-template-columns: 1fr; }
+
+  #hero h1 { font-size: 34px; }
+  .hero-trust { gap: 12px; font-size: 12px; }
+
+  .section-title { font-size: 26px; }
+  section { padding: 60px 0; }
+  #intake { padding: 70px 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="/" class="nav-brand">
+    <div class="nav-brand-mark">V</div>
+    <span class="nav-brand-name">Vantis CPA</span>
+  </a>
+  <div class="nav-right">
+    <a href="/" class="nav-back">← Vantis</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow fade-up">For South Florida contractors, real estate investors &amp; business owners</span>
+      <h1 class="fade-up delay-1">You're probably paying more<br><em>than you need to.</em></h1>
+      <p class="hero-sub fade-up delay-2">Most South Florida businesses are over-paying taxes because their CPA is reactive, not proactive. S-corp elections, cost segregation, quarterly estimates, entity structure — these decisions happen throughout the year, not just in April.</p>
+      <a href="#intake" class="btn-primary fade-up delay-3">Get a free consultation</a>
+      <div class="hero-trust fade-up delay-4">
+        <span>Local CPA</span>
+        <span>Responsive</span>
+        <span>Transparent pricing</span>
+        <span>No surprises</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WARNING SIGNS -->
+<section id="warnings">
+  <div class="container">
+    <span class="section-label fade-up">Warning signs</span>
+    <h2 class="section-title fade-up delay-1">Signs you're leaving money on the table</h2>
+    <div class="warnings-grid">
+      <div class="warning-card fade-up delay-1">
+        <span class="warning-num">01</span>
+        <div class="warning-title">"Your CPA only calls you in March"</div>
+        <p class="warning-body">Proactive planning requires year-round engagement. If you only hear from your CPA at tax time, you're not getting advice. You're getting paperwork.</p>
+      </div>
+      <div class="warning-card fade-up delay-2">
+        <span class="warning-num">02</span>
+        <div class="warning-title">"You've never discussed your entity structure"</div>
+        <p class="warning-body">S-Corp election, LLC taxation, holding companies — these choices have real dollar consequences and windows that close. If it hasn't come up, that's a problem.</p>
+      </div>
+      <div class="warning-card fade-up delay-3">
+        <span class="warning-num">03</span>
+        <div class="warning-title">"You got a big surprise bill last April"</div>
+        <p class="warning-body">Quarterly estimates exist so you're never surprised. If you were, something went wrong in the planning — or there was no planning at all.</p>
+      </div>
+      <div class="warning-card fade-up delay-4">
+        <span class="warning-num">04</span>
+        <div class="warning-title">"You've never heard of cost segregation"</div>
+        <p class="warning-body">Real estate investors: accelerated depreciation is one of the most powerful tools in the tax code. If your CPA has never brought it up, ask yourself why.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why-us">
+  <div class="container">
+    <div class="why-us-header">
+      <span class="section-label fade-up">Why Vantis</span>
+      <h2 class="section-title fade-up delay-1">What working with us actually looks like</h2>
+    </div>
+    <div class="why-us-grid">
+      <div class="why-card fade-up delay-1">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </div>
+        <h3>Local and responsive</h3>
+        <p>Based in South Florida. We know the market, the industries, and the pace. We pick up the phone. We email back same day. No automated systems when you have a real question.</p>
+      </div>
+      <div class="why-card fade-up delay-2">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></svg>
+        </div>
+        <h3>Proactive, year-round</h3>
+        <p>Tax planning happens in January, June, September — not just April. We reach out before problems happen, not after. You shouldn't have to wonder what you owe.</p>
+      </div>
+      <div class="why-card fade-up delay-3">
+        <div class="why-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <h3>Transparent pricing</h3>
+        <p>You'll know what you pay before we start. No hourly surprises, no bills you didn't expect. Clear, flat-rate engagements for most services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- SERVICES GRID -->
+<section id="services">
+  <div class="container">
+    <div class="services-header">
+      <span class="section-label fade-up">What we do</span>
+      <h2 class="section-title fade-up delay-1">Services for South Florida businesses</h2>
+      <p class="section-sub fade-up delay-2">From tax strategy to day-to-day operations. Everything you need to run a clean, compliant, tax-efficient business.</p>
+    </div>
+    <div class="services-grid">
+
+      <a href="/local/tax.html" class="service-card fade-up delay-1">
+        <div class="service-card-title">Tax Strategy &amp; Preparation</div>
+        <p class="service-card-body">S-corp elections, reasonable compensation, quarterly estimates, year-end planning. We find what you're missing before April does.</p>
+        <div class="service-tags">
+          <span class="tag">S-Corp election</span>
+          <span class="tag">1120-S / 1065</span>
+          <span class="tag">Quarterly estimates</span>
+          <span class="tag">Year-end strategy</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+      <a href="/local/entity.html" class="service-card fade-up delay-2">
+        <div class="service-card-title">Entity Formation &amp; Maintenance</div>
+        <p class="service-card-body">LLC, S-Corp, C-Corp — structured correctly from day one. Annual reports, renewals, restructuring as your business grows.</p>
+        <div class="service-tags">
+          <span class="tag">LLC / S-Corp</span>
+          <span class="tag">Florida registered agent</span>
+          <span class="tag">Annual reports</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+      <a href="/local/operations.html" class="service-card fade-up delay-3">
+        <div class="service-card-title">Operations &amp; Admin</div>
+        <p class="service-card-body">Mail address, business banking referrals, notary. The infrastructure to keep your business running cleanly.</p>
+        <div class="service-tags">
+          <span class="tag">Mail address</span>
+          <span class="tag">Banking referrals</span>
+          <span class="tag">Notary</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+      <a href="/local/accounting.html" class="service-card fade-up delay-1">
+        <div class="service-card-title">Bookkeeping &amp; P&amp;L</div>
+        <p class="service-card-body">Monthly reconciliations, clean books, profit &amp; loss reports. QuickBooks Online. Financial statements ready for your lender, partner, or buyer.</p>
+        <div class="service-tags">
+          <span class="tag">QuickBooks Online</span>
+          <span class="tag">Monthly P&amp;L</span>
+          <span class="tag">Clean books</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+      <a href="/local/payroll.html" class="service-card fade-up delay-2">
+        <div class="service-card-title">Payroll</div>
+        <p class="service-card-body">Full payroll management through ADP or Gusto. Tax deposits, W-2 and 1099 processing. Done right, every time.</p>
+        <div class="service-tags">
+          <span class="tag">ADP / Gusto</span>
+          <span class="tag">W-2 / 1099</span>
+          <span class="tag">Tax deposits</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+      <a href="/local/compliance.html" class="service-card fade-up delay-3">
+        <div class="service-card-title">Sales Tax &amp; Compliance</div>
+        <p class="service-card-body">Florida sales tax, multi-state filing for businesses that have expanded, ITIN applications, W-9 coordination.</p>
+        <div class="service-tags">
+          <span class="tag">Florida sales tax</span>
+          <span class="tag">Multi-state filing</span>
+          <span class="tag">W-9 / ITIN</span>
+        </div>
+        <div class="service-arrow">Learn more →</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- ISSUE SPOTLIGHTS -->
+<section id="spotlights">
+  <div class="container">
+    <div class="spotlights-header">
+      <span class="section-label fade-up">Common blind spots</span>
+      <h2 class="section-title fade-up delay-1">Decisions that cost money if you get them wrong</h2>
+      <p class="section-sub fade-up delay-2">These aren't edge cases. They come up for most profitable small businesses — and most CPAs don't bring them up proactively.</p>
+    </div>
+    <div class="spotlights-grid">
+
+      <a href="/local/s-corp-election.html" class="spotlight-card fade-up delay-1">
+        <h3>S-Corp Election Timing</h3>
+        <p>Converting your LLC to S-Corp taxation is one of the most impactful tax moves for profitable small businesses. But there's a deadline — March 15 for most — and missing it costs you another full year. We evaluate whether S-Corp makes sense for your numbers and file it correctly.</p>
+        <span class="spotlight-cta">Learn more →</span>
+      </a>
+
+      <a href="/local/cost-segregation.html" class="spotlight-card fade-up delay-2">
+        <h3>Cost Segregation for Real Estate</h3>
+        <p>Real estate investors who skip cost segregation studies are leaving significant accelerated depreciation on the table. Bonus depreciation rules change frequently. This is a year-specific decision, and it's not automatic — your CPA has to know to do it.</p>
+        <span class="spotlight-cta">Learn more →</span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- INTAKE FORM -->
+<section id="intake">
+  <div class="container">
+    <div class="intake-inner">
+      <span class="section-label fade-up">Get started</span>
+      <h2 class="section-title fade-up delay-1">Tell us about your business</h2>
+      <p class="section-sub fade-up delay-2">No obligation, no sales pitch. Tell us what you're working with and we'll tell you honestly if we can help.</p>
+
+      <form id="gvForm" novalidate>
+        <div class="form-grid">
+
+          <div class="form-group fade-up delay-1">
+            <label for="f-name">Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Your name" autocomplete="name" required>
+          </div>
+
+          <div class="form-group fade-up delay-2">
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="you@company.com" autocomplete="email" required>
+          </div>
+
+          <div class="form-group fade-up delay-1">
+            <label for="f-entity">Entity type</label>
+            <select id="f-entity" name="entity" required>
+              <option value="" disabled selected>Select one</option>
+              <option>Sole proprietor</option>
+              <option>Single-member LLC</option>
+              <option>Multi-member LLC</option>
+              <option>S-Corporation</option>
+              <option>C-Corporation</option>
+              <option>Not yet formed</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group fade-up delay-2">
+            <label for="f-revenue">Annual revenue / profit</label>
+            <select id="f-revenue" name="revenue">
+              <option value="" disabled selected>Select range</option>
+              <option>Under $100K</option>
+              <option>$100K–$250K</option>
+              <option>$250K–$500K</option>
+              <option>$500K–$1M</option>
+              <option>Over $1M</option>
+              <option>Real estate investor (not applicable)</option>
+            </select>
+          </div>
+
+          <div class="form-group form-full fade-up delay-1">
+            <label for="f-concern">Biggest concern</label>
+            <select id="f-concern" name="concern">
+              <option value="" disabled selected>What's most pressing?</option>
+              <option>Paying too much in taxes</option>
+              <option>Never sure what I owe quarterly</option>
+              <option>Need better bookkeeping</option>
+              <option>IRS notice or problem</option>
+              <option>Starting a new business</option>
+              <option>Entity restructuring</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group form-full fade-up delay-2">
+            <label for="f-description">Anything else you'd like us to know?</label>
+            <textarea id="f-description" name="description" placeholder="Tell us a bit about your situation — industry, how long you've been in business, anything specific you're trying to solve."></textarea>
+          </div>
+
+          <div class="form-full form-submit-row fade-up delay-3">
+            <button type="submit" class="btn-submit">Send</button>
+            <p class="form-privacy">Confidential. No obligation. We reply within one business day.</p>
+          </div>
+
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <h4>We've got it.</h4>
+        <p>We'll review your information and follow up within one business day. No obligation — just an honest conversation about whether we can help.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-left">
+        <div class="footer-contact">
+          <a href="tel:+17274551016">(727) 455-1016</a>
+          <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
+        </div>
+      </div>
+      <div class="footer-right">
+        <a href="/" class="footer-back">← Vantis</a>
+        <span class="footer-copy">&copy; 2025 Vantis CPA. Licensed CPA, Florida.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  // Nav scroll effect
+  var nav = document.getElementById('nav');
+  window.addEventListener('scroll', function () {
+    nav.classList.toggle('scrolled', window.scrollY > 60);
+  }, { passive: true });
+
+  // Fade-up IntersectionObserver
+  var fadeEls = document.querySelectorAll('.fade-up');
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  fadeEls.forEach(function (el) { io.observe(el); });
+
+  // Form — gvSubmit pattern
+  function gvSubmit(e) {
+    e.preventDefault();
+    var form = document.getElementById('gvForm');
+    var nameVal = form.querySelector('#f-name').value.trim();
+    var emailVal = form.querySelector('#f-email').value.trim();
+    var entityVal = form.querySelector('#f-entity').value;
+
+    if (!nameVal || !emailVal || !entityVal) {
+      // Simple inline validation highlight
+      [{ id: 'f-name', val: nameVal }, { id: 'f-email', val: emailVal }, { id: 'f-entity', val: entityVal }].forEach(function (f) {
+        var el = document.getElementById(f.id);
+        if (!f.val) {
+          el.style.borderColor = 'rgba(220,80,80,0.7)';
+          el.addEventListener('input', function () { el.style.borderColor = ''; }, { once: true });
+        }
+      });
+      return;
+    }
+
+    var data = {
+      name: nameVal,
+      email: emailVal,
+      entity: entityVal,
+      revenue: form.querySelector('#f-revenue').value,
+      concern: form.querySelector('#f-concern').value,
+      description: form.querySelector('#f-description').value.trim(),
+      source: 'local-landing',
+      timestamp: new Date().toISOString()
+    };
+
+    // Send to Formspree or equivalent — replace endpoint as needed
+    var endpoint = 'https://formspree.io/f/local-intake';
+    fetch(endpoint, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    }).catch(function () {
+      // Fail silently — still show success to user; review form submissions manually if needed
+    });
+
+    form.style.display = 'none';
+    var success = document.getElementById('formSuccess');
+    success.style.display = 'block';
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  document.getElementById('gvForm').addEventListener('submit', gvSubmit);
+})();
+</script>
+</body>
+</html>

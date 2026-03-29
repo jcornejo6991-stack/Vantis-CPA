@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option A v4 — Floating Sections</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: #1a1a2e;
+    padding: 24px;
+    color: #fff;
+  }
+
+  h1 { text-align: center; font-size: 1.05rem; letter-spacing: .08em; text-transform: uppercase; color: #8e92be; margin-bottom: 4px; }
+  .tagline { text-align: center; font-size: 0.8rem; color: #5a5e7e; margin-bottom: 28px; }
+
+  /* ── Two mock-page columns ── */
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 920px; margin: 0 auto; }
+  .col-label { text-align: center; font-size: .68rem; letter-spacing: .12em; text-transform: uppercase; color: #8e92be; margin-bottom: 8px; }
+  .col-sub { text-align: center; font-size: .65rem; color: #5a5e7e; margin-bottom: 10px; margin-top: -5px; }
+
+  /* ───────────────────────────────────
+     PAGE WRAPPER — the "sticky bg" lives here.
+     Sections float on top as cards.
+  ─────────────────────────────────── */
+
+  /* DESIGN A: dot-grid sticky bg */
+  .page-dots {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    /* This is the sticky background the sections float over */
+    background-color: #edeef7;
+    background-image:
+      radial-gradient(circle, rgba(114,116,158,0.35) 1px, transparent 1px);
+    background-size: 14px 14px;
+    background-attachment: scroll; /* simulated fixed for mockup */
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* gap between floating sections = bg peeks through */
+    padding: 0 0 6px 0;
+  }
+
+  /* DESIGN B: crosshatch + soft gradient sweep bg */
+  .page-cross {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.06);
+    background-color: #f0f1f8;
+    background-image:
+      linear-gradient(rgba(114,116,158,0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(114,116,158,0.12) 1px, transparent 1px);
+    background-size: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 0 0 6px 0;
+  }
+
+  /* ───────────────────────────────────
+     FLOATING SECTION CARDS
+  ─────────────────────────────────── */
+
+  /* Nav: no shadow, flush to top */
+  .f-nav {
+    background: #1e2556;
+    padding: 8px 16px;
+    display: flex; align-items: center; justify-content: space-between;
+    flex-shrink: 0;
+  }
+  .f-nav .logo { font-weight: 700; color: #fff; font-size: 10px; letter-spacing: .03em; }
+  .f-nav .links { display: flex; gap: 10px; align-items: center; }
+  .f-nav .links span { font-size: 9px; color: #a0a5cc; }
+  .f-nav .links .pill { background: rgba(255,255,255,0.12); color: #fff; padding: 2px 8px; border-radius: 20px; font-size: 9px; border: 1px solid rgba(255,255,255,0.2); }
+
+  /* Generic floating card */
+  .f-card {
+    background: #fff;
+    border-radius: 10px;
+    margin: 0 6px;
+    box-shadow: 0 2px 12px rgba(30,37,86,0.10), 0 1px 3px rgba(30,37,86,0.06);
+    overflow: hidden;
+  }
+
+  /* ── Hero card ── */
+  .f-hero-inner {
+    padding: 26px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* version A hero: white + soft diagonal gradient wash */
+  .hero-a {
+    background: linear-gradient(135deg, #fff 30%, #e8e9f4 100%);
+  }
+  .hero-a::after {
+    content: '';
+    position: absolute;
+    top: -20px; right: -20px;
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(114,116,158,0.22) 0%, transparent 70%);
+  }
+  /* version B hero: white + crosshatch persists through */
+  .hero-b {
+    background: rgba(255,255,255,0.93);
+  }
+  .hero-b::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(114,116,158,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(114,116,158,0.08) 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .hero-b::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(255,255,255,0.9) 100%);
+  }
+
+  .f-hero-inner > * { position: relative; }
+  .f-hero-inner .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #72749e; margin-bottom: 6px; }
+  .f-hero-inner h2 { font-size: 15px; font-weight: 700; color: #1a1a2e; line-height: 1.3; margin-bottom: 8px; }
+  .f-hero-inner h2 em { color: #72749e; font-style: italic; }
+  .f-hero-inner p { font-size: 9px; color: #4a4a6a; line-height: 1.5; margin-bottom: 12px; }
+  .f-hero-inner .btns { display: flex; gap: 8px; }
+  .f-hero-inner .btn-p { background: #1e2556; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+  .f-hero-inner .btn-s { border: 1px solid #c5c9e8; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  /* ── Diff card ── */
+  .f-diff-inner { padding: 18px; }
+  .f-diff-inner .sec-label { font-size: 8px; text-transform: uppercase; letter-spacing: .1em; color: #72749e; margin-bottom: 3px; }
+  .f-diff-inner h3 { font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .f-diff-inner .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .f-diff-inner .card { border-radius: 7px; padding: 8px; background: #f4f5f8; border-top: 2px solid #72749e; }
+  .f-diff-inner .card .icon { width: 16px; height: 16px; background: rgba(114,116,158,0.2); border-radius: 4px; margin-bottom: 4px; }
+  .f-diff-inner .card p { font-size: 7.5px; color: #4a4a6a; line-height: 1.4; }
+
+  /* ── Services card — accent strip on left ── */
+  .f-services-inner {
+    padding: 18px;
+    border-left: 3px solid #72749e;
+    background: linear-gradient(to right, #f4f5fb, #fff);
+  }
+  .f-services-inner h3 { font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .f-services-inner .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .f-services-inner .scard { background: #fff; border-radius: 6px; padding: 7px; box-shadow: 0 1px 4px rgba(30,37,86,0.07); }
+  .f-services-inner .scard .dot { width: 10px; height: 2px; background: #72749e; border-radius: 2px; margin-bottom: 4px; }
+  .f-services-inner .scard p { font-size: 7.5px; color: #1a1a2e; font-weight: 600; }
+
+  /* ── Industries card — tinted bg ── */
+  .f-industries-inner {
+    padding: 18px;
+    background: linear-gradient(160deg, #fff 0%, #edeef7 100%);
+  }
+  .f-industries-inner h3 { font-size: 11px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .f-industries-inner .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; }
+  .f-industries-inner .ind { background: #fff; border-radius: 6px; padding: 8px 6px; text-align: center; box-shadow: 0 1px 4px rgba(30,37,86,0.06); }
+  .f-industries-inner .ind .badge { display: block; width: 14px; height: 14px; border-radius: 4px; margin: 0 auto 4px; }
+  .f-industries-inner .ind p { font-size: 7px; color: #4a4a6a; }
+
+  /* ── Portal card: dark ── */
+  .f-portal-inner {
+    padding: 18px;
+    background: linear-gradient(135deg, #1e2556 0%, #141840 100%);
+    position: relative; overflow: hidden;
+  }
+  .f-portal-inner::before {
+    content: '';
+    position: absolute;
+    inset: -50%; width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none;
+  }
+  .f-portal-inner > * { position: relative; }
+  .f-portal-inner h3 { font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 5px; }
+  .f-portal-inner p { font-size: 8px; color: #8e92be; }
+
+  /* ── Footer: flush, dark ── */
+  .f-footer {
+    background: linear-gradient(160deg, #1e2556 0%, #0e1230 100%);
+    border-radius: 10px;
+    margin: 0 6px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 12px rgba(10,14,50,0.3);
+    position: relative; overflow: hidden;
+  }
+  .f-footer::before {
+    content: '';
+    position: absolute;
+    inset: -50%; width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04; pointer-events: none;
+  }
+  .f-footer > * { position: relative; }
+  .f-footer .firm { font-size: 9px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+  .f-footer .sub { font-size: 7.5px; color: #5a5e7e; }
+
+  .note { text-align: center; margin-top: 20px; font-size: 0.72rem; color: #5a5e7e; line-height: 1.9; }
+  .hi { color: #a0a5cc; }
+</style>
+</head>
+<body>
+
+<h1>Option A — Floating Sections</h1>
+<p class="tagline">Textured page background · sections float as cards · two pattern styles</p>
+
+<div class="split">
+
+  <!-- ── DESIGN A: Dot-grid bg ── -->
+  <div>
+    <div class="col-label">A — Dot Grid bg</div>
+    <div class="col-sub">Lavender dot pattern behind floating cards</div>
+    <div class="page-dots">
+
+      <div class="f-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links"><span>Services</span><span>About</span><span class="pill">Client Portal</span></div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-hero-inner hero-a">
+          <div class="eyebrow">Vantis CPA</div>
+          <h2>Clarity Through<br><em>Complexity</em></h2>
+          <p>A boutique CPA firm for the cross-border, multi-entity world.</p>
+          <div class="btns"><div class="btn-p">Schedule a Consultation</div><div class="btn-s">View Services</div></div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-diff-inner">
+          <div class="sec-label">Our difference</div>
+          <h3>Why clients choose Vantis CPA</h3>
+          <div class="cards">
+            <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+            <div class="card"><div class="icon"></div><p>International expertise</p></div>
+            <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-services-inner">
+          <h3>Services</h3>
+          <div class="grid">
+            <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+            <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+            <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+            <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-industries-inner">
+          <h3>Who we serve</h3>
+          <div class="grid">
+            <div class="ind"><div class="badge" style="background:#7aac3a33;"></div><p>Founders</p></div>
+            <div class="ind"><div class="badge" style="background:#2c5f8a33;"></div><p>Expats</p></div>
+            <div class="ind"><div class="badge" style="background:#b8965a33;"></div><p>LatAm</p></div>
+            <div class="ind"><div class="badge" style="background:#2d6a4f33;"></div><p>Local</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-portal-inner">
+          <h3>Client Resources</h3>
+          <p>Portal · Bill pay · Document sharing</p>
+        </div>
+      </div>
+
+      <div class="f-footer">
+        <div class="firm">Vantis CPA</div>
+        <div class="sub">Licensed CPA · Florida · info@vantiscpa.com</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── DESIGN B: Crosshatch bg ── -->
+  <div>
+    <div class="col-label">B — Grid / Crosshatch bg</div>
+    <div class="col-sub">Fine grid shows through semi-transparent hero</div>
+    <div class="page-cross">
+
+      <div class="f-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links"><span>Services</span><span>About</span><span class="pill">Client Portal</span></div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-hero-inner hero-b">
+          <div class="eyebrow">Vantis CPA</div>
+          <h2>Clarity Through<br><em>Complexity</em></h2>
+          <p>A boutique CPA firm for the cross-border, multi-entity world.</p>
+          <div class="btns"><div class="btn-p">Schedule a Consultation</div><div class="btn-s">View Services</div></div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-diff-inner">
+          <div class="sec-label">Our difference</div>
+          <h3>Why clients choose Vantis CPA</h3>
+          <div class="cards">
+            <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+            <div class="card"><div class="icon"></div><p>International expertise</p></div>
+            <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-services-inner">
+          <h3>Services</h3>
+          <div class="grid">
+            <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+            <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+            <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+            <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-industries-inner">
+          <h3>Who we serve</h3>
+          <div class="grid">
+            <div class="ind"><div class="badge" style="background:#7aac3a33;"></div><p>Founders</p></div>
+            <div class="ind"><div class="badge" style="background:#2c5f8a33;"></div><p>Expats</p></div>
+            <div class="ind"><div class="badge" style="background:#b8965a33;"></div><p>LatAm</p></div>
+            <div class="ind"><div class="badge" style="background:#2d6a4f33;"></div><p>Local</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-card">
+        <div class="f-portal-inner">
+          <h3>Client Resources</h3>
+          <p>Portal · Bill pay · Document sharing</p>
+        </div>
+      </div>
+
+      <div class="f-footer">
+        <div class="firm">Vantis CPA</div>
+        <div class="sub">Licensed CPA · Florida · info@vantiscpa.com</div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<p class="note">
+  The <span class="hi">textured background</span> stays fixed while sections scroll over it as floating cards — giving depth without darkness.<br>
+  <span class="hi">Each section</span> has its own accent treatment: gradient hero · colored-border diff cards · accent-stripe services · tinted industries · grain dark portal.<br>
+  On the real page the gaps between cards would let the pattern peek through as you scroll.
+</p>
+
+</body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<title>Business Tax Strategy & Preparation — Vantis CPA South Florida</title>
+<meta name="description" content="Business tax prep and year-round tax strategy for South Florida contractors, real estate investors, and business owners. 1120-S, 1065, Schedule C, and proactive planning. No April surprises.">
+<link rel="canonical" href="https://vantiscpa.com/local/tax.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:         #1e2556;
+  --navy-dark:    #141840;
+  --accent:       #2d6a4f;
+  --accent-mid:   #255c43;
+  --accent-light: #e8f2ee;
+  --bg:           #f4f5f7;
+  --white:        #ffffff;
+  --text:         #1a2035;
+  --text-body:    #5a6078;
+  --text-muted:   #8a8fa8;
+  --border:       rgba(26,32,53,0.09);
+  --shadow:       0 2px 16px rgba(26,32,53,0.07);
+  --shadow-md:    0 6px 28px rgba(26,32,53,0.11);
+  --shadow-lg:    0 12px 48px rgba(26,32,53,0.14);
+  --r-card:       14px;
+  --serif:        'Playfair Display', Georgia, serif;
+  --sans:         'Inter', system-ui, sans-serif;
+  --max:          1120px;
+}
+
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  background: var(--bg);
+  color: var(--text-body);
+  font-family: var(--sans);
+  font-weight: 400;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+.container { max-width: var(--max); margin: 0 auto; padding: 0 40px; }
+
+/* NAV */
+#nav {
+  position: sticky; top: 12px; z-index: 100;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 10px 20px; margin: 12px 20px 0;
+  border-radius: 40px;
+  box-shadow: 0 4px 24px rgba(20,24,64,0.22);
+  transition: background 0.3s, box-shadow 0.3s;
+}
+#nav.scrolled { background: var(--navy-dark); box-shadow: 0 8px 32px rgba(10,15,40,0.34); }
+.nav-brand { text-decoration: none; display: flex; align-items: center; gap: 9px; white-space: nowrap; }
+.nav-brand-mark {
+  width: 30px; height: 30px; background: var(--accent); border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-size: 13px; font-weight: 600; color: #fff; flex-shrink: 0;
+}
+.nav-brand-name { font-family: var(--sans); font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.9); letter-spacing: 0.01em; }
+.nav-right { display: flex; align-items: center; gap: 6px; }
+.nav-back {
+  font-family: var(--sans); font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.65); text-decoration: none;
+  padding: 7px 14px; border-radius: 24px;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: background 0.18s, color 0.18s; white-space: nowrap;
+}
+.nav-back:hover { color: #fff; background: rgba(255,255,255,0.1); }
+
+/* ANIMATIONS */
+.fade-up { opacity: 0; transform: translateY(28px); transition: opacity 0.62s ease, transform 0.62s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up.delay-1 { transition-delay: 0.08s; }
+.fade-up.delay-2 { transition-delay: 0.16s; }
+.fade-up.delay-3 { transition-delay: 0.24s; }
+.fade-up.delay-4 { transition-delay: 0.32s; }
+
+/* HERO */
+#hero { padding: 100px 0 80px; text-align: center; }
+.hero-inner { max-width: 780px; margin: 0 auto; }
+.eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; display: block; }
+#hero h1 { font-family: var(--serif); font-size: clamp(38px, 5.5vw, 60px); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 24px; line-height: 1.15; color: var(--text); }
+#hero h1 em { font-style: italic; color: var(--accent); }
+.hero-sub { font-size: 18px; line-height: 1.8; color: var(--text-body); max-width: 640px; margin: 0 auto 36px; }
+.btn-primary {
+  display: inline-block; background: var(--accent); color: #fff;
+  font-family: var(--sans); font-size: 15px; font-weight: 600;
+  text-decoration: none; padding: 16px 36px; border-radius: 50px; border: none;
+  cursor: pointer; transition: background 0.18s, transform 0.15s, box-shadow 0.18s;
+  box-shadow: 0 4px 20px rgba(45,106,79,0.28); letter-spacing: 0.01em;
+}
+.btn-primary:hover { background: var(--accent-mid); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(45,106,79,0.36); }
+.btn-primary:active { transform: translateY(0); }
+
+/* SECTIONS */
+section { padding: 80px 0; }
+.section-label { font-family: var(--sans); font-size: 11px; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; display: block; }
+.section-title { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 40px); font-weight: 500; color: var(--text); margin-bottom: 16px; line-height: 1.2; }
+.section-sub { font-size: 17px; color: var(--text-body); max-width: 560px; line-height: 1.7; margin-bottom: 48px; }
+
+/* INCLUDED */
+#included { background: var(--white); }
+.included-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.included-card { background: var(--bg); border-radius: var(--r-card); padding: 28px 24px; border: 1px solid var(--border); }
+.included-icon { width: 40px; height: 40px; background: var(--accent-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 18px; }
+.included-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.included-card p { font-size: 14px; color: var(--text-body); line-height: 1.65; }
+
+/* HOW IT WORKS */
+#how { background: var(--accent-light); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.step { text-align: center; }
+.step-num { width: 48px; height: 48px; background: var(--accent); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-family: var(--serif); font-size: 20px; font-weight: 600; color: #fff; }
+.step h3 { font-family: var(--serif); font-size: 19px; font-weight: 500; color: var(--text); margin-bottom: 8px; }
+.step p { font-size: 14px; color: var(--text-body); line-height: 1.65; }
+
+/* SITUATIONS */
+#situations { background: var(--white); }
+.situations-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
+.situation-card { border-radius: var(--r-card); padding: 32px 28px; background: var(--bg); border: 1px solid var(--border); border-left: 4px solid var(--accent); }
+.situation-tag { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; display: block; }
+.situation-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); margin-bottom: 10px; line-height: 1.3; }
+.situation-card p { font-size: 14px; color: var(--text-body); line-height: 1.65; }
+
+/* RELATED */
+#related { background: var(--bg); }
+.related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.related-card {
+  background: var(--white); border-radius: var(--r-card); padding: 28px 24px;
+  border: 1px solid var(--border); text-decoration: none;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.related-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+.related-card-label { font-family: var(--sans); font-size: 10px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); }
+.related-card h3 { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--text); line-height: 1.3; }
+.related-card p { font-size: 14px; color: var(--text-body); line-height: 1.6; }
+.related-card-arrow { font-size: 18px; color: var(--accent); margin-top: auto; }
+
+/* INTAKE */
+#intake { background: var(--navy); padding: 80px 0; }
+.intake-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+#intake .section-label { color: rgba(255,255,255,0.5); }
+#intake h2 { font-family: var(--serif); font-size: clamp(28px, 3.5vw, 38px); font-weight: 500; color: #fff; margin-bottom: 14px; }
+#intake p { font-size: 16px; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.7; }
+.intake-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.intake-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.intake-form input, .intake-form select, .intake-form textarea {
+  width: 100%; background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px; padding: 14px 16px; font-family: var(--sans); font-size: 15px;
+  color: #fff; outline: none; transition: border-color 0.18s;
+}
+.intake-form input::placeholder, .intake-form textarea::placeholder { color: rgba(255,255,255,0.35); }
+.intake-form select { color: rgba(255,255,255,0.7); }
+.intake-form select option { background: var(--navy-dark); color: #fff; }
+.intake-form input:focus, .intake-form select:focus, .intake-form textarea:focus { border-color: var(--accent); }
+.intake-form textarea { resize: vertical; min-height: 100px; }
+.intake-submit { margin-top: 6px; }
+.intake-submit .btn-primary { width: 100%; font-size: 16px; padding: 16px; }
+.intake-success { display: none; text-align: center; padding: 40px 20px; }
+.intake-success h3 { font-family: var(--serif); font-size: 24px; color: #fff; margin-bottom: 10px; }
+.intake-success p { color: rgba(255,255,255,0.65); font-size: 15px; }
+
+/* FOOTER */
+#footer { background: var(--navy-dark); padding: 48px 0 32px; }
+.footer-inner { display: flex; flex-wrap: wrap; gap: 32px; align-items: flex-start; justify-content: space-between; }
+.footer-name { font-family: var(--serif); font-size: 16px; color: rgba(255,255,255,0.85); margin-top: 10px; font-weight: 500; }
+.footer-tagline { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 4px; }
+.footer-contact { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 2; }
+.footer-contact a { color: var(--accent); text-decoration: none; }
+.footer-contact a:hover { color: #5aad84; }
+.footer-nav { display: flex; flex-direction: column; gap: 8px; }
+.footer-nav a { font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.18s; }
+.footer-nav a:hover { color: rgba(255,255,255,0.85); }
+.footer-bottom { border-top: 1px solid rgba(255,255,255,0.08); margin-top: 36px; padding-top: 20px; text-align: center; font-size: 12px; color: rgba(255,255,255,0.3); }
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  #nav { margin: 10px 12px 0; padding: 10px 14px; }
+  .nav-brand-name { display: none; }
+  #hero { padding: 72px 0 60px; }
+  .steps { grid-template-columns: 1fr; gap: 24px; }
+  .intake-row { grid-template-columns: 1fr; }
+  .footer-inner { flex-direction: column; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a class="nav-brand" href="/local/">
+    <div class="nav-brand-mark">V</div>
+    <span class="nav-brand-name">Vantis CPA</span>
+  </a>
+  <div class="nav-right">
+    <a class="nav-back" href="/local/">← South Florida</a>
+    <a class="nav-back" href="/">Vantis ↗</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow fade-up">South Florida · Business Tax</span>
+      <h1 class="fade-up delay-1">Business Tax Strategy<br>&amp; <em>Preparation</em></h1>
+      <p class="hero-sub fade-up delay-2">You're probably paying more than you need to. Most South Florida business owners leave real money on the table every year — not from bad luck, but from reactive tax prep with no strategy behind it. We fix that.</p>
+      <a class="btn-primary fade-up delay-3" href="#intake">Start the Conversation</a>
+    </div>
+  </div>
+</section>
+
+<section id="included">
+  <div class="container">
+    <span class="section-label fade-up">What's Included</span>
+    <h2 class="section-title fade-up">Everything your business return requires — and the planning that makes it count</h2>
+    <p class="section-sub fade-up">We handle the compliance work. The real value is the strategy session before the return is ever filed.</p>
+    <div class="included-grid">
+      <div class="included-card fade-up delay-1">
+        <div class="included-icon">📋</div>
+        <h3>Business Return Preparation</h3>
+        <p>Full preparation of Form 1120-S (S-Corp), 1065 (Partnership), or Schedule C (Sole Proprietor). Accurate, on time, and built for the cleanest possible tax position.</p>
+      </div>
+      <div class="included-card fade-up delay-2">
+        <div class="included-icon">📊</div>
+        <h3>Quarterly Estimated Tax Planning</h3>
+        <p>We calculate your quarterly estimates correctly so you're never underpaying and triggering penalties — or overpaying and giving the IRS an interest-free loan.</p>
+      </div>
+      <div class="included-card fade-up delay-3">
+        <div class="included-icon">🗓️</div>
+        <h3>Year-End Tax Strategy Session</h3>
+        <p>Before December closes, we review your numbers and identify last-minute moves: retirement contributions, timing of income and deductions, bonus depreciation elections, and more.</p>
+      </div>
+      <div class="included-card fade-up delay-4">
+        <div class="included-icon">📬</div>
+        <h3>IRS Notice Response</h3>
+        <p>If the IRS or Florida DOR sends a notice, we handle the response. Most notices are routine — but they need a professional reply, not silence or a panicked call three days before the deadline.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="container">
+    <span class="section-label fade-up">How It Works</span>
+    <h2 class="section-title fade-up">Three steps to a cleaner tax position</h2>
+    <div class="steps">
+      <div class="step fade-up delay-1">
+        <div class="step-num">1</div>
+        <h3>Tell Us About Your Business</h3>
+        <p>Fill out the intake form below. We'll ask about your entity type, revenue, and current situation — no accountant jargon required.</p>
+      </div>
+      <div class="step fade-up delay-2">
+        <div class="step-num">2</div>
+        <h3>Strategy Call + Document Review</h3>
+        <p>We get on a call, walk through your numbers, and identify every deduction and planning opportunity before anything is filed.</p>
+      </div>
+      <div class="step fade-up delay-3">
+        <div class="step-num">3</div>
+        <h3>Return Filed. Year-Round Support.</h3>
+        <p>Your return is prepared and filed. We stay available throughout the year — not just April — for questions, estimates, and notices.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="situations">
+  <div class="container">
+    <span class="section-label fade-up">Common Situations</span>
+    <h2 class="section-title fade-up">Sound familiar?</h2>
+    <p class="section-sub fade-up">These are the situations we see most often with South Florida business owners — and fix.</p>
+    <div class="situations-grid">
+      <div class="situation-card fade-up delay-1">
+        <span class="situation-tag">Contractor</span>
+        <h3>Paying full self-employment tax with no entity structure</h3>
+        <p>You're netting $80k a year as a 1099 contractor and paying 15.3% SE tax on every dollar. An S-Corp election combined with reasonable compensation planning could cut that bill significantly. Someone just needs to run the math.</p>
+      </div>
+      <div class="situation-card fade-up delay-2">
+        <span class="situation-tag">Restaurant Owner</span>
+        <h3>No year-end planning — surprise $40k tax bill in April</h3>
+        <p>Your restaurant had a strong year, but your old accountant didn't flag anything until they were preparing the return. Retirement plan contributions, equipment purchases, and timing strategies that could have helped are now off the table.</p>
+      </div>
+      <div class="situation-card fade-up delay-3">
+        <span class="situation-tag">Real Estate Investor</span>
+        <h3>Missing depreciation deductions on rental properties</h3>
+        <p>You own rentals in Broward or Miami-Dade but have never had a cost segregation study done. Depreciation is being calculated the slow way — over 27.5 years — instead of front-loaded in year one through bonus depreciation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="related">
+  <div class="container">
+    <span class="section-label fade-up">Related Issues</span>
+    <h2 class="section-title fade-up">Dig deeper</h2>
+    <div class="related-grid">
+      <a class="related-card fade-up delay-1" href="/local/s-corp-election.html">
+        <span class="related-card-label">Issue Guide</span>
+        <h3>S-Corp Election Timing</h3>
+        <p>Miss the election deadline and you're stuck paying full SE tax for another year. Learn when to elect and what it actually saves you.</p>
+        <span class="related-card-arrow">→</span>
+      </a>
+      <a class="related-card fade-up delay-2" href="/local/cost-segregation.html">
+        <span class="related-card-label">Issue Guide</span>
+        <h3>Cost Segregation for Real Estate</h3>
+        <p>Front-load depreciation on your property and reduce your tax bill in year one. Most investors who own property over $500k should run this analysis.</p>
+        <span class="related-card-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="intake">
+  <div class="container">
+    <div class="intake-inner">
+      <span class="section-label">Get Started</span>
+      <h2>Let's talk about your tax situation</h2>
+      <p>No commitment. Just a straightforward conversation about where you stand and what we can do about it.</p>
+      <div id="intakeFormWrap">
+        <form class="intake-form" id="intakeForm">
+          <div class="intake-row">
+            <input type="text" name="name" placeholder="Your name" required>
+            <input type="email" name="email" placeholder="Email address" required>
+          </div>
+          <select name="business_type">
+            <option value="" disabled selected>Business type</option>
+            <option>Contractor / Freelancer</option>
+            <option>Restaurant / Food Service</option>
+            <option>Real Estate Investor</option>
+            <option>Retail / E-Commerce</option>
+            <option>Service Business</option>
+            <option>Other</option>
+          </select>
+          <textarea name="situation" placeholder="Briefly describe your situation — entity type, what's working, what's not…"></textarea>
+          <div class="intake-submit">
+            <button type="submit" class="btn-primary">Send My Information →</button>
+          </div>
+        </form>
+      </div>
+      <div class="intake-success" id="intakeSuccess">
+        <h3>Got it — we'll be in touch shortly.</h3>
+        <p>One of our CPAs will reach out within one business day to schedule a call.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="footer">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="nav-brand-mark">V</div>
+        <div class="footer-name">Vantis CPA</div>
+        <div class="footer-tagline">South Florida Business Tax</div>
+      </div>
+      <div class="footer-contact">
+        <div><a href="tel:+17274551016">(727) 455-1016</a></div>
+        <div><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></div>
+      </div>
+      <div class="footer-nav">
+        <a href="/local/">← Back to South Florida</a>
+        <a href="/">Vantis ↗</a>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2025 Vantis CPA. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const nav = document.getElementById('nav');
+window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 40); });
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+document.getElementById('intakeForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const data = Object.fromEntries(new FormData(this));
+  try {
+    await fetch('https://formspree.io/f/vantiscpa.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+  } catch(_) {}
+  document.getElementById('intakeFormWrap').style.display = 'none';
+  document.getElementById('intakeSuccess').style.display = 'block';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find \"/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" -type f \\\\\\( -name \"*.html\" -o -name \"*.txt\" -o -name \"*.xml\" -o -name \"*.svg\" \\\\\\) -exec sed -i -e 's/Global Vantage CPA/Vantis CPA/g' -e 's/Global Vantage/Vantis/g' -e 's/info@globalvantagecpa\\\\.com/info@vantiscpa.com/g' {} +)",
+      "Bash(find \"/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" -type f \\\\\\( -name \"*.html\" -o -name \"*.txt\" -o -name \"*.xml\" -o -name \"*.svg\" \\\\\\) -exec sed -i -e 's/Vantis CPA & Advisory/Vantis CPA/g' -e 's/Vantis CPA &amp; Advisory/Vantis CPA/g' -e 's/globalvantagecpa\\\\.com/vantiscpa.com/g' {} +)",
+      "Bash(find \"/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website/local\" -name \"*.html\" -exec sed -i 's|formspree.io/f/globalvantagecpa|formspree.io/f/vantiscpa.com|g' {} +)",
+      "Bash(find \"/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" -name \"*.html\" -exec sed -i -e 's|>GV</div>|>V</div>|g' -e 's|>GV</a>|>V</a>|g' -e 's|>GV</span>|>V</span>|g' {} +)",
+      "Bash(xargs grep:*)",
+      "Bash(bash \"/c/Users/jcorn/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/skills/brainstorming/scripts/start-server.sh\" --project-dir \"/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website\")",
+      "mcp__Claude_Preview__preview_start",
+      "WebFetch(domain:drage.com)",
+      "WebFetch(domain:www.bpbcpa.com)"
+    ]
+  }
+}
