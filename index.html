@@ -1221,6 +1221,44 @@ const practicesData = {
 
         industriesMenu.appendChild(li);
       });
+
+      // Add dropdown hover logic with delay
+      let dropdownTimeout;
+      const dropdowns = document.querySelectorAll('.nav-dropdown');
+      dropdowns.forEach(dropdown => {
+        const menu = dropdown.querySelector('.nav-dropdown-menu, .nav-dropdown-submenu');
+        if (!menu) return;
+
+        dropdown.addEventListener('mouseenter', () => {
+          clearTimeout(dropdownTimeout);
+          menu.style.opacity = '1';
+          menu.style.visibility = 'visible';
+          menu.style.pointerEvents = 'auto';
+        });
+
+        dropdown.addEventListener('mouseleave', () => {
+          dropdownTimeout = setTimeout(() => {
+            menu.style.opacity = '0';
+            menu.style.visibility = 'hidden';
+            menu.style.pointerEvents = 'none';
+          }, 300);
+        });
+
+        menu.addEventListener('mouseenter', () => {
+          clearTimeout(dropdownTimeout);
+          menu.style.opacity = '1';
+          menu.style.visibility = 'visible';
+          menu.style.pointerEvents = 'auto';
+        });
+
+        menu.addEventListener('mouseleave', () => {
+          dropdownTimeout = setTimeout(() => {
+            menu.style.opacity = '0';
+            menu.style.visibility = 'hidden';
+            menu.style.pointerEvents = 'none';
+          }, 300);
+        });
+      });
     </script>
 
     <div class="nav-contact">
