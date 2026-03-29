@@ -1126,31 +1126,39 @@ const practicesData = {
     </a>
 
     <ul class="nav-links" role="list">
-      <li class="nav-dropdown">
-        <a href="#services">Services</a>
-        <div class="nav-dropdown-menu">
-          <a href="/services/tax-consulting">Tax Consulting</a>
-          <a href="/services/individual-trust-gift-tax">Individual, Trust & Gift Tax</a>
-          <a href="/services/business-tax">Business Tax</a>
-          <a href="/services/international-tax">International Tax</a>
-          <a href="/services/bookkeeping-reporting">Bookkeeping & Reporting</a>
-          <a href="/services/payroll">Payroll</a>
-          <a href="/services/sales-tax">Sales Tax</a>
-          <a href="/services/back-office">Back Office</a>
-        </div>
-      </li>
-      <li class="nav-dropdown">
-        <a href="#industries">Industries</a>
-        <div class="nav-dropdown-menu">
-          <a href="/#founders">Founders & Investors</a>
-          <a href="/#expats">Global Expats</a>
-          <a href="/#latam">Latin American Families</a>
-          <a href="/#local">South Florida Businesses</a>
-        </div>
+      <!-- Practice Dropdowns -->
+      <li class="nav-dropdown" id="nav-practices">
+        <!-- Will be populated by JavaScript -->
       </li>
       <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
       <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
     </ul>
+
+    <script>
+      // Render practice dropdowns in nav
+      const navPractices = document.getElementById('nav-practices');
+      Object.values(practicesData).forEach(practice => {
+        const li = document.createElement('li');
+        li.className = 'nav-dropdown';
+
+        const link = document.createElement('a');
+        link.href = practice.href;
+        link.textContent = practice.name;
+        li.appendChild(link);
+
+        const menu = document.createElement('div');
+        menu.className = 'nav-dropdown-menu';
+        practice.niches.forEach(niche => {
+          const nicheLink = document.createElement('a');
+          nicheLink.href = niche.href;
+          nicheLink.textContent = niche.name;
+          menu.appendChild(nicheLink);
+        });
+        li.appendChild(menu);
+
+        navPractices.appendChild(li);
+      });
+    </script>
 
     <div class="nav-contact">
       <a href="mailto:info@vantiscpa.com">
