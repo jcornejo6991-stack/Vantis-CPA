@@ -1,0 +1,1718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vantis CPA</title>
+  <meta name="description" content="Vantis CPA — boutique CPA firm serving founders, US expats, Latin American families, and South Florida businesses. Tax strategy, entity formation, bookkeeping, payroll, and compliance. Licensed CPA, Florida. Bilingual EN/ES." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://vantiscpa.com/" />
+  <link rel="alternate" hreflang="en" href="https://vantiscpa.com/" />
+  <link rel="alternate" hreflang="es" href="https://vantiscpa.com/latam/" />
+  <link rel="alternate" hreflang="x-default" href="https://vantiscpa.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vantiscpa.com/" />
+  <meta property="og:title" content="Vantis CPA" />
+  <meta property="og:description" content="Boutique CPA firm serving founders, US expats, Latin American families, and South Florida businesses. Tax strategy, entity formation, bookkeeping, payroll, and compliance." />
+  <meta property="og:site_name" content="Vantis CPA" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vantis CPA" />
+  <meta name="twitter:description" content="Boutique CPA firm serving founders, US expats, Latin American families, and South Florida businesses. Licensed CPA, Florida. Bilingual EN/ES." />
+
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AccountingService",
+    "name": "Vantis CPA",
+    "url": "https://vantiscpa.com",
+    "logo": "https://vantiscpa.com/favicon.svg",
+    "description": "Boutique CPA firm serving founders, US expats, Latin American families, and South Florida businesses. Tax strategy, entity formation, bookkeeping, payroll, and compliance.",
+    "telephone": "+17274551016",
+    "email": "info@vantiscpa.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "FL",
+      "addressCountry": "US"
+    },
+    "areaServed": "Worldwide",
+    "hasCredential": "Licensed CPA, Florida",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "CPA Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tax Strategy & Preparation" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Entity Formation & Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Back-Office Support" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bookkeeping & Reporting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Payroll Management" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sales Tax & Compliance" } }
+      ]
+    },
+    "knowsLanguage": ["en", "es"]
+  }
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0a3521;
+      --navy-mid: #1a5a3a;
+      --navy-dark: #052818;
+      --accent: #3a8b5f;
+      --accent-light: #e8e8e8;
+      --bg: #e8e8e8;
+      --bg-alt: #e0e0e0;
+      --text-dark: #0f2818;
+      --text-mid: #3d6b52;
+      --card-radius: 14px;
+      --nav-height: 68px;
+      --card-shadow: 0 2px 16px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.1);
+      --card-gap: 14px;
+      --page-bg: #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: var(--page-bg);
+      background-image:
+        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+      background-size: 64px 20px;
+      background-attachment: fixed;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ─── NAV ─── */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: #052818;
+      border-bottom: none;
+      border-radius: 0;
+      height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      transition: box-shadow 0.25s ease;
+      overflow: visible;
+    }
+    .nav::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      opacity: 0.12;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .nav > * { position: relative; z-index: 1; }
+    .nav.scrolled { background: rgba(5, 40, 24, 0.95); box-shadow: 0 4px 20px rgba(5,40,24,0.25); }
+
+    .nav-inner {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      flex-shrink: 0;
+      margin-right: auto;
+    }
+    .nav-gv-mark {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    .nav-wordmark {
+      font-family: 'Inter', sans-serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+    .nav-wordmark span {
+      display: block;
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      list-style: none;
+      background: #fff;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      border-radius: 30px;
+      padding: 3px;
+      box-shadow: 0 2px 8px rgba(5,40,24,0.2), inset 0 1px 2px rgba(0,0,0,0.1);
+      margin: 0 auto;
+      position: relative;
+      overflow: visible;
+    }
+    .nav-links a {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      text-decoration: none;
+      padding: 5px 14px;
+      border-radius: 24px;
+      background: transparent;
+      border: none;
+      transition: background 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover { background: var(--navy); color: #fff; }
+
+    .nav-dropdown {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .nav-dropdown-menu {
+      position: absolute;
+      top: calc(100% - 4px);
+      left: -20px;
+      background: #fff;
+      border: 1.5px solid rgba(255,255,255,0.6);
+      border-radius: 12px;
+      padding: 12px 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-12px);
+      transition: opacity 0.2s, visibility 0.2s, transform 0.2s;
+      z-index: 9999;
+      min-width: 200px;
+      box-shadow: 0 4px 12px rgba(5,40,24,0.15);
+      pointer-events: none;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+    ul.nav-links li.nav-dropdown > a:hover {
+      background: #0a3521 !important;
+      color: #fff !important;
+      border-radius: 24px !important;
+    }
+    .nav-dropdown-menu a {
+      padding: 10px 12px;
+      font-size: 14px;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--navy);
+      transition: background 0.2s;
+    }
+    .nav-dropdown-menu a:hover {
+      background: rgba(10, 53, 33, 0.08);
+    }
+
+    .nav-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 2px;
+      font-size: 13px;
+      margin-left: auto;
+    }
+    .nav-contact a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-contact a svg {
+      stroke: #ffffff;
+      flex-shrink: 0;
+    }
+    .nav-contact a:hover { color: #e5e5e5; }
+    .nav-contact a:hover svg { stroke: #e5e5e5; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 8px;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.25s ease;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: var(--nav-height);
+      left: 0;
+      right: 0;
+      background: var(--navy-dark);
+      border-bottom: none;
+      box-shadow: 0 8px 24px rgba(5,40,24,0.3);
+      padding: 16px 24px 20px;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      font-size: 15px;
+      font-weight: 500;
+      color: #7aaa8f;
+      text-decoration: none;
+      padding: 11px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .mobile-menu a:last-child { border-bottom: none; }
+
+    /* ─── LAYOUT ─── */
+    .container {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+    .section-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.2;
+    }
+    .section-subheading {
+      font-size: 17px;
+      color: var(--text-mid);
+      margin-top: 12px;
+      max-width: 640px;
+      line-height: 1.65;
+    }
+    .services-header .section-subheading { white-space: nowrap; }
+    .industries-header .section-subheading { white-space: nowrap; }
+
+    /* ─── FADE ANIMATIONS ─── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up-d1 { transition-delay: 0.08s; }
+    .fade-up-d2 { transition-delay: 0.16s; }
+    .fade-up-d3 { transition-delay: 0.24s; }
+    .fade-up-d4 { transition-delay: 0.32s; }
+    .fade-up-d5 { transition-delay: 0.40s; }
+
+    /* ─── HERO ─── */
+    /* ─── FLOATING CARD SECTIONS ─── */
+    .hero,
+    .differentiators,
+    .services,
+    .industries,
+    .about,
+    .client-resources,
+    .contact {
+      margin: 0 var(--card-gap) var(--card-gap);
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      opacity: 0.98;
+    }
+    .footer {
+      margin: 0 var(--card-gap) var(--card-gap);
+      border-radius: 14px;
+      box-shadow: var(--card-shadow);
+      overflow: hidden;
+      opacity: 0.98;
+    }
+
+    .hero {
+      background-color: rgba(255,255,255,0.88);
+      background-image: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.97) 100%);
+      padding: 77px 0;
+      position: relative;
+      margin: 22px 22px 22px 22px;
+      border-radius: 20px;
+      min-height: 75vh;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 0.7fr 1px 1.3fr;
+      gap: 0 48px;
+      align-items: center;
+    }
+    /* Left column */
+    .hero-left { padding-right: 8px; }
+    .hero-brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(72px, 9.6vw, 132px);
+      white-space: nowrap;
+      font-weight: 700;
+      color: #2f5342;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+    }
+    .hero-tagline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(16px, 2vw, 20px);
+      font-style: italic;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+    /* Divider */
+    .hero-divider {
+      width: 1px;
+      align-self: stretch;
+      background: #d0d0d0;
+    }
+    /* Right column */
+    .hero-right { padding-left: 8px; }
+    .hero-intro-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #2d5c47;
+      margin-bottom: 10px;
+    }
+    .hero-sub {
+      font-size: 15px;
+      color: var(--text-dark);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .hero-contact-box {
+      border: 1.5px solid var(--accent);
+      border-radius: 10px;
+      padding: 18px 22px;
+      background: var(--accent-light);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px 24px;
+    }
+    .hero-contact-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .hero-contact-item .label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-contact-item .value {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      text-decoration: none;
+    }
+    .hero-contact-item .value:hover { text-decoration: underline; }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: nowrap;
+      margin-top: 24px;
+    }
+    .btn-primary {
+      background: #2f5342;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #2f5342;
+      display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); transform: translateY(-1px); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--navy);
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid var(--navy);
+      display: inline-block;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
+    }
+    .btn-secondary:hover { background: var(--navy); color: #fff; transform: translateY(-1px); }
+
+    .trust-signals {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 0;
+      align-items: center;
+    }
+    .trust-signal {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-mid);
+      padding: 0 16px 0 0;
+    }
+    .trust-signal::before {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      flex-shrink: 0;
+    }
+
+    /* ─── DIFFERENTIATORS ─── */
+    .differentiators { padding: 80px 0; background: #fff; margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .diff-card { background: #edeef7; border-top: 2px solid var(--accent); }
+    .diff-header { margin-bottom: 48px; }
+    .diff-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .diff-card {
+      background: var(--bg);
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      border: 1px solid #e8e9f2;
+    }
+    .diff-icon {
+      width: 44px;
+      height: 44px;
+      background: var(--accent-light);
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 18px;
+    }
+    .diff-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .diff-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .diff-text { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+
+    /* ─── SERVICES ─── */
+    .services { padding: 80px 0; background: linear-gradient(135deg, #052818 0%, #0a3521 100%); border-left: 4px solid #fff; margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; }
+    .services::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.08;
+      pointer-events: none;
+      z-index: 0;
+      border-radius: 20px;
+    }
+    .services > * { position: relative; z-index: 1; }
+    .services-header { margin-bottom: 48px; }
+    .services-header .section-label { color: rgba(255,255,255,0.7); }
+    .services-header .section-heading { color: #fff; }
+    .services-header .section-subheading { color: rgba(255,255,255,0.85); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 26px;
+    }
+    .services-category-heading {
+      grid-column: 1 / -1;
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 20px;
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1.5px solid rgba(255,255,255,0.3);
+      display: inline-block;
+    }
+    .services-category-heading:first-child { margin-top: 0; }
+    .service-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: var(--card-radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-left: 4px solid #fff;
+      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 60px 60px 0;
+      border-color: transparent #e8e8e8 transparent transparent;
+      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)) drop-shadow(4px 4px 8px rgba(0,0,0,0.15));
+    }
+    .service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
+    .service-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-light);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg { width: 28px; height: 28px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+    .service-subtitle {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
+    }
+    .service-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0a3521;
+      margin-bottom: 14px;
+      letter-spacing: -0.01em;
+    }
+    .service-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .service-list li {
+      font-size: 13.5px;
+      color: var(--text-dark);
+      font-weight: 500;
+      padding-left: 18px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .service-list li::before {
+      content: '✓';
+      position: absolute;
+      left: -2px;
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+    .service-learn-more {
+      display: inline-block;
+      margin-top: 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s, gap 0.3s;
+    }
+    .service-learn-more:hover {
+      color: var(--navy);
+    }
+
+    /* ─── INDUSTRIES ─── */
+    .industries { padding: 80px 0; background: linear-gradient(160deg, #fff 0%, #edeef7 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .industries-header { margin-bottom: 48px; }
+    .industries-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .industry-card {
+      background: var(--bg);
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      border: 1px solid #e4e6f0;
+      border-top: 4px solid #e4e6f0;
+      text-decoration: none;
+      display: block;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .industry-card:hover { box-shadow: 0 10px 32px rgba(10,53,33,0.1); transform: translateY(-3px); }
+    .industry-card[data-accent="founders"] { border-top-color: #8eb858; }
+    .industry-card[data-accent="expats"]   { border-top-color: #2c5f8a; }
+    .industry-card[data-accent="latam"]    { border-top-color: #b8965a; }
+    .industry-card[data-accent="local"]    { border-top-color: #4d8069; }
+    .industry-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .industry-desc {
+      font-size: 14.5px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+    .industry-link {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: gap 0.2s;
+    }
+    .industry-card:hover .industry-link { gap: 8px; }
+
+    /* ─── ABOUT ─── */
+    .about { padding: 80px 0; background: linear-gradient(to bottom, var(--bg) 0%, #fff 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .about-header { margin-bottom: 48px; }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 52px;
+      align-items: start;
+    }
+    .about-text p {
+      font-size: 16px;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 18px;
+    }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--text-dark); font-weight: 600; }
+
+    .trust-cards { display: flex; flex-direction: column; gap: 12px; }
+    .trust-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 16px 20px;
+      border: 1px solid #e4e6f0;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .trust-card-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .trust-card-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .trust-card-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
+    .trust-card-text { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+
+    /* ─── CLIENT RESOURCES ─── */
+    .grain-overlay { position: relative; overflow: hidden; }
+    .grain-overlay::before {
+      content: '';
+      position: absolute;
+      inset: -50%;
+      width: 200%;
+      height: 200%;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .grain-overlay > * { position: relative; z-index: 1; }
+    .client-resources { padding: 32px 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); }
+    .client-resources .container { display: flex; align-items: center; gap: 40px; }
+    .client-resources .section-label { color: #5a8b6f; display: none; }
+    .client-resources .section-heading { color: #fff; }
+    .client-resources .section-subheading { color: #7aaa8f; max-width: none; }
+    .resources-header { display: flex; flex-direction: column; justify-content: center; min-width: 200px; margin-right: 40px; flex-shrink: 0; }
+    .resources-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      flex: 1;
+    }
+    .resource-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--card-radius);
+      padding: 24px 20px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .resource-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .resource-card-text { font-size: 13px; color: #7aaa8f; line-height: 1.5; margin-bottom: 16px; }
+    .btn-resource {
+      display: inline-block;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      padding: 11px 20px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid rgba(255,255,255,0.2);
+      transition: background 0.2s;
+    }
+    .btn-resource:hover { background: rgba(255,255,255,0.2); }
+    .resource-contact-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .resource-contact-list li {
+      font-size: 14px;
+      color: #7aaa8f;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .resource-contact-list li a { color: #e8e8e8; text-decoration: none; font-weight: 500; }
+    .resource-contact-list li a:hover { color: #fff; }
+    .resource-contact-list li svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+
+    /* ─── CONTACT ─── */
+    .contact { padding: 80px 0; background: linear-gradient(160deg, var(--bg-alt) 0%, #edeef7 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .contact-header { margin-bottom: 48px; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 340px;
+      gap: 52px;
+      align-items: start;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 13px; font-weight: 600; color: var(--text-dark); letter-spacing: 0.02em; }
+    .form-group input,
+    .form-group textarea {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: var(--text-dark);
+      background: #fff;
+      border: 1.5px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus { border-color: var(--accent); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-label-note { font-weight: 400; color: var(--text-mid); }
+    .form-submit {
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      padding: 14px 32px;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-success {
+      display: none;
+      background: #f0f7ec;
+      border: 1.5px solid #8eb858;
+      border-radius: 10px;
+      padding: 20px 24px;
+      font-size: 15px;
+      color: #2d5a1b;
+      line-height: 1.6;
+    }
+    .form-success.visible { display: block; }
+    .contact-info {
+      background: #fff;
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      border: 1px solid #e4e6f0;
+    }
+    .contact-info-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 22px;
+    }
+    .contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .contact-item:last-of-type { margin-bottom: 0; }
+    .contact-item-icon {
+      width: 34px;
+      height: 34px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-item-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-item-label { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+    .contact-item-value { font-size: 14.5px; color: var(--text-dark); font-weight: 500; }
+    .contact-item-value a { color: var(--text-dark); text-decoration: none; }
+    .contact-item-value a:hover { color: var(--navy); text-decoration: underline; }
+    .contact-item-note { font-size: 12.5px; color: var(--text-mid); margin-top: 2px; }
+    .response-badge {
+      margin-top: 24px;
+      background: var(--accent-light);
+      border-radius: 8px;
+      padding: 12px 16px;
+      font-size: 13.5px;
+      color: var(--accent);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* ─── FOOTER ─── */
+    .footer { background: linear-gradient(160deg, var(--navy) 0%, #052818 100%); padding: 64px 0 32px; margin: 0 0; border-radius: 0; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 48px;
+      margin-bottom: 48px;
+    }
+    .footer-brand-mark {
+      width: 40px; height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 14px;
+    }
+    .footer-firm-name { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; }
+    .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #5a8b6f; margin-bottom: 14px; }
+    .footer-license { font-size: 12px; color: #4a7b5f; margin-bottom: 16px; }
+    .footer-contact a { display: block; font-size: 14px; color: #7aaa8f; text-decoration: none; margin-bottom: 6px; }
+    .footer-contact a:hover { color: #fff; }
+    .footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7b5f; margin-bottom: 16px; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer-links a { font-size: 14px; color: #7aaa8f; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #fff; }
+    .footer-dot { font-size: 10px; margin-right: 2px; }
+    .footer-dot-founders { color: #8eb858; }
+    .footer-dot-expats   { color: #2c5f8a; }
+    .footer-dot-latam    { color: #b8965a; }
+    .footer-dot-local    { color: #4d8069; }
+    .footer-col-gap { margin-top: 28px; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .footer-copy { font-size: 13px; color: #3a6b4f; }
+    .footer-legal { display: flex; gap: 20px; }
+    .footer-legal a { font-size: 13px; color: #3a6b4f; text-decoration: none; }
+    .footer-legal a:hover { color: #7aaa8f; }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .diff-grid { grid-template-columns: 1fr 1fr; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 36px; }
+      .resources-grid { grid-template-columns: 1fr 1fr; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      :root { --nav-height: 60px; }
+      .nav-links { display: none; }
+      .nav-contact { display: none; }
+      .hamburger { display: flex; }
+      .diff-grid,
+      .services-grid,
+      .industries-grid,
+      .resources-grid { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; }
+      .hero { padding: 48px 0 40px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-divider { display: none; }
+      .hero-left { padding-right: 0; }
+      .hero-right { padding-left: 0; }
+      .hero-contact-box { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+  <script>
+const practicesData = {
+  founders: {
+    name: "Founders & Investors",
+    href: "/founders/",
+    accent: "founders",
+    niches: [
+      { name: "Startups", href: "/founders/startups/" },
+      { name: "Crypto", href: "/founders/crypto/" },
+      { name: "E-commerce", href: "/founders/ecommerce/" },
+      { name: "Freelancers", href: "/founders/freelancers/" }
+    ]
+  },
+  expats: {
+    name: "US Expats",
+    href: "/expats/",
+    accent: "expats",
+    niches: [
+      { name: "Remote Workers", href: "/expats/remote-workers/" },
+      { name: "Tech", href: "/expats/tech/" },
+      { name: "Digital Nomads", href: "/expats/digital-nomads/" }
+    ]
+  },
+  latam: {
+    name: "Latin American Families",
+    href: "/latam/",
+    accent: "latam",
+    niches: [
+      { name: "LATAM Business Investors", href: "/latam/business-investors/" },
+      { name: "LATAM Real Estate Investors", href: "/latam/real-estate/" },
+      { name: "LATAM Family Office", href: "/latam/family-office/" }
+    ]
+  },
+  local: {
+    name: "South Florida Business",
+    href: "/local/",
+    accent: "local",
+    niches: [
+      { name: "Local Business Owners", href: "/local/business-owners/" },
+      { name: "Contractors", href: "/local/contractors/" },
+      { name: "Real Estate Investors", href: "/local/real-estate/" },
+      { name: "Medical Practices", href: "/local/medical-practices/" },
+      { name: "Restaurants/Hospitality", href: "/local/hospitality/" }
+    ]
+  }
+};
+  </script>
+</head>
+<body>
+
+<!-- ═══════════════════ NAV ═══════════════════ -->
+<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
+      <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
+    </a>
+
+    <ul class="nav-links" role="list">
+      <li class="nav-dropdown">
+        <a href="#services">Services</a>
+        <div class="nav-dropdown-menu">
+          <a href="/services/tax-consulting">Tax Consulting</a>
+          <a href="/services/individual-trust-gift-tax">Individual, Trust & Gift Tax</a>
+          <a href="/services/business-tax">Business Tax</a>
+          <a href="/services/international-tax">International Tax</a>
+          <a href="/services/bookkeeping-reporting">Bookkeeping & Reporting</a>
+          <a href="/services/payroll">Payroll</a>
+          <a href="/services/sales-tax">Sales Tax</a>
+          <a href="/services/back-office">Back Office</a>
+        </div>
+      </li>
+      <li class="nav-dropdown">
+        <a href="#industries">Industries</a>
+        <div class="nav-dropdown-menu">
+          <a href="/#founders">Founders & Investors</a>
+          <a href="/#expats">Global Expats</a>
+          <a href="/#latam">Latin American Families</a>
+          <a href="/#local">South Florida Businesses</a>
+        </div>
+      </li>
+      <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
+      <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
+    </ul>
+
+    <div class="nav-contact">
+      <a href="mailto:info@vantiscpa.com">
+        info@vantiscpa.com
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+      </a>
+      <a href="tel:+17274551016">
+        (727) 455-1016
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <div class="mobile-menu" id="mobileMenu" role="menu">
+      <a href="#services" role="menuitem">Services</a>
+      <a href="#industries" role="menuitem">Industries</a>
+      <a href="#client-portal" role="menuitem">Client Portal</a>
+      <a href="#client-portal" role="menuitem">Bill Pay</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" aria-label="Introduction">
+  <div class="container">
+    <div class="hero-inner">
+
+      <!-- Left: Brand name -->
+      <div class="hero-left fade-up">
+        <h1 class="hero-brand-name">Vantis CPA</h1>
+      </div>
+
+      <!-- Divider -->
+      <div class="hero-divider" aria-hidden="true"></div>
+
+      <!-- Right: Intro + contact box -->
+      <div class="hero-right fade-up fade-up-d1">
+        <p class="hero-intro-label">About Vantis CPA</p>
+        <p class="hero-sub">A tax consulting firm for local and global taxpayers. Specializing in tax strategy, compliance, and advisory services, grounded in protecting tax exposure, leveraging tax laws, and delivering a comprehensive suite of services with confidentiality, responsiveness, and clarity.</p>
+
+        <div class="hero-contact-box">
+          <div class="hero-contact-item">
+            <span class="label">Email</span>
+            <a href="mailto:info@vantiscpa.com" class="value">info@vantiscpa.com</a>
+          </div>
+          <div class="hero-contact-item">
+            <span class="label">Phone / WhatsApp</span>
+            <a href="tel:+17274551016" class="value">(727) 455-1016</a>
+          </div>
+          <div class="hero-contact-item">
+            <span class="label">Experience</span>
+            <span class="value">10+ Years</span>
+          </div>
+          <div class="hero-contact-item">
+            <span class="label">Languages</span>
+            <span class="value">English &amp; Spanish</span>
+          </div>
+          <div class="hero-contact-item">
+            <span class="label">License</span>
+            <span class="value">Licensed CPA &middot; Florida</span>
+          </div>
+          <div class="hero-contact-item">
+            <span class="label">Graduate Degree</span>
+            <span class="value">Master of Taxation</span>
+          </div>
+        </div>
+
+        <div class="hero-ctas fade-up fade-up-d2">
+          <a href="#contact" class="btn-primary">Schedule a Consultation</a>
+          <a href="#services" class="btn-secondary">View Services</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ DIFFERENTIATORS ═══════════════════ -->
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section class="services" id="services" aria-labelledby="services-heading">
+  <div class="container">
+    <div class="services-header">
+      <p class="section-label fade-up">Full-service CPA firm</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="services-heading">What We Do</h2>
+      <p class="section-subheading fade-up fade-up-d2">The path of success — proactive year-round tax planning to tax compliance, providing full accounting suite, freeing you to focus on your core business.</p>
+    </div>
+    <div class="services-grid">
+      <h3 class="services-category-heading">Tax Expertise &amp; Strategy</h3>
+
+      <div class="service-card fade-up fade-up-d1">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+        </div>
+        <h4 class="service-title">Tax Consulting</h4>
+        <ul class="service-list">
+          <li>Business Structuring</li>
+          <li>Estate Planning</li>
+          <li>Pre-Immigration</li>
+          <li>Cash Flow Planning</li>
+          <li>Audit &amp; Notices</li>
+        </ul>
+        <a href="/services/tax-consulting" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d2">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h4 class="service-title">Individual, Trust &amp; Gift Tax</h4>
+        <ul class="service-list">
+          <li>Individuals</li>
+          <li>Grantor Trusts</li>
+          <li>Nongrantor Trusts</li>
+          <li>Estate Tax</li>
+          <li>Gift Tax</li>
+        </ul>
+        <a href="/services/individual-trust-gift-tax" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d3">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+        </div>
+        <h4 class="service-title">Business Tax</h4>
+        <ul class="service-list">
+          <li>Sole Proprietors</li>
+          <li>S-Corporations</li>
+          <li>C-Corporations</li>
+          <li>Partnerships</li>
+          <li>LLCs &amp; LPs</li>
+        </ul>
+        <a href="/services/business-tax" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d1">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0110 10M12 2a10 10 0 00-10 10m20 0a10 10 0 01-10 10M12 2a10 10 0 00-10 10M2 12h20M12 2v20"/></svg>
+        </div>
+        <h4 class="service-title">International Tax</h4>
+        <ul class="service-list">
+          <li>Nonresidents</li>
+          <li>Foreign Corporations</li>
+          <li>Foreign Partnerships</li>
+          <li>Foreign Trusts</li>
+          <li>PFIC</li>
+        </ul>
+        <a href="/services/international-tax" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <h3 class="services-category-heading">Full-Service Advisory</h3>
+
+      <div class="service-card fade-up fade-up-d2">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+        </div>
+        <h4 class="service-title">Bookkeeping &amp; Reporting</h4>
+        <ul class="service-list">
+          <li>QuickBooks Setup</li>
+          <li>Monthly Reconcile</li>
+          <li>Cash Flow Analysis</li>
+        </ul>
+        <a href="/services/bookkeeping-reporting" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d3">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+        </div>
+        <h4 class="service-title">Payroll</h4>
+        <ul class="service-list">
+          <li>Gusto Processing</li>
+          <li>W-2 &amp; 1099 Filings</li>
+          <li>Tax Deposits</li>
+        </ul>
+        <a href="/services/payroll" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d1">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h4 class="service-title">Sales Tax</h4>
+        <ul class="service-list">
+          <li>State &amp; Local Filings</li>
+          <li>Registration</li>
+          <li>Nexus Analysis</li>
+        </ul>
+        <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card fade-up fade-up-d2">
+        <div class="service-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h4 class="service-title">Back Office</h4>
+        <ul class="service-list">
+          <li>LLC Formation &amp; Renewals</li>
+          <li>Business Mailing</li>
+          <li>Banking Setup</li>
+        </ul>
+        <a href="/services/back-office" class="service-learn-more">Learn More →</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+<section class="industries" id="industries" aria-labelledby="industries-heading">
+  <div class="container">
+    <div class="industries-header">
+      <p class="section-label fade-up">Dedicated practices</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Serve</h2>
+      <p class="section-subheading fade-up fade-up-d2">We've built dedicated practices for clients with specific needs. Select your situation for a tailored experience.</p>
+    </div>
+    <div class="industries-grid">
+
+      <a href="/founders/" class="industry-card fade-up fade-up-d1" data-accent="founders">
+        <h3 class="industry-title">Founders &amp; Investors</h3>
+        <p class="industry-desc">Startup founders, day traders, crypto holders, and e-commerce sellers. Equity compensation planning, crypto tax, entity structuring, and investor-ready financials.</p>
+        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
+      </a>
+
+      <a href="/expats/" class="industry-card fade-up fade-up-d2" data-accent="expats">
+        <h3 class="industry-title">US Expats</h3>
+        <p class="industry-desc">Americans living and working abroad. Foreign Earned Income Exclusion, Foreign Tax Credit, FBAR, Streamlined Filing Procedures, and treaty positions handled correctly.</p>
+        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
+      </a>
+
+      <a href="/latam/" class="industry-card fade-up fade-up-d3" data-accent="latam">
+        <h3 class="industry-title">Latin American Families</h3>
+        <p class="industry-desc">LATAM investors and families with US presence. FIRPTA withholding, Form 5472, cross-border structures, and full bilingual (EN/ES) service throughout the engagement.</p>
+        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
+      </a>
+
+      <a href="/local/" class="industry-card fade-up fade-up-d4" data-accent="local">
+        <h3 class="industry-title">South Florida Business</h3>
+        <p class="industry-desc">Local business owners, contractors, and real estate investors. S-Corp elections, cost segregation studies, full back-office support, and year-round advisory.</p>
+        <span class="industry-link">Explore <span aria-hidden="true">&#8594;</span></span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<section class="differentiators" aria-labelledby="diff-heading">
+  <div class="container">
+    <div class="diff-header">
+      <p class="section-label fade-up">What sets us apart</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="diff-heading">Why clients choose Vantis CPA</h2>
+    </div>
+    <div class="diff-grid">
+
+      <div class="diff-card fade-up fade-up-d1">
+        <div class="diff-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        </div>
+        <h3 class="diff-title">Responsive by default</h3>
+        <p class="diff-text">We pick up the phone. We reply to emails. We don't disappear after tax season or hand you off to someone who doesn't know your file. If you've been burned by an accountant who went silent, that ends here.</p>
+      </div>
+
+      <div class="diff-card fade-up fade-up-d2">
+        <div class="diff-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3 class="diff-title">Proactive, not reactive</h3>
+        <p class="diff-text">We flag issues before they become problems. Quarterly check-ins, year-end strategy sessions, and IRS notices handled before you even see them. Your tax situation shouldn't surprise you — it should be planned.</p>
+      </div>
+
+      <div class="diff-card fade-up fade-up-d3">
+        <div class="diff-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
+        </div>
+        <h3 class="diff-title">Technical depth, plain language</h3>
+        <p class="diff-text">We know the tax code — Section 199A, FEIE, cost segregation, PFIC rules, treaty positions. We explain it clearly. Complex situations broken down so you can make confident decisions without a law degree.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ ABOUT ═══════════════════ -->
+<section class="about" id="about" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-header">
+      <p class="section-label fade-up">The firm</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="about-heading">About the Firm</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-text fade-up fade-up-d1">
+        <p>Vantis CPA is a boutique CPA firm licensed in Florida, built around a simple premise: <strong>clients deserve a real advisor who knows their file.</strong> Not a call center, not a seasonal preparer, not a firm where you're handed off to a junior the moment you ask a question. When you work with us, you have a direct relationship with your CPA — someone who has read your returns, knows your structure, and can answer your questions the same day.</p>
+        <p>Our practice spans individual and business clients in over 20 countries. We work with US expats navigating foreign income exclusions and treaty positions, Latin American families with US investments, founders and investors building entities and managing equity, and South Florida businesses who need a complete back-office without the overhead of a large firm. We are fully bilingual in English and Spanish, and our team is built for international complexity.</p>
+        <p>Our philosophy is proactive advisory — not just compliance. Anyone can file a return. <strong>We're here to call you before the problem happens, not after.</strong> That means quarterly check-ins, year-end planning sessions, and the kind of institutional knowledge about your situation that only comes from a long-term relationship. If you've ever been surprised by a tax bill or ignored by your accountant, we were built for exactly that situation.</p>
+      </div>
+      <div class="trust-cards fade-up fade-up-d2">
+
+        <div class="trust-card">
+          <div class="trust-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <p class="trust-card-title">Licensed CPA &mdash; Florida</p>
+            <p class="trust-card-text">Certified Public Accountant, State of Florida. Regulated, credentialed, accountable.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          </div>
+          <div>
+            <p class="trust-card-title">Bilingual &mdash; English &amp; Spanish</p>
+            <p class="trust-card-text">Full-service in both languages. No translation lag, no misunderstandings.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+          </div>
+          <div>
+            <p class="trust-card-title">International Practice</p>
+            <p class="trust-card-text">Clients in 20+ countries. We understand cross-border complexity from the inside out.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="trust-card-title">Responsive</p>
+            <p class="trust-card-text">Same-day replies, phone calls answered. We don't disappear between April 16 and December.</p>
+          </div>
+        </div>
+
+        <div class="trust-card">
+          <div class="trust-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+          </div>
+          <div>
+            <p class="trust-card-title">Confidential</p>
+            <p class="trust-card-text">Secure, private, and discreet. Your financial information never leaves the engagement.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
+<section class="client-resources grain-overlay" id="client-portal" aria-labelledby="resources-heading">
+  <div class="container">
+    <div class="resources-header">
+      <p class="section-label fade-up">Existing clients</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
+      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
+    </div>
+    <div class="resources-grid">
+
+      <div class="resource-card fade-up fade-up-d1">
+        <h3 class="resource-card-title">Client Portal</h3>
+        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
+        <a href="#" class="btn-resource">Access Portal &#8594;</a>
+      </div>
+
+      <div class="resource-card fade-up fade-up-d2">
+        <h3 class="resource-card-title">Bill Pay</h3>
+        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
+        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-header">
+      <p class="section-label fade-up">Get in touch</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Start the Conversation</h2>
+      <p class="section-subheading fade-up fade-up-d2">Schedule a consultation or send us a message. We respond within one business day.</p>
+    </div>
+    <div class="contact-grid">
+
+      <div class="fade-up fade-up-d1">
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" name="firstName" placeholder="Jane" autocomplete="given-name" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" name="lastName" placeholder="Smith" autocomplete="family-name" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone <span class="form-label-note">(optional)</span></label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 000-0000" autocomplete="tel" />
+          </div>
+          <div class="form-group">
+            <label for="message">How can we help?</label>
+            <textarea id="message" name="message" placeholder="Tell us a bit about your situation — what you're working on, what you need, and the best way to reach you." required></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+        <div class="form-success" id="formSuccess" role="alert">
+          <strong>Message received.</strong> Thank you for reaching out. We'll be in touch within one business day. If your matter is urgent, please call us at <a href="tel:+17274551016" style="color:inherit;">(727) 455-1016</a>.
+        </div>
+      </div>
+
+      <div class="contact-info fade-up fade-up-d2">
+        <h3 class="contact-info-title">Reach us directly</h3>
+
+        <div class="contact-item">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">Phone</p>
+            <p class="contact-item-value"><a href="tel:+17274551016">(727) 455-1016</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">Email</p>
+            <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">WhatsApp</p>
+            <p class="contact-item-value">Available on request</p>
+            <p class="contact-item-note">Ask us for our WhatsApp number during onboarding.</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-item-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div>
+            <p class="contact-item-label">Office Hours</p>
+            <p class="contact-item-value">Mon &ndash; Fri, 9 AM &ndash; 6 PM ET</p>
+            <p class="contact-item-note">After-hours available for existing clients.</p>
+          </div>
+        </div>
+
+        <div class="response-badge">
+          Response within 1 business day &mdash; usually same day.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<footer class="footer grain-overlay" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+
+      <div>
+        <div class="footer-brand-mark" aria-hidden="true">V</div>
+        <p class="footer-firm-name">Vantis CPA</p>
+
+        <div class="footer-contact">
+          <a href="tel:+17274551016">(727) 455-1016</a>
+          <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
+        </div>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Services</p>
+        <ul class="footer-links">
+          <li><a href="#services">Tax Strategy &amp; Preparation</a></li>
+          <li><a href="#services">Entity Formation &amp; Management</a></li>
+          <li><a href="#services">Back-Office Support</a></li>
+          <li><a href="#services">Bookkeeping &amp; Reporting</a></li>
+          <li><a href="#services">Payroll Management</a></li>
+          <li><a href="#services">Sales Tax &amp; Compliance</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Industries</p>
+        <ul class="footer-links">
+          <li><a href="/founders/"><span class="footer-dot footer-dot-founders" aria-hidden="true">&#9679;</span> Founders &amp; Investors</a></li>
+          <li><a href="/expats/"><span class="footer-dot footer-dot-expats" aria-hidden="true">&#9679;</span> US Expats</a></li>
+          <li><a href="/latam/"><span class="footer-dot footer-dot-latam" aria-hidden="true">&#9679;</span> Latin American Families</a></li>
+          <li><a href="/local/"><span class="footer-dot footer-dot-local" aria-hidden="true">&#9679;</span> South Florida Business</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="footer-col-title">Quick Links</p>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#client-portal">Client Portal</a></li>
+          <li><a href="#client-portal">Bill Pay</a></li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 Vantis CPA. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
+<script>
+  // Nav scroll shadow
+  (function () {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function () {
+      nav.classList.toggle('scrolled', window.scrollY > 8);
+    }, { passive: true });
+  })();
+
+  // Hamburger / mobile menu
+  (function () {
+    var btn = document.getElementById('hamburger');
+    var menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', function () {
+      var open = menu.classList.toggle('open');
+      btn.classList.toggle('open', open);
+      btn.setAttribute('aria-expanded', String(open));
+    });
+    menu.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        menu.classList.remove('open');
+        btn.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
+  // IntersectionObserver fade-up
+  (function () {
+    var els = document.querySelectorAll('.fade-up');
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.06, rootMargin: '0px 0px -36px 0px' });
+    els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // Contact form with fetch
+  (function () {
+    var form = document.getElementById('contactForm');
+    var success = document.getElementById('formSuccess');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = form.querySelector('.form-submit');
+      btn.textContent = 'Sending\u2026';
+      btn.disabled = true;
+
+      // Replace the URL below with your actual form endpoint
+      var endpoint = '#';
+      var data = {
+        firstName: form.firstName.value.trim(),
+        lastName:  form.lastName.value.trim(),
+        email:     form.email.value.trim(),
+        phone:     form.phone.value.trim(),
+        message:   form.message.value.trim()
+      };
+
+      // Simulate submission until endpoint is wired up
+      setTimeout(function () {
+        form.style.display = 'none';
+        success.classList.add('visible');
+      }, 800);
+    });
+  })();
+</script>
+
+</body>
+</html>
