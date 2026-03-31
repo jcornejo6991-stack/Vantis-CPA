@@ -1267,10 +1267,11 @@
     .footer-about { font-size: 13px; color: #7aaa8f; line-height: 1.6; margin-top: 16px; max-width: 380px; }
     .footer-about strong { color: #fff; }
     .footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7b5f; margin-bottom: 16px; }
-    .footer-links { list-style: disc; display: flex; flex-direction: column; gap: 8px; margin-right: 16px; }
-    .footer-links a { font-size: 14px; color: #7aaa8f; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-right: 16px; }
+    .footer-links li { display: flex; align-items: center; gap: 8px; }
+    .footer-links a { font-size: 14px; color: #7aaa8f; text-decoration: none; transition: color 0.2s; }
     .footer-links a:hover { color: #fff; }
-    .footer-dot { font-size: 10px; margin-right: 2px; color: #7aaa8f; }
+    .footer-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
     .footer-dot-local { background-color: #6B8070; }
     .footer-dot-founders { background-color: #789060; }
     .footer-dot-realestate { background-color: #947070; }
@@ -1750,7 +1751,9 @@ const practicesData = [
         expats: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
         latam: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>',
         local: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
-        realestate: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>'
+        realestate: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
+        outbound: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>',
+        inbound: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>'
       };
 
       const colorMap = {
@@ -1895,35 +1898,6 @@ const practicesData = [
     </script>
     </div>
   </div>
-</section>
-
-<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
-<section class="client-resources grain-overlay" id="client-portal" aria-labelledby="resources-heading">
-  <div class="container">
-    <div class="resources-header">
-      <p class="section-label fade-up">Existing clients</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
-      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
-    </div>
-    <div class="resources-grid">
-
-      <div class="resource-card fade-up fade-up-d1">
-        <h3 class="resource-card-title">Client Portal</h3>
-        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
-        <a href="#" class="btn-resource">Access Portal &#8594;</a>
-      </div>
-
-      <div class="resource-card fade-up fade-up-d2">
-        <h3 class="resource-card-title">Bill Pay</h3>
-        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
-        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
-      </div>
-
-
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════ RESOURCES ═══════════════════ -->
 <section class="resources" id="resources">
   <div class="container">
@@ -1949,6 +1923,33 @@ const practicesData = [
       <div class="resources-articles" id="resourceArticles">
         <!-- Articles populated by JavaScript -->
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
+<section class="client-resources grain-overlay" id="client-portal" aria-labelledby="resources-heading">
+  <div class="container">
+    <div class="resources-header">
+      <p class="section-label fade-up">Existing clients</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
+      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
+    </div>
+    <div class="resources-grid">
+
+      <div class="resource-card fade-up fade-up-d1">
+        <h3 class="resource-card-title">Client Portal</h3>
+        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
+        <a href="#" class="btn-resource">Access Portal &#8594;</a>
+      </div>
+
+      <div class="resource-card fade-up fade-up-d2">
+        <h3 class="resource-card-title">Bill Pay</h3>
+        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
+        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
+      </div>
+
+
     </div>
   </div>
 </section>
@@ -2053,9 +2054,9 @@ const practicesData = [
         </ul>
       </div>
 
-      <div class="footer-column">
-        <h4>Expertise</h4>
-        <ul>
+      <div>
+        <p class="footer-col-title">Expertise</p>
+        <ul class="footer-links">
           <li><span class="footer-dot footer-dot-local"></span><a href="/local/">Individuals and Local Businesses</a></li>
           <li><span class="footer-dot footer-dot-founders"></span><a href="/founders/">Startups and Growth-Stage Businesses</a></li>
           <li><span class="footer-dot footer-dot-realestate"></span><a href="/realestate/">Real Estate Owners</a></li>
