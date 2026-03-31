@@ -30,7 +30,10 @@
       "Bash(taskkill /PID 35888 /F)",
       "Bash(kill -9 46168 45372 35888)",
       "Bash(/tmp/verification_report.txt:*)",
-      "Read(//tmp/**)"
+      "Read(//tmp/**)",
+      "WebFetch(domain:tetontrustcompany.com)",
+      "WebFetch(domain:bskytrust.com)",
+      "WebFetch(domain:conemarshall.com)"
     ]
   }
 }
