@@ -1775,77 +1775,7 @@ const practicesData = [
         "U.S. Expats and Digital Nomads": "Remote compliance support bridging the gap between the U.S. tax system and international residency."
       };
 
-      // ─── RESOURCES DATA ───
-      const resourcesData = [
-        {
-          id: "s-corps",
-          title: "S-Corporations",
-          description: "Understand S-Corp election benefits, requirements, and tax implications.",
-          practices: ["founders", "local", "realestate"]
-        },
-        {
-          id: "smllc5472",
-          title: "SMLLC 5472 Election",
-          description: "Elect single-member LLC as C-Corp for tax optimization.",
-          practices: ["founders", "local"]
-        },
-        {
-          id: "form5471",
-          title: "Form 5471",
-          description: "Foreign Corporation Information Return and PFIC Rules.",
-          practices: ["outbound", "inbound"]
-        },
-        {
-          id: "due-dates",
-          title: "2024 Tax Deadlines",
-          description: "Key tax filing and payment dates for businesses and individuals.",
-          practices: ["all"]
-        },
-        {
-          id: "1031",
-          title: "1031 Exchange Guide",
-          description: "Real estate exchange strategies to defer capital gains tax.",
-          practices: ["realestate"]
-        }
-      ];
-
-      // Filter articles by selected practice
-      function getFilteredArticles(practice) {
-        if (practice === "all") return resourcesData;
-        return resourcesData.filter(article =>
-          article.practices.includes(practice) || article.practices.includes("all")
-        );
-      }
-
-      // Render articles in carousel
-      function renderResourceArticles(practice = "all") {
-        const container = document.getElementById("resourceArticles");
-        if (!container) return;
-
-        const articles = getFilteredArticles(practice);
-
-        container.innerHTML = articles.map(article => `
-          <div class="resource-card fade-up">
-            <h3 class="resource-title">${article.title}</h3>
-            <p class="resource-description">${article.description}</p>
-            <a href="#" class="resource-link">Read Article →</a>
-          </div>
-        `).join("");
-      }
-
-      // Initialize Resources section on page load
-      document.addEventListener("DOMContentLoaded", function() {
-        renderResourceArticles("all");
-
-        const practiceSelect = document.getElementById("practiceSelect");
-        if (practiceSelect) {
-          practiceSelect.addEventListener("change", function() {
-            renderResourceArticles(this.value);
-          });
-        }
-      });
-
-      Object.values(practicesData).forEach((practice, index) => {
+Object.values(practicesData).forEach((practice, index) => {
         const delayClass = `fade-up-d${index + 1}`;
         const wrapper = document.createElement('div');
         wrapper.className = 'industry-card-wrapper';
@@ -1927,6 +1857,75 @@ const practicesData = [
       </div>
     </div>
   </div>
+
+  <script>
+    // Resources initialization (standalone script)
+    const resourcesData = [
+      {
+        id: "s-corps",
+        title: "S-Corporations",
+        description: "Understand S-Corp election benefits, requirements, and tax implications.",
+        practices: ["founders", "local", "realestate"]
+      },
+      {
+        id: "smllc5472",
+        title: "SMLLC 5472 Election",
+        description: "Elect single-member LLC as C-Corp for tax optimization.",
+        practices: ["founders", "local"]
+      },
+      {
+        id: "form5471",
+        title: "Form 5471",
+        description: "Foreign Corporation Information Return and PFIC Rules.",
+        practices: ["outbound", "inbound"]
+      },
+      {
+        id: "due-dates",
+        title: "2024 Tax Deadlines",
+        description: "Key tax filing and payment dates for businesses and individuals.",
+        practices: ["all"]
+      },
+      {
+        id: "1031",
+        title: "1031 Exchange Guide",
+        description: "Real estate exchange strategies to defer capital gains tax.",
+        practices: ["realestate"]
+      }
+    ];
+
+    function getFilteredArticles(practice) {
+      if (practice === "all") return resourcesData;
+      return resourcesData.filter(article =>
+        article.practices.includes(practice) || article.practices.includes("all")
+      );
+    }
+
+    function renderResourceArticles(practice = "all") {
+      const container = document.getElementById("resourceArticles");
+      if (!container) return;
+
+      const articles = getFilteredArticles(practice);
+
+      container.innerHTML = articles.map(article => `
+        <div class="resource-card fade-up">
+          <h3 class="resource-title">${article.title}</h3>
+          <p class="resource-description">${article.description}</p>
+          <a href="#" class="resource-link">Read Article →</a>
+        </div>
+      `).join("");
+    }
+
+    // Initialize immediately
+    renderResourceArticles("all");
+
+    // Also listen for dropdown changes
+    const practiceSelect = document.getElementById("practiceSelect");
+    if (practiceSelect) {
+      practiceSelect.addEventListener("change", function() {
+        renderResourceArticles(this.value);
+      });
+    }
+  </script>
 </section>
 
 <!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
