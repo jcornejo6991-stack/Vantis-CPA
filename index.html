@@ -1213,42 +1213,70 @@ const practicesData = [
     href: "/local/",
     accent: "local",
     description: "From brick-and-mortar shops to contractors and service providers, we deliver practical, actionable tax guidance tailored to your specific needs. You are our priority, which is why we pride ourselves on being flexible and highly responsive. We optimize your tax structure and streamline your accounting setup to lay a strong financial foundation for your business to grow.",
-    niches: []
+    niches: [
+      { name: "Local Business Owners", href: "/local/business-owners/" },
+      { name: "Contractors", href: "/local/contractors/" },
+      { name: "Real Estate Investors", href: "/local/real-estate/" },
+      { name: "Medical Practices", href: "/local/medical-practices/" },
+      { name: "Restaurants/Hospitality", href: "/local/hospitality/" }
+    ]
   },
   {
     name: "Startups and Growth-Stage Businesses",
     href: "/founders/",
     accent: "founders",
     description: "We empower early-stage businesses and modern entrepreneurs to scale with confidence. Whether you are an e-commerce brand, online retailer, crypto trader, or content creator, we navigate complex, industry-specific tax strategies on your behalf so you can focus on accelerating your growth.",
-    niches: []
+    niches: [
+      { name: "Tech Founders", href: "/founders/tech/" },
+      { name: "Crypto", href: "/founders/crypto/" },
+      { name: "E-commerce", href: "/founders/ecommerce/" },
+      { name: "Content Creators", href: "/founders/content/" }
+    ]
   },
   {
     name: "Real Estate Owners and Investors",
     href: "/realestate/",
     accent: "realestate",
     description: "Maximize the return on your real estate investments with strategic tax planning. We help you structure your portfolio effectively and leverage the full extent of the tax code—including bonus depreciation, 1031 exchanges, and Section 754 elections—to maximize your tax savings.",
-    niches: []
+    niches: [
+      { name: "Rentals", href: "/realestate/rentals/" },
+      { name: "Commercial", href: "/realestate/commercial/" },
+      { name: "Development", href: "/realestate/development/" },
+      { name: "Private Equity", href: "/realestate/private-equity/" }
+    ]
   },
   {
-    name: "U.S. Owners of Foreign Businesses and Investments (Outbound Tax)",
+    name: "International U.S. Taxpayers",
     href: "/outbound/",
     accent: "outbound",
     description: "U.S. taxation of cross-border transactions and foreign investments is highly complex and carries steep penalties for non-compliance. We bring clarity to the complexity. For U.S. citizens with foreign interests, we protect your business and wealth by ensuring compliance while actively minimizing your worldwide tax rate and exposure.",
-    niches: []
+    niches: [
+      { name: "U.S. Citizens Abroad", href: "/outbound/citizens/" },
+      { name: "Foreign Investments", href: "/outbound/investments/" },
+      { name: "Cross-Border Business", href: "/outbound/cross-border/" }
+    ]
   },
   {
-    name: "Foreign-Owned U.S. Businesses and Investments (Inbound Tax)",
+    name: "Foreign Businesses and Investors",
     href: "/inbound/",
     accent: "inbound",
     description: "Expanding into the U.S. market presents unique financial challenges. The U.S. tax system is intricate, comprehensive, and often drastically different from the rest of the world. We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly, protecting your assets, minimizing risk, and managing a lower effective tax rate.",
-    niches: []
+    niches: [
+      { name: "Foreign Corporations", href: "/inbound/corporations/" },
+      { name: "Investment Structure", href: "/inbound/structure/" },
+      { name: "Market Entry", href: "/inbound/entry/" }
+    ]
   },
   {
     name: "U.S. Expats and Digital Nomads",
     href: "/expats/",
     accent: "expats",
     description: "Navigating the U.S. tax system from abroad can be daunting, especially with limited resources. Whether you are a U.S. citizen living overseas long-term, on a short-term assignment, or traveling as a digital nomad, we bridge the gap. Our firm ensures you remain fully compliant while actively minimizing your tax burden from anywhere in the world.",
-    niches: []
+    niches: [
+      { name: "Remote Workers", href: "/expats/remote/" },
+      { name: "Long-term Residents", href: "/expats/longterm/" },
+      { name: "Digital Nomads", href: "/expats/nomads/" }
+    ]
   }
 ];
   </script>
