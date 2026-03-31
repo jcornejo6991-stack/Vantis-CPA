@@ -33,7 +33,8 @@
       "Read(//tmp/**)",
       "WebFetch(domain:tetontrustcompany.com)",
       "WebFetch(domain:bskytrust.com)",
-      "WebFetch(domain:conemarshall.com)"
+      "WebFetch(domain:conemarshall.com)",
+      "Bash(pkill -f \"python -m http.server\")"
     ]
   }
 }
