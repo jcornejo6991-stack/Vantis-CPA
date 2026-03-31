@@ -28,7 +28,9 @@
       "Bash(taskkill /PID 46168 /F)",
       "Bash(taskkill /PID 45372 /F)",
       "Bash(taskkill /PID 35888 /F)",
-      "Bash(kill -9 46168 45372 35888)"
+      "Bash(kill -9 46168 45372 35888)",
+      "Bash(/tmp/verification_report.txt:*)",
+      "Read(//tmp/**)"
     ]
   }
 }
