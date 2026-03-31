@@ -651,38 +651,7 @@
 
     /* ─── DIFFERENTIATORS ─── */
     .differentiators { padding: 80px 0; background: #fff; margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
-    .diff-card { background: #edeef7; border-top: 2px solid var(--accent); }
     .diff-header { margin-bottom: 48px; }
-    .diff-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-    .diff-card {
-      background: var(--bg);
-      border-radius: var(--card-radius);
-      padding: 32px 28px;
-      border: 1px solid #e8e9f2;
-    }
-    .diff-icon {
-      width: 44px;
-      height: 44px;
-      background: var(--accent-light);
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 18px;
-    }
-    .diff-icon svg { width: 22px; height: 22px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .diff-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 10px;
-    }
-    .diff-text { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
 
     .diff-journey { display: flex; flex-direction: column; gap: 60px; max-width: 800px; margin: 60px auto 0; }
 
@@ -954,44 +923,6 @@
     /* ─── ABOUT ─── */
     .about { padding: 80px 0; background: linear-gradient(to bottom, var(--bg) 0%, #fff 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
     .about-header { margin-bottom: 48px; }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 360px;
-      gap: 52px;
-      align-items: start;
-    }
-    .about-text p {
-      font-size: 16px;
-      color: var(--text-mid);
-      line-height: 1.75;
-      margin-bottom: 18px;
-    }
-    .about-text p:last-child { margin-bottom: 0; }
-    .about-text strong { color: var(--text-dark); font-weight: 600; }
-
-    .trust-cards { display: flex; flex-direction: column; gap: 12px; }
-    .trust-card {
-      background: #fff;
-      border-radius: 10px;
-      padding: 16px 20px;
-      border: 1px solid #e4e6f0;
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-    .trust-card-icon {
-      width: 34px;
-      height: 34px;
-      background: var(--accent-light);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .trust-card-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .trust-card-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
-    .trust-card-text { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
 
     .about-values { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto; }
 
@@ -1254,10 +1185,8 @@
     @media (max-width: 1024px) {
       .services-header .section-subheading { white-space: normal; }
       .industries-header .section-subheading { white-space: normal; }
-      .diff-grid { grid-template-columns: 1fr 1fr; }
       .services-grid { grid-template-columns: 1fr 1fr; }
       .industry-card { grid-template-columns: 1.2fr 1fr; }
-      .about-grid { grid-template-columns: 1fr; gap: 36px; }
       .resources-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 150px; }
@@ -1268,7 +1197,6 @@
       .nav-contact { display: none; }
       .hamburger { display: flex; }
       .about-values { grid-template-columns: 1fr; }
-      .diff-grid,
       .services-grid,
       .industries-grid,
       .resources-grid { grid-template-columns: 1fr; }
