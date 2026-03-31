@@ -1064,24 +1064,77 @@
       outline: none;
     }
 
+    .resources-carousel-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
     .resources-carousel {
+      flex: 1;
+      overflow: hidden;
       padding: 20px 0;
-      min-height: auto;
     }
 
     .resources-articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      display: flex;
       gap: 24px;
+      scroll-behavior: smooth;
+      overflow-x: auto;
       padding: 0 22px;
+      padding-bottom: 10px;
+    }
+
+    .resources-articles::-webkit-scrollbar {
+      height: 4px;
+    }
+
+    .resources-articles::-webkit-scrollbar-track {
+      background: #f0f0f0;
+      border-radius: 2px;
+    }
+
+    .resources-articles::-webkit-scrollbar-thumb {
+      background: var(--primary);
+      border-radius: 2px;
+    }
+
+    .carousel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+      padding: 0;
+    }
+
+    .carousel-nav:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: #f9f9f9;
+    }
+
+    .carousel-nav svg {
+      width: 20px;
+      height: 20px;
     }
 
     .resources .resource-card {
+      flex: 0 0 calc(25% - 18px);
       padding: 24px;
       background: #f9f9f9;
       border-radius: 8px;
       border-left: 3px solid var(--primary);
       transition: all 0.3s ease;
+      min-width: 250px;
     }
 
     .resources .resource-card:hover {
@@ -1853,10 +1906,24 @@ Object.values(practicesData).forEach((practice, index) => {
       </div>
     </div>
 
-    <div class="resources-carousel fade-up fade-up-d3">
-      <div class="resources-articles" id="resourceArticles">
-        <!-- Articles populated by JavaScript -->
+    <div class="resources-carousel-wrapper fade-up fade-up-d3">
+      <button class="carousel-nav carousel-nav-prev" id="carouselPrev" aria-label="Previous articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="resources-carousel">
+        <div class="resources-articles" id="resourceArticles">
+          <!-- Articles populated by JavaScript -->
+        </div>
       </div>
+
+      <button class="carousel-nav carousel-nav-next" id="carouselNext" aria-label="Next articles">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
     </div>
   </div>
 
@@ -1920,11 +1987,32 @@ Object.values(practicesData).forEach((practice, index) => {
     // Initialize immediately
     renderResourceArticles("all");
 
+    // Carousel navigation
+    const carouselContainer = document.querySelector(".resources-articles");
+    const prevBtn = document.getElementById("carouselPrev");
+    const nextBtn = document.getElementById("carouselNext");
+
+    if (carouselContainer && prevBtn && nextBtn) {
+      const scrollAmount = 320; // Card width + gap
+
+      prevBtn.addEventListener("click", function() {
+        carouselContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+      });
+
+      nextBtn.addEventListener("click", function() {
+        carouselContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      });
+    }
+
     // Also listen for dropdown changes
     const practiceSelect = document.getElementById("practiceSelect");
     if (practiceSelect) {
       practiceSelect.addEventListener("change", function() {
         renderResourceArticles(this.value);
+        // Reset carousel position when filtering
+        if (carouselContainer) {
+          carouselContainer.scrollLeft = 0;
+        }
       });
     }
   </script>
