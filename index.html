@@ -1008,6 +1008,126 @@
     .resource-contact-list li a:hover { color: #fff; }
     .resource-contact-list li svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
 
+    /* ─── RESOURCES SECTION ─── */
+    .resources {
+      padding: 60px 0;
+      background: #fff;
+    }
+
+    .resources .resources-header {
+      text-align: center;
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .resources .section-label,
+    .resources .section-heading,
+    .resources .section-subheading {
+      margin: 0;
+    }
+
+    .resources-filter {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .resources-filter label {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-dark);
+    }
+
+    .resources-filter select {
+      padding: 10px 16px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fff;
+      color: var(--text-dark);
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    .resources-filter select:hover,
+    .resources-filter select:focus {
+      border-color: var(--primary);
+      outline: none;
+    }
+
+    .resources-carousel {
+      overflow-x: auto;
+      padding: 20px 0;
+      scroll-behavior: smooth;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .resources-articles {
+      display: flex;
+      gap: 20px;
+      min-width: min-content;
+      padding: 0 22px;
+    }
+
+    .resources .resource-card {
+      flex: 0 0 300px;
+      padding: 24px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      border-left: 3px solid var(--primary);
+      transition: all 0.3s ease;
+    }
+
+    .resources .resource-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .resources .resource-card .resource-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 12px;
+    }
+
+    .resources .resource-card .resource-description {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .resources .resource-link {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .resources .resource-link:hover {
+      color: var(--primary-dark);
+    }
+
+    @media (max-width: 768px) {
+      .resources-filter {
+        flex-direction: column;
+      }
+
+      .resources-articles {
+        gap: 16px;
+        padding: 0 16px;
+      }
+
+      .resources .resource-card {
+        flex: 0 0 calc(100vw - 60px);
+      }
+    }
+
     /* ─── CONTACT ─── */
     .contact { padding: 80px 0; background: linear-gradient(160deg, #fff 0%, #edeef7 100%); margin: 22px 22px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
     .contact-header { margin-bottom: 48px; }
@@ -1318,6 +1438,7 @@ const practicesData = [
 
       <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
       <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
+      <li><a href="#resources" class="nav-pill">Resources</a></li>
       <li><a href="/referrals/">REFERRALS</a></li>
     </ul>
 
@@ -1417,6 +1538,7 @@ const practicesData = [
       <a href="#industries" role="menuitem">Expertise</a>
       <a href="#client-portal" role="menuitem">Client Portal</a>
       <a href="#client-portal" role="menuitem">Bill Pay</a>
+      <a href="#resources" role="menuitem">Resources</a>
     </div>
   </div>
 </nav>
@@ -1642,13 +1764,83 @@ const practicesData = [
       };
 
       const summaries = {
-        "Individuals and Local Businesses": "From brick-and-mortar shops to service providers, we deliver practical, actionable tax guidance tailored to your specific needs.",
-        "Startups and Growth-Stage Businesses": "We empower early-stage businesses and modern entrepreneurs to scale with confidence.",
+        "Individuals and Local Businesses": "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations.",
+        "Startups and Growth-Stage Businesses": "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence.",
         "Real Estate Owners": "Maximize the return on your real estate investments with strategic tax planning.",
-        "International U.S. Taxpayers": "U.S. taxation of cross-border transactions and foreign investments is highly complex and carries steep penalties for non-compliance. We bring clarity to the complexity.",
-        "Foreign Businesses and Investors": "Expanding into the U.S. market presents unique financial challenges. We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
-        "U.S. Expats and Digital Nomads": "Navigating the U.S. tax system from abroad can be daunting, especially with limited resources. We bridge the gap."
+        "International U.S. Taxpayers": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning.",
+        "Foreign Businesses and Investors": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
+        "U.S. Expats and Digital Nomads": "Remote compliance support bridging the gap between the U.S. tax system and international residency."
       };
+
+      // ─── RESOURCES DATA ───
+      const resourcesData = [
+        {
+          id: "s-corps",
+          title: "S-Corporations",
+          description: "Understand S-Corp election benefits, requirements, and tax implications.",
+          practices: ["founders", "local", "realestate"]
+        },
+        {
+          id: "smllc5472",
+          title: "SMLLC 5472 Election",
+          description: "Elect single-member LLC as C-Corp for tax optimization.",
+          practices: ["founders", "local"]
+        },
+        {
+          id: "form5471",
+          title: "Form 5471",
+          description: "Foreign Corporation Information Return and PFIC Rules.",
+          practices: ["outbound", "inbound"]
+        },
+        {
+          id: "due-dates",
+          title: "2024 Tax Deadlines",
+          description: "Key tax filing and payment dates for businesses and individuals.",
+          practices: ["all"]
+        },
+        {
+          id: "1031",
+          title: "1031 Exchange Guide",
+          description: "Real estate exchange strategies to defer capital gains tax.",
+          practices: ["realestate"]
+        }
+      ];
+
+      // Filter articles by selected practice
+      function getFilteredArticles(practice) {
+        if (practice === "all") return resourcesData;
+        return resourcesData.filter(article =>
+          article.practices.includes(practice) || article.practices.includes("all")
+        );
+      }
+
+      // Render articles in carousel
+      function renderResourceArticles(practice = "all") {
+        const container = document.getElementById("resourceArticles");
+        if (!container) return;
+
+        const articles = getFilteredArticles(practice);
+
+        container.innerHTML = articles.map(article => `
+          <div class="resource-card fade-up">
+            <h3 class="resource-title">${article.title}</h3>
+            <p class="resource-description">${article.description}</p>
+            <a href="#" class="resource-link">Read Article →</a>
+          </div>
+        `).join("");
+      }
+
+      // Initialize Resources section on page load
+      document.addEventListener("DOMContentLoaded", function() {
+        renderResourceArticles("all");
+
+        const practiceSelect = document.getElementById("practiceSelect");
+        if (practiceSelect) {
+          practiceSelect.addEventListener("change", function() {
+            renderResourceArticles(this.value);
+          });
+        }
+      });
 
       Object.values(practicesData).forEach((practice, index) => {
         const delayClass = `fade-up-d${index + 1}`;
@@ -1705,72 +1897,6 @@ const practicesData = [
   </div>
 </section>
 
-<section class="differentiators" aria-labelledby="diff-heading">
-  <div class="container">
-    <div class="diff-header">
-      <p class="section-label fade-up">What sets us apart</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="diff-heading">How we work</h2>
-    </div>
-
-    <div class="diff-journey">
-      <div class="diff-stage fade-up fade-up-d1">
-        <div class="diff-stage-number">1</div>
-        <p class="diff-stage-text">We respond to your inquiry</p>
-      </div>
-
-      <div class="diff-stage fade-up fade-up-d2">
-        <div class="diff-stage-number">2</div>
-        <p class="diff-stage-text">Review your tax return and accounting setup</p>
-      </div>
-
-      <div class="diff-stage fade-up fade-up-d3">
-        <div class="diff-stage-number">3</div>
-        <p class="diff-stage-text">Look for errors and flaws to correct them</p>
-      </div>
-
-      <div class="diff-stage fade-up fade-up-d4">
-        <div class="diff-stage-number">4</div>
-        <p class="diff-stage-text">Optimize your structure</p>
-      </div>
-
-      <div class="diff-stage fade-up fade-up-d1">
-        <div class="diff-stage-number">5</div>
-        <p class="diff-stage-text">Check in quarterly for estimates, extensions and final returns</p>
-      </div>
-
-      <div class="diff-stage fade-up fade-up-d2">
-        <div class="diff-stage-number">6</div>
-        <p class="diff-stage-text">Proactive year-end and all-year planning</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ ABOUT ═══════════════════ -->
-<section class="about" id="about" aria-labelledby="about-heading">
-  <div class="container">
-    <div class="about-header">
-      <p class="section-label fade-up">The firm</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="about-heading">About Vantis</h2>
-    </div>
-
-    <div class="about-values fade-up fade-up-d2">
-      <div class="about-value">
-        <p class="about-value-label"><strong>Aggressive.</strong></p>
-        <p class="about-value-desc">We optimize every dollar legally.</p>
-      </div>
-      <div class="about-value">
-        <p class="about-value-label"><strong>Protective.</strong></p>
-        <p class="about-value-desc">Your information is secured, confidential, safe.</p>
-      </div>
-      <div class="about-value">
-        <p class="about-value-label"><strong>Modern.</strong></p>
-        <p class="about-value-desc">We use tech, know the tax code, think forward.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
 <section class="client-resources grain-overlay" id="client-portal" aria-labelledby="resources-heading">
   <div class="container">
@@ -1794,6 +1920,35 @@ const practicesData = [
       </div>
 
 
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ RESOURCES ═══════════════════ -->
+<section class="resources" id="resources">
+  <div class="container">
+    <div class="resources-header">
+      <p class="section-label fade-up">Knowledge Base</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Resources</h2>
+
+      <div class="resources-filter fade-up fade-up-d2">
+        <label for="practiceSelect">Filter by practice:</label>
+        <select id="practiceSelect">
+          <option value="all">All Articles</option>
+          <option value="local">Individuals and Local Businesses</option>
+          <option value="founders">Startups and Growth-Stage Businesses</option>
+          <option value="realestate">Real Estate Owners</option>
+          <option value="outbound">International U.S. Taxpayers</option>
+          <option value="inbound">Foreign Businesses and Investors</option>
+          <option value="expats">U.S. Expats and Digital Nomads</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="resources-carousel fade-up fade-up-d3">
+      <div class="resources-articles" id="resourceArticles">
+        <!-- Articles populated by JavaScript -->
+      </div>
     </div>
   </div>
 </section>
