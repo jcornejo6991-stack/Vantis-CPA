@@ -1063,25 +1063,19 @@
     }
 
     .resources-carousel {
-      overflow-x: auto;
       padding: 20px 0;
-      scroll-behavior: smooth;
-      -webkit-overflow-scrolling: touch;
-      min-height: 280px;
+      min-height: auto;
     }
 
     .resources-articles {
-      display: flex;
-      gap: 20px;
-      min-width: min-content;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
       padding: 0 22px;
-      align-items: stretch;
     }
 
     .resources .resource-card {
-      flex: 0 0 300px;
       padding: 24px;
-      height: auto;
       background: #f9f9f9;
       border-radius: 8px;
       border-left: 3px solid var(--primary);
