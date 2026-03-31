@@ -993,6 +993,26 @@
     .trust-card-title { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 2px; }
     .trust-card-text { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
 
+    .about-values { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto; }
+
+    .about-value { text-align: center; }
+
+    .about-value-label { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+
+    .about-value-desc { font-size: 16px; color: var(--text-mid); line-height: 1.6; }
+
+    .about-narrative { max-width: 800px; margin: 0 auto 60px; }
+
+    .about-narrative p { font-size: 16px; color: var(--text-mid); line-height: 1.75; margin-bottom: 20px; }
+
+    .about-narrative p:last-child { margin-bottom: 0; }
+
+    .about-narrative strong { color: var(--text-dark); font-weight: 600; }
+
+    .about-culture { display: flex; flex-direction: column; gap: 24px; max-width: 700px; margin: 0 auto; text-align: center; padding-top: 40px; border-top: 1px solid #e8e8e8; }
+
+    .culture-statement { font-size: 18px; font-weight: 600; color: var(--text-dark); }
+
     /* ─── CLIENT RESOURCES ─── */
     .grain-overlay { position: relative; overflow: hidden; }
     .grain-overlay::before {
@@ -1247,6 +1267,7 @@
       .nav-links { display: none; }
       .nav-contact { display: none; }
       .hamburger { display: flex; }
+      .about-values { grid-template-columns: 1fr; }
       .diff-grid,
       .services-grid,
       .industries-grid,
