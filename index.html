@@ -1617,6 +1617,33 @@ const practicesData = [
     <script>
       // Render industries from practicesData
       const industriesGrid = document.getElementById('industries-grid');
+
+      // Icon map for each category
+      const iconMap = {
+        founders: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
+        expats: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
+        latam: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>',
+        local: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
+        realestate: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>'
+      };
+
+      const colorMap = {
+        founders: '#647D4C',
+        expats: '#486175',
+        latam: '#7B6E59',
+        local: '#576E62',
+        realestate: '#7B5555'
+      };
+
+      const summaries = {
+        "Individuals and Local Businesses": "From brick-and-mortar shops to contractors and service providers, we deliver practical, actionable tax guidance tailored to your specific needs. You are our priority, which is why we pride ourselves on being flexible and highly responsive. We optimize your tax structure and streamline your accounting setup to lay a strong financial foundation for your business to grow.",
+        "Startups and Growth-Stage Businesses": "We empower early-stage businesses and modern entrepreneurs to scale with confidence. Whether you are an e-commerce brand, online retailer, crypto trader, or content creator, we navigate complex, industry-specific tax strategies on your behalf so you can focus on accelerating your growth.",
+        "Real Estate Owners and Investors": "Maximize the return on your real estate investments with strategic tax planning. We help you structure your portfolio effectively and leverage the full extent of the tax code—including bonus depreciation, 1031 exchanges, and Section 754 elections—to maximize your tax savings.",
+        "International U.S. Taxpayers": "U.S. taxation of cross-border transactions and foreign investments is highly complex and carries steep penalties for non-compliance. We bring clarity to the complexity. For U.S. citizens with foreign interests, we protect your business and wealth by ensuring compliance while actively minimizing your worldwide tax rate and exposure.",
+        "Foreign Businesses and Investors": "Expanding into the U.S. market presents unique financial challenges. The U.S. tax system is intricate, comprehensive, and often drastically different from the rest of the world. We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly, protecting your assets, minimizing risk, and managing a lower effective tax rate.",
+        "U.S. Expats and Digital Nomads": "Navigating the U.S. tax system from abroad can be daunting, especially with limited resources. Whether you are a U.S. citizen living overseas long-term, on a short-term assignment, or traveling as a digital nomad, we bridge the gap. Our firm ensures you remain fully compliant while actively minimizing your tax burden from anywhere in the world."
+      };
+
       Object.values(practicesData).forEach((practice, index) => {
         const delayClass = `fade-up-d${index + 1}`;
         const wrapper = document.createElement('div');
@@ -1629,23 +1656,6 @@ const practicesData = [
         // Left column with title and description
         const leftCol = document.createElement('div');
         leftCol.className = 'industry-left';
-
-        // Icon map for each category
-        const iconMap = {
-          founders: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
-          expats: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
-          latam: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>',
-          local: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
-          realestate: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>'
-        };
-
-        const colorMap = {
-          founders: '#647D4C',
-          expats: '#486175',
-          latam: '#7B6E59',
-          local: '#576E62',
-          realestate: '#7B5555'
-        };
 
         const title = document.createElement('h3');
         title.className = 'industry-title';
@@ -1660,14 +1670,6 @@ const practicesData = [
 
         const desc = document.createElement('p');
         desc.className = 'industry-desc';
-
-        const summaries = {
-          'Startups & Growth': 'We specialize in helping early-stage companies and growth-focused entrepreneurs navigate complex tax strategies, optimize entity structures, and scale efficiently.',
-          'US Expats Abroad': 'Navigating US tax obligations while living abroad requires expertise. We help remote workers, digital nomads, and expat professionals minimize tax burden and stay compliant.',
-          'International Families & Investors': 'Cross-border wealth management, international investments, and family structures require strategic planning. We guide families and investors through complex multi-country scenarios.',
-          'Local Businesses': 'From restaurants to contractors and service providers, local businesses need practical tax strategies tailored to their operations and growth stage.',
-          'Real Estate Portfolios': 'We help real estate investors, developers, and portfolio managers optimize depreciation, entity structures, and capital gains strategies.'
-        };
 
         desc.textContent = summaries[practice.name] || 'Specialized services for ' + practice.niches.map(n => n.name.toLowerCase()).join(', ') + '.';
         leftCol.appendChild(desc);
