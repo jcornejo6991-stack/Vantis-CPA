@@ -1997,16 +1997,29 @@ Object.values(practicesData).forEach((practice, index) => {
       });
     }
 
-    // Also listen for dropdown changes
-    const practiceSelect = document.getElementById("practiceSelect");
-    if (practiceSelect) {
-      practiceSelect.addEventListener("change", function() {
-        renderResourceArticles(this.value);
-        // Reset carousel position when filtering
-        if (carouselContainer) {
-          carouselContainer.scrollLeft = 0;
-        }
-      });
+    // Listen for dropdown changes
+    function setupFilterListener() {
+      const practiceSelect = document.getElementById("practiceSelect");
+      const carousel = document.querySelector(".resources-articles");
+
+      if (practiceSelect) {
+        practiceSelect.addEventListener("change", function(e) {
+          const selectedValue = e.target.value;
+          renderResourceArticles(selectedValue);
+
+          // Reset carousel position when filtering
+          if (carousel) {
+            carousel.scrollLeft = 0;
+          }
+        });
+      }
+    }
+
+    // Wait for DOM to be fully ready
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", setupFilterListener);
+    } else {
+      setupFilterListener();
     }
   </script>
 </section>
