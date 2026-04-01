@@ -1,0 +1,23 @@
+name = "vantis-cpa-forms"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+route = "vantiscpa.com/api/*"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_db = "forms"
+
+[triggers]
+crons = []
+
+[build]
+command = "npm install"
+cwd = "./functions"
+
+[build.upload]
+format = "service-worker"
