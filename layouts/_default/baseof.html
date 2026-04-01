@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Data.siteConfig.metadata.lang }}">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "nav.html" . }}
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ partial "footer.html" . }}
+
+    <!-- Scripts -->
+    <script src="{{ "js/utils.js" | relURL }}"></script>
+    <script src="{{ "js/forms.js" | relURL }}"></script>
+    <script src="{{ "js/integrations.js" | relURL }}"></script>
+  </body>
+</html>

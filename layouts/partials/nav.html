@@ -1,0 +1,14 @@
+<nav>
+  <div class="container">
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="/" style="font-size: 24px; font-weight: bold;">
+        {{ .Site.Data.siteConfig.company.shortName }}
+      </a>
+      <div style="display: flex; gap: 24px;">
+        {{ range .Site.Data.siteConfig.navigation.main }}
+          <a href="{{ .url }}">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</nav>
