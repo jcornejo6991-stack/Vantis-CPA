@@ -403,7 +403,7 @@
       padding: 0 18px;
     }
     .section-label {
-      font-size: 12px;
+      font-size: 14.4px;
       font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
@@ -412,13 +412,13 @@
     }
     .section-heading {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(28px, 4vw, 40px);
+      font-size: clamp(33.6px, 4.8vw, 48px);
       font-weight: 700;
       color: var(--navy);
       line-height: 1.2;
     }
     .section-subheading {
-      font-size: 17px;
+      font-size: 20.4px;
       color: var(--text-mid);
       margin-top: 12px;
       max-width: 640px;
@@ -721,18 +721,6 @@
       position: relative;
       overflow: hidden;
     }
-    .service-card::after {
-      content: '';
-      position: absolute;
-      top: -2px;
-      right: -2px;
-      width: 0;
-      height: 0;
-      border-style: solid;
-      border-width: 0 60px 60px 0;
-      border-color: transparent #e8e8e8 transparent transparent;
-      filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.2)) drop-shadow(4px 4px 8px rgba(0,0,0,0.15));
-    }
     .service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
     .service-icon {
       width: 56px;
@@ -754,7 +742,7 @@
       margin-bottom: 4px;
     }
     .service-title {
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 700;
       color: #0a3521;
       margin-bottom: 14px;
@@ -784,39 +772,41 @@
       line-height: 1.5;
     }
     .service-learn-more {
-      display: inline-block;
-      margin-top: 16px;
+      position: absolute;
+      bottom: 24px;
+      right: 24px;
       font-size: 13px;
       font-weight: 600;
       color: var(--accent);
       text-decoration: none;
-      transition: color 0.3s, gap 0.3s;
+      transition: color 0.3s;
     }
     .service-learn-more:hover {
       color: var(--navy);
     }
 
     /* ─── INDUSTRIES ─── */
-    .industries { padding: 80px 0; background: linear-gradient(160deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
-    .industries-header { margin-bottom: 48px; }
+    .industries { padding: 80px 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
+    .industries-header { margin-bottom: 40px; }
     .industries-grid {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: stretch;
     }
     .industry-card {
       background: white;
       border-radius: var(--card-radius);
-      padding: 32px 40px 32px 32px;
+      padding: 24px 28px 24px 24px;
       border: 1px solid #e8e8e8;
       border-top: 4px solid transparent;
       text-decoration: none;
-      display: grid;
-      grid-template-columns: 1.5fr 1fr;
-      gap: 40px;
-      align-items: start;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
       transition: box-shadow 0.2s, transform 0.2s;
       box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      height: 100%;
     }
     .industry-card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.1); transform: translateY(-3px); }
     .industry-card[data-accent="founders"] { border-top-color: #789060; }
@@ -829,11 +819,13 @@
     .industry-left {
       display: flex;
       flex-direction: column;
-      gap: 16px;
+      gap: 12px;
+      justify-content: flex-start;
+      flex: 1;
     }
     .industry-title {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 22px;
       font-weight: 600;
       color: var(--navy);
       margin: 0;
@@ -855,22 +847,25 @@
     .industry-desc {
       font-size: 15px;
       color: var(--text-mid);
-      line-height: 1.7;
+      line-height: 1.5;
       margin: 0;
       font-weight: 500;
     }
+    .industry-learn-more {
+      font-size: 14px;
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+      transition: gap 0.2s, padding-left 0.2s;
+      display: inline-block;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+    .industry-learn-more:hover {
+      color: #8eb858;
+    }
     .industry-niches {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: repeat(3, auto);
-      grid-auto-flow: column;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      gap: 6px 40px;
-      width: fit-content;
-      margin-left: auto;
-      direction: rtl;
+      display: none;
     }
     .industry-niche-link {
       font-size: 14px;
@@ -885,7 +880,7 @@
       justify-content: flex-end;
       text-align: right;
       direction: ltr;
-      min-width: 200px;
+      min-width: 160px;
     }
     .industry-niche-link:hover {
       padding-left: 8px;
@@ -961,23 +956,23 @@
       z-index: 0;
     }
     .grain-overlay > * { position: relative; z-index: 1; }
-    .client-resources { padding: 80px 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
-    .client-resources .container { display: flex; align-items: center; gap: 40px; }
-    .client-resources .section-label { color: #5a8b6f; display: none; }
-    .client-resources .section-heading { color: #fff; }
-    .client-resources .section-subheading { color: #7aaa8f; max-width: none; }
-    .resources-header { display: flex; flex-direction: column; justify-content: center; min-width: 200px; margin-right: 40px; flex-shrink: 0; margin-bottom: 36px; }
+    .client-resources { padding: 40px 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 50px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
+    .client-resources .container { display: flex; align-items: center; gap: 60px; justify-content: center; }
+    .client-resources .section-label { color: var(--accent); display: block; }
+    .client-resources .section-heading { color: var(--navy); }
+    .client-resources .section-subheading { color: var(--text-dark); max-width: none; }
+    .resources-header { text-align: left; margin-bottom: 0; display: flex; flex-direction: column; justify-content: center; min-width: 200px; flex-shrink: 0; }
     .resources-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 16px;
-      flex: 1;
-      max-width: 900px;
-      margin: 0 auto;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .resource-card {
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(255,255,255,0.12);
+      background: #fff;
+      border: 1px solid #e4e6f0;
       border-radius: var(--card-radius);
       padding: 24px 20px;
       min-height: 200px;
@@ -989,14 +984,14 @@
       font-family: 'Playfair Display', serif;
       font-size: 18px;
       font-weight: 600;
-      color: #fff;
+      color: var(--navy);
       margin-bottom: 8px;
     }
-    .resource-card-text { font-size: 13px; color: #7aaa8f; line-height: 1.5; margin-bottom: 16px; }
+    .resource-card-text { font-size: 13px; color: var(--text-dark); line-height: 1.5; margin-bottom: 16px; }
     .btn-resource {
       display: inline-block;
-      background: rgba(255,255,255,0.1);
-      color: #fff;
+      background: #f0f7ec;
+      color: #2f5342;
       padding: 11px 20px;
       border-radius: 8px;
       font-size: 14px;
@@ -1025,8 +1020,8 @@
 
     /* ─── RESOURCES SECTION ─── */
     .resources {
-      padding: 80px 0;
-      background: linear-gradient(160deg, #fff 0%, #edeef7 100%);
+      padding: 20px 0;
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
       margin: 25px 25px;
       border-radius: 20px;
       box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
@@ -1036,7 +1031,7 @@
 
     .resources .resources-header {
       text-align: center;
-      margin-bottom: 50px;
+      margin-bottom: 16px;
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -1049,7 +1044,7 @@
     }
 
     .resources-filter {
-      margin-top: 30px;
+      margin-top: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1083,7 +1078,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      margin-top: 40px;
+      margin-top: 12px;
     }
 
     .resources-carousel {
@@ -1137,7 +1132,7 @@
 
     .resources .resource-card {
       flex: 0 0 calc(25% - 18px);
-      padding: 24px;
+      padding: 14px;
       background: #f9f9f9;
       border-radius: 8px;
       border-left: 3px solid var(--primary);
@@ -1192,43 +1187,49 @@
     }
 
     /* ─── CONTACT ─── */
-    .contact { padding: 80px 0; background: linear-gradient(160deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
-    .contact-header { margin-bottom: 48px; }
+    .contact { padding: 60px 0; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
+    .contact .section-label { color: #5a8b6f; }
+    .contact .section-heading { color: #fff; }
+    .contact .section-subheading { color: #7aaa8f; }
+    .contact-header { margin-bottom: 48px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
     .contact-header .section-subheading { white-space: nowrap; }
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 340px;
-      gap: 52px;
+      grid-template-columns: 700px 300px;
+      gap: 36px;
       align-items: start;
+      justify-content: center;
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group label { font-size: 13px; font-weight: 600; color: var(--text-dark); letter-spacing: 0.02em; }
+    .form-group label { font-size: 16.2px; font-weight: 600; color: #fff; letter-spacing: 0.02em; }
     .form-group input,
     .form-group textarea {
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: var(--text-dark);
-      background: #fff;
-      border: 1.5px solid #e5e5e5;
+      font-size: 18.6px;
+      color: #fff;
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.2);
       border-radius: 8px;
-      padding: 12px 14px;
+      padding: 13px 14px;
       outline: none;
       transition: border-color 0.2s;
       width: 100%;
     }
     .form-group input:focus,
-    .form-group textarea:focus { border-color: var(--accent); }
-    .form-group textarea { resize: vertical; min-height: 110px; }
+    .form-group textarea:focus { border-color: #fff; }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+    .form-group textarea { resize: vertical; min-height: 250px; }
     .form-label-note { font-weight: 400; color: var(--text-mid); }
     .form-submit {
       background: #2f5342;
       color: #fff;
       border: none;
-      padding: 14px 32px;
+      padding: 15px 32px;
       border-radius: 8px;
       font-family: 'Inter', sans-serif;
-      font-size: 15px;
+      font-size: 15.5px;
       font-weight: 600;
       cursor: pointer;
       transition: background 0.2s, transform 0.15s;
@@ -1238,27 +1239,28 @@
     .form-submit-row { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
     .form-success {
       display: none;
-      background: #f0f7ec;
+      background: rgba(142, 184, 88, 0.1);
       border: 1.5px solid #8eb858;
       border-radius: 10px;
       padding: 20px 24px;
       font-size: 15px;
-      color: #2d5a1b;
+      color: #a8d56e;
       line-height: 1.6;
     }
     .form-success.visible { display: block; }
-    .form-privacy-note { font-size: 13px; font-style: italic; color: var(--text-mid); margin: 0; white-space: nowrap; }
+    .form-privacy-note { font-size: 13px; font-style: italic; color: #7aaa8f; margin: 0; white-space: nowrap; }
     .contact-info {
-      background: #fff;
+      background: rgba(255,255,255,0.06);
       border-radius: var(--card-radius);
       padding: 32px 28px;
-      border: 1px solid #e4e6f0;
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-top: 32px;
     }
     .contact-info-title {
       font-family: 'Playfair Display', serif;
       font-size: 20px;
       font-weight: 600;
-      color: var(--navy);
+      color: #fff;
       margin-bottom: 22px;
     }
     .contact-item {
@@ -1271,19 +1273,19 @@
     .contact-item-icon {
       width: 34px;
       height: 34px;
-      background: var(--accent-light);
+      background: rgba(255,255,255,0.1);
       border-radius: 8px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
     }
-    .contact-item-icon svg { width: 16px; height: 16px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .contact-item-label { font-size: 11px; font-weight: 600; color: var(--accent); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
-    .contact-item-value { font-size: 14.5px; color: var(--text-dark); font-weight: 500; }
-    .contact-item-value a { color: var(--text-dark); text-decoration: none; }
-    .contact-item-value a:hover { color: var(--navy); text-decoration: underline; }
-    .contact-item-note { font-size: 12.5px; color: var(--text-mid); margin-top: 2px; }
+    .contact-item-icon svg { width: 16px; height: 16px; stroke: #7aaa8f; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-item-label { font-size: 11px; font-weight: 600; color: #5a8b6f; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+    .contact-item-value { font-size: 14.5px; color: #fff; font-weight: 500; }
+    .contact-item-value a { color: #fff; text-decoration: none; }
+    .contact-item-value a:hover { color: #7aaa8f; text-decoration: underline; }
+    .contact-item-note { font-size: 12.5px; color: #7aaa8f; margin-top: 2px; }
     .response-badge {
       margin-top: 24px;
       background: var(--accent-light);
@@ -1295,11 +1297,32 @@
       text-align: center;
     }
 
-    /* ─── PARTNER PROGRAM ─── */
-    .partner-program { padding: 16px 0; background: linear-gradient(160deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); border: none; position: relative; z-index: 1; }
-    .partner-header { text-align: center; max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; align-items: center; }
-    .partner-program .section-label { margin-bottom: 0; }
-    .partner-tagline { color: var(--text-mid); font-size: 14px; font-style: italic; margin: 0; }
+    /* ─── REFERRAL LINK ─── */
+    .referral-link-section {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+    .referral-link-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #5a8b6f;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin: 0 0 6px 0;
+    }
+    .referral-link {
+      display: inline-block;
+      font-size: 15px;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.2s, transform 0.15s;
+    }
+    .referral-link:hover {
+      color: #7aaa8f;
+      transform: translateX(2px);
+    }
 
     /* ─── FOOTER ─── */
     .footer { background: linear-gradient(160deg, var(--navy) 0%, #052818 100%); padding: 64px 0 32px; margin: 0; border-radius: 0; box-shadow: none; width: 100%; }
@@ -1365,7 +1388,7 @@
       .services-header .section-subheading { white-space: normal; }
       .industries-header .section-subheading { white-space: normal; }
       .services-grid { grid-template-columns: 1fr 1fr; }
-      .industry-card { grid-template-columns: 1.2fr 1fr; }
+      .industry-card { grid-template-columns: 1.2fr 1fr; gap: 24px; }
       .resources-grid { grid-template-columns: 1fr 1fr; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
       .footer-grid { grid-template-columns: 1fr 1fr; gap: 150px; }
@@ -1379,8 +1402,8 @@
       .services-grid,
       .industries-grid,
       .resources-grid { grid-template-columns: 1fr; }
-      .industry-card { grid-template-columns: 1fr; gap: 24px; }
-      .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; }
+      .industry-card { grid-template-columns: 1fr; gap: 20px; }
+      .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; gap: 4px 0; }
       .form-row { grid-template-columns: 1fr; }
       .footer-grid { grid-template-columns: 1fr; gap: 150px; }
       .footer-bottom { flex-direction: column; align-items: flex-start; }
@@ -1390,81 +1413,147 @@
       .hero-left { padding-right: 0; }
       .hero-right { padding-left: 0; }
       .hero-contact-box { grid-template-columns: 1fr 1fr; }
+      .core-services-grid,
+      .support-services-grid { grid-template-columns: 1fr; }
     }
+    /* Core Services Grid */
+    .core-services-grid,
+    .support-services-grid {
+      display: grid;
+      gap: 26px;
+    }
+    .core-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 48px;
+    }
+    .support-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    /* Core Service Cards */
+    .core-service-card {
+      background: #f5f9f7;
+      border-radius: var(--card-radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-left: 4px solid #fff;
+      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .core-service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
+    /* Service Label Badge */
+    .service-label-badge {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      color: #fff;
+      background: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-bottom: 12px;
+    }
+    /* Service Description */
+    .service-description {
+      font-size: 13.5px;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin-bottom: 16px;
+      font-weight: 500;
+    }
+    /* Support Service Cards */
+    .support-service-card {
+      background: #f5f9f7;
+      border-radius: var(--card-radius);
+      padding: 28px 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-left: 4px solid #fff;
+      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+    }
+    .support-service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
+    .support-service-card .service-title {
+      color: #0a3521;
+    }
+    .support-service-card .service-description {
+      color: var(--text-dark);
+    }
+    /* Service Tools Tagline */
+    .service-tools {
+      font-size: 12px;
+      color: rgba(255,255,255,0.75);
+      font-weight: 500;
+      margin-top: auto;
+      padding-top: 16px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      letter-spacing: 0.02em;
+    }
+    .support-service-card .service-tools {
+      color: var(--accent);
+      border-top: 1px solid rgba(10,53,33,0.15);
+    }
+    /* Services Section Heading */
+    .services-section-heading {
+      font-size: 14px;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 48px;
+      margin-bottom: 28px;
+      padding-bottom: 16px;
+      border-bottom: 1.5px solid rgba(255,255,255,0.3);
+      display: block;
+    }
+    .services-section-heading:first-of-type { margin-top: 0; }
   </style>
   <script>
 const practicesData = [
   {
-    name: "Individuals and Local Businesses",
+    name: "Individuals and Local Business",
     href: "/local/",
     accent: "local",
-    description: "From brick-and-mortar shops to contractors and service providers, we deliver practical, actionable tax guidance tailored to your specific needs. You are our priority, which is why we pride ourselves on being flexible and highly responsive. We optimize your tax structure and streamline your accounting setup to lay a strong financial foundation for your business to grow.",
-    niches: [
-      { name: "Local Business Owners", href: "/local/business-owners/" },
-      { name: "Contractors", href: "/local/contractors/" },
-      { name: "Real Estate Investors", href: "/local/real-estate/" },
-      { name: "Medical Practices", href: "/local/medical-practices/" },
-      { name: "Restaurants/Hospitality", href: "/local/hospitality/" }
-    ]
+    description: "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations.",
+    niches: []
   },
   {
-    name: "Startups and Growth-Stage Businesses",
+    name: "International U.S. Citizens",
+    href: "/outbound/",
+    accent: "outbound",
+    description: "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning.",
+    niches: []
+  },
+  {
+    name: "Startups and Online Business",
     href: "/founders/",
     accent: "founders",
-    description: "We empower early-stage businesses and modern entrepreneurs to scale with confidence. Whether you are an e-commerce brand, online retailer, crypto trader, or content creator, we navigate complex, industry-specific tax strategies on your behalf so you can focus on accelerating your growth.",
-    niches: [
-      { name: "Tech Founders", href: "/founders/tech/" },
-      { name: "Crypto", href: "/founders/crypto/" },
-      { name: "E-commerce", href: "/founders/ecommerce/" },
-      { name: "Content Creators", href: "/founders/content/" }
-    ]
+    description: "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence.",
+    niches: []
+  },
+  {
+    name: "Foreign Business and Investors",
+    href: "/inbound/",
+    accent: "inbound",
+    description: "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
+    niches: []
   },
   {
     name: "Real Estate Owners",
     href: "/realestate/",
     accent: "realestate",
-    description: "Maximize the return on your real estate investments with strategic tax planning. We help you structure your portfolio effectively and leverage the full extent of the tax code—including bonus depreciation, 1031 exchanges, and Section 754 elections—to maximize your tax savings.",
-    niches: [
-      { name: "Rentals", href: "/realestate/rentals/" },
-      { name: "Commercial", href: "/realestate/commercial/" },
-      { name: "Development", href: "/realestate/development/" },
-      { name: "Private Equity", href: "/realestate/private-equity/" }
-    ]
+    description: "Maximize the return on your real estate investments with strategic tax planning.",
+    niches: []
   },
   {
-    name: "International U.S. Taxpayers",
-    href: "/outbound/",
-    accent: "outbound",
-    description: "U.S. taxation of cross-border transactions and foreign investments is highly complex and carries steep penalties for non-compliance. We bring clarity to the complexity. For U.S. citizens with foreign interests, we protect your business and wealth by ensuring compliance while actively minimizing your worldwide tax rate and exposure.",
-    niches: [
-      { name: "U.S. Citizens Abroad", href: "/outbound/citizens/" },
-      { name: "Foreign Investments", href: "/outbound/investments/" },
-      { name: "Cross-Border Business", href: "/outbound/cross-border/" },
-      { name: "Global Tax Planning", href: "/outbound/global-planning/" }
-    ]
-  },
-  {
-    name: "Foreign Businesses and Investors",
-    href: "/inbound/",
-    accent: "inbound",
-    description: "Expanding into the U.S. market presents unique financial challenges. The U.S. tax system is intricate, comprehensive, and often drastically different from the rest of the world. We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly, protecting your assets, minimizing risk, and managing a lower effective tax rate.",
-    niches: [
-      { name: "Foreign Corporations", href: "/inbound/corporations/" },
-      { name: "Investment Structure", href: "/inbound/structure/" },
-      { name: "Market Entry", href: "/inbound/entry/" },
-      { name: "U.S. Subsidiary Setup", href: "/inbound/subsidiary/" }
-    ]
-  },
-  {
-    name: "U.S. Expats and Digital Nomads",
+    name: "U.S. Expats Abroad",
     href: "/expats/",
     accent: "expats",
-    description: "Navigating the U.S. tax system from abroad can be daunting, especially with limited resources. Whether you are a U.S. citizen living overseas long-term, on a short-term assignment, or traveling as a digital nomad, we bridge the gap. Our firm ensures you remain fully compliant while actively minimizing your tax burden from anywhere in the world.",
-    niches: [
-      { name: "Remote Workers", href: "/expats/remote/" },
-      { name: "Long-term Residents", href: "/expats/longterm/" },
-      { name: "Digital Nomads", href: "/expats/nomads/" }
-    ]
+    description: "Remote compliance support bridging the gap between the U.S. tax system and international residency.",
+    niches: []
   }
 ];
   </script>
@@ -1482,14 +1571,12 @@ const practicesData = [
       <li class="nav-dropdown">
         <a href="#">Services</a>
         <div class="nav-dropdown-menu">
-          <a href="#services">Tax Consulting</a>
-          <a href="#services">Individual, Trust &amp; Gift Tax</a>
-          <a href="#services">Business Tax</a>
-          <a href="#services">International Tax</a>
-          <a href="#services">Bookkeeping &amp; Reporting</a>
-          <a href="#services">Payroll</a>
-          <a href="#services">Sales Tax</a>
-          <a href="#services">Back Office</a>
+          <a href="/services/tax-strategy-consulting">Tax Strategy &amp; Consulting</a>
+          <a href="/services/tax-compliance">Tax Compliance</a>
+          <a href="/services/international-tax">International Tax</a>
+          <a href="/services/back-office">Back Office</a>
+          <a href="/services/bookkeeping-reporting">Bookkeeping &amp; Reporting</a>
+          <a href="/services/payroll-sales-tax">Payroll &amp; Sales Tax</a>
         </div>
       </li>
 
@@ -1507,28 +1594,17 @@ const practicesData = [
     </ul>
 
     <script>
-      // Render industries with niche submenus in nav
+      // Render industries in nav with custom order
       const industriesMenu = document.getElementById('industries-menu');
-      Object.values(practicesData).forEach(practice => {
-        const li = document.createElement('li');
-        li.className = 'nav-dropdown nav-dropdown-sideways';
-
-        const link = document.createElement('a');
-        link.href = practice.href;
-        link.textContent = practice.name;
-        li.appendChild(link);
-
-        const submenu = document.createElement('div');
-        submenu.className = 'nav-dropdown-submenu';
-        practice.niches.forEach(niche => {
-          const nicheLink = document.createElement('a');
-          nicheLink.href = niche.href;
-          nicheLink.textContent = niche.name;
-          submenu.appendChild(nicheLink);
-        });
-        li.appendChild(submenu);
-
-        industriesMenu.appendChild(li);
+      const navOrder = ["Individuals and Local Business", "Startups and Online Business", "Real Estate Owners", "International U.S. Citizens", "Foreign Business and Investors", "U.S. Expats Abroad"];
+      navOrder.forEach(name => {
+        const practice = Object.values(practicesData).find(p => p.name === name);
+        if (practice) {
+          const link = document.createElement('a');
+          link.href = practice.href;
+          link.textContent = practice.name;
+          industriesMenu.appendChild(link);
+        }
       });
 
       // Add dropdown hover logic with delay
@@ -1623,7 +1699,7 @@ const practicesData = [
       <!-- Right: Intro + contact box -->
       <div class="hero-right fade-up fade-up-d1">
         <p class="hero-intro-label">About...</p>
-        <p class="hero-sub">A tax consulting firm for local and global taxpayers. Specializing in tax strategy, compliance, and advisory services, grounded in protecting tax exposure, leveraging tax laws, and delivering a comprehensive suite of services with confidentiality, responsiveness, and clarity.</p>
+        <p class="hero-sub">A tax consulting firm dedicated to local and global taxpayers. We provide a suite of services including proactive tax strategy, seamless compliance and full-service accounting, delivered with depth and clear communication. The goal is straightforward: minimize your tax exposure and put the code to work for you. The clients we serve are the ones others ask for advice.</p>
 
         <div class="hero-contact-box">
           <div class="hero-contact-item">
@@ -1669,125 +1745,77 @@ const practicesData = [
     <div class="services-header">
       <p class="section-label fade-up">Full-service CPA firm</p>
       <h2 class="section-heading fade-up fade-up-d1" id="services-heading">What We Do</h2>
-      <p class="section-subheading fade-up fade-up-d2">The path of success — proactive year-round tax planning to tax compliance, providing full accounting suite, freeing you to focus on your core business.</p>
+      <p class="section-subheading fade-up fade-up-d2">Proactive tax planning. Seamless compliance. Full accounting support. Everything you need.</p>
     </div>
-    <div class="services-grid">
-      <h3 class="services-category-heading">Tax Expertise &amp; Strategy</h3>
-
-      <div class="service-card fade-up fade-up-d1">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-        </div>
-        <h4 class="service-title">Tax Consulting</h4>
+    <!-- Core Services Grid -->
+    <h3 class="services-section-heading">Tax Consulting and Compliance</h3>
+    <div class="services-grid core-services-grid">
+      <div class="service-card core-service-card fade-up fade-up-d1">
+        <span class="service-label-badge">Core</span>
+        <h4 class="service-title">Tax Strategy &amp; Consulting</h4>
+        <p class="service-description">Tax strategy isn't a year-end conversation. We advise proactively so your return reflects planning, not missed opportunity. The right moves made early compound over time in your business.</p>
         <ul class="service-list">
+          <li>Year-Round Advisory</li>
+          <li>LLC Formation</li>
           <li>Business Structuring</li>
-          <li>Estate Planning</li>
-          <li>Pre-Immigration</li>
-          <li>Cash Flow Planning</li>
-          <li>Audit &amp; Notices</li>
+          <li>Check-the-Box Election</li>
+          <li>S-Corp Election</li>
         </ul>
-        <a href="/services/tax-consulting" class="service-learn-more">Learn More →</a>
+        <a href="/services/tax-strategy-consulting" class="service-learn-more">Learn More →</a>
       </div>
 
-      <div class="service-card fade-up fade-up-d2">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        </div>
-        <h4 class="service-title">Individual, Trust &amp; Gift Tax</h4>
+      <div class="service-card core-service-card fade-up fade-up-d2">
+        <span class="service-label-badge">Core</span>
+        <h4 class="service-title">Tax Compliance</h4>
+        <p class="service-description">Federal and state returns for individuals, businesses, and trusts. Extensions, amended returns, and IRS notices handled completely and on time.</p>
         <ul class="service-list">
           <li>Individuals</li>
-          <li>Grantor Trusts</li>
-          <li>Nongrantor Trusts</li>
-          <li>Estate Tax</li>
-          <li>Gift Tax</li>
-        </ul>
-        <a href="/services/individual-trust-gift-tax" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card fade-up fade-up-d3">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
-        </div>
-        <h4 class="service-title">Business Tax</h4>
-        <ul class="service-list">
-          <li>Sole Proprietors</li>
           <li>S-Corporations</li>
-          <li>C-Corporations</li>
           <li>Partnerships</li>
-          <li>LLCs &amp; LPs</li>
+          <li>C-Corporations</li>
+          <li>Trusts</li>
         </ul>
-        <a href="/services/business-tax" class="service-learn-more">Learn More →</a>
+        <a href="/services/tax-compliance" class="service-learn-more">Learn More →</a>
       </div>
 
-      <div class="service-card fade-up fade-up-d1">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0110 10M12 2a10 10 0 00-10 10m20 0a10 10 0 01-10 10M12 2a10 10 0 00-10 10M2 12h20M12 2v20"/></svg>
-        </div>
+      <div class="service-card core-service-card fade-up fade-up-d3">
+        <span class="service-label-badge">Core</span>
         <h4 class="service-title">International Tax</h4>
+        <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We handle it completely — every obligation, every form, every deadline.</p>
         <ul class="service-list">
-          <li>Nonresidents</li>
-          <li>Foreign Corporations</li>
-          <li>Foreign Partnerships</li>
-          <li>Foreign Trusts</li>
-          <li>PFIC</li>
+          <li>U.S. citizens with foreign investment</li>
+          <li>Foreign investors</li>
+          <li>U.S. foreign-owned subsidiaries</li>
+          <li>Pre-Immigration</li>
+          <li>U.S. Expats Abroad</li>
         </ul>
         <a href="/services/international-tax" class="service-learn-more">Learn More →</a>
       </div>
+    </div>
 
-      <h3 class="services-category-heading">Full-Service Advisory</h3>
-
-      <div class="service-card fade-up fade-up-d2">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        </div>
-        <h4 class="service-title">Bookkeeping &amp; Reporting</h4>
-        <ul class="service-list">
-          <li>QuickBooks Setup</li>
-          <li>Monthly Reconcile</li>
-          <li>Cash Flow Analysis</li>
-        </ul>
-        <a href="/services/bookkeeping-reporting" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card fade-up fade-up-d3">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
-        </div>
-        <h4 class="service-title">Payroll</h4>
-        <ul class="service-list">
-          <li>Gusto Processing</li>
-          <li>W-2 &amp; 1099 Filings</li>
-          <li>Tax Deposits</li>
-        </ul>
-        <a href="/services/payroll" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card fade-up fade-up-d1">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4 class="service-title">Sales Tax</h4>
-        <ul class="service-list">
-          <li>Avalara Setup</li>
-          <li>State &amp; Local Filings</li>
-          <li>Registration</li>
-        </ul>
-        <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card fade-up fade-up-d2">
-        <div class="service-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-        </div>
+    <!-- Support Services Grid -->
+    <h3 class="services-section-heading">Full Suite</h3>
+    <div class="services-grid support-services-grid">
+      <div class="service-card support-service-card fade-up fade-up-d1">
         <h4 class="service-title">Back Office</h4>
-        <ul class="service-list">
-          <li>LLC Formation &amp; Renewals</li>
-          <li>Business Mailing</li>
-          <li>Banking Setup</li>
-        </ul>
+        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs, provide notary services, and are IRS-authorized as a CAA.</p>
+        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN · Notary · CAA</p>
         <a href="/services/back-office" class="service-learn-more">Learn More →</a>
       </div>
 
+      <div class="service-card support-service-card fade-up fade-up-d2">
+        <h4 class="service-title">Bookkeeping &amp; Reporting</h4>
+        <p class="service-description">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management so your numbers are always current.</p>
+        <p class="service-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
+        <a href="/services/bookkeeping-reporting" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card support-service-card fade-up fade-up-d3">
+        <h4 class="service-title">Payroll &amp; Sales Tax</h4>
+        <p class="service-description">Payroll and sales tax setup and ongoing management. We implement the right systems, handle all filings and deposits, and keep you compliant at the federal, state, and local level.</p>
+        <p class="service-tools">Avalara · Gusto · W-2 &amp; 1099 · State &amp; Local Filings</p>
+        <a href="/services/payroll-sales-tax" class="service-learn-more">Learn More →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -1797,7 +1825,7 @@ const practicesData = [
   <div class="container">
     <div class="industries-header">
       <p class="section-label fade-up">FOCUSED EXPERTISE</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Our Clients</h2>
+      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Work With</h2>
       <p class="section-subheading fade-up fade-up-d2">From local to global taxpayers, a tailored solution for each.</p>
     </div>
     <div class="industries-grid" id="industries-grid">
@@ -1865,8 +1893,14 @@ Object.values(practicesData).forEach((practice, index) => {
         const desc = document.createElement('p');
         desc.className = 'industry-desc';
 
-        desc.textContent = summaries[practice.name] || 'Specialized services for ' + practice.niches.map(n => n.name.toLowerCase()).join(', ') + '.';
+        desc.textContent = practice.description;
         leftCol.appendChild(desc);
+
+        const learnMoreLink = document.createElement('a');
+        learnMoreLink.href = practice.href;
+        learnMoreLink.className = 'industry-learn-more';
+        learnMoreLink.textContent = 'Learn More →';
+        leftCol.appendChild(learnMoreLink);
 
         card.appendChild(leftCol);
 
@@ -2039,32 +2073,7 @@ Object.values(practicesData).forEach((practice, index) => {
   </script>
 </section>
 
-<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
-<section class="client-resources grain-overlay" id="client-portal" aria-labelledby="resources-heading">
-  <div class="container">
-    <div class="resources-header">
-      <p class="section-label fade-up">Existing clients</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
-      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
-    </div>
-    <div class="resources-grid">
-
-      <div class="resource-card fade-up fade-up-d1">
-        <h3 class="resource-card-title">Client Portal</h3>
-        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
-        <a href="#" class="btn-resource">Access Portal &#8594;</a>
-      </div>
-
-      <div class="resource-card fade-up fade-up-d2">
-        <h3 class="resource-card-title">Bill Pay</h3>
-        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
-        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
-      </div>
-
-
-    </div>
-  </div>
-</section>
+<!-- PLACEHOLDER_EXISTING_CLIENTS -->
 
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section class="contact" id="contact" aria-labelledby="contact-heading">
@@ -2072,27 +2081,37 @@ Object.values(practicesData).forEach((practice, index) => {
     <div class="contact-header">
       <p class="section-label fade-up">Next Steps</p>
       <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h2>
-      <p class="section-subheading fade-up fade-up-d2">We work with clients we can add value to. Tell us about your situation.</p>
+      <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
     </div>
     <div class="contact-grid">
 
       <div class="fade-up fade-up-d1">
         <form id="contactForm" action="#" method="POST" novalidate>
           <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
             <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required />
+            <input type="email" id="email" name="email" autocomplete="email" required />
           </div>
           <div class="form-group">
             <label for="message">Provide a brief background. <span class="form-label-note">(optional)</span></label>
             <textarea id="message" name="message" rows="4"></textarea>
           </div>
           <div class="form-submit-row">
-            <button type="submit" class="form-submit">Request a Consultation</button>
+            <button type="submit" class="form-submit">Request a Meeting</button>
             <p class="form-privacy-note">Your information is confidential and protected.</p>
           </div>
         </form>
         <div class="form-success" id="formSuccess" role="alert">
           <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
+        </div>
+
+        <!-- Referral link below form -->
+        <div class="referral-link-section fade-up fade-up-d2">
+          <p class="referral-link-label">Partner With Us</p>
+          <a href="/referrals/" class="referral-link">Our Referral Program →</a>
         </div>
       </div>
 
@@ -2126,12 +2145,29 @@ Object.values(practicesData).forEach((practice, index) => {
   </div>
 </section>
 
-<!-- ═══════════════════ PARTNER WITH US / REFERRALS ═══════════════════ -->
-<section class="partner-program" aria-labelledby="partner-heading">
+<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
+<section class="client-resources" id="client-portal" aria-labelledby="resources-heading">
   <div class="container">
-    <div class="partner-header">
-      <p class="section-label fade-up" id="partner-heading">Partner With Us</p>
-      <a href="/referrals/" class="btn-primary fade-up fade-up-d1">Our Referral Program →</a>
+    <div class="resources-header">
+      <p class="section-label fade-up">Client Hub</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
+      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
+    </div>
+    <div class="resources-grid">
+
+      <div class="resource-card fade-up fade-up-d1">
+        <h3 class="resource-card-title">Client Portal</h3>
+        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
+        <a href="#" class="btn-resource">Access Portal &#8594;</a>
+      </div>
+
+      <div class="resource-card fade-up fade-up-d2">
+        <h3 class="resource-card-title">Bill Pay</h3>
+        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
+        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
+      </div>
+
+
     </div>
   </div>
 </section>
@@ -2149,20 +2185,18 @@ Object.values(practicesData).forEach((practice, index) => {
           <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
         </div>
 
-        <p class="footer-about">A tax consulting firm for local and global taxpayers. Specializing in tax strategy, compliance, and advisory services, grounded in protecting tax exposure, leveraging tax laws, and delivering a comprehensive suite of services with confidentiality, responsiveness, and clarity.</p>
+        <p class="footer-about">A tax consulting firm dedicated to local and global taxpayers. We provide a suite of services including proactive tax strategy, seamless compliance and full-service accounting, delivered with depth and clear communication. The goal is straightforward: minimize your tax exposure and put the code to work for you. The clients we serve are the ones others ask for advice.</p>
       </div>
 
       <div>
         <p class="footer-col-title">Services</p>
         <ul class="footer-links">
-          <li><a href="#services">Tax Consulting</a></li>
-          <li><a href="#services">Individual, Trust &amp; Gift Tax</a></li>
-          <li><a href="#services">Business Tax</a></li>
-          <li><a href="#services">International Tax</a></li>
-          <li><a href="#services">Bookkeeping &amp; Reporting</a></li>
-          <li><a href="#services">Payroll</a></li>
-          <li><a href="#services">Sales Tax</a></li>
-          <li><a href="#services">Back Office</a></li>
+          <li><a href="/services/tax-compliance">Tax Compliance</a></li>
+          <li><a href="/services/international-tax">International Tax</a></li>
+          <li><a href="/services/tax-strategy-consulting">Tax Strategy &amp; Consulting</a></li>
+          <li><a href="/services/bookkeeping-reporting">Bookkeeping &amp; Reporting</a></li>
+          <li><a href="/services/payroll-sales-tax">Payroll &amp; Sales Tax</a></li>
+          <li><a href="/services/back-office">Back Office</a></li>
         </ul>
       </div>
 

@@ -34,7 +34,27 @@
       "WebFetch(domain:tetontrustcompany.com)",
       "WebFetch(domain:bskytrust.com)",
       "WebFetch(domain:conemarshall.com)",
-      "Bash(pkill -f \"python -m http.server\")"
+      "Bash(pkill -f \"python -m http.server\")",
+      "Bash(grep -E '\\\\.\\(css|js\\)$')",
+      "Bash(/tmp/responsive_test_report.txt:*)",
+      "Bash(find '/c/Users/jcorn/Desktop/Claude/JC CPA LLC/website' -name *expertise* -o -name *landing*page*)",
+      "Bash(tidy -q inbound/index.html)",
+      "Bash(grep -E \"class=\"\"\\(hero|main-container|contact-form|intro-text|content-section|footer\\)\"\"\" inbound/index.html)",
+      "Bash(/tmp/TASK_10_COMPLETION_REPORT.md:*)",
+      "Bash(hugo --minify)",
+      "Bash(choco install:*)",
+      "Bash(du -sh */)",
+      "Bash(ls -la *.html)",
+      "Bash(mv robots.txt ss/)",
+      "Bash(mv index.html ss/index-old.html)",
+      "Bash(mv debug.html ss/)",
+      "Bash(mv wrangler.json ss/)",
+      "Bash(mv netlify.toml ss/)",
+      "Bash(mv inbound/index.html ss/inbound-index-old.html)",
+      "Bash(rmdir inbound:*)",
+      "Bash(grep -v \"^\\\\.$\")",
+      "Bash(grep -v \"^\\\\.\\\\.$\")",
+      "Bash(xargs -I {} echo 'Found {} references to old inbound/index.html')"
     ]
   }
 }

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option A — Before / After</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #1a1a2e; color: #fff; padding: 24px; }
+
+  h1 { text-align: center; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; color: #8e92be; margin-bottom: 6px; }
+  .tagline { text-align: center; font-size: 0.85rem; color: #5a5e7e; margin-bottom: 28px; }
+
+  .split { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 960px; margin: 0 auto; }
+
+  .col-label { text-align: center; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: #8e92be; margin-bottom: 10px; }
+
+  /* ── SHARED PAGE CHROME ── */
+  .page { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); font-size: 11px; }
+
+  /* NAV */
+  .p-nav { background: #fff; padding: 8px 14px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid #e4e6f0; }
+  .p-nav .logo { font-weight: 700; color: #1e2556; font-size: 10px; letter-spacing: .04em; }
+  .p-nav .links { display: flex; gap: 10px; }
+  .p-nav .links span { font-size: 9px; color: #4a4a6a; }
+  .p-nav .links .pill { background: #1e2556; color: #fff; padding: 2px 7px; border-radius: 20px; font-size: 9px; }
+
+  /* ── BEFORE SECTIONS ── */
+  .b-hero { background: #f4f5f8; padding: 28px 18px; }
+  .b-hero .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #72749e; margin-bottom: 6px; }
+  .b-hero h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; line-height: 1.25; margin-bottom: 8px; }
+  .b-hero p { font-size: 9px; color: #4a4a6a; line-height: 1.5; margin-bottom: 12px; }
+  .b-hero .btns { display: flex; gap: 8px; }
+  .b-hero .btn-p { background: #1e2556; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+  .b-hero .btn-s { border: 1px solid #1e2556; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  .b-diff { background: #fff; padding: 20px 18px; }
+  .b-diff .sec-label { font-size: 8px; text-transform: uppercase; letter-spacing: .1em; color: #72749e; margin-bottom: 4px; }
+  .b-diff h3 { font-size: 12px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+  .b-diff .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .b-diff .card { background: #f4f5f8; border-radius: 8px; padding: 8px; }
+  .b-diff .card .icon { width: 18px; height: 18px; background: #edeef7; border-radius: 5px; margin-bottom: 5px; }
+  .b-diff .card p { font-size: 8px; color: #4a4a6a; }
+
+  .b-services { background: #f4f5f8; padding: 20px 18px; }
+  .b-services h3 { font-size: 12px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .b-services .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .b-services .scard { background: #fff; border-radius: 7px; padding: 7px; }
+  .b-services .scard .dot { width: 12px; height: 3px; border-radius: 2px; background: #72749e; margin-bottom: 5px; }
+  .b-services .scard p { font-size: 8px; color: #1a1a2e; font-weight: 600; }
+
+  .b-portal { background: #141840; padding: 18px; }
+  .b-portal h3 { font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .b-portal p { font-size: 8px; color: #8e92be; }
+
+  .b-footer { background: #141840; border-top: 1px solid rgba(255,255,255,0.06); padding: 14px 18px; }
+  .b-footer .firm { font-size: 9px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+  .b-footer .sub { font-size: 8px; color: #5a5e7e; }
+
+  /* ── NOISE TEXTURE (CSS only) ── */
+  @keyframes grain { 0%,100%{transform:translate(0,0)} 10%{transform:translate(-2%,-3%)} 20%{transform:translate(3%,1%)} 30%{transform:translate(-1%,4%)} 40%{transform:translate(2%,-2%)} 50%{transform:translate(-3%,2%)} 60%{transform:translate(1%,-4%)} 70%{transform:translate(-2%,3%)} 80%{transform:translate(3%,0)} 90%{transform:translate(-1%,-2%)} }
+
+  .noise::after {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.035;
+    pointer-events: none;
+    animation: grain 8s steps(1) infinite;
+  }
+
+  /* ── AFTER SECTIONS ── */
+  .a-hero {
+    background: linear-gradient(145deg, #141840 0%, #1e2556 60%, #2d3561 100%);
+    padding: 28px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .a-hero .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #a0a5cc; margin-bottom: 6px; }
+  .a-hero h2 { font-size: 16px; font-weight: 700; color: #fff; line-height: 1.25; margin-bottom: 8px; }
+  .a-hero h2 em { color: #c5c9e8; font-style: italic; }
+  .a-hero p { font-size: 9px; color: #8e92be; line-height: 1.5; margin-bottom: 12px; }
+  .a-hero .btns { display: flex; gap: 8px; }
+  .a-hero .btn-p { background: #fff; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; font-weight: 600; }
+  .a-hero .btn-s { border: 1px solid rgba(255,255,255,0.25); color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  .a-diff {
+    background: linear-gradient(160deg, #1e2556 0%, #141840 100%);
+    padding: 20px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .a-diff .sec-label { font-size: 8px; text-transform: uppercase; letter-spacing: .1em; color: #a0a5cc; margin-bottom: 4px; }
+  .a-diff h3 { font-size: 12px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .a-diff .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .a-diff .card { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 8px; }
+  .a-diff .card .icon { width: 18px; height: 18px; background: rgba(255,255,255,0.1); border-radius: 5px; margin-bottom: 5px; }
+  .a-diff .card p { font-size: 8px; color: #8e92be; }
+
+  .a-services {
+    background: linear-gradient(160deg, #fff 0%, #edeef7 100%);
+    padding: 20px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .a-services h3 { font-size: 12px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .a-services .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .a-services .scard { background: #fff; border-radius: 7px; padding: 7px; box-shadow: 0 1px 4px rgba(30,37,86,0.07); }
+  .a-services .scard .dot { width: 12px; height: 3px; border-radius: 2px; background: #72749e; margin-bottom: 5px; }
+  .a-services .scard p { font-size: 8px; color: #1a1a2e; font-weight: 600; }
+
+  .a-portal {
+    background: linear-gradient(135deg, #141840 0%, #1e2556 100%);
+    padding: 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .a-portal h3 { font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .a-portal p { font-size: 8px; color: #8e92be; }
+
+  .a-footer {
+    background: linear-gradient(160deg, #141840 0%, #0e1230 100%);
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 14px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  .a-footer .firm { font-size: 9px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+  .a-footer .sub { font-size: 8px; color: #5a5e7e; }
+
+  /* change badges */
+  .badge { display: inline-block; font-size: 7px; text-transform: uppercase; letter-spacing: .08em; padding: 2px 6px; border-radius: 10px; margin-left: 6px; vertical-align: middle; }
+  .badge-new { background: rgba(114,116,158,0.25); color: #c5c9e8; }
+  .badge-dark { background: rgba(255,255,255,0.1); color: #a0a5cc; }
+  .badge-grad { background: rgba(114,116,158,0.15); color: #c5c9e8; }
+</style>
+</head>
+<body>
+
+<h1>Option A — Refined Depth</h1>
+<p class="tagline">Before (left) vs. After (right) — home page structure</p>
+
+<div class="split">
+  <!-- ── BEFORE ── -->
+  <div>
+    <div class="col-label">Current</div>
+    <div class="page">
+      <div class="p-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links">
+          <span>Services</span><span>Industries</span><span>About</span>
+          <span class="pill">Client Portal</span>
+        </div>
+      </div>
+
+      <div class="b-hero">
+        <div class="eyebrow">Vantis CPA</div>
+        <h2>Clarity Through<br><em style="color:#72749e">Complexity</em></h2>
+        <p>A boutique CPA firm built for the way business works today — across borders, entities, and time zones.</p>
+        <div class="btns">
+          <div class="btn-p">Schedule a Consultation</div>
+          <div class="btn-s">View Services</div>
+        </div>
+      </div>
+
+      <div class="b-diff">
+        <div class="sec-label">Our difference</div>
+        <h3>Why clients choose Vantis CPA</h3>
+        <div class="cards">
+          <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+          <div class="card"><div class="icon"></div><p>International expertise</p></div>
+          <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+        </div>
+      </div>
+
+      <div class="b-services">
+        <h3>Services</h3>
+        <div class="grid">
+          <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+          <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+          <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+          <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+        </div>
+      </div>
+
+      <div class="b-portal">
+        <h3>Client Resources</h3>
+        <p>Portal · Bill pay · Document sharing</p>
+      </div>
+
+      <div class="b-footer">
+        <div class="firm">Vantis CPA</div>
+        <div class="sub">Licensed CPA · Florida · info@vantiscpa.com</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── AFTER ── -->
+  <div>
+    <div class="col-label">Option A</div>
+    <div class="page">
+      <div class="p-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links">
+          <span>Services</span><span>Industries</span><span>About</span>
+          <span class="pill">Client Portal</span>
+        </div>
+      </div>
+
+      <div class="a-hero noise">
+        <div class="eyebrow">Vantis CPA</div>
+        <h2>Clarity Through<br><em>Complexity</em></h2>
+        <p>A boutique CPA firm built for the way business works today — across borders, entities, and time zones.</p>
+        <div class="btns">
+          <div class="btn-p">Schedule a Consultation</div>
+          <div class="btn-s">View Services</div>
+        </div>
+      </div>
+
+      <div class="a-diff noise">
+        <div class="sec-label">Our difference</div>
+        <h3>Why clients choose Vantis CPA</h3>
+        <div class="cards">
+          <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+          <div class="card"><div class="icon"></div><p>International expertise</p></div>
+          <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+        </div>
+      </div>
+
+      <div class="a-services noise">
+        <h3>Services</h3>
+        <div class="grid">
+          <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+          <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+          <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+          <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+        </div>
+      </div>
+
+      <div class="a-portal noise">
+        <h3>Client Resources</h3>
+        <p>Portal · Bill pay · Document sharing</p>
+      </div>
+
+      <div class="a-footer noise">
+        <div class="firm">Vantis CPA</div>
+        <div class="sub">Licensed CPA · Florida · info@vantiscpa.com</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p style="text-align:center;margin-top:20px;font-size:0.75rem;color:#5a5e7e;">
+  Key changes: Hero → dark navy + grain texture &nbsp;·&nbsp; "Why clients" → dark navy &nbsp;·&nbsp; Services → white-to-lavender gradient + grain &nbsp;·&nbsp; Dark sections → richer gradient
+</p>
+
+</body>
+</html>

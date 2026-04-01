@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Option A v3 — Texture + Pattern</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #1a1a2e; color: #fff; padding: 24px; }
+
+  h1 { text-align: center; font-size: 1.1rem; letter-spacing: .08em; text-transform: uppercase; color: #8e92be; margin-bottom: 6px; }
+  .tagline { text-align: center; font-size: 0.85rem; color: #5a5e7e; margin-bottom: 28px; }
+
+  .variants { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; max-width: 1100px; margin: 0 auto; }
+  .col-label { text-align: center; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; color: #8e92be; margin-bottom: 10px; }
+  .col-sublabel { text-align: center; font-size: .65rem; color: #5a5e7e; margin-bottom: 10px; margin-top: -6px; }
+
+  .page { border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.07); font-size: 11px; }
+
+  /* ── shared nav ── */
+  .a-nav { background: #1e2556; padding: 8px 14px; display: flex; align-items: center; justify-content: space-between; }
+  .a-nav .logo { font-weight: 700; color: #fff; font-size: 10px; }
+  .a-nav .links { display: flex; gap: 10px; align-items: center; }
+  .a-nav .links span { font-size: 9px; color: #a0a5cc; }
+  .a-nav .links .pill { background: rgba(255,255,255,0.15); color: #fff; padding: 2px 8px; border-radius: 20px; font-size: 9px; border: 1px solid rgba(255,255,255,0.2); }
+
+  /* ── shared diff/services/portal/footer ── */
+  .diff { background: #fff; padding: 20px 18px; }
+  .diff .sec-label { font-size: 8px; text-transform: uppercase; letter-spacing: .1em; color: #72749e; margin-bottom: 4px; }
+  .diff h3 { font-size: 12px; font-weight: 700; color: #1a1a2e; margin-bottom: 12px; }
+  .diff .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; }
+  .diff .card { background: #edeef7; border-radius: 8px; padding: 8px; border-top: 2px solid #72749e; }
+  .diff .card .icon { width: 18px; height: 18px; background: rgba(114,116,158,0.2); border-radius: 5px; margin-bottom: 5px; }
+  .diff .card p { font-size: 8px; color: #4a4a6a; }
+
+  .services { background: linear-gradient(160deg, #f4f5f8 0%, #edeef7 100%); padding: 20px 18px; }
+  .services h3 { font-size: 12px; font-weight: 700; color: #1a1a2e; margin-bottom: 10px; }
+  .services .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+  .services .scard { background: #fff; border-radius: 7px; padding: 7px; box-shadow: 0 1px 4px rgba(30,37,86,0.07); }
+  .services .scard .dot { width: 12px; height: 3px; border-radius: 2px; background: #72749e; margin-bottom: 5px; }
+  .services .scard p { font-size: 8px; color: #1a1a2e; font-weight: 600; }
+
+  .portal { background: linear-gradient(135deg, #1e2556 0%, #141840 100%); padding: 18px; }
+  .portal h3 { font-size: 11px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+  .portal p { font-size: 8px; color: #8e92be; }
+
+  .footer { background: linear-gradient(160deg, #1e2556 0%, #0e1230 100%); border-top: 1px solid rgba(255,255,255,0.08); padding: 14px 18px; }
+  .footer .firm { font-size: 9px; font-weight: 700; color: #fff; margin-bottom: 3px; }
+  .footer .sub { font-size: 8px; color: #5a5e7e; }
+
+  /* ═══════════════════════════════════════
+     VARIANT A — Dot Grid
+  ═══════════════════════════════════════ */
+  .hero-dots {
+    background-color: #f4f5f8;
+    background-image: radial-gradient(circle, #72749e 1px, transparent 1px);
+    background-size: 16px 16px;
+    padding: 28px 18px;
+    position: relative;
+  }
+  /* fade the dots out toward the bottom */
+  .hero-dots::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(244,245,248,0.4) 0%, rgba(244,245,248,0.97) 75%);
+    pointer-events: none;
+  }
+  .hero-dots > * { position: relative; }
+  .hero-dots .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #72749e; margin-bottom: 6px; }
+  .hero-dots h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; line-height: 1.25; margin-bottom: 8px; }
+  .hero-dots h2 em { color: #72749e; font-style: italic; }
+  .hero-dots p { font-size: 9px; color: #4a4a6a; line-height: 1.5; margin-bottom: 12px; }
+  .hero-dots .btns { display: flex; gap: 8px; }
+  .hero-dots .btn-p { background: #1e2556; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+  .hero-dots .btn-s { border: 1px solid #1e2556; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  /* ═══════════════════════════════════════
+     VARIANT B — Diagonal Lines + Color Block
+  ═══════════════════════════════════════ */
+  .hero-lines {
+    background-color: #fff;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 10px,
+      rgba(114,116,158,0.07) 10px,
+      rgba(114,116,158,0.07) 11px
+    );
+    padding: 28px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* bold navy accent stripe on left edge */
+  .hero-lines::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #72749e, #1e2556);
+  }
+  .hero-lines > * { position: relative; }
+  .hero-lines .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #72749e; margin-bottom: 6px; }
+  .hero-lines h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; line-height: 1.25; margin-bottom: 8px; }
+  .hero-lines h2 em { color: #72749e; font-style: italic; }
+  .hero-lines p { font-size: 9px; color: #4a4a6a; line-height: 1.5; margin-bottom: 12px; }
+  .hero-lines .btns { display: flex; gap: 8px; }
+  .hero-lines .btn-p { background: #1e2556; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+  .hero-lines .btn-s { border: 1px solid #1e2556; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  /* diagonal stripe decorative shape bottom-right */
+  .hero-lines::after {
+    content: '';
+    position: absolute;
+    right: -20px; bottom: -20px;
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, #edeef7, transparent);
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+
+  /* ═══════════════════════════════════════
+     VARIANT C — Large Gradient Wash + Noise
+  ═══════════════════════════════════════ */
+  .hero-wash {
+    background: linear-gradient(125deg, #fff 0%, #edeef7 40%, #e2e4f2 100%);
+    padding: 28px 18px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* noise grain */
+  .hero-wash::before {
+    content: '';
+    position: absolute;
+    inset: -50%;
+    width: 200%; height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    opacity: 0.04;
+    pointer-events: none;
+  }
+  /* big decorative circle blob top-right */
+  .hero-wash::after {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    background: radial-gradient(circle, rgba(114,116,158,0.18) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+  .hero-wash > * { position: relative; }
+  .hero-wash .eyebrow { font-size: 9px; letter-spacing: .1em; text-transform: uppercase; color: #72749e; margin-bottom: 6px; }
+  .hero-wash h2 { font-size: 16px; font-weight: 700; color: #1a1a2e; line-height: 1.25; margin-bottom: 8px; }
+  .hero-wash h2 em { color: #72749e; font-style: italic; }
+  .hero-wash p { font-size: 9px; color: #4a4a6a; line-height: 1.5; margin-bottom: 12px; }
+  .hero-wash .btns { display: flex; gap: 8px; }
+  .hero-wash .btn-p { background: #1e2556; color: #fff; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+  .hero-wash .btn-s { border: 1px solid #1e2556; color: #1e2556; padding: 5px 10px; border-radius: 6px; font-size: 9px; }
+
+  .note { text-align: center; margin-top: 20px; font-size: 0.72rem; color: #5a5e7e; line-height: 1.8; }
+  .hi { color: #a0a5cc; }
+</style>
+</head>
+<body>
+
+<h1>Option A — Texture & Pattern Variants</h1>
+<p class="tagline">Three texture styles — same dark nav, mostly-white body. Pick your favourite.</p>
+
+<div class="variants">
+
+  <!-- ── VARIANT A: Dot Grid ── -->
+  <div>
+    <div class="col-label">A — Dot Grid</div>
+    <div class="col-sublabel">Fading dots on hero bg</div>
+    <div class="page">
+      <div class="a-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links"><span>Services</span><span>About</span><span class="pill">Client Portal</span></div>
+      </div>
+      <div class="hero-dots">
+        <div class="eyebrow">Vantis CPA</div>
+        <h2>Clarity Through<br><em>Complexity</em></h2>
+        <p>A boutique CPA firm built for today's cross-border, multi-entity world.</p>
+        <div class="btns"><div class="btn-p">Schedule a Consultation</div><div class="btn-s">View Services</div></div>
+      </div>
+      <div class="diff">
+        <div class="sec-label">Our difference</div>
+        <h3>Why clients choose Vantis CPA</h3>
+        <div class="cards">
+          <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+          <div class="card"><div class="icon"></div><p>International expertise</p></div>
+          <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+        </div>
+      </div>
+      <div class="services">
+        <h3>Services</h3>
+        <div class="grid">
+          <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+          <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+          <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+          <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+        </div>
+      </div>
+      <div class="portal"><h3>Client Resources</h3><p>Portal · Bill pay · Document sharing</p></div>
+      <div class="footer"><div class="firm">Vantis CPA</div><div class="sub">Licensed CPA · Florida</div></div>
+    </div>
+  </div>
+
+  <!-- ── VARIANT B: Diagonal Lines ── -->
+  <div>
+    <div class="col-label">B — Diagonal Lines</div>
+    <div class="col-sublabel">Fine hatching + accent stripe</div>
+    <div class="page">
+      <div class="a-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links"><span>Services</span><span>About</span><span class="pill">Client Portal</span></div>
+      </div>
+      <div class="hero-lines">
+        <div class="eyebrow">Vantis CPA</div>
+        <h2>Clarity Through<br><em>Complexity</em></h2>
+        <p>A boutique CPA firm built for today's cross-border, multi-entity world.</p>
+        <div class="btns"><div class="btn-p">Schedule a Consultation</div><div class="btn-s">View Services</div></div>
+      </div>
+      <div class="diff">
+        <div class="sec-label">Our difference</div>
+        <h3>Why clients choose Vantis CPA</h3>
+        <div class="cards">
+          <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+          <div class="card"><div class="icon"></div><p>International expertise</p></div>
+          <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+        </div>
+      </div>
+      <div class="services">
+        <h3>Services</h3>
+        <div class="grid">
+          <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+          <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+          <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+          <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+        </div>
+      </div>
+      <div class="portal"><h3>Client Resources</h3><p>Portal · Bill pay · Document sharing</p></div>
+      <div class="footer"><div class="firm">Vantis CPA</div><div class="sub">Licensed CPA · Florida</div></div>
+    </div>
+  </div>
+
+  <!-- ── VARIANT C: Gradient Wash + Noise ── -->
+  <div>
+    <div class="col-label">C — Gradient + Grain</div>
+    <div class="col-sublabel">Soft color wash, noise texture</div>
+    <div class="page">
+      <div class="a-nav">
+        <div class="logo">V &nbsp; Vantis CPA</div>
+        <div class="links"><span>Services</span><span>About</span><span class="pill">Client Portal</span></div>
+      </div>
+      <div class="hero-wash">
+        <div class="eyebrow">Vantis CPA</div>
+        <h2>Clarity Through<br><em>Complexity</em></h2>
+        <p>A boutique CPA firm built for today's cross-border, multi-entity world.</p>
+        <div class="btns"><div class="btn-p">Schedule a Consultation</div><div class="btn-s">View Services</div></div>
+      </div>
+      <div class="diff">
+        <div class="sec-label">Our difference</div>
+        <h3>Why clients choose Vantis CPA</h3>
+        <div class="cards">
+          <div class="card"><div class="icon"></div><p>Proactive, not reactive</p></div>
+          <div class="card"><div class="icon"></div><p>International expertise</p></div>
+          <div class="card"><div class="icon"></div><p>Fixed-fee pricing</p></div>
+        </div>
+      </div>
+      <div class="services">
+        <h3>Services</h3>
+        <div class="grid">
+          <div class="scard"><div class="dot"></div><p>Tax Planning</p></div>
+          <div class="scard"><div class="dot"></div><p>Accounting</p></div>
+          <div class="scard"><div class="dot"></div><p>Compliance</p></div>
+          <div class="scard"><div class="dot"></div><p>Payroll</p></div>
+        </div>
+      </div>
+      <div class="portal"><h3>Client Resources</h3><p>Portal · Bill pay · Document sharing</p></div>
+      <div class="footer"><div class="firm">Vantis CPA</div><div class="sub">Licensed CPA · Florida</div></div>
+    </div>
+  </div>
+
+</div>
+
+<p class="note">
+  All three share: <span class="hi">dark navy nav</span> · <span class="hi">lavender-tinted cards</span> · <span class="hi">gradient services section</span> · <span class="hi">richer dark portal &amp; footer</span><br>
+  They differ only in the <span class="hi">hero texture treatment</span> — pick the one that feels right and we can mix elements.
+</p>
+
+</body>
+</html>
