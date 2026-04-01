@@ -1,0 +1,18 @@
+{
+  "name": "vantis-cpa-forms",
+  "type": "javascript",
+  "account_id": "",
+  "workers_dev": true,
+  "build": {
+    "command": "npm install",
+    "cwd": "./functions"
+  },
+  "env": {
+    "production": {
+      "route": "vantiscpa.com/api/*"
+    }
+  },
+  "performance": {
+    "cpu_seconds": 30
+  }
+}
