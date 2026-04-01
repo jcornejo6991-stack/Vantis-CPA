@@ -87,6 +87,101 @@
       flex-direction: column;
     }
 
+    /* Contact Form */
+    .contact-form {
+      background: #fff;
+      padding: 30px;
+      border-radius: var(--card-radius);
+      border: 1px solid #e8e8e8;
+    }
+
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: var(--text-dark);
+      transition: border-color 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(58, 139, 95, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      padding: 12px 24px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .form-submit:hover {
+      background: var(--accent);
+    }
+
+    /* Contact Info Block */
+    .contact-info {
+      margin-top: 30px;
+      padding: 20px 0;
+      border-top: 1px solid #e8e8e8;
+      font-size: 14px;
+    }
+
+    .contact-info-item {
+      margin-bottom: 12px;
+      color: var(--text-mid);
+    }
+
+    .contact-info-item strong {
+      display: block;
+      color: var(--text-dark);
+      margin-bottom: 4px;
+    }
+
+    .contact-info-item a {
+      color: var(--primary);
+    }
+
+    .contact-info-item a:hover {
+      color: var(--accent);
+    }
+
     @media (max-width: 768px) {
       .hero {
         padding: 80px 20px;
@@ -323,7 +418,41 @@
   <!-- Main content placeholder -->
   <div class="main-container">
     <div class="left-column">
-      <!-- Contact form will be added here -->
+      <form class="contact-form" action="#" method="POST">
+        <h3>Get Started</h3>
+
+        <div class="form-group">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="background">Tell us about your situation *</label>
+          <textarea id="background" name="background" required></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Send Inquiry</button>
+
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <strong>Phone</strong>
+            <a href="tel:+17274551016">(727) 455-1016</a>
+          </div>
+          <div class="contact-info-item">
+            <strong>Email</strong>
+            <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
+          </div>
+          <div class="contact-info-item">
+            <strong>Hours</strong>
+            <span>Monday – Friday, 9am – 5pm EST</span>
+          </div>
+        </div>
+      </form>
     </div>
     <div class="right-column">
       <!-- Main content will be added here -->
