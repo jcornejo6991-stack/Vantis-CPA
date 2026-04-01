@@ -282,32 +282,6 @@
     }, { threshold: 0.06, rootMargin: '0px 0px -36px 0px' });
     els.forEach(function (el) { io.observe(el); });
   })();
-
-  // Contact form with fetch
-  (function () {
-    var form = document.getElementById('contactForm');
-    var success = document.getElementById('formSuccess');
-    if (!form) return;
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var btn = form.querySelector('.form-submit');
-      btn.textContent = 'Sending…';
-      btn.disabled = true;
-
-      // Replace the URL below with your actual form endpoint
-      var endpoint = '#';
-      var data = {
-        email:   form.email.value.trim(),
-        message: form.message.value.trim()
-      };
-
-      // Simulate submission until endpoint is wired up
-      setTimeout(function () {
-        form.style.display = 'none';
-        success.classList.add('visible');
-      }, 800);
-    });
-  })();
 </script>
 
 </body>
