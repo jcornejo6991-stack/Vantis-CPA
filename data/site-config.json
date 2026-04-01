@@ -1,0 +1,87 @@
+{
+  "company": {
+    "name": "Vantis CPA",
+    "shortName": "Vantis",
+    "tagline": "Tax consulting for founders, expats, and global businesses",
+    "description": "A tax consulting firm dedicated to local and global taxpayers. We provide a suite of services including proactive tax strategy, seamless compliance and full-service accounting, delivered with depth and clear communication.",
+    "phone": "+17274551016",
+    "email": "info@vantiscpa.com",
+    "address": "South Florida, FL",
+    "hours": {
+      "weekday": "9am - 5pm EST",
+      "weekend": "By appointment"
+    }
+  },
+  "branding": {
+    "colors": {
+      "primary": "#15482E",
+      "primaryDark": "#062215",
+      "accent": "#3a8b5f",
+      "accentLight": "#5fa88a",
+      "textDark": "#0f2818",
+      "textLight": "#ffffff",
+      "bgLight": "#f9faf9",
+      "bgAccent": "#edeef7",
+      "border": "#d0d0d0"
+    },
+    "fonts": {
+      "heading": "Playfair Display",
+      "body": "Inter"
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "32px",
+      "xxl": "48px"
+    }
+  },
+  "navigation": {
+    "main": [
+      {"label": "Home", "url": "/"},
+      {"label": "Expertise", "url": "/expertise/"},
+      {"label": "Services", "url": "/services/"},
+      {"label": "About", "url": "/about/"},
+      {"label": "Contact", "url": "/contact/"}
+    ],
+    "expertise": [
+      {"label": "Local Businesses", "url": "/expertise/local/"},
+      {"label": "Founders & Startups", "url": "/expertise/founders/"},
+      {"label": "Real Estate Owners", "url": "/expertise/realestate/"},
+      {"label": "Outbound U.S. Businesses", "url": "/expertise/outbound/"},
+      {"label": "Foreign Business & Investors", "url": "/expertise/inbound/"},
+      {"label": "U.S. Expats", "url": "/expertise/expats/"}
+    ],
+    "services": [
+      {"label": "Tax Strategy Consulting", "url": "/services/tax-strategy/"},
+      {"label": "Tax Compliance", "url": "/services/tax-compliance/"},
+      {"label": "International Tax", "url": "/services/international-tax/"},
+      {"label": "Back-Office Services", "url": "/services/back-office/"},
+      {"label": "Bookkeeping & Reporting", "url": "/services/bookkeeping/"},
+      {"label": "Payroll & Sales Tax", "url": "/services/payroll-sales-tax/"}
+    ]
+  },
+  "integrations": {
+    "calcom": "vantiscpa/consultation",
+    "stripe": {
+      "publicKey": "pk_live_YOUR_STRIPE_PUBLIC_KEY"
+    },
+    "analytics": {
+      "ga4Id": "G-XXXXXXXXXX"
+    },
+    "onedrive": {
+      "enabled": false,
+      "apiKey": ""
+    }
+  },
+  "social": {
+    "linkedin": "https://linkedin.com/company/vantis-cpa",
+    "twitter": "https://twitter.com/vantis_cpa",
+    "facebook": "https://facebook.com/vantiscpa"
+  },
+  "metadata": {
+    "lang": "en",
+    "locale": "en_US"
+  }
+}
