@@ -49,6 +49,34 @@
       color: var(--accent);
       text-decoration: underline;
     }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      padding: 120px 20px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: var(--navy);
+      margin: 0;
+      line-height: 1.2;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 80px 20px;
+        margin-bottom: 40px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -250,8 +278,10 @@
     </div>
   </nav>
 
-  <!-- Hero section placeholder -->
-  <!-- Hero section will be inserted here -->
+  <!-- Hero section -->
+  <section class="hero">
+    <h1>Foreign Business and Investors</h1>
+  </section>
 
   <!-- Main content placeholder -->
   <!-- Main content will be inserted here -->
