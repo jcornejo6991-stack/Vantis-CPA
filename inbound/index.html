@@ -67,6 +67,26 @@
       line-height: 1.2;
     }
 
+    /* Main Content Container */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px 80px 20px;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 40px;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+    }
+
     @media (max-width: 768px) {
       .hero {
         padding: 80px 20px;
@@ -75,6 +95,12 @@
 
       .hero h1 {
         font-size: 32px;
+      }
+
+      .main-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 0 20px 60px 20px;
       }
     }
 
@@ -295,7 +321,14 @@
   </section>
 
   <!-- Main content placeholder -->
-  <!-- Main content will be inserted here -->
+  <div class="main-container">
+    <div class="left-column">
+      <!-- Contact form will be added here -->
+    </div>
+    <div class="right-column">
+      <!-- Main content will be added here -->
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer class="footer grain-overlay" role="contentinfo">
