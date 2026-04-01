@@ -1,1 +1,7 @@
 .worktrees/
+/public/
+/resources/
+.DS_Store
+node_modules/
+*.local
+.env
