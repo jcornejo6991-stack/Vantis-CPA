@@ -1,15 +1,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Title }} | {{ .Site.Data.siteConfig.company.name }}</title>
-  <meta name="description" content="{{ .Description | default .Site.Data.siteConfig.company.description }}">
+  <title>{{ .Title }} | {{ .Site.Data.siteconfig.company.name }}</title>
+  <meta name="description" content="{{ .Description | default .Site.Data.siteconfig.company.description }}">
   <meta name="keywords" content="{{ delimit .Keywords ", " | default "tax consulting, CPA, tax strategy" }}">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}">
-  <meta property="og:title" content="{{ .Title }} | {{ .Site.Data.siteConfig.company.name }}">
-  <meta property="og:description" content="{{ .Description | default .Site.Data.siteConfig.company.description }}">
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Data.siteconfig.company.name }}">
+  <meta property="og:description" content="{{ .Description | default .Site.Data.siteconfig.company.description }}">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,16 +17,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
   <!-- Styles -->
-  <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+  <link rel="stylesheet" href="/css/style.css">
 
   <!-- Google Analytics -->
-  {{ if .Site.Data.siteConfig.integrations.analytics.ga4Id }}
-  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Data.siteConfig.integrations.analytics.ga4Id }}"></script>
+  {{ if .Site.Data.siteconfig.integrations.analytics.ga4Id }}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Data.siteconfig.integrations.analytics.ga4Id }}"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-    gtag('config', '{{ .Site.Data.siteConfig.integrations.analytics.ga4Id }}');
+    gtag('config', '{{ .Site.Data.siteconfig.integrations.analytics.ga4Id }}');
   </script>
   {{ end }}
 </head>

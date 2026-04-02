@@ -54,7 +54,15 @@
       "Bash(rmdir inbound:*)",
       "Bash(grep -v \"^\\\\.$\")",
       "Bash(grep -v \"^\\\\.\\\\.$\")",
-      "Bash(xargs -I {} echo 'Found {} references to old inbound/index.html')"
+      "Bash(xargs -I {} echo 'Found {} references to old inbound/index.html')",
+      "Bash(ls docs/*.md)",
+      "Bash(for file:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(powershell -Command \"Move-Item -Path ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\css\\\\style.css'' -Destination ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\ss\\\\''; Move-Item -Path ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\css\\\\variables.css'' -Destination ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\ss\\\\''\")",
+      "Bash(powershell -Command \"Get-ChildItem ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\css\\\\'' 2>&1\")",
+      "Bash(powershell -Command \"Get-ChildItem ''C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\'' -Directory | grep -i public\")",
+      "Bash(find 'C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website' -type f -name *foreign* -o -name *inbound* -o -name *investors*)"
     ]
   }
 }
