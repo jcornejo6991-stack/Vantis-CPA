@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vantis CPA - Premium Design Mockup</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background: linear-gradient(135deg, #052818 0%, #0a4a2a 100%);
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-right a {
+            color: white;
+        }
+
+        /* Hero Section - PREMIUM VERSION */
+        .hero {
+            background: linear-gradient(135deg, #052818 0%, #0a4a2a 100%);
+            padding: 140px 60px;
+            margin-top: 64px;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: -10%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+            z-index: 1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500"><circle cx="250" cy="250" r="240" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/><circle cx="250" cy="250" r="200" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="1"/><circle cx="250" cy="250" r="160" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/><path d="M250 50 Q350 150 350 250 Q350 350 250 450 Q150 350 150 250 Q150 150 250 50" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="1"/></svg>');
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.3;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 72px;
+            font-weight: 800;
+            color: white;
+            line-height: 1.15;
+            margin-bottom: 30px;
+            letter-spacing: -1px;
+        }
+
+        .hero h1 .accent {
+            color: #d4a574;
+            display: block;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 40px;
+            line-height: 1.8;
+            max-width: 500px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 36px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #d4a574;
+            color: #052818;
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            background: #c9906a;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(212, 165, 116, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        /* Comparison Container */
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 60px;
+            background: #f5f5f5;
+        }
+
+        .comparison-item h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #052818;
+        }
+
+        .comparison-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .comparison-item li {
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            color: #666;
+            font-size: 14px;
+        }
+
+        .comparison-item li.positive {
+            color: #d4a574;
+            font-weight: 600;
+        }
+
+        .comparison-item li.negative {
+            color: #999;
+        }
+
+        /* Footer info */
+        .info-box {
+            background: white;
+            padding: 40px;
+            margin: 60px 60px 0;
+            border-radius: 12px;
+            border-left: 4px solid #d4a574;
+        }
+
+        .info-box h3 {
+            color: #052818;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .info-box p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 100px 30px;
+                margin-top: 60px;
+            }
+
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .comparison {
+                grid-template-columns: 1fr;
+                padding: 30px;
+            }
+
+            nav {
+                padding: 15px 30px;
+            }
+
+            nav ul {
+                gap: 20px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation (same as your site) -->
+    <nav>
+        <div class="logo">Vantis CPA</div>
+        <ul>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#expertise">EXPERTISE</a></li>
+            <li><a href="#portal">CLIENT PORTAL</a></li>
+            <li><a href="#pay">BILL PAY</a></li>
+            <li><a href="#resources">RESOURCES</a></li>
+            <li><a href="#referrals">REFERRALS</a></li>
+        </ul>
+        <div class="nav-right">
+            <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
+            <a href="tel:3055635551">(305) 563-5551</a>
+        </div>
+    </nav>
+
+    <!-- PREMIUM HERO (Mockup) -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>
+                Vantis CPA
+                <span class="accent">Smart Tax Strategies</span>
+            </h1>
+            <p>Strategic accounting and tax solutions for founders, expats, and international investors. We help you keep more of what you earn.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                <a href="#learn" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Improvements -->
+    <div class="info-box">
+        <h3>🎯 Design Improvements in This Mockup</h3>
+        <p><strong>Hero Image Placeholder:</strong> The animated circle background represents where a professional image would go (global/business imagery, similar to HCO's Earth)</p>
+        <p><strong>Typography:</strong> "Vantis CPA" is now 72px (was ~24px) with bold weight (800). Much more commanding and visible.</p>
+        <p><strong>Color Accent:</strong> Red (#ff3b4a) is used for the subheading and primary CTA button, giving visual energy</p>
+        <p><strong>Layout:</strong> More generous padding (140px top/bottom vs current spacing) and wider breathing room</p>
+        <p><strong>Background:</strong> Solid dark green instead of grid pattern. Much cleaner and more premium feeling</p>
+    </div>
+
+    <div class="comparison">
+        <div class="comparison-item">
+            <h3>❌ Current Design Issues</h3>
+            <ul>
+                <li class="negative">Hero has empty white space (no visual impact)</li>
+                <li class="negative">"Vantis CPA" is pale and small (~24px)</li>
+                <li class="negative">Grid background reads as "technical" not "premium"</li>
+                <li class="negative">No accent color strategy (just greens)</li>
+                <li class="negative">Limited white space/breathing room</li>
+                <li class="negative">No compelling visual asset</li>
+            </ul>
+        </div>
+        <div class="comparison-item">
+            <h3>✅ Premium Version Changes</h3>
+            <ul>
+                <li class="positive">Hero has animated background (visual impact)</li>
+                <li class="positive">"Vantis CPA" is 72px bold (commanding presence)</li>
+                <li class="positive">Solid dark green + clean spacing (luxury feel)</li>
+                <li class="positive">Red accent color for CTAs and emphasis</li>
+                <li class="positive">Generous padding (140px hero space)</li>
+                <li class="positive">Animated geometric background suggests sophistication</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

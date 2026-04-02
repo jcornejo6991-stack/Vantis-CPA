@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mockup V3 - All Improvements Combined</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #0f2818;
+      background: #fff;
+      line-height: 1.6;
+    }
+
+    .label {
+      display: inline-block;
+      background: #ff6b6b;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Navigation */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(160deg, #052818 0%, #031810 100%);
+      height: 68px;
+      display: flex;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .nav-inner {
+      max-width: 1380px;
+      width: 100%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    /* Hero - Ready for Background Image */
+    .hero {
+      position: relative;
+      height: 480px;
+      margin-top: 68px;
+      background: linear-gradient(90deg, #fff 0%, #f5f5f5 100%);
+      /* Image will be added here via background-image property */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #052818;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      margin: 0 20px;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: #3d6b52;
+      margin-top: 16px;
+      max-width: 650px;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* Main Container */
+    .main-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 30% 70%;
+      gap: 50px;
+    }
+
+    .left-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .right-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Contact Form - PREMIUM STYLING */
+    .contact-form {
+      background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%);
+      border: 2px solid #e8e8e8;
+      border-radius: 14px;
+      padding: 44px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      position: sticky;
+      top: 100px;
+    }
+
+    .contact-form h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: #052818;
+      margin-bottom: 8px;
+      letter-spacing: -0.5px;
+    }
+
+    .form-cta {
+      font-size: 13px;
+      color: #3d6b52;
+      margin-bottom: 24px;
+      font-weight: 500;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: #052818;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px 14px;
+      border: 2px solid #e0e0e0;
+      background: #fff;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #0f2818;
+      transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      border-color: #3a8b5f;
+      background: #fafafa;
+      box-shadow: 0 0 0 4px rgba(58, 139, 95, 0.12);
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: #aaa;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+      font-size: 13px;
+    }
+
+    .form-submit {
+      padding: 14px 32px;
+      background: linear-gradient(135deg, #3a8b5f 0%, #2f5342 100%);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s;
+      box-shadow: 0 4px 12px rgba(58, 139, 95, 0.25);
+    }
+
+    .form-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(58, 139, 95, 0.35);
+    }
+
+    .trust-signals {
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 12px;
+      color: #3d6b52;
+      font-weight: 500;
+    }
+
+    .signal-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .signal-item:before {
+      content: "✓";
+      color: #3a8b5f;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    /* Content Sections */
+    .intro-text {
+      font-size: 16px;
+      color: #3d6b52;
+      line-height: 1.8;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 2px solid #f0f0f0;
+    }
+
+    .intro-text strong {
+      color: #052818;
+      font-weight: 600;
+    }
+
+    .content-section {
+      margin-bottom: 48px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #052818;
+      margin-bottom: 24px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+
+    .section-title:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40px;
+      height: 3px;
+      background: linear-gradient(90deg, #3a8b5f, transparent);
+    }
+
+    .section-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .section-list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #3d6b52;
+    }
+
+    .section-list li:before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: #3a8b5f;
+      font-weight: 600;
+      font-size: 16px;
+    }
+
+    /* Footer */
+    .footer {
+      background: linear-gradient(160deg, #052818 0%, #031810 100%);
+      padding: 60px 20px;
+      text-align: center;
+      color: #7aaa8f;
+      font-size: 13px;
+    }
+
+    .footer-highlight {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    /* Mobile */
+    @media (max-width: 1024px) {
+      .contact-form {
+        position: relative;
+        top: auto;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        height: 380px;
+        margin-bottom: 0;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .hero-subtitle {
+        font-size: 15px;
+      }
+
+      .main-container {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+        gap: 40px;
+      }
+
+      .contact-form {
+        order: -1;
+        position: relative;
+      }
+
+      .section-title {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
+        <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-dropdown">
+          <a href="#">Services</a>
+          <div class="nav-dropdown-menu">
+            <a href="/services/tax-strategy-consulting">Tax Strategy &amp; Consulting</a>
+            <a href="/services/tax-compliance">Tax Compliance</a>
+            <a href="/services/international-tax">International Tax</a>
+            <a href="/services/back-office">Back Office</a>
+            <a href="/services/bookkeeping-reporting">Bookkeeping &amp; Reporting</a>
+            <a href="/services/payroll-sales-tax">Payroll &amp; Sales Tax</a>
+          </div>
+        </li>
+
+        <li class="nav-dropdown" id="nav-industries">
+          <a href="#">Expertise</a>
+          <div class="nav-dropdown-menu" id="industries-menu">
+            <!-- Will be populated by JavaScript -->
+          </div>
+        </li>
+
+        <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
+        <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
+        <li><a href="#resources" class="nav-pill">Resources</a></li>
+        <li><a href="/referrals/">REFERRALS</a></li>
+      </ul>
+
+      <div class="nav-contact">
+        <a href="mailto:info@vantiscpa.com">
+          info@vantiscpa.com
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="tel:+13055635551">
+          (305) 563-5551
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="mobile-menu" id="mobileMenu" role="menu">
+        <a href="#services" role="menuitem">Services</a>
+        <a href="#industries" role="menuitem">Expertise</a>
+        <a href="#client-portal" role="menuitem">Client Portal</a>
+        <a href="#client-portal" role="menuitem">Bill Pay</a>
+        <a href="#resources" role="menuitem">Resources</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="label">MOCKUP V3 — FINAL DESIGN</div>
+    <h1>Foreign Business and Investors</h1>
+    <p class="hero-subtitle">Comprehensive tax and accounting services for entering or operating in the U.S.</p>
+  </div>
+
+  <div class="main-container">
+    <div class="left-column">
+      <div class="contact-form">
+        <h3>Get Started</h3>
+        <p class="form-cta">Share your situation and we'll respond within 24 hours</p>
+        <form>
+          <div class="form-group">
+            <label>Name *</label>
+            <input type="text" placeholder="Your full name">
+          </div>
+          <div class="form-group">
+            <label>Email *</label>
+            <input type="email" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label>Tell us about your situation *</label>
+            <textarea placeholder="What is your business? When are you entering the U.S.?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Inquiry</button>
+          <div class="trust-signals">
+            <div class="signal-item">Free initial consultation</div>
+            <div class="signal-item">24-hour response time</div>
+            <div class="signal-item">Personalized guidance</div>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="right-column">
+      <p class="intro-text">We offer <strong>comprehensive services</strong> to help foreign businesses and investors enter the U.S. smoothly, protecting your assets, minimizing risk, and managing a lower effective tax rate. Our team specializes in translating the tax code into opportunities for your business.</p>
+
+      <div class="content-section">
+        <h2 class="section-title">Key Improvements in V3</h2>
+        <ul class="section-list">
+          <li>Dramatic hero with background image creates strong first impression</li>
+          <li>Sticky contact form on desktop keeps it visible while scrolling</li>
+          <li>Arrow indicators (→) for better visual flow through content</li>
+          <li>Accent line under section titles adds sophistication</li>
+          <li>Trust signals: Free consultation, 24-hour response, personalized guidance</li>
+          <li>Better typography hierarchy and spacing throughout</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">Specializations</h2>
+        <ul class="section-list">
+          <li>U.S. Subsidiaries</li>
+          <li>Foreign Corporations</li>
+          <li>Form 5472 & Transfer Pricing</li>
+          <li>FIRPTA & E-1/E-2 Visa Compliance</li>
+          <li>Inbound Investment Planning</li>
+        </ul>
+      </div>
+
+      <div class="content-section">
+        <h2 class="section-title">Services We Provide</h2>
+        <ul class="section-list">
+          <li>Tax Strategy & Consulting</li>
+          <li>Tax Compliance</li>
+          <li>International Tax Structuring</li>
+          <li>Back Office & Accounting Support</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="footer-highlight">Ready to grow your business in the U.S.?</p>
+    <p>&copy; 2024 Vantis CPA. All rights reserved.</p>
+  </div>
+</body>
+</html>

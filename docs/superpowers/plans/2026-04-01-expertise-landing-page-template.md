@@ -388,7 +388,7 @@ Replace the `<!-- Contact form will be added here -->` placeholder in the left c
   <div class="contact-info">
     <div class="contact-info-item">
       <strong>Phone</strong>
-      <a href="tel:+17274551016">(727) 455-1016</a>
+      <a href="tel:+13055635551">(305) 563-5551</a>
     </div>
     <div class="contact-info-item">
       <strong>Email</strong>
