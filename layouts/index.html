@@ -1195,11 +1195,28 @@
       border: 1px solid rgba(255,255,255,0.12);
       margin-top: 32px;
     }
-    .contact-info > .btn-primary {
-      display: block;
-      margin-bottom: 28px;
-      width: 100%;
+    .contact-calendar {
+      background: rgba(255,255,255,0.06);
+      border-radius: var(--card-radius);
+      padding: 32px 28px;
+      border: 1px solid rgba(255,255,255,0.12);
+      margin-top: 32px;
       text-align: center;
+    }
+    .contact-calendar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 12px;
+    }
+    .contact-calendar-desc {
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    .contact-calendar .btn-primary {
+      display: inline-block;
     }
     .contact-info-title {
       font-family: 'Playfair Display', serif;
@@ -2048,9 +2065,13 @@ Object.values(practicesData).forEach((practice, index) => {
         </div>
       </div>
 
-      <div class="contact-info fade-up fade-up-d2">
-        <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+      <div class="contact-calendar fade-up fade-up-d2">
+        <h3 class="contact-calendar-title">Schedule a Meeting</h3>
+        <p class="contact-calendar-desc">Book a 30-minute consultation on our calendar</p>
+        <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+      </div>
 
+      <div class="contact-info fade-up fade-up-d2">
         <h3 class="contact-info-title">Reach us directly</h3>
 
         <div class="contact-item">
