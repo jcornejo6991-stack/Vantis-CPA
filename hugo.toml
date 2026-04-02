@@ -12,8 +12,3 @@ unsafe = true
 [minify]
 minifyOutput = true
 
-[outputs]
-home = ["HTML"]
-
-[mediaTypes."application/json"]
-suffixes = ["json"]
