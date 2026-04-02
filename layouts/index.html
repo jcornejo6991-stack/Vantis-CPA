@@ -1192,9 +1192,13 @@
     .contact-info {
       background: rgba(255,255,255,0.06);
       border-radius: var(--card-radius);
-      padding: 24px 20px;
+      padding: 16px 14px;
       border: 1px solid rgba(255,255,255,0.12);
       margin-top: 0;
+      text-align: center;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .contact-calendar {
       background: rgba(255,255,255,0.06);
@@ -1203,6 +1207,10 @@
       border: 1px solid rgba(255,255,255,0.12);
       margin-top: 0;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
     }
     .contact-calendar-title {
       font-family: 'Playfair Display', serif;
@@ -1221,16 +1229,18 @@
     }
     .contact-info-title {
       font-family: 'Playfair Display', serif;
-      font-size: 20px;
+      font-size: 16px;
       font-weight: 600;
       color: #fff;
-      margin-bottom: 22px;
+      margin-bottom: 14px;
     }
     .contact-item {
       display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 18px;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 14px;
+      font-size: 13px;
     }
     .contact-item:last-of-type { margin-bottom: 0; }
     .contact-item-icon {
