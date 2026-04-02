@@ -1,9 +1,7 @@
 baseURL = "https://vantiscpa.com/"
 languageCode = "en-us"
 title = "Vantis CPA"
-theme = ""
 pluralizeListTitles = false
-outputs = {home = ["HTML", "JSON"]}
 
 [params]
 description = "Tax consulting for founders, expats, and global businesses"
@@ -16,8 +14,6 @@ minifyOutput = true
 
 [outputs]
 home = ["HTML"]
-section = ["HTML"]
-page = ["HTML"]
 
 [mediaTypes."application/json"]
 suffixes = ["json"]
