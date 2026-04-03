@@ -52,288 +52,6 @@
       z-index: 0;
     }
 
-    /* ─── NAV ─── */
-    .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      z-index: 100;
-      background: linear-gradient(160deg, var(--navy) 0%, var(--navy-dark) 100%);
-      border-bottom: none;
-      border-radius: 0;
-      height: var(--nav-height);
-      display: flex;
-      align-items: center;
-      transition: box-shadow 0.25s ease;
-      overflow: visible;
-    }
-    .nav::before {
-      content: '';
-      position: absolute;
-      inset: -50%;
-      width: 200%;
-      height: 200%;
-      opacity: 0.12;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .nav > * { position: relative; z-index: 1; }
-    .nav.scrolled { background: rgba(5, 40, 24, 0.95); box-shadow: 0 4px 20px rgba(5,40,24,0.25); }
-
-    .nav-inner {
-      width: 100%;
-      max-width: 1380px;
-      margin: 0 auto;
-      padding: 0 18px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      position: relative;
-    }
-
-    .nav-brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      text-decoration: none;
-      flex-shrink: 0;
-      margin-right: auto;
-      margin-left: -30px;
-      padding-left: 30px;
-    }
-    .nav-gv-mark {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-family: 'Playfair Display', serif;
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      flex-shrink: 0;
-      line-height: 1;
-    }
-    .nav-wordmark {
-      font-family: 'Inter', sans-serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: #fff;
-      line-height: 1.2;
-      letter-spacing: -0.01em;
-      margin-right: auto;
-    }
-    .nav-wordmark span {
-      display: block;
-      font-size: 11px;
-      font-weight: 400;
-      color: var(--accent);
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-    }
-
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 60px;
-      list-style: none;
-      margin: 0 auto;
-      position: relative;
-      overflow: visible;
-      padding: 0 20px;
-    }
-    .nav-links a {
-      font-size: 13px;
-      font-weight: 600;
-      color: #fff;
-      text-decoration: none;
-      padding: 0;
-      background: transparent;
-      border: none;
-      transition: opacity 0.2s;
-      white-space: nowrap;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-    .nav-links a:hover { opacity: 0.7; }
-
-    .nav-dropdown {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .nav-dropdown > a::after {
-      content: ' ▼';
-      font-size: 10px;
-      margin-left: 6px;
-      opacity: 0.7;
-    }
-    .nav-dropdown-menu {
-      position: absolute;
-      top: calc(100% + 16px);
-      left: 0;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 3px;
-      padding: 12px 0;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s, visibility 0.3s;
-      z-index: 9999;
-      min-width: 200px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      pointer-events: none;
-    }
-    .nav-dropdown:hover .nav-dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .nav-dropdown:hover ~ .nav-dropdown .nav-dropdown-menu {
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-    }
-    .nav-dropdown-menu:hover {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-    .nav-dropdown-menu a {
-      padding: 12px 20px;
-      font-size: 13px;
-      border-radius: 0;
-      background: transparent;
-      color: var(--navy);
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: normal;
-      transition: background 0.2s;
-    }
-    .nav-dropdown-menu a:hover {
-      background: #f5f5f5;
-    }
-
-    /* Sideways dropdown for niches */
-    .nav-dropdown-sideways {
-      position: relative;
-    }
-    .nav-dropdown-submenu {
-      position: absolute;
-      left: calc(100% - 4px);
-      top: 0;
-      background: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 3px;
-      padding: 8px 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-      display: none;
-      min-width: 180px;
-      z-index: 1000;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .nav-dropdown-sideways:hover .nav-dropdown-submenu,
-    .nav-dropdown-submenu:hover {
-      opacity: 1;
-      visibility: visible;
-      display: block;
-    }
-    .nav-dropdown-submenu a {
-      display: block;
-      padding: 10px 16px;
-      color: var(--navy);
-      font-size: 13px;
-      text-decoration: none;
-      transition: background 0.15s ease;
-      pointer-events: auto;
-      text-transform: none;
-    }
-    .nav-dropdown-submenu a:hover {
-      background: #f5f5f5;
-    }
-
-    /* Keep submenu visible when hovering over it */
-    .nav-dropdown-submenu {
-      pointer-events: none;
-    }
-    .nav-dropdown-submenu:hover {
-      pointer-events: auto;
-    }
-
-    .nav-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 2px;
-      font-size: 13px;
-      margin-left: auto;
-      margin-right: 0;
-    }
-    .nav-contact a {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    .nav-contact a svg {
-      stroke: #ffffff;
-      flex-shrink: 0;
-    }
-    .nav-contact a:hover { color: #e5e5e5; }
-    .nav-contact a:hover svg { stroke: #e5e5e5; }
-
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      cursor: pointer;
-      padding: 8px;
-      background: none;
-      border: none;
-    }
-    .hamburger span {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background: #fff;
-      border-radius: 2px;
-      transition: all 0.25s ease;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .mobile-menu {
-      display: none;
-      position: absolute;
-      top: var(--nav-height);
-      left: 0;
-      right: 0;
-      background: var(--navy-dark);
-      border-bottom: none;
-      box-shadow: 0 8px 24px rgba(5,40,24,0.3);
-      padding: 16px 24px 20px;
-      flex-direction: column;
-      gap: 4px;
-    }
-    .mobile-menu.open { display: flex; }
-    .mobile-menu a {
-      font-size: 15px;
-      font-weight: 500;
-      color: #7aaa8f;
-      text-decoration: none;
-      padding: 11px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-    .mobile-menu a:last-child { border-bottom: none; }
-
     /* ─── LAYOUT ─── */
     .container {
       max-width: 1600px;
@@ -636,6 +354,15 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 26px;
     }
+    .core-services-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
+    }
+    .support-services-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      max-width: 100%;
+    }
     .services-category-heading {
       grid-column: 1 / -1;
       font-size: 14px;
@@ -659,6 +386,29 @@
       transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s, background 0.3s;
       position: relative;
       overflow: hidden;
+    }
+    .support-service-card {
+      padding: 14px 12px;
+      display: flex;
+      flex-direction: column;
+    }
+    .support-service-card .service-title {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+    .support-service-card .service-description {
+      font-size: 11px;
+      line-height: 1.3;
+    }
+    .support-service-card .service-tools {
+      font-size: 10px;
+      padding-top: 8px;
+    }
+    .support-service-card .service-learn-more {
+      position: static;
+      font-size: 11px;
+      margin-top: auto;
+      text-align: right;
     }
     .service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
     .service-icon {
@@ -686,6 +436,10 @@
       color: #0a3521;
       margin-bottom: 14px;
       letter-spacing: -0.01em;
+    }
+    .support-service-card .service-title {
+      font-size: 16px;
+      margin-bottom: 10px;
     }
     .service-list {
       list-style: none;
@@ -1138,6 +892,8 @@
       gap: 36px;
       align-items: start;
       justify-content: center;
+      max-width: 1100px;
+      margin: 0 auto;
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
     .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
@@ -1294,47 +1050,113 @@
       transform: translateX(2px);
     }
 
-    /* ─── FOOTER ─── */
-    .footer { background: linear-gradient(160deg, var(--navy) 0%, #052818 100%); padding: 64px 0 32px; margin: 0; border-radius: 0; box-shadow: none; width: 100%; }
-    .footer-grid {
+    /* ─── FAQ ─── */
+    .faq-section { padding: 0; background: white; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; overflow: hidden; }
+    .faq-wrapper {
       display: grid;
-      grid-template-columns: 4.5fr 0.9fr 0.9fr 1.8fr;
-      gap: 60px;
-      margin-bottom: 0;
+      grid-template-columns: 1fr 1fr;
+      min-height: 600px;
+      max-width: none;
+      margin: 0;
+      box-shadow: none;
+      border-radius: 0;
+      overflow: hidden;
     }
-    .footer-brand-mark {
-      width: 40px; height: 40px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 9px;
+    .faq-left {
+      background: linear-gradient(135deg, #f0f6f2 0%, #f5f9f7 100%);
+      padding: 80px 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+    .faq-accent-bar {
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin-bottom: 24px;
+    }
+    .faq-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+    .faq-subtitle {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #666;
+    }
+    .faq-right {
+      padding: 60px 40px;
+      overflow-y: auto;
+      background: white;
+      max-height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 14px;
     }
-    .footer-firm-name { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 4px; }
-    .footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #5a8b6f; margin-bottom: 14px; }
-    .footer-license { font-size: 12px; color: #4a7b5f; margin-bottom: 16px; }
-    .footer-contact a { display: block; font-size: 14px; color: #7aaa8f; text-decoration: none; margin-bottom: 6px; }
-    .footer-contact a:hover { color: #fff; }
-    .footer-about { font-size: 13px; color: #7aaa8f; line-height: 1.6; margin-top: 16px; max-width: 380px; }
-    .footer-about strong { color: #fff; }
-    .footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7b5f; margin-bottom: 16px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-right: 16px; }
-    .footer-links li { display: flex; align-items: center; gap: 8px; white-space: nowrap; }
-    .footer-links a { font-size: 14px; color: #7aaa8f; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
-    .footer-links a:hover { color: #fff; }
-    .footer-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
-    .footer-dot-local { background-color: #6B8070; }
-    .footer-dot-founders { background-color: #789060; }
-    .footer-dot-realestate { background-color: #947070; }
-    .footer-dot-outbound { background-color: #6B7F94; }
-    .footer-dot-inbound { background-color: #7F7594; }
-    .footer-dot-expats { background-color: #5A7388; }
-    .footer-col-gap { margin-top: 28px; }
+    .faq-items {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+    }
+    .faq-item {
+      cursor: pointer;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 12px;
+      user-select: none;
+    }
+    .faq-q-text {
+      font-weight: 600;
+      color: var(--text-dark);
+      font-size: 16px;
+      flex: 1;
+      line-height: 1.4;
+    }
+    .faq-toggle {
+      color: var(--accent);
+      font-size: 20px;
+      font-weight: 300;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .faq-answer {
+      color: #555;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-top: 14px;
+      display: none;
+    }
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .faq-wrapper {
+        grid-template-columns: 1fr;
+        min-height: auto;
+      }
+      .faq-left, .faq-right {
+        padding: 40px;
+        max-height: none;
+        overflow: visible;
+      }
+    }
+
+    /* ─── FOOTER ─── */
 
     /* Desktop: no wrap */
     .services-header .section-subheading { white-space: nowrap; }
@@ -1349,13 +1171,8 @@
       .resources-grid { grid-template-columns: 1fr 1fr; }
       .contact { margin: 12px 12px; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-      .footer-grid { grid-template-columns: 1fr 1fr; gap: 150px; }
     }
     @media (max-width: 768px) {
-      :root { --nav-height: 60px; }
-      .nav-links { display: none; }
-      .nav-contact { display: none; }
-      .hamburger { display: flex; }
       .about-values { grid-template-columns: 1fr; }
       .services-grid,
       .industries-grid,
@@ -1363,8 +1180,6 @@
       .industry-card { grid-template-columns: 1fr; gap: 20px; }
       .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; gap: 4px 0; }
       .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; gap: 150px; }
-      .footer-bottom { flex-direction: column; align-items: flex-start; }
       .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
       .hero-inner { grid-template-columns: 1fr; gap: 32px; }
       .hero-divider { display: none; }
@@ -1378,14 +1193,15 @@
     .core-services-grid,
     .support-services-grid {
       display: grid;
-      gap: 26px;
     }
     .core-services-grid {
       grid-template-columns: repeat(3, 1fr);
+      gap: 26px;
       margin-bottom: 48px;
     }
     .support-services-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
     }
     /* Core Service Cards */
     .core-service-card {
@@ -1451,6 +1267,10 @@
       letter-spacing: 0.02em;
     }
     .support-service-card .service-tools {
+      padding-top: 12px;
+      font-size: 11px;
+    }
+    .support-service-card .service-tools {
       color: var(--accent);
       border-top: 1px solid rgba(10,53,33,0.15);
     }
@@ -1469,6 +1289,8 @@
     }
     .services-section-heading:first-of-type { margin-top: 0; }
   </style>
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
   <script>
 const practicesData = [
   {
@@ -1518,128 +1340,7 @@ const practicesData = [
 </head>
 <body>
 
-<!-- ═══════════════════ NAV ═══════════════════ -->
-<nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
-      <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
-    </a>
-
-    <ul class="nav-links" role="list">
-      <li class="nav-dropdown">
-        <a href="#">Services</a>
-        <div class="nav-dropdown-menu">
-          <a href="/services/tax-strategy-consulting">Tax Strategy &amp; Consulting</a>
-          <a href="/services/tax-compliance">Tax Compliance</a>
-          <a href="/services/international-tax">International Tax</a>
-          <a href="/services/back-office">Back Office</a>
-          <a href="/services/bookkeeping-reporting">Bookkeeping &amp; Reporting</a>
-          <a href="/services/payroll-sales-tax">Payroll &amp; Sales Tax</a>
-        </div>
-      </li>
-
-      <li class="nav-dropdown" id="nav-industries">
-        <a href="#">Expertise</a>
-        <div class="nav-dropdown-menu" id="industries-menu">
-          <!-- Will be populated by JavaScript -->
-        </div>
-      </li>
-
-      <li><a href="#client-portal" class="nav-pill">Client Portal</a></li>
-      <li><a href="#client-portal" class="nav-pill">Bill Pay</a></li>
-      <li><a href="#resources" class="nav-pill">Resources</a></li>
-      <li><a href="/referrals/">REFERRALS</a></li>
-    </ul>
-
-    <script>
-      // Render industries in nav with custom order
-      const industriesMenu = document.getElementById('industries-menu');
-      const navOrder = ["Individuals and Local Business", "Startups and Online Business", "Real Estate Owners", "International U.S. Citizens", "Foreign Business and Investors", "U.S. Expats Abroad"];
-      navOrder.forEach(name => {
-        const practice = Object.values(practicesData).find(p => p.name === name);
-        if (practice) {
-          const link = document.createElement('a');
-          link.href = practice.href;
-          link.textContent = practice.name;
-          industriesMenu.appendChild(link);
-        }
-      });
-
-      // Add dropdown hover logic with delay
-      let dropdownTimeout;
-      const navLinks = document.querySelector('.nav-links');
-      const mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
-      mainDropdowns.forEach(dropdown => {
-        const menu = dropdown.querySelector('.nav-dropdown-menu');
-        if (!menu) return;
-
-        dropdown.addEventListener('mouseenter', () => {
-          clearTimeout(dropdownTimeout);
-          // Close all other main dropdowns
-          mainDropdowns.forEach(other => {
-            if (other !== dropdown) {
-              const otherMenu = other.querySelector('.nav-dropdown-menu');
-              if (otherMenu) {
-                otherMenu.style.opacity = '0';
-                otherMenu.style.visibility = 'hidden';
-                otherMenu.style.pointerEvents = 'none';
-              }
-            }
-          });
-          menu.style.opacity = '1';
-          menu.style.visibility = 'visible';
-          menu.style.pointerEvents = 'auto';
-        });
-
-        dropdown.addEventListener('mouseleave', () => {
-          dropdownTimeout = setTimeout(() => {
-            menu.style.opacity = '0';
-            menu.style.visibility = 'hidden';
-            menu.style.pointerEvents = 'none';
-          }, 300);
-        });
-
-        menu.addEventListener('mouseenter', () => {
-          clearTimeout(dropdownTimeout);
-          menu.style.opacity = '1';
-          menu.style.visibility = 'visible';
-          menu.style.pointerEvents = 'auto';
-        });
-
-        menu.addEventListener('mouseleave', () => {
-          dropdownTimeout = setTimeout(() => {
-            menu.style.opacity = '0';
-            menu.style.visibility = 'hidden';
-            menu.style.pointerEvents = 'none';
-          }, 300);
-        });
-      });
-    </script>
-
-    <div class="nav-contact">
-      <a href="mailto:info@vantiscpa.com">
-        info@vantiscpa.com
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-      <a href="tel:+13055635551">
-        (305) 563-5551
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-    </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <div class="mobile-menu" id="mobileMenu" role="menu">
-      <a href="#services" role="menuitem">Services</a>
-      <a href="#industries" role="menuitem">Expertise</a>
-      <a href="#client-portal" role="menuitem">Client Portal</a>
-      <a href="#client-portal" role="menuitem">Bill Pay</a>
-      <a href="#resources" role="menuitem">Resources</a>
-    </div>
-  </div>
-</nav>
+{{ partial "nav.html" . }}
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero" aria-label="Introduction">
@@ -1709,7 +1410,7 @@ const practicesData = [
     <h3 class="services-section-heading">Tax Consulting and Compliance</h3>
     <div class="services-grid core-services-grid">
       <div class="service-card core-service-card fade-up fade-up-d1">
-        <span class="service-label-badge">Core</span>
+        <span class="service-label-badge">Expert</span>
         <h4 class="service-title">Tax Strategy &amp; Consulting</h4>
         <p class="service-description">Tax strategy isn't a year-end conversation. We advise proactively so your return reflects planning, not missed opportunity. The right moves made early compound over time in your business.</p>
         <ul class="service-list">
@@ -1723,7 +1424,7 @@ const practicesData = [
       </div>
 
       <div class="service-card core-service-card fade-up fade-up-d2">
-        <span class="service-label-badge">Core</span>
+        <span class="service-label-badge">Expert</span>
         <h4 class="service-title">Tax Compliance</h4>
         <p class="service-description">Federal and state returns for individuals, businesses, and trusts. Extensions, amended returns, and IRS notices handled completely and on time.</p>
         <ul class="service-list">
@@ -1737,7 +1438,7 @@ const practicesData = [
       </div>
 
       <div class="service-card core-service-card fade-up fade-up-d3">
-        <span class="service-label-badge">Core</span>
+        <span class="service-label-badge">Expert</span>
         <h4 class="service-title">International Tax</h4>
         <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We handle it completely — every obligation, every form, every deadline.</p>
         <ul class="service-list">
@@ -1756,23 +1457,30 @@ const practicesData = [
     <div class="services-grid support-services-grid">
       <div class="service-card support-service-card fade-up fade-up-d1">
         <h4 class="service-title">Back Office</h4>
-        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs, provide notary services, and are IRS-authorized as a CAA.</p>
-        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN · Notary · CAA</p>
+        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs and provide notary services.</p>
+        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN · Notary</p>
         <a href="/services/back-office" class="service-learn-more">Learn More →</a>
       </div>
 
       <div class="service-card support-service-card fade-up fade-up-d2">
-        <h4 class="service-title">Bookkeeping &amp; Reporting</h4>
+        <h4 class="service-title">Bookkeeping</h4>
         <p class="service-description">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management so your numbers are always current.</p>
         <p class="service-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
-        <a href="/services/bookkeeping-reporting" class="service-learn-more">Learn More →</a>
+        <a href="/services/bookkeeping" class="service-learn-more">Learn More →</a>
       </div>
 
       <div class="service-card support-service-card fade-up fade-up-d3">
-        <h4 class="service-title">Payroll &amp; Sales Tax</h4>
-        <p class="service-description">Payroll and sales tax setup and ongoing management. We implement the right systems, handle all filings and deposits, and keep you compliant at the federal, state, and local level.</p>
-        <p class="service-tools">Avalara · Gusto · W-2 &amp; 1099 · State &amp; Local Filings</p>
-        <a href="/services/payroll-sales-tax" class="service-learn-more">Learn More →</a>
+        <h4 class="service-title">Payroll</h4>
+        <p class="service-description">Complete payroll setup and ongoing management. We handle all filings, deposits, and compliance so your team gets paid on time, every time.</p>
+        <p class="service-tools">Gusto · W-2 &amp; 1099 · State Filings</p>
+        <a href="/services/payroll" class="service-learn-more">Learn More →</a>
+      </div>
+
+      <div class="service-card support-service-card fade-up fade-up-d4">
+        <h4 class="service-title">Sales Tax</h4>
+        <p class="service-description">Sales tax setup, nexus analysis, and ongoing compliance. We determine your filing obligations and manage all filings at the state and local level.</p>
+        <p class="service-tools">Avalara · Nexus Analysis · State &amp; Local Filings</p>
+        <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
       </div>
     </div>
   </div>
@@ -2110,122 +1818,67 @@ Object.values(practicesData).forEach((practice, index) => {
   </div>
 </section>
 
-<!-- ═══════════════════ CLIENT RESOURCES ═══════════════════ -->
-<section class="client-resources" id="client-portal" aria-labelledby="resources-heading">
-  <div class="container">
-    <div class="resources-header">
-      <p class="section-label fade-up">Client Hub</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Existing Clients</h2>
-      <p class="section-subheading fade-up fade-up-d2">Access your portal or make a payment.</p>
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-wrapper">
+    <!-- LEFT PANEL: Light Green with messaging -->
+    <div class="faq-left">
+      <div class="faq-accent-bar"></div>
+      <h2 class="faq-title">Your Questions Answered</h2>
+      <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
     </div>
-    <div class="resources-grid">
 
-      <div class="resource-card fade-up fade-up-d1">
-        <h3 class="resource-card-title">Client Portal</h3>
-        <p class="resource-card-text">Securely share documents, view your returns, send messages to our team, and track the status of your engagement.</p>
-        <a href="#" class="btn-resource">Access Portal &#8594;</a>
+    <!-- RIGHT PANEL: Scrollable Q&A -->
+    <div class="faq-right">
+      <div class="faq-items">
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span class="faq-q-text">What makes Vantis different from other CPAs?</span>
+            <span class="faq-toggle">−</span>
+          </div>
+          <div class="faq-answer">We combine proactive tax strategy with responsive communication. Rather than waiting for tax season, we work year-round to optimize your situation and flag opportunities before they pass.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">How do you avoid surprise billing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">Why get proactive tax advice instead of just filing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">What services do you offer beyond tax filing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We offer bookkeeping, back-office services, payroll processing, sales tax management, and full-service accounting. One firm for all your business needs.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">What happens in our first consultation?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We'll discuss your business, current situation, and biggest challenges. You'll get a clear sense of how we work and whether we're a good fit. No pressure, no sales pitch.</div>
+        </div>
       </div>
-
-      <div class="resource-card fade-up fade-up-d2">
-        <h3 class="resource-card-title">Bill Pay</h3>
-        <p class="resource-card-text">Convenient online payment for invoices and retainers. Secure checkout, instant confirmation, no checks required.</p>
-        <a href="#" class="btn-resource">Pay Invoice &#8594;</a>
-      </div>
-
-
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ FOOTER ═══════════════════ -->
-<footer class="footer grain-overlay" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-
-      <div>
-        <p class="footer-firm-name">Vantis CPA</p>
-
-        <div class="footer-contact">
-          <a href="tel:+13055635551">(305) 563-5551</a>
-          <a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a>
-        </div>
-
-        <p class="footer-about">A tax consulting firm dedicated to local and global taxpayers. We provide a suite of services including proactive tax strategy, seamless compliance and full-service accounting, delivered with depth and clear communication. The goal is straightforward: minimize your tax exposure and put the code to work for you. The clients we serve are the ones others ask for advice.</p>
-      </div>
-
-      <div>
-        <p class="footer-col-title">Services</p>
-        <ul class="footer-links">
-          <li><a href="/services/tax-compliance">Tax Compliance</a></li>
-          <li><a href="/services/international-tax">International Tax</a></li>
-          <li><a href="/services/tax-strategy-consulting">Tax Strategy &amp; Consulting</a></li>
-          <li><a href="/services/bookkeeping-reporting">Bookkeeping &amp; Reporting</a></li>
-          <li><a href="/services/payroll-sales-tax">Payroll &amp; Sales Tax</a></li>
-          <li><a href="/services/back-office">Back Office</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="footer-col-title">Expertise</p>
-        <ul class="footer-links">
-          <li><span class="footer-dot footer-dot-local"></span><a href="/local/">Individuals and Local Businesses</a></li>
-          <li><span class="footer-dot footer-dot-founders"></span><a href="/founders/">Startups and Growth-Stage Businesses</a></li>
-          <li><span class="footer-dot footer-dot-realestate"></span><a href="/realestate/">Real Estate Owners</a></li>
-          <li><span class="footer-dot footer-dot-outbound"></span><a href="/outbound/">International U.S. Taxpayers</a></li>
-          <li><span class="footer-dot footer-dot-inbound"></span><a href="/inbound/">Foreign Businesses and Investors</a></li>
-          <li><span class="footer-dot footer-dot-expats"></span><a href="/expats/">U.S. Expats and Digital Nomads</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <p class="footer-col-title">Quick Links</p>
-        <ul class="footer-links">
-          <li><a href="/">Home</a></li>
-          <li><a href="#client-portal">Client Portal</a></li>
-          <li><a href="#client-portal">Bill Pay</a></li>
-          <li><a href="/referrals/">Referrals</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</footer>
+{{ partial "footer.html" . }}
 
 <!-- ═══════════════════ SCRIPTS ═══════════════════ -->
 <script>
-  // Nav scroll shadow with throttling
-  (function () {
-    var nav = document.getElementById('nav');
-    var ticking = false;
-    window.addEventListener('scroll', function () {
-      if (!ticking) {
-        requestAnimationFrame(function () {
-          nav.classList.toggle('scrolled', window.scrollY > 8);
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
-  })();
-
-  // Hamburger / mobile menu
-  (function () {
-    var btn = document.getElementById('hamburger');
-    var menu = document.getElementById('mobileMenu');
-    btn.addEventListener('click', function () {
-      var open = menu.classList.toggle('open');
-      btn.classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', String(open));
-    });
-    menu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        menu.classList.remove('open');
-        btn.classList.remove('open');
-        btn.setAttribute('aria-expanded', 'false');
-      });
-    });
-  })();
-
   // IntersectionObserver fade-up
   (function () {
     var els = document.querySelectorAll('.fade-up');
@@ -2238,6 +1891,18 @@ Object.values(practicesData).forEach((practice, index) => {
       });
     }, { threshold: 0.06, rootMargin: '0px 0px -36px 0px' });
     els.forEach(function (el) { io.observe(el); });
+  })();
+
+  // FAQ accordion toggle
+  (function () {
+    document.querySelectorAll('.faq-question').forEach(function (question) {
+      question.addEventListener('click', function () {
+        var item = question.closest('.faq-item');
+        var toggle = question.querySelector('.faq-toggle');
+        var isOpen = item.classList.toggle('open');
+        toggle.textContent = isOpen ? '−' : '+';
+      });
+    });
   })();
 
   // Contact form is handled by forms.js with Formspree integration

@@ -58,8 +58,9 @@
       {"label": "Tax Compliance", "url": "/services/tax-compliance/"},
       {"label": "International Tax", "url": "/services/international-tax/"},
       {"label": "Back-Office Services", "url": "/services/back-office/"},
-      {"label": "Bookkeeping & Reporting", "url": "/services/bookkeeping/"},
-      {"label": "Payroll & Sales Tax", "url": "/services/payroll-sales-tax/"}
+      {"label": "Bookkeeping", "url": "/services/bookkeeping/"},
+      {"label": "Payroll", "url": "/services/payroll/"},
+      {"label": "Sales Tax", "url": "/services/sales-tax/"}
     ]
   },
   "integrations": {
