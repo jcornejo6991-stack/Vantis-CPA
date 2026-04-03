@@ -129,6 +129,21 @@ nav a:hover {
   text-decoration: none;
 }
 
+.nav-btn {
+  padding: 6px 12px;
+  background: var(--accent);
+  color: var(--text-light);
+  border-radius: 4px;
+  font-size: 14px;
+  display: inline-block;
+  transition: background 0.3s ease;
+}
+
+.nav-btn:hover {
+  background: var(--accent-light);
+  text-decoration: none;
+}
+
 /* Footer */
 footer {
   background: var(--primary-dark);
