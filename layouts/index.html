@@ -1893,14 +1893,22 @@ Object.values(practicesData).forEach((practice, index) => {
     els.forEach(function (el) { io.observe(el); });
   })();
 
-  // FAQ accordion toggle
+  // FAQ accordion toggle — one open at a time
   (function () {
     document.querySelectorAll('.faq-question').forEach(function (question) {
       question.addEventListener('click', function () {
         var item = question.closest('.faq-item');
-        var toggle = question.querySelector('.faq-toggle');
-        var isOpen = item.classList.toggle('open');
-        toggle.textContent = isOpen ? '−' : '+';
+        var isOpen = item.classList.contains('open');
+        // Close all items
+        document.querySelectorAll('.faq-item').forEach(function (el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-toggle').textContent = '+';
+        });
+        // Open clicked item if it was closed
+        if (!isOpen) {
+          item.classList.add('open');
+          question.querySelector('.faq-toggle').textContent = '−';
+        }
       });
     });
   })();
