@@ -10,8 +10,8 @@
       --bg-alt: #e0e0e0;
       --text-dark: #0f2818;
       --text-mid: #3d6b52;
-      --navy: #052818;
-      --navy-dark: #031810;
+      --navy: #062215;
+      --navy-dark: #052818;
       --card-radius: 14px;
       --nav-height: 68px;
     }
@@ -25,9 +25,28 @@
     body {
       font-family: 'Inter', sans-serif;
       color: var(--text-dark);
-      background: #fff;
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+      background-size: 64px 20px;
+      background-attachment: fixed;
       line-height: 1.6;
       padding-top: var(--nav-height);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+      pointer-events: none;
+      z-index: 0;
     }
 
     a {
@@ -42,42 +61,62 @@
 
     /* Hero Section */
     .hero {
-      background: linear-gradient(90deg, #fff 0%, #f5f5f5 100%);
-      /* Background image can be added here: background-image: url(...); */
-      padding: 120px 20px;
+      background-image: url('/images/globe-hero.jpg');
+      background-size: cover;
+      background-position: center center;
+      padding: 160px 20px;
       text-align: center;
-      margin-bottom: 60px;
+      margin-bottom: 0;
+      position: relative;
+      z-index: 1;
     }
 
-    .hero h1 {
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 0;
+    }
+
+    .hero h1,
+    .hero-subtitle {
+      position: relative;
+      z-index: 1;
+    }
+
+.hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 6vw, 64px);
       font-weight: 700;
-      color: var(--navy);
+      color: #ffffff;
       margin: 0;
       line-height: 1.15;
       letter-spacing: -0.5px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.6);
     }
 
     .hero-subtitle {
       font-size: 17px;
-      color: var(--text-mid);
+      color: rgba(255, 255, 255, 0.95);
       margin-top: 16px;
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
       font-weight: 400;
       line-height: 1.6;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
     }
 
     /* Main Content Container */
     .main-container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 80px 20px;
       display: grid;
       grid-template-columns: 30% 70%;
-      gap: 50px;
+      gap: 0;
+      align-items: stretch;
+      min-height: calc(100vh - var(--nav-height) - 300px);
+      position: relative;
+      z-index: 1;
     }
 
     .left-column {
@@ -88,33 +127,77 @@
     .right-column {
       display: flex;
       flex-direction: column;
+      padding: 80px 40px 80px 60px;
+      background: #ffffff;
     }
 
-    /* Contact Form - V3 Premium Styling */
+    /* Contact Form - Berkowitz-style flush sidebar */
     .contact-form {
-      background: linear-gradient(135deg, #f5f5f5 0%, #f9f9f9 100%);
-      border: 2px solid #e8e8e8;
-      padding: 44px;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-      position: sticky;
-      top: 100px;
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px),
+                        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px),
+                        linear-gradient(135deg, #052818 0%, #0a3521 100%);
+      background-color: #052818;
+      border: none;
+      padding: 48px 40px;
+      border-radius: 0;
+      box-shadow: none;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      flex: 1;
     }
 
     .contact-form h3 {
       font-family: 'Playfair Display', serif;
-      font-size: 26px;
+      font-size: 34px;
       font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
+      color: #fff;
+      margin-bottom: 0;
       letter-spacing: -0.5px;
+    }
+
+    .form-privacy {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 0;
+      font-style: italic;
     }
 
     .form-cta {
       font-size: 13px;
-      color: var(--text-mid);
+      color: rgba(255, 255, 255, 0.7);
       margin-bottom: 24px;
       font-weight: 500;
+      display: none;
+    }
+
+    .form-inputs-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-buttons-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .calendar-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.3px;
+      margin: 0;
+    }
+
+    .calendar-sublabel {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.6);
+      margin: 0;
     }
 
     .form-group {
@@ -127,34 +210,33 @@
       font-size: 13px;
       font-weight: 700;
       margin-bottom: 8px;
-      color: var(--navy);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
+      color: #fff;
+      letter-spacing: 0.3px;
     }
 
     .form-group input,
     .form-group textarea {
       padding: 12px 14px;
-      border: 2px solid #e0e0e0;
-      background: #fff;
+      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       border-radius: 8px;
       font-family: 'Inter', sans-serif;
       font-size: 14px;
-      color: var(--text-dark);
+      color: #fff;
       transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
     }
 
     .form-group input::placeholder,
     .form-group textarea::placeholder {
-      color: #aaa;
+      color: rgba(255, 255, 255, 0.5);
     }
 
     .form-group input:focus,
     .form-group textarea:focus {
       outline: none;
-      border-color: var(--accent);
-      background: #fafafa;
-      box-shadow: 0 0 0 4px rgba(58, 139, 95, 0.12);
+      border-color: rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.1);
     }
 
     .form-group textarea {
@@ -165,7 +247,7 @@
 
     .form-submit {
       padding: 14px 32px;
-      background: linear-gradient(135deg, var(--accent) 0%, #2f5342 100%);
+      background: #2f5342;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -174,58 +256,49 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(58, 139, 95, 0.25);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      width: 100%;
+      margin-top: 8px;
     }
 
     .form-submit:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(58, 139, 95, 0.35);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     }
 
     .trust-signals {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid #e0e0e0;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--text-mid);
-      font-weight: 500;
+      display: none;
     }
 
     .signal-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
+      display: none;
     }
 
     .signal-item:before {
-      content: "✓";
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 14px;
+      display: none;
     }
 
     /* Contact Info Block */
     .contact-info {
-      margin-top: 32px;
-      padding: 24px 0;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       font-size: 15px;
     }
 
     .contact-info-item {
-      margin-bottom: 16px;
-      color: #7aaa8f;
+      margin: 0;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+      line-height: 1.6;
     }
 
     .contact-info-item strong {
       display: block;
       color: #fff;
       margin-bottom: 6px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 13px;
+      font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
     }
@@ -233,20 +306,58 @@
     .contact-info-item a {
       color: #fff;
       font-weight: 600;
+      text-decoration: none;
+      transition: opacity 0.2s;
     }
 
     .contact-info-item a:hover {
+      opacity: 0.8;
       text-decoration: underline;
+    }
+
+    /* CTA Buttons on right side */
+    .form-button {
+      padding: 12px 20px;
+      border: 1.5px solid rgba(255, 255, 255, 0.3);
+      background: transparent;
+      color: #fff;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+      transition: all 0.2s;
+    }
+
+    .form-button:hover {
+      border-color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .form-button.primary {
+      background: #2f5342;
+      border-color: #2f5342;
+    }
+
+    .form-button.primary:hover {
+      background: #3d6b52;
+      border-color: #3d6b52;
     }
 
     /* Main Content */
     .intro-text {
-      font-size: 16px;
+      font-size: 18px;
       color: var(--text-mid);
       line-height: 1.8;
       margin-bottom: 40px;
       padding-bottom: 32px;
       border-bottom: 2px solid #f0f0f0;
+    }
+    .intro-text p + p {
+      margin-top: 20px;
     }
 
     .intro-text strong {
@@ -288,7 +399,7 @@
       margin-bottom: 12px;
       padding-left: 28px;
       position: relative;
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1.7;
       color: var(--text-mid);
     }
@@ -318,18 +429,47 @@
       position: relative;
     }
 
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* Match homepage nav gradient exactly */
+    .nav {
+      background: linear-gradient(160deg, #062215 0%, #052818 100%);
+    }
+
     @media (max-width: 1024px) {
       .main-container {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 40px 20px;
+        min-height: unset;
+      }
+
+      .right-column {
+        padding: 40px 24px 60px;
+      }
+
+      .contact-form {
+        gap: 20px;
+        padding: 40px 24px;
+      }
+
+      .form-buttons-wrapper {
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 0;
+      }
+
+      .form-button {
+        flex: 1;
       }
     }
 
     @media (max-width: 768px) {
       .hero {
-        padding: 80px 20px;
-        margin-bottom: 40px;
+        padding: 48px 20px;
+        margin-bottom: 0;
       }
 
       .hero h1 {
@@ -338,12 +478,30 @@
 
       .main-container {
         grid-template-columns: 1fr;
-        gap: 40px;
-        padding: 0 20px 60px 20px;
+        min-height: unset;
+        width: 100%;
+      }
+
+      .right-column {
+        padding: 40px 20px 60px;
+        width: 100%;
+        max-width: 100%;
       }
 
       .contact-form {
-        margin-bottom: 30px;
+        gap: 20px;
+        padding: 32px 20px;
+        width: 100%;
+      }
+
+      .form-buttons-wrapper {
+        flex-direction: row;
+        gap: 12px;
+        margin-top: 0;
+      }
+
+      .form-button {
+        flex: 1;
       }
 
       .section-list {
@@ -354,20 +512,21 @@
     @media (max-width: 480px) {
       .hero {
         padding: 60px 15px;
-        margin-bottom: 40px;
+        margin-bottom: 0;
       }
 
       .hero h1 {
         font-size: 24px;
       }
 
-      .main-container {
-        padding: 0 15px 40px 15px;
-        gap: 24px;
+      .contact-form {
+        padding: 28px 16px;
+        gap: 16px;
       }
 
-      .contact-form {
-        padding: 24px;
+      .contact-form h3 {
+        font-size: 20px;
+        margin-bottom: 16px;
       }
 
       .form-group input,
@@ -377,6 +536,19 @@
 
       .form-submit {
         width: 100%;
+        align-self: stretch;
+      }
+
+      .form-buttons-wrapper {
+        flex-direction: column;
+      }
+
+      .form-button {
+        width: 100%;
+      }
+
+      .right-column {
+        padding: 32px 16px 48px;
       }
 
       .section-title {
@@ -399,75 +571,54 @@
     <p class="hero-subtitle">Comprehensive tax and accounting services for entering or operating in the U.S.</p>
   </section>
 
-  <!-- Main content placeholder -->
+  <!-- Main content — full-width sidebar layout -->
   <div class="main-container">
     <div class="left-column">
       <form id="inboundContactForm" class="contact-form" action="https://formspree.io/f/mkopvwja" method="POST">
-        <h3>Get Started</h3>
-        <p class="form-cta">Share your situation and we'll respond within 24 hours</p>
+        <h3>Contact Us</h3>
 
-        <div class="form-group">
-          <label for="name">Name *</label>
-          <input type="text" id="name" name="name" required />
+        <div class="form-inputs-wrapper">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="background">Provide a Brief Background</label>
+            <textarea id="background" name="background" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Us an Email</button>
+          <p class="form-privacy">Your information is confidential and protected.</p>
         </div>
 
-        <div class="form-group">
-          <label for="email">Email *</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="background">Tell us about your situation *</label>
-          <textarea id="background" name="background" required></textarea>
-        </div>
-
-        <button type="submit" class="form-submit">Send Inquiry</button>
-
-        <div class="trust-signals">
-          <div class="signal-item">Free initial consultation</div>
-          <div class="signal-item">24-hour response time</div>
-          <div class="signal-item">Personalized guidance</div>
+        <div class="form-buttons-wrapper">
+          <p class="calendar-label">Schedule a Meeting</p>
+          <p class="calendar-sublabel">Book a 30-minute Consultation</p>
+          <a href="https://cal.com/vantis-cpa/30min" target="_blank" rel="noopener noreferrer" class="form-button primary">Open Calendar</a>
         </div>
       </form>
     </div>
     <div class="right-column">
       <div class="intro-text">
-        <p>We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly, protecting your assets, minimizing risk, and managing a lower effective tax rate.</p>
+        <p>We help foreign businesses and investors enter the U.S. market with confidence. Whether you are looking to acquire U.S. equities, purchase real estate, or establish a U.S. branch or subsidiary, we provide the tax and compliance structure to do it correctly. The U.S. tax system operates very differently from most jurisdictions, and that gap is where costly exposure is created.</p>
+        <p>Our priority is protecting you from IRS enforcement and eliminating double taxation — whether through tax treaty positions, proper entity structuring, or estate planning. Penalties for missed or incorrect international filings generally range from $10,000 to $25,000 per form, per year. We also work with U.S. single-member LLCs (SMLLCs) owned by foreign persons, which carry specific disclosure and reporting requirements that are frequently overlooked.</p>
+        <p>From initial structure through ongoing compliance, we offer a full suite of tax, accounting, and advisory services to keep your U.S. operations on solid ground.</p>
       </div>
 
       <div class="content-section">
         <h3 class="section-title">Specializations</h3>
         <ul class="section-list">
-          <li><a href="/inbound/us-subsidiaries">U.S. Subsidiaries</a></li>
-          <li><a href="/inbound/foreign-corporations">Foreign Corporations</a></li>
-          <li><a href="/inbound/form-5472">Form 5472</a></li>
-          <li><a href="/inbound/transfer-pricing">Transfer Pricing</a></li>
-          <li><a href="/inbound/firpta-compliance">FIRPTA Compliance</a></li>
-          <li><a href="/inbound/e-visa-compliance">E-1/E-2 Visa Compliance</a></li>
-          <li><a href="/inbound/inbound-investment">Inbound Investment Planning</a></li>
-        </ul>
-      </div>
-
-      <div class="content-section">
-        <h3 class="section-title">Services We Provide</h3>
-        <ul class="section-list">
-          <li><a href="/services/tax-strategy-consulting">Tax Strategy & Consulting</a></li>
-          <li><a href="/services/tax-compliance">Tax Compliance</a></li>
-          <li><a href="/services/international-tax">International Tax</a></li>
-          <li><a href="/services/back-office">Back Office</a></li>
-          <li><a href="/services/bookkeeping-reporting">Bookkeeping & Reporting</a></li>
-          <li><a href="/services/payroll-sales-tax">Payroll & Sales Tax</a></li>
-        </ul>
-      </div>
-
-      <div class="content-section">
-        <h3 class="section-title">Other Audiences We Serve</h3>
-        <ul class="section-list">
-          <li><a href="/local/">Individuals and Local Business</a></li>
-          <li><a href="/founders/">Startups and Online Business</a></li>
-          <li><a href="/realestate/">Real Estate Owners</a></li>
-          <li><a href="/outbound/">International U.S. Citizens</a></li>
-          <li><a href="/expats/">U.S. Expats Abroad</a></li>
+          <li><a href="/#resources">U.S. Subsidiaries</a></li>
+          <li><a href="/#resources">Foreign Corporations &amp; SMLLCs</a></li>
+          <li><a href="/#resources">Form 5472 &amp; Disclosure Filings</a></li>
+          <li><a href="/#resources">FIRPTA Compliance</a></li>
+          <li><a href="/#resources">Inbound Investment Planning</a></li>
         </ul>
       </div>
     </div>

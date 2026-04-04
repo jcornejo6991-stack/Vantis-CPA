@@ -1162,33 +1162,6 @@
     .services-header .section-subheading { white-space: nowrap; }
     .industries-header .section-subheading { white-space: nowrap; }
 
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .services-header .section-subheading { white-space: normal; }
-      .industries-header .section-subheading { white-space: normal; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .industry-card { grid-template-columns: 1.2fr 1fr; gap: 24px; }
-      .resources-grid { grid-template-columns: 1fr 1fr; }
-      .contact { margin: 12px 12px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-    }
-    @media (max-width: 768px) {
-      .about-values { grid-template-columns: 1fr; }
-      .services-grid,
-      .industries-grid,
-      .resources-grid { grid-template-columns: 1fr; }
-      .industry-card { grid-template-columns: 1fr; gap: 20px; }
-      .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; gap: 4px 0; }
-      .form-row { grid-template-columns: 1fr; }
-      .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
-      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
-      .hero-divider { display: none; }
-      .hero-left { padding-right: 0; }
-      .hero-right { padding-left: 0; }
-      .hero-contact-box { grid-template-columns: 1fr 1fr; }
-      .core-services-grid,
-      .support-services-grid { grid-template-columns: 1fr; }
-    }
     /* Core Services Grid */
     .core-services-grid,
     .support-services-grid {
@@ -1202,6 +1175,35 @@
     .support-services-grid {
       grid-template-columns: repeat(4, 1fr);
       gap: 10px;
+    }
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .services-header .section-subheading { white-space: normal; }
+      .industries-header .section-subheading { white-space: normal; }
+      .services-grid { grid-template-columns: 1fr 1fr; }
+      .core-services-grid { grid-template-columns: 1fr 1fr; }
+      .support-services-grid { grid-template-columns: 1fr 1fr; }
+      .industry-card { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+      .resources-grid { grid-template-columns: 1fr 1fr; }
+      .contact { margin: 12px 12px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    }
+    @media (max-width: 768px) {
+      .about-values { grid-template-columns: 1fr; }
+      .services-grid,
+      .industries-grid,
+      .resources-grid { grid-template-columns: 1fr; }
+      .core-services-grid,
+      .support-services-grid { grid-template-columns: 1fr; }
+      .industry-card { grid-template-columns: 1fr; gap: 20px; }
+      .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; gap: 4px 0; }
+      .form-row { grid-template-columns: 1fr; }
+      .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-divider { display: none; }
+      .hero-left { padding-right: 0; }
+      .hero-right { padding-left: 0; }
+      .hero-contact-box { grid-template-columns: 1fr 1fr; }
     }
     /* Core Service Cards */
     .core-service-card {
@@ -1478,8 +1480,8 @@ const practicesData = [
 
       <div class="service-card support-service-card fade-up fade-up-d4">
         <h4 class="service-title">Sales Tax</h4>
-        <p class="service-description">Sales tax setup, nexus analysis, and ongoing compliance. We determine your filing obligations and manage all filings at the state and local level.</p>
-        <p class="service-tools">Avalara · Nexus Analysis · State &amp; Local Filings</p>
+        <p class="service-description">Sales tax compliance made simple. We handle Florida's filing requirements, ensure timely monthly, quarterly, and yearly remittances, and keep you compliant with nexus rules so you can focus on growing your business.</p>
+        <p class="service-tools">Florida Sales Tax · Nexus · Filings</p>
         <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
       </div>
     </div>
@@ -1762,8 +1764,8 @@ Object.values(practicesData).forEach((practice, index) => {
             <input type="email" id="email" name="email" autocomplete="email" required />
           </div>
           <div class="form-group">
-            <label for="message">Provide a brief background. <span class="form-label-note">(optional)</span></label>
-            <textarea id="message" name="message" rows="4"></textarea>
+            <label for="message">Provide a Brief Background</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
           <div class="form-submit-row">
             <button type="submit" class="form-submit">Send Us an Email</button>
