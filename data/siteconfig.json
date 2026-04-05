@@ -15,7 +15,7 @@
   "branding": {
     "colors": {
       "primary": "#15482E",
-      "primaryDark": "#062215",
+      "primaryDark": "#03120b",
       "accent": "#3a8b5f",
       "accentLight": "#5fa88a",
       "textDark": "#0f2818",
@@ -42,6 +42,7 @@
       {"label": "Home", "url": "/"},
       {"label": "Expertise", "url": "/expertise/"},
       {"label": "Services", "url": "/services/"},
+      {"label": "Referrals", "url": "/referrals/"},
       {"label": "About", "url": "/about/"},
       {"label": "Contact", "url": "/contact/"}
     ],

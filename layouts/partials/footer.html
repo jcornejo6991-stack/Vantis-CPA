@@ -17,7 +17,7 @@
       <div>
         <p class="footer-col-title">Services</p>
         <ul class="footer-links">
-          <li><a href="/services/tax-strategy-consulting">Tax Strategy</a></li>
+          <li><a href="/services/tax-strategy/">Tax Strategy</a></li>
           <li><a href="/services/tax-compliance">Tax Compliance</a></li>
           <li><a href="/services/international-tax">International Tax</a></li>
           <li><a href="/services/back-office">Back Office</a></li>
@@ -30,12 +30,9 @@
       <div>
         <p class="footer-col-title">Expertise</p>
         <ul class="footer-links">
-          <li><span class="footer-dot footer-dot-local"></span><a href="/local/">Individuals and Local Businesses</a></li>
-          <li><span class="footer-dot footer-dot-founders"></span><a href="/founders/">Startups and Growth-Stage Businesses</a></li>
-          <li><span class="footer-dot footer-dot-realestate"></span><a href="/realestate/">Real Estate Owners</a></li>
-          <li><span class="footer-dot footer-dot-outbound"></span><a href="/outbound/">International U.S. Taxpayers</a></li>
-          <li><span class="footer-dot footer-dot-inbound"></span><a href="/inbound/">Foreign Businesses and Investors</a></li>
-          <li><span class="footer-dot footer-dot-expats"></span><a href="/expats/">U.S. Expats and Digital Nomads</a></li>
+          {{ range $.Site.Data.expertise }}
+          <li><span class="footer-dot footer-dot-{{ .accent }}"></span><a href="{{ .url }}">{{ .name }}</a></li>
+          {{ end }}
         </ul>
       </div>
 

@@ -5,3 +5,16 @@
 node_modules/
 *.local
 .env
+
+# Dev artifacts and mockups
+mocks/
+hero-transition-mockup.html
+texture-mockup.html
+texture-options-15percent.html
+texture-options-mockup.html
+texture-options-v2.html
+
+# Proposal template tool (not part of website)
+create_template.js
+package.json
+package-lock.json

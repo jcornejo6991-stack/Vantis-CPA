@@ -1,0 +1,88 @@
+{{ define "main" }}
+  {{ partial "service-css.html" . }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+
+  {{ partial "nav.html" . }}
+
+  <!-- Hero section — title from data file if expertise page, otherwise frontmatter -->
+  {{ $displayTitle := .Title }}
+  {{ $slug := .Params.slug | default (path.Base .File.Dir) }}
+  {{ range $.Site.Data.expertise }}
+    {{ if eq .slug $slug }}
+      {{ $displayTitle = .name }}
+    {{ end }}
+  {{ end }}
+  <section class="hero">
+    <h1>{{ $displayTitle }}</h1>
+    <p class="hero-subtitle">{{ .Params.subtitle }}</p>
+  </section>
+
+  <!-- Main content — full-width sidebar layout -->
+  <div class="main-container">
+    <div class="left-column">
+      <form id="serviceContactForm" class="contact-form" action="https://formspree.io/f/mkopvwja" method="POST">
+        <input type="hidden" name="_subject" value="Inquiry from {{ .Title }} page" />
+        <h3>Contact Us</h3>
+
+        <div class="form-inputs-wrapper">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <div class="form-group">
+            <label for="background">Provide a Brief Background</label>
+            <textarea id="background" name="background" required></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Send Us an Email</button>
+          <p class="form-privacy">Your information is confidential and protected.</p>
+        </div>
+
+        <div class="form-buttons-wrapper">
+          <p class="calendar-label">Schedule a Meeting</p>
+          <p class="calendar-sublabel">Book a 30-minute Consultation</p>
+          <a href="https://cal.com/vantis-cpa/30min" target="_blank" rel="noopener noreferrer" class="form-button primary">Open Calendar</a>
+        </div>
+      </form>
+    </div>
+    <div class="right-column">
+      <div class="intro-text">
+        {{ if .Params.sections }}
+          {{ range .Params.sections }}
+          <div class="intro-section">
+            {{ if .title }}<p class="intro-heading">{{ .title }}</p>{{ end }}
+            {{ if .body }}{{ .body | markdownify }}{{ end }}
+          </div>
+          {{ end }}
+        {{ else }}
+          {{ range .Params.intro }}
+            <p>{{ . }}</p>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{ if .Params.specializations }}
+      <div class="content-section">
+        <h3 class="section-title">{{ .Params.sectionTitle | default "Specializations" }}</h3>
+        <ul class="section-list">
+          {{ range .Params.specializations }}
+            <li>{{ if .url }}<a href="{{ .url }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+
+    </div>
+  </div>
+
+  {{ partial "footer.html" . }}
+
+{{ end }}

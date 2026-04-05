@@ -1,7 +1,7 @@
 :root {
   /* Colors from config */
   --primary: #15482E;
-  --primary-dark: #062215;
+  --primary-dark: #03120b;
   --accent: #3a8b5f;
   --accent-light: #5fa88a;
   --text-dark: #0f2818;
@@ -9,6 +9,10 @@
   --bg-light: #f9faf9;
   --bg-accent: #edeef7;
   --border: #d0d0d0;
+
+  /* Dark green for nav/footer */
+  --navy: #03120b;
+  --navy-dark: #03120b;
 
   /* Fonts from config */
   --font-heading: 'Playfair Display', serif;

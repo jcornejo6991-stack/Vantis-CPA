@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Individuals and Local Business",
+    "slug": "local",
+    "url": "/expertise/local/",
+    "accent": "local",
+    "description": "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations."
+  },
+  {
+    "name": "International U.S. Citizens",
+    "slug": "outbound",
+    "url": "/expertise/outbound/",
+    "accent": "outbound",
+    "description": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning."
+  },
+  {
+    "name": "Startups and Online Business",
+    "slug": "founders",
+    "url": "/expertise/founders/",
+    "accent": "founders",
+    "description": "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence."
+  },
+  {
+    "name": "Foreign Business and Investors",
+    "slug": "inbound",
+    "url": "/expertise/inbound/",
+    "accent": "inbound",
+    "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly."
+  },
+  {
+    "name": "Real Estate Owners",
+    "slug": "realestate",
+    "url": "/expertise/realestate/",
+    "accent": "realestate",
+    "description": "Maximize the return on your real estate investments with strategic tax planning."
+  },
+  {
+    "name": "U.S. Expats Abroad",
+    "slug": "expats",
+    "url": "/expertise/expats/",
+    "accent": "expats",
+    "description": "Remote compliance support bridging the gap between the U.S. tax system and international residency."
+  }
+]

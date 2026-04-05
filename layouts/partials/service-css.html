@@ -1,5 +1,4 @@
-﻿{{ define "main" }}
-  <style>
+<style>
     :root {
       --primary-dark: #062215;
       --primary: #15482E;
@@ -59,59 +58,40 @@
       text-decoration: underline;
     }
 
-    /* Hero Section */
+    /* Hero Section — floating card style */
     .hero {
-      background-image: url('/images/globe-hero.jpg');
-      background-size: cover;
-      background-position: center center;
-      padding: 160px 20px;
+      background-color: rgba(255,255,255,0.88);
+      background-image: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.97) 100%);
+      padding: 80px 48px;
       text-align: center;
-      margin-bottom: 0;
       position: relative;
       z-index: 1;
+      margin: 25px 25px 22px 22px;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      opacity: 0.98;
     }
 
-    .hero::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
-    }
-
-    .hero h1,
-    .hero-subtitle {
-      position: relative;
-      z-index: 1;
-    }
-
-.hero h1 {
+    .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 6vw, 64px);
       font-weight: 700;
-      color: #ffffff;
+      color: #2f5342;
       margin: 0;
       line-height: 1.15;
       letter-spacing: -0.5px;
-      text-shadow: 0 2px 16px rgba(0,0,0,0.6);
     }
 
     .hero-subtitle {
       font-size: 17px;
-      color: rgba(255, 255, 255, 0.95);
+      color: var(--text-mid);
       margin-top: 16px;
       max-width: 650px;
       margin-left: auto;
       margin-right: auto;
       font-weight: 400;
       line-height: 1.6;
-      text-shadow: 0 1px 8px rgba(0,0,0,0.6);
-    }
-
-    /* Hero accent strip */
-    .hero-accent-strip {
-      height: 2px;
-      background: #000000;
     }
 
     /* Main Content Container */
@@ -123,6 +103,11 @@
       min-height: calc(100vh - var(--nav-height) - 300px);
       position: relative;
       z-index: 1;
+      margin: 0 25px 22px 22px;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      opacity: 0.98;
     }
 
     .left-column {
@@ -370,6 +355,47 @@
       font-weight: 600;
     }
 
+    .intro-section {
+      margin-bottom: 28px;
+    }
+
+    .intro-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px !important;
+      margin-top: 0 !important;
+    }
+
+    .intro-section p {
+      margin-top: 10px;
+    }
+
+    .intro-text ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 8px 0;
+    }
+
+    .intro-text ul li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 5px;
+      font-size: 17px;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }
+
+    .intro-text ul li::before {
+      content: "*";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 15px;
+    }
+
     /* Content Sections */
     .content-section {
       margin-bottom: 48px;
@@ -430,7 +456,6 @@
     }
 
     .grain-overlay {
-      /* Texture overlay effect */
       position: relative;
     }
 
@@ -440,10 +465,7 @@
       padding: 0 18px;
     }
 
-    /* Match homepage nav gradient exactly */
-    .nav {
-      background: linear-gradient(160deg, #062215 0%, #041f12 100%);
-    }
+    /* Nav handled by nav-css partial */
 
     @media (max-width: 1024px) {
       .main-container {
@@ -474,7 +496,13 @@
     @media (max-width: 768px) {
       .hero {
         padding: 48px 20px;
-        margin-bottom: 0;
+        margin: 12px;
+        border-radius: 14px;
+      }
+
+      .main-container {
+        margin: 0 12px 12px;
+        border-radius: 14px;
       }
 
       .hero h1 {
@@ -516,8 +544,14 @@
 
     @media (max-width: 480px) {
       .hero {
-        padding: 60px 15px;
-        margin-bottom: 0;
+        padding: 48px 15px;
+        margin: 8px;
+        border-radius: 12px;
+      }
+
+      .main-container {
+        margin: 0 8px 8px;
+        border-radius: 12px;
       }
 
       .hero h1 {
@@ -565,72 +599,3 @@
       }
     }
   </style>
-  {{ partial "nav-css.html" . }}
-  {{ partial "footer-css.html" . }}
-
-  {{ partial "nav.html" . }}
-
-  <!-- Hero section -->
-  <section class="hero">
-    <h1>Foreign Business and Investors</h1>
-    <p class="hero-subtitle">Comprehensive tax and accounting services for entering or operating in the U.S.</p>
-  </section>
-
-  <div class="hero-accent-strip"></div>
-
-  <!-- Main content — full-width sidebar layout -->
-  <div class="main-container">
-    <div class="left-column">
-      <form id="inboundContactForm" class="contact-form" action="https://formspree.io/f/mkopvwja" method="POST">
-        <h3>Contact Us</h3>
-
-        <div class="form-inputs-wrapper">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required />
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required />
-          </div>
-
-          <div class="form-group">
-            <label for="background">Provide a Brief Background</label>
-            <textarea id="background" name="background" required></textarea>
-          </div>
-
-          <button type="submit" class="form-submit">Send Us an Email</button>
-          <p class="form-privacy">Your information is confidential and protected.</p>
-        </div>
-
-        <div class="form-buttons-wrapper">
-          <p class="calendar-label">Schedule a Meeting</p>
-          <p class="calendar-sublabel">Book a 30-minute Consultation</p>
-          <a href="https://cal.com/vantis-cpa/30min" target="_blank" rel="noopener noreferrer" class="form-button primary">Open Calendar</a>
-        </div>
-      </form>
-    </div>
-    <div class="right-column">
-      <div class="intro-text">
-        <p>We help foreign businesses and investors enter the U.S. market with confidence. Whether you are looking to acquire U.S. equities, purchase real estate, or establish a U.S. branch or subsidiary, we provide the tax and compliance structure to do it correctly. The U.S. tax system operates very differently from most jurisdictions, and that gap is where costly exposure is created.</p>
-        <p>Our priority is protecting you from IRS enforcement and eliminating double taxation — whether through tax treaty positions, proper entity structuring, or estate planning. Penalties for missed or incorrect international filings generally range from $10,000 to $25,000 per form, per year. We also work with U.S. single-member LLCs (SMLLCs) owned by foreign persons, which carry specific disclosure and reporting requirements that are frequently overlooked.</p>
-        <p>From initial structure through ongoing compliance, we offer a full suite of tax, accounting, and advisory services to keep your U.S. operations on solid ground.</p>
-      </div>
-
-      <div class="content-section">
-        <h3 class="section-title">Specializations</h3>
-        <ul class="section-list">
-          <li><a href="/#resources">U.S. Subsidiaries</a></li>
-          <li><a href="/#resources">Foreign Corporations &amp; SMLLCs</a></li>
-          <li><a href="/#resources">Form 5472 &amp; Disclosure Filings</a></li>
-          <li><a href="/#resources">FIRPTA Compliance</a></li>
-          <li><a href="/#resources">Inbound Investment Planning</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  {{ partial "footer.html" . }}
-
-{{ end }}

@@ -1,0 +1,231 @@
+{{ define "main" }}
+  <style>
+    :root {
+      --primary-dark: #062215;
+      --primary: #15482E;
+      --primary-darkest: #041f12;
+      --accent: #3a8b5f;
+      --accent-light: #e8e8e8;
+      --text-dark: #0f2818;
+      --text-mid: #3d6b52;
+      --navy: #062215;
+      --navy-dark: #041f12;
+      --card-radius: 14px;
+      --nav-height: 68px;
+      --card-gap: 22px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+      background-size: 64px 20px;
+      background-attachment: fixed;
+      line-height: 1.6;
+      padding-top: var(--nav-height);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero a, .landing-grid-section a:not(.landing-card) { color: var(--primary); text-decoration: none; }
+    .hero a:hover, .landing-grid-section a:not(.landing-card):hover { color: var(--accent); text-decoration: underline; }
+
+    .container {
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 18px;
+    }
+
+    /* Nav handled by nav-css partial */
+
+    /* ─── HERO ─── */
+    .hero {
+      background-color: rgba(255,255,255,0.88);
+      background-image: linear-gradient(to bottom, transparent 50%, rgba(255,255,255,0.97) 100%);
+      padding: 80px 48px;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      margin: 25px 25px 22px 22px;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      opacity: 0.98;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 6vw, 64px);
+      font-weight: 700;
+      color: #2f5342;
+      margin: 0;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: var(--text-mid);
+      margin-top: 16px;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      font-weight: 400;
+      line-height: 1.6;
+    }
+
+    /* ─── CARDS GRID ─── */
+    .landing-grid-section {
+      margin: 0 25px 22px 22px;
+      padding: 60px 0;
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1;
+      opacity: 0.98;
+    }
+
+    .landing-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    /* ─── CARD ─── */
+    .landing-card {
+      background: white;
+      border-radius: 14px;
+      padding: 28px 28px 28px 24px;
+      border: 1px solid #e8e8e8;
+      border-top: 4px solid var(--accent);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      color: inherit;
+    }
+
+    .landing-card:hover {
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      transform: translateY(-3px);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .landing-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: #062215;
+      margin: 0;
+    }
+
+    .landing-card-desc {
+      font-size: 15px;
+      color: #3d6b52;
+      line-height: 1.5;
+      margin: 0;
+      font-weight: 500;
+    }
+
+    .landing-card-cta {
+      font-size: 14px;
+      color: #15482E;
+      font-weight: 600;
+      margin-top: auto;
+      padding-top: 8px;
+    }
+
+    .landing-card:hover .landing-card-cta {
+      color: var(--accent);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 48px 20px;
+        margin: 12px;
+        border-radius: 14px;
+      }
+
+      .landing-grid-section {
+        margin: 0 12px 12px;
+        border-radius: 14px;
+        padding: 40px 0;
+      }
+
+      .landing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 48px 15px;
+        margin: 8px;
+        border-radius: 12px;
+      }
+
+      .landing-grid-section {
+        margin: 0 8px 8px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+
+  {{ partial "nav.html" . }}
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>{{ .Title }}</h1>
+    <p class="hero-subtitle">{{ .Params.subtitle }}</p>
+  </section>
+
+  <!-- Cards Grid -->
+  <section class="landing-grid-section">
+    <div class="container">
+      <div class="landing-grid">
+        {{ if .Params.dataSource }}
+          {{ $data := index .Site.Data .Params.dataSource }}
+          {{ range $data }}
+          <a href="{{ .url }}" class="landing-card">
+            <h3 class="landing-card-title">{{ .name }}</h3>
+            <p class="landing-card-desc">{{ .description }}</p>
+            <span class="landing-card-cta">Learn More &rarr;</span>
+          </a>
+          {{ end }}
+        {{ else }}
+          {{ range .Params.items }}
+          <a href="{{ .url }}" class="landing-card">
+            <h3 class="landing-card-title">{{ .label }}</h3>
+            <p class="landing-card-desc">{{ .description }}</p>
+            <span class="landing-card-cta">Learn More &rarr;</span>
+          </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+  {{ partial "footer.html" . }}
+
+{{ end }}

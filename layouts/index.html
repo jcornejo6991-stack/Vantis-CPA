@@ -4,7 +4,7 @@
     :root {
       --primary-dark: #062215;
       --primary: #15482E;
-      --primary-darkest: #052818;
+      --primary-darkest: #041f12;
       --accent: #3a8b5f;
       --accent-light: #e8e8e8;
       --bg: #e8e8e8;
@@ -334,7 +334,7 @@
     .diff-stage-text { font-size: 16px; color: var(--text-mid); line-height: 1.6; }
 
     /* ─── SERVICES ─── */
-    .services { padding: 80px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), linear-gradient(135deg, #052818 0%, #0a3521 100%); background-color: #052818; border-left: 4px solid #fff; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; }
+    .services { padding: 80px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px); background-color: #041f12; border-left: 4px solid #fff; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; }
     .services::before {
       content: '';
       position: absolute;
@@ -433,7 +433,7 @@
     .service-title {
       font-size: 18px;
       font-weight: 700;
-      color: #0a3521;
+      color: #041f12;
       margin-bottom: 14px;
       letter-spacing: -0.01em;
     }
@@ -880,7 +880,7 @@
     }
 
     /* ─── CONTACT ─── */
-    .contact { padding: 60px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%); background-color: var(--navy); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
+    .contact { padding: 60px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px); background-color: #041f12; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
     .contact .section-label { color: #5a8b6f; }
     .contact .section-heading { color: #fff; }
     .contact .section-subheading { color: #7aaa8f; }
@@ -1051,7 +1051,7 @@
     }
 
     /* ─── FAQ ─── */
-    .faq-section { padding: 0; background: white; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; overflow: hidden; }
+    .faq-section { padding: 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; overflow: hidden; }
     .faq-wrapper {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -1253,7 +1253,7 @@
     }
     .support-service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
     .support-service-card .service-title {
-      color: #0a3521;
+      color: #041f12;
     }
     .support-service-card .service-description {
       color: var(--text-dark);
@@ -1293,52 +1293,6 @@
   </style>
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
-  <script>
-const practicesData = [
-  {
-    name: "Individuals and Local Business",
-    href: "/local/",
-    accent: "local",
-    description: "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations.",
-    niches: []
-  },
-  {
-    name: "International U.S. Citizens",
-    href: "/outbound/",
-    accent: "outbound",
-    description: "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning.",
-    niches: []
-  },
-  {
-    name: "Startups and Online Business",
-    href: "/founders/",
-    accent: "founders",
-    description: "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence.",
-    niches: []
-  },
-  {
-    name: "Foreign Business and Investors",
-    href: "/inbound/",
-    accent: "inbound",
-    description: "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
-    niches: []
-  },
-  {
-    name: "Real Estate Owners",
-    href: "/realestate/",
-    accent: "realestate",
-    description: "Maximize the return on your real estate investments with strategic tax planning.",
-    niches: []
-  },
-  {
-    name: "U.S. Expats Abroad",
-    href: "/expats/",
-    accent: "expats",
-    description: "Remote compliance support bridging the gap between the U.S. tax system and international residency.",
-    niches: []
-  }
-];
-  </script>
 </head>
 <body>
 
@@ -1595,6 +1549,142 @@ Object.values(practicesData).forEach((practice, index) => {
   </div>
 </section>
 
+<!-- PLACEHOLDER_EXISTING_CLIENTS -->
+
+<!-- ═══════════════════ CONTACT ═══════════════════ -->
+<section class="contact" id="contact" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="contact-header">
+      <p class="section-label fade-up">Next Steps</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h2>
+      <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
+    </div>
+    <div class="contact-grid">
+
+      <div class="fade-up fade-up-d1">
+        <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" autocomplete="email" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Provide a Brief Background</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+          </div>
+          <div class="form-submit-row">
+            <button type="submit" class="form-submit">Send Us an Email</button>
+            <p class="form-privacy-note">Your information is confidential and protected.</p>
+          </div>
+        </form>
+        <div class="form-success" id="formSuccess" role="alert">
+          <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
+        </div>
+
+        <!-- Referral link below form -->
+        <div class="referral-link-section fade-up fade-up-d2">
+          <p class="referral-link-label">Partner With Us</p>
+          <a href="/referrals/" class="referral-link">Our Referral Program →</a>
+        </div>
+      </div>
+
+      <div class="contact-right-column">
+        <div class="contact-info fade-up fade-up-d2">
+          <h3 class="contact-info-title">Reach us directly</h3>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div>
+              <p class="contact-item-label">Phone</p>
+              <p class="contact-item-value"><a href="tel:+13055635551">(305) 563-5551</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-item-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <p class="contact-item-label">Email</p>
+              <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="contact-calendar fade-up fade-up-d2">
+          <h3 class="contact-calendar-title">Schedule a Meeting</h3>
+          <p class="contact-calendar-desc">Book a 30-minute consultation</p>
+          <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<section class="faq-section" id="faq">
+  <div class="faq-wrapper">
+    <!-- LEFT PANEL: Light Green with messaging -->
+    <div class="faq-left">
+      <div class="faq-accent-bar"></div>
+      <h2 class="faq-title">Your Questions Answered</h2>
+      <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
+    </div>
+
+    <!-- RIGHT PANEL: Scrollable Q&A -->
+    <div class="faq-right">
+      <div class="faq-items">
+        <div class="faq-item open">
+          <div class="faq-question">
+            <span class="faq-q-text">What makes Vantis different from other CPAs?</span>
+            <span class="faq-toggle">−</span>
+          </div>
+          <div class="faq-answer">We combine proactive tax strategy with responsive communication. Rather than waiting for tax season, we work year-round to optimize your situation and flag opportunities before they pass.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">How do you avoid surprise billing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">Why get proactive tax advice instead of just filing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">What services do you offer beyond tax filing?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We offer bookkeeping, back-office services, payroll processing, sales tax management, and full-service accounting. One firm for all your business needs.</div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span class="faq-q-text">What happens in our first consultation?</span>
+            <span class="faq-toggle">+</span>
+          </div>
+          <div class="faq-answer">We'll discuss your business, current situation, and biggest challenges. You'll get a clear sense of how we work and whether we're a good fit. No pressure, no sales pitch.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════ RESOURCES ═══════════════════ -->
 <section class="resources" id="resources">
   <div class="container">
@@ -1739,142 +1829,6 @@ Object.values(practicesData).forEach((practice, index) => {
       setupFilterListener();
     }
   </script>
-</section>
-
-<!-- PLACEHOLDER_EXISTING_CLIENTS -->
-
-<!-- ═══════════════════ CONTACT ═══════════════════ -->
-<section class="contact" id="contact" aria-labelledby="contact-heading">
-  <div class="container">
-    <div class="contact-header">
-      <p class="section-label fade-up">Next Steps</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h2>
-      <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
-    </div>
-    <div class="contact-grid">
-
-      <div class="fade-up fade-up-d1">
-        <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Provide a Brief Background</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <div class="form-submit-row">
-            <button type="submit" class="form-submit">Send Us an Email</button>
-            <p class="form-privacy-note">Your information is confidential and protected.</p>
-          </div>
-        </form>
-        <div class="form-success" id="formSuccess" role="alert">
-          <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
-        </div>
-
-        <!-- Referral link below form -->
-        <div class="referral-link-section fade-up fade-up-d2">
-          <p class="referral-link-label">Partner With Us</p>
-          <a href="/referrals/" class="referral-link">Our Referral Program →</a>
-        </div>
-      </div>
-
-      <div class="contact-right-column">
-        <div class="contact-info fade-up fade-up-d2">
-          <h3 class="contact-info-title">Reach us directly</h3>
-
-          <div class="contact-item">
-            <div class="contact-item-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div>
-              <p class="contact-item-label">Phone</p>
-              <p class="contact-item-value"><a href="tel:+13055635551">(305) 563-5551</a></p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <p class="contact-item-label">Email</p>
-              <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="contact-calendar fade-up fade-up-d2">
-          <h3 class="contact-calendar-title">Schedule a Meeting</h3>
-          <p class="contact-calendar-desc">Book a 30-minute consultation</p>
-          <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ FAQ ═══════════════════ -->
-<section class="faq-section" id="faq">
-  <div class="faq-wrapper">
-    <!-- LEFT PANEL: Light Green with messaging -->
-    <div class="faq-left">
-      <div class="faq-accent-bar"></div>
-      <h2 class="faq-title">Your Questions Answered</h2>
-      <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
-    </div>
-
-    <!-- RIGHT PANEL: Scrollable Q&A -->
-    <div class="faq-right">
-      <div class="faq-items">
-        <div class="faq-item open">
-          <div class="faq-question">
-            <span class="faq-q-text">What makes Vantis different from other CPAs?</span>
-            <span class="faq-toggle">−</span>
-          </div>
-          <div class="faq-answer">We combine proactive tax strategy with responsive communication. Rather than waiting for tax season, we work year-round to optimize your situation and flag opportunities before they pass.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-text">How do you avoid surprise billing?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-text">Why get proactive tax advice instead of just filing?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-text">What services do you offer beyond tax filing?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">We offer bookkeeping, back-office services, payroll processing, sales tax management, and full-service accounting. One firm for all your business needs.</div>
-        </div>
-
-        <div class="faq-item">
-          <div class="faq-question">
-            <span class="faq-q-text">What happens in our first consultation?</span>
-            <span class="faq-toggle">+</span>
-          </div>
-          <div class="faq-answer">We'll discuss your business, current situation, and biggest challenges. You'll get a clear sense of how we work and whether we're a good fit. No pressure, no sales pitch.</div>
-        </div>
-      </div>
-    </div>
-  </div>
 </section>
 
 {{ partial "footer.html" . }}
