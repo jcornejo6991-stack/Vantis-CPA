@@ -1,0 +1,555 @@
+{{ define "main" }}
+  {{ partial "service-css.html" . }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+
+  <style>
+    /* ── Article Page ── */
+    .article-page {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 25px;
+    }
+
+    /* Card 1: Hero */
+    .article-hero {
+      background: linear-gradient(135deg, #15482E 0%, #3a8b5f 100%);
+      color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      padding: 48px 52px 44px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-breadcrumb {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 14px;
+    }
+
+    .article-breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .article-breadcrumb a:hover {
+      opacity: 0.85;
+    }
+
+    .article-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .article-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      background: rgba(255,255,255,0.18);
+      border-radius: 4px;
+      padding: 3px 9px;
+      font-weight: 600;
+    }
+
+    .article-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 700;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+
+    .article-hero-desc {
+      font-size: 17px;
+      opacity: 0.85;
+      margin: 0;
+      max-width: 680px;
+      line-height: 1.65;
+    }
+
+    /* Card 2: Body */
+    .article-body-card {
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .article-top {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 0;
+    }
+
+    /* Article content */
+    .article-content {
+      padding: 44px 48px 40px;
+      font-size: 16px;
+      color: #333;
+      line-height: 1.75;
+    }
+
+    .article-back {
+      display: inline-block;
+      font-size: 14px;
+      color: #15482E;
+      font-weight: 500;
+      margin-bottom: 28px;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .article-back:hover {
+      color: #3a8b5f;
+      text-decoration: underline;
+    }
+
+    .article-content h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      color: #0f2818;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      line-height: 1.3;
+    }
+
+    .article-content h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      color: #0f2818;
+      font-weight: 700;
+      margin: 26px 0 10px;
+    }
+
+    .article-content p {
+      margin: 0 0 16px;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin: 0 0 16px;
+      padding-left: 24px;
+    }
+
+    .article-content li {
+      margin-bottom: 6px;
+    }
+
+    .article-content strong {
+      color: #0f2818;
+      font-weight: 700;
+    }
+
+    .article-content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 20px;
+      font-size: 14px;
+    }
+
+    .article-content th {
+      background: #15482E;
+      color: #fff;
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .article-content td {
+      padding: 9px 14px;
+      border-bottom: 1px solid #e8e8e8;
+    }
+
+    .article-content tr:nth-child(even) td {
+      background: #f9f9f9;
+    }
+
+    .article-updated {
+      font-size: 12px;
+      color: #aaa;
+      margin-top: 32px;
+      padding-top: 20px;
+      border-top: 1px solid #e8e8e8;
+    }
+
+    /* Intake sidebar */
+    .article-sidebar {
+      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px),
+                        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
+      background-color: #041f12;
+      padding: 44px 36px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .article-sidebar h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 600;
+      color: #fff;
+      margin: 0;
+      letter-spacing: -0.3px;
+    }
+
+    .sidebar-form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .sidebar-form-group label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.3px;
+    }
+
+    .sidebar-form-group input,
+    .sidebar-form-group textarea {
+      padding: 11px 13px;
+      border: 1.5px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.1);
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      color: #fff;
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .sidebar-form-group input::placeholder,
+    .sidebar-form-group textarea::placeholder {
+      color: rgba(255,255,255,0.4);
+    }
+
+    .sidebar-form-group input:focus,
+    .sidebar-form-group textarea:focus {
+      outline: none;
+      border-color: rgba(255,255,255,0.4);
+      background: rgba(255,255,255,0.15);
+    }
+
+    .sidebar-form-group textarea {
+      min-height: 110px;
+      resize: vertical;
+      font-size: 13px;
+    }
+
+    .sidebar-submit {
+      padding: 13px;
+      background: #2f5342;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .sidebar-submit:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
+    }
+
+    .sidebar-privacy {
+      font-size: 12px;
+      color: rgba(255,255,255,0.5);
+      font-style: italic;
+      margin: -10px 0 0;
+    }
+
+    .sidebar-divider {
+      border: none;
+      border-top: 1px solid rgba(255,255,255,0.15);
+      margin: 0;
+    }
+
+    .sidebar-cal-label {
+      font-size: 17px;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+    }
+
+    .sidebar-cal-sublabel {
+      font-size: 13px;
+      color: rgba(255,255,255,0.6);
+      margin: 0;
+    }
+
+    .sidebar-cal-btn {
+      display: block;
+      padding: 12px;
+      border: 1.5px solid rgba(255,255,255,0.3);
+      background: transparent;
+      color: #fff;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .sidebar-cal-btn:hover {
+      border-color: #fff;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Bottom row */
+    .article-bottom {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      padding: 24px 48px 36px;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    .bottom-card {
+      background: #fff;
+      border-radius: 10px;
+      border-left: 3px solid #15482E;
+      padding: 18px 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    .bottom-card h4 {
+      font-size: 11px;
+      font-weight: 700;
+      color: #0f2818;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin: 0 0 12px;
+    }
+
+    .bottom-link {
+      display: block;
+      font-size: 14px;
+      color: #15482E;
+      font-weight: 500;
+      padding: 5px 0;
+      border-bottom: 1px solid #f0f0f0;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .bottom-link:last-child {
+      border-bottom: none;
+    }
+
+    .bottom-link:hover {
+      color: #3a8b5f;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      .article-top {
+        grid-template-columns: 1fr;
+      }
+
+      .article-sidebar {
+        order: -1;
+      }
+
+      .article-bottom {
+        grid-template-columns: 1fr;
+        padding: 24px 24px 32px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .article-page {
+        padding: 12px;
+        gap: 12px;
+      }
+
+      .article-hero {
+        padding: 32px 24px 28px;
+        border-radius: 14px;
+      }
+
+      .article-body-card {
+        border-radius: 14px;
+      }
+
+      .article-content {
+        padding: 28px 24px 24px;
+      }
+
+      .article-bottom {
+        padding: 20px 24px 28px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .article-page {
+        padding: 8px;
+      }
+
+      .article-hero {
+        border-radius: 12px;
+      }
+
+      .article-body-card {
+        border-radius: 12px;
+      }
+
+      .article-content {
+        padding: 24px 18px 20px;
+        font-size: 15px;
+      }
+
+      .article-sidebar {
+        padding: 28px 20px 24px;
+      }
+    }
+  </style>
+
+  {{ partial "nav.html" . }}
+
+  {{ $practices := .Params.practices | default (slice) }}
+  {{ $services := .Params.services | default (slice) }}
+
+  {{ $current := . }}
+  {{ $related := slice }}
+  {{ range where .Site.RegularPages "Section" "resources" }}
+    {{ if ne .Permalink $current.Permalink }}
+      {{ $thisPractices := .Params.practices | default (slice) }}
+      {{ if or (in $thisPractices "all") (in $practices "all") (intersect $thisPractices $practices) }}
+        {{ $related = $related | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  <div class="article-page">
+
+    <div class="article-hero">
+      <div class="article-breadcrumb">
+        <a href="/resources/">Resources</a> / {{ .Title }}
+      </div>
+      <div class="article-tags">
+        {{ if in $practices "all" }}
+          <span class="article-tag">All Clients</span>
+        {{ else }}
+          {{ range $practices }}
+            {{ $slug := . }}
+            {{ range $.Site.Data.expertise }}
+              {{ if eq .slug $slug }}
+                <span class="article-tag">{{ .name }}</span>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+        {{ range $services }}
+          {{ $svc := . }}
+          {{ range $.Site.Data.siteconfig.navigation.services }}
+            {{ if in .url $svc }}
+              <span class="article-tag">{{ .label }}</span>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      <p class="article-hero-desc">{{ .Description }}</p>
+    </div>
+
+    <div class="article-body-card">
+      <div class="article-top">
+
+        <div class="article-content">
+          <a href="/resources/" class="article-back">← Back to Resource Library</a>
+          {{ .Content }}
+          <p class="article-updated">Last updated: {{ .Date.Format "January 2006" }}</p>
+        </div>
+
+        <div class="article-sidebar">
+          <h3>Contact Us</h3>
+          <form id="resourceContactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
+            <input type="hidden" name="_subject" value="Inquiry from {{ .Title }} article" />
+            <div style="display:flex;flex-direction:column;gap:16px;">
+              <div class="sidebar-form-group">
+                <label for="res-name">Name</label>
+                <input type="text" id="res-name" name="name" required />
+              </div>
+              <div class="sidebar-form-group">
+                <label for="res-email">Email Address</label>
+                <input type="email" id="res-email" name="email" required />
+              </div>
+              <div class="sidebar-form-group">
+                <label for="res-background">Provide a Brief Background</label>
+                <textarea id="res-background" name="background" required></textarea>
+              </div>
+              <button type="submit" class="sidebar-submit">Send Us an Email</button>
+              <p class="sidebar-privacy">Your information is confidential and protected.</p>
+            </div>
+          </form>
+          <hr class="sidebar-divider" />
+          <p class="sidebar-cal-label">Schedule a Meeting</p>
+          <p class="sidebar-cal-sublabel">Book a 30-minute Consultation</p>
+          <a href="https://cal.com/vantis-cpa/30min" target="_blank" rel="noopener noreferrer" class="sidebar-cal-btn">Open Calendar</a>
+        </div>
+
+      </div>
+
+      <div class="article-bottom">
+
+        <div class="bottom-card">
+          <h4>Related Services</h4>
+          {{ range $services }}
+            {{ $svc := . }}
+            {{ range $.Site.Data.siteconfig.navigation.services }}
+              {{ if in .url $svc }}
+                <a href="{{ .url }}" class="bottom-link">{{ .label }} →</a>
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+
+        <div class="bottom-card">
+          <h4>Related Expertise</h4>
+          {{ if in $practices "all" }}
+            {{ range $.Site.Data.expertise }}
+              <a href="{{ .url }}" class="bottom-link">{{ .name }} →</a>
+            {{ end }}
+          {{ else }}
+            {{ range $practices }}
+              {{ $slug := . }}
+              {{ range $.Site.Data.expertise }}
+                {{ if eq .slug $slug }}
+                  <a href="{{ .url }}" class="bottom-link">{{ .name }} →</a>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        </div>
+
+        <div class="bottom-card">
+          <h4>More Articles</h4>
+          {{ if $related }}
+            {{ range first 3 $related }}
+              <a href="{{ .RelPermalink }}" class="bottom-link">{{ .Title }} →</a>
+            {{ end }}
+          {{ else }}
+            <a href="/resources/" class="bottom-link">Browse all articles →</a>
+          {{ end }}
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  {{ partial "footer.html" . }}
+{{ end }}
