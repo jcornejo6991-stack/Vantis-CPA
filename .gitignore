@@ -6,6 +6,9 @@ node_modules/
 *.local
 .env
 
+# Superpowers brainstorm sessions
+.superpowers/
+
 # Dev artifacts and mockups
 mocks/
 hero-transition-mockup.html
