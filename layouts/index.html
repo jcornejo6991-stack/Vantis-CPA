@@ -718,36 +718,6 @@
       margin: 0;
     }
 
-    .resources-filter {
-      margin-top: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-    }
-
-    .resources-filter label {
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--text-dark);
-    }
-
-    .resources-filter select {
-      padding: 10px 16px;
-      font-size: 16px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
-      color: var(--text-dark);
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-    }
-
-    .resources-filter select:hover,
-    .resources-filter select:focus {
-      border-color: var(--primary);
-      outline: none;
-    }
 
     .resources-carousel-wrapper {
       display: flex;
@@ -847,10 +817,6 @@
     }
 
     @media (max-width: 768px) {
-      .resources-filter {
-        flex-direction: column;
-      }
-
       .resources-articles {
         gap: 16px;
         padding: 0 16px;
@@ -1213,6 +1179,8 @@
     /* Service Label Badge */
     .service-label-badge {
       display: inline-block;
+      align-self: flex-start;
+      width: fit-content;
       font-size: 10px;
       font-weight: 700;
       color: #fff;
@@ -1536,8 +1504,6 @@ Object.values(practicesData).forEach((practice, index) => {
   </div>
 </section>
 
-<!-- PLACEHOLDER_EXISTING_CLIENTS -->
-
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
 <section class="contact" id="contact" aria-labelledby="contact-heading">
   <div class="container">
@@ -1564,7 +1530,6 @@ Object.values(practicesData).forEach((practice, index) => {
           </div>
           <div class="form-submit-row">
             <button type="submit" class="form-submit">Send Us an Email</button>
-            <p class="form-privacy-note">Your information is confidential and protected.</p>
           </div>
         </form>
         <div class="form-success" id="formSuccess" role="alert">
@@ -1679,18 +1644,6 @@ Object.values(practicesData).forEach((practice, index) => {
       <p class="section-label fade-up">Knowledge Base</p>
       <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Resources</h2>
 
-      <div class="resources-filter fade-up fade-up-d2">
-        <label for="practiceSelect">Filter by practice:</label>
-        <select id="practiceSelect">
-          <option value="all">All Articles</option>
-          <option value="local">Individuals and Local Businesses</option>
-          <option value="founders">Startups and Growth-Stage Businesses</option>
-          <option value="realestate">Real Estate Owners</option>
-          <option value="outbound">International U.S. Taxpayers</option>
-          <option value="inbound">Foreign Businesses and Investors</option>
-          <option value="expats">U.S. Expats and Digital Nomads</option>
-        </select>
-      </div>
     </div>
 
     <div class="resources-carousel-wrapper fade-up fade-up-d3">
@@ -1722,32 +1675,32 @@ Object.values(practicesData).forEach((practice, index) => {
     const resourcesData = [
       {
         id: "s-corps",
-        title: "S-Corporations",
-        description: "Understand S-Corp election benefits, requirements, and tax implications.",
+        title: "S-Corporation Election: When It Makes Sense (and When It Doesn't)",
+        description: "Learn when an S-Corp election saves taxes and when it costs more. Covers the savings calculation, reasonable salary rules, and who should avoid electing.",
         practices: ["founders", "local", "realestate"]
       },
       {
         id: "smllc-5472",
-        title: "SMLLC 5472 Election",
-        description: "Elect single-member LLC as C-Corp for tax optimization.",
-        practices: ["founders", "local"]
+        title: "Form 5472 for Foreign-Owned Single-Member LLCs",
+        description: "Foreign-owned disregarded entities must file Form 5472 or face a $25,000 penalty. Here's what triggers the requirement and how to comply.",
+        practices: ["founders", "local", "inbound"]
       },
       {
         id: "form-5471",
-        title: "Form 5471",
-        description: "Foreign Corporation Information Return and PFIC Rules.",
+        title: "Form 5471: U.S. Shareholders of Foreign Corporations",
+        description: "U.S. persons who own 10% or more of a foreign corporation must file Form 5471. Here's who qualifies, what's reported, and the penalties for non-compliance.",
         practices: ["outbound", "inbound"]
       },
       {
         id: "due-dates",
-        title: "2025 Tax Deadlines",
-        description: "Key tax filing and payment dates for businesses and individuals.",
+        title: "2025 Tax Deadlines: Key Filing and Payment Dates",
+        description: "Every important IRS filing and payment deadline for the 2025 tax year, including business returns, individual returns, extensions, and estimated tax payments.",
         practices: ["all"]
       },
       {
         id: "1031-exchange",
-        title: "1031 Exchange Guide",
-        description: "Real estate exchange strategies to defer capital gains tax.",
+        title: "1031 Exchange Guide: Defer Capital Gains on Real Estate",
+        description: "A 1031 exchange lets you sell investment property and defer capital gains tax by reinvesting in like-kind property. Here are the rules, timelines, and common pitfalls.",
         practices: ["realestate"]
       }
     ];
@@ -1794,31 +1747,7 @@ Object.values(practicesData).forEach((practice, index) => {
       });
     }
 
-    // Listen for dropdown changes
-    function setupFilterListener() {
-      const practiceSelect = document.getElementById("practiceSelect");
-      const carousel = document.querySelector(".resources-articles");
-
-      if (practiceSelect) {
-        practiceSelect.addEventListener("change", function(e) {
-          const selectedValue = e.target.value;
-          renderResourceArticles(selectedValue);
-
-          // Reset carousel position when filtering
-          if (carousel) {
-            carousel.scrollLeft = 0;
-          }
-        });
-      }
-    }
-
-    // Wait for DOM to be fully ready
-    if (document.readyState === "loading") {
-      document.addEventListener("DOMContentLoaded", setupFilterListener);
-    } else {
-      setupFilterListener();
-    }
-  </script>
+</script>
 </section>
 
 {{ partial "footer.html" . }}

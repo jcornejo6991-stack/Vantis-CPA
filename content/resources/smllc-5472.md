@@ -9,7 +9,7 @@ featured: false
 
 ## What Is Form 5472?
 
-Form 5472 is an information return required by the IRS for certain U.S. corporations and foreign-owned domestic disregarded entities. Despite being called an "information return" — meaning it doesn't calculate a tax owed — the penalty for failure to file is $25,000 per form, per year.
+Form 5472 is an information return required by the IRS for certain U.S. corporations and foreign-owned domestic disregarded entities. Despite being called an "information return" (meaning it calculates no tax owed), the penalty for failure to file is $25,000 per form, per year.
 
 ## Who Must File
 
@@ -26,7 +26,7 @@ In practice, almost any activity between the foreign owner and the LLC counts. E
 
 ## How to File
 
-The SMLLC must obtain an Employer Identification Number (EIN) and file a pro forma Form 1120 (U.S. Corporation Income Tax Return) along with the attached Form 5472. The 1120 itself is essentially a shell — it reports no income or tax — but it is the required vehicle for submitting the 5472.
+The SMLLC must obtain an Employer Identification Number (EIN) and file a pro forma Form 1120 (U.S. Corporation Income Tax Return) along with the attached Form 5472. The 1120 itself is essentially a shell (it reports no income or tax) and is the required vehicle for submitting the 5472.
 
 The due date follows the standard corporate return deadline: April 15 for calendar-year filers, with a six-month extension available.
 
@@ -43,4 +43,4 @@ There is a reasonable cause exception, but it requires proactive documentation a
 - Omitting intercompany transactions that don't seem significant
 - Failing to file in years with only passive activity (the obligation exists regardless)
 
-If you are a foreign national who owns a U.S. LLC — even a dormant one — confirm your Form 5472 filing status before the next deadline.
+If you are a foreign national who owns a U.S. LLC, even a dormant one, confirm your Form 5472 filing status before the next deadline.

@@ -1,0 +1,136 @@
+{{ define "main" }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+  <style>
+    :root {
+      --primary-dark: #062215;
+      --primary: #15482E;
+      --primary-darkest: #041f12;
+      --accent: #3a8b5f;
+      --text-dark: #0f2818;
+      --text-mid: #3d6b52;
+      --navy: #062215;
+      --navy-dark: #041f12;
+      --nav-height: 68px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+      background-size: 64px 20px;
+      background-attachment: fixed;
+      line-height: 1.6;
+      padding-top: var(--nav-height);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 48px 18px 80px;
+    }
+
+    .legal-card {
+      max-width: 760px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      padding: 56px 64px;
+    }
+
+    .legal-card h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #2f5342;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .legal-updated {
+      font-size: 13px;
+      color: #7a9b87;
+      margin-bottom: 40px;
+      border-bottom: 1px solid #e8eeeb;
+      padding-bottom: 28px;
+    }
+
+    .legal-card h2 {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--primary);
+      margin: 36px 0 10px;
+      letter-spacing: -0.01em;
+    }
+
+    .legal-card p {
+      font-size: 15px;
+      color: #2a4a37;
+      line-height: 1.75;
+      margin-bottom: 14px;
+    }
+
+    .legal-card ul, .legal-card ol {
+      font-size: 15px;
+      color: #2a4a37;
+      line-height: 1.75;
+      margin: 10px 0 14px 20px;
+    }
+
+    .legal-card ul li, .legal-card ol li {
+      margin-bottom: 6px;
+    }
+
+    .legal-card a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .legal-card a:hover {
+      text-decoration: underline;
+    }
+
+    .legal-card strong {
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    @media (max-width: 640px) {
+      .legal-card {
+        padding: 36px 24px;
+        border-radius: 14px;
+      }
+    }
+  </style>
+
+  {{ partial "nav.html" . }}
+
+  <main>
+    <div class="legal-card">
+      <h1>{{ .Title }}</h1>
+      <p class="legal-updated">Last Updated: {{ .Params.lastUpdated }}</p>
+      {{ .Content }}
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
+{{ end }}

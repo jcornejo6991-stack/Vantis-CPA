@@ -76,7 +76,7 @@
       background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
       border-radius: 20px;
       box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
+      overflow: clip;
       position: relative;
       z-index: 1;
     }
@@ -85,6 +85,10 @@
       display: grid;
       grid-template-columns: 1fr 320px;
       gap: 0;
+      align-items: start;
+      padding-right: 24px;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
 
     /* Article content */
@@ -183,10 +187,12 @@
       background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px),
                         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
       background-color: #041f12;
-      padding: 44px 36px 40px;
+      padding: 40px 32px 36px;
       display: flex;
       flex-direction: column;
       gap: 20px;
+      border-radius: 16px;
+      box-shadow: 0 12px 40px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
     }
 
     .article-sidebar h3 {
@@ -360,7 +366,7 @@
       }
 
       .article-sidebar {
-        order: -1;
+        order: 2;
       }
 
       .article-bottom {
@@ -492,7 +498,6 @@
                 <textarea id="res-background" name="background" required></textarea>
               </div>
               <button type="submit" class="sidebar-submit">Send Us an Email</button>
-              <p class="sidebar-privacy">Your information is confidential and protected.</p>
             </div>
           </form>
           <hr class="sidebar-divider" />
