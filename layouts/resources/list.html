@@ -1,0 +1,353 @@
+{{ define "main" }}
+  {{ partial "service-css.html" . }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+
+  <style>
+    /* ── Resource Library Page ── */
+    .resource-library {
+      margin: 25px;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+
+    .library-hero {
+      background: linear-gradient(135deg, #15482E 0%, #3a8b5f 100%);
+      color: #fff;
+      padding: 56px 48px 48px;
+    }
+
+    .library-hero .section-label {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      opacity: 0.7;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .library-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      margin: 0 0 16px;
+      line-height: 1.15;
+    }
+
+    .library-hero p {
+      font-size: 18px;
+      opacity: 0.85;
+      margin: 0;
+      max-width: 580px;
+      line-height: 1.6;
+    }
+
+    .library-body {
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      padding: 36px 48px 48px;
+    }
+
+    .library-search {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .library-search input {
+      flex: 1;
+      padding: 12px 16px;
+      border: 1.5px solid #ddd;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #0f2818;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+
+    .library-search input:focus {
+      outline: none;
+      border-color: #15482E;
+    }
+
+    .library-search input::placeholder {
+      color: #aaa;
+    }
+
+    .library-filters {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    .filter-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 13px;
+      border: 1.5px solid #d0d0d0;
+      background: #fff;
+      color: #555;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .filter-pill:hover {
+      border-color: #15482E;
+      color: #15482E;
+    }
+
+    .filter-pill.active {
+      background: #15482E;
+      color: #fff;
+      border-color: #15482E;
+    }
+
+    .library-count {
+      font-size: 13px;
+      color: #888;
+      margin-bottom: 24px;
+    }
+
+    .library-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .lib-card {
+      background: #fff;
+      border-radius: 10px;
+      border-left: 3px solid #15482E;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lib-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .lib-card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 10px;
+    }
+
+    .lib-practice-tag {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #3a8b5f;
+      font-weight: 700;
+    }
+
+    .lib-practice-tag + .lib-practice-tag::before {
+      content: " · ";
+      color: #ccc;
+    }
+
+    .lib-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px;
+      color: #0f2818;
+      font-weight: 700;
+      margin: 0 0 10px;
+      line-height: 1.35;
+    }
+
+    .lib-card p {
+      font-size: 14px;
+      color: #555;
+      line-height: 1.6;
+      margin: 0 0 14px;
+      flex: 1;
+    }
+
+    .lib-svc-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-bottom: 14px;
+    }
+
+    .lib-svc-chip {
+      font-size: 10px;
+      padding: 2px 8px;
+      background: #edeef7;
+      border-radius: 3px;
+      color: #555;
+    }
+
+    .lib-card a.read-link {
+      font-size: 13px;
+      color: #15482E;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .lib-card a.read-link:hover {
+      color: #3a8b5f;
+      text-decoration: underline;
+    }
+
+    .lib-card.hidden {
+      display: none;
+    }
+
+    @media (max-width: 1024px) {
+      .library-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resource-library {
+        margin: 12px;
+        border-radius: 14px;
+      }
+
+      .library-hero {
+        padding: 36px 24px 32px;
+      }
+
+      .library-body {
+        padding: 24px 20px 32px;
+      }
+
+      .library-search {
+        flex-direction: column;
+      }
+
+      .library-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .resource-library {
+        margin: 8px;
+      }
+    }
+  </style>
+
+  {{ partial "nav.html" . }}
+
+  <div class="resource-library">
+    <div class="library-hero">
+      <span class="section-label">Knowledge Base</span>
+      <h1>Resource Library</h1>
+      <p>Tax guides, planning strategies, and compliance checklists — built for founders, expats, real estate owners, and global businesses.</p>
+    </div>
+
+    <div class="library-body">
+      <div class="library-search">
+        <input type="text" id="librarySearch" placeholder="Search: S-corp, 1031, FBAR, deadlines…" />
+      </div>
+
+      <div class="library-filters">
+        <button class="filter-pill active" data-filter="all">All Topics</button>
+        {{ range $.Site.Data.expertise }}
+        <button class="filter-pill" data-filter="{{ .slug }}">{{ .name }}</button>
+        {{ end }}
+      </div>
+
+      <p class="library-count" id="libraryCount"></p>
+
+      <div class="library-grid" id="libraryGrid">
+        {{ range .Pages }}
+        {{ $practices := .Params.practices | default (slice) }}
+        <div class="lib-card"
+             data-practices="{{ delimit $practices "," }}"
+             data-text="{{ .Title | lower }} {{ .Description | lower }}">
+          <div class="lib-card-tags">
+            {{ if in $practices "all" }}
+              <span class="lib-practice-tag">All Clients</span>
+            {{ else }}
+              {{ range $practices }}
+                {{ $slug := . }}
+                {{ range $.Site.Data.expertise }}
+                  {{ if eq .slug $slug }}
+                    <span class="lib-practice-tag">{{ .name }}</span>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Description }}</p>
+          <div class="lib-svc-chips">
+            {{ range .Params.services }}
+              {{ $svc := . }}
+              {{ range $.Site.Data.siteconfig.navigation.services }}
+                {{ if in .url $svc }}
+                  <span class="lib-svc-chip">{{ .label }}</span>
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </div>
+          <a href="{{ .RelPermalink }}" class="read-link">Read Article →</a>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  {{ partial "footer.html" . }}
+
+  <script>
+    (function() {
+      var cards = Array.from(document.querySelectorAll('.lib-card'));
+      var pills = document.querySelectorAll('.filter-pill');
+      var searchInput = document.getElementById('librarySearch');
+      var countEl = document.getElementById('libraryCount');
+      var activeFilter = 'all';
+      var searchQuery = '';
+
+      function updateCards() {
+        var visible = 0;
+        cards.forEach(function(card) {
+          var practices = card.dataset.practices || '';
+          var text = card.dataset.text || '';
+          var matchesFilter = activeFilter === 'all'
+            || practices.indexOf(activeFilter) !== -1
+            || practices.indexOf('all') !== -1;
+          var matchesSearch = searchQuery === ''
+            || text.indexOf(searchQuery) !== -1;
+          if (matchesFilter && matchesSearch) {
+            card.classList.remove('hidden');
+            visible++;
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+        countEl.textContent = 'Showing ' + visible + ' article' + (visible !== 1 ? 's' : '');
+      }
+
+      pills.forEach(function(pill) {
+        pill.addEventListener('click', function() {
+          pills.forEach(function(p) { p.classList.remove('active'); });
+          pill.classList.add('active');
+          activeFilter = pill.dataset.filter;
+          updateCards();
+        });
+      });
+
+      searchInput.addEventListener('input', function() {
+        searchQuery = this.value.toLowerCase().trim();
+        updateCards();
+      });
+
+      updateCards();
+    })();
+  </script>
+{{ end }}
