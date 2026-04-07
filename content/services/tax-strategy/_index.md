@@ -1,5 +1,6 @@
 ---
 title: "Tax Strategy"
+description: "Year-round tax planning for business owners — entity elections, income timing, retirement plans, depreciation. Stop reacting at year-end."
 layout: "service"
 subtitle: "Year-round tax planning that puts the code to work for you."
 heroImage: "/images/globe-hero.jpg"

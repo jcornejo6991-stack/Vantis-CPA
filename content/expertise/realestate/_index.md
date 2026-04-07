@@ -1,5 +1,6 @@
 ---
 title: "Real Estate Owners"
+description: "Cost segregation, 1031 exchanges, REPS qualification, and passive loss planning for rental property owners and real estate investors."
 layout: "service"
 subtitle: "Tax planning and compliance built around the rules that only apply to real estate."
 heroImage: "/images/globe-hero.jpg"

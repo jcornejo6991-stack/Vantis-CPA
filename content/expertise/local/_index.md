@@ -1,5 +1,6 @@
 ---
 title: "Local Businesses"
+description: "S-corp elections, entity structuring, quarterly tax planning, and bookkeeping for sole proprietors and South Florida businesses."
 layout: "service"
 subtitle: "Tax strategy and full-service accounting for small and mid-size businesses in South Florida."
 heroImage: "/images/globe-hero.jpg"

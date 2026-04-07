@@ -1,5 +1,6 @@
 ---
 title: "Sales Tax"
+description: "Florida sales tax registration, monthly filings, rental and e-commerce compliance, and DOR correspondence. Stay compliant before the notice arrives."
 layout: "service"
 subtitle: "Florida sales tax compliance, registration, and filing handled completely."
 heroImage: "/images/globe-hero.jpg"

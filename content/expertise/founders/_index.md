@@ -1,5 +1,6 @@
 ---
 title: "Founders & Startups"
+description: "Entity elections, equity compensation, R&D credits, and investor-ready books for startups at every stage. S-corp, C-corp, and multi-state."
 layout: "service"
 subtitle: "Tax and accounting infrastructure for founders who are building something worth protecting."
 heroImage: "/images/globe-hero.jpg"

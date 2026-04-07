@@ -1,5 +1,6 @@
 ---
 title: "International Tax"
+description: "FBAR, FATCA, Form 5471, GILTI, foreign tax credits, and pre-immigration planning. Full in-house international tax — no referrals."
 layout: "service"
 subtitle: "Cross-border tax compliance and planning where the code gets technical and the penalties get serious."
 heroImage: "/images/globe-hero.jpg"

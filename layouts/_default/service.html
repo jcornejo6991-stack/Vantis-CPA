@@ -3,6 +3,24 @@
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
 
+  <!-- Service Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "{{ .Title }}",
+    "description": "{{ .Description | default .Site.Data.siteconfig.company.description }}",
+    "url": "{{ .Permalink }}",
+    "provider": {
+      "@type": "AccountingService",
+      "name": "{{ .Site.Data.siteconfig.company.name }}",
+      "url": "{{ .Site.BaseURL }}",
+      "telephone": "{{ .Site.Data.siteconfig.company.phone }}",
+      "email": "{{ .Site.Data.siteconfig.company.email }}"
+    }
+  }
+  </script>
+
   {{ partial "nav.html" . }}
 
   <!-- Hero section — title from data file if expertise page, otherwise frontmatter -->
@@ -78,6 +96,30 @@
       </div>
       {{ end }}
 
+      {{ $serviceMatches := slice }}
+      {{ $practiceMatches := slice }}
+      {{ range where .Site.RegularPages "Section" "resources" }}
+        {{ if in .Params.services $slug }}
+          {{ $serviceMatches = $serviceMatches | append . }}
+        {{ else if in .Params.practices $slug }}
+          {{ $practiceMatches = $practiceMatches | append . }}
+        {{ end }}
+      {{ end }}
+      {{ $relatedResources := first 3 ($serviceMatches | append $practiceMatches) }}
+      {{ if $relatedResources }}
+      <div class="content-section rr-section">
+        <h3 class="section-title">Related Reading</h3>
+        <div class="rr-list">
+          {{ range $relatedResources }}
+          <a href="{{ .RelPermalink }}" class="rr-item">
+            <span class="rr-item-title">{{ .Title }}</span>
+            <span class="rr-item-desc">{{ .Description }}</span>
+            <span class="rr-item-arrow">Read →</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
 
     </div>
   </div>

@@ -1,5 +1,6 @@
 ---
 title: "Bookkeeping"
+description: "Monthly bank reconciliation, financial statements, and QuickBooks setup for business owners who need clean books year-round."
 layout: "service"
 subtitle: "Clean books, current numbers, and financial clarity on demand."
 heroImage: "/images/globe-hero.jpg"

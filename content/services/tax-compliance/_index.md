@@ -1,5 +1,6 @@
 ---
 title: "Tax Compliance"
+description: "Accurate, defensible federal and state tax returns for individuals, S-corps, C-corps, partnerships, and trusts. IRS notice response included."
 layout: "service"
 subtitle: "Every return filed accurately, on time, and positioned to hold up under scrutiny."
 heroImage: "/images/globe-hero.jpg"

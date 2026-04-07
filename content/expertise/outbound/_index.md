@@ -1,5 +1,6 @@
 ---
 title: "Outbound U.S. Businesses"
+description: "Form 5471, GILTI, foreign tax credits, and cross-border compliance for U.S. businesses operating abroad. Avoid $10,000+ automatic penalties."
 layout: "service"
 subtitle: "International tax compliance and strategy for U.S. companies with foreign operations."
 heroImage: "/images/globe-hero.jpg"

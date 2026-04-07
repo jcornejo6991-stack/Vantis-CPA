@@ -1,5 +1,6 @@
 ---
 title: "Services"
+description: "Tax strategy, compliance, international tax, bookkeeping, payroll, and sales tax — full-service accounting from entity formation to exit."
 layout: "landing"
 subtitle: "Everything from entity formation and tax strategy to compliance and bookkeeping, handled completely."
 items:

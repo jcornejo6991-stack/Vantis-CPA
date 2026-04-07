@@ -3,6 +3,29 @@
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
 
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ .Title }}",
+    "description": "{{ .Description | default .Site.Data.siteconfig.company.description }}",
+    "url": "{{ .Permalink }}",
+    "datePublished": "{{ .Date.Format "2006-01-02" }}",
+    "dateModified": "{{ .Lastmod.Format "2006-01-02" }}",
+    "author": {
+      "@type": "Organization",
+      "name": "{{ .Site.Data.siteconfig.company.name }}",
+      "url": "{{ .Site.BaseURL }}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "{{ .Site.Data.siteconfig.company.name }}",
+      "url": "{{ .Site.BaseURL }}"
+    }
+  }
+  </script>
+
   <style>
     /* ── Article Page ── */
     .article-page {
@@ -477,7 +500,7 @@
         <div class="article-content">
           <a href="/resources/" class="article-back">← Back to Resource Library</a>
           {{ .Content }}
-          <p class="article-updated">Last updated: {{ .Date.Format "January 2006" }}</p>
+          <p class="article-updated">Last updated: {{ .Date.Format "2006" }}</p>
         </div>
 
         <div class="article-sidebar">

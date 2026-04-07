@@ -1,5 +1,6 @@
 ---
 title: "U.S. Expats"
+description: "Foreign tax credit, FEIE, FBAR, and Streamlined Filing for Americans living abroad. Avoid automatic FBAR penalties of $10,000+ per account."
 layout: "service"
 subtitle: "Tax compliance and planning for Americans living and earning abroad."
 heroImage: "/images/globe-hero.jpg"

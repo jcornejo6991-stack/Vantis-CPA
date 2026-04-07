@@ -1,5 +1,6 @@
 ---
 title: "Payroll"
+description: "Full-service payroll through Gusto — direct deposits, tax filings, W-2s, 1099s, and S-corp reasonable compensation strategy."
 layout: "service"
 subtitle: "Payroll processing, tax deposits, and compliance handled completely."
 heroImage: "/images/globe-hero.jpg"

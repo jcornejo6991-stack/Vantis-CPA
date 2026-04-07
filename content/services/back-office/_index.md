@@ -1,5 +1,6 @@
 ---
 title: "Back-Office Services"
+description: "LLC formation, S-corp elections, EIN applications, operating agreements, and annual compliance for Florida, Wyoming, and Texas entities."
 layout: "service"
 subtitle: "Entity formation, registrations, and operational infrastructure so you can focus on your business."
 heroImage: "/images/globe-hero.jpg"
