@@ -97,6 +97,26 @@
       </div>
       {{ end }}
 
+      {{ if eq .Section "services" }}
+      <div class="content-section">
+        <h3 class="section-title">Who We Serve</h3>
+        <div class="cross-link-grid">
+          {{ range $.Site.Data.expertise }}
+          <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">→</span></a>
+          {{ end }}
+        </div>
+      </div>
+      {{ else if eq .Section "expertise" }}
+      <div class="content-section">
+        <h3 class="section-title">Our Services</h3>
+        <div class="cross-link-grid">
+          {{ range $.Site.Data.services }}
+          <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">→</span></a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+
       {{ $serviceMatches := slice }}
       {{ $practiceMatches := slice }}
       {{ range where .Site.RegularPages "Section" "resources" }}
