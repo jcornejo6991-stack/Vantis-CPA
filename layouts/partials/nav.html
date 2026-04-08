@@ -1,118 +1,128 @@
 <!-- ═══════════════════ NAV ═══════════════════ -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav-inner">
-    <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
-      <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
-    </a>
 
-    <ul class="nav-links" role="list">
-      <li class="nav-dropdown">
-        <a href="/services/">Services</a>
-        <div class="nav-dropdown-menu">
-          <a href="/services/tax-strategy/">Tax Strategy</a>
-          <a href="/services/tax-compliance">Tax Compliance</a>
-          <a href="/services/international-tax">International Tax</a>
-          <a href="/services/back-office">Back Office</a>
-          <a href="/services/bookkeeping">Bookkeeping</a>
-          <a href="/services/payroll">Payroll</a>
-          <a href="/services/sales-tax">Sales Tax</a>
-        </div>
-      </li>
-
-      <li class="nav-dropdown" id="nav-industries">
-        <a href="/expertise/">Expertise</a>
-        <div class="nav-dropdown-menu" id="industries-menu">
-          {{ range $.Site.Data.expertise }}
-          <a href="{{ .url }}">{{ .name }}</a>
-          {{ end }}
-        </div>
-      </li>
-
-      <li><a href="/resources/" class="nav-pill">Resources</a></li>
-      <li><a href="/referrals/">REFERRALS</a></li>
-    </ul>
-
-    <script>
-      // Nav dropdown hover logic
-
-      // Add dropdown hover logic with delay
-      (function() {
-        let dropdownTimeout;
-        const navLinks = document.querySelector('.nav-links');
-        if (!navLinks) return;
-        const mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
-        mainDropdowns.forEach(dropdown => {
-          const menu = dropdown.querySelector('.nav-dropdown-menu');
-          if (!menu) return;
-
-          dropdown.addEventListener('mouseenter', () => {
-            clearTimeout(dropdownTimeout);
-            mainDropdowns.forEach(other => {
-              if (other !== dropdown) {
-                const otherMenu = other.querySelector('.nav-dropdown-menu');
-                if (otherMenu) {
-                  otherMenu.style.opacity = '0';
-                  otherMenu.style.visibility = 'hidden';
-                  otherMenu.style.pointerEvents = 'none';
-                }
-              }
-            });
-            menu.style.opacity = '1';
-            menu.style.visibility = 'visible';
-            menu.style.pointerEvents = 'auto';
-          });
-
-          dropdown.addEventListener('mouseleave', () => {
-            dropdownTimeout = setTimeout(() => {
-              menu.style.opacity = '0';
-              menu.style.visibility = 'hidden';
-              menu.style.pointerEvents = 'none';
-            }, 300);
-          });
-
-          menu.addEventListener('mouseenter', () => {
-            clearTimeout(dropdownTimeout);
-            menu.style.opacity = '1';
-            menu.style.visibility = 'visible';
-            menu.style.pointerEvents = 'auto';
-          });
-
-          menu.addEventListener('mouseleave', () => {
-            dropdownTimeout = setTimeout(() => {
-              menu.style.opacity = '0';
-              menu.style.visibility = 'hidden';
-              menu.style.pointerEvents = 'none';
-            }, 300);
-          });
-        });
-      })();
-    </script>
-
-    <button class="nav-btn" onclick="window.open('{{ $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}', '_blank')">PAY BILL</button>
-
-    <div class="nav-contact">
-      <a href="mailto:info@vantiscpa.com">
-        info@vantiscpa.com
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-      </a>
-      <a href="tel:+13055635551">
-        (305) 563-5551
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      </a>
-    </div>
-
-    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <div class="mobile-menu" id="mobileMenu" role="menu">
-      <a href="/services/" role="menuitem">Services</a>
-      <a href="/expertise/" role="menuitem">Expertise</a>
-      <a href="{{ $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
-      <a href="/resources/" role="menuitem">Resources</a>
-      <a href="/referrals/" role="menuitem">Referrals</a>
+  <!-- TOP STRIP: email + phone right-aligned -->
+  <div class="nav-top-strip">
+    <div class="nav-top-inner">
+      <div class="nav-contact">
+        <a href="mailto:info@vantiscpa.com">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          info@vantiscpa.com
+        </a>
+        <a href="tel:+13055635551">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          (305) 563-5551
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- MAIN ROW: brand left, links right -->
+  <div class="nav-main-row">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
+        <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="/services/">Services</a>
+          <div class="nav-dropdown-menu">
+            <a href="/services/tax-strategy/">Tax Strategy</a>
+            <a href="/services/tax-compliance">Tax Compliance</a>
+            <a href="/services/international-tax">International Tax</a>
+            <a href="/services/back-office">Back Office</a>
+            <a href="/services/bookkeeping">Bookkeeping</a>
+            <a href="/services/payroll">Payroll</a>
+            <a href="/services/sales-tax">Sales Tax</a>
+          </div>
+        </li>
+
+        <li class="nav-dropdown" id="nav-industries">
+          <a href="/expertise/">Expertise</a>
+          <div class="nav-dropdown-menu" id="industries-menu">
+            {{ range $.Site.Data.expertise }}
+            <a href="{{ .url }}">{{ .name }}</a>
+            {{ end }}
+          </div>
+        </li>
+
+        <li><a href="/resources/" class="nav-pill">Resources</a></li>
+        <li><a href="/referrals/">REFERRALS</a></li>
+        <li><a href="/contact/">CONTACT</a></li>
+      </ul>
+
+      <script>
+        // Nav dropdown hover logic
+        (function() {
+          let dropdownTimeout;
+          const navLinks = document.querySelector('.nav-links');
+          if (!navLinks) return;
+          const mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
+          mainDropdowns.forEach(dropdown => {
+            const menu = dropdown.querySelector('.nav-dropdown-menu');
+            if (!menu) return;
+
+            dropdown.addEventListener('mouseenter', () => {
+              clearTimeout(dropdownTimeout);
+              mainDropdowns.forEach(other => {
+                if (other !== dropdown) {
+                  const otherMenu = other.querySelector('.nav-dropdown-menu');
+                  if (otherMenu) {
+                    otherMenu.style.opacity = '0';
+                    otherMenu.style.visibility = 'hidden';
+                    otherMenu.style.pointerEvents = 'none';
+                  }
+                }
+              });
+              menu.style.opacity = '1';
+              menu.style.visibility = 'visible';
+              menu.style.pointerEvents = 'auto';
+            });
+
+            dropdown.addEventListener('mouseleave', () => {
+              dropdownTimeout = setTimeout(() => {
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                menu.style.pointerEvents = 'none';
+              }, 300);
+            });
+
+            menu.addEventListener('mouseenter', () => {
+              clearTimeout(dropdownTimeout);
+              menu.style.opacity = '1';
+              menu.style.visibility = 'visible';
+              menu.style.pointerEvents = 'auto';
+            });
+
+            menu.addEventListener('mouseleave', () => {
+              dropdownTimeout = setTimeout(() => {
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                menu.style.pointerEvents = 'none';
+              }, 300);
+            });
+          });
+        })();
+      </script>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="mobile-menu" id="mobileMenu" role="menu">
+        <a href="/" role="menuitem">Home</a>
+        <a href="/services/" role="menuitem">Services</a>
+        <a href="/expertise/" role="menuitem">Expertise</a>
+        <a href="{{ $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
+        <a href="/resources/" role="menuitem">Resources</a>
+        <a href="/referrals/" role="menuitem">Referrals</a>
+        <a href="/contact/" role="menuitem">Contact</a>
+      </div>
+    </div>
+  </div>
+
 </nav>
 
 <!-- Nav scripts -->

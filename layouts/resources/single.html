@@ -227,6 +227,8 @@
       gap: 20px;
       border-radius: 16px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
+      position: sticky;
+      top: var(--nav-height);
     }
 
     .article-sidebar h3 {
@@ -329,8 +331,8 @@
     .sidebar-cal-btn {
       display: block;
       padding: 12px;
-      border: 1.5px solid rgba(255,255,255,0.3);
-      background: transparent;
+      border: none;
+      background: #2f5342;
       color: #fff;
       border-radius: 8px;
       font-family: 'Inter', sans-serif;
@@ -339,13 +341,15 @@
       text-align: center;
       text-decoration: none;
       transition: all 0.2s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
     }
 
     .sidebar-cal-btn:hover {
-      border-color: #fff;
-      background: rgba(255,255,255,0.1);
+      background: #3a6b56;
       color: #fff;
       text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.3);
     }
 
     /* Bottom row */

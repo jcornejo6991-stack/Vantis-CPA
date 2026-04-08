@@ -7,19 +7,19 @@ sections:
     body: |
       The best client relationships start with trust. When you refer a client to us, you're ensuring they get expert guidance from someone who understands both tax planning and your professional context.
 
-      We work with lawyers, trustees, financial managers, real estate agents, and immigration lawyers—professionals who encounter clients needing sophisticated tax and accounting solutions.
+      We work with trust and estate attorneys, international and corporate tax lawyers, financial managers, real estate agents, and trustees. These are professionals whose clients regularly encounter complex tax and accounting needs.
 
       Our scope covers tax strategy and multi-year planning, international tax and cross-border compliance, entity structure, accounting and bookkeeping, payroll, IRS notices and crisis management. The full picture, handled completely.
 
   - title: "What Our Referral Partners Get"
     body: |
-      **Recurring referral fees on initial year billing** — We structure our fees so you benefit directly from successful referrals.
+      **Recurring referral fees on initial year billing:** We structure our fees so you benefit directly from successful referrals.
 
-      **Full visibility into client relationships** — You'll know exactly how your referrals are progressing, from intake through delivery.
+      **Full visibility into client relationships:** You'll know exactly how your referrals are progressing, from intake through delivery.
 
-      **No administrative burden** — You send the referral. We handle everything else—intake, planning, compliance, ongoing relationship management.
+      **No administrative burden:** You send the referral. We handle everything else: intake, planning, compliance, ongoing relationship management.
 
-      **Professional coordination** — We work seamlessly with your team when the client needs integrated advice (legal-tax-accounting alignment, trustee coordination, cross-border planning).
+      **Professional coordination:** We work seamlessly with your team when the client needs integrated advice (legal-tax-accounting alignment, trustee coordination, cross-border planning).
 
   - title: "How It Works"
     body: |

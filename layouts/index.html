@@ -93,6 +93,7 @@
     .fade-up-d3 { transition-delay: 0.24s; }
     .fade-up-d4 { transition-delay: 0.32s; }
     .fade-up-d5 { transition-delay: 0.40s; }
+    .fade-up-d6 { transition-delay: 0.48s; }
 
     /* ─── HERO ─── */
     /* ─── FLOATING CARD SECTIONS ─── */
@@ -102,7 +103,8 @@
     .industries,
     .about,
     .client-resources,
-    .contact {
+    .contact,
+    .process-bring-section {
       margin: 0 var(--card-gap) var(--card-gap);
       border-radius: 14px;
       box-shadow: var(--card-shadow);
@@ -480,98 +482,99 @@
 
     /* ─── INDUSTRIES ─── */
     .industries { padding: 80px 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
-    .industries-header { margin-bottom: 40px; }
+    .industries-header { margin-bottom: 40px; text-align: center; }
+    .industries-header .section-subheading { margin: 0 auto; max-width: 600px; }
     .industries-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
       align-items: stretch;
-      max-width: 80%;
+      max-width: 90%;
       margin-left: auto;
       margin-right: auto;
     }
     .industry-card {
-      background: white;
-      border-radius: var(--card-radius);
-      padding: 24px 28px 24px 24px;
-      border: 1px solid #e8e8e8;
-      border-top: 4px solid #15482E;
+      position: relative;
+      overflow: hidden;
       text-decoration: none;
+      display: block;
+      height: 260px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+      cursor: pointer;
+      border: 1px solid #000000;
+      border-radius: 14px;
+    }
+    .industry-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35);
+      pointer-events: none;
+      z-index: 1;
+    }
+    .industry-card-photo {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.45s ease;
+      will-change: transform;
+    }
+    .industry-card-wrapper:hover .industry-card-photo { transform: scale(1.07); }
+    .industry-card-glass {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 2;
+      padding: 14px 20px 16px;
+      background: rgba(255, 255, 255, 0.50);
+      backdrop-filter: blur(14px) saturate(1.5);
+      -webkit-backdrop-filter: blur(14px) saturate(1.5);
+      border-top: 1px solid rgba(255, 255, 255, 0.55);
+      border-radius: 0 0 var(--card-radius) var(--card-radius);
       display: flex;
       flex-direction: column;
-      gap: 28px;
-      transition: box-shadow 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      height: 100%;
+      gap: 8px;
+      transition: background 0.2s ease;
+      align-items: center;
+      justify-content: space-between;
     }
-    .industry-card:hover { box-shadow: 0 8px 16px rgba(0,0,0,0.1); transform: translateY(-3px); }
-    .industry-left {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      justify-content: flex-start;
-      flex: 1;
-    }
+    .industry-card-wrapper:hover .industry-card-glass { background: rgba(255, 255, 255, 0.65); }
     .industry-title {
       font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 600;
+      font-size: 26px;
+      font-weight: 700;
       color: var(--navy);
       margin: 0;
-      display: flex;
-      align-items: baseline;
-      gap: 8px;
-    }
-    .industry-desc {
-      font-size: 15px;
-      color: var(--text-mid);
-      line-height: 1.5;
-      margin: 0;
-      font-weight: 500;
+      line-height: 1.25;
+      text-align: center;
     }
     .industry-learn-more {
-      font-size: 14px;
+      font-size: 12.5px;
       color: var(--primary);
-      text-decoration: none;
       font-weight: 600;
-      transition: gap 0.2s, padding-left 0.2s;
       display: inline-block;
-      margin-top: auto;
-      padding-top: 8px;
+      transition: letter-spacing 0.2s ease;
     }
-    .industry-learn-more:hover {
-      color: #15482E;
-    }
-    .industry-niches {
-      display: none;
-    }
+    .industry-learn-more:hover { color: #15482E; letter-spacing: 0.04em; }
+    .industry-niches { display: none; }
     .industry-niche-link {
       font-size: 14px;
       color: var(--navy);
       text-decoration: none;
       font-weight: 500;
-      transition: gap 0.2s, padding-left 0.2s;
-      padding-left: 0;
       display: flex;
       align-items: center;
       gap: 4px;
-      justify-content: flex-end;
-      text-align: right;
-      direction: ltr;
-      min-width: 160px;
     }
-    .industry-niche-link:hover {
-      padding-left: 8px;
-      color: #15482E;
-    }
-    .industry-link {
-      display: none;
-    }
-    .industry-card:hover .industry-link { gap: 8px; }
-
     .industry-card-wrapper {
       position: relative;
+      border-radius: var(--card-radius);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+    .industry-card-wrapper:hover { transform: translateY(-5px); box-shadow: 0 14px 36px rgba(0,0,0,0.28); }
     .industry-dropdown {
       position: absolute;
       top: 100%;
@@ -601,12 +604,8 @@
       background: rgba(255, 255, 255, 0.1);
       color: #fff;
     }
-    .industry-sub-niche:first-child {
-      padding-top: 12px;
-    }
-    .industry-sub-niche:last-child {
-      padding-bottom: 12px;
-    }
+    .industry-sub-niche:first-child { padding-top: 12px; }
+    .industry-sub-niche:last-child { padding-bottom: 12px; }
 
     /* ─── ABOUT ─── */
     .about { padding: 80px 0; background: linear-gradient(to bottom, var(--bg) 0%, #fff 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
@@ -837,14 +836,14 @@
     .contact .section-heading { color: #fff; }
     .contact .section-subheading { color: #7aaa8f; }
     .contact-header { margin-bottom: 48px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .contact-header .section-subheading { white-space: normal; }
+    .contact-header .section-subheading { white-space: nowrap; width: fit-content; margin-left: auto; margin-right: auto; }
     .contact-grid {
       display: grid;
       grid-template-columns: 1.1fr 0.9fr;
       gap: 36px;
       align-items: start;
       justify-content: center;
-      max-width: 1100px;
+      max-width: 860px;
       margin: 0 auto;
     }
     .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
@@ -896,7 +895,7 @@
     }
     .form-success.visible { display: block; }
     .form-privacy-note { font-size: 13px; font-style: italic; color: #7aaa8f; margin: 0; }
-    .contact-right-column { display: flex; flex-direction: column; gap: 16px; max-width: 320px; height: 360px; margin-top: 25px; }
+    .contact-right-column { display: flex; flex-direction: column; gap: 16px; margin-top: 25px; }
     .contact-info {
       background: rgba(255,255,255,0.06);
       border-radius: var(--card-radius);
@@ -1135,7 +1134,8 @@
       .services-grid { grid-template-columns: 1fr 1fr; }
       .core-services-grid { grid-template-columns: 1fr 1fr; }
       .support-services-grid { grid-template-columns: 1fr 1fr; }
-      .industry-card { grid-template-columns: 1.2fr 1fr; gap: 24px; }
+      .industries-grid { grid-template-columns: repeat(3, 1fr); }
+      .industry-card { height: 240px; }
       .resources-grid { grid-template-columns: 1fr 1fr; }
       .contact { margin: 12px 12px; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1143,12 +1143,11 @@
     @media (max-width: 768px) {
       .about-values { grid-template-columns: 1fr; }
       .services-grid,
-      .industries-grid,
       .resources-grid { grid-template-columns: 1fr; }
       .core-services-grid,
       .support-services-grid { grid-template-columns: 1fr; }
-      .industry-card { grid-template-columns: 1fr; gap: 20px; }
-      .industry-niches { grid-template-columns: 1fr; margin-left: 0; width: 100%; gap: 4px 0; }
+      .industries-grid { grid-template-columns: 1fr 1fr; }
+      .industry-card { height: 220px; }
       .form-row { grid-template-columns: 1fr; }
       .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
       .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 32px; }
@@ -1279,6 +1278,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 56px;
       align-items: start;
+      padding: 0 180px;
     }
     .process-steps { display: flex; flex-direction: column; }
     .process-step { display: flex; gap: 18px; align-items: flex-start; }
@@ -1326,6 +1326,8 @@
     }
     @media (max-width: 480px) {
       .process-bring-section { padding: 56px 0; }
+      .industries-grid { grid-template-columns: 1fr; }
+      .industry-card { height: 200px; }
     }
   </style>
   {{ partial "nav-css.html" . }}
@@ -1435,11 +1437,11 @@
         <h4 class="service-title">International Tax</h4>
         <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We handle it completely — every obligation, every form, every deadline.</p>
         <ul class="service-list">
-          <li>U.S. Citizens with Foreign Assets</li>
+          <li>U.S. Persons with Foreign Assets</li>
+          <li>U.S. Expats Abroad</li>
+          <li>Pre-Immigration</li>
           <li>Foreign Investors and Real Estate Owners</li>
           <li>U.S. Foreign-Owned Subsidiaries</li>
-          <li>Pre-Immigration</li>
-          <li>U.S. Expats Abroad</li>
         </ul>
         <a href="/services/international-tax" class="service-learn-more">Learn More →</a>
       </div>
@@ -1471,7 +1473,7 @@
 
       <div class="service-card support-service-card fade-up fade-up-d4">
         <h4 class="service-title">Sales Tax</h4>
-        <p class="service-description">Sales tax compliance made simple. We handle Florida's filing requirements, ensure timely monthly, quarterly, and yearly remittances, and keep you compliant with nexus rules so you can focus on growing your business.</p>
+        <p class="service-description">Florida sales tax filings, nexus compliance, and timely remittances. Fully handled.</p>
         <p class="service-tools">Florida Sales Tax · Nexus · Filings</p>
         <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
       </div>
@@ -1492,72 +1494,51 @@
     </div>
 
     <script>
-      // Render industries from practicesData
       const industriesGrid = document.getElementById('industries-grid');
 
-      // Icon map for each category
-      const iconMap = {
-        founders: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>',
-        expats: '<svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2" fill="none"/></svg>',
-        latam: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"/></svg>',
-        local: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>',
-        realestate: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>',
-        outbound: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11z"/></svg>',
-        inbound: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>'
+      const photoMap = {
+        local:      '/images/card-local.jpg?t=' + Date.now(),
+        outbound:   '/images/globe-hero.jpg?t=' + Date.now(),
+        founders:   '/images/card-founders.jpg?t=' + Date.now(),
+        inbound:    '/images/card-inbound.jpg?t=' + Date.now(),
+        realestate: '/images/card-realestate.jpg?t=' + Date.now(),
+        expats:     '/images/card-expats.jpg?t=' + Date.now()
       };
 
-      const colorMap = {
-        founders: '#647D4C',
-        expats: '#486175',
-        latam: '#7B6E59',
-        local: '#576E62',
-        realestate: '#7B5555',
-        outbound: '#6B7F94',
-        inbound: '#7F7594'
-      };
-
-      const summaries = {
-        "Individuals and Local Businesses": "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations.",
-        "Startups and Growth-Stage Businesses": "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence.",
-        "Real Estate Owners": "Maximize the return on your real estate investments with strategic tax planning.",
-        "International U.S. Taxpayers": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning.",
-        "Foreign Businesses and Investors": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
-        "U.S. Expats and Digital Nomads": "Remote compliance support bridging the gap between the U.S. tax system and international residency."
-      };
-
-Object.values(practicesData).forEach((practice, index) => {
+      Object.values(practicesData).forEach((practice, index) => {
         const delayClass = `fade-up-d${index + 1}`;
         const wrapper = document.createElement('div');
         wrapper.className = 'industry-card-wrapper';
 
-        const card = document.createElement('div');
+        const card = document.createElement('a');
+        card.href = practice.href;
         card.className = `industry-card fade-up ${delayClass}`;
         card.setAttribute('data-accent', practice.accent);
+        card.setAttribute('aria-label', practice.name.replace(/&/g, 'and'));
 
-        // Left column with title and description
-        const leftCol = document.createElement('div');
-        leftCol.className = 'industry-left';
+        // Background photo layer
+        const photo = document.createElement('div');
+        photo.className = 'industry-card-photo';
+        photo.style.backgroundImage = `url('${photoMap[practice.accent]}')`;
+        card.appendChild(photo);
+
+        // Frosted glass panel
+        const glass = document.createElement('div');
+        glass.className = 'industry-card-glass';
 
         const title = document.createElement('h3');
         title.className = 'industry-title';
         title.textContent = practice.name.replace(/&/g, 'and');
-        leftCol.appendChild(title);
+        glass.appendChild(title);
 
-        const desc = document.createElement('p');
-        desc.className = 'industry-desc';
+        const learnMore = document.createElement('span');
+        learnMore.className = 'industry-learn-more';
+        learnMore.textContent = 'Learn More';
+        glass.appendChild(learnMore);
 
-        desc.textContent = practice.description;
-        leftCol.appendChild(desc);
+        card.appendChild(glass);
 
-        const learnMoreLink = document.createElement('a');
-        learnMoreLink.href = practice.href;
-        learnMoreLink.className = 'industry-learn-more';
-        learnMoreLink.textContent = 'Learn More →';
-        leftCol.appendChild(learnMoreLink);
-
-        card.appendChild(leftCol);
-
-        // Right column with niches as links
+        // Niches list (hidden, preserved for future use)
         const nichesList = document.createElement('ul');
         nichesList.className = 'industry-niches';
         practice.niches.forEach(niche => {
@@ -1565,7 +1546,6 @@ Object.values(practicesData).forEach((practice, index) => {
           const nicheLink = document.createElement('a');
           nicheLink.href = niche.href;
           nicheLink.className = 'industry-niche-link';
-          nicheLink.textContent = niche.name;
           nicheLink.innerHTML = niche.name + ' <span aria-hidden="true">→</span>';
           nicheItem.appendChild(nicheLink);
           nichesList.appendChild(nicheItem);
@@ -1576,6 +1556,91 @@ Object.values(practicesData).forEach((practice, index) => {
         industriesGrid.appendChild(wrapper);
       });
     </script>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ PROCESS + WHAT TO BRING ═══════════════════ -->
+<section class="process-bring-section" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="process-bring-grid">
+
+      <!-- Our Process -->
+      <div>
+        <p class="section-label fade-up">How It Works</p>
+        <h2 class="section-heading fade-up fade-up-d1" id="process-heading">Our Process</h2>
+        <p class="section-subheading fade-up fade-up-d2">Three straightforward steps from your first message to a fully managed tax strategy.</p>
+
+        <div class="process-steps">
+
+          <div class="process-step fade-up fade-up-d1">
+            <div class="process-step-left">
+              <div class="process-step-badge">01</div>
+              <div class="process-step-connector"></div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">30 minutes · No charge</span>
+              <div class="process-step-title">Discovery Call</div>
+              <div class="process-step-desc">We learn about your situation, your entity structure, cross-border exposure, and goals. You learn how we work and what to expect.</div>
+            </div>
+          </div>
+
+          <div class="process-step fade-up fade-up-d2">
+            <div class="process-step-left">
+              <div class="process-step-badge">02</div>
+              <div class="process-step-connector"></div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Scoped engagement</span>
+              <div class="process-step-title">Technical Analysis</div>
+              <div class="process-step-desc">We review your documents, prior returns, and structure. We identify obligations, risks, and opportunities, then present a clear scope and fixed fee. Before anything starts, you'll receive a formal engagement letter outlining exactly what's covered.</div>
+            </div>
+          </div>
+
+          <div class="process-step fade-up fade-up-d3">
+            <div class="process-step-left">
+              <div class="process-step-badge">03</div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Ongoing advisory</span>
+              <div class="process-step-title">Proactive Strategy &amp; Filing</div>
+              <div class="process-step-desc">We execute the plan, file accurately, and stay in your corner year-round, flagging opportunities before they pass.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- What to Bring -->
+      <div class="fade-up fade-up-d2">
+        <p class="section-label">First Meeting Checklist</p>
+        <h2 class="section-heading fade-up-d1">What to Bring</h2>
+        <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
+
+        <div class="bring-list">
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Prior Year Tax Returns</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Financial Statements</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">IRS Notices or Open Correspondence</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Tax Documents: W-2s, 1099s, K-1s</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Entity Documents: Articles, Operating Agreement</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1649,91 +1714,6 @@ Object.values(practicesData).forEach((practice, index) => {
           <h3 class="contact-calendar-title">Schedule a Meeting</h3>
           <p class="contact-calendar-desc">Book a 30-minute consultation</p>
           <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════ PROCESS + WHAT TO BRING ═══════════════════ -->
-<section class="process-bring-section" aria-labelledby="process-heading">
-  <div class="container">
-    <div class="process-bring-grid">
-
-      <!-- Our Process -->
-      <div>
-        <p class="section-label fade-up">How It Works</p>
-        <h2 class="section-heading fade-up fade-up-d1" id="process-heading">Our Process</h2>
-        <p class="section-subheading fade-up fade-up-d2">Three straightforward steps from your first message to a fully managed tax strategy.</p>
-
-        <div class="process-steps">
-
-          <div class="process-step fade-up fade-up-d1">
-            <div class="process-step-left">
-              <div class="process-step-badge">01</div>
-              <div class="process-step-connector"></div>
-            </div>
-            <div class="process-step-content">
-              <span class="process-step-pill">30 minutes · No charge</span>
-              <div class="process-step-title">Discovery Call</div>
-              <div class="process-step-desc">We learn about your situation, your entity structure, cross-border exposure, and goals. You learn how we work and what to expect.</div>
-            </div>
-          </div>
-
-          <div class="process-step fade-up fade-up-d2">
-            <div class="process-step-left">
-              <div class="process-step-badge">02</div>
-              <div class="process-step-connector"></div>
-            </div>
-            <div class="process-step-content">
-              <span class="process-step-pill">Scoped engagement</span>
-              <div class="process-step-title">Technical Analysis</div>
-              <div class="process-step-desc">We review your documents, prior returns, and structure. We identify obligations, risks, and opportunities, then present a clear scope and fixed fee. Before anything starts, you'll receive a formal engagement letter outlining exactly what's covered.</div>
-            </div>
-          </div>
-
-          <div class="process-step fade-up fade-up-d3">
-            <div class="process-step-left">
-              <div class="process-step-badge">03</div>
-            </div>
-            <div class="process-step-content">
-              <span class="process-step-pill">Ongoing advisory</span>
-              <div class="process-step-title">Proactive Strategy &amp; Filing</div>
-              <div class="process-step-desc">We execute the plan, file accurately, and stay in your corner year-round, flagging opportunities before they pass.</div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <!-- What to Bring -->
-      <div class="fade-up fade-up-d2">
-        <p class="section-label">Come Prepared</p>
-        <h2 class="section-heading fade-up-d1">What to Bring</h2>
-        <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
-
-        <div class="bring-list">
-          <div class="bring-item">
-            <div class="bring-check">✓</div>
-            <span class="bring-text">Prior Year Tax Returns</span>
-          </div>
-          <div class="bring-item">
-            <div class="bring-check">✓</div>
-            <span class="bring-text">Financial Statements</span>
-          </div>
-          <div class="bring-item">
-            <div class="bring-check">✓</div>
-            <span class="bring-text">IRS Notices or Open Correspondence</span>
-          </div>
-          <div class="bring-item">
-            <div class="bring-check">✓</div>
-            <span class="bring-text">Tax Documents: W-2s, 1099s, K-1s</span>
-          </div>
-          <div class="bring-item">
-            <div class="bring-check">✓</div>
-            <span class="bring-text">Entity Documents: Articles, Operating Agreement</span>
-          </div>
         </div>
       </div>
 

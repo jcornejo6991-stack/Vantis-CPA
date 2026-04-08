@@ -7,13 +7,6 @@
     "description": "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations."
   },
   {
-    "name": "International U.S. Citizens",
-    "slug": "outbound",
-    "url": "/expertise/outbound/",
-    "accent": "outbound",
-    "description": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning."
-  },
-  {
     "name": "Startups and Online Business",
     "slug": "founders",
     "url": "/expertise/founders/",
@@ -21,18 +14,25 @@
     "description": "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence."
   },
   {
-    "name": "Foreign Business and Investors",
-    "slug": "inbound",
-    "url": "/expertise/inbound/",
-    "accent": "inbound",
-    "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly."
-  },
-  {
     "name": "Real Estate Owners",
     "slug": "realestate",
     "url": "/expertise/realestate/",
     "accent": "realestate",
     "description": "Maximize the return on your real estate investments with strategic tax planning."
+  },
+  {
+    "name": "International U.S. Citizens",
+    "slug": "outbound",
+    "url": "/expertise/outbound/",
+    "accent": "outbound",
+    "description": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning."
+  },
+  {
+    "name": "Foreign Business and Investors",
+    "slug": "inbound",
+    "url": "/expertise/inbound/",
+    "accent": "inbound",
+    "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly."
   },
   {
     "name": "U.S. Expats Abroad",

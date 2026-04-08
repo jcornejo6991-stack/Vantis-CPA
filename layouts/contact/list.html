@@ -1,0 +1,272 @@
+{{ define "main" }}
+{{ partial "nav-css.html" . }}
+{{ partial "nav.html" . }}
+
+<style>
+  :root {
+    --nav-height: 64px;
+    --accent: #5a8b6f;
+    --accent-light: rgba(90,139,111,0.12);
+    --navy: #0c3421;
+    --navy-dark: #041f12;
+    --card-radius: 12px;
+    --text-mid: #6b7280;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+    background-size: 64px 20px;
+    background-attachment: fixed;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .contact-page-wrapper {
+    padding-top: var(--nav-height);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ─── CONTACT CARD (matches homepage) ─── */
+  .contact {
+    padding: 60px 0;
+    background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255,255,255,0.01) 2px, rgba(255,255,255,0.01) 4px);
+    background-color: #041f12;
+    margin: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 1200px;
+  }
+  .container { padding: 0 40px; }
+  .contact .section-label { color: #5a8b6f; }
+  .contact .section-heading { color: #fff; }
+  .contact .section-subheading { color: #7aaa8f; }
+  .contact-header { margin-bottom: 48px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
+  .contact-header .section-subheading { white-space: nowrap; width: fit-content; margin-left: auto; margin-right: auto; }
+
+  .section-label { font-size: 14.4px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+  .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(33.6px, 4.8vw, 48px); font-weight: 700; color: var(--navy); line-height: 1.2; }
+  .section-subheading { font-size: 20.4px; color: var(--text-mid); margin-top: 12px; max-width: 640px; line-height: 1.65; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 36px;
+    align-items: start;
+    justify-content: center;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-group label { font-size: 16.2px; font-weight: 600; color: #fff; letter-spacing: 0.02em; }
+  .form-group input,
+  .form-group textarea {
+    font-family: 'Inter', sans-serif;
+    font-size: 18.6px;
+    color: #fff;
+    background: rgba(255,255,255,0.1);
+    border: 1.5px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    padding: 13px 14px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus { border-color: #fff; }
+  .form-group input::placeholder,
+  .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
+  .form-group textarea { resize: vertical; min-height: 250px; }
+  .form-submit {
+    background: #2f5342;
+    color: #fff;
+    border: none;
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+  .form-submit-row { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+  .form-success {
+    display: none;
+    background: rgba(142,184,88,0.1);
+    border: 1.5px solid #8eb858;
+    border-radius: 10px;
+    padding: 20px 24px;
+    font-size: 15px;
+    color: #a8d56e;
+    line-height: 1.6;
+  }
+  .form-success.visible { display: block; }
+
+  .contact-right-column { display: flex; flex-direction: column; gap: 16px; margin-top: 25px; }
+  .contact-info {
+    background: rgba(255,255,255,0.06);
+    border-radius: var(--card-radius);
+    padding: 14px 12px;
+    border: 1px solid rgba(255,255,255,0.12);
+    margin-top: 0;
+    text-align: center;
+  }
+  .contact-calendar {
+    background: rgba(255,255,255,0.06);
+    border-radius: var(--card-radius);
+    padding: 20px 20px;
+    border: 1px solid rgba(255,255,255,0.12);
+    margin-top: 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow: 1;
+  }
+  .contact-calendar-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 600; color: #fff; margin-bottom: 12px; }
+  .contact-calendar-desc { color: rgba(255,255,255,0.85); font-size: 16px; margin-bottom: 20px; }
+  .contact-calendar .btn-primary { display: inline-block; }
+  .contact-info-title { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 600; color: #fff; margin-bottom: 14px; }
+  .contact-item { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 14px; font-size: 13px; }
+  .contact-item:last-of-type { margin-bottom: 0; }
+  .contact-item-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.1); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .contact-item-icon svg { width: 16px; height: 16px; stroke: #7aaa8f; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .contact-item-label { font-size: 11px; font-weight: 600; color: #5a8b6f; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+  .contact-item-value { font-size: 14.5px; color: #fff; font-weight: 500; }
+  .contact-item-value a { color: #fff; text-decoration: none; }
+  .contact-item-value a:hover { color: #7aaa8f; text-decoration: underline; }
+  .btn-primary {
+    background: #2f5342;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #2f5342;
+    display: inline-block;
+    transition: background 0.2s, transform 0.15s;
+  }
+  .btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); transform: translateY(-1px); }
+
+  /* Fade animations */
+  .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
+  .fade-up-d1 { transition-delay: 0.08s; }
+  .fade-up-d2 { transition-delay: 0.16s; }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+    .contact-right-column { height: auto; max-width: 100%; }
+  }
+  @media (max-width: 600px) {
+    .contact { margin: 12px 12px; }
+    .container { padding: 0 20px; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="contact-page-wrapper">
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-header">
+        <p class="section-label fade-up">Next Steps</p>
+        <h1 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h1>
+        <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
+      </div>
+      <div class="contact-grid">
+
+        <div class="fade-up fade-up-d1">
+          <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Provide a Brief Background</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-submit-row">
+              <button type="submit" class="form-submit">Send Us an Email</button>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess" role="alert">
+            <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
+          </div>
+        </div>
+
+        <div class="contact-right-column">
+          <div class="contact-info fade-up fade-up-d2">
+            <h3 class="contact-info-title">Reach us directly</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <p class="contact-item-label">Phone</p>
+                <p class="contact-item-value"><a href="tel:+13055635551">(305) 563-5551</a></p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <p class="contact-item-label">Email</p>
+                <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-calendar fade-up fade-up-d2">
+            <h3 class="contact-calendar-title">Schedule a Meeting</h3>
+            <p class="contact-calendar-desc">Book a 30-minute consultation</p>
+            <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  // Fade-up observer
+  (function() {
+    var els = document.querySelectorAll('.fade-up');
+    if (!els.length) return;
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    els.forEach(function(el) { obs.observe(el); });
+  })();
+</script>
+
+{{ partial "footer.html" . }}
+{{ partial "footer-css.html" . }}
+{{ end }}
