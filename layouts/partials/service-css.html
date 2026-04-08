@@ -660,4 +660,45 @@
         white-space: normal;
       }
     }
+
+    .cross-link-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .cross-link-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 10px;
+      background: #f7fbf8;
+      border: 1px solid #c8dfd0;
+      font-size: 13px;
+      font-weight: 500;
+      color: #062215;
+      text-decoration: none;
+      transition: background 0.15s, border-color 0.15s;
+    }
+
+    .cross-link-card:hover {
+      background: #e8f0eb;
+      border-color: var(--accent);
+      text-decoration: none;
+      color: #062215;
+    }
+
+    .cross-link-arrow {
+      color: var(--accent);
+      font-size: 12px;
+      flex-shrink: 0;
+      margin-left: 8px;
+    }
+
+    @media (max-width: 600px) {
+      .cross-link-grid {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
