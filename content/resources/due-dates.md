@@ -9,7 +9,7 @@ featured: true
 
 ## Individual Tax Returns
 
-**April 15, 2026:** Form 1040 due for calendar-year individual filers. Also the deadline for:
+**April 15, 2026:** [Form 1040](https://www.irs.gov/forms-pubs/about-form-1040) due for calendar-year individual filers. Also the deadline for:
 - IRA contributions for the 2025 tax year
 - First quarter 2026 estimated tax payment (Form 1040-ES)
 - FinCEN 114 (FBAR), due April 15 with automatic extension to October 15
@@ -47,7 +47,7 @@ Payroll deposit deadlines depend on your deposit schedule (monthly or semi-weekl
 - Payroll paid Wednesday–Friday → deposit by following Wednesday
 - Payroll paid Saturday–Tuesday → deposit by following Friday
 
-**January 31, 2026:** W-2s and 1099-NECs due to recipients and IRS/SSA
+**January 31, 2026:** [W-2s](https://www.irs.gov/forms-pubs/about-form-w-2) and [1099-NECs](https://www.irs.gov/forms-pubs/about-form-1099-nec) due to recipients and IRS/SSA
 
 **February 28, 2026:** Paper 1099s due to IRS (electronic filers: March 31)
 

@@ -113,10 +113,84 @@
       margin-bottom: 24px;
     }
 
-    .library-grid {
+    .library-carousel {
+      position: relative;
+    }
+
+    .library-track-outer {
+      overflow: hidden;
+    }
+
+    .library-track {
+      display: flex;
+      align-items: flex-start;
+      transition: transform 0.35s ease;
+      will-change: transform;
+    }
+
+    .library-page {
+      min-width: 100%;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 16px;
+    }
+
+    .library-grid {
+      display: none;
+    }
+
+    .carousel-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 24px;
+    }
+
+    .carousel-btn {
+      background: #fff;
+      border: 1.5px solid #d0d0d0;
+      border-radius: 8px;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      color: #15482E;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+      line-height: 1;
+    }
+
+    .carousel-btn:hover:not(:disabled) {
+      background: #15482E;
+      color: #fff;
+      border-color: #15482E;
+    }
+
+    .carousel-btn:disabled {
+      opacity: 0.3;
+      cursor: default;
+    }
+
+    .carousel-dots {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+
+    .carousel-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #d0d0d0;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .carousel-dot.active {
+      background: #15482E;
+      transform: scale(1.3);
     }
 
     .lib-card {
@@ -205,7 +279,7 @@
     }
 
     @media (max-width: 1024px) {
-      .library-grid {
+      .library-page {
         grid-template-columns: repeat(2, 1fr);
       }
     }
@@ -228,7 +302,7 @@
         flex-direction: column;
       }
 
-      .library-grid {
+      .library-page {
         grid-template-columns: 1fr;
       }
     }
@@ -263,12 +337,14 @@
 
       <p class="library-count" id="libraryCount"></p>
 
+      <!-- Card pool (hidden — JS reads from here) -->
       <div class="library-grid" id="libraryGrid">
         {{ range .Pages }}
         {{ $practices := .Params.practices | default (slice) }}
         <div class="lib-card"
              data-practices="{{ delimit $practices "," }}"
-             data-text="{{ .Title | lower }} {{ .Description | lower }}">
+             data-text="{{ .Title | lower }} {{ .Description | lower }}"
+             data-url="{{ .RelPermalink }}">
           <div class="lib-card-tags">
             {{ if in $practices "all" }}
               <span class="lib-practice-tag">All Clients</span>
@@ -299,6 +375,18 @@
         </div>
         {{ end }}
       </div>
+
+      <!-- Carousel -->
+      <div class="library-carousel">
+        <div class="library-track-outer">
+          <div class="library-track" id="libraryTrack"></div>
+        </div>
+        <div class="carousel-nav">
+          <button class="carousel-btn" id="prevBtn" disabled>&#8592;</button>
+          <div class="carousel-dots" id="carouselDots"></div>
+          <button class="carousel-btn" id="nextBtn" disabled>&#8594;</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -306,16 +394,22 @@
 
   <script>
     (function() {
-      var cards = Array.from(document.querySelectorAll('.lib-card'));
+      var PAGE_SIZE = 9;
+      var allCards = Array.from(document.querySelectorAll('.lib-card'));
       var pills = document.querySelectorAll('.filter-pill');
       var searchInput = document.getElementById('librarySearch');
       var countEl = document.getElementById('libraryCount');
+      var track = document.getElementById('libraryTrack');
+      var dotsEl = document.getElementById('carouselDots');
+      var prevBtn = document.getElementById('prevBtn');
+      var nextBtn = document.getElementById('nextBtn');
       var activeFilter = 'all';
       var searchQuery = '';
+      var currentPage = 0;
+      var pages = [];
 
-      function updateCards() {
-        var visible = 0;
-        cards.forEach(function(card) {
+      function getVisible() {
+        return allCards.filter(function(card) {
           var practices = card.dataset.practices || '';
           var text = card.dataset.text || '';
           var matchesFilter = activeFilter === 'all'
@@ -323,31 +417,84 @@
             || practices.indexOf('all') !== -1;
           var matchesSearch = searchQuery === ''
             || text.indexOf(searchQuery) !== -1;
-          if (matchesFilter && matchesSearch) {
-            card.classList.remove('hidden');
-            visible++;
-          } else {
-            card.classList.add('hidden');
-          }
+          return matchesFilter && matchesSearch;
         });
-        countEl.textContent = 'Showing ' + visible + ' article' + (visible !== 1 ? 's' : '');
       }
+
+      function buildCarousel() {
+        var visible = getVisible();
+        countEl.textContent = 'Showing ' + visible.length + ' article' + (visible.length !== 1 ? 's' : '');
+
+        // Chunk into pages of PAGE_SIZE
+        pages = [];
+        for (var i = 0; i < visible.length; i += PAGE_SIZE) {
+          pages.push(visible.slice(i, i + PAGE_SIZE));
+        }
+        if (pages.length === 0) pages = [[]];
+
+        // Build track
+        track.innerHTML = '';
+        pages.forEach(function(pageCards) {
+          var page = document.createElement('div');
+          page.className = 'library-page';
+          pageCards.forEach(function(card) {
+            page.appendChild(card.cloneNode(true));
+          });
+          track.appendChild(page);
+        });
+
+        // Build dots
+        dotsEl.innerHTML = '';
+        pages.forEach(function(_, i) {
+          var dot = document.createElement('div');
+          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
+          dot.addEventListener('click', function() { goTo(i); });
+          dotsEl.appendChild(dot);
+        });
+
+        currentPage = 0;
+        updatePosition();
+      }
+
+      function updatePosition() {
+        var outer = document.querySelector('.library-track-outer');
+        track.style.transform = 'translateX(-' + (currentPage * outer.offsetWidth) + 'px)';
+        prevBtn.disabled = currentPage === 0;
+        nextBtn.disabled = currentPage >= pages.length - 1;
+        Array.from(dotsEl.children).forEach(function(dot, i) {
+          dot.classList.toggle('active', i === currentPage);
+        });
+      }
+
+      window.addEventListener('resize', function() {
+        track.style.transition = 'none';
+        updatePosition();
+        setTimeout(function() { track.style.transition = ''; }, 50);
+      });
+
+      function goTo(n) {
+        currentPage = Math.max(0, Math.min(n, pages.length - 1));
+        updatePosition();
+      }
+
+      prevBtn.addEventListener('click', function() { goTo(currentPage - 1); });
+      nextBtn.addEventListener('click', function() { goTo(currentPage + 1); });
 
       pills.forEach(function(pill) {
         pill.addEventListener('click', function() {
           pills.forEach(function(p) { p.classList.remove('active'); });
           pill.classList.add('active');
           activeFilter = pill.dataset.filter;
-          updateCards();
+          buildCarousel();
         });
       });
 
       searchInput.addEventListener('input', function() {
         searchQuery = this.value.toLowerCase().trim();
-        updateCards();
+        buildCarousel();
       });
 
-      updateCards();
+      buildCarousel();
     })();
   </script>
 {{ end }}

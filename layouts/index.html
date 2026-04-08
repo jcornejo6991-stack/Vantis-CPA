@@ -1254,6 +1254,79 @@
       display: block;
     }
     .services-section-heading:first-of-type { margin-top: 0; }
+
+    /* ── Process + What to Bring ── */
+    .process-bring-section {
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      padding: 60px 0;
+      margin: 25px 25px;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .process-bring-section .section-heading {
+      font-size: clamp(22px, 2.4vw, 28px);
+      color: var(--primary-dark);
+      margin-bottom: 8px;
+    }
+    .process-bring-section .section-subheading {
+      font-size: 13.5px;
+      color: var(--text-mid);
+      margin-top: 8px;
+      margin-bottom: 28px;
+    }
+    .process-bring-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .process-steps { display: flex; flex-direction: column; }
+    .process-step { display: flex; gap: 18px; align-items: flex-start; }
+    .process-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .process-step-badge {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: #15482E; color: #fff;
+      font-size: 12px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      letter-spacing: 0.04em; flex-shrink: 0;
+      box-shadow: 0 2px 8px rgba(21,72,46,0.25);
+    }
+    .process-step-connector {
+      width: 2px; flex: 1; min-height: 28px;
+      background: repeating-linear-gradient(to bottom, #b8d4c4 0px, #b8d4c4 5px, transparent 5px, transparent 10px);
+      margin: 5px 0;
+    }
+    .process-step-content { padding-bottom: 24px; padding-top: 8px; }
+    .process-step:last-child .process-step-content { padding-bottom: 0; }
+    .process-step-pill {
+      display: inline-block; font-size: 10.5px; font-weight: 600;
+      color: #3a8b5f; background: rgba(58,139,95,0.1);
+      border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; letter-spacing: 0.04em;
+    }
+    .process-step-title { font-size: 16px; font-weight: 700; color: #062215; margin-bottom: 5px; }
+    .process-step-desc { font-size: 13.5px; color: #3d6b52; line-height: 1.6; }
+    .bring-intro { font-size: 13.5px; color: #3d6b52; line-height: 1.6; margin-top: 8px; margin-bottom: 28px; }
+    .bring-list { display: flex; flex-direction: column; gap: 14px; width: fit-content; }
+    .bring-item {
+      display: flex; align-items: center; gap: 12px;
+      background: rgba(255,255,255,0.7);
+      border: 1px solid rgba(58,139,95,0.15);
+      border-radius: 8px; padding: 11px 14px;
+      width: 100%;
+    }
+    .bring-check {
+      width: 20px; height: 20px; border-radius: 50%;
+      background: #15482E; color: #fff;
+      font-size: 11px; display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .bring-text { font-size: 13px; color: #0f2818; font-weight: 400; line-height: 1.3; }
+    @media (max-width: 860px) {
+      .process-bring-grid { grid-template-columns: 1fr; gap: 48px; }
+    }
+    @media (max-width: 480px) {
+      .process-bring-section { padding: 56px 0; }
+    }
   </style>
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
@@ -1583,6 +1656,91 @@ Object.values(practicesData).forEach((practice, index) => {
   </div>
 </section>
 
+<!-- ═══════════════════ PROCESS + WHAT TO BRING ═══════════════════ -->
+<section class="process-bring-section" aria-labelledby="process-heading">
+  <div class="container">
+    <div class="process-bring-grid">
+
+      <!-- Our Process -->
+      <div>
+        <p class="section-label fade-up">How It Works</p>
+        <h2 class="section-heading fade-up fade-up-d1" id="process-heading">Our Process</h2>
+        <p class="section-subheading fade-up fade-up-d2">Three straightforward steps from your first message to a fully managed tax strategy.</p>
+
+        <div class="process-steps">
+
+          <div class="process-step fade-up fade-up-d1">
+            <div class="process-step-left">
+              <div class="process-step-badge">01</div>
+              <div class="process-step-connector"></div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">30 minutes · No charge</span>
+              <div class="process-step-title">Discovery Call</div>
+              <div class="process-step-desc">We learn about your situation, your entity structure, cross-border exposure, and goals. You learn how we work and what to expect.</div>
+            </div>
+          </div>
+
+          <div class="process-step fade-up fade-up-d2">
+            <div class="process-step-left">
+              <div class="process-step-badge">02</div>
+              <div class="process-step-connector"></div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Scoped engagement</span>
+              <div class="process-step-title">Technical Analysis</div>
+              <div class="process-step-desc">We review your documents, prior returns, and structure. We identify obligations, risks, and opportunities, then present a clear scope and fixed fee. Before anything starts, you'll receive a formal engagement letter outlining exactly what's covered.</div>
+            </div>
+          </div>
+
+          <div class="process-step fade-up fade-up-d3">
+            <div class="process-step-left">
+              <div class="process-step-badge">03</div>
+            </div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Ongoing advisory</span>
+              <div class="process-step-title">Proactive Strategy &amp; Filing</div>
+              <div class="process-step-desc">We execute the plan, file accurately, and stay in your corner year-round, flagging opportunities before they pass.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- What to Bring -->
+      <div class="fade-up fade-up-d2">
+        <p class="section-label">Come Prepared</p>
+        <h2 class="section-heading fade-up-d1">What to Bring</h2>
+        <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
+
+        <div class="bring-list">
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Prior Year Tax Returns</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Financial Statements</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">IRS Notices or Open Correspondence</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Tax Documents: W-2s, 1099s, K-1s</span>
+          </div>
+          <div class="bring-item">
+            <div class="bring-check">✓</div>
+            <span class="bring-text">Entity Documents: Articles, Operating Agreement</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- ═══════════════════ FAQ ═══════════════════ -->
 <section class="faq-section" id="faq">
   <div class="faq-wrapper">
@@ -1705,6 +1863,36 @@ Object.values(practicesData).forEach((practice, index) => {
         title: "1031 Exchange Guide: Defer Capital Gains on Real Estate",
         description: "A 1031 exchange lets you sell investment property and defer capital gains tax by reinvesting in like-kind property. Here are the rules, timelines, and common pitfalls.",
         practices: ["realestate"]
+      },
+      {
+        id: "feie-vs-ftc",
+        title: "FEIE vs. Foreign Tax Credit: Which Should U.S. Expats Take?",
+        description: "The FEIE and Foreign Tax Credit both reduce your U.S. tax bill, but choosing the wrong one can cost you IRA eligibility, Social Security credits, and thousands in taxes.",
+        practices: ["expats"]
+      },
+      {
+        id: "real-estate-professional-status",
+        title: "Real Estate Professional Status: How to Unlock Unlimited Passive Loss Deductions",
+        description: "REPS lets real estate investors deduct rental losses against ordinary income with no cap. Here's what the two-part test requires, what documentation survives an audit, and when it's worth pursuing.",
+        practices: ["realestate"]
+      },
+      {
+        id: "short-term-rental-taxes",
+        title: "Short-Term Rental Taxes: What Airbnb and VRBO Hosts Owe in Florida",
+        description: "STR hosts face income tax, self-employment tax, Florida sales tax, and county tourist development taxes. Most platforms collect some but not all of what you owe.",
+        practices: ["realestate", "local"]
+      },
+      {
+        id: "pre-immigration-planning",
+        title: "Pre-Immigration Tax Planning: What to Do Before You Become a U.S. Tax Resident",
+        description: "Becoming a U.S. tax resident triggers worldwide income reporting, foreign trust rules, and potential double taxation. The right moves before you arrive can save years of tax pain. The wrong ones are permanent.",
+        practices: ["expats", "founders"]
+      },
+      {
+        id: "solo-401k-vs-sep-ira",
+        title: "Solo 401(k) vs. SEP-IRA: Which Retirement Plan Is Right for Self-Employed Business Owners?",
+        description: "Both plans offer high contribution limits and immediate tax deductions, but the Solo 401(k) lets you save significantly more at lower income levels and includes a Roth option most business owners don't know about.",
+        practices: ["founders", "local"]
       }
     ];
 

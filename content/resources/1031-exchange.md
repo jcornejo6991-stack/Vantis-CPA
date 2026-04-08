@@ -9,7 +9,7 @@ featured: false
 
 ## What Is a 1031 Exchange?
 
-A 1031 exchange (named after Section 1031 of the Internal Revenue Code) allows you to sell investment or business property and defer federal (and often state) capital gains tax by reinvesting the proceeds into a "like-kind" replacement property.
+A 1031 exchange (named after [Section 1031 of the Internal Revenue Code](https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips)) allows you to sell investment or business property and defer federal (and often state) capital gains tax by reinvesting the proceeds into a "like-kind" replacement property.
 
 Without a 1031 exchange, selling appreciated real estate triggers capital gains tax at rates up to 20% plus the 3.8% Net Investment Income Tax, plus depreciation recapture at 25%. A well-executed exchange defers all of this indefinitely.
 
@@ -38,7 +38,7 @@ Both deadlines are absolute. Missing either by even one day disqualifies the exc
 
 ## The Qualified Intermediary Requirement
 
-You cannot receive the sale proceeds, even temporarily. The IRS requires a Qualified Intermediary (QI), an independent third party, to hold the exchange funds between the sale and the purchase. If proceeds touch your hands or your agent's hands at any point, the exchange is disqualified.
+You cannot receive the sale proceeds, even temporarily. The [IRS requires a Qualified Intermediary](https://www.irs.gov/publications/p544) (QI), an independent third party, to hold the exchange funds between the sale and the purchase. If proceeds touch your hands or your agent's hands at any point, the exchange is disqualified.
 
 Select your QI before closing on the sale. The QI cannot be your attorney, accountant, realtor, or anyone who has acted as your agent in the prior two years.
 

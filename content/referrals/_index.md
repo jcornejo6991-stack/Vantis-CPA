@@ -30,10 +30,4 @@ sections:
       3. **You earn throughout** — Fees calculated on initial year billing with referral recognition. Ongoing relationship value recognized annually.
 
       This is a partnership built on mutual growth and client outcomes, not transaction volume.
-
-  - title: "Your Clients Love Referring Too"
-    body: |
-      Your loyal clients often encounter others who need tax and accounting expertise. When they refer friends, family, or business contacts to us, everyone benefits.
-
-      We recognize introductions that come from trusted relationships. Clients who refer can expect that to be reflected when we work together.
 ---

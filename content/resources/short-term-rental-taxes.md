@@ -11,10 +11,10 @@ Short-term rentals, including properties rented through Airbnb, VRBO, or directl
 
 ## The 7-Day Rule
 
-The **average rental period** is the key threshold. If the average stay across all rentals is **7 days or fewer**, your rental activity is treated as a business and reported on **Schedule C**, not Schedule E.
+The **average rental period** is the key threshold. If the average stay across all rentals is **7 days or fewer**, your rental activity is treated as a business and reported on **[Schedule C](https://www.irs.gov/forms-pubs/about-schedule-c-form-1040)**, not Schedule E.
 
 Schedule C treatment means:
-- Rental income is **subject to self-employment tax** (15.3% on net profit up to $168,600 in 2024)
+- Rental income is **subject to self-employment tax** (15.3% on net profit up to $176,100 in 2025)
 - You must **materially participate** in the activity or losses are still passive
 - You can deduct business expenses, mileage, home office (if applicable), and platform fees
 
@@ -22,7 +22,7 @@ This catches most short-term rental hosts off guard. Airbnb rentals in a vacatio
 
 ## The 14-Day Rule
 
-Even if your property qualifies as a rental, the **14-day personal use rule** limits your deductions. If you use the property personally for more than **14 days** or **10% of rental days** (whichever is greater), the IRS treats it as a mixed-use property.
+Even if your property qualifies as a rental, the **[14-day personal use rule](https://www.irs.gov/publications/p527)** limits your deductions. If you use the property personally for more than **14 days** or **10% of rental days** (whichever is greater), the IRS treats it as a mixed-use property.
 
 Mixed-use rules require you to allocate expenses between personal and rental use. You cannot deduct rental expenses in excess of rental income. Losses are disallowed until income in future years absorbs them.
 

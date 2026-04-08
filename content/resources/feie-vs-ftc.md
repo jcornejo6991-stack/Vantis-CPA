@@ -11,9 +11,9 @@ Every American living abroad faces the same question: should you claim the **For
 
 ## What Each One Does
 
-The **FEIE** (Form 2555) lets you exclude up to **$126,500** of foreign earned income from U.S. taxation in 2024. If your income is below that threshold, you may owe little or no U.S. tax. There's also a housing exclusion that can shield additional amounts spent on foreign housing above a base amount.
+The **FEIE** ([Form 2555](https://www.irs.gov/forms-pubs/about-form-2555)) lets you exclude up to **$130,000** of foreign earned income from U.S. taxation in 2025. If your income is below that threshold, you may owe little or no U.S. tax. There's also a housing exclusion that can shield additional amounts spent on foreign housing above a base amount.
 
-The **Foreign Tax Credit** (Form 1116) gives you a dollar-for-dollar credit for income taxes paid to a foreign government. If you paid $15,000 in taxes to Germany, you get a $15,000 credit against your U.S. tax liability. Excess credits can be carried forward up to 10 years.
+The **Foreign Tax Credit** ([Form 1116](https://www.irs.gov/forms-pubs/about-form-1116)) gives you a dollar-for-dollar credit for income taxes paid to a foreign government. If you paid $15,000 in taxes to Germany, you get a $15,000 credit against your U.S. tax liability. Excess credits can be carried forward up to 10 years.
 
 ## The Key Tradeoffs
 
@@ -48,7 +48,7 @@ The Foreign Tax Credit tends to be the better choice when:
 
 ## The Housing Exclusion Factor
 
-If you claim the FEIE, you can also claim the **Foreign Housing Exclusion** for housing costs above a base amount (**$19,800** in 2024 for most locations, higher in expensive cities). This can meaningfully reduce taxable income if your rent is high. The housing exclusion is only available if you claim the FEIE.
+If you claim the FEIE, you can also claim the **Foreign Housing Exclusion** for housing costs above a base amount (**$20,800** in 2025 for most locations, higher in expensive cities). This can meaningfully reduce taxable income if your rent is high. The housing exclusion is only available if you claim the FEIE.
 
 ## Can You Switch?
 

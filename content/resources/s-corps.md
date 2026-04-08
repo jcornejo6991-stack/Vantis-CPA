@@ -9,7 +9,7 @@ featured: true
 
 ## What Is an S-Corp Election?
 
-An S-Corporation is not a separate business entity; it's a tax election made on IRS Form 2553. A standard LLC or C-Corporation can elect S-Corp status to change how profits flow to your personal tax return.
+An S-Corporation is not a separate business entity; it's a tax election made on [IRS Form 2553](https://www.irs.gov/forms-pubs/about-form-2553). A standard LLC or C-Corporation can elect S-Corp status to change how profits flow to your personal tax return.
 
 The key benefit: only your W-2 salary is subject to self-employment (SE) tax. Remaining profits pass through as distributions, not subject to the 15.3% SE tax rate.
 
@@ -40,7 +40,7 @@ The election typically becomes worthwhile when net profit consistently exceeds $
 
 ## How to Elect
 
-File IRS Form 2553 within 75 days of the tax year you want the election to apply, or within 75 days of forming your entity. Late elections may be accepted with a reasonable cause statement.
+File [IRS Form 2553](https://www.irs.gov/forms-pubs/about-form-2553) within 75 days of the tax year you want the election to apply, or within 75 days of forming your entity. Late elections may be accepted with a reasonable cause statement.
 
 You must also set up payroll immediately. The IRS requires S-Corp owners who perform services to take a "reasonable salary," meaning compensation comparable to what you'd pay a third party to do the same work. Underpaying yourself is one of the most common S-Corp audit triggers.
 

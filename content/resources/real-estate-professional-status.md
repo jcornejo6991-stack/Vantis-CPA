@@ -13,7 +13,7 @@ The IRS scrutinizes REPS claims heavily. Qualifying correctly, and documenting i
 
 ## What REPS Is
 
-**Real Estate Professional Status** is an IRS classification under IRC §469(c)(7) that removes rental activity from the passive activity rules for qualifying taxpayers. Once you qualify, rental losses are treated as non-passive and can offset any type of income without limitation.
+**Real Estate Professional Status** is an IRS classification under [IRC §469(c)(7)](https://www.irs.gov/publications/p925) that removes rental activity from the passive activity rules for qualifying taxpayers. Once you qualify, rental losses are treated as non-passive and can offset any type of income without limitation.
 
 REPS does not require a real estate license. It applies to anyone (investor, developer, property manager, or agent) who meets the time tests below.
 
@@ -33,7 +33,7 @@ Qualifying real property activities include: property development, construction,
 
 Qualifying as a REPS is only half the battle. You also need to **materially participate** in each rental property. The IRS's default is to treat each property as a separate activity, which means you must clear the material participation threshold (typically 500+ hours) for every property individually.
 
-The solution is a **grouping election** under Reg. §1.469-9(g), which lets you treat all rental properties as a single activity. With grouping, your combined hours across all properties count toward one participation test. This election is made on your tax return and is **irrevocable without IRS consent**. Choose carefully if you plan to sell properties or change your involvement level.
+The solution is a **grouping election** under [Reg. §1.469-9(g)](https://www.irs.gov/irm/part4/irm_04-070-027), which lets you treat all rental properties as a single activity. With grouping, your combined hours across all properties count toward one participation test. This election is made on your tax return and is **irrevocable without IRS consent**. Choose carefully if you plan to sell properties or change your involvement level.
 
 ## What It Unlocks
 

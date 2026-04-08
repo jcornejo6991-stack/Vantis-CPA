@@ -22,7 +22,7 @@ Planning done before your residency start date can restructure assets, step up b
 
 ## The Green Card Trap
 
-A green card makes you a **lawful permanent resident** and a U.S. tax resident for life, even if you later move abroad. Unlike visa-based residency, a green card cannot be paused. Surrendering it triggers **expatriation rules** (the exit tax under IRC §877A) if your net worth exceeds **$2 million** or your average annual tax over the prior 5 years exceeds the indexed threshold.
+A green card makes you a **lawful permanent resident** and a U.S. tax resident for life, even if you later move abroad. Unlike visa-based residency, a green card cannot be paused. Surrendering it triggers **expatriation rules** (the exit tax under [IRC §877A](https://www.irs.gov/individuals/international-taxpayers/expatriation-tax)) if your net worth exceeds **$2 million** or your average annual tax over the prior 5 years exceeds the indexed threshold.
 
 If you are considering a green card and have significant assets abroad, understanding the long-term tax implications before accepting it is essential.
 
@@ -38,7 +38,7 @@ Foreign trusts, which are common estate planning vehicles in many countries, fac
 
 - As a **U.S. grantor**, you may be taxed on all trust income annually
 - **Loans and distributions** from the trust to you or your U.S. family members trigger income inclusion and potential penalties
-- Annual reporting on **Form 3520 and Form 3520-A** is required, with penalties of up to 35% of distributions for failures
+- Annual reporting on **[Form 3520](https://www.irs.gov/forms-pubs/about-form-3520) and [Form 3520-A](https://www.irs.gov/forms-pubs/about-form-3520-a)** is required, with penalties of up to 35% of distributions for failures
 
 If you have interests in foreign trusts, restructuring or distributing assets before becoming a U.S. resident is often far simpler than managing ongoing compliance.
 

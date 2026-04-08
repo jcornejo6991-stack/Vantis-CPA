@@ -15,10 +15,10 @@ The **SEP-IRA** (Simplified Employee Pension) is funded entirely by employer con
 
 The **Solo 401(k)** (also called an Individual 401(k) or i401k) has two contribution buckets:
 
-- **Employee elective deferral:** Up to **$23,000** in 2024 ($30,500 if age 50+), regardless of income, as long as you have net self-employment income
+- **Employee elective deferral:** Up to **$23,500** in 2025 ($31,000 if age 50+), regardless of income, as long as you have net self-employment income (see [IRS retirement plan limits](https://www.irs.gov/retirement-plans/plan-participant-employee/retirement-topics-401k-and-profit-sharing-plan-contribution-limits))
 - **Employer profit-sharing:** Up to **25% of W-2 compensation** (S-corp) or **20% of net SE income** (sole prop/LLC)
 
-The combined total cannot exceed **$69,000** in 2024 ($76,500 if age 50+).
+The combined total cannot exceed **$70,000** in 2025 ($77,500 if age 50+).
 
 ## 2025 Contribution Limits
 
@@ -67,7 +67,7 @@ The SEP-IRA has no Roth equivalent.
 
 ## Deadlines
 
-- **Solo 401(k):** The plan must be **established by December 31** of the tax year, though contributions can be made up to the filing deadline. For new business owners, missing year-end is the most common reason they default to a SEP-IRA.
+- **Solo 401(k):** The plan must be **established by December 31** of the tax year (see [IRS guidance on one-participant 401(k) plans](https://www.irs.gov/retirement-plans/one-participant-401k-plans)), though contributions can be made up to the filing deadline. For new business owners, missing year-end is the most common reason they default to a SEP-IRA.
 - **SEP-IRA:** Can be established and funded up to the **tax filing deadline, including extensions**, as late as October 15 for calendar-year filers.
 
 ## When to Seek Help
