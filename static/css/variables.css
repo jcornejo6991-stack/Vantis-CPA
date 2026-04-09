@@ -1,0 +1,39 @@
+:root {
+  /* Colors from config */
+  --primary: #15482E;
+  --primary-dark: #03120b;
+  --accent: #3a8b5f;
+  --accent-light: #5fa88a;
+  --text-dark: #0f2818;
+  --text-light: #ffffff;
+  --bg-light: #f9faf9;
+  --bg-accent: #edeef7;
+  --border: #d0d0d0;
+
+  /* Dark green for nav/footer */
+  --navy: #03120b;
+  --navy-dark: #03120b;
+
+  /* Fonts from config */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing from config */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Derived values */
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
+  }
+}
