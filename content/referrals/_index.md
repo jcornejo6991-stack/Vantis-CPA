@@ -1,5 +1,5 @@
 ---
-title: "Referral Partnerships"
+title: "Professional Partnerships"
 layout: "service"
 subtitle: "Build a mutually rewarding partnership. We work with professionals who share our commitment to client outcomes."
 sections:
@@ -13,7 +13,7 @@ sections:
 
   - title: "What Our Referral Partners Get"
     body: |
-      **Recurring referral fees on initial year billing:** We structure our fees so you benefit directly from successful referrals.
+      **A referral fee tied to first-year billing:** We structure our fees so you benefit directly from every successful referral.
 
       **Full visibility into client relationships:** You'll know exactly how your referrals are progressing, from intake through delivery.
 
@@ -27,7 +27,7 @@ sections:
 
       2. **We take it from there** — Initial consultation, strategy development, ongoing service delivery. The client relationship is ours to manage.
 
-      3. **You earn throughout** — Fees calculated on initial year billing with referral recognition. Ongoing relationship value recognized annually.
+      3. **You earn** — Fee based on first-year billing. Clean, straightforward, no paperwork overhead.
 
       This is a partnership built on mutual growth and client outcomes, not transaction volume.
 ---
