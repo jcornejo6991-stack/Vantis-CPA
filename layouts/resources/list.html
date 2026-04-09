@@ -278,6 +278,45 @@
       display: none;
     }
 
+    /* Cluster hub links */
+    .library-clusters {
+      margin-bottom: 28px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .library-clusters-intro {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 16px;
+      max-width: 720px;
+    }
+
+    .library-cluster-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .cluster-pill-link {
+      display: inline-block;
+      padding: 7px 14px;
+      background: #fff;
+      border: 1.5px solid #15482E;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #15482E;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .cluster-pill-link:hover {
+      background: #15482E;
+      color: #fff;
+    }
+
     @media (max-width: 1024px) {
       .library-page {
         grid-template-columns: repeat(2, 1fr);
@@ -324,6 +363,19 @@
     </div>
 
     <div class="library-body">
+      <div class="library-clusters">
+        <p class="library-clusters-intro">Our resource library covers the full range of U.S. tax topics — from international compliance for expats and foreign investors, to real estate tax strategy, business entity planning, and general IRS compliance. Browse by topic or use the search and filters below.</p>
+        <div class="library-cluster-links">
+          <a href="/resources/international-tax/" class="cluster-pill-link">International Tax</a>
+          <a href="/resources/real-estate-tax/" class="cluster-pill-link">Real Estate Tax</a>
+          <a href="/resources/individual-tax/" class="cluster-pill-link">Individual Tax</a>
+          <a href="/resources/business-tax/" class="cluster-pill-link">Business Tax</a>
+          <a href="/resources/general-tax-compliance/" class="cluster-pill-link">Tax Compliance</a>
+          <a href="/resources/ecommerce-sellers/" class="cluster-pill-link">E-Commerce Sellers</a>
+          <a href="/resources/latam-inbound/" class="cluster-pill-link">LATAM Inbound</a>
+        </div>
+      </div>
+
       <div class="library-search">
         <input type="text" id="librarySearch" placeholder="Search: S-corp, 1031, FBAR, deadlines…" />
       </div>

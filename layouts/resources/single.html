@@ -25,6 +25,29 @@
     }
   }
   </script>
+  <!-- TODO: When author name is ready, replace "author" above with @type: Person — see memory/feedback_author_bio.md -->
+
+  {{ if .Params.faqs }}
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {{ range $i, $faq := .Params.faqs }}{{ if $i }},{{ end }}
+      {
+        "@type": "Question",
+        "name": {{ $faq.q | jsonify }},
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": {{ $faq.a | jsonify }}
+        }
+      }
+      {{ end }}
+    ]
+  }
+  </script>
+  {{ end }}
 
   <style>
     /* ── Article Page ── */
@@ -480,8 +503,13 @@
   <div class="article-page">
 
     <div class="article-hero">
+      {{ $primaryCluster := index (.Params.clusters | default slice) 0 }}
+      {{ $hubPage := "" }}
+      {{ if $primaryCluster }}{{ $hubPage = .Site.GetPage (printf "/resources/%s" $primaryCluster) }}{{ end }}
       <div class="article-breadcrumb">
-        <a href="/resources/">Resources</a> / {{ .Title }}
+        <a href="/resources/">Resources</a>
+        {{ if $hubPage }} / <a href="{{ $hubPage.RelPermalink }}">{{ $hubPage.Title }}</a>{{ end }}
+        / {{ .Title }}
       </div>
       <div class="article-tags">
         {{ if in $practices "all" }}
@@ -514,6 +542,7 @@
 
         <div class="article-content">
           <a href="/resources/" class="article-back">← Back to Resource Library</a>
+          <!-- TODO: Add "Reviewed by [Name], CPA, MTax" badge here when ready — see memory/feedback_author_bio.md -->
           {{ .Content }}
           <p class="article-updated">Last updated: {{ .Date.Format "2006" }}</p>
         </div>
