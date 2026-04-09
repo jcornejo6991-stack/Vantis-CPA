@@ -1,0 +1,269 @@
+{{ define "main" }}
+  {{ partial "service-css.html" . }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+
+  {{ $clusterSlug := .Params.cluster }}
+
+  {{ $spokes := slice }}
+  {{ range where .Site.RegularPages "Section" "resources" }}
+    {{ if in (.Params.clusters | default slice) $clusterSlug }}
+      {{ $spokes = $spokes | append . }}
+    {{ end }}
+  {{ end }}
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "{{ .Site.BaseURL }}"},
+      {"@type": "ListItem", "position": 2, "name": "Resources", "item": "{{ .Site.BaseURL }}resources/"},
+      {"@type": "ListItem", "position": 3, "name": "{{ .Title }}", "item": "{{ .Permalink }}"}
+    ]
+  }
+  </script>
+
+  <style>
+    .hub-page {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      padding: 25px;
+    }
+
+    .hub-hero {
+      background: linear-gradient(135deg, #041f12 0%, #15482E 100%);
+      color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      padding: 48px 52px 44px;
+    }
+
+    .hub-breadcrumb {
+      font-size: 13px;
+      opacity: 0.7;
+      margin-bottom: 14px;
+    }
+
+    .hub-breadcrumb a {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .hub-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #7ecef7;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .hub-hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      margin: 0 0 14px;
+      line-height: 1.2;
+    }
+
+    .hub-hero-desc {
+      font-size: 17px;
+      opacity: 0.85;
+      margin: 0;
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    .hub-body {
+      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      padding: 44px 48px 48px;
+    }
+
+    .hub-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 20px;
+    }
+
+    .hub-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-bottom: 36px;
+    }
+
+    .hub-card {
+      background: #fff;
+      border-radius: 10px;
+      border-left: 3px solid #15482E;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .hub-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+    }
+
+    .hub-card-stub {
+      opacity: 0.5;
+      border-left-color: #ccc;
+      pointer-events: none;
+    }
+
+    .hub-card-coming {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #aaa;
+      font-weight: 700;
+    }
+
+    .hub-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #0f2818;
+      line-height: 1.3;
+    }
+
+    .hub-card-stub .hub-card-title {
+      color: #aaa;
+    }
+
+    .hub-card-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.55;
+      flex: 1;
+    }
+
+    .hub-card-link {
+      font-size: 13px;
+      color: #15482E;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    .hub-cta {
+      background: #f0f7f3;
+      border-radius: 12px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+
+    .hub-cta-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: #0f2818;
+    }
+
+    .hub-cta-btn {
+      background: #15482E;
+      color: #fff;
+      padding: 12px 22px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      white-space: nowrap;
+      transition: background 0.2s;
+    }
+
+    .hub-cta-btn:hover {
+      background: #1e5c3a;
+    }
+
+    .hub-back {
+      display: inline-block;
+      font-size: 14px;
+      color: #15482E;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .hub-back:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 1024px) {
+      .hub-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .hub-page { padding: 12px; gap: 12px; }
+      .hub-hero { padding: 32px 24px 28px; border-radius: 14px; }
+      .hub-body { padding: 28px 24px 32px; border-radius: 14px; }
+      .hub-grid { grid-template-columns: 1fr; }
+      .hub-cta { flex-direction: column; align-items: flex-start; }
+    }
+
+    @media (max-width: 480px) {
+      .hub-page { padding: 8px; }
+    }
+  </style>
+
+  {{ partial "nav.html" . }}
+
+  <div class="hub-page">
+
+    <div class="hub-hero">
+      <div class="hub-breadcrumb">
+        <a href="/resources/">Resources</a> / {{ .Title }}
+      </div>
+      <div class="hub-eyebrow">Resource Hub</div>
+      <h1>{{ .Title }}</h1>
+      <p class="hub-hero-desc">{{ .Description }}</p>
+    </div>
+
+    <div class="hub-body">
+      {{ if or $spokes .Params.coming_soon }}
+        <div class="hub-section-label">Articles in this cluster</div>
+        <div class="hub-grid">
+          {{ range $spokes }}
+          <a href="{{ .RelPermalink }}" class="hub-card">
+            <div class="hub-card-title">{{ .Title }}</div>
+            <div class="hub-card-desc">{{ .Description }}</div>
+            <div class="hub-card-link">Read article →</div>
+          </a>
+          {{ end }}
+
+          {{ range .Params.coming_soon }}
+          <div class="hub-card hub-card-stub">
+            <div class="hub-card-coming">Coming Soon</div>
+            <div class="hub-card-title">{{ .title }}</div>
+            <div class="hub-card-desc">{{ .description }}</div>
+          </div>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      <div class="hub-cta">
+        <div class="hub-cta-text">Have questions? We can help.</div>
+        <a href="/contact/" class="hub-cta-btn">Schedule a Consultation</a>
+      </div>
+
+      <a href="/resources/" class="hub-back">← Back to Resource Library</a>
+    </div>
+
+  </div>
+
+  {{ partial "footer.html" . }}
+{{ end }}
