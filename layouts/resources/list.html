@@ -284,14 +284,23 @@
       margin-bottom: 28px;
       padding-bottom: 24px;
       border-bottom: 1px solid #e0e0e0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
     }
 
-    .library-clusters-intro {
-      font-size: 15px;
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 16px;
-      max-width: 720px;
+    .library-cluster-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .library-cluster-group-label {
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #999;
     }
 
     .library-cluster-links {
@@ -365,15 +374,22 @@
 
     <div class="library-body">
       <div class="library-clusters">
-        <p class="library-clusters-intro">Our resource library covers the full range of U.S. tax topics — from international compliance for expats and foreign investors, to real estate tax strategy, business entity planning, and general IRS compliance. Browse by topic or use the search and filters below.</p>
-        <div class="library-cluster-links">
-          <a href="/resources/international-tax/" class="cluster-pill-link">International Tax</a>
-          <a href="/resources/real-estate-tax/" class="cluster-pill-link">Real Estate Tax</a>
-          <a href="/resources/individual-tax/" class="cluster-pill-link">Individual Tax</a>
-          <a href="/resources/business-tax/" class="cluster-pill-link">Business Tax</a>
-          <a href="/resources/general-tax-compliance/" class="cluster-pill-link">Tax Compliance</a>
-          <a href="/resources/ecommerce-sellers/" class="cluster-pill-link">E-Commerce Sellers</a>
-          <a href="/resources/latam-inbound/" class="cluster-pill-link">LATAM Inbound</a>
+        <div class="library-cluster-group">
+          <div class="library-cluster-group-label">General Topics</div>
+          <div class="library-cluster-links">
+            <a href="/resources/international-tax/" class="cluster-pill-link">International Tax</a>
+            <a href="/resources/real-estate-tax/" class="cluster-pill-link">Real Estate Tax</a>
+            <a href="/resources/individual-tax/" class="cluster-pill-link">Individual Tax</a>
+            <a href="/resources/business-tax/" class="cluster-pill-link">Business Tax</a>
+            <a href="/resources/general-tax-compliance/" class="cluster-pill-link">Tax Compliance</a>
+          </div>
+        </div>
+        <div class="library-cluster-group">
+          <div class="library-cluster-group-label">Focused Areas</div>
+          <div class="library-cluster-links">
+            <a href="/resources/ecommerce-sellers/" class="cluster-pill-link">E-Commerce Sellers</a>
+            <a href="/resources/latam-inbound/" class="cluster-pill-link">LATAM Inbound</a>
+          </div>
         </div>
       </div>
 
@@ -382,10 +398,14 @@
       </div>
 
       <div class="library-filters">
-        <button class="filter-pill active" data-filter="all">All Topics</button>
-        {{ range $.Site.Data.expertise }}
-        <button class="filter-pill" data-filter="{{ .slug }}">{{ .name }}</button>
-        {{ end }}
+        <button class="filter-pill active" data-filter="all">All</button>
+        <button class="filter-pill" data-filter="international-tax">International Tax</button>
+        <button class="filter-pill" data-filter="real-estate-tax">Real Estate Tax</button>
+        <button class="filter-pill" data-filter="individual-tax">Individual Tax</button>
+        <button class="filter-pill" data-filter="business-tax">Business Tax</button>
+        <button class="filter-pill" data-filter="general-tax-compliance">Tax Compliance</button>
+        <button class="filter-pill" data-filter="ecommerce-sellers">E-Commerce</button>
+        <button class="filter-pill" data-filter="latam-inbound">LATAM Inbound</button>
       </div>
 
       <p class="library-count" id="libraryCount"></p>
@@ -393,23 +413,16 @@
       <!-- Card pool (hidden — JS reads from here) -->
       <div class="library-grid" id="libraryGrid">
         {{ range .Pages }}
-        {{ $practices := .Params.practices | default (slice) }}
+        {{ $clusters := .Params.clusters | default (slice) }}
+        {{ $clusterNames := dict "international-tax" "International Tax" "real-estate-tax" "Real Estate Tax" "individual-tax" "Individual Tax" "business-tax" "Business Tax" "general-tax-compliance" "Tax Compliance" "ecommerce-sellers" "E-Commerce" "latam-inbound" "LATAM Inbound" }}
         <div class="lib-card"
-             data-practices="{{ delimit $practices "," }}"
+             data-clusters="{{ delimit $clusters "," }}"
              data-text="{{ .Title | lower }} {{ .Description | lower }}"
              data-url="{{ .RelPermalink }}">
           <div class="lib-card-tags">
-            {{ if in $practices "all" }}
-              <span class="lib-practice-tag">All Clients</span>
-            {{ else }}
-              {{ range $practices }}
-                {{ $slug := . }}
-                {{ range $.Site.Data.expertise }}
-                  {{ if eq .slug $slug }}
-                    <span class="lib-practice-tag">{{ .name }}</span>
-                  {{ end }}
-                {{ end }}
-              {{ end }}
+            {{ range $clusters }}
+              {{ $name := index $clusterNames . }}
+              {{ if $name }}<span class="lib-practice-tag">{{ $name }}</span>{{ end }}
             {{ end }}
           </div>
           <h3>{{ .Title }}</h3>
@@ -463,11 +476,10 @@
 
       function getVisible() {
         return allCards.filter(function(card) {
-          var practices = card.dataset.practices || '';
+          var clusters = card.dataset.clusters || '';
           var text = card.dataset.text || '';
           var matchesFilter = activeFilter === 'all'
-            || practices.indexOf(activeFilter) !== -1
-            || practices.indexOf('all') !== -1;
+            || clusters.indexOf(activeFilter) !== -1;
           var matchesSearch = searchQuery === ''
             || text.indexOf(searchQuery) !== -1;
           return matchesFilter && matchesSearch;
