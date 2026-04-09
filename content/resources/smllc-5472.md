@@ -5,6 +5,14 @@ date: 2025-01-20
 practices: ["founders", "local", "inbound"]
 services: ["international-tax", "tax-compliance"]
 featured: false
+clusters: ["international-tax", "ecommerce-sellers", "latam-inbound"]
+faqs:
+  - q: "Does a foreign-owned single-member LLC need to file Form 5472?"
+    a: "Yes. Since 2017, foreign-owned single-member LLCs disregarded for income tax purposes are treated as domestic corporations for Form 5472 purposes. All transactions with the foreign owner must be reported."
+  - q: "What is the penalty for failing to file Form 5472?"
+    a: "The penalty is $25,000 per return per year. An additional $25,000 applies for each 90-day period following IRS notice of non-compliance. There is no de minimis exception."
+  - q: "What transactions must be reported on Form 5472?"
+    a: "Reportable transactions include capital contributions, loans, sales of property, payments for services, and any other financial exchange between the LLC and its foreign owner or related parties."
 ---
 
 ## What Is Form 5472?

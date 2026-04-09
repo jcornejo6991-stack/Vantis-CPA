@@ -5,6 +5,14 @@ date: 2025-01-15
 practices: ["founders", "local", "realestate"]
 services: ["tax-strategy", "tax-compliance"]
 featured: true
+clusters: ["business-tax"]
+faqs:
+  - q: "At what income level does an S-Corp election make sense?"
+    a: "An S-Corp election typically saves money once your net self-employment profit exceeds $40,000 to $50,000 per year. Below that threshold, the cost of payroll compliance often outweighs the self-employment tax savings."
+  - q: "What is the deadline to elect S-Corp status?"
+    a: "Form 2553 must be filed by March 15 for the election to take effect for the current calendar year. Elections filed after March 15 generally take effect the following year, unless you qualify for late election relief."
+  - q: "Do S-Corp shareholders have to take a salary?"
+    a: "Yes. Shareholder-employees who perform services for the S-Corp must receive reasonable compensation reported on a W-2. Taking no salary and treating all income as distributions is a common audit trigger."
 ---
 
 ## What Is an S-Corp Election?

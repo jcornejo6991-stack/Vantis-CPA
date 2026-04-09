@@ -5,6 +5,14 @@ date: 2026-01-01
 practices: ["all"]
 services: ["tax-compliance"]
 featured: true
+clusters: ["general-tax-compliance"]
+faqs:
+  - q: "What is the deadline to file a personal tax return?"
+    a: "April 15 for most individuals. An automatic 6-month extension to October 15 is available by filing Form 4868, but any taxes owed are still due April 15 — the extension is to file, not to pay."
+  - q: "What are the penalties for missing a tax deadline?"
+    a: "The failure-to-file penalty is 5% of unpaid taxes per month (up to 25%). The failure-to-pay penalty is 0.5% per month. Both penalties plus interest accrue simultaneously from the due date."
+  - q: "When are quarterly estimated tax payments due?"
+    a: "Estimated tax payments are due April 15, June 15, September 15, and January 15 of the following year. Underpayment of estimated taxes triggers a separate penalty calculated on each quarter's shortfall."
 ---
 
 ## Individual Tax Returns

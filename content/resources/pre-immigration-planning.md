@@ -5,6 +5,14 @@ date: 2026-01-01
 practices: ["expats", "founders"]
 services: ["international-tax", "tax-strategy"]
 featured: false
+clusters: ["international-tax", "latam-inbound"]
+faqs:
+  - q: "When should I start pre-immigration tax planning?"
+    a: "Ideally 12 to 24 months before obtaining a U.S. green card or long-term visa. Key elections, basis step-ups, and entity restructurings must be completed before U.S. tax residency begins or tax savings opportunities are permanently lost."
+  - q: "What assets should be reviewed before immigrating to the U.S.?"
+    a: "Foreign real estate, investment portfolios, business interests, life insurance policies, and pension plans all require review. Some assets receive favorable tax treatment only if restructured before immigration."
+  - q: "Can I still own a foreign business after becoming a U.S. resident?"
+    a: "Yes, but foreign business ownership triggers new U.S. filing obligations including Form 5471 (foreign corporations), FBAR, and potentially PFIC rules. Advance planning can avoid costly misclassifications."
 ---
 
 The day you become a U.S. tax resident, the IRS begins taxing your worldwide income. Assets you've held for decades, foreign companies you own, and trust structures that worked perfectly in your home country may suddenly create U.S. tax and reporting obligations you didn't anticipate. Most of these issues are fixable before you arrive, but very difficult to unwind after.

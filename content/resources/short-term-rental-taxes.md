@@ -5,6 +5,14 @@ date: 2026-01-01
 practices: ["realestate", "local"]
 services: ["tax-strategy", "sales-tax", "bookkeeping"]
 featured: false
+clusters: ["real-estate-tax"]
+faqs:
+  - q: "Is Airbnb and short-term rental income subject to self-employment tax?"
+    a: "Generally no. Short-term rental income is treated as investment income, not self-employment income, unless you provide substantial services (like a hotel). Most hosts do not owe self-employment tax."
+  - q: "Can I deduct short-term rental losses against my W-2 salary?"
+    a: "Possibly. If your average rental period is 7 days or fewer and you materially participate, losses may be non-passive and deductible against any income. The 750-hour real estate professional test is not required for this specific exception."
+  - q: "What is the 14-day personal use rule for short-term rentals?"
+    a: "If you personally use the property for more than 14 days or 10% of rental days (whichever is greater), it is classified as a vacation home. Expense deductions become limited and losses cannot offset other income."
 ---
 
 Short-term rentals, including properties rented through Airbnb, VRBO, or directly, are taxed differently than traditional long-term rentals. The average rental period determines which IRS schedule applies, Florida imposes sales tax on every booking, and county tourist taxes stack on top. Most hosts discover the full picture only after their first notice.
