@@ -9,8 +9,8 @@ clusters: ["international-tax"]
 faqs:
   - q: "Can I claim both the FEIE and the Foreign Tax Credit on the same income?"
     a: "No. You cannot apply the FEIE and the FTC to the same dollars of foreign income. However, you can use the FEIE to exclude some income and apply the FTC to taxes paid on non-excluded income above the exclusion threshold."
-  - q: "What is the FEIE exclusion limit for 2026?"
-    a: "The 2026 FEIE exclusion is $130,000 (adjusted annually for inflation). Income above this amount is still subject to U.S. tax, though the Foreign Tax Credit may offset remaining liability."
+  - q: "What is the current FEIE exclusion limit?"
+    a: "The FEIE exclusion is adjusted annually for inflation by the IRS — it was $126,500 for 2024 and increases each year. Check the current IRS Revenue Procedure for the latest figure; income above the exclusion is still subject to U.S. tax, though the Foreign Tax Credit may offset remaining liability."
   - q: "Do I have to choose between the FEIE and the FTC every year?"
     a: "Yes. The election is made annually on Form 2555. Revoking a prior FEIE election requires IRS consent and typically bars you from re-electing for five years."
 ---

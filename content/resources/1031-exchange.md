@@ -7,8 +7,8 @@ services: ["tax-strategy", "international-tax"]
 featured: false
 clusters: ["real-estate-tax"]
 faqs:
-  - q: "How long do I have to identify replacement property in a 1031 exchange?"
-    a: "You have 45 days from the date of sale of the relinquished property to identify up to three potential replacement properties in writing."
+  - q: "How long do I have to identify and close on replacement property in a 1031 exchange?"
+    a: "You have 45 days from the sale of the relinquished property to identify up to three replacement properties in writing, and 180 days total to close on the replacement property. Both deadlines run concurrently from the sale date and are strictly enforced — there are no extensions except in federally declared disaster areas."
   - q: "Can I use a 1031 exchange for foreign real estate?"
     a: "No. Since the Tax Cuts and Jobs Act of 2017, 1031 exchanges apply only to U.S. real property. Foreign property cannot be exchanged for domestic property under Section 1031."
   - q: "What happens to the deferred gain when I eventually sell the replacement property?"

@@ -8,7 +8,7 @@ featured: false
 clusters: ["individual-tax"]
 faqs:
   - q: "Which allows higher contributions — a Solo 401(k) or SEP-IRA?"
-    a: "Both allow employer contributions up to 25% of compensation or $69,000 (2024 limit). However, the Solo 401(k) also allows an additional $23,000 employee deferral (plus $7,500 catch-up if age 50+), making it significantly more powerful for high-income self-employed individuals."
+    a: "Both allow employer contributions up to 25% of compensation or $70,000 (2025 limit, adjusted annually). However, the Solo 401(k) also allows an additional $23,500 employee deferral (plus $7,500 catch-up if age 50+), making it significantly more powerful for high-income self-employed individuals."
   - q: "Can I contribute to a Solo 401(k) if I have a day job with a 401(k)?"
     a: "The $23,000 employee deferral limit is shared across all 401(k) plans. If your day job 401(k) already maxes out employee deferrals, your Solo 401(k) contributions are limited to the employer (profit-sharing) portion only."
   - q: "When is the deadline to open a Solo 401(k)?"
