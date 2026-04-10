@@ -41,7 +41,7 @@
 
 ## Update Navigation (Optional)
 If you want your page in the nav menu:
-1. Edit `data/site-config.json`
+1. Edit `data/siteconfig.json`
 2. Add to appropriate nav array:
    ```json
    {"label": "Your Page Name", "url": "/your-page/"}

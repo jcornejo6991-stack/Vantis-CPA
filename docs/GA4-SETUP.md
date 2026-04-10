@@ -8,7 +8,7 @@
    - Copy the Measurement ID (e.g., G-XXXXXXXXXX)
 
 2. **Update Configuration:**
-   - Edit `data/site-config.json`
+   - Edit `data/siteconfig.json`
    - Find: `"ga4Id": "G-XXXXXXXXXX"`
    - Replace with your actual GA4 ID
 

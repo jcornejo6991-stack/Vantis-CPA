@@ -1,10 +1,10 @@
 # Configuration Guide
 
-All site settings are in **one file**: `data/site-config.json`
+All site settings are in **one file**: `data/siteconfig.json`
 
 ## Changing Company Info
 
-Edit `data/site-config.json`:
+Edit `data/siteconfig.json`:
 
 ```json
 {

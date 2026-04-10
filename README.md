@@ -5,7 +5,7 @@ A Hugo-based static website with centralized configuration for complete flexibil
 ## Quick Start
 
 ### For Content Updates
-1. Edit `data/site-config.json` for company info, colors, navigation
+1. Edit `data/siteconfig.json` for company info, colors, navigation
 2. Edit markdown files in `content/` directory
 3. Push to GitHub
 4. Cloudflare auto-deploys
@@ -18,13 +18,13 @@ A Hugo-based static website with centralized configuration for complete flexibil
 
 ## Structure
 
-- `data/site-config.json` - ⭐ ALL configuration (company, colors, navigation, integrations)
+- `data/siteconfig.json` - All configuration (company, colors, navigation, integrations)
 - `content/` - All page content (markdown files)
 - `layouts/` - Hugo templates (HTML structure)
 - `assets/css/` - Styles (CSS variables reference config)
 - `assets/js/` - JavaScript (forms, integrations, tracking)
 - `static/` - Static files (robots.txt, images)
-- `netlify.toml` - Deployment configuration for Netlify (can use Cloudflare Pages instead)
+- `wrangler.toml` - Cloudflare Worker configuration for the form handler
 
 ## Documentation
 
@@ -36,32 +36,32 @@ A Hugo-based static website with centralized configuration for complete flexibil
 
 ## Key Features
 
-✅ **Centralized Configuration** - One JSON file for all settings
-✅ **Flexible & Scalable** - Add pages with just markdown
-✅ **Mobile Responsive** - Works on all devices
-✅ **SEO Ready** - Auto-generated sitemaps, meta tags, schema
-✅ **Fast** - Static HTML, instant loading
-✅ **Secure** - HTTPS via Cloudflare
-✅ **Analytics Ready** - Google Analytics 4 integration
-✅ **Easy Forms** - Contact forms with email handling
+- Centralized configuration
+- Flexible and scalable content model
+- Mobile responsive design
+- SEO-ready structure
+- Fast static delivery
+- HTTPS via Cloudflare
+- Google Analytics 4 integration
+- Contact form handling
 
 ## Technology Stack
 
-- **Hugo** - Static site generator
-- **HTML5 / CSS3 / JavaScript** - Frontend
-- **Cloudflare Pages** - Hosting & CDN
-- **Google Analytics 4** - Traffic tracking
+- Hugo
+- HTML5 / CSS3 / JavaScript
+- Cloudflare Pages
+- Google Analytics 4
 
 ## Deployment
 
-1. Connect GitHub repository to Cloudflare Pages
+1. Connect the GitHub repository to Cloudflare Pages
 2. Set build command: `hugo --minify`
 3. Set publish directory: `public`
-4. Every commit auto-builds and deploys in 1-2 minutes
+4. Each commit auto-builds and deploys in 1-2 minutes
 
 ## Pages
 
-### Expertise Pages (6 total)
+### Expertise Pages
 - `/expertise/local/` - Local Businesses
 - `/expertise/founders/` - Founders & Startups
 - `/expertise/realestate/` - Real Estate Owners
@@ -69,7 +69,7 @@ A Hugo-based static website with centralized configuration for complete flexibil
 - `/expertise/inbound/` - Foreign Business & Investors
 - `/expertise/expats/` - U.S. Expats
 
-### Service Pages (6 total)
+### Service Pages
 - `/services/tax-strategy/` - Tax Strategy Consulting
 - `/services/tax-compliance/` - Tax Compliance & Filing
 - `/services/international-tax/` - International Tax Services
@@ -84,8 +84,8 @@ A Hugo-based static website with centralized configuration for complete flexibil
 ## Support
 
 For questions or changes:
-1. Edit `data/site-config.json` for configuration
+1. Edit `data/siteconfig.json` for configuration
 2. Create new content files in `content/` for pages
 3. See documentation files for detailed guides
 
-**No coding knowledge required!**
+No coding knowledge required.

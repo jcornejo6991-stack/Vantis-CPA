@@ -2,6 +2,7 @@ baseURL = "https://vantiscpa.com/"
 languageCode = "en-us"
 title = "Vantis CPA"
 pluralizeListTitles = false
+disableKinds = ["taxonomy", "term"]
 
 [params]
 description = "Tax consulting for founders, expats, and global businesses"
@@ -11,4 +12,3 @@ unsafe = true
 
 [minify]
 minifyOutput = true
-
