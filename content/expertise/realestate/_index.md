@@ -1,37 +1,41 @@
 ---
 title: "Real Estate Owners"
-description: "Cost segregation, 1031 exchanges, REPS qualification, and passive loss planning for rental property owners and real estate investors."
+description: "Tax strategy and compliance for rental property owners and real estate investors, including REPS, 1031 exchanges, short-term rentals, and passive loss planning."
 layout: "service"
 subtitle: "Tax planning and compliance built around the rules that only apply to real estate."
-heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "Real Estate Has Its Own Tax Code"
+  - title: "Tax Support for Real Estate Owners and Investors"
     body: |
-      Cost segregation, 1031 exchanges, Real Estate Professional Status, passive activity rules, QBI deductions. Most CPAs know these exist. Few apply them correctly or aggressively enough to matter. The difference between a real estate-focused CPA and a generalist shows up directly on your return, and the gap is often tens of thousands of dollars per year. Real estate is one of the most tax-advantaged asset classes in the code. Most owners aren't using it fully.
-  - title: "Strategy That Matches Your Structure"
+      Real estate has its own set of tax rules, and the outcome often depends on how the property is held, how the activity is reported, and whether the owner is using the right planning opportunities. We work with rental property owners, real estate investors, and short-term rental operators who need both compliance and strategy built around real estate-specific rules.
+  - title: "What Real Estate Owners Usually Need"
     body: |
-      We work with rental property owners, flippers, developers, and investors holding real estate through LLCs, partnerships, and S-corporations. Every structure has different implications for:
+      Common real estate tax needs include:
 
-      * Depreciation and cost recovery
-      * Self-employment tax exposure
-      * The Section 199A QBI deduction
-      * Passive activity loss rules and grouping elections
-      * Depreciation recapture on sale
+      * Rental property tax reporting
+      * Schedule E and partnership return support
+      * Real Estate Professional Status analysis
+      * 1031 exchange planning
+      * Short-term rental tax treatment
+      * Passive loss and grouping analysis
+      * Depreciation and gain-on-sale planning
 
-      We match the entity to the strategy. Not the other way around. The right structure protects your depreciation benefits, reduces your tax rate, and positions you cleanly for a future sale or exchange.
-  - title: "Real Estate Professional Status"
+      The right structure and reporting approach can materially change the tax result over time.
+  - title: "Real Estate Professional Status and Beyond"
     body: |
-      If you qualify for Real Estate Professional Status, it unlocks the ability to deduct rental losses against ordinary income with no limitation. The IRS challenges REPS more than almost any other position on a return. We document it properly from the start so the position holds up. If you don't qualify, we find every other available lever: cost segregation studies, grouping elections, short-term rental strategies, and passive loss planning. There's almost always more to work with than what's being used.
+      If you qualify for Real Estate Professional Status, it can unlock much larger rental loss deductions. If you do not qualify, there may still be planning opportunities through grouping elections, short-term rental treatment, and depreciation strategy. We help owners understand which levers actually apply to their facts instead of forcing every investor into the same playbook.
+  - title: "Who This Is For"
+    body: |
+      This expertise area fits long-term rental owners, short-term rental hosts, real estate professionals, and investors holding real estate through LLCs or partnerships who want more than a generic Schedule E filing each year.
 sectionTitle: "What We Handle"
 specializations:
-  - label: "Cost Segregation Studies"
-  - label: "1031 Like-Kind Exchanges"
-  - label: "Real Estate Professional Status (REPS)"
-  - label: "Passive Activity Loss Rules & Grouping Elections"
-  - label: "Section 199A / QBI Deduction Optimization"
-  - label: "Rental Property Tax Strategy"
-  - label: "Short-Term Rental Tax Planning (Airbnb, VRBO)"
-  - label: "Partnership & Multi-Member LLC Returns"
-  - label: "Depreciation Recapture Planning"
+  - label: "Rental Property Tax Reporting"
+  - label: "Schedule E and Rental Income Reporting"
+  - label: "Real Estate Professional Status"
+  - label: "1031 Exchange Planning"
+  - label: "Passive Loss and Grouping Analysis"
+  - label: "Short-Term Rental Tax Planning"
+  - label: "Partnership and Multi-Member LLC Returns"
+  - label: "Depreciation Planning"
+  - label: "Gain on Sale Planning"
   - label: "Florida Sales Tax on Rentals"
 ---

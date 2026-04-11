@@ -1,37 +1,43 @@
 ---
 title: "Foreign Business and Investors"
+description: "Tax and administrative support for foreign businesses and investors entering or operating in the U.S., including entity setup, Form 5472 compliance, EIN and ITIN applications, and ongoing filing support."
 layout: "service"
 subtitle: "Tax and accounting services for foreign businesses and investors entering or operating in the U.S."
 heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "The U.S. Tax System Does Not Work Like Yours"
+  - title: "Tax Support for Foreign Owners Entering the U.S."
     body: |
-      Entity classification, withholding rules, treaty elections, estate tax exposure on U.S. assets. The rules are different and the penalties for getting them wrong are severe. Foreign investors who enter the U.S. without the right structure don't find out until they're in front of the IRS. Form 5472 is required for every reportable transaction between a foreign-owned entity and its related parties. The penalty for filing late or incomplete is $25,000 per form per year. The businesses that enter the U.S. successfully are the ones that build the structure before the first dollar moves.
-  - title: "What We Handle"
+      Foreign owners entering the U.S. often need help with much more than a tax return. Entity setup, Form 5472 exposure, EIN and ITIN applications, U.S. bank setup support, ongoing filings, and overall structure all need to be handled in a way that fits the business and the owner. We help foreign businesses and investors get established in the U.S. with cleaner tax and administrative foundations.
+  - title: "What Foreign Owners Usually Need"
     body: |
-      We work with foreign-owned U.S. subsidiaries, single-member LLCs owned by non-resident aliens, and inbound investment structures across real estate, private equity, and operating businesses:
+      Common inbound needs include:
 
       * U.S. entity formation and structure analysis
       * Form 5472 and related-party disclosure compliance
-      * FIRPTA withholding and compliance
-      * Tax treaty election and analysis
-      * ECI and FDAP income planning
-      * U.S. estate tax exposure for non-residents
+      * EIN and ITIN applications
+      * U.S. tax return filing for foreign-owned entities
+      * Treaty and classification analysis
+      * Estate tax and ownership structure review for U.S. assets
       * Inbound investment structuring
-      * EIN and ITIN applications for foreign owners
+      * Back-office support for setup, renewals, and filings
+
+      The right setup reduces later cleanup, keeps compliance manageable, and makes U.S. operations easier to run.
   - title: "From Entry Through Ongoing Operations"
     body: |
-      We handle the initial structure and stay involved through ongoing compliance. Annual filings, related-party reporting, treaty positions, and U.S. tax return obligations. If you're already operating without proper structure, we clean it up and get you properly documented. Your exposure in the U.S. is manageable when the right framework is in place from the start.
+      We can help at formation and stay involved through ongoing operations. That includes annual filings, related-party reporting, renewals, tax return support, and cleanup if the business was formed before the structure was fully thought through. Good inbound planning is about making the U.S. side workable year after year.
+  - title: "Who This Is For"
+    body: |
+      This expertise area fits foreign nationals opening U.S. LLCs, foreign-owned U.S. subsidiaries, inbound real estate investors, and non-U.S. owners who need both tax and practical setup support in the U.S.
 sectionTitle: "What We Handle"
 specializations:
-  - label: "U.S. Subsidiaries & Branch Operations"
-  - label: "Foreign-Owned SMLLCs & Disregarded Entities"
-  - label: "Form 5472 & Related-Party Disclosures"
-  - label: "FIRPTA Compliance & Withholding"
+  - label: "Foreign-Owned U.S. LLCs"
+  - label: "U.S. Subsidiary Setup"
+  - label: "Form 5472 Compliance"
+  - label: "EIN and ITIN Applications"
+  - label: "U.S. Entity Formation"
   - label: "Inbound Investment Structuring"
-  - label: "Tax Treaty Election & Analysis"
-  - label: "ECI & FDAP Income Planning"
-  - label: "U.S. Estate Tax Exposure for Non-Residents"
-  - label: "EIN & ITIN Applications"
-  - label: "U.S. Entity Formation (Florida, Wyoming, Texas)"
+  - label: "Treaty and Classification Analysis"
+  - label: "Estate Tax Exposure Review"
+  - label: "U.S. Tax Return Support"
+  - label: "Renewals and Back-Office Support"
 ---

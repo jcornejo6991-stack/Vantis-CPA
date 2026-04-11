@@ -1,31 +1,45 @@
 ---
 title: "Tax Strategy"
-description: "Year-round tax planning for business owners — entity elections, income timing, retirement plans, depreciation. Stop reacting at year-end."
+description: "Year-round tax planning for business owners, investors, and high earners. Entity elections, retirement planning, estimated taxes, income timing, and proactive CPA guidance."
 layout: "service"
-subtitle: "Year-round tax planning that puts the code to work for you."
+subtitle: "Year-round tax planning built to reduce taxes before the filing deadline closes your options."
 heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "The Problem with Waiting Until Year-End"
+  - title: "Proactive Tax Planning, Not Last-Minute Cleanup"
     body: |
-      Most business owners react at year-end, which is exactly when the biggest planning windows close. S-corp elections, depreciation acceleration, retirement plan contributions, income timing strategies. These have December 31 deadlines. By tax time, thousands in potential savings are already gone. The businesses that pay the least in taxes aren't the ones with the best accountant at filing time. They're the ones whose CPA is working the rest of the year.
-  - title: "What We Do Differently"
+      Most tax savings come from decisions made before year-end, not after the return is prepared. Entity elections, retirement contributions, income timing, depreciation strategy, estimated tax adjustments, and owner compensation planning all have timing rules. If no one is looking at those issues until filing season, many of the best moves are already gone. Tax strategy is not a one-time meeting. It is ongoing planning that keeps more of what you earn.
+  - title: "What Tax Strategy Usually Includes"
     body: |
-      We build multi-year tax projections and identify which planning moves make sense for your situation. We model entity restructuring, find opportunity windows before they expire, and coordinate across your entire business. Income recognition, expense timing, retirement savings, estimated tax adjustments, entity elections. Everything works together, not in isolation. Every lever in the code has a window. We make sure you're pulling the right ones at the right time.
-  - title: "Year-Round Partnership"
+      We build tax strategy around the decisions that create the biggest practical impact:
+
+      * Entity structure and S-corp election analysis
+      * Quarterly estimated tax planning
+      * Retirement contribution strategy
+      * Owner compensation and distribution planning
+      * Income timing and deduction timing
+      * Depreciation and cost recovery planning
+      * Multi-year tax projections
+      * State tax and residency considerations
+
+      The goal is not to make the return look clever. The goal is to reduce tax legally, improve cash flow, and make sure the filing position matches the plan.
+  - title: "Who This Is For"
     body: |
-      Choose the engagement structure that fits your business: monthly checkpoints for real-time collaboration, quarterly reviews for strategic oversight, or annual planning before year-end. Someone in your corner year-round who knows your numbers inside-out and is always looking ahead, not just behind. That continuity creates real compounding. One-time reviews are valuable. Real tax planning happens when someone is watching all year, understanding your business trajectory, and making moves when the windows are open.
+      This service is a strong fit for business owners, founders, real estate investors, self-employed professionals, and high earners whose tax picture is no longer simple. If your income is growing, your entity structure is changing, your estimated taxes feel off, or you know you are paying more than necessary without a real plan behind it, this is the work that closes that gap.
+  - title: "Planning That Connects to Filing and Books"
+    body: |
+      Tax strategy works best when it connects directly to compliance and bookkeeping. We do not treat planning as a separate theory exercise. The recommendations need to flow through your books, payroll, estimated payments, and final return so the benefit is actually realized. That is what turns advice into lower tax, better records, and fewer surprises.
 sectionTitle: "What We Cover"
 specializations:
-  - label: "Multi-Year Tax Projections & Scenario Modeling"
-  - label: "Entity Type & Structure Analysis (LLC, S-Corp, C-Corp, Partnership)"
-  - label: "S-Corp Election Strategy & Implementation (Form 2553)"
-  - label: "Reasonable Compensation Optimization"
-  - label: "Qualified Business Income (Section 199A) Planning"
-  - label: "Income Timing & Recognition Strategies"
-  - label: "Depreciation Acceleration & Cost Recovery"
-  - label: "Retirement Plan Setup & Optimization (SEP, Solo 401k, Defined Benefit)"
-  - label: "Tax-Efficient Exit, Sale & Succession Planning"
-  - label: "Estimated Tax Payment Optimization"
-  - label: "State Tax Minimization & Residency Planning"
-  - label: "Business Credit Identification & Application (R&D, WOTC, EITC)"
+  - label: "Multi-Year Tax Projections and Scenario Modeling"
+  - label: "Entity Type and Structure Analysis"
+  - label: "S-Corp Election Strategy and Implementation"
+  - label: "Reasonable Compensation Planning"
+  - label: "Quarterly Estimated Tax Planning"
+  - label: "Income Timing and Deduction Timing"
+  - label: "Retirement Plan Strategy"
+  - label: "Depreciation and Cost Recovery Planning"
+  - label: "State Tax and Residency Planning"
+  - label: "Owner Compensation and Distribution Planning"
+  - label: "Business and Investment Tax Planning"
+  - label: "Tax Planning Before a Sale or Exit"
 ---

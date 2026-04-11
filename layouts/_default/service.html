@@ -114,7 +114,7 @@
       </form>
     </div>
     <div class="right-column">
-      <div class="intro-text">
+      <div class="intro-text{{ if .Params.sections }} intro-text-sections{{ end }}">
         {{ if .Params.sections }}
           {{ range .Params.sections }}
           <div class="intro-section">

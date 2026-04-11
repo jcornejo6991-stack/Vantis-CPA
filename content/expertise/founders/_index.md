@@ -1,41 +1,45 @@
 ---
 title: "Founders & Startups"
-description: "Entity elections, equity compensation, R&D credits, and investor-ready books for startups at every stage. S-corp, C-corp, and multi-state."
+description: "Tax and accounting support for founders and startups, from entity setup and bookkeeping to payroll, tax filings, equity compensation, and growth-stage planning."
 layout: "service"
 subtitle: "Tax and accounting infrastructure for founders who are building something worth protecting."
 heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "Structure Early or Pay Later"
+  - title: "Tax and Accounting for Founders at Every Stage"
     body: |
-      The founders who scale successfully aren't the ones who figure out taxes later. They're the ones who set the structure right before the numbers get big. Entity elections, equity compensation, and payroll decisions lock in early and cost real money to unwind. If you're still filing on a Schedule C with six-figure revenue, you're likely overpaying self-employment tax by thousands every year. That's not a future problem. It's happening now.
-  - title: "What We Handle"
+      Founders usually outgrow their original tax setup before they realize it. The business starts as a simple idea, then revenue grows, payroll starts, owner compensation matters, investors ask for cleaner reporting, and multi-state issues show up fast. We help founders build the accounting and tax structure early enough that growth does not create avoidable cleanup later.
+  - title: "What Founders Usually Need"
     body: |
-      We work with founders at every stage, from pre-revenue to exit. Services include:
+      We work with founders from early revenue through more established operating stages. Common needs include:
 
-      * Entity selection and S-corp or C-corp elections
-      * Reasonable compensation setup and documentation
-      * R&D tax credit analysis
-      * Equity compensation and stock option planning
-      * Payroll setup and compliance
-      * Quarterly tax projections
-      * Multi-state nexus and apportionment
-      * Bookkeeping and investor-ready financial statements
-      * Cap table hygiene and defensible filing positions
+      * Entity setup and S-corp or C-corp elections
+      * Bookkeeping and financial reporting
+      * Payroll setup and owner compensation
+      * Tax return preparation and quarterly estimates
+      * Equity compensation and stock option reporting
+      * Multi-state filing support
+      * Back-office setup and renewals
+      * Clean records for growth, financing, or a future exit
 
-      For venture-backed companies, we handle C-corp structures and the reporting that investors expect. For bootstrapped businesses, we focus on reducing self-employment tax and building the foundation for growth.
-  - title: "From Formation Through Exit"
+      The goal is to build a business that is tax-efficient, organized, and easier to scale.
+  - title: "Who This Is For"
     body: |
-      We provide tax strategy, compliance, and financial reporting that holds up at every stage. Clean books, defensible positions, and a CPA who picks up the phone. Whether you're raising your first round or planning a sale, the structure we build now is what protects you later.
+      This expertise area fits solo founders, owner-operators, startup teams, and growth-stage businesses that need more than basic tax prep. If the business is moving from simple self-employment into payroll, entity planning, equity compensation, or recurring bookkeeping, we help build the next layer correctly.
+  - title: "From Formation Through Ongoing Operations"
+    body: |
+      We provide tax strategy, compliance, bookkeeping, and operational support that can stay with the business as it grows. That means cleaner books, better tax planning, organized payroll, and filings that stay aligned with how the company is actually structured.
 sectionTitle: "What We Handle"
 specializations:
-  - label: "S-Corp & C-Corp Entity Elections"
-  - label: "Reasonable Compensation Setup & Documentation"
-  - label: "R&D Tax Credit Analysis"
-  - label: "Equity Compensation & Stock Option Planning"
-  - label: "Payroll Setup & Compliance (Gusto)"
-  - label: "Quarterly Tax Projections"
-  - label: "Multi-State Nexus & Apportionment"
-  - label: "Investor-Ready Financial Statements"
-  - label: "Bookkeeping & QuickBooks Setup"
-  - label: "Business Formation (Florida, Wyoming, Texas)"
+  - label: "Entity Setup and Elections"
+  - label: "S-Corp and C-Corp Planning"
+  - label: "Founder Tax Strategy"
+  - label: "Quarterly Estimated Tax Planning"
+  - label: "Bookkeeping and Financial Reporting"
+  - label: "Payroll Setup and Owner Payroll"
+  - label: "Equity Compensation Reporting"
+  - label: "Business Tax Return Preparation"
+  - label: "Multi-State Filing Support"
+  - label: "Business Formation and Renewals"
+  - label: "Back-Office Administrative Support"
+  - label: "Clean-Up and Catch-Up Work"
 ---
