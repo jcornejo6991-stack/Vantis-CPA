@@ -9,6 +9,7 @@
   <link rel="apple-touch-icon" href="/favicon.png">
 
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Data.siteconfig.company.name }}{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
   <meta name="description" content="{{ .Description | default .Site.Data.siteconfig.company.description }}">
   <meta name="keywords" content="{{ delimit .Keywords ", " | default "tax consulting, CPA, tax strategy" }}">
 
