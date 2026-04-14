@@ -21,7 +21,7 @@ sections:
       * Multi-year tax projections
       * State tax and residency considerations
 
-      The goal is not to make the return look clever. The goal is to reduce tax legally, improve cash flow, and make sure the filing position matches the plan.
+      The goal is to reduce tax legally, improve cash flow, and make sure the tax return reflects decisions made intentionally throughout the year.
   - title: "Who This Is For"
     body: |
       This service is a strong fit for business owners, founders, real estate investors, self-employed professionals, and high earners whose tax picture is no longer simple. If your income is growing, your entity structure is changing, your estimated taxes feel off, or you know you are paying more than necessary without a real plan behind it, this is the work that closes that gap.
