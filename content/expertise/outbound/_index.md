@@ -1,47 +1,54 @@
 ---
-title: "Outbound U.S. Businesses"
-description: "International tax support for U.S. businesses with foreign subsidiaries, overseas activity, or foreign-source income, including Form 5471, foreign tax credits, and cross-border compliance."
+title: "U.S. Individuals with International Ties"
+description: "Tax compliance and planning for U.S. individuals and families with foreign financial accounts, foreign investments, foreign inheritance, or dual citizenship obligations."
 layout: "service"
-subtitle: "International tax compliance and strategy for U.S. companies with foreign operations."
+subtitle: "Tax compliance and planning for U.S. citizens, dual citizens, and green card holders with foreign financial ties."
 heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "International Tax Support for U.S. Businesses Expanding Abroad"
+  - title: "International Tax for U.S. Individuals and Families"
     body: |
-      When a U.S. business starts operating outside the country, the tax reporting usually becomes more complicated immediately. Foreign entities, foreign bank accounts, additional informational filings, and foreign tax paid all affect the U.S. return. We help businesses handle the cross-border compliance and planning side before it turns into a backlog of missed filings.
-  - title: "What U.S. Businesses With Foreign Activity Usually Need"
+      You don't have to be living abroad to have complex international tax obligations. U.S. residents with foreign bank accounts, investments, inherited assets, or dual citizenship face reporting requirements that go well beyond a standard 1040. Missing these filings, even when no additional tax is owed, can result in significant penalties.
+  - title: "What U.S. Individuals with Foreign Ties Usually Need"
     body: |
-      Common outbound needs include:
+      Common needs include:
 
-      * Form 5471 for controlled foreign corporations
-      * Form 8865 for foreign partnerships
-      * Form 8858 for foreign disregarded entities
-      * Form 3520 reporting where applicable
-      * Foreign tax credit planning and optimization
-      * Check-the-box entity classification elections
-      * FBAR and FATCA reporting
-      * U.S. reporting for foreign subsidiaries
-      * Foreign ownership and account reporting
-      * Cross-border structure review
-
-      Whether the company has a foreign subsidiary, international operations, or foreign-source income, we help the U.S. filing side stay organized and aligned with the structure.
-  - title: "Compliance and Planning Together"
+      * FBAR filing for foreign financial accounts exceeding $10,000
+      * FATCA / Form 8938 for foreign financial assets
+      * Form 5471 for U.S. persons with ownership in a foreign corporation
+      * Form 8865 for U.S. persons with an interest in a foreign partnership
+      * Form 8858 for U.S. persons who own a foreign disregarded entity
+      * Form 3520 for foreign gifts or inheritances received
+      * Foreign tax credit for taxes paid to foreign governments
+      * Dual citizenship filing analysis and strategy
+      * Green card holder U.S. tax obligations
+      * Foreign pension and account reporting
+      * State tax considerations for foreign income
+  - title: "Receiving a Foreign Inheritance or Gift"
     body: |
-      Outbound work is not just about filing a foreign-information form. The business still needs a structure that makes sense, a tax credit position that is usable, and a reporting process that can be maintained year after year. We help businesses stay compliant while also making sure the international side fits the broader U.S. tax picture.
-  - title: "Who This Is For"
+      Many U.S. individuals receive assets from abroad, whether an inheritance from a foreign parent, a gift from a foreign relative, or a transfer from a foreign trust, and do not realize a U.S. filing requirement exists. Form 3520 is required in many of these situations, and the penalties for missing it are steep. We help clients identify when reporting is required and handle it correctly.
+  - title: "Dual Citizens and Green Card Holders"
     body: |
-      This expertise area fits U.S. businesses with foreign subsidiaries, U.S. owners of overseas companies, and growing companies expanding internationally that need the U.S. reporting handled correctly from the start.
+      U.S. tax law applies based on citizenship and residency status, not just where you live. Dual citizens and green card holders often have obligations that aren't obvious, including foreign account reporting, treaty considerations, and in some cases reporting on foreign entities or pensions. We help clients understand what applies to them and stay current without overpaying.
+  - title: "Behind on Prior Years"
+    body: |
+      If you have missed FBARs, Form 8938, Form 3520, or other foreign filings, streamlined filing procedures may reduce or eliminate penalties. We assess the situation, determine the right approach, and help you get current with as little exposure as possible.
+  - title: "Year-Round International Tax Support"
+    body: |
+      International tax situations change as accounts open and close, inheritances arrive, and residency status shifts. We provide ongoing support for clients whose lives include a foreign dimension, keeping filings current and flagging issues before they become problems.
 sectionTitle: "What We Handle"
 specializations:
-  - label: "Form 5471 Compliance"
-  - label: "Form 8865 Compliance"
-  - label: "Form 8858 Compliance"
-  - label: "Form 3520 Reporting"
-  - label: "Foreign Tax Credit Planning"
-  - label: "Entity Classification Elections"
-  - label: "FBAR and FATCA Reporting"
-  - label: "Foreign Subsidiary Reporting"
-  - label: "Cross-Border Structure Review"
-  - label: "U.S. Tax Reporting for Overseas Operations"
-  - label: "International Expansion Tax Support"
-  - label: "Ongoing Cross-Border Compliance"
+  - label: "FBAR Filing"
+  - label: "FATCA / Form 8938 Reporting"
+  - label: "Form 5471 — Foreign Corporation Reporting"
+  - label: "Form 8865 — Foreign Partnership Reporting"
+  - label: "Form 8858 — Foreign Disregarded Entity"
+  - label: "Foreign Tax Credit"
+  - label: "Form 3520 — Foreign Gifts & Inheritance"
+  - label: "Dual Citizen Tax Compliance"
+  - label: "Green Card Holder U.S. Tax Obligations"
+  - label: "Foreign Account Reporting"
+  - label: "Foreign Pension Reporting"
+  - label: "Streamlined Filing Procedures"
+  - label: "State Tax and Foreign Income"
+  - label: "Year-Round International Tax Support"
 ---

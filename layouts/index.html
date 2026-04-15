@@ -123,7 +123,7 @@
       background: radial-gradient(circle at center, #edeef7 0%, #fff 72%);
       padding: 77px 0;
       position: relative;
-      margin: 25px 25px 22px 22px;
+      margin: 31px 25px 22px 22px;
       border-radius: 20px;
       min-height: 75vh;
       display: flex;
@@ -487,7 +487,7 @@
       display: flex;
       flex-direction: column;
       gap: 0;
-      max-width: 1180px;
+      max-width: 940px;
       margin-left: auto;
       margin-right: auto;
       border-top: 1px solid rgba(6, 34, 21, 0.14);
@@ -497,11 +497,11 @@
       position: relative;
       text-decoration: none;
       display: grid;
-      grid-template-columns: minmax(260px, 0.85fr) minmax(360px, 1.35fr) minmax(110px, auto);
+      grid-template-columns: minmax(0, 1fr) minmax(120px, auto);
       align-items: center;
-      gap: 28px;
-      min-height: 104px;
-      padding: 24px 8px;
+      gap: 18px;
+      min-height: 0;
+      padding: 28px 10px;
       cursor: pointer;
       color: var(--navy);
       background: transparent;
@@ -517,36 +517,61 @@
       opacity: 0;
       transition: opacity 0.25s ease;
     }
+    .industry-title-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      min-width: 0;
+    }
+    .industry-category-label {
+      display: inline-flex;
+      align-items: center;
+      align-self: flex-start;
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: rgba(21, 72, 46, 0.08);
+      color: var(--primary);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
     .industry-title {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(17px, 1.75vw, 24px);
+      font-size: clamp(20px, 2vw, 28px);
       font-weight: 700;
       color: var(--navy);
       margin: 0;
-      line-height: 1;
+      line-height: 1.1;
       text-align: left;
-      white-space: nowrap;
+      letter-spacing: -0.02em;
+      white-space: normal;
+      text-wrap: balance;
     }
     .industry-description {
       color: var(--text-mid);
-      font-size: 15px;
-      line-height: 1.55;
+      font-size: 13.5px;
+      line-height: 1.6;
       margin: 0;
-      max-width: 620px;
+      max-width: 560px;
     }
     .industry-learn-more {
-      font-size: 13px;
+      font-size: 12px;
       color: var(--primary);
       font-weight: 700;
       display: inline-block;
       justify-self: end;
+      align-self: center;
       white-space: nowrap;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
       transition: letter-spacing 0.2s ease, transform 0.2s ease;
     }
     .industry-card-wrapper:hover .industry-card {
       background: rgba(255, 255, 255, 0.64);
-      padding-left: 22px;
-      padding-right: 22px;
+      padding-left: 24px;
+      padding-right: 24px;
     }
     .industry-card-wrapper:hover .industry-card::after { opacity: 1; }
     .industry-card-wrapper:hover .industry-learn-more { color: #15482E; letter-spacing: 0.04em; transform: translateX(2px); }
@@ -1126,7 +1151,9 @@
       .services-grid { grid-template-columns: 1fr 1fr; }
       .core-services-grid { grid-template-columns: 1fr 1fr; }
       .support-services-grid { grid-template-columns: 1fr 1fr; }
-      .industry-card { grid-template-columns: minmax(235px, 0.85fr) minmax(300px, 1.35fr) minmax(100px, auto); gap: 22px; min-height: 104px; height: auto; }
+      .industry-card { grid-template-columns: minmax(0, 1fr) minmax(100px, auto); gap: 16px; min-height: 0; height: auto; }
+      .industry-title { font-size: clamp(19px, 3.2vw, 24px); }
+      .industry-description { max-width: none; }
       .resources-grid { grid-template-columns: 1fr 1fr; }
       .contact { margin: 12px 12px; }
       .contact-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1137,9 +1164,11 @@
       .resources-grid { grid-template-columns: 1fr; }
       .core-services-grid,
       .support-services-grid { grid-template-columns: 1fr; }
-      .industry-card { grid-template-columns: 1fr; align-items: flex-start; gap: 12px; min-height: 0; height: auto; padding: 24px 0; }
-      .industry-title { font-size: clamp(18px, 5vw, 24px); white-space: normal; }
-      .industry-learn-more { justify-self: start; }
+      .industry-card { grid-template-columns: 1fr; align-items: flex-start; gap: 10px; min-height: 0; height: auto; padding: 22px 0; }
+      .industry-title-group { gap: 8px; }
+      .industry-title { font-size: clamp(18px, 5vw, 22px); }
+      .industry-description { font-size: 13px; }
+      .industry-learn-more { justify-self: start; align-self: flex-start; }
       .industry-card-wrapper:hover .industry-card { padding-left: 12px; padding-right: 12px; }
       .form-row { grid-template-columns: 1fr; }
       .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
@@ -1320,7 +1349,8 @@
     @media (max-width: 480px) {
       .process-bring-section { padding: 56px 0; }
       .industry-card { gap: 12px; min-height: 0; height: auto; }
-      .industry-title { font-size: clamp(17px, 5vw, 22px); }
+      .industry-category-label { font-size: 9px; letter-spacing: 0.1em; }
+      .industry-title { font-size: clamp(17px, 6vw, 20px); }
     }
   </style>
   {{ partial "nav-css.html" . }}
@@ -1479,8 +1509,8 @@
   <div class="container">
     <div class="industries-header">
       <p class="section-label fade-up">FOCUSED EXPERTISE</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Work With</h2>
-      <p class="section-subheading fade-up fade-up-d2">From local to global taxpayers, a tailored solution for each.</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Focused Expertise</h2>
+      <p class="section-subheading fade-up fade-up-d2">Choose the tax lane that matches the complexity of your situation.</p>
     </div>
     <div class="industries-grid" id="industries-grid">
       <!-- Will be populated by JavaScript -->
@@ -1500,15 +1530,26 @@
         card.setAttribute('data-accent', practice.accent);
         card.setAttribute('aria-label', practice.name.replace(/&/g, 'and'));
 
+        const titleGroup = document.createElement('div');
+        titleGroup.className = 'industry-title-group';
+
+        if (practice.category) {
+          const categoryLabel = document.createElement('span');
+          categoryLabel.className = 'industry-category-label';
+          categoryLabel.textContent = practice.category;
+          titleGroup.appendChild(categoryLabel);
+        }
+
         const title = document.createElement('h3');
         title.className = 'industry-title';
         title.textContent = practice.name.replace(/&/g, 'and');
-        card.appendChild(title);
+        titleGroup.appendChild(title);
 
         const description = document.createElement('p');
         description.className = 'industry-description';
         description.textContent = practice.description;
-        card.appendChild(description);
+        titleGroup.appendChild(description);
+        card.appendChild(titleGroup);
 
         const learnMore = document.createElement('span');
         learnMore.className = 'industry-learn-more';
@@ -1795,13 +1836,13 @@
         id: "s-corps",
         title: "S-Corporation Election: When It Makes Sense (and When It Doesn't)",
         description: "Learn when an S-Corp election saves taxes and when it costs more. Covers the savings calculation, reasonable salary rules, and who should avoid electing.",
-        practices: ["founders", "local", "realestate"]
+        practices: ["business", "individuals", "realestate"]
       },
       {
         id: "smllc-5472",
         title: "Form 5472 for Foreign-Owned Single-Member LLCs",
         description: "Foreign-owned disregarded entities must file Form 5472 or face a $25,000 penalty. Here's what triggers the requirement and how to comply.",
-        practices: ["founders", "local", "inbound"]
+        practices: ["business", "individuals", "inbound"]
       },
       {
         id: "form-5471",
@@ -1837,19 +1878,19 @@
         id: "short-term-rental-taxes",
         title: "Short-Term Rental Taxes: What Airbnb and VRBO Hosts Owe in Florida",
         description: "STR hosts face income tax, self-employment tax, Florida sales tax, and county tourist development taxes. Most platforms collect some but not all of what you owe.",
-        practices: ["realestate", "local"]
+        practices: ["realestate", "individuals"]
       },
       {
         id: "pre-immigration-planning",
         title: "Pre-Immigration Tax Planning: What to Do Before You Become a U.S. Tax Resident",
         description: "Becoming a U.S. tax resident triggers worldwide income reporting, foreign trust rules, and potential double taxation. The right moves before you arrive can save years of tax pain. The wrong ones are permanent.",
-        practices: ["expats", "founders"]
+        practices: ["expats", "business"]
       },
       {
         id: "solo-401k-vs-sep-ira",
         title: "Solo 401(k) vs. SEP-IRA: Which Retirement Plan Is Right for Self-Employed Business Owners?",
         description: "Both plans offer high contribution limits and immediate tax deductions, but the Solo 401(k) lets you save significantly more at lower income levels and includes a Roth option most business owners don't know about.",
-        practices: ["founders", "local"]
+        practices: ["business", "individuals"]
       }
     ];
 

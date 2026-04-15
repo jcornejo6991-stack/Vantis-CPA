@@ -1,17 +1,17 @@
 [
   {
-    "name": "Individuals and Local Business",
-    "slug": "local",
-    "url": "/expertise/local/",
+    "name": "Individuals and Families",
+    "slug": "individuals",
+    "url": "/expertise/individuals/",
     "accent": "local",
-    "description": "Professional tax and accounting frameworks providing actionable, precise financial clarity for domestic operations."
+    "description": "Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity."
   },
   {
-    "name": "Startups and Online Business",
-    "slug": "founders",
-    "url": "/expertise/founders/",
+    "name": "Local and Online Business",
+    "slug": "business",
+    "url": "/expertise/business/",
     "accent": "founders",
-    "description": "We empower early-stage businesses and modern entrepreneurs to navigate growth and scale with confidence."
+    "description": "Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies."
   },
   {
     "name": "Real Estate Owners",
@@ -21,11 +21,11 @@
     "description": "Maximize the return on your real estate investments with strategic tax planning."
   },
   {
-    "name": "International U.S. Citizens",
+    "name": "U.S. Individuals with International Ties",
     "slug": "outbound",
     "url": "/expertise/outbound/",
     "accent": "outbound",
-    "description": "Technical navigation of complex cross-border tax landscapes to ensure compliance and effective tax planning."
+    "description": "Tax compliance and planning for U.S. individuals and families with foreign accounts, investments, inheritance, or dual citizenship obligations."
   },
   {
     "name": "Foreign Business and Investors",

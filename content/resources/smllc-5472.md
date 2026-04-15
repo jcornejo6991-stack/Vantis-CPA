@@ -2,7 +2,7 @@
 title: "Form 5472 for Foreign-Owned Single-Member LLCs"
 description: "Foreign-owned disregarded entities must file Form 5472 or face a $25,000 penalty. Here's what triggers the requirement and how to comply."
 date: 2025-01-20
-practices: ["founders", "local", "inbound"]
+practices: ["business", "individuals", "inbound"]
 services: ["international-tax", "tax-compliance"]
 featured: false
 clusters: ["international-tax", "ecommerce-sellers", "latam-inbound"]

@@ -2,7 +2,7 @@
 title: "Form 8832 Entity Classification Elections for Foreign Owners"
 description: "Form 8832 lets eligible entities choose how they are classified for U.S. tax purposes. For foreign owners, the election can change reporting, withholding, Form 5472 exposure, and the entire tax profile of a U.S. or foreign business."
 date: 2026-04-11
-practices: ["inbound", "founders"]
+practices: ["inbound", "business"]
 services: ["international-tax", "tax-strategy", "tax-compliance"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]

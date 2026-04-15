@@ -132,11 +132,28 @@
       {{ if .Params.specializations }}
       <div class="content-section">
         <h3 class="section-title">{{ .Params.sectionTitle | default "Specializations" }}</h3>
-        <ul class="section-list">
-          {{ range .Params.specializations }}
+        {{ $specs := .Params.specializations }}
+        {{ $hasGroups := false }}
+        {{ range $specs }}{{ if .group }}{{ $hasGroups = true }}{{ end }}{{ end }}
+        {{ if $hasGroups }}
+          {{ $currentGroup := "" }}
+          {{ range $specs }}
+            {{ if ne .group $currentGroup }}
+              {{ if ne $currentGroup "" }}</ul>{{ end }}
+              <h4 class="spec-group-title">{{ .group }}</h4>
+              <ul class="section-list">
+              {{ $currentGroup = .group }}
+            {{ end }}
             <li>{{ if .url }}<a href="{{ .url }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
           {{ end }}
-        </ul>
+          {{ if ne $currentGroup "" }}</ul>{{ end }}
+        {{ else }}
+          <ul class="section-list">
+            {{ range $specs }}
+              <li>{{ if .url }}<a href="{{ .url }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
+            {{ end }}
+          </ul>
+        {{ end }}
       </div>
       {{ end }}
 

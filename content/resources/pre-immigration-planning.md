@@ -2,7 +2,7 @@
 title: "Pre-Immigration Tax Planning: What to Do Before You Become a U.S. Tax Resident"
 description: "Becoming a U.S. tax resident triggers worldwide income reporting, foreign trust rules, and potential double taxation. The right moves before you arrive can save years of tax pain. The wrong ones are permanent."
 date: 2026-01-01
-practices: ["expats", "founders"]
+practices: ["expats", "business"]
 services: ["international-tax", "tax-strategy"]
 featured: false
 clusters: ["international-tax", "latam-inbound"]

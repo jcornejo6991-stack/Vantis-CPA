@@ -2,7 +2,7 @@
 title: "Form 1120-F Filing Requirements for Foreign Corporations"
 description: "Foreign corporations with effectively connected income, U.S. branch activity, or protective filing needs may need Form 1120-F. Filing late can forfeit deductions and create expensive disputes with the IRS."
 date: 2026-04-11
-practices: ["inbound", "founders"]
+practices: ["inbound", "business"]
 services: ["international-tax", "tax-compliance"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]

@@ -47,10 +47,10 @@
       {"label": "Contact", "url": "/contact/"}
     ],
     "expertise": [
-      {"label": "Local Businesses", "url": "/expertise/local/"},
-      {"label": "Founders & Startups", "url": "/expertise/founders/"},
+      {"label": "Individuals and Families", "url": "/expertise/individuals/"},
+      {"label": "Local and Online Business", "url": "/expertise/business/"},
       {"label": "Real Estate Owners", "url": "/expertise/realestate/"},
-      {"label": "Outbound U.S. Businesses", "url": "/expertise/outbound/"},
+      {"label": "U.S. Individuals with International Ties", "url": "/expertise/outbound/"},
       {"label": "Foreign Business & Investors", "url": "/expertise/inbound/"},
       {"label": "U.S. Expats", "url": "/expertise/expats/"}
     ],
