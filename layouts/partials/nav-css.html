@@ -65,6 +65,7 @@
     /* ── MAIN ROW ── */
     .nav-main-row {
       width: 100%;
+      position: relative;
     }
     .nav-inner {
       width: 100%;
@@ -143,6 +144,10 @@
       position: relative;
       display: flex;
       align-items: center;
+    }
+    /* Mega-menu li must be static so panel positions relative to nav-main-row */
+    .nav-mega {
+      position: static;
     }
     .nav-dropdown > a::after {
       content: ' ▼';
@@ -298,5 +303,115 @@
       .nav-top-strip { display: none; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
+    }
+
+    /* ── MEGA-MENU PANEL ── */
+    .nav-mega-panel {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: linear-gradient(160deg, #0a2e1c 0%, #081e12 100%);
+      border-top: 2px solid rgba(255,255,255,0.12);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      padding: 24px 18px 20px;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+      z-index: 9999;
+    }
+    .nav-mega-panel.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .nav-mega-col {
+      padding: 0 20px 4px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      flex-direction: column;
+    }
+    .nav-mega-col:nth-child(3n) {
+      border-right: none;
+    }
+
+    .nav-mega-col-head {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 0 0 10px;
+      margin-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      transition: opacity 0.15s;
+    }
+    .nav-mega-col-head:hover { opacity: 0.75; }
+    .nav-mega-icon { font-size: 14px; }
+
+    .nav-mega-item {
+      font-size: 12px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: 0;
+      padding: 5px 0 5px 4px;
+      border-left: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s, padding-left 0.15s;
+    }
+    .nav-mega-item:hover {
+      color: rgba(255,255,255,0.9);
+      border-left-color: var(--accent, #4ade80);
+      padding-left: 8px;
+      opacity: 1;
+    }
+
+    .nav-mega-see-all {
+      margin-top: auto;
+      padding-top: 10px;
+      font-size: 11px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.3);
+      text-decoration: none;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      transition: color 0.15s;
+    }
+    .nav-mega-see-all:hover { color: rgba(255,255,255,0.65); opacity: 1; }
+
+    /* Services dropdown divider */
+    .nav-dropdown-divider {
+      border: none;
+      border-top: 1px solid #e5e7eb;
+      margin: 4px 0;
+    }
+
+    /* Schedule a Call CTA in nav */
+    .nav-cta-link {
+      background: #f97316 !important;
+      color: #fff !important;
+      padding: 7px 16px !important;
+      border-radius: 6px !important;
+      font-weight: 700 !important;
+      text-transform: none !important;
+      letter-spacing: 0 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta-link:hover { background: #ea6c0a !important; opacity: 1 !important; }
+
+    /* Hide mega panel on mobile — accordion handles it */
+    @media (max-width: 768px) {
+      .nav-mega-panel { display: none !important; }
     }
 </style>

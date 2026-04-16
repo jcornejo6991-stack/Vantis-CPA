@@ -69,55 +69,69 @@
       </ul>
 
       <script>
-        // Nav dropdown hover logic
         (function() {
-          let dropdownTimeout;
-          const navLinks = document.querySelector('.nav-links');
+          var dropdownTimeout;
+          var navLinks = document.querySelector('.nav-links');
           if (!navLinks) return;
-          const mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
-          mainDropdowns.forEach(dropdown => {
-            const menu = dropdown.querySelector('.nav-dropdown-menu');
-            if (!menu) return;
+          var mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
 
-            dropdown.addEventListener('mouseenter', () => {
+          mainDropdowns.forEach(function(dropdown) {
+            var menu = dropdown.querySelector('.nav-dropdown-menu, .nav-mega-panel');
+            if (!menu) return;
+            var isMega = menu.classList.contains('nav-mega-panel');
+
+            // Add ARIA disclosure attributes to the trigger anchor
+            var trigger = dropdown.querySelector(':scope > a');
+            if (trigger) {
+              trigger.setAttribute('aria-haspopup', 'true');
+              trigger.setAttribute('aria-expanded', 'false');
+            }
+
+            function showMenu() {
               clearTimeout(dropdownTimeout);
-              mainDropdowns.forEach(other => {
+              mainDropdowns.forEach(function(other) {
                 if (other !== dropdown) {
-                  const otherMenu = other.querySelector('.nav-dropdown-menu');
+                  var otherMenu = other.querySelector('.nav-dropdown-menu, .nav-mega-panel');
                   if (otherMenu) {
-                    otherMenu.style.opacity = '0';
-                    otherMenu.style.visibility = 'hidden';
-                    otherMenu.style.pointerEvents = 'none';
+                    if (otherMenu.classList.contains('nav-mega-panel')) {
+                      otherMenu.classList.remove('open');
+                    } else {
+                      otherMenu.style.opacity = '0';
+                      otherMenu.style.visibility = 'hidden';
+                      otherMenu.style.pointerEvents = 'none';
+                    }
                   }
+                  var otherTrigger = other.querySelector(':scope > a');
+                  if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
                 }
               });
-              menu.style.opacity = '1';
-              menu.style.visibility = 'visible';
-              menu.style.pointerEvents = 'auto';
-            });
+              if (isMega) {
+                menu.classList.add('open');
+              } else {
+                menu.style.opacity = '1';
+                menu.style.visibility = 'visible';
+                menu.style.pointerEvents = 'auto';
+              }
+              if (trigger) trigger.setAttribute('aria-expanded', 'true');
+            }
 
-            dropdown.addEventListener('mouseleave', () => {
-              dropdownTimeout = setTimeout(() => {
-                menu.style.opacity = '0';
-                menu.style.visibility = 'hidden';
-                menu.style.pointerEvents = 'none';
+            function hideMenu() {
+              dropdownTimeout = setTimeout(function() {
+                if (isMega) {
+                  menu.classList.remove('open');
+                } else {
+                  menu.style.opacity = '0';
+                  menu.style.visibility = 'hidden';
+                  menu.style.pointerEvents = 'none';
+                }
+                if (trigger) trigger.setAttribute('aria-expanded', 'false');
               }, 300);
-            });
+            }
 
-            menu.addEventListener('mouseenter', () => {
-              clearTimeout(dropdownTimeout);
-              menu.style.opacity = '1';
-              menu.style.visibility = 'visible';
-              menu.style.pointerEvents = 'auto';
-            });
-
-            menu.addEventListener('mouseleave', () => {
-              dropdownTimeout = setTimeout(() => {
-                menu.style.opacity = '0';
-                menu.style.visibility = 'hidden';
-                menu.style.pointerEvents = 'none';
-              }, 300);
-            });
+            dropdown.addEventListener('mouseenter', showMenu);
+            dropdown.addEventListener('mouseleave', hideMenu);
+            menu.addEventListener('mouseenter', function() { clearTimeout(dropdownTimeout); });
+            menu.addEventListener('mouseleave', hideMenu);
           });
         })();
       </script>
