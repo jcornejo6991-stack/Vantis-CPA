@@ -4,41 +4,89 @@
     "slug": "individuals",
     "url": "/expertise/individuals/",
     "accent": "local",
-    "description": "Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity."
+    "description": "Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity.",
+    "nav_icon": "👤",
+    "nav_label": "Individuals & Families",
+    "preview_items": [
+      "Tax Preparation & Planning",
+      "RSUs, Stock Options & QSBS",
+      "Multi-State Returns",
+      "IRS Notice Response"
+    ]
   },
   {
     "name": "Local and Online Business",
     "slug": "business",
     "url": "/expertise/business/",
     "accent": "founders",
-    "description": "Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies."
+    "description": "Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies.",
+    "nav_icon": "🏢",
+    "nav_label": "Founders & Startups",
+    "preview_items": [
+      "S-Corp Election & Strategy",
+      "International Business Structure",
+      "Bookkeeping & Back Office",
+      "Payroll Setup"
+    ]
   },
   {
     "name": "Real Estate Owners",
     "slug": "realestate",
     "url": "/expertise/realestate/",
     "accent": "realestate",
-    "description": "Maximize the return on your real estate investments with strategic tax planning."
+    "description": "Tax planning for property owners, short-term rental operators, and investors in real estate partnerships and funds.",
+    "nav_icon": "🏠",
+    "nav_label": "Real Estate Owners",
+    "preview_items": [
+      "1031 Exchange Planning",
+      "Cost Segregation & Depreciation",
+      "Real Estate Professional Status",
+      "Short-Term Rental Strategy"
+    ]
   },
   {
     "name": "U.S. Individuals with International Ties",
     "slug": "outbound",
     "url": "/expertise/outbound/",
     "accent": "outbound",
-    "description": "Tax compliance and planning for U.S. individuals and families with foreign accounts, investments, inheritance, or dual citizenship obligations."
+    "description": "Tax compliance and planning for citizens, green card holders, and dual residents with foreign accounts, foreign companies, and cross-border tax complexity.",
+    "nav_icon": "🧭",
+    "nav_label": "U.S. with Foreign Ties",
+    "preview_items": [
+      "Forms 5471 / 8865 / 8858",
+      "Foreign Inheritance & Form 3520",
+      "Dual Citizen & Green Card Filing",
+      "Foreign Pension Reporting"
+    ]
   },
   {
     "name": "Foreign Business and Investors",
     "slug": "inbound",
     "url": "/expertise/inbound/",
     "accent": "inbound",
-    "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly."
+    "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
+    "nav_icon": "🌎",
+    "nav_label": "Foreign Investors",
+    "preview_items": [
+      "U.S. Entity & EIN Setup",
+      "Form 5472 Compliance",
+      "FIRPTA & Withholding",
+      "Treaty Analysis"
+    ]
   },
   {
     "name": "U.S. Expats Abroad",
     "slug": "expats",
     "url": "/expertise/expats/",
     "accent": "expats",
-    "description": "Remote compliance support bridging the gap between the U.S. tax system and international residency."
+    "description": "Remote compliance support bridging the gap between the U.S. tax system and international residency.",
+    "nav_icon": "🌍",
+    "nav_label": "U.S. Expats Abroad",
+    "preview_items": [
+      "FEIE & Foreign Tax Credit",
+      "FBAR / FATCA Reporting",
+      "Streamlined Prior-Year Filing",
+      "Self-Employment Abroad"
+    ]
   }
 ]
