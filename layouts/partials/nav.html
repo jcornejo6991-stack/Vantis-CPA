@@ -141,13 +141,42 @@
       </button>
 
       <div class="mobile-menu" id="mobileMenu" role="menu">
-        <a href="/" role="menuitem">Home</a>
-        <a href="/services/" role="menuitem">Services</a>
-        <a href="/expertise/" role="menuitem">Expertise</a>
-        <a href="{{ $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
+
+        {{/* Who We Serve — expanded by default */}}
+        <div class="mobile-accordion" id="mobile-who-we-serve">
+          <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-wws-body">
+            Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="mobile-accordion-body open" id="mobile-wws-body">
+            {{ range $.Site.Data.expertise }}
+            <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .nav_label }}</a>
+            {{ end }}
+          </div>
+        </div>
+
+        {{/* Services — collapsed by default */}}
+        <div class="mobile-accordion" id="mobile-services">
+          <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-svc-body">
+            Services <span class="mobile-accordion-arrow" aria-hidden="true">▾</span>
+          </button>
+          <div class="mobile-accordion-body" id="mobile-svc-body">
+            <a href="/services/tax-strategy/" role="menuitem">Tax Strategy</a>
+            <a href="/services/tax-compliance/" role="menuitem">Tax Compliance</a>
+            <a href="/services/international-tax/" role="menuitem">International Tax</a>
+            <a href="/services/back-office/" role="menuitem">Back Office</a>
+            <a href="/services/bookkeeping/" role="menuitem">Bookkeeping</a>
+            <a href="/services/payroll/" role="menuitem">Payroll</a>
+            <a href="/services/sales-tax/" role="menuitem">Sales Tax</a>
+          </div>
+        </div>
+
         <a href="/resources/" role="menuitem">Resources</a>
         <a href="/referrals/" role="menuitem">Referrals</a>
-        <a href="/contact/" role="menuitem">Contact</a>
+        {{ with $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}
+        <a href="{{ . }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
+        {{ end }}
+        <a href="/contact/" class="mobile-menu-cta" role="menuitem">Schedule a Call →</a>
+
       </div>
     </div>
   </div>
@@ -180,11 +209,26 @@
       btn.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', String(open));
     });
-    menu.querySelectorAll('a').forEach(function (link) {
+    // Close menu when a non-accordion link is clicked
+    menu.querySelectorAll('a[role="menuitem"]').forEach(function (link) {
       link.addEventListener('click', function () {
         menu.classList.remove('open');
         btn.classList.remove('open');
         btn.setAttribute('aria-expanded', 'false');
+      });
+    });
+  })();
+
+  // Mobile accordion toggles
+  (function () {
+    document.querySelectorAll('.mobile-accordion-toggle').forEach(function (toggle) {
+      toggle.addEventListener('click', function () {
+        var bodyId = toggle.getAttribute('aria-controls');
+        var body = document.getElementById(bodyId);
+        var isOpen = body.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', String(isOpen));
+        var arrow = toggle.querySelector('.mobile-accordion-arrow');
+        if (arrow) arrow.style.transform = isOpen ? 'rotate(180deg)' : '';
       });
     });
   })();
