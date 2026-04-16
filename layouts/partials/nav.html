@@ -25,32 +25,47 @@
       </a>
 
       <ul class="nav-links" role="list">
-        <li><a href="/">Home</a></li>
-        <li class="nav-dropdown">
-          <a href="/services/">Services</a>
-          <div class="nav-dropdown-menu">
-            <a href="/services/tax-strategy/">Tax Strategy</a>
-            <a href="/services/tax-compliance">Tax Compliance</a>
-            <a href="/services/international-tax">International Tax</a>
-            <a href="/services/back-office">Back Office</a>
-            <a href="/services/bookkeeping">Bookkeeping</a>
-            <a href="/services/payroll">Payroll</a>
-            <a href="/services/sales-tax">Sales Tax</a>
-          </div>
-        </li>
 
-        <li class="nav-dropdown" id="nav-industries">
-          <a href="/expertise/">Expertise</a>
-          <div class="nav-dropdown-menu" id="industries-menu">
+        {{/* ── WHO WE SERVE — mega-menu ── */}}
+        <li class="nav-dropdown nav-mega" id="nav-who-we-serve">
+          <a href="/expertise/">Who We Serve</a>
+          <div class="nav-mega-panel" id="who-we-serve-panel">
             {{ range $.Site.Data.expertise }}
-            <a href="{{ .url }}">{{ .name }}</a>
+            {{ $url := .url }}
+            {{ $label := .nav_label }}
+            <div class="nav-mega-col">
+              <a class="nav-mega-col-head" href="{{ $url }}">
+                <span class="nav-mega-icon" aria-hidden="true">{{ .nav_icon }}</span>
+                {{ $label }}
+              </a>
+              {{ range .preview_items }}
+              <a class="nav-mega-item" href="{{ $url }}">{{ . }}</a>
+              {{ end }}
+              <a class="nav-mega-see-all" href="{{ $url }}">All {{ $label }} services →</a>
+            </div>
             {{ end }}
           </div>
         </li>
 
+        {{/* ── SERVICES — standard dropdown (second position) ── */}}
+        <li class="nav-dropdown">
+          <a href="/services/">Services</a>
+          <div class="nav-dropdown-menu">
+            <a href="/services/tax-strategy/">Tax Strategy</a>
+            <a href="/services/tax-compliance/">Tax Compliance</a>
+            <a href="/services/international-tax/">International Tax</a>
+            <hr class="nav-dropdown-divider">
+            <a href="/services/back-office/">Back Office</a>
+            <a href="/services/bookkeeping/">Bookkeeping</a>
+            <a href="/services/payroll/">Payroll</a>
+            <a href="/services/sales-tax/">Sales Tax</a>
+          </div>
+        </li>
+
         <li><a href="/resources/" class="nav-pill">Resources</a></li>
-        <li><a href="/referrals/">REFERRALS</a></li>
-        <li><a href="/contact/">CONTACT</a></li>
+        <li><a href="/referrals/">Referrals</a></li>
+        <li><a href="/contact/" class="nav-cta-link">Schedule a Call</a></li>
+
       </ul>
 
       <script>
