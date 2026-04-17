@@ -26,51 +26,30 @@
         <li><a href="/">Home</a></li>
 
         <li class="nav-dropdown">
-          <a href="/expertise/">Who We Serve</a>
-          <div class="nav-dropdown-menu">
-            {{ range $.Site.Data.expertise }}
-              {{ if eq .slug "inbound" }}
-              <div class="nav-dropdown-sideways">
-                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
-                <div class="nav-dropdown-submenu">
-                  <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/">Operating-Business LLCs</a>
-                  <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/">Investment LLC Structures</a>
-                  <a href="/expertise/inbound/us-subsidiaries-of-foreign-companies/">U.S. Subsidiaries</a>
-                </div>
-              </div>
-              {{ else if eq .slug "realestate" }}
-              <div class="nav-dropdown-sideways">
-                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
-                <div class="nav-dropdown-submenu">
-                  <a href="/expertise/realestate/foreign-owned-us-rental-property/">Foreign Rental Property</a>
-                  <a href="/expertise/realestate/firpta-us-real-estate-sales/">FIRPTA &amp; Sales</a>
-                </div>
-              </div>
-              {{ else if eq .slug "outbound" }}
-              <div class="nav-dropdown-sideways">
-                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
-                <div class="nav-dropdown-submenu">
-                  <a href="/expertise/outbound/latam/">Latin America</a>
-                  <a href="/expertise/outbound/canada/">Canada</a>
-                </div>
-              </div>
-              {{ else }}
-              <a href="{{ .url }}">{{ .name }}</a>
-              {{ end }}
-            {{ end }}
-          </div>
-        </li>
-
-        <li class="nav-dropdown">
-          <a href="/services/">Services</a>
+          <a href="/services/">Our Services</a>
           <div class="nav-dropdown-menu">
             <a href="/services/individual-tax/">Individual Tax</a>
             <a href="/services/business-tax/">Business Tax</a>
-            <a href="/services/international-tax/">International Tax</a>
-            <a href="/services/back-office/">Back Office</a>
-            <a href="/services/bookkeeping/">Bookkeeping</a>
-            <a href="/services/payroll/">Payroll</a>
-            <a href="/services/sales-tax/">Sales Tax</a>
+            <hr class="nav-dropdown-divider">
+            <div class="nav-dropdown-sideways">
+              <a href="/services/international-tax/"><span>International Tax</span><span class="nav-sideways-arrow">&rarr;</span></a>
+              <div class="nav-dropdown-submenu">
+                <a href="/expertise/expats/">U.S. Expats Abroad</a>
+                <a href="/expertise/outbound/">U.S. with International Ties</a>
+                <a href="/expertise/inbound/">Foreign Business and Investors</a>
+              </div>
+            </div>
+            <a href="/expertise/realestate/">Real Estate</a>
+            <hr class="nav-dropdown-divider">
+            <div class="nav-dropdown-sideways">
+              <a href="/services/"><span>Full Suite</span><span class="nav-sideways-arrow">&rarr;</span></a>
+              <div class="nav-dropdown-submenu">
+                <a href="/services/back-office/">Back Office</a>
+                <a href="/services/bookkeeping/">Bookkeeping</a>
+                <a href="/services/payroll/">Payroll</a>
+                <a href="/services/sales-tax/">Sales Tax</a>
+              </div>
+            </div>
           </div>
         </li>
 
@@ -147,40 +126,23 @@
       <div class="mobile-menu" id="mobileMenu" role="menu">
         <a href="/" role="menuitem">Home</a>
 
-        <div class="mobile-accordion" id="mobile-who-we-serve">
-          <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-wws-body">
-            Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
+        <div class="mobile-accordion" id="mobile-our-services">
+          <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-os-body">
+            Our Services <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
-          <div class="mobile-accordion-body open" id="mobile-wws-body">
-            {{ range $.Site.Data.expertise }}
-              <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .name }}</a>
-              {{ if eq .slug "inbound" }}
-              <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/" role="menuitem" class="mobile-subitem">Operating-Business LLCs</a>
-              <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/" role="menuitem" class="mobile-subitem">Investment LLC Structures</a>
-              <a href="/expertise/inbound/us-subsidiaries-of-foreign-companies/" role="menuitem" class="mobile-subitem">U.S. Subsidiaries</a>
-              {{ else if eq .slug "realestate" }}
-              <a href="/expertise/realestate/foreign-owned-us-rental-property/" role="menuitem" class="mobile-subitem">Foreign Rental Property</a>
-              <a href="/expertise/realestate/firpta-us-real-estate-sales/" role="menuitem" class="mobile-subitem">FIRPTA &amp; Sales</a>
-              {{ else if eq .slug "outbound" }}
-              <a href="/expertise/outbound/latam/" role="menuitem" class="mobile-subitem">Latin America</a>
-              <a href="/expertise/outbound/canada/" role="menuitem" class="mobile-subitem">Canada</a>
-              {{ end }}
-            {{ end }}
-          </div>
-        </div>
-
-        <div class="mobile-accordion" id="mobile-services">
-          <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-svc-body">
-            Services <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
-          </button>
-          <div class="mobile-accordion-body" id="mobile-svc-body">
+          <div class="mobile-accordion-body open" id="mobile-os-body">
             <a href="/services/individual-tax/" role="menuitem">Individual Tax</a>
             <a href="/services/business-tax/" role="menuitem">Business Tax</a>
             <a href="/services/international-tax/" role="menuitem">International Tax</a>
-            <a href="/services/back-office/" role="menuitem">Back Office</a>
-            <a href="/services/bookkeeping/" role="menuitem">Bookkeeping</a>
-            <a href="/services/payroll/" role="menuitem">Payroll</a>
-            <a href="/services/sales-tax/" role="menuitem">Sales Tax</a>
+            <a href="/expertise/expats/" role="menuitem" class="mobile-subitem">U.S. Expats Abroad</a>
+            <a href="/expertise/outbound/" role="menuitem" class="mobile-subitem">U.S. with International Ties</a>
+            <a href="/expertise/inbound/" role="menuitem" class="mobile-subitem">Foreign Business and Investors</a>
+            <a href="/expertise/realestate/" role="menuitem">Real Estate</a>
+            <div class="mobile-section-label">Full Suite</div>
+            <a href="/services/back-office/" role="menuitem" class="mobile-subitem">Back Office</a>
+            <a href="/services/bookkeeping/" role="menuitem" class="mobile-subitem">Bookkeeping</a>
+            <a href="/services/payroll/" role="menuitem" class="mobile-subitem">Payroll</a>
+            <a href="/services/sales-tax/" role="menuitem" class="mobile-subitem">Sales Tax</a>
           </div>
         </div>
 
