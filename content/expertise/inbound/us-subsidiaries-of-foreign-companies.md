@@ -49,7 +49,7 @@ specializations:
   - label: "Payroll Support"
     url: "/services/payroll/"
   - label: "U.S. Corporate Tax Compliance"
-    url: "/services/tax-compliance/"
+    url: "/services/business-tax/"
   - label: "1120-F Exposure Review"
     url: "/resources/form-1120-f/"
   - label: "International Tax Coordination"

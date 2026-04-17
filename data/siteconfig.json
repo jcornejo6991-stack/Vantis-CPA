@@ -55,8 +55,8 @@
       {"label": "U.S. Expats", "url": "/expertise/expats/"}
     ],
     "services": [
-      {"label": "Tax Strategy", "url": "/services/tax-strategy/"},
-      {"label": "Tax Compliance", "url": "/services/tax-compliance/"},
+      {"label": "Individual Tax", "url": "/services/individual-tax/"},
+      {"label": "Business Tax", "url": "/services/business-tax/"},
       {"label": "International Tax", "url": "/services/international-tax/"},
       {"label": "Back-Office Services", "url": "/services/back-office/"},
       {"label": "Bookkeeping", "url": "/services/bookkeeping/"},

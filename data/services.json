@@ -1,6 +1,6 @@
 [
-  { "name": "Tax Strategy",       "slug": "tax-strategy",    "url": "/services/tax-strategy/" },
-  { "name": "Tax Compliance",     "slug": "tax-compliance",  "url": "/services/tax-compliance/" },
+  { "name": "Individual Tax",      "slug": "individual-tax",  "url": "/services/individual-tax/" },
+  { "name": "Business Tax",        "slug": "business-tax",    "url": "/services/business-tax/" },
   { "name": "International Tax",  "slug": "international-tax","url": "/services/international-tax/" },
   { "name": "Back-Office Services","slug": "back-office",    "url": "/services/back-office/" },
   { "name": "Bookkeeping",        "slug": "bookkeeping",     "url": "/services/bookkeeping/" },

@@ -46,7 +46,7 @@ sections:
 sectionTitle: "What We Handle"
 specializations:
   - label: "Business Tax Return Preparation"
-    url: "/services/tax-compliance/"
+    url: "/services/business-tax/"
   - label: "Entity Setup and Elections"
     url: "/resources/s-corps/"
   - label: "S-Corporation and LLC Support"

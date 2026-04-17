@@ -64,8 +64,8 @@
         <li class="nav-dropdown">
           <a href="/services/">Services</a>
           <div class="nav-dropdown-menu">
-            <a href="/services/tax-strategy/">Tax Strategy</a>
-            <a href="/services/tax-compliance/">Tax Compliance</a>
+            <a href="/services/individual-tax/">Individual Tax</a>
+            <a href="/services/business-tax/">Business Tax</a>
             <a href="/services/international-tax/">International Tax</a>
             <a href="/services/back-office/">Back Office</a>
             <a href="/services/bookkeeping/">Bookkeeping</a>
@@ -148,12 +148,12 @@
         <a href="/" role="menuitem">Home</a>
 
         <div class="mobile-accordion" id="mobile-who-we-serve">
-          <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-wws-body">
+          <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-wws-body">
             Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
-          <div class="mobile-accordion-body open" id="mobile-wws-body">
+          <div class="mobile-accordion-body" id="mobile-wws-body">
             {{ range $.Site.Data.expertise }}
-              <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .name }}</a>
+              <a href="{{ .url }}" role="menuitem">{{ .name }}</a>
               {{ if eq .slug "inbound" }}
               <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/" role="menuitem" class="mobile-subitem">Operating-Business LLCs</a>
               <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/" role="menuitem" class="mobile-subitem">Investment LLC Structures</a>
@@ -174,8 +174,8 @@
             Services <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
           <div class="mobile-accordion-body" id="mobile-svc-body">
-            <a href="/services/tax-strategy/" role="menuitem">Tax Strategy</a>
-            <a href="/services/tax-compliance/" role="menuitem">Tax Compliance</a>
+            <a href="/services/individual-tax/" role="menuitem">Individual Tax</a>
+            <a href="/services/business-tax/" role="menuitem">Business Tax</a>
             <a href="/services/international-tax/" role="menuitem">International Tax</a>
             <a href="/services/back-office/" role="menuitem">Back Office</a>
             <a href="/services/bookkeeping/" role="menuitem">Bookkeeping</a>
