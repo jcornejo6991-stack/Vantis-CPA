@@ -5,6 +5,7 @@ date: 2025-01-20
 practices: ["business", "individuals", "inbound"]
 services: ["international-tax", "business-tax"]
 featured: false
+primary_cluster: "international-tax"
 clusters: ["international-tax", "ecommerce-sellers", "latam-inbound"]
 strategy_snapshot:
   summary: "For a foreign-owned single-member LLC, Form 5472 is usually triggered by ordinary owner activity, not by sophisticated planning. The expensive mistake is assuming a disregarded LLC means there is no separate U.S. filing."

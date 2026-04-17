@@ -4,6 +4,9 @@ description: "Business tax returns, entity structure, and year-round tax plannin
 layout: "service"
 subtitle: "Business tax returns, entity structure, and year-round tax management for owner-operated businesses."
 heroImage: "/images/globe-hero.jpg"
+aliases:
+  - /expertise/business/
+  - /expertise/founders/
 sections:
   - title: "Business Tax as a Complete Engagement"
     body: |
@@ -32,6 +35,16 @@ sections:
       * Retirement plan strategy (SEP-IRA, Solo 401(k), defined benefit)
       * Depreciation and cost recovery planning
       * Income and deduction timing across years
+    cards:
+      - label: "S-Corporations"
+        description: "Wages, self-employment tax savings, basis, ownership limits, and when the election is a bad fit."
+        url: "/services/business-tax/s-corps/"
+      - label: "Flowthrough Entities"
+        description: "Partnerships, LLCs, LPs, LLPs, LLLPs, allocations, basis, and multi-owner tax planning."
+        url: "/services/business-tax/flowthroughs/"
+      - label: "Real Estate"
+        description: "Domestic real estate tax planning for rental owners, partnerships, REPS, short-term rentals, and 1031s."
+        url: "/services/business-tax/real-estate/"
   - title: "Year-Round Tax Management"
     body: |
       Business taxes are not a once-a-year event. Quarterly estimated payments need to be calibrated to actual income. Depreciation elections need to be made before year-end. Multi-year projections help owners understand where they are heading and make adjustments before the window closes. For businesses that are growing, the tax structure that worked at one revenue level may not be optimal at the next.

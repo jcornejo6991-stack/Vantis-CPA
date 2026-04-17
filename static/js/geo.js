@@ -16,6 +16,12 @@
     founders:    { us: "Serving founders and startups in {location}",                      intl: "Serving founders and online businesses in {location}" },
     inbound:     { us: null,                                                                intl: "Serving foreign investors from {location} entering the U.S." },
     realestate:  { us: "Serving real estate owners in {location}",                         intl: "Serving U.S. real estate owners based in {location}" },
+    "real-estate": { us: "Serving real estate tax clients in {location}",                  intl: "Serving U.S. real estate tax clients based in {location}" },
+    international: { us: "Serving cross-border real estate clients in {location}",         intl: "Serving international real estate clients in {location}" },
+    "u-s-with-international-ties": { us: "Serving U.S. taxpayers with foreign ties in {location}", intl: "Serving U.S. taxpayers based in {location} with international ties" },
+    "foreign-business-and-investors": { us: null,                                           intl: "Serving foreign businesses and investors from {location}" },
+    "s-corps":   { us: "Serving S-corporation owners in {location}",                       intl: "Serving U.S. S-corp owners based in {location}" },
+    flowthroughs:{ us: "Serving flowthrough businesses in {location}",                     intl: "Serving U.S. partnership and LLC owners based in {location}" },
     // Services pages
     "individual-tax":    { us: "Individual tax preparation and planning for clients in {location}", intl: "Individual tax preparation and planning for clients in {location}" },
     "business-tax":      { us: "Business tax returns and planning for businesses in {location}", intl: "U.S. business tax support for clients in {location}" },

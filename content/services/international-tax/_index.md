@@ -5,9 +5,22 @@ layout: "service"
 subtitle: "Cross-border tax compliance and planning where the filing obligations multiply fast."
 heroImage: "/images/globe-hero.jpg"
 sections:
-  - title: "International Tax Compliance and Planning"
+  - title: "International Tax for Cross-Border Lives and Businesses"
     body: |
-      International tax is where filing obligations multiply quickly and small mistakes become expensive. U.S. citizens living abroad, foreign nationals investing in the U.S., and U.S. businesses with foreign operations all face extra reporting rules, extra forms, and extra penalty exposure. We handle cross-border compliance and planning in-house so the structure, filings, and strategy all work together.
+      International tax is not one issue. A U.S. expat, a dual citizen with foreign accounts, a foreign owner opening a U.S. LLC, and a foreign national selling U.S. real estate all face different filing paths, different risks, and different planning decisions. We organize the work around those actual situations so the structure, filings, and strategy fit the facts from the beginning.
+    cards:
+      - label: "U.S. Individuals with International Ties"
+        url: "/services/international-tax/u-s-with-international-ties/"
+        description: "Foreign accounts, inherited assets, foreign corporations, dual citizenship issues, and ongoing reporting for U.S. persons."
+      - label: "U.S. Expats Abroad"
+        url: "/services/international-tax/expats/"
+        description: "Form 1040, FBAR, FATCA, FEIE, foreign tax credits, and streamlined filing support for Americans living abroad."
+      - label: "Foreign Business and Investors"
+        url: "/services/international-tax/foreign-business-and-investors/"
+        description: "Inbound structuring, Form 5472, EIN and ITIN support, U.S. subsidiaries, and foreign-owned U.S. operations."
+      - label: "International Real Estate"
+        url: "/services/international-tax/real-estate/"
+        description: "FIRPTA, 1040-NR, Section 871(d), withholding, foreign-owned U.S. rental property, and cross-border real estate planning."
   - title: "Inbound International Tax"
     body: |
       Inbound work covers foreign individuals, foreign-owned businesses, and investors entering the U.S. market. Common inbound needs include:
@@ -34,24 +47,21 @@ sections:
       * International tax planning for U.S. businesses expanding abroad
 
       This side of the work is about keeping U.S. reporting complete while making sure foreign activity does not create avoidable U.S. tax problems.
-  - title: "Who This Is For"
+  - title: "Why International Tax Needs Its Own Lane"
     body: |
-      This service is for U.S. expats, foreign nationals entering the U.S., foreign owners of U.S. entities, and U.S. businesses with overseas operations or foreign subsidiaries. If income, ownership, or filing obligations cross a border, the tax work usually needs to be organized as international tax from the start.
-  - title: "Compliance First, Strategy Alongside It"
-    body: |
-      Good international tax work balances compliance and planning. We make sure required forms are filed, deadlines are managed, and reporting is complete, while also looking at classification elections, foreign tax credit use, treaty positions, and ownership structure. That is what reduces penalties, avoids duplicate tax, and keeps the overall system manageable year after year.
+      International tax is where filing obligations multiply quickly and small mistakes become expensive. The forms are technical, the penalties are real, and the right filing path depends heavily on who owns what, where they live, and how the income moves. Good cross-border work keeps compliance complete while also shaping the structure, elections, and reporting positions in a way that holds up over time.
 sectionTitle: "Compliance & Planning Services"
 specializations:
   - label: "Form 5472 Compliance"
     url: "/resources/smllc-5472/"
   - label: "Inbound U.S. Tax Structuring"
-    url: "/expertise/inbound/"
+    url: "/services/international-tax/foreign-business-and-investors/"
   - label: "Entity Classification Elections"
     url: "/resources/form-8832-entity-classification-elections/"
   - label: "Pre-Immigration Tax Planning"
     url: "/resources/pre-immigration-planning/"
   - label: "Foreign-Owned U.S. Business Reporting"
-    url: "/expertise/inbound/"
+    url: "/services/international-tax/foreign-business-and-investors/"
   - label: "FBAR Filing"
   - label: "FATCA Reporting"
   - label: "Form 5471 Compliance"
@@ -61,7 +71,7 @@ specializations:
   - label: "FEIE Analysis"
     url: "/resources/feie-vs-ftc/"
   - label: "U.S. Tax Reporting for Foreign Operations"
-    url: "/expertise/outbound/"
+    url: "/services/international-tax/u-s-with-international-ties/"
   - label: "Treaty Analysis and Filing Positions"
   - label: "Cross-Border Tax Planning"
 ---

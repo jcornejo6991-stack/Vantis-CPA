@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["realestate"]
 services: ["individual-tax"]
 featured: false
+primary_cluster: "real-estate-tax"
 clusters: ["real-estate-tax"]
 strategy_snapshot:
   summary: "REPS is valuable because it can convert trapped rental losses into deductions against salary or business income, but it only works when one spouse truly qualifies and the hours can be defended. This is as much a documentation strategy as a tax strategy."

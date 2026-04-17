@@ -1,8 +1,10 @@
 ---
 title: "Services"
-description: "Individual tax, business tax, international tax, bookkeeping, payroll, and sales tax — full-service accounting from entity formation to exit."
+description: "Individual tax, business tax, international tax, and full-suite accounting support from entity formation through ongoing operations."
 layout: "landing"
-subtitle: "Everything from entity formation and tax strategy to compliance and bookkeeping, handled completely."
+subtitle: "Three tax hubs and one full-suite hub, with the supporting service lines underneath them."
+aliases:
+  - /expertise/
 items:
   - label: "Individual Tax"
     url: "/services/individual-tax/"
@@ -13,16 +15,7 @@ items:
   - label: "International Tax"
     url: "/services/international-tax/"
     description: "Cross-border tax is where the code gets technical and the penalties get serious. We handle it completely."
-  - label: "Back-Office Services"
-    url: "/services/back-office/"
-    description: "Entity formation, registered agent, EIN and state registrations, and corporate compliance so you can focus on running your business."
-  - label: "Bookkeeping"
-    url: "/services/bookkeeping/"
-    description: "Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management so your numbers are always current."
-  - label: "Payroll"
-    url: "/services/payroll/"
-    description: "Complete payroll setup and ongoing management. All filings, deposits, and compliance so your team gets paid on time, every time."
-  - label: "Sales Tax"
-    url: "/services/sales-tax/"
-    description: "Sales tax compliance, nexus analysis, and registration. Timely remittances and filing so you stay compliant as you grow."
+  - label: "Full Suite"
+    url: "/services/full-suite/"
+    description: "Back-office support, bookkeeping, payroll, and sales tax services organized under one operating-services hub."
 ---

@@ -40,28 +40,27 @@
   "navigation": {
     "main": [
       {"label": "Home", "url": "/"},
-      {"label": "Expertise", "url": "/expertise/"},
       {"label": "Services", "url": "/services/"},
-      {"label": "Referrals", "url": "/referrals/"},
       {"label": "About", "url": "/about/"},
       {"label": "Contact", "url": "/contact/"}
     ],
     "expertise": [
-      {"label": "Individuals and Families", "url": "/expertise/individuals/"},
-      {"label": "Local and Online Business", "url": "/expertise/business/"},
-      {"label": "Real Estate Owners", "url": "/expertise/realestate/"},
-      {"label": "U.S. Individuals with International Ties", "url": "/expertise/outbound/"},
-      {"label": "Foreign Business & Investors", "url": "/expertise/inbound/"},
-      {"label": "U.S. Expats", "url": "/expertise/expats/"}
+      {"label": "Individuals and Families", "url": "/services/individual-tax/"},
+      {"label": "Local and Online Business", "url": "/services/business-tax/"},
+      {"label": "Real Estate Owners", "url": "/services/business-tax/real-estate/"},
+      {"label": "U.S. Individuals with International Ties", "url": "/services/international-tax/u-s-with-international-ties/"},
+      {"label": "Foreign Business & Investors", "url": "/services/international-tax/foreign-business-and-investors/"},
+      {"label": "U.S. Expats", "url": "/services/international-tax/expats/"}
     ],
     "services": [
       {"label": "Individual Tax", "url": "/services/individual-tax/"},
       {"label": "Business Tax", "url": "/services/business-tax/"},
       {"label": "International Tax", "url": "/services/international-tax/"},
-      {"label": "Back-Office Services", "url": "/services/back-office/"},
-      {"label": "Bookkeeping", "url": "/services/bookkeeping/"},
-      {"label": "Payroll", "url": "/services/payroll/"},
-      {"label": "Sales Tax", "url": "/services/sales-tax/"}
+      {"label": "Full Suite", "url": "/services/full-suite/"},
+      {"label": "Back-Office Services", "url": "/services/full-suite/back-office/"},
+      {"label": "Bookkeeping", "url": "/services/full-suite/bookkeeping/"},
+      {"label": "Payroll", "url": "/services/full-suite/payroll/"},
+      {"label": "Sales Tax", "url": "/services/full-suite/sales-tax/"}
     ]
   },
   "integrations": {

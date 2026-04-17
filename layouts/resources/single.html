@@ -717,7 +717,7 @@
   <div class="article-page">
 
     <div class="article-hero">
-      {{ $primaryCluster := index (.Params.clusters | default slice) 0 }}
+      {{ $primaryCluster := .Params.primary_cluster | default (index (.Params.clusters | default slice) 0) }}
       {{ $hubPage := "" }}
       {{ if $primaryCluster }}{{ $hubPage = .Site.GetPage (printf "/resources/%s" $primaryCluster) }}{{ end }}
       <div class="article-breadcrumb">
@@ -821,7 +821,7 @@
         </div>
 
         <div class="bottom-card">
-          <h4>Related Expertise</h4>
+          <h4>Related Topics</h4>
           {{ if in $practices "all" }}
             {{ range $.Site.Data.expertise }}
               <a href="{{ .url }}" class="bottom-link">{{ .name }} →</a>

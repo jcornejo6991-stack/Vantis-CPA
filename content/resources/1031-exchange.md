@@ -5,6 +5,7 @@ date: 2025-02-01
 practices: ["realestate"]
 services: ["individual-tax", "international-tax"]
 featured: false
+primary_cluster: "real-estate-tax"
 clusters: ["real-estate-tax"]
 strategy_snapshot:
   summary: "A 1031 exchange works only when the transaction is designed around the rules before closing. The core job is protecting deferral by keeping the cash out of your hands and hitting the 45-day and 180-day deadlines without mistakes."

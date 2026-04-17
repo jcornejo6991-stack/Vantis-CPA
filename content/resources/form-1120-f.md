@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["inbound", "business"]
 services: ["international-tax", "business-tax"]
 featured: false
+primary_cluster: "latam-inbound"
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:
   summary: "Form 1120-F is often less about tax due today and more about protecting your position if the IRS later says a U.S. trade or business existed. When the facts are uncertain, timely protective filing can preserve deductions that would otherwise be lost."

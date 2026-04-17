@@ -23,78 +23,47 @@
 
   {{ partial "nav.html" . }}
 
-  <!-- Hero section — title from data file if expertise page, otherwise frontmatter -->
   {{ $displayTitle := .Title }}
-  {{ $isExpertiseSubpage := and (eq .Section "expertise") (ne .File.BaseFileName "_index") .Parent }}
-  {{ $parentPage := "" }}
-  {{ if $isExpertiseSubpage }}
-    {{ $parentPage = .Parent }}
-  {{ end }}
-
-  {{/* Mid-section index: e.g. outbound/latam/_index.md — an _index inside a sub-folder of an expertise section */}}
-  {{ $isExpertiseMidSection := false }}
-  {{ $midSectionParent := "" }}
-  {{ if and (eq .Section "expertise") (eq .File.BaseFileName "_index") (ne .RelPermalink "/expertise/") .Parent }}
-    {{ with .Parent }}
-      {{ if and (eq .Section "expertise") (ne .RelPermalink "/expertise/") }}
-        {{ $isExpertiseMidSection = true }}
-        {{ $midSectionParent = . }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{/* Sub-sub page: e.g. outbound/latam/mexico.md — parent is a mid-section, grandparent is the expertise section */}}
-  {{ $isSubSubpage := false }}
-  {{ $midSectionPage := "" }}
-  {{ if $isExpertiseSubpage }}
-    {{ with $parentPage.Parent }}
-      {{ if and (eq .Section "expertise") (ne .RelPermalink "/expertise/") }}
-        {{ $isSubSubpage = true }}
-        {{ $midSectionPage = $parentPage }}
-        {{ $parentPage = . }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
   {{ $slug := .Params.slug }}
   {{ if not $slug }}
-    {{ if $isExpertiseMidSection }}
-      {{ $slug = $midSectionParent.Params.slug | default (path.Base $midSectionParent.File.Dir) }}
-    {{ else if and $isExpertiseSubpage $parentPage }}
-      {{ $slug = $parentPage.Params.slug | default (path.Base $parentPage.File.Dir) }}
-    {{ else }}
+    {{ if eq .File.BaseFileName "_index" }}
       {{ $slug = path.Base .File.Dir }}
+    {{ else }}
+      {{ $slug = .File.BaseFileName }}
     {{ end }}
   {{ end }}
-  {{ if and (eq .Section "expertise") (not $isExpertiseSubpage) (not $isExpertiseMidSection) }}
-    {{ range $.Site.Data.expertise }}
-      {{ if eq .slug $slug }}
-        {{ $displayTitle = .name }}
+  {{ $matchSlugs := slice $slug }}
+  {{ $isServiceNested := and (eq .Section "services") (ne .RelPermalink "/services/") }}
+  {{ if and $isServiceNested .Parent }}
+    {{ range .Ancestors }}
+      {{ if and (eq .Section "services") (ne .RelPermalink "/services/") }}
+        {{ $ancestorSlug := .Params.slug }}
+        {{ if not $ancestorSlug }}
+          {{ if eq .File.BaseFileName "_index" }}
+            {{ $ancestorSlug = path.Base .File.Dir }}
+          {{ else }}
+            {{ $ancestorSlug = .File.BaseFileName }}
+          {{ end }}
+        {{ end }}
+        {{ $matchSlugs = $matchSlugs | append $ancestorSlug }}
       {{ end }}
     {{ end }}
   {{ end }}
-  {{ $subpages := slice }}
-  {{ if $isExpertiseSubpage }}
-    {{ $subpages = $parentPage.RegularPages.ByWeight }}
-  {{ end }}
-  <section class="hero{{ if or $isExpertiseSubpage $isExpertiseMidSection }} hero-subpage{{ end }}">
-    {{ if or $isExpertiseSubpage $isExpertiseMidSection }}
+
+  <section class="hero{{ if $isServiceNested }} hero-subpage{{ end }}">
+    {{ if $isServiceNested }}
     <div class="hero-breadcrumb">
-      <a href="/expertise/">Who We Serve</a>
-      <span>/</span>
-      {{ if $isExpertiseMidSection }}
-        <a href="{{ $midSectionParent.RelPermalink }}">{{ $midSectionParent.Title }}</a>
+      <a href="/services/">Services</a>
+      {{ if .Parent }}
+        {{ range .Ancestors.Reverse }}
+          {{ if and (eq .Section "services") (ne .RelPermalink "/services/") }}
         <span>/</span>
-        <span>{{ .Title }}</span>
-      {{ else }}
-        <a href="{{ $parentPage.RelPermalink }}">{{ $parentPage.Title }}</a>
-        {{ if $isSubSubpage }}
-        <span>/</span>
-        <a href="{{ $midSectionPage.RelPermalink }}">{{ $midSectionPage.Title }}</a>
+        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+          {{ end }}
         {{ end }}
         <span>/</span>
-        <span>{{ .Title }}</span>
       {{ end }}
+      <span>{{ .Title }}</span>
     </div>
     {{ end }}
     <h1>{{ $displayTitle }}</h1>
@@ -145,7 +114,7 @@
     </div>
   </section>
 
-  <!-- Main content — full-width sidebar layout -->
+  <!-- Main content -->
   <div class="main-container">
     <div class="left-column">
       <form id="serviceContactForm" class="contact-form" action="https://formspree.io/f/mkopvwja" method="POST">
@@ -178,15 +147,16 @@
         </div>
       </form>
     </div>
+
     <div class="right-column">
       <div class="intro-text{{ if .Params.sections }} intro-text-sections{{ end }}">
         {{ if .Params.sections }}
           {{ range .Params.sections }}
           <div class="intro-section">
             {{ if .title }}<p class="intro-heading">{{ .title }}</p>{{ end }}
-            {{ if .body }}{{ .body | markdownify }}{{ end }}
+            {{ with .body }}{{ . | $.RenderString (dict "display" "block") }}{{ end }}
             {{ if .cards }}
-            <div class="cross-link-grid" style="margin-top: 16px; grid-template-columns: 1fr;">
+            <div class="cross-link-grid cross-link-grid-stack">
               {{ range .cards }}
               <a href="{{ .url }}" class="cross-link-card">
                 <span>
@@ -207,82 +177,41 @@
         {{ end }}
       </div>
 
-      {{ if .Params.specializations }}
-      <div class="content-section">
-        <h3 class="section-title">{{ .Params.sectionTitle | default "Specializations" }}</h3>
-        {{ $specs := .Params.specializations }}
-        {{ $hasGroups := false }}
-        {{ range $specs }}{{ if .group }}{{ $hasGroups = true }}{{ end }}{{ end }}
-        {{ if $hasGroups }}
-          {{ $currentGroup := "" }}
-          {{ range $specs }}
-            {{ if ne .group $currentGroup }}
-              {{ if ne $currentGroup "" }}</ul>{{ end }}
-              <h4 class="spec-group-title">{{ .group }}</h4>
-              <ul class="section-list">
-              {{ $currentGroup = .group }}
-            {{ end }}
-            <li>{{ if .url }}<a href="{{ .url }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
-          {{ end }}
-          {{ if ne $currentGroup "" }}</ul>{{ end }}
-        {{ else }}
-          <ul class="section-list">
-            {{ range $specs }}
-              <li>{{ if .url }}<a href="{{ .url }}">{{ .label }}</a>{{ else }}{{ .label }}{{ end }}</li>
-            {{ end }}
-          </ul>
-        {{ end }}
-      </div>
-      {{ end }}
-
       {{ if eq .Section "services" }}
-      <div class="content-section">
-        <h3 class="section-title">Who We Serve</h3>
-        <div class="cross-link-grid">
-          {{ range $.Site.Data.expertise }}
-          <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">→</span></a>
+        {{ $serviceLinks := slice }}
+        {{ if .IsSection }}
+          {{ range .Pages.ByWeight }}
+            {{ $serviceLinks = $serviceLinks | append . }}
           {{ end }}
-        </div>
-      </div>
-      {{ else if eq .Section "expertise" }}
-      <div class="content-section">
-        <h3 class="section-title">Our Services</h3>
-        <div class="cross-link-grid">
-          {{ range $.Site.Data.services }}
-          <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">→</span></a>
+        {{ else if .Parent }}
+          {{ range .Parent.Pages.ByWeight }}
+            {{ if ne .RelPermalink $.RelPermalink }}
+              {{ $serviceLinks = $serviceLinks | append . }}
+            {{ end }}
           {{ end }}
+        {{ end }}
+        {{ if $serviceLinks }}
+        <div class="content-section">
+          <h3 class="section-title">{{ if .IsSection }}Explore This Service{{ else }}More in {{ .Parent.Title }}{{ end }}</h3>
+          <div class="cross-link-grid">
+            {{ range $serviceLinks }}
+            <a href="{{ .RelPermalink }}" class="cross-link-card">{{ .Params.nav_title | default .Title }}<span class="cross-link-arrow">&rarr;</span></a>
+            {{ end }}
+          </div>
         </div>
-      </div>
-      {{ end }}
-
-      {{ $serviceMatches := slice }}
-      {{ $practiceMatches := slice }}
-      {{ range where .Site.RegularPages "Section" "resources" }}
-        {{ if in .Params.services $slug }}
-          {{ $serviceMatches = $serviceMatches | append . }}
-        {{ else if in .Params.practices $slug }}
-          {{ $practiceMatches = $practiceMatches | append . }}
+        {{ else }}
+        <div class="content-section">
+          <h3 class="section-title">Service Hubs</h3>
+          <div class="cross-link-grid">
+            {{ range $.Site.Data.services }}
+            <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">&rarr;</span></a>
+            {{ end }}
+          </div>
+        </div>
         {{ end }}
       {{ end }}
-      {{ $relatedResources := first 3 ($serviceMatches | append $practiceMatches) }}
-      {{ if $relatedResources }}
-      <div class="content-section rr-section">
-        <h3 class="section-title">Related Reading</h3>
-        <div class="rr-list">
-          {{ range $relatedResources }}
-          <a href="{{ .RelPermalink }}" class="rr-item">
-            <span class="rr-item-title">{{ .Title }}</span>
-            <span class="rr-item-desc">{{ .Description }}</span>
-            <span class="rr-item-arrow">Read →</span>
-          </a>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
-
     </div>
   </div>
 
   {{ partial "footer.html" . }}
-
 {{ end }}

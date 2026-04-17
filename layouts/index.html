@@ -484,14 +484,13 @@
     .industries-header { margin-bottom: 40px; text-align: center; }
     .industries-header .section-subheading { margin: 0 auto; max-width: 600px; }
     .industries-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 28px;
+      row-gap: 0;
       max-width: 940px;
       margin-left: auto;
       margin-right: auto;
-      border-top: 1px solid rgba(6, 34, 21, 0.14);
-      border-bottom: 1px solid rgba(6, 34, 21, 0.14);
     }
     .industry-card {
       position: relative;
@@ -587,10 +586,10 @@
     }
     .industry-card-wrapper {
       position: relative;
-      border-bottom: 1px solid rgba(6, 34, 21, 0.12);
+      border-top: 1px solid rgba(6, 34, 21, 0.14);
       transition: transform 0.3s ease;
     }
-    .industry-card-wrapper:last-child { border-bottom: 0; }
+    .industry-card-wrapper:nth-last-child(-n + 2) { border-bottom: 1px solid rgba(6, 34, 21, 0.14); }
     .industry-card-wrapper:hover { transform: none; }
     .industry-dropdown {
       position: absolute;
@@ -991,33 +990,6 @@
       text-align: center;
     }
 
-    /* ─── REFERRAL LINK ─── */
-    .referral-link-section {
-      margin-top: 20px;
-      padding-top: 20px;
-      border-top: 1px solid rgba(255,255,255,0.12);
-    }
-    .referral-link-label {
-      font-size: 11px;
-      font-weight: 600;
-      color: #5a8b6f;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      margin: 0 0 6px 0;
-    }
-    .referral-link {
-      display: inline-block;
-      font-size: 15px;
-      font-weight: 500;
-      color: #fff;
-      text-decoration: none;
-      transition: color 0.2s, transform 0.15s;
-    }
-    .referral-link:hover {
-      color: #7aaa8f;
-      transform: translateX(2px);
-    }
-
     /* ─── FAQ ─── */
     .faq-section { padding: 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; overflow: hidden; }
     .faq-wrapper {
@@ -1164,12 +1136,15 @@
       .resources-grid { grid-template-columns: 1fr; }
       .core-services-grid,
       .support-services-grid { grid-template-columns: 1fr; }
+      .industries-grid { grid-template-columns: 1fr; }
       .contact-header .section-subheading { white-space: normal; width: auto; }
       .industry-card { grid-template-columns: 1fr; align-items: flex-start; gap: 10px; min-height: 0; height: auto; padding: 22px 0; }
       .industry-title-group { gap: 8px; }
       .industry-title { font-size: clamp(18px, 5vw, 22px); }
       .industry-description { font-size: 13px; }
       .industry-learn-more { justify-self: start; align-self: flex-start; }
+      .industry-card-wrapper:nth-last-child(-n + 2) { border-bottom: 0; }
+      .industry-card-wrapper:last-child { border-bottom: 1px solid rgba(6, 34, 21, 0.14); }
       .industry-card-wrapper:hover .industry-card { padding-left: 12px; padding-right: 12px; }
       .form-row { grid-template-columns: 1fr; }
       .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
@@ -1431,12 +1406,12 @@
       <div class="service-card core-service-card fade-up fade-up-d1">
         <span class="service-label-badge">Expert</span>
         <h4 class="service-title">Individual Tax</h4>
-        <p class="service-description">Tax returns and year-round planning for individuals with income from W-2, 1099, K-1, investments, rental properties, and equity compensation.</p>
+        <p class="service-description">Tax returns and year-round planning for individuals with income from W-2, 1099, K-1, investments, and rental properties.</p>
         <ul class="service-list">
-          <li>1040 Return Preparation</li>
-          <li>Equity Compensation (RSU, ISO, NSO)</li>
-          <li>Investment &amp; Capital Gains</li>
-          <li>IRS Notice Response</li>
+          <li>1040 Preparation</li>
+          <li>Quarterly Estimates</li>
+          <li>State Returns</li>
+          <li>IRS Notices and Amended Returns</li>
           <li>Year-Round Tax Planning</li>
         </ul>
         <a href="/services/individual-tax/" class="service-learn-more">Learn More →</a>
@@ -1696,11 +1671,6 @@
           <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
         </div>
 
-        <!-- Referral link below form -->
-        <div class="referral-link-section fade-up fade-up-d2">
-          <p class="referral-link-label">Partner With Us</p>
-          <a href="/referrals/" class="referral-link">CPA Partnerships →</a>
-        </div>
       </div>
 
       <div class="contact-right-column">

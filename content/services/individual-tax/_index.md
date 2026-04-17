@@ -4,6 +4,9 @@ description: "Individual tax returns and year-round tax planning for people with
 layout: "service"
 subtitle: "Individual tax returns and year-round planning, handled completely."
 heroImage: "/images/globe-hero.jpg"
+aliases:
+  - /expertise/individuals/
+  - /expertise/local/
 sections:
   - title: "Individual Tax Done Completely"
     body: |
@@ -26,6 +29,10 @@ sections:
       * Multi-state and nonresident returns
       * Trust and estate returns (Form 1041)
       * Amended returns (Form 1040-X)
+    cards:
+      - label: "Grantor and Non-Grantor Trust Returns"
+        description: "Form 1041 filings, beneficiary K-1s, DNI, and coordination between the trust return and the related individual return."
+        url: "/services/individual-tax/trusts/"
   - title: "Tax Planning Throughout the Year"
     body: |
       Most individual tax decisions have timing components. Estimated quarterly payments need to be calibrated to actual income. Retirement contributions reduce taxable income when funded before year-end. Equity compensation — RSU vests, option exercises — creates income that can be managed with the right timing. Capital gains can be offset by harvesting losses across the same portfolio. Income and deductions can sometimes be shifted between years to take advantage of rate differences.
@@ -57,6 +64,7 @@ specializations:
   - label: "Wash Sale Rule Analysis"
   - label: "Multi-State and Nonresident Returns"
   - label: "Trust and Estate Returns (Form 1041)"
+    url: "/services/individual-tax/trusts/"
   - label: "Amended Returns (Form 1040-X)"
   - label: "Quarterly Estimated Tax Planning"
   - label: "Year-End Tax Planning"

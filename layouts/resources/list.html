@@ -51,69 +51,6 @@
       padding: 36px 48px 48px;
     }
 
-    .library-search {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 20px;
-    }
-
-    .library-search input {
-      flex: 1;
-      padding: 12px 16px;
-      border: 1.5px solid #ddd;
-      border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15px;
-      color: #0f2818;
-      background: #fff;
-      transition: border-color 0.2s;
-    }
-
-    .library-search input:focus {
-      outline: none;
-      border-color: #15482E;
-    }
-
-    .library-search input::placeholder {
-      color: #aaa;
-    }
-
-    .library-filters {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-
-    .filter-pill {
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      border: 1.5px solid #d0d0d0;
-      background: #fff;
-      color: #555;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .filter-pill:hover {
-      border-color: #15482E;
-      color: #15482E;
-    }
-
-    .filter-pill.active {
-      background: #15482E;
-      color: #fff;
-      border-color: #15482E;
-    }
-
-    .library-count {
-      font-size: 13px;
-      color: #888;
-      margin-bottom: 24px;
-    }
-
     .library-carousel {
       position: relative;
     }
@@ -347,10 +284,6 @@
         padding: 24px 20px 32px;
       }
 
-      .library-search {
-        flex-direction: column;
-      }
-
       .library-page {
         grid-template-columns: 1fr;
       }
@@ -392,23 +325,6 @@
           </div>
         </div>
       </div>
-
-      <div class="library-search">
-        <input type="text" id="librarySearch" placeholder="Search: S-corp, 1031, FBAR, deadlines…" />
-      </div>
-
-      <div class="library-filters">
-        <button class="filter-pill active" data-filter="all">All</button>
-        <button class="filter-pill" data-filter="international-tax">International Tax</button>
-        <button class="filter-pill" data-filter="real-estate-tax">Real Estate Tax</button>
-        <button class="filter-pill" data-filter="individual-tax">Individual Tax</button>
-        <button class="filter-pill" data-filter="business-tax">Business Tax</button>
-        <button class="filter-pill" data-filter="general-tax-compliance">Tax Compliance</button>
-        <button class="filter-pill" data-filter="ecommerce-sellers">E-Commerce</button>
-        <button class="filter-pill" data-filter="latam-inbound">LATAM Inbound</button>
-      </div>
-
-      <p class="library-count" id="libraryCount"></p>
 
       <!-- Card pool (hidden — JS reads from here) -->
       <div class="library-grid" id="libraryGrid">
@@ -462,33 +378,19 @@
     (function() {
       var PAGE_SIZE = 9;
       var allCards = Array.from(document.querySelectorAll('.lib-card'));
-      var pills = document.querySelectorAll('.filter-pill');
-      var searchInput = document.getElementById('librarySearch');
-      var countEl = document.getElementById('libraryCount');
       var track = document.getElementById('libraryTrack');
       var dotsEl = document.getElementById('carouselDots');
       var prevBtn = document.getElementById('prevBtn');
       var nextBtn = document.getElementById('nextBtn');
-      var activeFilter = 'all';
-      var searchQuery = '';
       var currentPage = 0;
       var pages = [];
 
       function getVisible() {
-        return allCards.filter(function(card) {
-          var clusters = card.dataset.clusters || '';
-          var text = card.dataset.text || '';
-          var matchesFilter = activeFilter === 'all'
-            || clusters.indexOf(activeFilter) !== -1;
-          var matchesSearch = searchQuery === ''
-            || text.indexOf(searchQuery) !== -1;
-          return matchesFilter && matchesSearch;
-        });
+        return allCards;
       }
 
       function buildCarousel() {
         var visible = getVisible();
-        countEl.textContent = 'Showing ' + visible.length + ' article' + (visible.length !== 1 ? 's' : '');
 
         // Chunk into pages of PAGE_SIZE
         pages = [];
@@ -544,20 +446,6 @@
 
       prevBtn.addEventListener('click', function() { goTo(currentPage - 1); });
       nextBtn.addEventListener('click', function() { goTo(currentPage + 1); });
-
-      pills.forEach(function(pill) {
-        pill.addEventListener('click', function() {
-          pills.forEach(function(p) { p.classList.remove('active'); });
-          pill.classList.add('active');
-          activeFilter = pill.dataset.filter;
-          buildCarousel();
-        });
-      });
-
-      searchInput.addEventListener('input', function() {
-        searchQuery = this.value.toLowerCase().trim();
-        buildCarousel();
-      });
 
       buildCarousel();
     })();

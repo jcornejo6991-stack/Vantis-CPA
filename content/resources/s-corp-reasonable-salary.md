@@ -5,6 +5,7 @@ date: 2026-04-16
 practices: ["business", "individuals", "realestate"]
 services: ["business-tax", "payroll"]
 featured: false
+primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:
   summary: "Reasonable salary is not a fixed ratio or a rule-of-thumb percentage. It is a facts-and-circumstances question about what the owner actually does, what similar work pays, and how much of the company’s revenue is really being produced by the shareholder’s services."

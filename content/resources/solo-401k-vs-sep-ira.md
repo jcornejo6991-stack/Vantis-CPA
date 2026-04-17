@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["business", "individuals"]
 services: ["business-tax"]
 featured: false
+primary_cluster: "individual-tax"
 clusters: ["individual-tax"]
 strategy_snapshot:
   summary: "For most profitable solo business owners, the Solo 401(k) is the stronger tool because it layers employee deferrals on top of employer contributions. The SEP-IRA usually wins only when you need simplicity, missed the year-end setup deadline, or have employees."

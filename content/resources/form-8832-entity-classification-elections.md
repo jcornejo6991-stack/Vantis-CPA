@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["inbound", "business"]
 services: ["international-tax", "business-tax"]
 featured: false
+primary_cluster: "latam-inbound"
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:
   summary: "Form 8832 is not a paperwork exercise. It changes who reports income, which information returns attach, and whether a later restructuring becomes taxable, so the election should be modeled before it is filed."

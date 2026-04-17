@@ -1,9 +1,6 @@
 [
-  { "name": "Individual Tax",      "slug": "individual-tax",  "url": "/services/individual-tax/" },
-  { "name": "Business Tax",        "slug": "business-tax",    "url": "/services/business-tax/" },
-  { "name": "International Tax",  "slug": "international-tax","url": "/services/international-tax/" },
-  { "name": "Back-Office Services","slug": "back-office",    "url": "/services/back-office/" },
-  { "name": "Bookkeeping",        "slug": "bookkeeping",     "url": "/services/bookkeeping/" },
-  { "name": "Payroll",            "slug": "payroll",         "url": "/services/payroll/" },
-  { "name": "Sales Tax",          "slug": "sales-tax",       "url": "/services/sales-tax/" }
+  { "name": "Individual Tax", "slug": "individual-tax", "url": "/services/individual-tax/" },
+  { "name": "Business Tax", "slug": "business-tax", "url": "/services/business-tax/" },
+  { "name": "International Tax", "slug": "international-tax", "url": "/services/international-tax/" },
+  { "name": "Full Suite", "slug": "full-suite", "url": "/services/full-suite/" }
 ]

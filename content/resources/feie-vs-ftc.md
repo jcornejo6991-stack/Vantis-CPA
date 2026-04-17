@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["expats"]
 services: ["international-tax", "individual-tax"]
 featured: false
+primary_cluster: "international-tax"
 clusters: ["international-tax"]
 strategy_snapshot:
   summary: "If you live in a high-tax country, the Foreign Tax Credit is usually the more durable long-term play. The FEIE can work well in lower-tax countries or lower-income years, but it can cost you flexibility if your situation changes."

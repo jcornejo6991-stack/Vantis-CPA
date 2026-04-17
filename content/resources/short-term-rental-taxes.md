@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["realestate", "individuals"]
 services: ["individual-tax", "sales-tax", "bookkeeping"]
 featured: false
+primary_cluster: "real-estate-tax"
 clusters: ["real-estate-tax"]
 strategy_snapshot:
   summary: "Short-term rental tax planning is really three separate questions: how the income is reported, whether losses are passive, and which Florida taxes the platform actually remits. Hosts get into trouble when they assume one answer settles all three."

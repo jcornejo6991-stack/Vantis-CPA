@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["expats", "business"]
 services: ["international-tax", "individual-tax"]
 featured: false
+primary_cluster: "international-tax"
 clusters: ["international-tax", "latam-inbound"]
 strategy_snapshot:
   summary: "The highest-value tax planning happens before U.S. residency begins. Once you cross the residency line, worldwide income reporting, foreign trust rules, and entity restructuring costs become much harder to control."

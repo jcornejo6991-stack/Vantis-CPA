@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["inbound", "realestate"]
 services: ["international-tax", "individual-tax"]
 featured: false
+primary_cluster: "latam-inbound"
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:
   summary: "For nonresident noncitizens, the estate tax issue is usually not the investment itself but how it is owned. Direct ownership of U.S. assets can create estate tax exposure with only a small exemption, so structure has to be solved before the purchase whenever possible."

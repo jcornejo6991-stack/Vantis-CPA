@@ -5,6 +5,7 @@ date: 2025-01-15
 practices: ["business", "individuals", "realestate"]
 services: ["business-tax"]
 featured: true
+primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:
   summary: "An S-Corp election is a margin strategy, not a milestone. It starts to work when profits are consistently high enough to support a defensible salary after paying for payroll, a separate return, and whatever state-level friction applies."

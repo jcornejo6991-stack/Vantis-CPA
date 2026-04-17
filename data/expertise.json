@@ -2,7 +2,7 @@
   {
     "name": "Individuals and Families",
     "slug": "individuals",
-    "url": "/expertise/individuals/",
+    "url": "/services/individual-tax/",
     "accent": "local",
     "description": "Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity.",
     "nav_icon": "👤",
@@ -17,7 +17,7 @@
   {
     "name": "Local and Online Business",
     "slug": "business",
-    "url": "/expertise/business/",
+    "url": "/services/business-tax/",
     "accent": "founders",
     "description": "Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies.",
     "nav_icon": "🏢",
@@ -32,7 +32,7 @@
   {
     "name": "Real Estate Owners",
     "slug": "realestate",
-    "url": "/expertise/realestate/",
+    "url": "/services/business-tax/real-estate/",
     "accent": "realestate",
     "description": "Tax planning for property owners, short-term rental operators, and investors in real estate partnerships and funds.",
     "nav_icon": "🏠",
@@ -47,7 +47,7 @@
   {
     "name": "U.S. Individuals with International Ties",
     "slug": "outbound",
-    "url": "/expertise/outbound/",
+    "url": "/services/international-tax/u-s-with-international-ties/",
     "accent": "outbound",
     "description": "Tax compliance and planning for citizens, green card holders, and dual residents with foreign accounts, foreign companies, and cross-border tax complexity.",
     "nav_icon": "🧭",
@@ -62,7 +62,7 @@
   {
     "name": "Foreign Business and Investors",
     "slug": "inbound",
-    "url": "/expertise/inbound/",
+    "url": "/services/international-tax/foreign-business-and-investors/",
     "accent": "inbound",
     "description": "We offer comprehensive services to help foreign businesses and investors enter the U.S. smoothly.",
     "nav_icon": "🌎",
@@ -77,7 +77,7 @@
   {
     "name": "U.S. Expats Abroad",
     "slug": "expats",
-    "url": "/expertise/expats/",
+    "url": "/services/international-tax/expats/",
     "accent": "expats",
     "description": "Remote compliance support bridging the gap between the U.S. tax system and international residency.",
     "nav_icon": "🌍",
