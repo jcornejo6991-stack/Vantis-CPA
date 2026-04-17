@@ -32,3 +32,11 @@ This website may contain links to third-party websites. We do not control and ar
 ## Consult a Professional
 
 Before making any financial, tax, or legal decision, we encourage you to consult a licensed professional who can review your specific facts and circumstances. If you would like to speak with our team directly, please [contact us](/contact/).
+
+## Contact
+
+Questions about this Disclaimer can be directed to:
+
+**Vantis CPA**
+[info@vantiscpa.com](mailto:info@vantiscpa.com)
+(305) 563-5551
