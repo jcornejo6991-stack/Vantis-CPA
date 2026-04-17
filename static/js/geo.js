@@ -17,8 +17,8 @@
     inbound:     { us: null,                                                                intl: "Serving foreign investors from {location} entering the U.S." },
     realestate:  { us: "Serving real estate owners in {location}",                         intl: "Serving U.S. real estate owners based in {location}" },
     // Services pages
-    "tax-strategy":      { us: "Helping businesses in {location} reduce their tax burden", intl: "Helping clients in {location} optimize their U.S. tax strategy" },
-    "tax-compliance":    { us: "Trusted tax compliance for businesses in {location}",       intl: "U.S. tax compliance for clients in {location}" },
+    "individual-tax":    { us: "Individual tax preparation and planning for clients in {location}", intl: "Individual tax preparation and planning for clients in {location}" },
+    "business-tax":      { us: "Business tax returns and planning for businesses in {location}", intl: "U.S. business tax support for clients in {location}" },
     "international-tax": { us: null,                                                         intl: "International tax expertise for clients in {location}" },
     "back-office":       { us: "Back-office support for businesses in {location}",          intl: "Remote back-office support for businesses in {location}" },
     bookkeeping:         { us: "Bookkeeping for businesses in {location}",                  intl: "Bookkeeping support for clients in {location}" },
