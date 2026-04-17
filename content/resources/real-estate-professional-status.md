@@ -3,7 +3,7 @@ title: "Real Estate Professional Status: How to Unlock Unlimited Passive Loss De
 description: "REPS lets real estate investors deduct rental losses against ordinary income with no cap. Here's what the two-part test requires, what documentation survives an audit, and when it's worth pursuing."
 date: 2026-01-01
 practices: ["realestate"]
-services: ["tax-strategy", "tax-compliance"]
+services: ["individual-tax"]
 featured: false
 clusters: ["real-estate-tax"]
 strategy_snapshot:

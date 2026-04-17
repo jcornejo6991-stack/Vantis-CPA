@@ -3,7 +3,7 @@ title: "2025 Tax Deadlines: Key Filing and Payment Dates"
 description: "Every important IRS filing and payment deadline for the 2025 tax year, including business returns, individual returns, extensions, and estimated tax payments."
 date: 2026-01-01
 practices: ["all"]
-services: ["tax-compliance"]
+services: ["individual-tax", "business-tax"]
 featured: true
 clusters: ["general-tax-compliance"]
 strategy_snapshot:

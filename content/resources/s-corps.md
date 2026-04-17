@@ -3,7 +3,7 @@ title: "S-Corporation Election: When It Makes Sense (and When It Doesn't)"
 description: "Learn when an S-Corp election saves taxes and when it costs more. Covers the savings calculation, reasonable salary rules, and who should avoid electing."
 date: 2025-01-15
 practices: ["business", "individuals", "realestate"]
-services: ["tax-strategy", "tax-compliance"]
+services: ["business-tax"]
 featured: true
 clusters: ["business-tax"]
 strategy_snapshot:

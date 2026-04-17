@@ -3,7 +3,7 @@ title: "Solo 401(k) vs. SEP-IRA: Which Retirement Plan Is Right for Self-Employe
 description: "Both plans offer high contribution limits and immediate tax deductions, but the Solo 401(k) lets you save significantly more at lower income levels and includes a Roth option most business owners don't know about."
 date: 2026-01-01
 practices: ["business", "individuals"]
-services: ["tax-strategy"]
+services: ["business-tax"]
 featured: false
 clusters: ["individual-tax"]
 strategy_snapshot:

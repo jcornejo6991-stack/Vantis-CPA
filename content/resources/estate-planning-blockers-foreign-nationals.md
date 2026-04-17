@@ -3,7 +3,7 @@ title: "U.S. Estate Tax Planning for Foreign Nationals with U.S. Assets"
 description: "Foreign nationals face a very different U.S. estate tax system than U.S. citizens and residents. The wrong ownership structure can expose U.S. real estate and other U.S. assets to estate tax with only a small exemption."
 date: 2026-04-11
 practices: ["inbound", "realestate"]
-services: ["international-tax", "tax-strategy"]
+services: ["international-tax", "individual-tax"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:

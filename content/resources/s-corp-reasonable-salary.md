@@ -3,7 +3,7 @@ title: "S-Corp Reasonable Salary: How to Set It Without Triggering Problems"
 description: "S-Corp owners need a reasonable salary before taking distributions, but the IRS does not use a magic percentage. The right number depends on role, time, comparables, and where the company's gross receipts really come from."
 date: 2026-04-16
 practices: ["business", "individuals", "realestate"]
-services: ["tax-strategy", "tax-compliance", "payroll"]
+services: ["business-tax", "payroll"]
 featured: false
 clusters: ["business-tax"]
 strategy_snapshot:

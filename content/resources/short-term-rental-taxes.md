@@ -3,7 +3,7 @@ title: "Short-Term Rental Taxes: What Airbnb and VRBO Hosts Owe in Florida"
 description: "STR hosts face income tax, self-employment tax, Florida sales tax, and county tourist development taxes. Most platforms collect some but not all of what you owe."
 date: 2026-01-01
 practices: ["realestate", "individuals"]
-services: ["tax-strategy", "sales-tax", "bookkeeping"]
+services: ["individual-tax", "sales-tax", "bookkeeping"]
 featured: false
 clusters: ["real-estate-tax"]
 strategy_snapshot:

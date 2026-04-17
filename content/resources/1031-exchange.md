@@ -3,7 +3,7 @@ title: "1031 Exchange Guide: Defer Capital Gains on Real Estate"
 description: "A 1031 exchange lets you sell investment property and defer capital gains tax by reinvesting in like-kind property. Here are the rules, timelines, and common pitfalls."
 date: 2025-02-01
 practices: ["realestate"]
-services: ["tax-strategy", "international-tax"]
+services: ["individual-tax", "international-tax"]
 featured: false
 clusters: ["real-estate-tax"]
 strategy_snapshot:

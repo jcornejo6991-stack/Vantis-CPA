@@ -3,7 +3,7 @@ title: "Best Entity Structure for Amazon and Etsy Sellers"
 description: "Amazon and Etsy sellers often choose between a sole proprietorship, LLC, and S-Corp. The right structure affects liability protection, self-employment tax, and how efficiently an online store can scale."
 date: 2026-04-11
 practices: ["business", "individuals", "inbound"]
-services: ["tax-strategy", "tax-compliance", "bookkeeping"]
+services: ["business-tax", "bookkeeping"]
 featured: false
 clusters: ["ecommerce-sellers", "business-tax"]
 strategy_snapshot:

@@ -3,7 +3,7 @@ title: "FEIE vs. Foreign Tax Credit: Which Should U.S. Expats Take?"
 description: "The FEIE and Foreign Tax Credit both reduce your U.S. tax bill, but choosing the wrong one can cost you IRA eligibility, Social Security credits, and thousands in taxes."
 date: 2026-01-01
 practices: ["expats"]
-services: ["international-tax", "tax-strategy"]
+services: ["international-tax", "individual-tax"]
 featured: false
 clusters: ["international-tax"]
 strategy_snapshot:
