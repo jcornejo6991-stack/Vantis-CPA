@@ -148,12 +148,12 @@
         <a href="/" role="menuitem">Home</a>
 
         <div class="mobile-accordion" id="mobile-who-we-serve">
-          <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-wws-body">
+          <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-wws-body">
             Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
-          <div class="mobile-accordion-body" id="mobile-wws-body">
+          <div class="mobile-accordion-body open" id="mobile-wws-body">
             {{ range $.Site.Data.expertise }}
-              <a href="{{ .url }}" role="menuitem">{{ .name }}</a>
+              <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .name }}</a>
               {{ if eq .slug "inbound" }}
               <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/" role="menuitem" class="mobile-subitem">Operating-Business LLCs</a>
               <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/" role="menuitem" class="mobile-subitem">Investment LLC Structures</a>

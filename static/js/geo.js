@@ -30,7 +30,7 @@
 
   // Derive the page slug from the URL path.
   // /expertise/expats/  → "expats"
-  // /services/tax-strategy/ → "tax-strategy"
+  // /services/individual-tax/ → "individual-tax"
   function getSlug() {
     var parts = window.location.pathname.replace(/\/+$/, '').split('/');
     return parts[parts.length - 1] || '';
