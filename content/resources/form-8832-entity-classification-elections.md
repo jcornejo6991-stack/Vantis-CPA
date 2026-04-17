@@ -6,6 +6,15 @@ practices: ["inbound", "business"]
 services: ["international-tax", "tax-strategy", "tax-compliance"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]
+strategy_snapshot:
+  summary: "Form 8832 is not a paperwork exercise. It changes who reports income, which information returns attach, and whether a later restructuring becomes taxable, so the election should be modeled before it is filed."
+  bullets:
+    - label: Strong use case
+      text: "You are aligning entity treatment with owner residence, fundraising plans, or a cleaner cross-border reporting outcome."
+    - label: Proceed carefully when
+      text: "Changing the classification could trigger a deemed incorporation, liquidation, or distribution."
+    - label: Biggest trap
+      text: "Treating the legal entity form as the tax answer and filing 8832 without modeling the downstream forms and transaction consequences."
 faqs:
   - q: "What does Form 8832 do?"
     a: "Form 8832 is the check-the-box election that allows an eligible entity to choose whether it is taxed as a corporation, partnership, or disregarded entity for U.S. federal tax purposes."
@@ -17,6 +26,10 @@ faqs:
 
 **[Form 8832](https://www.irs.gov/forms-pubs/about-form-8832)** is one of the most powerful elections in international tax because it lets many entities choose how they are treated for U.S. federal tax purposes. For foreign owners, that classification decision can affect everything from ongoing compliance to withholding to whether a future restructuring becomes an expensive taxable event.
 
+{{< callout title="Think in outcomes, not labels" tone="opportunity" >}}
+The election is valuable when it simplifies the owner's real reporting and cash-tax outcome. It is dangerous when it is filed just because one structure sounds more sophisticated than another.
+{{< /callout >}}
+
 ## What the Election Does
 
 Form 8832 is often called the **check-the-box election**. It allows an eligible entity to elect to be treated as:
@@ -26,6 +39,14 @@ Form 8832 is often called the **check-the-box election**. It allows an eligible 
 - A **disregarded entity** if it has a single owner
 
 If no election is made, the IRS applies **default classification rules**. Those defaults depend on whether the entity is domestic or foreign and how many owners it has.
+
+## Quick Comparison
+
+| Classification | Typical upside | Typical tradeoff |
+|----------------|----------------|------------------|
+| Disregarded entity | Simpler single-owner flow-through treatment | Can increase owner-level reporting and Form 5472 exposure in foreign-owned U.S. LLC structures |
+| Partnership | Pass-through treatment for multiple owners | More owner-level reporting and allocation complexity |
+| Corporation | Cleaner separation between entity and owner | Potential double-tax friction, withholding, and restructuring consequences |
 
 ## Why Foreign Owners Need to Care
 
@@ -56,6 +77,10 @@ Many foreign entities are eligible to elect classification for U.S. tax purposes
 This matters because the same legal entity can be viewed very differently in its home country and in the U.S.
 
 ## Timing Matters
+
+{{< pullquote attribution="Where elections go wrong" >}}
+The cheapest time to choose a classification is before the structure accumulates value, contracts, and reporting baggage.
+{{< /pullquote >}}
 
 An entity classification election is usually effective on the date specified in the form, subject to timing limits. But changing classification later can trigger a **deemed transaction** for U.S. tax purposes.
 

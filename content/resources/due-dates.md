@@ -6,6 +6,15 @@ practices: ["all"]
 services: ["tax-compliance"]
 featured: true
 clusters: ["general-tax-compliance"]
+strategy_snapshot:
+  summary: "This page covers tax year 2025 filings that mostly come due during calendar year 2026. In practice, March, April, September, and October are the four dates that control most individual and business compliance."
+  bullets:
+    - label: March matters for
+      text: "Calendar-year partnerships and S-Corps, which are due on March 16, 2026 because March 15 falls on a Sunday."
+    - label: April matters for
+      text: "Individuals, C-Corps, first-quarter estimates, FBAR season, and foreign-owned single-member LLC filings."
+    - label: Biggest trap
+      text: "Confusing an extension to file with an extension to pay; tax is still generally due by the original deadline."
 faqs:
   - q: "What is the deadline to file a personal tax return?"
     a: "April 15 for most individuals. An automatic 6-month extension to October 15 is available by filing Form 4868, but any taxes owed are still due April 15 — the extension is to file, not to pay."
@@ -21,6 +30,15 @@ faqs:
 - IRA contributions for the 2025 tax year
 - First quarter 2026 estimated tax payment (Form 1040-ES)
 - FinCEN 114 (FBAR), due April 15 with automatic extension to October 15
+
+{{< callout title="The four dates most clients should anchor" tone="comparison" >}}
+| Date | Why it matters |
+|------|----------------|
+| March 16, 2026 | S-Corp and partnership returns due for calendar-year filers |
+| April 15, 2026 | Individual returns, C-Corps, first estimated payment, IRA deadline, FBAR due date |
+| September 15, 2026 | Extended S-Corp and partnership returns |
+| October 15, 2026 | Extended individual and C-Corp returns, final FBAR automatic extension date |
+{{< /callout >}}
 
 **October 15, 2026:** Extended deadline for individual returns (Form 1040) if Form 4868 was filed by April 15.
 
@@ -70,5 +88,9 @@ Payroll deposit deadlines depend on your deposit schedule (monthly or semi-weekl
 ## Missing a Deadline
 
 The failure-to-file penalty is generally 5% of unpaid tax per month, up to 25%. The failure-to-pay penalty is 0.5% per month. Interest accrues on unpaid balances at the federal short-term rate plus 3 percentage points.
+
+{{< pullquote attribution="Extension misconception" >}}
+An extension buys time to finish the paperwork. It does not buy time to pay the tax.
+{{< /pullquote >}}
 
 If you cannot file on time, always file an extension and pay as much as possible by the original deadline. Extensions extend the filing date, not the payment deadline.

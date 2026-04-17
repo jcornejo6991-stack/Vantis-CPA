@@ -1,0 +1,7 @@
+{{ $title := .Get "title" | default "Quick take" }}
+{{ $tone := .Get "tone" | default "note" }}
+
+<aside class="article-callout" data-tone="{{ $tone }}">
+  <span class="article-callout-title">{{ $title }}</span>
+  {{ .Inner | markdownify }}
+</aside>

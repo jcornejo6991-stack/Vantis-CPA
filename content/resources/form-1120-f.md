@@ -6,6 +6,15 @@ practices: ["inbound", "business"]
 services: ["international-tax", "tax-compliance"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]
+strategy_snapshot:
+  summary: "Form 1120-F is often less about tax due today and more about protecting your position if the IRS later says a U.S. trade or business existed. When the facts are uncertain, timely protective filing can preserve deductions that would otherwise be lost."
+  bullets:
+    - label: File now when
+      text: "There is clear U.S. activity, effectively connected income, or a treaty-based position that should be disclosed."
+    - label: Protective filing matters when
+      text: "U.S. exposure is uncertain but the downside of losing deductions later would be expensive."
+    - label: Biggest trap
+      text: "Waiting because no tax appears due can turn a net-income issue into a gross-income assessment if the return is filed late."
 faqs:
   - q: "When does a foreign corporation need to file Form 1120-F?"
     a: "Generally when it is engaged in a U.S. trade or business, has effectively connected income, claims treaty benefits, or wants to preserve deductions through a protective filing. The filing obligation can exist even if no tax is ultimately due."
@@ -16,6 +25,10 @@ faqs:
 ---
 
 Foreign corporations doing business in or with the United States often assume the filing obligation starts only when there is obvious U.S. tax due. That is not how **[Form 1120-F](https://www.irs.gov/forms-pubs/about-form-1120-f)** works. In many cases, the return is required to report effectively connected income, disclose a U.S. branch, claim treaty protection, or simply preserve deductions if the IRS later decides a U.S. trade or business existed.
+
+{{< pullquote attribution="The planning issue" >}}
+The most valuable Form 1120-F may be the one you file before you know whether the IRS will say you needed it.
+{{< /pullquote >}}
 
 ## What Form 1120-F Is
 
@@ -59,6 +72,13 @@ Not all U.S.-source income is ECI. Some income is instead taxed on a gross basis
 ## Why Protective Filing Matters
 
 One of the most important reasons to file Form 1120-F is to protect deductions. Under Treasury regulations, a foreign corporation that does not timely file may lose the ability to deduct expenses if the IRS later determines it had ECI.
+
+{{< callout title="Regular vs. protective filing" tone="comparison" >}}
+| Filing posture | When it applies | Main benefit |
+|----------------|-----------------|--------------|
+| Regular 1120-F filing | You already know there is U.S. trade or business activity or ECI | Reports the income and claims deductions in the normal way |
+| Protective 1120-F filing | U.S. exposure is uncertain but plausible | Preserves deductions and treaty arguments if the IRS challenges the position later |
+{{< /callout >}}
 
 That means a business with $500,000 of gross U.S. receipts and $450,000 of valid expenses could be taxed as if the entire $500,000 were taxable, simply because the return was not filed on time. A **protective return** can prevent that result.
 

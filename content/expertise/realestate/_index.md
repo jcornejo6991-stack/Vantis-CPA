@@ -29,6 +29,16 @@ sections:
       Many rental properties are held through LLCs or partnerships, whether between spouses, family members, or small groups of co-investors. The partnership return adds a layer of filing requirements on top of each partner's individual return, and the way income, losses, depreciation, and distributions flow through to partners matters for both reporting and planning.
 
       We prepare partnership and multi-member LLC returns, handle the K-1s that flow to each partner's personal return, and help owners think through how the ownership structure affects their tax position over time.
+  - title: "Foreign-Owned U.S. Real Estate"
+    body: |
+      Foreign nationals owning U.S. property face a distinct compliance stack: rental withholding, net income elections, ITIN requirements, Form 1040-NR, and FIRPTA on sale. We handle both the ongoing rental compliance and the sale-side withholding and gain reporting.
+    cards:
+      - label: "Foreign-Owned U.S. Rental Property"
+        description: "Ongoing compliance for foreign nationals earning U.S. rental income, including net income elections, ITIN, and 1040-NR."
+        url: "/expertise/realestate/foreign-owned-us-rental-property/"
+      - label: "FIRPTA and U.S. Real Estate Sales"
+        description: "FIRPTA withholding certificates, gain reporting, and depreciation recapture for foreign sellers of U.S. real estate."
+        url: "/expertise/realestate/firpta-us-real-estate-sales/"
   - title: "Cross-Border Real Estate"
     body: |
       Foreign nationals owning US property face withholding requirements on rental income and FIRPTA withholding on sale, which can apply even when there is no actual gain. US persons owning property abroad must report foreign rental income and navigate different depreciation rules and foreign tax credit mechanics. We handle both situations as a secondary part of our real estate practice, typically alongside a broader individual or international engagement.
@@ -39,9 +49,12 @@ sectionTitle: "What We Handle"
 specializations:
   - label: "Schedule E and Rental Income Reporting"
   - label: "Real Estate Professional Status"
+    url: "/resources/real-estate-professional-status/"
   - label: "Passive Loss and Grouping Analysis"
   - label: "1031 Exchange Planning"
+    url: "/resources/1031-exchange/"
   - label: "Short-Term Rental Tax Planning"
+    url: "/resources/short-term-rental-taxes/"
   - label: "Depreciation and Gain on Sale Planning"
   - label: "Capitalize vs. Expense Analysis"
   - label: "Vacation Home and Mixed Personal/Rental Use"
@@ -49,7 +62,9 @@ specializations:
   - label: "K-1 Preparation and Partner Reporting"
   - label: "Florida Sales Tax on Rentals"
   - label: "FIRPTA Withholding and Compliance"
+    url: "/expertise/realestate/firpta-us-real-estate-sales/"
   - label: "Nonresident Real Estate Returns (1040-NR)"
+    url: "/expertise/realestate/foreign-owned-us-rental-property/"
   - label: "Foreign Real Estate Reporting"
   - label: "Foreign Tax Credit on Rental Income"
 ---

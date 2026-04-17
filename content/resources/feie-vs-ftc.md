@@ -6,6 +6,15 @@ practices: ["expats"]
 services: ["international-tax", "tax-strategy"]
 featured: false
 clusters: ["international-tax"]
+strategy_snapshot:
+  summary: "If you live in a high-tax country, the Foreign Tax Credit is usually the more durable long-term play. The FEIE can work well in lower-tax countries or lower-income years, but it can cost you flexibility if your situation changes."
+  bullets:
+    - label: FEIE fits when
+      text: "You are under the exclusion limit, live in a relatively low-tax country, and do not need the excluded income to support IRA planning."
+    - label: FTC fits when
+      text: "You pay foreign tax at rates close to or above U.S. rates, want to preserve future flexibility, or have income above the exclusion."
+    - label: Biggest trap
+      text: "Revoking FEIE can trigger a five-year re-election lockout, so the cheapest answer this year is not always the best answer long term."
 faqs:
   - q: "Can I claim both the FEIE and the Foreign Tax Credit on the same income?"
     a: "No. You cannot apply the FEIE and the FTC to the same dollars of foreign income. However, you can use the FEIE to exclude some income and apply the FTC to taxes paid on non-excluded income above the exclusion threshold."
@@ -17,11 +26,24 @@ faqs:
 
 Every American living abroad faces the same question: should you claim the **Foreign Earned Income Exclusion (FEIE)** or the **Foreign Tax Credit (FTC)**? Both reduce your U.S. tax bill, but they work differently, have different long-term consequences, and the wrong choice can follow you for years.
 
+{{< pullquote attribution="The planning issue" >}}
+The FEIE often wins the quick tax calculation, but the FTC usually wins when you care about long-term flexibility.
+{{< /pullquote >}}
+
 ## What Each One Does
 
 The **FEIE** ([Form 2555](https://www.irs.gov/forms-pubs/about-form-2555)) lets you exclude up to **$130,000** of foreign earned income from U.S. taxation in 2025. If your income is below that threshold, you may owe little or no U.S. tax. There's also a housing exclusion that can shield additional amounts spent on foreign housing above a base amount.
 
 The **Foreign Tax Credit** ([Form 1116](https://www.irs.gov/forms-pubs/about-form-1116)) gives you a dollar-for-dollar credit for income taxes paid to a foreign government. If you paid $15,000 in taxes to Germany, you get a $15,000 credit against your U.S. tax liability. Excess credits can be carried forward up to 10 years.
+
+## Quick Comparison
+
+| Question | FEIE | FTC |
+|----------|------|-----|
+| Best fit | Lower-tax country, moderate earned income | Higher-tax country or income above the exclusion |
+| Main upside | Can eliminate U.S. income tax on excluded wages | Preserves excess credits and usually works better as income rises |
+| Main downside | Can reduce IRA flexibility and creates re-election friction if revoked | More complex calculations and basket rules |
+| Self-employment impact | Does not reduce self-employment tax | Does not reduce self-employment tax, but often preserves better long-term planning options |
 
 ## The Key Tradeoffs
 
@@ -39,6 +61,10 @@ Neither option is universally better. The right choice depends on your country, 
 - More complex to calculate, especially with multiple income types or countries
 
 ## When FEIE Wins
+
+{{< callout title="Pattern to watch" tone="comparison" >}}
+If your foreign tax rate is already higher than the U.S. rate, the FTC usually ages better. If your foreign tax rate is low and your income is well below the exclusion, FEIE becomes more attractive.
+{{< /callout >}}
 
 The FEIE tends to be the better choice when:
 - You live in a **low-tax country** and your foreign tax rate is below the U.S. rate

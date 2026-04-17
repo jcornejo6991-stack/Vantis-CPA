@@ -74,7 +74,6 @@
       padding: 14px 18px;
       display: flex;
       align-items: center;
-      position: relative;
     }
 
     .nav-brand {
@@ -84,6 +83,12 @@
       text-decoration: none;
       flex-shrink: 0;
       margin-right: auto;
+    }
+    .nav-brand:hover,
+    .nav-brand:focus,
+    .nav-brand:active {
+      text-decoration: none;
+      opacity: 1;
     }
     .nav-gv-mark {
       display: flex;
@@ -121,7 +126,6 @@
       gap: 28px;
       list-style: none;
       margin: 0 0 0 auto;
-      position: relative;
       overflow: visible;
       padding: 0;
     }
@@ -146,9 +150,6 @@
       align-items: center;
     }
     /* Mega-menu li must be static so panel positions relative to nav-main-row */
-    .nav-mega {
-      position: static;
-    }
     .nav-dropdown > a::after {
       content: ' ▼';
       font-size: 10px;
@@ -170,7 +171,7 @@
       visibility: hidden;
       transition: opacity 0.3s, visibility 0.3s;
       z-index: 9999;
-      min-width: 200px;
+      min-width: 280px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       pointer-events: none;
     }
@@ -207,6 +208,19 @@
     /* Sideways dropdown for niches */
     .nav-dropdown-sideways {
       position: relative;
+      display: flex;
+    }
+    .nav-dropdown-sideways > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex: 1;
+    }
+    .nav-sideways-arrow {
+      flex-shrink: 0;
+      color: var(--accent);
+      font-size: 12px;
     }
     .nav-dropdown-submenu {
       position: absolute;
@@ -306,90 +320,6 @@
     }
 
     /* ── MEGA-MENU PANEL ── */
-    .nav-mega-panel {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      right: 0;
-      background: linear-gradient(160deg, #0a2e1c 0%, #081e12 100%);
-      border-top: 2px solid rgba(255,255,255,0.12);
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-      box-shadow: 0 12px 32px rgba(0,0,0,0.35);
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0;
-      padding: 24px 18px 20px;
-      opacity: 0;
-      visibility: hidden;
-      pointer-events: none;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
-      z-index: 9999;
-    }
-    .nav-mega-panel.open {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
-    }
-
-    .nav-mega-col {
-      padding: 0 20px 4px;
-      border-right: 1px solid rgba(255,255,255,0.06);
-      display: flex;
-      flex-direction: column;
-    }
-    .nav-mega-col:nth-child(3n) {
-      border-right: none;
-    }
-
-    .nav-mega-col-head {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 13px;
-      font-weight: 700;
-      color: #fff;
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: 0;
-      padding: 0 0 10px;
-      margin-bottom: 6px;
-      border-bottom: 1px solid rgba(255,255,255,0.1);
-      transition: opacity 0.15s;
-    }
-    .nav-mega-col-head:hover { opacity: 0.75; }
-    .nav-mega-icon { font-size: 14px; }
-
-    .nav-mega-item {
-      font-size: 12px;
-      font-weight: 500;
-      color: rgba(255,255,255,0.55);
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: 0;
-      padding: 5px 0 5px 4px;
-      border-left: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s, padding-left 0.15s;
-    }
-    .nav-mega-item:hover {
-      color: rgba(255,255,255,0.9);
-      border-left-color: var(--accent, #4ade80);
-      padding-left: 8px;
-      opacity: 1;
-    }
-
-    .nav-mega-see-all {
-      margin-top: auto;
-      padding-top: 10px;
-      font-size: 11px;
-      font-weight: 600;
-      color: rgba(255,255,255,0.3);
-      text-decoration: none;
-      text-transform: none;
-      letter-spacing: 0.02em;
-      transition: color 0.15s;
-    }
-    .nav-mega-see-all:hover { color: rgba(255,255,255,0.65); opacity: 1; }
-
     /* Services dropdown divider */
     .nav-dropdown-divider {
       border: none;
@@ -397,24 +327,7 @@
       margin: 4px 0;
     }
 
-    /* Schedule a Call CTA in nav */
-    .nav-links .nav-cta-link {
-      background: #f97316;
-      color: #fff;
-      padding: 7px 16px;
-      border-radius: 6px;
-      font-weight: 700;
-      text-transform: none;
-      letter-spacing: 0;
-      transition: background 0.2s;
-    }
-    .nav-links .nav-cta-link:hover { background: #ea6c0a; opacity: 1; }
-
     /* Hide mega panel on mobile — accordion handles it */
-    @media (max-width: 768px) {
-      .nav-mega-panel { display: none !important; }
-    }
-
     /* ── MOBILE ACCORDION ── */
     .mobile-accordion {
       border-bottom: 1px solid rgba(255,255,255,0.08);
@@ -456,18 +369,15 @@
     }
     .mobile-accordion-body a:last-child { border-bottom: none; }
     .mobile-accordion-body a:hover { color: rgba(255,255,255,0.9); }
-
-    .mobile-menu-cta {
-      display: block;
-      margin-top: 8px;
-      background: #f97316;
-      color: #fff !important;
-      font-weight: 700 !important;
-      font-size: 15px !important;
-      text-align: center;
-      border-radius: 6px;
-      padding: 12px 0 !important;
-      border-bottom: none !important;
+    .mobile-accordion-body a.mobile-subitem {
+      padding-left: 28px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.52);
     }
-    .mobile-menu-cta:hover { background: #ea6c0a; }
+    .mobile-accordion-body a.mobile-subitem::before {
+      content: "\21B3";
+      margin-right: 8px;
+      opacity: 0.7;
+    }
+
 </style>

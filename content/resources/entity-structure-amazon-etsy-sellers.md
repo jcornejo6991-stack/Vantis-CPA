@@ -6,6 +6,15 @@ practices: ["business", "individuals", "inbound"]
 services: ["tax-strategy", "tax-compliance", "bookkeeping"]
 featured: false
 clusters: ["ecommerce-sellers", "business-tax"]
+strategy_snapshot:
+  summary: "Most online sellers should earn the right to complexity. Start with clean books and legal separation first, then consider an S-Corp only after profit is stable enough to justify payroll and a second tax filing."
+  bullets:
+    - label: Stay simple when
+      text: "The store is still proving demand, margins swing month to month, or bookkeeping is not yet tight enough to trust the numbers."
+    - label: Form an LLC when
+      text: "Liability, contracts, banking, and operational separation matter more than pure tax savings."
+    - label: Model S-Corp when
+      text: "Net profit is consistently in the $50,000 to $75,000+ range and you can support a reasonable salary with reliable cash flow."
 faqs:
   - q: "Should Amazon or Etsy sellers form an LLC right away?"
     a: "Not always. An LLC helps with liability protection and business administration, but for many newer sellers the tax result is the same as a sole proprietorship until profits become meaningful or risk exposure increases."
@@ -16,6 +25,14 @@ faqs:
 ---
 
 Selling on Amazon, Etsy, Walmart Marketplace, Shopify, or eBay is easy to start and surprisingly easy to outgrow from a tax and legal perspective. Many sellers begin as sole proprietors, then hear they "need an LLC" or "should elect S-Corp status" without understanding what actually changes. The best entity structure for an Amazon or Etsy seller depends on profit level, operational risk, ownership, and where you want the business to go over the next two to three years.
+
+## Fast Comparison
+
+| Structure | Best when | Main benefit | Main downside |
+|-----------|-----------|--------------|---------------|
+| Sole proprietorship | Early validation stage | Cheapest and simplest | No liability shield and full SE tax exposure |
+| Single-member LLC | Operations are becoming real | Legal separation and cleaner administration | Usually no federal income tax change by itself |
+| S-Corp election | Profits are stable and meaningful | Potential payroll tax savings | Payroll, separate filing, and salary scrutiny |
 
 ## The Three Most Common Structures
 
@@ -67,6 +84,10 @@ Cons:
 
 The biggest misconception is that an LLC automatically saves taxes. In most cases, it does not. A single-member LLC with no election is taxed the same way as a sole proprietorship for federal income tax purposes. The LLC may still be worth forming for legal protection, branding, and operational clarity, but that is a different decision than the tax decision.
 
+{{< callout title="The sequence that usually works" tone="comparison" >}}
+For most sellers, the order is books first, LLC second, S-Corp third. Reversing that order usually creates more admin than savings.
+{{< /callout >}}
+
 The second misconception is that every profitable seller should elect S-Corp status. That only works when profits are high enough, margins are stable enough, and you are ready to run payroll correctly. If profit swings heavily with ad spend, inventory cycles, chargebacks, and seasonal demand, the administrative burden can outweigh the savings.
 
 ## When a Sole Proprietorship Still Works
@@ -104,6 +125,10 @@ An S-Corp election usually becomes worth modeling when:
 For an online seller with $120,000 of annual net profit, paying a reasonable salary and taking the balance as distributions may produce meaningful payroll tax savings. But if bookkeeping is weak, inventory is misstated, or owner draws are inconsistent, the structure can create more problems than it solves.
 
 ## Inventory Businesses Need Better Books Before Better Entities
+
+{{< pullquote attribution="Underlying economics first" >}}
+If the books do not measure true profit, the entity decision is just branding.
+{{< /pullquote >}}
 
 For Amazon and Etsy sellers, inventory accounting often matters more than the entity choice. If your books do not properly track:
 

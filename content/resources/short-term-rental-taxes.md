@@ -6,25 +6,39 @@ practices: ["realestate", "individuals"]
 services: ["tax-strategy", "sales-tax", "bookkeeping"]
 featured: false
 clusters: ["real-estate-tax"]
+strategy_snapshot:
+  summary: "Short-term rental tax planning is really three separate questions: how the income is reported, whether losses are passive, and which Florida taxes the platform actually remits. Hosts get into trouble when they assume one answer settles all three."
+  bullets:
+    - label: Federal issue
+      text: "Separate the passive-loss rules from the self-employment tax rules; short stays do not automatically answer both."
+    - label: Florida issue
+      text: "Even when a platform collects some tax, you may still have state or county registration and filing obligations."
+    - label: Biggest trap
+      text: "Assuming the average stay alone decides whether the activity belongs on Schedule C and whether self-employment tax applies."
 faqs:
   - q: "Is Airbnb and short-term rental income subject to self-employment tax?"
-    a: "Generally no. Short-term rental income is treated as investment income, not self-employment income, unless you provide substantial services (like a hotel). Most hosts do not owe self-employment tax."
+    a: "Not automatically. Many short-term rental hosts do not owe self-employment tax unless they provide substantial services similar to a hotel."
   - q: "Can I deduct short-term rental losses against my W-2 salary?"
     a: "Possibly. If your average rental period is 7 days or fewer and you materially participate, losses may be non-passive and deductible against any income. The 750-hour real estate professional test is not required for this specific exception."
   - q: "What is the 14-day personal use rule for short-term rentals?"
     a: "If you personally use the property for more than 14 days or 10% of rental days (whichever is greater), it is classified as a vacation home. Expense deductions become limited and losses cannot offset other income."
 ---
 
-Short-term rentals, including properties rented through Airbnb, VRBO, or directly, are taxed differently than traditional long-term rentals. The average rental period determines which IRS schedule applies, Florida imposes sales tax on every booking, and county tourist taxes stack on top. Most hosts discover the full picture only after their first notice.
+Short-term rentals, including properties rented through Airbnb, VRBO, or directly, are taxed differently than traditional long-term rentals. The average rental period affects the passive-loss analysis, Florida imposes sales tax on every booking, and county tourist taxes stack on top. Most hosts discover the full picture only after their first notice.
+
+{{< callout title="Three questions to separate" tone="comparison" >}}
+| Question | What drives it |
+|----------|----------------|
+| Is the activity passive or non-passive? | Average rental period and material participation |
+| Is it Schedule E or Schedule C? | Whether you provide substantial services for guest convenience |
+| Is self-employment tax due? | Usually tied to substantial services, not short stays by themselves |
+{{< /callout >}}
 
 ## The 7-Day Rule
 
-The **average rental period** is the key threshold. If the average stay across all rentals is **7 days or fewer**, your rental activity is treated as a business and reported on **[Schedule C](https://www.irs.gov/forms-pubs/about-schedule-c-form-1040)**, not Schedule E.
+The **average rental period** is the key threshold. If the average stay across all rentals is **7 days or fewer**, the activity may fall outside the normal rental rules for passive-loss purposes if you materially participate, which can make losses more usable against other income.
 
-Schedule C treatment means:
-- Rental income is **subject to self-employment tax** (15.3% on net profit up to $176,100 in 2025)
-- You must **materially participate** in the activity or losses are still passive
-- You can deduct business expenses, mileage, home office (if applicable), and platform fees
+**Important add-on:** short stays alone do **not automatically** mean the income belongs on **[Schedule C](https://www.irs.gov/forms-pubs/about-schedule-c-form-1040)** or is subject to self-employment tax. Under [IRS Publication 527](https://www.irs.gov/publications/p527), that usually turns on whether you provide **substantial services** for the guest's convenience, such as regular cleaning during the stay, linen changes, meals, or other hotel-like services.
 
 This catches most short-term rental hosts off guard. Airbnb rentals in a vacation market where guests stay 3–5 nights will almost always average 7 days or fewer.
 
@@ -39,6 +53,10 @@ Mixed-use rules require you to allocate expenses between personal and rental use
 If the average rental period exceeds 7 days (Schedule E territory), the passive activity rules apply. Losses are deductible only against passive income unless you qualify as a **Real Estate Professional** or meet one of the material participation tests.
 
 Hosts who actively manage their own property by handling bookings, guest communication, cleaning coordination, and maintenance often qualify under the **500-hour material participation test**, converting passive losses to active ones.
+
+{{< pullquote attribution="The practical takeaway" >}}
+For short-term rentals, average stay tells you a lot about losses. Services tell you a lot about self-employment tax.
+{{< /pullquote >}}
 
 ## Florida Sales Tax on Rentals
 
@@ -77,7 +95,7 @@ STR hosts can deduct ordinary and necessary business expenses, including:
 
 - **Assuming the platform remits all taxes:** it usually doesn't cover county TDT
 - **Not registering with the DOR:** Florida requires a separate dealer registration even if Airbnb remits on your behalf
-- **Missing the 7-day average:** hosts who assume Schedule E when average stays are below 7 days underreport SE tax
+- **Missing the 7-day average:** hosts who ignore the passive-loss rules can miss deductions or misclassify losses
 - **Personal use days:** every night you, your family, or friends stay free counts as personal use
 - **No separate bookkeeping:** mixing rental income with personal accounts makes expense allocation unreliable and invites scrutiny
 

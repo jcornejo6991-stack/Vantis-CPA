@@ -146,6 +146,10 @@
       line-height: 1.75;
     }
 
+    .article-content > *:last-child {
+      margin-bottom: 0;
+    }
+
     .article-back {
       display: inline-block;
       font-size: 14px;
@@ -208,11 +212,162 @@
       color: #3a8b5f;
     }
 
+    .strategy-snapshot {
+      background: linear-gradient(135deg, #f5fbf6 0%, #ecf5ef 100%);
+      border: 1px solid rgba(21, 72, 46, 0.12);
+      border-radius: 18px;
+      padding: 24px 24px 22px;
+      margin: 0 0 28px;
+      box-shadow: 0 16px 36px rgba(4, 31, 18, 0.08);
+    }
+
+    .strategy-snapshot-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      color: #15482E;
+      margin-bottom: 12px;
+    }
+
+    .strategy-snapshot-kicker::before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: rgba(21, 72, 46, 0.4);
+    }
+
+    .strategy-snapshot h2 {
+      margin: 0 0 10px;
+      font-size: clamp(22px, 3vw, 28px);
+    }
+
+    .strategy-snapshot-summary {
+      font-size: 16px;
+      color: #244333;
+      margin: 0 0 18px;
+      max-width: 56ch;
+    }
+
+    .strategy-snapshot-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .strategy-snapshot-item {
+      background: rgba(255,255,255,0.84);
+      border-radius: 14px;
+      padding: 16px 16px 14px;
+      border: 1px solid rgba(21, 72, 46, 0.08);
+    }
+
+    .strategy-snapshot-item-label {
+      display: block;
+      font-size: 11px;
+      line-height: 1.4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #5f7868;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .strategy-snapshot-item p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.65;
+      color: #173123;
+    }
+
+    .article-callout {
+      margin: 28px 0;
+      padding: 20px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(21, 72, 46, 0.12);
+      background: #fff;
+      box-shadow: 0 12px 28px rgba(15, 40, 24, 0.06);
+    }
+
+    .article-callout[data-tone="warning"] {
+      background: #fff;
+      border-color: rgba(21, 72, 46, 0.12);
+    }
+
+    .article-callout[data-tone="opportunity"] {
+      background: #f8fbf8;
+      border-color: rgba(21, 72, 46, 0.16);
+    }
+
+    .article-callout[data-tone="comparison"] {
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    .article-callout-title {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+      color: #0f2818;
+      margin-bottom: 8px;
+    }
+
+    .article-callout p:last-child,
+    .article-callout ul:last-child,
+    .article-callout ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .article-pullquote {
+      margin: 32px 0;
+      padding: 8px 0 8px 24px;
+      border-left: 4px solid #15482E;
+    }
+
+    .article-pullquote blockquote {
+      margin: 0;
+    }
+
+    .article-pullquote p {
+      margin: 0;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(24px, 3.2vw, 34px);
+      line-height: 1.35;
+      color: #0f2818;
+      letter-spacing: -0.02em;
+    }
+
+    .article-pullquote cite {
+      display: block;
+      margin-top: 12px;
+      font-style: normal;
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      color: #5f7868;
+    }
+
     .article-content table {
       width: 100%;
-      border-collapse: collapse;
-      margin: 0 0 20px;
+      border-collapse: separate;
+      border-spacing: 0;
+      margin: 24px 0;
       font-size: 14px;
+      display: table;
+      overflow: hidden;
+      white-space: normal;
+      table-layout: auto;
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(15, 40, 24, 0.08);
+      border: 1px solid rgba(21, 72, 46, 0.08);
+      background: #fff;
     }
 
     .article-content th {
@@ -223,13 +378,54 @@
       font-weight: 600;
     }
 
+    .article-content th:first-child {
+      border-top-left-radius: 16px;
+    }
+
+    .article-content th:last-child {
+      border-top-right-radius: 16px;
+    }
+
     .article-content td {
       padding: 9px 14px;
       border-bottom: 1px solid #e8e8e8;
+      white-space: normal;
     }
 
     .article-content tr:nth-child(even) td {
       background: #f9f9f9;
+    }
+
+    .article-content tr:last-child td:first-child {
+      border-bottom-left-radius: 16px;
+    }
+
+    .article-content tr:last-child td:last-child {
+      border-bottom-right-radius: 16px;
+    }
+
+    .article-content .article-callout table {
+      width: 100%;
+      margin: 14px 0 0;
+      display: table;
+      overflow: visible;
+      white-space: normal;
+      table-layout: auto;
+      border-collapse: separate;
+      border-spacing: 0;
+      border-radius: 16px;
+      box-shadow: none;
+      border: 1px solid rgba(21, 72, 46, 0.1);
+      background: #fff;
+    }
+
+    .article-content .article-callout th,
+    .article-content .article-callout td {
+      white-space: normal;
+    }
+
+    .article-content .article-callout tr:last-child td {
+      border-bottom: none;
     }
 
     .article-updated {
@@ -435,6 +631,10 @@
         grid-template-columns: 1fr;
         padding: 24px 24px 32px;
       }
+
+       .strategy-snapshot-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 768px) {
@@ -481,6 +681,19 @@
 
       .article-sidebar {
         padding: 28px 20px 24px;
+      }
+
+      .strategy-snapshot,
+      .article-callout {
+        padding: 18px;
+      }
+
+      .article-pullquote {
+        padding-left: 18px;
+      }
+
+      .article-pullquote p {
+        font-size: 22px;
       }
     }
   </style>
@@ -544,6 +757,23 @@
         <div class="article-content">
           <a href="/resources/" class="article-back">← Back to Resource Library</a>
           <!-- TODO: Add "Reviewed by [Name], CPA, MTax" badge here when ready — see memory/feedback_author_bio.md -->
+          {{ with .Params.strategy_snapshot }}
+            <section class="strategy-snapshot" aria-label="Strategy Snapshot">
+              <div class="strategy-snapshot-kicker">30-second summary</div>
+              <h2>Strategy Snapshot</h2>
+              {{ with .summary }}<p class="strategy-snapshot-summary">{{ . }}</p>{{ end }}
+              {{ with .bullets }}
+                <div class="strategy-snapshot-grid">
+                  {{ range . }}
+                    <div class="strategy-snapshot-item">
+                      {{ with .label }}<span class="strategy-snapshot-item-label">{{ . }}</span>{{ end }}
+                      {{ with .text }}<p>{{ . }}</p>{{ end }}
+                    </div>
+                  {{ end }}
+                </div>
+              {{ end }}
+            </section>
+          {{ end }}
           {{ .Content }}
           <p class="article-updated">Last updated: {{ .Date.Format "2006" }}</p>
         </div>

@@ -25,13 +25,78 @@
 
   <!-- Hero section — title from data file if expertise page, otherwise frontmatter -->
   {{ $displayTitle := .Title }}
-  {{ $slug := .Params.slug | default (path.Base .File.Dir) }}
-  {{ range $.Site.Data.expertise }}
-    {{ if eq .slug $slug }}
-      {{ $displayTitle = .name }}
+  {{ $isExpertiseSubpage := and (eq .Section "expertise") (ne .File.BaseFileName "_index") .Parent }}
+  {{ $parentPage := "" }}
+  {{ if $isExpertiseSubpage }}
+    {{ $parentPage = .Parent }}
+  {{ end }}
+
+  {{/* Mid-section index: e.g. outbound/latam/_index.md — an _index inside a sub-folder of an expertise section */}}
+  {{ $isExpertiseMidSection := false }}
+  {{ $midSectionParent := "" }}
+  {{ if and (eq .Section "expertise") (eq .File.BaseFileName "_index") (ne .RelPermalink "/expertise/") .Parent }}
+    {{ with .Parent }}
+      {{ if and (eq .Section "expertise") (ne .RelPermalink "/expertise/") }}
+        {{ $isExpertiseMidSection = true }}
+        {{ $midSectionParent = . }}
+      {{ end }}
     {{ end }}
   {{ end }}
-  <section class="hero">
+
+  {{/* Sub-sub page: e.g. outbound/latam/mexico.md — parent is a mid-section, grandparent is the expertise section */}}
+  {{ $isSubSubpage := false }}
+  {{ $midSectionPage := "" }}
+  {{ if $isExpertiseSubpage }}
+    {{ with $parentPage.Parent }}
+      {{ if and (eq .Section "expertise") (ne .RelPermalink "/expertise/") }}
+        {{ $isSubSubpage = true }}
+        {{ $midSectionPage = $parentPage }}
+        {{ $parentPage = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $slug := .Params.slug }}
+  {{ if not $slug }}
+    {{ if $isExpertiseMidSection }}
+      {{ $slug = $midSectionParent.Params.slug | default (path.Base $midSectionParent.File.Dir) }}
+    {{ else if and $isExpertiseSubpage $parentPage }}
+      {{ $slug = $parentPage.Params.slug | default (path.Base $parentPage.File.Dir) }}
+    {{ else }}
+      {{ $slug = path.Base .File.Dir }}
+    {{ end }}
+  {{ end }}
+  {{ if and (eq .Section "expertise") (not $isExpertiseSubpage) (not $isExpertiseMidSection) }}
+    {{ range $.Site.Data.expertise }}
+      {{ if eq .slug $slug }}
+        {{ $displayTitle = .name }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ $subpages := slice }}
+  {{ if $isExpertiseSubpage }}
+    {{ $subpages = $parentPage.RegularPages.ByWeight }}
+  {{ end }}
+  <section class="hero{{ if or $isExpertiseSubpage $isExpertiseMidSection }} hero-subpage{{ end }}">
+    {{ if or $isExpertiseSubpage $isExpertiseMidSection }}
+    <div class="hero-breadcrumb">
+      <a href="/expertise/">Who We Serve</a>
+      <span>/</span>
+      {{ if $isExpertiseMidSection }}
+        <a href="{{ $midSectionParent.RelPermalink }}">{{ $midSectionParent.Title }}</a>
+        <span>/</span>
+        <span>{{ .Title }}</span>
+      {{ else }}
+        <a href="{{ $parentPage.RelPermalink }}">{{ $parentPage.Title }}</a>
+        {{ if $isSubSubpage }}
+        <span>/</span>
+        <a href="{{ $midSectionPage.RelPermalink }}">{{ $midSectionPage.Title }}</a>
+        {{ end }}
+        <span>/</span>
+        <span>{{ .Title }}</span>
+      {{ end }}
+    </div>
+    {{ end }}
     <h1>{{ $displayTitle }}</h1>
     <p class="hero-subtitle">{{ .Params.subtitle }}</p>
     <p class="hero-geo" data-geo-line style="display:none"></p>
@@ -120,6 +185,19 @@
           <div class="intro-section">
             {{ if .title }}<p class="intro-heading">{{ .title }}</p>{{ end }}
             {{ if .body }}{{ .body | markdownify }}{{ end }}
+            {{ if .cards }}
+            <div class="cross-link-grid" style="margin-top: 16px; grid-template-columns: 1fr;">
+              {{ range .cards }}
+              <a href="{{ .url }}" class="cross-link-card">
+                <span>
+                  {{ .label }}
+                  {{ with .description }}<small style="display:block; margin-top:4px; font-size:12px; font-weight:400; color:#4e6a5b; line-height:1.45;">{{ . }}</small>{{ end }}
+                </span>
+                <span class="cross-link-arrow">Learn More &rarr;</span>
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
           </div>
           {{ end }}
         {{ else }}

@@ -541,7 +541,7 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(20px, 2vw, 28px);
       font-weight: 700;
-      color: var(--navy);
+      color: var(--primary);
       margin: 0;
       line-height: 1.1;
       text-align: left;
@@ -1164,6 +1164,7 @@
       .resources-grid { grid-template-columns: 1fr; }
       .core-services-grid,
       .support-services-grid { grid-template-columns: 1fr; }
+      .contact-header .section-subheading { white-space: normal; width: auto; }
       .industry-card { grid-template-columns: 1fr; align-items: flex-start; gap: 10px; min-height: 0; height: auto; padding: 22px 0; }
       .industry-title-group { gap: 8px; }
       .industry-title { font-size: clamp(18px, 5vw, 22px); }
@@ -1444,13 +1445,13 @@
       <div class="service-card core-service-card fade-up fade-up-d2">
         <span class="service-label-badge">Expert</span>
         <h4 class="service-title">Tax Compliance</h4>
-        <p class="service-description">Federal and state returns for individuals, businesses, and trusts. Extensions, amended returns, and IRS notices handled completely and on time.</p>
+        <p class="service-description">Federal and state returns for individuals and businesses, plus quarterly estimated payments, extensions, amended returns, and IRS notices handled completely and on time.</p>
         <ul class="service-list">
           <li>Individuals</li>
-          <li>Trusts</li>
           <li>Partnerships</li>
           <li>S-Corporations</li>
           <li>C-Corporations</li>
+          <li>Quarterly Estimates</li>
         </ul>
         <a href="/services/tax-compliance" class="service-learn-more">Learn More →</a>
       </div>
@@ -1458,7 +1459,7 @@
       <div class="service-card core-service-card fade-up fade-up-d3">
         <span class="service-label-badge">Expert</span>
         <h4 class="service-title">International Tax</h4>
-        <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We handle it completely — every obligation, every form, every deadline.</p>
+        <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We structure it to minimize what you owe worldwide.</p>
         <ul class="service-list">
           <li>U.S. Persons with Foreign Assets</li>
           <li>U.S. Expats Abroad</li>
@@ -1475,21 +1476,21 @@
     <div class="services-grid support-services-grid">
       <div class="service-card support-service-card fade-up fade-up-d1">
         <h4 class="service-title">Back Office</h4>
-        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs and provide notary services.</p>
-        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN · Notary</p>
+        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs.</p>
+        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN</p>
         <a href="/services/back-office" class="service-learn-more">Learn More →</a>
       </div>
 
       <div class="service-card support-service-card fade-up fade-up-d2">
         <h4 class="service-title">Bookkeeping</h4>
-        <p class="service-description">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management so your numbers are always current.</p>
+        <p class="service-description">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management.</p>
         <p class="service-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
         <a href="/services/bookkeeping" class="service-learn-more">Learn More →</a>
       </div>
 
       <div class="service-card support-service-card fade-up fade-up-d3">
         <h4 class="service-title">Payroll</h4>
-        <p class="service-description">Complete payroll setup and ongoing management. We handle all filings, deposits, and compliance so your team gets paid on time, every time.</p>
+        <p class="service-description">Complete payroll setup and ongoing management. We handle all filings, deposits, and compliance.</p>
         <p class="service-tools">Gusto · W-2 &amp; 1099 · State Filings</p>
         <a href="/services/payroll" class="service-learn-more">Learn More →</a>
       </div>
@@ -1553,7 +1554,7 @@
 
         const learnMore = document.createElement('span');
         learnMore.className = 'industry-learn-more';
-        learnMore.textContent = 'Learn More ->';
+        learnMore.textContent = 'Learn More →';
         card.appendChild(learnMore);
 
         // Niches list (hidden, preserved for future use)
@@ -1698,7 +1699,7 @@
         <!-- Referral link below form -->
         <div class="referral-link-section fade-up fade-up-d2">
           <p class="referral-link-label">Partner With Us</p>
-          <a href="/referrals/" class="referral-link">Our Referral Program →</a>
+          <a href="/referrals/" class="referral-link">CPA Partnerships →</a>
         </div>
       </div>
 
@@ -1797,150 +1798,6 @@
 </section>
 
 <!-- ═══════════════════ RESOURCES ═══════════════════ -->
-<section class="resources" id="resources">
-  <div class="container">
-    <div class="resources-header">
-      <p class="section-label fade-up">Knowledge Base</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="resources-heading">Resources</h2>
-
-    </div>
-
-    <div class="resources-carousel-wrapper fade-up fade-up-d3">
-      <button class="carousel-nav carousel-nav-prev" id="carouselPrev" aria-label="Previous articles">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="15 18 9 12 15 6"></polyline>
-        </svg>
-      </button>
-
-      <div class="resources-carousel">
-        <div class="resources-articles" id="resourceArticles">
-          <!-- Articles populated by JavaScript -->
-        </div>
-      </div>
-
-      <button class="carousel-nav carousel-nav-next" id="carouselNext" aria-label="Next articles">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <polyline points="9 18 15 12 9 6"></polyline>
-        </svg>
-      </button>
-    </div>
-    <div style="text-align:right;padding:8px 22px 4px;">
-      <a href="/resources/" style="font-size:14px;color:var(--primary);font-weight:600;text-decoration:none;">View all articles in the library →</a>
-    </div>
-  </div>
-
-  <script>
-    // Resources initialization (standalone script)
-    const resourcesData = [
-      {
-        id: "s-corps",
-        title: "S-Corporation Election: When It Makes Sense (and When It Doesn't)",
-        description: "Learn when an S-Corp election saves taxes and when it costs more. Covers the savings calculation, reasonable salary rules, and who should avoid electing.",
-        practices: ["business", "individuals", "realestate"]
-      },
-      {
-        id: "smllc-5472",
-        title: "Form 5472 for Foreign-Owned Single-Member LLCs",
-        description: "Foreign-owned disregarded entities must file Form 5472 or face a $25,000 penalty. Here's what triggers the requirement and how to comply.",
-        practices: ["business", "individuals", "inbound"]
-      },
-      {
-        id: "form-5471",
-        title: "Form 5471: U.S. Shareholders of Foreign Corporations",
-        description: "U.S. persons who own 10% or more of a foreign corporation must file Form 5471. Here's who qualifies, what's reported, and the penalties for non-compliance.",
-        practices: ["outbound", "inbound"]
-      },
-      {
-        id: "due-dates",
-        title: "2025 Tax Deadlines: Key Filing and Payment Dates",
-        description: "Every important IRS filing and payment deadline for the 2025 tax year, including business returns, individual returns, extensions, and estimated tax payments.",
-        practices: ["all"]
-      },
-      {
-        id: "1031-exchange",
-        title: "1031 Exchange Guide: Defer Capital Gains on Real Estate",
-        description: "A 1031 exchange lets you sell investment property and defer capital gains tax by reinvesting in like-kind property. Here are the rules, timelines, and common pitfalls.",
-        practices: ["realestate"]
-      },
-      {
-        id: "feie-vs-ftc",
-        title: "FEIE vs. Foreign Tax Credit: Which Should U.S. Expats Take?",
-        description: "The FEIE and Foreign Tax Credit both reduce your U.S. tax bill, but choosing the wrong one can cost you IRA eligibility, Social Security credits, and thousands in taxes.",
-        practices: ["expats"]
-      },
-      {
-        id: "real-estate-professional-status",
-        title: "Real Estate Professional Status: How to Unlock Unlimited Passive Loss Deductions",
-        description: "REPS lets real estate investors deduct rental losses against ordinary income with no cap. Here's what the two-part test requires, what documentation survives an audit, and when it's worth pursuing.",
-        practices: ["realestate"]
-      },
-      {
-        id: "short-term-rental-taxes",
-        title: "Short-Term Rental Taxes: What Airbnb and VRBO Hosts Owe in Florida",
-        description: "STR hosts face income tax, self-employment tax, Florida sales tax, and county tourist development taxes. Most platforms collect some but not all of what you owe.",
-        practices: ["realestate", "individuals"]
-      },
-      {
-        id: "pre-immigration-planning",
-        title: "Pre-Immigration Tax Planning: What to Do Before You Become a U.S. Tax Resident",
-        description: "Becoming a U.S. tax resident triggers worldwide income reporting, foreign trust rules, and potential double taxation. The right moves before you arrive can save years of tax pain. The wrong ones are permanent.",
-        practices: ["expats", "business"]
-      },
-      {
-        id: "solo-401k-vs-sep-ira",
-        title: "Solo 401(k) vs. SEP-IRA: Which Retirement Plan Is Right for Self-Employed Business Owners?",
-        description: "Both plans offer high contribution limits and immediate tax deductions, but the Solo 401(k) lets you save significantly more at lower income levels and includes a Roth option most business owners don't know about.",
-        practices: ["business", "individuals"]
-      }
-    ];
-
-    function getFilteredArticles(practice) {
-      if (practice === "all") return resourcesData;
-      return resourcesData.filter(article =>
-        article.practices.includes(practice) || article.practices.includes("all")
-      );
-    }
-
-    function renderResourceArticles(practice = "all") {
-      const container = document.getElementById("resourceArticles");
-      if (!container) return;
-
-      const articles = getFilteredArticles(practice);
-
-      container.innerHTML = articles.map(article => {
-        const href = "/resources/" + article.id + "/";
-        return `
-        <div class="resource-card fade-up">
-          <h3 class="resource-title">${article.title}</h3>
-          <p class="resource-description">${article.description}</p>
-          <a href="${href}" class="resource-link">Read Article →</a>
-        </div>
-      `;
-      }).join("");
-    }
-
-    // Initialize immediately
-    renderResourceArticles("all");
-
-    // Carousel navigation
-    const carouselContainer = document.querySelector(".resources-articles");
-    const prevBtn = document.getElementById("carouselPrev");
-    const nextBtn = document.getElementById("carouselNext");
-
-    if (carouselContainer && prevBtn && nextBtn) {
-      const scrollAmount = 320; // Card width + gap
-
-      prevBtn.addEventListener("click", function() {
-        carouselContainer.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-      });
-
-      nextBtn.addEventListener("click", function() {
-        carouselContainer.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      });
-    }
-
-</script>
-</section>
 
 {{ partial "footer.html" . }}
 

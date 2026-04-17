@@ -6,6 +6,15 @@ practices: ["realestate"]
 services: ["tax-strategy", "international-tax"]
 featured: false
 clusters: ["real-estate-tax"]
+strategy_snapshot:
+  summary: "A 1031 exchange works only when the transaction is designed around the rules before closing. The core job is protecting deferral by keeping the cash out of your hands and hitting the 45-day and 180-day deadlines without mistakes."
+  bullets:
+    - label: Best use case
+      text: "You are selling appreciated investment or business real estate and already know what kind of replacement property you want."
+    - label: Must-have guardrails
+      text: "A qualified intermediary, no receipt of sale proceeds, and a calendar built around the identification and closing deadlines."
+    - label: Biggest trap
+      text: "Treating the exchange like an ordinary sale and calling the intermediary after closing, when the deferral has already been lost."
 faqs:
   - q: "How long do I have to identify and close on replacement property in a 1031 exchange?"
     a: "You have 45 days from the sale of the relinquished property to identify up to three replacement properties in writing, and 180 days total to close on the replacement property. Both deadlines run concurrently from the sale date and are strictly enforced — there are no extensions except in federally declared disaster areas."
@@ -20,6 +29,10 @@ faqs:
 A 1031 exchange (named after [Section 1031 of the Internal Revenue Code](https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips)) allows you to sell investment or business property and defer federal (and often state) capital gains tax by reinvesting the proceeds into a "like-kind" replacement property.
 
 Without a 1031 exchange, selling appreciated real estate triggers capital gains tax at rates up to 20% plus the 3.8% Net Investment Income Tax, plus depreciation recapture at 25%. A well-executed exchange defers all of this indefinitely.
+
+{{< pullquote attribution="What actually breaks exchanges" >}}
+Most failed 1031 exchanges are not bad tax ideas. They are bad transaction timing.
+{{< /pullquote >}}
 
 ## What Qualifies
 
@@ -37,6 +50,13 @@ Without a 1031 exchange, selling appreciated real estate triggers capital gains 
 ## The Key Timelines
 
 A 1031 exchange has two hard deadlines that cannot be extended:
+
+{{< callout title="The two dates that run the whole transaction" tone="warning" >}}
+| Deadline | Starts when | What must happen |
+|----------|-------------|------------------|
+| 45 days | Sale of the relinquished property closes | Replacement property must be identified in writing |
+| 180 days | Same sale date | Replacement property must close, unless the return due date cuts the period shorter |
+{{< /callout >}}
 
 **45-day identification period:** From the date you close on the sale of the relinquished property, you have 45 calendar days to formally identify potential replacement properties in writing to your Qualified Intermediary. You may identify up to three properties (the "3-property rule"), any number of properties with a combined fair market value up to 200% of the relinquished property (the "200% rule"), or any number of properties if you actually close on 95% of their combined value.
 

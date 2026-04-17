@@ -5,6 +5,16 @@ layout: "service"
 subtitle: "Tax compliance and planning for U.S. citizens, dual citizens, and green card holders with foreign financial ties."
 heroImage: "/images/globe-hero.jpg"
 sections:
+  - title: "Country-Specific Engagements"
+    body: |
+      For clients living abroad, we offer country-specific pages that go deeper on the local treaty, tax mechanics, and reporting issues that matter most in that location.
+    cards:
+      - label: "Latin America"
+        description: "FEIE vs. FTC, treaty analysis, FBAR, and state residency for Americans living in Latin America."
+        url: "/expertise/outbound/latam/"
+      - label: "Canada"
+        description: "RRSP/TFSA treatment, U.S.-Canada treaty, FTC, and departure planning for Americans in Canada."
+        url: "/expertise/outbound/canada/"
   - title: "International Tax for U.S. Individuals and Families"
     body: |
       You don't have to be living abroad to have complex international tax obligations. U.S. residents with foreign bank accounts, investments, inherited assets, or dual citizenship face reporting requirements that go well beyond a standard 1040. Missing these filings, even when no additional tax is owed, can result in significant penalties.
@@ -40,9 +50,11 @@ specializations:
   - label: "FBAR Filing"
   - label: "FATCA / Form 8938 Reporting"
   - label: "Form 5471 — Foreign Corporation Reporting"
+    url: "/resources/form-5471/"
   - label: "Form 8865 — Foreign Partnership Reporting"
   - label: "Form 8858 — Foreign Disregarded Entity"
   - label: "Foreign Tax Credit"
+    url: "/resources/feie-vs-ftc/"
   - label: "Form 3520 — Foreign Gifts & Inheritance"
   - label: "Dual Citizen Tax Compliance"
   - label: "Green Card Holder U.S. Tax Obligations"

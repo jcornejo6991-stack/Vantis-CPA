@@ -6,6 +6,15 @@ practices: ["business", "individuals", "realestate"]
 services: ["tax-strategy", "tax-compliance"]
 featured: true
 clusters: ["business-tax"]
+strategy_snapshot:
+  summary: "An S-Corp election is a margin strategy, not a milestone. It starts to work when profits are consistently high enough to support a defensible salary after paying for payroll, a separate return, and whatever state-level friction applies."
+  bullets:
+    - label: Strong candidate
+      text: "An owner-operated business with stable cash flow and net income usually north of $50,000 to $75,000."
+    - label: Weak candidate
+      text: "A low-profit business, a company with foreign or institutional investors, or an owner who is not ready to run payroll correctly."
+    - label: Biggest trap
+      text: "Chasing the savings estimate without budgeting for reasonable compensation, payroll compliance, and state tax drag."
 faqs:
   - q: "At what income level does an S-Corp election make sense?"
     a: "An S-Corp election typically saves money once your net self-employment profit exceeds $40,000 to $50,000 per year. Below that threshold, the cost of payroll compliance often outweighs the self-employment tax savings."
@@ -20,6 +29,10 @@ faqs:
 An S-Corporation is not a separate business entity; it's a tax election made on [IRS Form 2553](https://www.irs.gov/forms-pubs/about-form-2553). A standard LLC or C-Corporation can elect S-Corp status to change how profits flow to your personal tax return.
 
 The key benefit: only your W-2 salary is subject to self-employment (SE) tax. Remaining profits pass through as distributions, not subject to the 15.3% SE tax rate.
+
+{{< callout title="The real decision" tone="comparison" >}}
+The question is not whether an S-Corp saves tax in theory. The question is whether it still saves tax after payroll, compliance costs, and a realistic owner salary.
+{{< /callout >}}
 
 ## The Math Behind the Savings
 
@@ -45,6 +58,10 @@ The election typically becomes worthwhile when net profit consistently exceeds $
 - **Businesses with foreign owners or investors:** non-resident alien shareholders are prohibited
 - **Net profit below $50,000:** administrative costs exceed the tax savings
 - **California businesses:** the state imposes an $800 minimum franchise tax plus a 1.5% S-Corp tax rate, which erodes savings significantly
+
+{{< pullquote attribution="Screening rule" >}}
+If the business is still too small to support clean payroll, it is usually too small to justify an S-Corp election.
+{{< /pullquote >}}
 
 ## How to Elect
 

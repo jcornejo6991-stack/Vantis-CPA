@@ -1,7 +1,6 @@
-<!-- ═══════════════════ NAV ═══════════════════ -->
+<!-- Main navigation -->
 <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
 
-  <!-- TOP STRIP: email + phone right-aligned -->
   <div class="nav-top-strip">
     <div class="nav-top-inner">
       <div class="nav-contact">
@@ -17,44 +16,57 @@
     </div>
   </div>
 
-  <!-- MAIN ROW: brand left, links right -->
   <div class="nav-main-row">
     <div class="nav-inner">
-      <a href="/" class="nav-brand" aria-label="Vantis CPA — Home">
+      <a href="/" class="nav-brand" aria-label="Vantis CPA - Home">
         <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
       </a>
 
       <ul class="nav-links" role="list">
+        <li><a href="/">Home</a></li>
 
-        {{/* ── WHO WE SERVE — mega-menu ── */}}
-        <li class="nav-dropdown nav-mega" id="nav-who-we-serve">
+        <li class="nav-dropdown">
           <a href="/expertise/">Who We Serve</a>
-          <div class="nav-mega-panel" id="who-we-serve-panel">
+          <div class="nav-dropdown-menu">
             {{ range $.Site.Data.expertise }}
-            {{ $url := .url }}
-            {{ $label := .nav_label }}
-            <div class="nav-mega-col">
-              <a class="nav-mega-col-head" href="{{ $url }}">
-                <span class="nav-mega-icon" aria-hidden="true">{{ .nav_icon }}</span>
-                {{ $label }}
-              </a>
-              {{ range .preview_items }}
-              <a class="nav-mega-item" href="{{ $url }}">{{ . }}</a>
+              {{ if eq .slug "inbound" }}
+              <div class="nav-dropdown-sideways">
+                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
+                <div class="nav-dropdown-submenu">
+                  <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/">Operating-Business LLCs</a>
+                  <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/">Investment LLC Structures</a>
+                  <a href="/expertise/inbound/us-subsidiaries-of-foreign-companies/">U.S. Subsidiaries</a>
+                </div>
+              </div>
+              {{ else if eq .slug "realestate" }}
+              <div class="nav-dropdown-sideways">
+                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
+                <div class="nav-dropdown-submenu">
+                  <a href="/expertise/realestate/foreign-owned-us-rental-property/">Foreign Rental Property</a>
+                  <a href="/expertise/realestate/firpta-us-real-estate-sales/">FIRPTA &amp; Sales</a>
+                </div>
+              </div>
+              {{ else if eq .slug "outbound" }}
+              <div class="nav-dropdown-sideways">
+                <a href="{{ .url }}"><span>{{ .name }}</span><span class="nav-sideways-arrow">&rarr;</span></a>
+                <div class="nav-dropdown-submenu">
+                  <a href="/expertise/outbound/latam/">Latin America</a>
+                  <a href="/expertise/outbound/canada/">Canada</a>
+                </div>
+              </div>
+              {{ else }}
+              <a href="{{ .url }}">{{ .name }}</a>
               {{ end }}
-              <a class="nav-mega-see-all" href="{{ $url }}">All {{ $label }} services →</a>
-            </div>
             {{ end }}
           </div>
         </li>
 
-        {{/* ── SERVICES — standard dropdown (second position) ── */}}
         <li class="nav-dropdown">
           <a href="/services/">Services</a>
           <div class="nav-dropdown-menu">
             <a href="/services/tax-strategy/">Tax Strategy</a>
             <a href="/services/tax-compliance/">Tax Compliance</a>
             <a href="/services/international-tax/">International Tax</a>
-            <hr class="nav-dropdown-divider">
             <a href="/services/back-office/">Back Office</a>
             <a href="/services/bookkeeping/">Bookkeeping</a>
             <a href="/services/payroll/">Payroll</a>
@@ -63,9 +75,14 @@
         </li>
 
         <li><a href="/resources/" class="nav-pill">Resources</a></li>
-        <li><a href="/referrals/">Referrals</a></li>
-        <li><a href="/contact/" class="nav-cta-link">Schedule a Call</a></li>
-
+        <li class="nav-dropdown">
+          <a href="/referrals/">Partnerships</a>
+          <div class="nav-dropdown-menu">
+            <a href="/referrals/">Advisors and Fiduciaries</a>
+            <a href="/referrals/other-cpas/">CPA Firms</a>
+          </div>
+        </li>
+        <li><a href="/contact/">Contact Us</a></li>
       </ul>
 
       <script>
@@ -76,12 +93,10 @@
           var mainDropdowns = navLinks.querySelectorAll(':scope > li.nav-dropdown');
 
           mainDropdowns.forEach(function(dropdown) {
-            var menu = dropdown.querySelector('.nav-dropdown-menu, .nav-mega-panel');
+            var menu = dropdown.querySelector('.nav-dropdown-menu');
             if (!menu) return;
-            var isMega = menu.classList.contains('nav-mega-panel');
-
-            // Add ARIA disclosure attributes to the trigger anchor
             var trigger = dropdown.querySelector(':scope > a');
+
             if (trigger) {
               trigger.setAttribute('aria-haspopup', 'true');
               trigger.setAttribute('aria-expanded', 'false');
@@ -90,40 +105,29 @@
             function showMenu() {
               clearTimeout(dropdownTimeout);
               mainDropdowns.forEach(function(other) {
-                if (other !== dropdown) {
-                  var otherMenu = other.querySelector('.nav-dropdown-menu, .nav-mega-panel');
-                  if (otherMenu) {
-                    if (otherMenu.classList.contains('nav-mega-panel')) {
-                      otherMenu.classList.remove('open');
-                    } else {
-                      otherMenu.style.opacity = '0';
-                      otherMenu.style.visibility = 'hidden';
-                      otherMenu.style.pointerEvents = 'none';
-                    }
-                  }
-                  var otherTrigger = other.querySelector(':scope > a');
-                  if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+                if (other === dropdown) return;
+                var otherMenu = other.querySelector('.nav-dropdown-menu');
+                var otherTrigger = other.querySelector(':scope > a');
+                if (otherMenu) {
+                  otherMenu.style.opacity = '0';
+                  otherMenu.style.visibility = 'hidden';
+                  otherMenu.style.pointerEvents = 'none';
                 }
+                if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
               });
-              if (isMega) {
-                menu.classList.add('open');
-              } else {
-                menu.style.opacity = '1';
-                menu.style.visibility = 'visible';
-                menu.style.pointerEvents = 'auto';
-              }
+
+              menu.style.opacity = '1';
+              menu.style.visibility = 'visible';
+              menu.style.pointerEvents = 'auto';
+
               if (trigger) trigger.setAttribute('aria-expanded', 'true');
             }
 
             function hideMenu() {
               dropdownTimeout = setTimeout(function() {
-                if (isMega) {
-                  menu.classList.remove('open');
-                } else {
-                  menu.style.opacity = '0';
-                  menu.style.visibility = 'hidden';
-                  menu.style.pointerEvents = 'none';
-                }
+                menu.style.opacity = '0';
+                menu.style.visibility = 'hidden';
+                menu.style.pointerEvents = 'none';
                 if (trigger) trigger.setAttribute('aria-expanded', 'false');
               }, 300);
             }
@@ -141,23 +145,33 @@
       </button>
 
       <div class="mobile-menu" id="mobileMenu" role="menu">
+        <a href="/" role="menuitem">Home</a>
 
-        {{/* Who We Serve — expanded by default */}}
         <div class="mobile-accordion" id="mobile-who-we-serve">
           <button class="mobile-accordion-toggle" aria-expanded="true" aria-controls="mobile-wws-body">
-            Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">▾</span>
+            Who We Serve <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
           <div class="mobile-accordion-body open" id="mobile-wws-body">
             {{ range $.Site.Data.expertise }}
-            <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .nav_label }}</a>
+              <a href="{{ .url }}" role="menuitem">{{ .nav_icon }} {{ .name }}</a>
+              {{ if eq .slug "inbound" }}
+              <a href="/expertise/inbound/foreign-owned-us-llc-operating-business/" role="menuitem" class="mobile-subitem">Operating-Business LLCs</a>
+              <a href="/expertise/inbound/foreign-owned-us-llc-investment-structures/" role="menuitem" class="mobile-subitem">Investment LLC Structures</a>
+              <a href="/expertise/inbound/us-subsidiaries-of-foreign-companies/" role="menuitem" class="mobile-subitem">U.S. Subsidiaries</a>
+              {{ else if eq .slug "realestate" }}
+              <a href="/expertise/realestate/foreign-owned-us-rental-property/" role="menuitem" class="mobile-subitem">Foreign Rental Property</a>
+              <a href="/expertise/realestate/firpta-us-real-estate-sales/" role="menuitem" class="mobile-subitem">FIRPTA &amp; Sales</a>
+              {{ else if eq .slug "outbound" }}
+              <a href="/expertise/outbound/latam/" role="menuitem" class="mobile-subitem">Latin America</a>
+              <a href="/expertise/outbound/canada/" role="menuitem" class="mobile-subitem">Canada</a>
+              {{ end }}
             {{ end }}
           </div>
         </div>
 
-        {{/* Services — collapsed by default */}}
         <div class="mobile-accordion" id="mobile-services">
           <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-svc-body">
-            Services <span class="mobile-accordion-arrow" aria-hidden="true">▾</span>
+            Services <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
           </button>
           <div class="mobile-accordion-body" id="mobile-svc-body">
             <a href="/services/tax-strategy/" role="menuitem">Tax Strategy</a>
@@ -171,21 +185,26 @@
         </div>
 
         <a href="/resources/" role="menuitem">Resources</a>
-        <a href="/referrals/" role="menuitem">Referrals</a>
+        <div class="mobile-accordion" id="mobile-partnerships">
+          <button class="mobile-accordion-toggle" aria-expanded="false" aria-controls="mobile-partnerships-body">
+            Partnerships <span class="mobile-accordion-arrow" aria-hidden="true">&#9662;</span>
+          </button>
+          <div class="mobile-accordion-body" id="mobile-partnerships-body">
+            <a href="/referrals/" role="menuitem">Advisors and Fiduciaries</a>
+            <a href="/referrals/other-cpas/" role="menuitem">CPA Firms</a>
+          </div>
+        </div>
         {{ with $.Site.Data.siteconfig.integrations.stripe.billPayUrl }}
         <a href="{{ . }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
         {{ end }}
-        <a href="/contact/" class="mobile-menu-cta" role="menuitem">Schedule a Call →</a>
-
+        <a href="/contact/" role="menuitem">Contact Us</a>
       </div>
     </div>
   </div>
 
 </nav>
 
-<!-- Nav scripts -->
 <script>
-  // Nav scroll shadow with throttling
   (function () {
     var nav = document.getElementById('nav');
     var ticking = false;
@@ -200,7 +219,6 @@
     }, { passive: true });
   })();
 
-  // Hamburger / mobile menu
   (function () {
     var btn = document.getElementById('hamburger');
     var menu = document.getElementById('mobileMenu');
@@ -209,7 +227,7 @@
       btn.classList.toggle('open', open);
       btn.setAttribute('aria-expanded', String(open));
     });
-    // Close menu when a non-accordion link is clicked
+
     menu.querySelectorAll('a[role="menuitem"]').forEach(function (link) {
       link.addEventListener('click', function () {
         menu.classList.remove('open');
@@ -219,7 +237,6 @@
     });
   })();
 
-  // Mobile accordion toggles
   (function () {
     document.querySelectorAll('.mobile-accordion-toggle').forEach(function (toggle) {
       toggle.addEventListener('click', function () {

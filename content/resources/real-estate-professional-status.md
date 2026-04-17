@@ -6,6 +6,15 @@ practices: ["realestate"]
 services: ["tax-strategy", "tax-compliance"]
 featured: false
 clusters: ["real-estate-tax"]
+strategy_snapshot:
+  summary: "REPS is valuable because it can convert trapped rental losses into deductions against salary or business income, but it only works when one spouse truly qualifies and the hours can be defended. This is as much a documentation strategy as a tax strategy."
+  bullets:
+    - label: Best fit
+      text: "A household where one spouse spends meaningful time in real property trades or businesses and rental losses are otherwise being suspended."
+    - label: Key implementation step
+      text: "Decide early whether a grouping election is needed so material participation works across the portfolio."
+    - label: Biggest trap
+      text: "Trying to recreate hours after year-end or assuming a full-time W-2 schedule still leaves enough room to clear the more-than-half test."
 faqs:
   - q: "How many hours per year do I need to qualify as a real estate professional?"
     a: "You must spend more than 750 hours per year in real property trades or businesses in which you materially participate, and those real estate hours must exceed the hours spent in all other trades or businesses combined."
@@ -18,6 +27,10 @@ faqs:
 Rental losses are normally **passive losses**, meaning they are deductible only against passive income and not your W-2 or business income. But if you qualify as a **Real Estate Professional (REPS)**, those same losses become unlimited deductions against ordinary income. A landlord with $80,000 in rental losses and $400,000 in W-2 income could save **$30,000 or more** in federal tax annually.
 
 The IRS scrutinizes REPS claims heavily. Qualifying correctly, and documenting it properly, is the difference between a powerful strategy and an expensive audit.
+
+{{< pullquote attribution="Why this strategy works or fails" >}}
+REPS is usually won with calendars, logs, and grouping decisions long before it is won on the tax return.
+{{< /pullquote >}}
 
 ## What REPS Is
 
@@ -64,6 +77,10 @@ REPS is one of the IRS's most audited positions. Common red flags:
 ## Documentation You Need
 
 The IRS does not accept reconstructed logs created at tax time. You need **contemporaneous records** kept throughout the year. They should show:
+
+{{< callout title="Audit-proofing checklist" tone="warning" >}}
+Use one running log system for the full year, tie hours to specific properties or grouped activities, and keep the backup records that prove the work happened when you say it did.
+{{< /callout >}}
 
 - Date, property address, and activity performed
 - Hours spent on each task

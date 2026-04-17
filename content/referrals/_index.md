@@ -1,5 +1,6 @@
 ---
-title: "Professional Partnerships"
+title: "Advisors and Fiduciaries"
+description: "Professional partnership page for advisors and fiduciaries who want a trusted tax and accounting partner for referred clients."
 layout: "service"
 subtitle: "Build a mutually rewarding partnership. We work with professionals who share our commitment to client outcomes."
 sections:
@@ -19,15 +20,15 @@ sections:
 
       **No administrative burden:** You send the referral. We handle everything else: intake, planning, compliance, ongoing relationship management.
 
-      **Professional coordination:** We work seamlessly with your team when the client needs integrated advice (legal-tax-accounting alignment, trustee coordination, cross-border planning).
+      **Professional coordination:** We work seamlessly with your team when the client needs integrated advice, including legal-tax-accounting alignment, trustee coordination, and cross-border planning.
 
   - title: "How It Works"
     body: |
-      1. **Send the referral** — Introduce us via email, phone, or a warm conversation. No formal process or paperwork required.
+      1. **Send the referral** Introduce us by email, phone, or warm introduction.
 
-      2. **We take it from there** — Initial consultation, strategy development, ongoing service delivery. The client relationship is ours to manage.
+      2. **We take it from there** Initial consultation, strategy development, and ongoing service delivery.
 
-      3. **You earn** — Fee based on first-year billing. Clean, straightforward, no paperwork overhead.
+      3. **You stay in the loop** We keep communication clear and the handoff professional.
 
       This is a partnership built on mutual growth and client outcomes, not transaction volume.
 ---

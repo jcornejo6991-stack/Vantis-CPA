@@ -6,6 +6,15 @@ practices: ["expats", "business"]
 services: ["international-tax", "tax-strategy"]
 featured: false
 clusters: ["international-tax", "latam-inbound"]
+strategy_snapshot:
+  summary: "The highest-value tax planning happens before U.S. residency begins. Once you cross the residency line, worldwide income reporting, foreign trust rules, and entity restructuring costs become much harder to control."
+  bullets:
+    - label: Start early when
+      text: "You have foreign companies, appreciated assets, trusts, or a green card decision on the table within the next year."
+    - label: Most valuable move
+      text: "Clean up ownership, basis, and entity elections before U.S. tax residency starts rather than after."
+    - label: Biggest trap
+      text: "Waiting until after arrival, when the same restructuring can become immediately taxable or trigger major reporting."
 faqs:
   - q: "When should I start pre-immigration tax planning?"
     a: "Ideally 12 to 24 months before obtaining a U.S. green card or long-term visa. Key elections, basis step-ups, and entity restructurings must be completed before U.S. tax residency begins or tax savings opportunities are permanently lost."
@@ -16,6 +25,10 @@ faqs:
 ---
 
 The day you become a U.S. tax resident, the IRS begins taxing your worldwide income. Assets you've held for decades, foreign companies you own, and trust structures that worked perfectly in your home country may suddenly create U.S. tax and reporting obligations you didn't anticipate. Most of these issues are fixable before you arrive, but very difficult to unwind after.
+
+{{< pullquote attribution="The core rule" >}}
+Pre-immigration planning works because you still have a window where the U.S. rules have not attached yet.
+{{< /pullquote >}}
 
 ## Why Timing Matters
 
@@ -37,6 +50,14 @@ If you are considering a green card and have significant assets abroad, understa
 ## Step-Up in Asset Basis
 
 One of the most valuable pre-immigration moves is establishing a **step-up in basis** on appreciated assets before you become a U.S. tax resident. Because the U.S. taxes gains from the date of residency forward, assets with built-in gains accrued before arrival are not subject to U.S. capital gains tax if sold before residency begins.
+
+{{< callout title="Before vs. after residency" tone="comparison" >}}
+| Action | Before U.S. residency | After U.S. residency begins |
+|--------|------------------------|-----------------------------|
+| Sell appreciated assets | Often cleaner and outside the U.S. tax net | Gains can become fully reportable in the U.S. |
+| Restructure foreign entities | May create planning upside with less U.S. friction | Can trigger immediate U.S. tax and reporting |
+| Unwind foreign trust issues | Usually simpler | Ongoing Forms 3520/3520-A and penalty exposure attach |
+{{< /callout >}}
 
 Some countries allow a **deemed disposition** at fair market value on departure, which establishes the basis the U.S. will recognize. Others do not. The interaction between your home country's exit rules and the U.S. entry basis rules requires careful coordination.
 

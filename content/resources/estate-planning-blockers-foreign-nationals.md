@@ -6,6 +6,15 @@ practices: ["inbound", "realestate"]
 services: ["international-tax", "tax-strategy"]
 featured: false
 clusters: ["latam-inbound", "international-tax"]
+strategy_snapshot:
+  summary: "For nonresident noncitizens, the estate tax issue is usually not the investment itself but how it is owned. Direct ownership of U.S. assets can create estate tax exposure with only a small exemption, so structure has to be solved before the purchase whenever possible."
+  bullets:
+    - label: Highest-risk setup
+      text: "Direct ownership of U.S. real estate or U.S. corporate stock without treaty protection or blocker planning."
+    - label: Typical planning move
+      text: "Use an ownership structure that addresses estate exposure first, then model the income tax and administrative tradeoffs."
+    - label: Biggest trap
+      text: "A U.S. LLC may help with liability and operations, but it does not automatically solve the estate tax problem."
 faqs:
   - q: "Do foreign nationals get the same U.S. estate tax exemption as U.S. citizens?"
     a: "No. Nonresident noncitizens generally receive only a $60,000 estate tax exemption for U.S.-situs assets, unless a treaty provides better treatment. That is dramatically lower than the exemption available to U.S. citizens and domiciliaries."
@@ -16,6 +25,10 @@ faqs:
 ---
 
 Many foreign investors plan carefully for U.S. income tax and almost completely miss the estate tax problem. For a **nonresident noncitizen**, the U.S. estate tax exemption is generally only **$60,000** of U.S.-situs assets. That means a foreign national who buys U.S. real estate, holds U.S. securities, or structures an investment the wrong way can create a U.S. estate tax exposure that is wildly disproportionate to the income tax profile.
+
+{{< pullquote attribution="The hidden issue" >}}
+For many inbound investors, the estate tax problem is created on the day title is taken.
+{{< /pullquote >}}
 
 ## Why the Estate Tax Rules Are So Different
 
@@ -54,6 +67,14 @@ Even if the property was purchased for income tax efficiency or simplicity, the 
 Many investors are told to put the property into a U.S. LLC and assume the problem is solved. For estate tax purposes, that is often incomplete analysis. A U.S. LLC can help with liability and operations, but it does not automatically convert the underlying asset into non-U.S.-situs property.
 
 If the LLC is disregarded or otherwise treated as a direct holding vehicle, the estate tax exposure may remain. Structure matters, election status matters, and the actual asset being held still matters.
+
+{{< callout title="Direct ownership vs. blocker planning" tone="comparison" >}}
+| Ownership path | Estate tax profile | Tradeoff |
+|----------------|--------------------|----------|
+| Direct personal ownership | Usually highest exposure for U.S.-situs assets | Simple to buy, expensive to unwind |
+| U.S. LLC only | Operational help, but not automatically estate-tax protective | Often misunderstood as a complete fix |
+| Foreign blocker structure | Can improve estate result when designed correctly | Adds income tax and compliance friction |
+{{< /callout >}}
 
 ## Foreign Blocker Structures
 

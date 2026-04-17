@@ -1,0 +1,8 @@
+{{ $attribution := .Get "attribution" }}
+
+<figure class="article-pullquote">
+  <blockquote>
+    {{ .Inner | markdownify }}
+  </blockquote>
+  {{ with $attribution }}<cite>{{ . }}</cite>{{ end }}
+</figure>

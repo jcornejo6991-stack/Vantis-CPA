@@ -6,6 +6,15 @@ practices: ["business", "individuals"]
 services: ["tax-strategy"]
 featured: false
 clusters: ["individual-tax"]
+strategy_snapshot:
+  summary: "For most profitable solo business owners, the Solo 401(k) is the stronger tool because it layers employee deferrals on top of employer contributions. The SEP-IRA usually wins only when you need simplicity, missed the year-end setup deadline, or have employees."
+  bullets:
+    - label: Solo 401(k) wins when
+      text: "You want the largest deduction at moderate income levels, want a Roth option, or need catch-up contributions after age 50."
+    - label: SEP-IRA wins when
+      text: "You need a late setup window, want the lightest administration, or the business already has employees."
+    - label: Biggest trap
+      text: "Owners often compare contribution limits without accounting for setup deadlines, payroll structure, and whether a second job already used their employee deferral."
 faqs:
   - q: "Which allows higher contributions — a Solo 401(k) or SEP-IRA?"
     a: "Both allow employer contributions up to 25% of compensation or $70,000 (2025 limit, adjusted annually). However, the Solo 401(k) also allows an additional $23,500 employee deferral (plus $7,500 catch-up if age 50+), making it significantly more powerful for high-income self-employed individuals."
@@ -16,6 +25,10 @@ faqs:
 ---
 
 Self-employed business owners and single-member LLC owners have access to two of the highest-contribution retirement plans available: the **Solo 401(k)** and the **SEP-IRA**. Both reduce taxable income dollar-for-dollar, but they calculate contributions differently, and at most income levels below $200,000, the Solo 401(k) lets you shelter significantly more.
+
+{{< callout title="What most owners miss" tone="opportunity" >}}
+The headline limit looks the same on both plans, but the Solo 401(k) gets there much faster because employee deferrals kick in long before the SEP percentage formula catches up.
+{{< /callout >}}
 
 ## How Each Plan Works
 
@@ -50,6 +63,10 @@ The combined total cannot exceed **$70,000** in 2025 ($77,500 if age 50+).
 ## When Solo 401(k) Wins
 
 The Solo 401(k)'s employee deferral component is the key advantage. At lower income levels, roughly under $200,000 in net SE income, the ability to contribute a flat $23,500 before the percentage-based employer contribution kicks in results in a much higher total contribution than a SEP-IRA allows.
+
+{{< pullquote attribution="Why income level matters" >}}
+Below roughly $200,000 of self-employment income, the Solo 401(k) usually wins because the employee bucket does most of the heavy lifting.
+{{< /pullquote >}}
 
 **Example:** Net SE income of $80,000 (after SE tax deduction: ~$75,300)
 
