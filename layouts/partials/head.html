@@ -211,7 +211,9 @@
     ],
     "openingHours": "Mo-Fr 09:00-17:00",
     "sameAs": [
-      "{{ .Site.Data.siteconfig.social.facebook }}"
+      "{{ .Site.Data.siteconfig.social.facebook }}",
+      "{{ .Site.Data.siteconfig.social.linkedin }}",
+      "{{ .Site.Data.siteconfig.social.twitter }}"
     ],
     "priceRange": "$$",
     "serviceType": [
@@ -257,6 +259,109 @@
         "item": "{{ .Permalink }}"
       }{{ end }}
     ]
+  }
+  </script>
+  {{ end }}
+
+  <!-- FAQPage + Person Structured Data (homepage only) -->
+  {{ if .IsHome }}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What makes Vantis different from other CPAs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We combine proactive tax strategy with responsive communication. Rather than waiting for tax season, we work year-round to optimize your situation and flag opportunities before they pass."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you avoid surprise billing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why get proactive tax advice instead of just filing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What services do you offer beyond tax filing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We offer bookkeeping, back-office services, payroll processing, sales tax management, and full-service accounting. One firm for all your business needs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens in our first consultation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We'll discuss your business, current situation, and biggest challenges. You'll get a clear sense of how we work and whether we're a good fit. No pressure, no sales pitch."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jose Cornejo",
+    "jobTitle": "Certified Public Accountant",
+    "url": "{{ .Site.BaseURL }}",
+    "sameAs": ["https://www.linkedin.com/in/jose-cornejo-5410/"],
+    "hasCredential": [
+      {
+        "@type": "EducationalOccupationalCredential",
+        "credentialCategory": "license",
+        "name": "Certified Public Accountant",
+        "recognizedBy": {
+          "@type": "Organization",
+          "name": "Florida Department of Business and Professional Regulation"
+        },
+        "identifier": "AC60024"
+      }
+    ],
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Florida Atlantic University",
+        "description": "Master of Taxation"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "Florida International University",
+        "description": "Bachelor of Science in Accounting"
+      }
+    ],
+    "memberOf": [
+      {
+        "@type": "Organization",
+        "name": "American Institute of Certified Public Accountants",
+        "alternateName": "AICPA"
+      },
+      {
+        "@type": "Organization",
+        "name": "Florida Institute of Certified Public Accountants",
+        "alternateName": "FICPA"
+      }
+    ],
+    "worksFor": {
+      "@type": "AccountingService",
+      "name": "{{ .Site.Data.siteconfig.company.name }}",
+      "url": "{{ .Site.BaseURL }}"
+    }
   }
   </script>
   {{ end }}
