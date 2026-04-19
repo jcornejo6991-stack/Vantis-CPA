@@ -201,45 +201,6 @@
         {{ end }}
       </div>
 
-      {{ if and (eq .Section "services") (not .Params.hideChildLinks) }}
-        {{ $serviceLinks := slice }}
-        {{ $serviceSectionTitle := "" }}
-        {{ $serviceSectionIntro := "" }}
-        {{ if .IsSection }}
-          {{ $serviceSectionTitle = .Params.childSectionTitle | default "Explore This Service" }}
-          {{ $serviceSectionIntro = .Params.childSectionIntro | default "" }}
-          {{ range .Pages.ByWeight }}
-            {{ $serviceLinks = $serviceLinks | append . }}
-          {{ end }}
-        {{ else if .Parent }}
-          {{ $serviceSectionTitle = printf "More in %s" .Parent.Title }}
-          {{ range .Parent.Pages.ByWeight }}
-            {{ if ne .RelPermalink $.RelPermalink }}
-              {{ $serviceLinks = $serviceLinks | append . }}
-            {{ end }}
-          {{ end }}
-        {{ end }}
-        {{ if $serviceLinks }}
-        <div class="content-section">
-          <h3 class="section-title">{{ $serviceSectionTitle }}</h3>
-          {{ with $serviceSectionIntro }}<p class="section-intro">{{ . }}</p>{{ end }}
-          <div class="cross-link-grid">
-            {{ range $serviceLinks }}
-            <a href="{{ .RelPermalink }}" class="cross-link-card">{{ .Params.nav_title | default .Title }}<span class="cross-link-arrow">&rarr;</span></a>
-            {{ end }}
-          </div>
-        </div>
-        {{ else }}
-        <div class="content-section">
-          <h3 class="section-title">Service Hubs</h3>
-          <div class="cross-link-grid">
-            {{ range $.Site.Data.services }}
-            <a href="{{ .url }}" class="cross-link-card">{{ .name }}<span class="cross-link-arrow">&rarr;</span></a>
-            {{ end }}
-          </div>
-        </div>
-        {{ end }}
-      {{ end }}
 
       {{ if .Params.showCoreServiceLinks }}
         {{ $coreServiceLinks := slice

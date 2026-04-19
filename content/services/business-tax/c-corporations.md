@@ -10,44 +10,41 @@ subtitle: "Form 1120 compliance and planning for businesses taxed as C-corporati
 sections:
   - title: "C-Corporations Are a Different Tax System"
     body: |
-      A C-corporation is not just another business return. It is its own taxpayer. The corporation pays tax at the entity level, and the owners may be taxed again when money is distributed. That double-tax framework changes how compensation, retained earnings, distributions, and exit planning need to be handled.
+      A C-corporation is its own taxpayer. The corporation pays tax at the entity level, and owners may be taxed again when money comes out. That double-tax framework shapes how compensation, retained earnings, distributions, and exit planning need to be handled. The structure can make sense for businesses retaining earnings for growth, seeking outside investment, or needing multiple classes of equity, but it is a poor fit when the main goal is passing income through to the owner efficiently.
 
-      Sometimes that structure is exactly the right fit. In other cases, it is a costly mismatch. The value of a C-corp depends on how the business intends to grow, how much profit will stay inside the company, and how the owners expect to take money out.
-  - title: "When C-Corp Status Can Make Sense"
-    body: |
-      C-corporation treatment is often most useful when a business expects to retain earnings for growth, seek outside investment, issue multiple classes of equity, or position itself for a particular long-term exit path. It can also be relevant where fringe benefits, institutional investor expectations, or venture-style ownership structures matter more than current pass-through efficiency.
-
-      The point is not that a C-corp is better or worse in the abstract. It is that the structure should match the business model and ownership plan.
-  - title: "The Main Tax Issues We Watch"
-    body: |
-      Common C-corp tax issues include:
+      Common C-corp work includes:
 
       * Form 1120 preparation and year-end tax liability management
       * Owner compensation versus dividends
-      * Retained earnings and reasonable accumulation questions
+      * Retained earnings and reasonable accumulation
       * Shareholder loans and related-party transactions
       * State corporate tax filings
       * The tax cost of future distributions or a sale
-
-      Good C-corp work means looking at both the current return and the path the owners are setting for later years.
-  - title: "C-Corp vs. S-Corp or Partnership"
+  - title: "Managing the Double Tax"
     body: |
-      Many businesses are comparing a C-corp not to "doing nothing," but to an S-corp or partnership structure. Those choices affect whether income is taxed once or twice, whether owners can use losses currently, how flexible the economics can be, and what outside ownership is allowed.
-
-      We help clients compare those tradeoffs before the structure is locked in or before a bad fit goes on for several more years.
+      Good C-corp work means looking at both the current return and the path the owners are setting for later years. Many businesses are also comparing a C-corp to an S-corp or partnership structure. Those choices affect whether income is taxed once or twice, whether owners can use losses currently, how flexible the economics can be, and what outside ownership is allowed. We help clients compare those tradeoffs before the structure is locked in.
     cards:
+      - label: "C-Corporation Tax Planning"
+        description: "Double taxation, retained earnings, owner compensation vs. dividends, and exit planning in a C-corp."
+        url: "/resources/c-corporation-tax-planning/"
       - label: "S-Corporations"
         description: "Owner wages, payroll tax savings, basis, and where S-corp status works better."
         url: "/services/business-tax/s-corps/"
       - label: "Partnerships"
         description: "Multi-owner flexibility, allocations, and when pass-through treatment is the better fit."
         url: "/services/business-tax/partnerships/"
-  - title: "How We Help C-Corporations"
+  - title: "Full Suite"
     body: |
-      We prepare the Form 1120, but we also help owners think through compensation, distributions, retained earnings, related-party activity, and whether the current structure still fits the business. If the C-corp was formed for a good reason, we help run it correctly. If it was formed by habit or generic advice, we help evaluate whether another structure would work better.
-  - title: "Who This Is For"
+      C-corp work is cleaner when the books behind it are clean. For owners who want one firm handling bookkeeping, payroll, and the return, we offer full-service support alongside the tax work.
+    cards:
+      - label: "Full Suite"
+        description: "Bookkeeping, payroll, back office, and sales tax for businesses that want one firm for everything."
+        url: "/services/full-suite/"
+  - title: "C-Corp Clients We Work With"
     body: |
-      This page fits businesses already taxed as C-corporations, owners deciding whether C-corp treatment makes sense, and companies with growth or ownership plans that do not fit neatly into a pass-through structure. It is also a good fit when Form 1120 compliance needs to be coordinated with owner compensation and long-term tax planning.
+      We prepare the Form 1120 and help owners think through compensation, distributions, retained earnings, related-party activity, and whether the current structure still fits. If the C-corp was formed for a good reason, we help run it correctly. If it was formed by habit or generic advice, we help evaluate whether another structure works better.
+
+      This page fits businesses already taxed as C-corporations, owners deciding whether C-corp treatment makes sense, and companies with growth or ownership plans that do not fit neatly into a pass-through structure.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Form 1120 Preparation"

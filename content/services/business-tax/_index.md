@@ -8,14 +8,10 @@ aliases:
   - /expertise/business/
   - /expertise/founders/
 hideChildLinks: true
-showCoreServiceLinks: true
-coreServiceLinksTitle: "Explore Other Services"
 sections:
   - title: "Business Tax"
     body: |
-      Most business owners pay more in tax than necessary, not because they are missing obscure loopholes, but because structure, filing, and planning are handled separately. Entity choice affects self-employment tax, owner compensation, and how income flows through to the return. Filing reflects decisions made throughout the year, and planning only matters if someone is actually executing it. This service handles the structure, the planning, and the returns together.
-
-      We prepare business tax returns for entities at every stage, including annual income tax returns, extensions, quarterly estimates, and catch-up work when prior years were missed or filed incorrectly.
+      Most business owners pay more than necessary not because of missing loopholes, but because structure, filing, and planning are handled separately. We handle all three together for businesses at every stage: returns, entity structure, and year-round planning, including catch-up work when prior years were missed or filed incorrectly.
 
       Common filings include:
 
@@ -54,6 +50,22 @@ sections:
       * Tax planning around owner compensation, distributions, and timing
       * Quarterly estimate calculations and planning discussions
       * Year-round tax planning as income and business needs change
+  - title: "Operations and Back Office"
+    body: |
+      Tax work is cleaner when the books behind it are clean. For business owners who want one firm handling everything, we offer back office services alongside the tax work: bookkeeping, payroll, sales tax, and entity back office support including LLC registration, annual renewals, registered agent coordination, and EIN setup. Having the same team handle the operations and the returns means no year-end scramble and no gap between what the books say and what gets filed.
+    cards:
+      - label: "Back Office"
+        description: "LLC registration, annual renewals, EIN setup, registered agent coordination, and administrative support."
+        url: "/services/full-suite/back-office/"
+      - label: "Bookkeeping"
+        description: "Monthly bookkeeping, reconciliations, and clean financials that feed directly into the tax return."
+        url: "/services/full-suite/bookkeeping/"
+      - label: "Payroll"
+        description: "Payroll processing, payroll tax deposits, and year-end W-2 and 1099 filings."
+        url: "/services/full-suite/payroll/"
+      - label: "Sales Tax"
+        description: "Sales tax registration, filing, and nexus review for businesses selling across state lines."
+        url: "/services/full-suite/sales-tax/"
   - title: "Who This Is For"
     body: |
       This service fits sole proprietors, single-member LLCs, S-corporations, partnerships, and C-corporations that want a CPA involved year-round, not just at filing time. It is particularly well-suited for owner-operated businesses where the owner's personal and business tax situations are connected. The business return feeds the personal return, and the planning work needs to account for both.

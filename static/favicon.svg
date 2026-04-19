@@ -1,12 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <!-- Dark green background -->
-  <rect width="32" height="32" rx="6" fill="#1a4d2e"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="bg" x1="10" y1="8" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1a1a2e"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="left-arm" x1="19" y1="16" x2="31" y2="47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#9cdcfe"/>
+      <stop offset="1" stop-color="#569cd6"/>
+    </linearGradient>
+    <linearGradient id="right-arm" x1="45" y1="16" x2="33" y2="47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#4ec9b0"/>
+      <stop offset="1" stop-color="#9cdcfe"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Bright green V logo -->
-  <path d="M 8 6 L 16 24 L 24 6"
-        stroke="#4CAF50"
-        stroke-width="2.5"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"/>
+  <rect width="64" height="64" rx="15" fill="url(#bg)"/>
+  <rect x="5.5" y="5.5" width="53" height="53" rx="10.5" fill="none" stroke="#2f4263" stroke-opacity="0.9"/>
+  <circle cx="52" cy="12" r="11" fill="#569cd6" fill-opacity="0.18"/>
+  <circle cx="13" cy="52" r="12" fill="#4ec9b0" fill-opacity="0.14"/>
+
+  <path d="M19 16 L31 47" stroke="url(#left-arm)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M45 16 L33 47" stroke="url(#right-arm)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
