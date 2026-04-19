@@ -5,7 +5,7 @@ layout: "service"
 aliases:
   - /services/bookkeeping/
 subtitle: "Clean books, current numbers, and financial reporting that actually helps the business run."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-local.jpg"
 sections:
   - title: "Bookkeeping That Supports Tax Filing and Better Decisions"
     body: |

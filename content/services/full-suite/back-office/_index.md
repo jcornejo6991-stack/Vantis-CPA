@@ -5,7 +5,7 @@ layout: "service"
 aliases:
   - /services/back-office/
 subtitle: "Entity setup, renewals, paperwork, and admin support that keep your business moving."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-local.jpg"
 sections:
   - title: "Entity Setup, Renewals, and Administrative Support"
     body: |

@@ -1,7 +1,7 @@
 :root {
   /* Nav & Footer — premium dark gray */
-  --nav-bg: rgba(26, 26, 46, 0.82);
-  --footer-bg: #1a1a2e;
+  --nav-bg: rgba(8, 8, 8, 0.85);
+  --footer-bg: #080808;
 
   /* Section backgrounds */
   --dark-navy: #0d1117;

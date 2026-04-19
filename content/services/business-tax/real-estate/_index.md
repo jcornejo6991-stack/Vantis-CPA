@@ -6,6 +6,7 @@ slug: "realestate"
 aliases:
   - /expertise/realestate/
 subtitle: "Tax planning and compliance for domestic real estate owners, operators, and property-holding partnerships."
+heroImage: "/images/card-realestate.jpg"
 sections:
   - title: "Real Estate Tax as Its Own Discipline"
     body: |

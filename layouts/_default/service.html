@@ -49,67 +49,91 @@
       {{ end }}
     {{ end }}
   {{ end }}
-
-  <section class="hero{{ if $isServiceNested }} hero-subpage{{ end }}">
-    {{ if $isServiceNested }}
-    <div class="hero-breadcrumb">
-      <a href="/services/">Services</a>
-      {{ if .Parent }}
-        {{ range .Ancestors.Reverse }}
-          {{ if and (eq .Section "services") (ne .RelPermalink "/services/") }}
-        <span>/</span>
-        <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-          {{ end }}
-        {{ end }}
-        <span>/</span>
+  {{ $heroImage := .Params.heroImage }}
+  {{ if not $heroImage }}
+    {{ range .Ancestors }}
+      {{ if and (not $heroImage) .Params.heroImage }}
+        {{ $heroImage = .Params.heroImage }}
       {{ end }}
-      <span>{{ .Title }}</span>
-    </div>
     {{ end }}
-    <h1>{{ $displayTitle }}</h1>
-    <p class="hero-subtitle">{{ .Params.subtitle }}</p>
-    <p class="hero-geo" data-geo-line style="display:none"></p>
-    <!-- Trust Bar -->
-    <div class="trust-bar">
-      <div class="trust-bar-cell">
-        <div class="trust-bar-icon">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <rect x="1.5" y="1.5" width="12" height="12" rx="2" stroke="#15482E" stroke-width="1.4"/>
-            <path d="M4.5 7.5l2 2 4-4" stroke="#15482E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  {{ end }}
+  {{ if not $heroImage }}
+    {{ $heroImage = "/images/globe-hero.jpg" }}
+  {{ end }}
+  {{ $heroEyebrow := .Params.heroEyebrow }}
+  {{ if not $heroEyebrow }}
+    {{ if and $isServiceNested .Parent }}
+      {{ $heroEyebrow = printf "Within %s" .Parent.Title }}
+    {{ else }}
+      {{ $heroEyebrow = "Vantis CPA Services" }}
+    {{ end }}
+  {{ end }}
+
+  <section class="hero{{ if $isServiceNested }} hero-subpage{{ end }}" style="--hero-image: url('{{ $heroImage | safeURL }}');{{ with .Params.heroImagePosition }} --hero-position: {{ . }};{{ end }}">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        {{ if $isServiceNested }}
+        <div class="hero-breadcrumb">
+          <a href="/services/">Services</a>
+          {{ if .Parent }}
+            {{ range .Ancestors.Reverse }}
+              {{ if and (eq .Section "services") (ne .RelPermalink "/services/") }}
+          <span>/</span>
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              {{ end }}
+            {{ end }}
+            <span>/</span>
+          {{ end }}
+          <span>{{ .Title }}</span>
         </div>
-        <div class="trust-bar-title">Licensed CPA</div>
-        <div class="trust-bar-sub">State of Florida</div>
+        {{ end }}
+        <p class="hero-kicker">{{ $heroEyebrow }}</p>
+        <h1>{{ $displayTitle }}</h1>
+        {{ with .Params.subtitle }}<p class="hero-subtitle">{{ . }}</p>{{ end }}
+        <p class="hero-geo" data-geo-line style="display:none"></p>
       </div>
-      <div class="trust-bar-cell">
-        <div class="trust-bar-icon">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <path d="M7.5 1.5l1.4 4.3H13.5L9.6 8.6l1.5 4.4-3.6-2.6-3.6 2.6 1.5-4.4L1.5 5.8h4.6z" stroke="#15482E" stroke-width="1.3" stroke-linejoin="round"/>
-          </svg>
+
+      <div class="trust-bar">
+        <div class="trust-bar-cell">
+          <div class="trust-bar-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <rect x="1.5" y="1.5" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M4.5 7.5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="trust-bar-title">Licensed CPA</div>
+          <div class="trust-bar-sub">State of Florida</div>
         </div>
-        <div class="trust-bar-title">Master of Taxation</div>
-        <div class="trust-bar-sub">Graduate Degree</div>
-      </div>
-      <div class="trust-bar-cell">
-        <div class="trust-bar-icon">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="#15482E" stroke-width="1.4"/>
-            <path d="M7.5 4.5V8l2.5 1.5" stroke="#15482E" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
+        <div class="trust-bar-cell">
+          <div class="trust-bar-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <path d="M7.5 1.5l1.4 4.3H13.5L9.6 8.6l1.5 4.4-3.6-2.6-3.6 2.6 1.5-4.4L1.5 5.8h4.6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="trust-bar-title">Master of Taxation</div>
+          <div class="trust-bar-sub">Graduate Degree</div>
         </div>
-        <div class="trust-bar-title">10+ Years</div>
-        <div class="trust-bar-sub">Experience</div>
-      </div>
-      <div class="trust-bar-cell">
-        <div class="trust-bar-icon">
-          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
-            <circle cx="7.5" cy="7.5" r="5.5" stroke="#15482E" stroke-width="1.4"/>
-            <ellipse cx="7.5" cy="7.5" rx="2.5" ry="5.5" stroke="#15482E" stroke-width="1.3"/>
-            <path d="M2 7.5h11" stroke="#15482E" stroke-width="1.3"/>
-          </svg>
+        <div class="trust-bar-cell">
+          <div class="trust-bar-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+              <path d="M7.5 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="trust-bar-title">10+ Years</div>
+          <div class="trust-bar-sub">Experience</div>
         </div>
-        <div class="trust-bar-title">English &amp; Spanish</div>
-        <div class="trust-bar-sub">Bilingual Service</div>
+        <div class="trust-bar-cell">
+          <div class="trust-bar-icon">
+            <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+              <circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.4"/>
+              <ellipse cx="7.5" cy="7.5" rx="2.5" ry="5.5" stroke="currentColor" stroke-width="1.3"/>
+              <path d="M2 7.5h11" stroke="currentColor" stroke-width="1.3"/>
+            </svg>
+          </div>
+          <div class="trust-bar-title">English &amp; Spanish</div>
+          <div class="trust-bar-sub">Bilingual Service</div>
+        </div>
       </div>
     </div>
   </section>
@@ -161,7 +185,7 @@
               <a href="{{ .url }}" class="cross-link-card">
                 <span>
                   {{ .label }}
-                  {{ with .description }}<small style="display:block; margin-top:4px; font-size:12px; font-weight:400; color:#4e6a5b; line-height:1.45;">{{ . }}</small>{{ end }}
+                  {{ with .description }}<small class="cross-link-desc">{{ . }}</small>{{ end }}
                 </span>
                 <span class="cross-link-arrow">Learn More &rarr;</span>
               </a>

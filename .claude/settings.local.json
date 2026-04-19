@@ -97,7 +97,19 @@
       "Bash(curl -s http://localhost:1313)",
       "Bash(curl -L \"https://images.unsplash.com/photo-1619546813926-a78fa6372cd2?w=1200&q=80&fit=crop&crop=center\" -o \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\images\\\\card-inbound.jpg\")",
       "Bash(curl -L \"https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1200&q=80&fit=crop&crop=center\" -o \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\images\\\\card-inbound.jpg\")",
-      "Bash(curl -L \"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&fit=crop&crop=center\" -o \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\images\\\\card-inbound.jpg\")"
+      "Bash(curl -L \"https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=1200&q=80&fit=crop&crop=center\" -o \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\\\\static\\\\images\\\\card-inbound.jpg\")",
+      "Bash(hugo)",
+      "Bash(cmd.exe /c \"where hugo 2>&1 && echo FOUND || echo NOT_FOUND\")",
+      "Bash(ls -lah \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\"/*.html \"C:\\\\Users\\\\jcorn\\\\Desktop\\\\Claude\\\\JC CPA LLC\\\\website\"/*.js)",
+      "Bash(bash \"C:/Users/jcorn/.claude/plugins/cache/claude-plugins-official/superpowers/5.0.6/skills/brainstorming/scripts/start-server.sh\" --project-dir \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\")",
+      "Bash(cat \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website/.superpowers/brainstorm/\"*/state/server-info)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(node -e \"require\\('puppeteer'\\)\")",
+      "Bash(node -e \"require\\('puppeteer-core'\\)\")",
+      "Bash(python -c \"from PIL import Image, ImageDraw, ImageFont; print\\('pillow ok'\\)\")",
+      "Bash(python -c ':*)",
+      "Bash(xargs ls:*)",
+      "Bash(hugo --quiet)"
     ]
   }
 }

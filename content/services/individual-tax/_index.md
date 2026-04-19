@@ -3,7 +3,7 @@ title: "Individual Tax"
 description: "Individual tax returns and year-round tax planning for people with income from multiple sources — W-2, 1099, K-1, rental, equity compensation, and investment income."
 layout: "service"
 subtitle: "Individual tax returns and year-round planning, handled completely."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-local.jpg"
 aliases:
   - /expertise/individuals/
   - /expertise/local/

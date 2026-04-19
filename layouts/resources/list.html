@@ -3,10 +3,24 @@
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
 
+  {{ $generalTopics := slice }}
+  {{ with .Site.GetPage "/resources/international-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
+  {{ with .Site.GetPage "/resources/real-estate-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
+  {{ with .Site.GetPage "/resources/individual-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
+  {{ with .Site.GetPage "/resources/business-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
+  {{ with .Site.GetPage "/resources/general-tax-compliance" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
+
+  {{ $focusedAreas := slice }}
+  {{ with .Site.GetPage "/resources/ecommerce-sellers" }}{{ $focusedAreas = $focusedAreas | append . }}{{ end }}
+  {{ with .Site.GetPage "/resources/latam-inbound" }}{{ $focusedAreas = $focusedAreas | append . }}{{ end }}
+
   <style>
-    /* ── Resource Library Page ── */
     .resource-library {
-      margin: 25px;
+      --resource-orange: #CE9178;
+      --resource-orange-dark: #b97960;
+      --resource-green: #4EC9B0;
+      --resource-green-dark: #43b59f;
+      margin: 52px 22px 22px;
       border-radius: 20px;
       box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
       overflow: hidden;
@@ -15,23 +29,23 @@
     }
 
     .library-hero {
-      background: linear-gradient(135deg, #041f12 0%, #15482E 100%);
+      background: #1a1a2e;
       color: #fff;
-      padding: 56px 48px 48px;
+      padding: 64px 48px 52px;
     }
 
     .library-hero .section-label {
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      opacity: 0.7;
+      color: var(--resource-orange);
       margin-bottom: 10px;
       display: block;
     }
 
     .library-hero h1 {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(32px, 5vw, 52px);
+      font-size: clamp(34px, 5vw, 54px);
       font-weight: 700;
       color: #fff;
       margin: 0 0 16px;
@@ -40,258 +54,202 @@
 
     .library-hero p {
       font-size: 18px;
-      opacity: 0.85;
+      color: #b0b8c8;
       margin: 0;
-      max-width: 580px;
-      line-height: 1.6;
+      max-width: 640px;
+      line-height: 1.65;
     }
 
     .library-body {
       background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
-      padding: 36px 48px 48px;
+      padding: 40px 48px 48px;
     }
 
-    .library-carousel {
-      position: relative;
+    .library-intro {
+      font-size: 16px;
+      color: #4a5568;
+      line-height: 1.75;
+      max-width: 70ch;
+      margin: 0 0 32px;
+      padding-left: 18px;
+      border-left: 3px solid rgba(86,156,214,0.3);
     }
 
-    .library-track-outer {
-      overflow: hidden;
+    .library-section + .library-section {
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(26,26,46,0.08);
     }
 
-    .library-track {
-      display: flex;
-      align-items: flex-start;
-      transition: transform 0.35s ease;
-      will-change: transform;
-    }
-
-    .library-page {
-      min-width: 100%;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
+    .library-section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--resource-green);
+      margin-bottom: 18px;
     }
 
     .library-grid {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
     }
 
-    .carousel-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-top: 24px;
-    }
-
-    .carousel-btn {
-      background: #fff;
-      border: 1.5px solid #d0d0d0;
-      border-radius: 8px;
-      width: 40px;
-      height: 40px;
-      font-size: 20px;
-      color: #15482E;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
-      line-height: 1;
-    }
-
-    .carousel-btn:hover:not(:disabled) {
-      background: #15482E;
-      color: #fff;
-      border-color: #15482E;
-    }
-
-    .carousel-btn:disabled {
-      opacity: 0.3;
-      cursor: default;
-    }
-
-    .carousel-dots {
-      display: flex;
-      gap: 7px;
-      align-items: center;
-    }
-
-    .carousel-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: #d0d0d0;
-      transition: background 0.2s, transform 0.2s;
-    }
-
-    .carousel-dot.active {
-      background: #15482E;
-      transform: scale(1.3);
-    }
-
-    .lib-card {
-      background: #fff;
-      border-radius: 10px;
-      border-left: 3px solid #15482E;
-      padding: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-      transition: transform 0.2s, box-shadow 0.2s;
+    .library-topic-card {
       display: flex;
       flex-direction: column;
+      gap: 10px;
+      padding: 22px 20px;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(26,26,46,0.08);
+      border-top: 3px solid var(--resource-orange);
+      box-shadow: 0 18px 38px rgba(13,17,23,0.08);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     }
 
-    .lib-card:hover {
+    .library-topic-card:hover {
       transform: translateY(-2px);
-      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      background: #ffffff;
+      box-shadow: 0 24px 44px rgba(13,17,23,0.12);
+      border-color: rgba(26,26,46,0.14);
+      text-decoration: none;
+      color: inherit;
     }
 
-    .lib-card-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 10px;
-    }
-
-    .lib-practice-tag {
+    .library-topic-kicker {
       font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #3a8b5f;
-      font-weight: 700;
+      color: var(--resource-orange);
     }
 
-    .lib-practice-tag + .lib-practice-tag::before {
-      content: " · ";
-      color: #ccc;
-    }
-
-    .lib-card h3 {
+    .library-topic-card h2 {
       font-family: 'Playfair Display', serif;
-      font-size: 17px;
-      color: #0f2818;
-      font-weight: 700;
-      margin: 0 0 10px;
-      line-height: 1.35;
+      font-size: 19px;
+      line-height: 1.3;
+      color: #1a1a2e;
+      margin: 0;
     }
 
-    .lib-card p {
+    .library-topic-card p {
       font-size: 14px;
-      color: #555;
-      line-height: 1.6;
-      margin: 0 0 14px;
+      color: #4a5568;
+      line-height: 1.65;
+      margin: 0;
       flex: 1;
     }
 
-    .lib-svc-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 5px;
-      margin-bottom: 14px;
-    }
-
-    .lib-svc-chip {
-      font-size: 10px;
-      padding: 2px 8px;
-      background: #edeef7;
-      border-radius: 3px;
-      color: #555;
-    }
-
-    .lib-card a.read-link {
+    .library-topic-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-size: 13px;
-      color: #15482E;
       font-weight: 600;
-      text-decoration: none;
+      color: var(--resource-orange);
       transition: color 0.2s;
     }
 
-    .lib-card a.read-link:hover {
-      color: #3a8b5f;
-      text-decoration: underline;
+    .library-topic-card:hover .library-topic-link {
+      color: var(--resource-orange-dark);
     }
 
-    .lib-card.hidden {
-      display: none;
-    }
-
-    /* Cluster hub links */
-    .library-clusters {
-      margin-bottom: 28px;
-      padding-bottom: 24px;
-      border-bottom: 1px solid #e0e0e0;
+    .library-cta {
+      margin-top: 40px;
+      padding: 28px;
+      background: #f6f7fc;
+      border: 1px solid rgba(26,26,46,0.08);
+      border-radius: 16px;
+      box-shadow: 0 18px 36px rgba(13,17,23,0.06);
       display: flex;
-      flex-direction: column;
-      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
     }
 
-    .library-cluster-group {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
+    .library-cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #1a1a2e;
+      margin: 0 0 8px;
+      line-height: 1.2;
     }
 
-    .library-cluster-group-label {
-      font-size: 10px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      color: #999;
+    .library-cta-copy {
+      font-size: 15px;
+      color: #4a5568;
+      margin: 0;
+      line-height: 1.6;
+      max-width: 48ch;
     }
 
-    .library-cluster-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-
-    .cluster-pill-link {
-      display: inline-block;
-      padding: 7px 14px;
-      background: #fff;
-      border: 1.5px solid #15482E;
-      border-radius: 20px;
-      font-size: 13px;
-      font-weight: 600;
-      color: #15482E;
-      text-decoration: none;
-      transition: all 0.2s;
-    }
-
-    .cluster-pill-link:hover {
-      background: #15482E;
+    .library-cta-btn {
+      background: #569CD6;
       color: #fff;
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 2px solid #569CD6;
+      white-space: nowrap;
+      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+    }
+
+    .library-cta-btn:hover {
+      background: #4a88be;
+      border-color: #4a88be;
+      color: #fff;
+      text-decoration: none;
+      transform: translateY(-1px);
     }
 
     @media (max-width: 1024px) {
-      .library-page {
-        grid-template-columns: repeat(2, 1fr);
+      .library-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
     @media (max-width: 768px) {
       .resource-library {
-        margin: 12px;
-        border-radius: 14px;
+        margin: 20px 16px 16px;
+        border-radius: 18px;
       }
 
       .library-hero {
-        padding: 36px 24px 32px;
+        padding: 42px 24px 34px;
       }
 
       .library-body {
-        padding: 24px 20px 32px;
+        padding: 28px 24px 32px;
       }
 
-      .library-page {
+      .library-grid {
         grid-template-columns: 1fr;
+      }
+
+      .library-cta {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
 
     @media (max-width: 480px) {
       .resource-library {
-        margin: 8px;
+        margin: 16px 12px 12px;
+        border-radius: 16px;
+      }
+
+      .library-hero {
+        padding: 36px 18px 30px;
+      }
+
+      .library-body {
+        padding: 24px 18px 28px;
       }
     }
   </style>
@@ -301,153 +259,50 @@
   <div class="resource-library">
     <div class="library-hero">
       <span class="section-label">Knowledge Base</span>
-      <h1>Resource Library</h1>
-      <p>Tax guides, planning strategies, and compliance checklists for founders, expats, real estate owners, and global businesses.</p>
+      <h1>{{ .Title }}</h1>
+      <p>{{ .Description }}</p>
     </div>
 
     <div class="library-body">
-      <div class="library-clusters">
-        <div class="library-cluster-group">
-          <div class="library-cluster-group-label">General Topics</div>
-          <div class="library-cluster-links">
-            <a href="/resources/international-tax/" class="cluster-pill-link">International Tax</a>
-            <a href="/resources/real-estate-tax/" class="cluster-pill-link">Real Estate Tax</a>
-            <a href="/resources/individual-tax/" class="cluster-pill-link">Individual Tax</a>
-            <a href="/resources/business-tax/" class="cluster-pill-link">Business Tax</a>
-            <a href="/resources/general-tax-compliance/" class="cluster-pill-link">Tax Compliance</a>
-          </div>
-        </div>
-        <div class="library-cluster-group">
-          <div class="library-cluster-group-label">Focused Areas</div>
-          <div class="library-cluster-links">
-            <a href="/resources/ecommerce-sellers/" class="cluster-pill-link">E-Commerce Sellers</a>
-            <a href="/resources/latam-inbound/" class="cluster-pill-link">LATAM Inbound</a>
-          </div>
-        </div>
-      </div>
+      <p class="library-intro">Start with the topic cluster that matches your situation. Each hub organizes the most relevant planning guides, compliance articles, and technical explainers in one place.</p>
 
-      <!-- Card pool (hidden — JS reads from here) -->
-      <div class="library-grid" id="libraryGrid">
-        {{ range .Pages }}
-        {{ $clusters := .Params.clusters | default (slice) }}
-        {{ $clusterNames := dict "international-tax" "International Tax" "real-estate-tax" "Real Estate Tax" "individual-tax" "Individual Tax" "business-tax" "Business Tax" "general-tax-compliance" "Tax Compliance" "ecommerce-sellers" "E-Commerce" "latam-inbound" "LATAM Inbound" }}
-        <div class="lib-card"
-             data-clusters="{{ delimit $clusters "," }}"
-             data-text="{{ .Title | lower }} {{ .Description | lower }}"
-             data-url="{{ .RelPermalink }}">
-          <div class="lib-card-tags">
-            {{ range $clusters }}
-              {{ $name := index $clusterNames . }}
-              {{ if $name }}<span class="lib-practice-tag">{{ $name }}</span>{{ end }}
-            {{ end }}
-          </div>
-          <h3>{{ .Title }}</h3>
-          <p>{{ .Description }}</p>
-          <div class="lib-svc-chips">
-            {{ range .Params.services }}
-              {{ $svc := . }}
-              {{ range $.Site.Data.siteconfig.navigation.services }}
-                {{ if in .url $svc }}
-                  <span class="lib-svc-chip">{{ .label }}</span>
-                {{ end }}
-              {{ end }}
-            {{ end }}
-          </div>
-          <a href="{{ .RelPermalink }}" class="read-link">Read Article →</a>
+      <section class="library-section">
+        <div class="library-section-label">General Topics</div>
+        <div class="library-grid">
+          {{ range $generalTopics }}
+          <a href="{{ .RelPermalink }}" class="library-topic-card">
+            <span class="library-topic-kicker">General Topic</span>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Description }}</p>
+            <span class="library-topic-link">Open Hub &rarr;</span>
+          </a>
+          {{ end }}
         </div>
-        {{ end }}
-      </div>
+      </section>
 
-      <!-- Carousel -->
-      <div class="library-carousel">
-        <div class="library-track-outer">
-          <div class="library-track" id="libraryTrack"></div>
+      <section class="library-section library-section-focused">
+        <div class="library-section-label">Focused Areas</div>
+        <div class="library-grid">
+          {{ range $focusedAreas }}
+          <a href="{{ .RelPermalink }}" class="library-topic-card">
+            <span class="library-topic-kicker">Focused Area</span>
+            <h2>{{ .Title }}</h2>
+            <p>{{ .Description }}</p>
+            <span class="library-topic-link">Open Hub &rarr;</span>
+          </a>
+          {{ end }}
         </div>
-        <div class="carousel-nav">
-          <button class="carousel-btn" id="prevBtn" disabled>&#8592;</button>
-          <div class="carousel-dots" id="carouselDots"></div>
-          <button class="carousel-btn" id="nextBtn" disabled>&#8594;</button>
+      </section>
+
+      <div class="library-cta">
+        <div>
+          <h2 class="library-cta-title">Need help applying one of these topics?</h2>
+          <p class="library-cta-copy">Tell us what you're dealing with, and we'll point you toward the right next step.</p>
         </div>
+        <a href="/contact/" class="library-cta-btn">Get in Touch</a>
       </div>
     </div>
   </div>
 
   {{ partial "footer.html" . }}
-
-  <script>
-    (function() {
-      var PAGE_SIZE = 9;
-      var allCards = Array.from(document.querySelectorAll('.lib-card'));
-      var track = document.getElementById('libraryTrack');
-      var dotsEl = document.getElementById('carouselDots');
-      var prevBtn = document.getElementById('prevBtn');
-      var nextBtn = document.getElementById('nextBtn');
-      var currentPage = 0;
-      var pages = [];
-
-      function getVisible() {
-        return allCards;
-      }
-
-      function buildCarousel() {
-        var visible = getVisible();
-
-        // Chunk into pages of PAGE_SIZE
-        pages = [];
-        for (var i = 0; i < visible.length; i += PAGE_SIZE) {
-          pages.push(visible.slice(i, i + PAGE_SIZE));
-        }
-        if (pages.length === 0) pages = [[]];
-
-        // Build track
-        track.innerHTML = '';
-        pages.forEach(function(pageCards) {
-          var page = document.createElement('div');
-          page.className = 'library-page';
-          pageCards.forEach(function(card) {
-            page.appendChild(card.cloneNode(true));
-          });
-          track.appendChild(page);
-        });
-
-        // Build dots
-        dotsEl.innerHTML = '';
-        pages.forEach(function(_, i) {
-          var dot = document.createElement('div');
-          dot.className = 'carousel-dot' + (i === 0 ? ' active' : '');
-          dot.addEventListener('click', function() { goTo(i); });
-          dotsEl.appendChild(dot);
-        });
-
-        currentPage = 0;
-        updatePosition();
-      }
-
-      function updatePosition() {
-        var outer = document.querySelector('.library-track-outer');
-        track.style.transform = 'translateX(-' + (currentPage * outer.offsetWidth) + 'px)';
-        prevBtn.disabled = currentPage === 0;
-        nextBtn.disabled = currentPage >= pages.length - 1;
-        Array.from(dotsEl.children).forEach(function(dot, i) {
-          dot.classList.toggle('active', i === currentPage);
-        });
-      }
-
-      window.addEventListener('resize', function() {
-        track.style.transition = 'none';
-        updatePosition();
-        setTimeout(function() { track.style.transition = ''; }, 50);
-      });
-
-      function goTo(n) {
-        currentPage = Math.max(0, Math.min(n, pages.length - 1));
-        updatePosition();
-      }
-
-      prevBtn.addEventListener('click', function() { goTo(currentPage - 1); });
-      nextBtn.addEventListener('click', function() { goTo(currentPage + 1); });
-
-      buildCarousel();
-    })();
-  </script>
 {{ end }}

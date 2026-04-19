@@ -3,7 +3,7 @@ title: "Business Tax"
 description: "Business tax returns, entity structure, and year-round tax planning for owner-operated businesses — partnerships, S-corps, C-corps, and sole proprietors."
 layout: "service"
 subtitle: "Business tax returns, entity structure, and year-round tax management for owner-operated businesses."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-founders.jpg"
 aliases:
   - /expertise/business/
   - /expertise/founders/

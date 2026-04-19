@@ -8,6 +8,7 @@ slug: "realestate"
 aliases:
   - /expertise/realestate/international/
 subtitle: "Tax compliance for foreign owners of U.S. property and U.S. persons with real estate across borders."
+heroImage: "/images/card-realestate.jpg"
 sections:
   - title: "Cross-Border Real Estate Is Its Own Category"
     body: |

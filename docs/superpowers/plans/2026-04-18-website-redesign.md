@@ -1,16 +1,558 @@
-{{ define "main" }}
+# Website Redesign Implementation Plan
 
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+
+**Goal:** Complete visual overhaul of Vantis CPA Hugo site — remove floating cards/gridlines, apply VS Code terminal color palette with glassmorphism nav and contact form, restructure homepage into 4 distinct full-width service sections each with images and emojis.
+
+**Architecture:** All changes are to Hugo templates in `layouts/` and CSS assets in `assets/css/`. The homepage (`layouts/index.html`) contains an inline `<style>` block and all section HTML. Nav and footer are partials. Inner pages use `layouts/_default/` templates + `layouts/partials/service-css.html`. No JavaScript logic changes — only colors/structure updated.
+
+**Tech Stack:** Hugo static site generator, vanilla CSS, HTML5. Dev: `hugo server` at `http://localhost:1313`. Build: `hugo`.
+
+---
+
+### Task 1: Replace CSS variable tokens
+
+**Files:**
+- Modify: `assets/css/variables.css`
+
+- [ ] **Step 1: Replace the full content of `assets/css/variables.css`**
+
+```css
+:root {
+  /* Nav & Footer — premium dark gray */
+  --nav-bg: rgba(26, 26, 46, 0.82);
+  --footer-bg: #1a1a2e;
+
+  /* Section backgrounds */
+  --dark-navy: #0d1117;
+  --dark-gray: #1a1a2e;
+  --section-white: #ffffff;
+
+  /* Hero */
+  --hero-gradient: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
+
+  /* VS Code terminal accent colors */
+  --accent-blue: #569CD6;
+  --accent-orange: #CE9178;
+  --accent-green: #4EC9B0;
+  --accent-silver: #9CDCFE;
+  --accent-silver-dark: #4a90b8;
+
+  /* Text */
+  --text-light: #e8e8e8;
+  --text-dark: #1a1a2e;
+  --text-mid-dark: #b0b8c8;
+  --text-mid-light: #4a5568;
+
+  /* Legacy aliases — keep for inner page compatibility */
+  --primary: #569CD6;
+  --primary-dark: #1a1a2e;
+  --primary-darkest: #0d1117;
+  --accent: #4EC9B0;
+  --accent-light: #e8e6f5;
+  --bg-light: #f8f7ff;
+  --bg-accent: #edeef7;
+  --bg: #e8e8e8;
+  --bg-alt: #e0e0e0;
+  --border: #d0d0d0;
+  --navy: #1a1a2e;
+  --navy-mid: #569CD6;
+  --navy-dark: #0d1117;
+  --text-mid: #4a5568;
+  --card-radius: 8px;
+
+  /* Fonts */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 48px;
+
+  /* Misc */
+  --border-radius: 8px;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --nav-height: 68px;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --spacing-xl: 24px;
+    --spacing-xxl: 32px;
+  }
+}
+```
+
+- [ ] **Step 2: Run build to verify no errors**
+
+```bash
+hugo
+```
+Expected: Build output table with 0 errors.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add assets/css/variables.css
+git commit -m "feat: replace CSS variables with VS Code terminal palette"
+```
+
+---
+
+### Task 2: Clean up global styles
+
+**Files:**
+- Modify: `assets/css/style.css`
+
+- [ ] **Step 1: Replace the full content of `assets/css/style.css`**
+
+```css
+@import 'variables.css';
+
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Typography */
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-top: var(--nav-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+h1 { font-size: 48px; line-height: 1.2; }
+h2 { font-size: 36px; line-height: 1.2; }
+h3 { font-size: 28px; line-height: 1.3; }
+p { margin-bottom: var(--spacing-md); }
+
+a { color: var(--accent-blue); text-decoration: none; transition: color 0.3s ease; }
+a:hover { color: var(--accent-green); text-decoration: underline; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-xl); }
+
+.grid { display: grid; gap: var(--spacing-lg); }
+.grid-2 { grid-template-columns: repeat(2, 1fr); }
+.grid-3 { grid-template-columns: repeat(3, 1fr); }
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  h1 { font-size: 32px; }
+  h2 { font-size: 24px; }
+  h3 { font-size: 20px; }
+}
+
+/* Fade-up animations */
+.fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.fade-up-d1 { transition-delay: 0.08s; }
+.fade-up-d2 { transition-delay: 0.16s; }
+.fade-up-d3 { transition-delay: 0.24s; }
+.fade-up-d4 { transition-delay: 0.32s; }
+.fade-up-d5 { transition-delay: 0.40s; }
+.fade-up-d6 { transition-delay: 0.48s; }
+
+/* Section label */
+.section-label {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 12px;
+}
+
+.section-subheading {
+  font-size: 17px;
+  line-height: 1.65;
+  max-width: 600px;
+  margin-top: 8px;
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent-blue);
+  color: #fff;
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--accent-blue);
+  display: inline-block;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-dark);
+  padding: 13px 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid var(--text-dark);
+  display: inline-block;
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+.btn-secondary:hover { background: var(--text-dark); color: #fff; transform: translateY(-1px); text-decoration: none; }
+```
+
+- [ ] **Step 2: Build and verify**
+
+```bash
+hugo
+```
+Expected: 0 errors.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add assets/css/style.css
+git commit -m "feat: global styles — remove gridlines, clean palette, shared fade-up"
+```
+
+---
+
+### Task 3: Update nav to glassmorphism dark gray
+
+**Files:**
+- Modify: `layouts/partials/nav-css.html`
+
+- [ ] **Step 1: In `layouts/partials/nav-css.html`, replace only the `.nav` and `.nav.scrolled` rules**
+
+Find this block:
+```css
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: linear-gradient(160deg, #0c3421 0%, #0a301e 100%);
+  border-bottom: none;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.25s ease, backdrop-filter 0.25s ease;
+  overflow: visible;
+}
+```
+
+Replace with:
+```css
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(26, 26, 46, 0.82);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  transition: box-shadow 0.25s ease, background 0.25s ease;
+  overflow: visible;
+}
+```
+
+- [ ] **Step 2: Replace `.nav.scrolled` rule**
+
+Find:
+```css
+.nav.scrolled { background: rgba(5, 40, 24, 0.90); box-shadow: 0 4px 20px rgba(5,40,24,0.25); backdrop-filter: blur(8px); }
+```
+
+Replace with:
+```css
+.nav.scrolled { background: rgba(26, 26, 46, 0.95); box-shadow: 0 4px 20px rgba(0,0,0,0.3); backdrop-filter: blur(20px) saturate(180%); -webkit-backdrop-filter: blur(20px) saturate(180%); }
+```
+
+- [ ] **Step 3: Update nav link hover color from opacity to blue**
+
+Find:
+```css
+.nav-links a:hover { opacity: 0.7; }
+```
+
+Replace with:
+```css
+.nav-links a:hover { opacity: 1; color: #569CD6; }
+```
+
+- [ ] **Step 4: Update mobile menu background**
+
+Find:
+```css
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--navy-dark);
+```
+
+Replace with:
+```css
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(26, 26, 46, 0.97);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+```
+
+- [ ] **Step 5: Update mobile menu link color**
+
+Find:
+```css
+.mobile-menu a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #7aaa8f;
+```
+
+Replace with:
+```css
+.mobile-menu a {
+  font-size: 15px;
+  font-weight: 500;
+  color: #b0b8c8;
+```
+
+- [ ] **Step 6: Update mobile accordion link color**
+
+Find:
+```css
+.mobile-accordion-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 13px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 600;
+  color: #e2e8f0;
+```
+
+This is already a good light color — keep it. Find:
+```css
+.mobile-accordion-body a {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(255,255,255,0.6);
+```
+Keep as-is (already appropriate). No change needed here.
+
+- [ ] **Step 7: Remove the `.nav::before` grain overlay block** (no longer needed)
+
+Find and delete this entire block:
+```css
+.nav::before {
+  content: '';
+  position: absolute;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  opacity: 0.12;
+  pointer-events: none;
+  z-index: 0;
+}
+.nav > * { position: relative; z-index: 1; }
+```
+
+- [ ] **Step 8: Build and preview**
+
+```bash
+hugo server
+```
+Navigate to `http://localhost:1313`. Confirm: frosted glass nav over dark gray background, white links, blue hover.
+
+- [ ] **Step 9: Commit**
+
+```bash
+git add layouts/partials/nav-css.html
+git commit -m "feat: nav glassmorphism — dark gray backdrop-filter, blue hover"
+```
+
+---
+
+### Task 4: Update footer to premium dark gray
+
+**Files:**
+- Modify: `layouts/partials/footer-css.html`
+- Modify: `layouts/partials/footer.html`
+
+- [ ] **Step 1: In `layouts/partials/footer-css.html`, replace the `.footer` rule**
+
+Find:
+```css
+.footer { background: #092316; padding: 64px 0 32px; margin: 0; border-radius: 0; box-shadow: none; width: 100%; position: relative; z-index: 1; }
+```
+
+Replace with:
+```css
+.footer { background: #1a1a2e; padding: 64px 0 32px; margin: 0; border-radius: 0; box-shadow: none; border-top: 1px solid rgba(255,255,255,0.06); width: 100%; position: relative; z-index: 1; }
+```
+
+- [ ] **Step 2: Update footer text colors in `footer-css.html`**
+
+Find and replace each line:
+```css
+.footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #5a8b6f; margin-bottom: 14px; }
+```
+→
+```css
+.footer-tagline { font-family: 'Playfair Display', serif; font-style: italic; font-size: 14px; color: #b0b8c8; margin-bottom: 14px; }
+```
+
+```css
+.footer-license { font-size: 12px; color: #4a7b5f; margin-bottom: 16px; }
+```
+→
+```css
+.footer-license { font-size: 12px; color: #6b7280; margin-bottom: 16px; }
+```
+
+```css
+.footer-contact a { display: block; font-size: 14px; color: #7aaa8f; text-decoration: none; margin-bottom: 6px; }
+.footer-contact a:hover { color: #fff; }
+```
+→
+```css
+.footer-contact a { display: block; font-size: 14px; color: #9CDCFE; text-decoration: none; margin-bottom: 6px; }
+.footer-contact a:hover { color: #fff; }
+```
+
+```css
+.footer-about { font-size: 13px; color: #7aaa8f; line-height: 1.6; margin-top: 16px; max-width: 380px; }
+```
+→
+```css
+.footer-about { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin-top: 16px; max-width: 380px; }
+```
+
+```css
+.footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7b5f; margin-bottom: 16px; }
+```
+→
+```css
+.footer-col-title { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #569CD6; margin-bottom: 16px; }
+```
+
+```css
+.footer-links a { font-size: 14px; color: #7aaa8f; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+.footer-links a:hover { color: #fff; }
+```
+→
+```css
+.footer-links a { font-size: 14px; color: #b0b8c8; text-decoration: none; transition: color 0.2s; white-space: nowrap; }
+.footer-links a:hover { color: #9CDCFE; }
+```
+
+```css
+.footer-copy { font-size: 12px; color: #4a7b5f; }
+.footer-legal a { font-size: 12px; color: #4a7b5f; text-decoration: none; }
+.footer-legal a:hover { color: #fff; }
+```
+→
+```css
+.footer-copy { font-size: 12px; color: #6b7280; }
+.footer-legal a { font-size: 12px; color: #6b7280; text-decoration: none; }
+.footer-legal a:hover { color: #9CDCFE; }
+```
+
+- [ ] **Step 3: In `layouts/partials/footer.html`, remove `grain-overlay` class from `<footer>`**
+
+Find:
+```html
+<footer class="footer grain-overlay" role="contentinfo">
+```
+
+Replace with:
+```html
+<footer class="footer" role="contentinfo">
+```
+
+- [ ] **Step 4: Update inline color in footer-bottom legal separator**
+
+Find:
+```html
+<span style="color:#2a5a3a;padding:0 8px;">&middot;</span>
+```
+(appears twice)
+
+Replace both with:
+```html
+<span style="color:#4a5568;padding:0 8px;">&middot;</span>
+```
+
+- [ ] **Step 5: Build and preview**
+
+```bash
+hugo server
+```
+Navigate to `http://localhost:1313`, scroll to footer. Confirm: `#1a1a2e` dark gray background, light text, silver/blue links.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add layouts/partials/footer-css.html layouts/partials/footer.html
+git commit -m "feat: footer — dark gray #1a1a2e matching nav family"
+```
+
+---
+
+### Task 5: Replace homepage inline `<style>` block
+
+**Files:**
+- Modify: `layouts/index.html` (style block only, lines 3–1331)
+
+This replaces the entire `<style>` block at the top of `index.html` (everything between `{{ define "main" }}` and `{{ partial "nav-css.html" . }}`). The new style block removes all floating card effects, gridlines, and old green colors. It adds the new section backgrounds, VS Code accents, glassmorphism contact, and service section layouts.
+
+- [ ] **Step 1: In `layouts/index.html`, replace the opening `<style>` tag through the closing `</style>` tag (the entire inline style block) with the following**
+
+```html
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #edeef7;
-      background-image:
-        linear-gradient(rgba(26,26,46,0.08) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(26,26,46,0.08) 1px, transparent 1px);
-      background-size: 64px 20px;
-      background-attachment: fixed;
+      background: #ffffff;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -43,29 +585,15 @@
 
     /* ─── HERO ─── */
     .hero {
-      background-image: url('/images/card-inbound.jpg');
-      background-size: cover;
-      background-position: center 24%;
-      background-attachment: fixed;
+      background: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
       min-height: 80vh;
       display: flex;
       align-items: center;
       position: relative;
       overflow: hidden;
-      margin: 52px 22px 0;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.14);
-    }
-    /* Dark overlay so text pops */
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(13,17,23,0.93) 0%, rgba(26,26,46,0.88) 60%, rgba(13,17,23,0.80) 100%);
-      z-index: 0;
     }
     .hero-body {
-      padding: 120px 0;
+      padding: 80px 0;
       position: relative;
       z-index: 1;
       width: 100%;
@@ -80,39 +608,38 @@
       position: absolute;
       top: 20px; right: 36%;
       font-size: 88px;
-      opacity: 0.06;
+      opacity: 0.10;
       pointer-events: none;
-      z-index: 1;
+      z-index: 0;
       line-height: 1;
     }
     .hero-left { padding-right: 8px; }
     .hero-brand-name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(56px, 8vw, 100px);
-      font-weight: 700; color: #ffffff;
+      font-weight: 700; color: #1a1a2e;
       line-height: 1.05; letter-spacing: -0.02em;
       margin-bottom: 12px; white-space: nowrap;
-      text-shadow: 0 2px 20px rgba(0,0,0,0.4);
     }
     .hero-tagline {
       font-family: 'Playfair Display', serif;
       font-size: clamp(14px, 1.8vw, 18px);
-      font-style: italic; color: #9CDCFE; letter-spacing: 0.01em;
+      font-style: italic; color: #569CD6; letter-spacing: 0.01em;
     }
-    .hero-divider { width: 1px; background: rgba(255,255,255,0.15); align-self: stretch; }
+    .hero-divider { width: 1px; background: rgba(26,26,46,0.15); align-self: stretch; }
     .hero-right { padding-left: 8px; }
     .hero-intro-label {
       font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #9CDCFE; margin-bottom: 10px;
+      text-transform: uppercase; color: #4a5568; margin-bottom: 10px;
     }
-    .hero-sub { font-size: 15px; color: rgba(255,255,255,0.88); line-height: 1.7; margin-bottom: 24px; }
+    .hero-sub { font-size: 15px; color: #1a1a2e; line-height: 1.7; margin-bottom: 24px; }
 
-    /* Hero contact box — glassmorphism (dark) */
+    /* Hero contact box — glassmorphism */
     .hero-contact-box {
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.15);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.6);
       border-radius: 10px;
       padding: 18px 22px;
       display: grid;
@@ -123,12 +650,12 @@
     .hero-contact-item { display: flex; flex-direction: column; gap: 2px; }
     .hero-contact-item .label {
       font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
-      text-transform: uppercase; color: #9CDCFE;
+      text-transform: uppercase; color: #569CD6;
     }
     .hero-contact-item .value {
-      font-size: 13px; font-weight: 600; color: #ffffff; text-decoration: none;
+      font-size: 13px; font-weight: 600; color: #1a1a2e; text-decoration: none;
     }
-    .hero-contact-item .value:hover { text-decoration: underline; color: #9CDCFE; }
+    .hero-contact-item .value:hover { text-decoration: underline; color: #569CD6; }
     .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
       background: #569CD6; color: #fff; padding: 13px 26px; border-radius: 8px;
@@ -138,20 +665,28 @@
     }
     .btn-primary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
     .btn-secondary {
-      background: transparent; color: #ffffff; padding: 13px 26px; border-radius: 8px;
+      background: transparent; color: #1a1a2e; padding: 13px 26px; border-radius: 8px;
       font-size: 14px; font-weight: 600; text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.5); display: inline-block;
-      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+      border: 2px solid #1a1a2e; display: inline-block;
+      transition: background 0.2s, color 0.2s, transform 0.15s;
     }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary:hover { background: #1a1a2e; color: #fff; transform: translateY(-1px); text-decoration: none; }
 
-
-    /* ─── FLOATING CARD WRAPPER ─── */
-    .card-float {
-      margin: 20px 22px;
-      border-radius: 20px;
+    /* Hero image panel */
+    .hero-image-panel {
+      position: absolute;
+      top: 0; right: 0; bottom: 0;
+      width: 32%;
       overflow: hidden;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12);
+      pointer-events: none;
+    }
+    .hero-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image-panel::before {
+      content: '';
+      position: absolute; top: 0; left: 0; bottom: 0;
+      width: 120px;
+      background: linear-gradient(to right, #edeef7, transparent);
+      z-index: 1;
     }
 
     /* ─── SERVICE SECTIONS SHARED ─── */
@@ -214,13 +749,21 @@
     .international-tax .svc-learn-more { color: #4EC9B0; }
     .international-tax .svc-learn-more:hover { color: #e8e8e8; }
     .intl-watermark {
-      display: none;
+      position: absolute; top: 40px; right: 42%;
+      font-size: 120px; opacity: 0.05;
       pointer-events: none; z-index: 0; line-height: 1;
     }
     .international-tax .svc-content { position: relative; z-index: 1; }
 
     /* ─── FULL OFFICE (white) ─── */
     .full-office { background: #ffffff; position: relative; overflow: hidden; padding: 80px 0; }
+    .full-office-bg {
+      position: absolute; inset: 0;
+      background-image: url('/images/card-realestate.jpg');
+      background-size: cover; background-position: center;
+      opacity: 0.05; z-index: 0;
+    }
+    .full-office > .container { position: relative; z-index: 1; }
     .full-office .section-label { color: #4a90b8; }
     .full-office .section-heading { color: #1a1a2e; }
     .full-office .section-subheading { color: #4a5568; }
@@ -249,34 +792,55 @@
     }
     .full-office-learn-more:hover { letter-spacing: 0.1em; color: #1a1a2e; text-decoration: none; }
 
-    /* ─── WHO WE WORK WITH (dark gray) ─── */
+    /* ─── WHO WE SERVE (dark gray) ─── */
     .industries { padding: 80px 0; background: #1a1a2e; }
     .industries .section-label { color: #569CD6; }
     .industries .section-heading { color: #e8e8e8; }
     .industries .section-subheading { color: #b0b8c8; }
-    .industries-header { margin-bottom: 48px; }
-    .client-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden;
+    .industries-header { margin-bottom: 40px; }
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 0; max-width: 900px; margin: 0 auto;
     }
-    .client-tile {
-      background: #1a1a2e;
-      padding: 28px 24px;
-      display: flex; flex-direction: column; gap: 10px;
-      min-height: 100%;
-      border-top: 2px solid rgba(86,156,214,0.28);
+    .industry-card-wrapper {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      position: relative; transition: background 0.25s;
     }
-    .client-category {
-      font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #569CD6;
+    .industry-card-wrapper:nth-last-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .industry-card-wrapper:hover { background: rgba(255,255,255,0.04); }
+    .industry-card {
+      display: grid; grid-template-columns: minmax(0,1fr) auto;
+      gap: 18px; align-items: center;
+      padding: 24px 12px; text-decoration: none; color: #e8e8e8;
+      transition: padding 0.25s;
     }
-    .client-name {
+    .industry-card-wrapper:hover .industry-card { padding-left: 20px; }
+    .industry-card-wrapper:hover .industry-learn-more { letter-spacing: 0.04em; color: #9CDCFE; }
+    .industry-row-left { display: flex; align-items: center; gap: 14px; }
+    .industry-thumbnail {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0; opacity: 0.75;
+    }
+    .industry-title-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .industry-category-label {
+      display: inline-flex; align-items: center; align-self: flex-start;
+      padding: 3px 8px; border-radius: 999px;
+      background: rgba(86,156,214,0.12); color: #569CD6;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .industry-title {
       font-family: 'Playfair Display', serif;
-      font-size: 18px; font-weight: 700;
-      color: #e8e8e8; line-height: 1.2; margin: 0;
+      font-size: clamp(18px, 2vw, 24px); font-weight: 700;
+      color: #e8e8e8; line-height: 1.1; letter-spacing: -0.01em;
+      margin: 0;
     }
-    .client-desc { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin: 0; }
+    .industry-description { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin: 0; }
+    .industry-learn-more {
+      font-size: 11px; color: #569CD6; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+      transition: letter-spacing 0.2s, color 0.2s;
+    }
+    .industry-niches { display: none; }
 
     /* ─── PROCESS + WHAT TO BRING (dark navy) ─── */
     .process-bring-section { padding: 80px 0; background: #0d1117; }
@@ -427,6 +991,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 1024px) {
       .hero-inner { grid-template-columns: 1fr 1px 1fr; }
+      .hero-image-panel { display: none; }
       .individual-tax .svc-layout,
       .international-tax .svc-layout { grid-template-columns: 1fr; }
       .individual-tax .svc-image-panel,
@@ -434,7 +999,7 @@
       .business-tax .svc-layout { grid-template-columns: 1fr; }
       .business-tax .svc-image-panel { display: none; }
       .full-office-grid { grid-template-columns: 1fr 1fr; }
-      .client-grid { grid-template-columns: repeat(2, 1fr); }
+      .industries-grid { grid-template-columns: 1fr; }
       .industries-header .section-subheading { max-width: none; }
       .contact-grid { grid-template-columns: 1fr; }
       .faq-wrapper { grid-template-columns: 1fr; }
@@ -445,7 +1010,6 @@
       .hero-brand-name { font-size: clamp(36px, 10vw, 60px); white-space: normal; }
       .hero-contact-box { grid-template-columns: 1fr 1fr; }
       .svc-content { padding: 48px 24px; }
-      .client-grid { grid-template-columns: 1fr; }
       .process-bring-grid { grid-template-columns: 1fr; gap: 48px; }
       .contact-form-panel { padding: 24px 20px; }
       .faq-left, .faq-right { padding: 40px 24px; }
@@ -454,18 +1018,41 @@
       .full-office-grid { grid-template-columns: 1fr; }
       .full-office-item { border-right: none; border-bottom: 1px solid rgba(26,26,46,0.08); }
       .full-office-item:last-child { border-bottom: none; }
-      .client-tile { padding: 24px 20px; }
+      .industry-card { grid-template-columns: 1fr; }
     }
   </style>
-  {{ partial "nav-css.html" . }}
-  {{ partial "footer-css.html" . }}
-</head>
-<body>
+```
 
-{{ partial "nav.html" . }}
+- [ ] **Step 2: Build and verify (no visual check needed yet — HTML sections still need updating)**
 
+```bash
+hugo
+```
+Expected: 0 errors.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: homepage style block — VS Code palette, section layouts, glassmorphism contact"
+```
+
+---
+
+### Task 6: Replace homepage Hero section HTML
+
+**Files:**
+- Modify: `layouts/index.html` (hero section only)
+
+- [ ] **Step 1: Replace the entire hero section in `layouts/index.html`**
+
+Find this section (from `<!-- ═══════════════════ HERO ═══════════════════ -->` through the closing `</section>`):
+
+Replace with:
+```html
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero" aria-label="Introduction">
+  <div aria-hidden="true" class="hero-watermark">🧭</div>
   <div class="hero-body">
     <div class="container">
       <div class="hero-inner">
@@ -473,6 +1060,7 @@
         <!-- Left: Brand name -->
         <div class="hero-left fade-up">
           <h1 class="hero-brand-name">Vantis CPA</h1>
+          <p class="hero-tagline">Tax &amp; Accounting for Local &amp; Global Clients</p>
         </div>
 
         <!-- Divider -->
@@ -520,10 +1108,53 @@
     </div>
   </div>
 
+  <!-- Right-side image panel -->
+  <div class="hero-image-panel" aria-hidden="true">
+    <img src="/images/globe-hero.jpg" alt="" loading="eager">
+  </div>
+</section>
+```
+
+- [ ] **Step 2: Build and preview hero**
+
+```bash
+hugo server
+```
+Navigate to `http://localhost:1313`. Confirm: lavender gradient hero, two-column layout, glassmorphism contact box, globe image on right (desktop), compass emoji watermark.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: homepage hero — lavender gradient, globe image panel, glassmorphism contact box"
+```
+
+---
+
+### Task 7: Replace Services section with 4 separate service sections
+
+**Files:**
+- Modify: `layouts/index.html` (remove old services section, add 4 new sections)
+
+- [ ] **Step 1: Remove the old combined services section**
+
+In `layouts/index.html`, find and delete the entire block from:
+```html
+<!-- ═══════════════════ DIFFERENTIATORS ═══════════════════ -->
+<!-- ═══════════════════ SERVICES ═══════════════════ -->
+<section class="services" id="services" ...>
+```
+through the closing:
+```html
 </section>
 
+<!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+```
+
+Replace that entire removed block with the four new service sections plus the industries comment:
+
+```html
 <!-- ═══════════════════ INDIVIDUAL TAX ═══════════════════ -->
-<div class="card-float">
 <section class="svc-section individual-tax" id="individual-tax" aria-labelledby="individual-tax-heading">
   <div class="svc-layout">
     <div class="svc-content fade-up">
@@ -546,8 +1177,6 @@
 </section>
 
 <!-- ═══════════════════ BUSINESS TAX ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="svc-section business-tax" id="business-tax" aria-labelledby="business-tax-heading">
   <div class="svc-layout">
     <div class="svc-image-panel" aria-hidden="true">
@@ -570,8 +1199,6 @@
 </section>
 
 <!-- ═══════════════════ INTERNATIONAL TAX ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="svc-section international-tax" id="international-tax" aria-labelledby="international-tax-heading">
   <div class="intl-watermark" aria-hidden="true">🌐</div>
   <div class="svc-layout">
@@ -595,9 +1222,8 @@
 </section>
 
 <!-- ═══════════════════ FULL OFFICE ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="full-office" id="full-office" aria-labelledby="full-office-heading">
+  <div class="full-office-bg" aria-hidden="true"></div>
   <div class="container">
     <div class="fade-up">
       <p class="section-label">🗂️ Full Office</p>
@@ -633,54 +1259,160 @@
   </div>
 </section>
 
-<!-- ═══════════════════ WHO WE WORK WITH ═══════════════════ -->
-</div>
-<div class="card-float">
+<!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+```
+
+- [ ] **Step 2: Build and preview all four service sections**
+
+```bash
+hugo server
+```
+Navigate to `http://localhost:1313`. Scroll through the four sections. Confirm:
+- Individual Tax: white bg, blue accent, `card-local.jpg` right panel, 👤 emoji
+- Business Tax: dark gray `#1a1a2e`, orange accent, `card-founders.jpg` left panel, 🏢 emoji
+- International Tax: dark navy `#0d1117`, green accent, `card-expats.jpg` right panel, 🌐 watermark
+- Full Office: white bg, 4-column grid with `card-realestate.jpg` background, item emojis
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: homepage 4 service sections — individual/business/international/full-office with images and emojis"
+```
+
+---
+
+### Task 8: Update Who We Serve section
+
+**Files:**
+- Modify: `layouts/index.html` (industries section)
+
+The industries section JavaScript populates the grid dynamically. The key changes are: new dark gray background (handled by CSS in Task 5), new class names for the card layout to include thumbnails, and updated color classes.
+
+- [ ] **Step 1: Replace the industries section in `layouts/index.html`**
+
+Find:
+```html
+<!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+<section class="industries" id="industries" aria-labelledby="industries-heading">
+```
+through the closing `</section>` of the industries section.
+
+Replace with:
+```html
+<!-- ═══════════════════ WHO WE SERVE ═══════════════════ -->
 <section class="industries" id="industries" aria-labelledby="industries-heading">
   <div class="container">
     <div class="industries-header">
-      <p class="section-label fade-up">🤝 Who We Work With</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Work With</h2>
-      <p class="section-subheading fade-up fade-up-d2">We typically work with people and businesses dealing with more moving parts than a standard return.</p>
+      <p class="section-label fade-up">🤝 Who We Serve</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Focused Expertise</h2>
+      <p class="section-subheading fade-up fade-up-d2">Choose the tax lane that matches the complexity of your situation.</p>
     </div>
-    <div class="client-grid">
-      <div class="client-tile fade-up fade-up-d1">
-        <span class="client-category">Families</span>
-        <h3 class="client-name">Individuals &amp; Families</h3>
-        <p class="client-desc">Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity.</p>
-      </div>
-      <div class="client-tile fade-up fade-up-d2">
-        <span class="client-category">Cross-Border</span>
-        <h3 class="client-name">U.S. Individuals with International Ties</h3>
-        <p class="client-desc">Tax compliance and planning for citizens, green card holders, and dual residents with foreign accounts, foreign companies, and cross-border complexity.</p>
-      </div>
-      <div class="client-tile fade-up fade-up-d3">
-        <span class="client-category">Business Owners</span>
-        <h3 class="client-name">Local and Online Businesses</h3>
-        <p class="client-desc">Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies.</p>
-      </div>
-      <div class="client-tile fade-up fade-up-d4">
-        <span class="client-category">Inbound U.S.</span>
-        <h3 class="client-name">Foreign Businesses &amp; Investors</h3>
-        <p class="client-desc">Comprehensive services to help foreign businesses and investors enter and operate in the U.S. efficiently and compliantly.</p>
-      </div>
-      <div class="client-tile fade-up fade-up-d5">
-        <span class="client-category">Real Estate</span>
-        <h3 class="client-name">Real Estate Owners</h3>
-        <p class="client-desc">Tax planning for property owners, short-term rental operators, and investors in real estate partnerships and funds.</p>
-      </div>
-      <div class="client-tile fade-up fade-up-d6">
-        <span class="client-category">Americans Abroad</span>
-        <h3 class="client-name">U.S. Expats Abroad</h3>
-        <p class="client-desc">Remote compliance support bridging the gap between the U.S. tax system and international residency requirements.</p>
-      </div>
+    <div class="industries-grid" id="industries-grid">
+      <!-- Populated by JavaScript below -->
     </div>
+
+    <script>
+      const industryThumbnails = {
+        'individuals': '/images/card-local.jpg',
+        'business': '/images/card-founders.jpg',
+        'international': '/images/card-expats.jpg',
+        'real-estate': '/images/card-realestate.jpg',
+        'expats': '/images/card-expats.jpg',
+        'inbound': '/images/card-inbound.jpg',
+      };
+
+      const industriesGrid = document.getElementById('industries-grid');
+
+      Object.values(practicesData).forEach((practice, index) => {
+        const delayClass = `fade-up-d${index + 1}`;
+        const wrapper = document.createElement('div');
+        wrapper.className = 'industry-card-wrapper';
+
+        const card = document.createElement('a');
+        card.href = practice.href;
+        card.className = `industry-card fade-up ${delayClass}`;
+        card.setAttribute('aria-label', practice.name.replace(/&/g, 'and'));
+
+        // Left side: thumbnail + title group
+        const rowLeft = document.createElement('div');
+        rowLeft.className = 'industry-row-left';
+
+        // Thumbnail
+        const thumbKey = Object.keys(industryThumbnails).find(k => practice.href && practice.href.includes(k));
+        if (thumbKey) {
+          const thumb = document.createElement('img');
+          thumb.src = industryThumbnails[thumbKey];
+          thumb.alt = '';
+          thumb.className = 'industry-thumbnail';
+          thumb.loading = 'lazy';
+          rowLeft.appendChild(thumb);
+        }
+
+        const titleGroup = document.createElement('div');
+        titleGroup.className = 'industry-title-group';
+
+        if (practice.category) {
+          const categoryLabel = document.createElement('span');
+          categoryLabel.className = 'industry-category-label';
+          categoryLabel.textContent = practice.category;
+          titleGroup.appendChild(categoryLabel);
+        }
+
+        const title = document.createElement('h3');
+        title.className = 'industry-title';
+        title.textContent = practice.name.replace(/&/g, 'and');
+        titleGroup.appendChild(title);
+
+        const description = document.createElement('p');
+        description.className = 'industry-description';
+        description.textContent = practice.description;
+        titleGroup.appendChild(description);
+
+        rowLeft.appendChild(titleGroup);
+        card.appendChild(rowLeft);
+
+        const learnMore = document.createElement('span');
+        learnMore.className = 'industry-learn-more';
+        learnMore.textContent = 'Learn More →';
+        card.appendChild(learnMore);
+
+        wrapper.appendChild(card);
+        industriesGrid.appendChild(wrapper);
+      });
+    </script>
   </div>
 </section>
+```
 
+- [ ] **Step 2: Build and preview**
+
+```bash
+hugo server
+```
+Scroll to Who We Serve. Confirm: dark gray background, blue accents, small circle thumbnails beside each industry row, 🤝 label.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: who we serve — dark gray, blue accent, circle thumbnails"
+```
+
+---
+
+### Task 9: Update Process + What to Bring section
+
+**Files:**
+- Modify: `layouts/index.html` (process-bring-section)
+
+- [ ] **Step 1: Replace the Process + What to Bring section in `layouts/index.html`**
+
+Find the section from `<!-- ═══════════════════ PROCESS + WHAT TO BRING ═══════════════════ -->` through its closing `</section>`.
+
+Replace with:
+```html
 <!-- ═══════════════════ PROCESS + WHAT TO BRING ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="process-bring-section" aria-labelledby="process-heading">
   <div class="container">
     <div class="process-bring-grid">
@@ -762,13 +1494,40 @@
     </div>
   </div>
 </section>
+```
 
+- [ ] **Step 2: Build and preview**
+
+```bash
+hugo server
+```
+Confirm: dark navy `#0d1117` background, green `#4EC9B0` accents on badges and connectors, light text, 🔄 and 📋 emojis.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: process section — dark navy, green accents, process badges"
+```
+
+---
+
+### Task 10: Update Contact section (glassmorphism)
+
+**Files:**
+- Modify: `layouts/index.html` (contact section)
+
+- [ ] **Step 1: Replace the contact section in `layouts/index.html`**
+
+Find the section from `<!-- ═══════════════════ CONTACT ═══════════════════ -->` through its closing `</section>`.
+
+Replace with:
+```html
 <!-- ═══════════════════ CONTACT ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="contact" id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-header">
+      <p class="section-label fade-up">📬 Next Steps</p>
       <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h2>
       <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
     </div>
@@ -834,10 +1593,36 @@
     </div>
   </div>
 </section>
+```
 
+- [ ] **Step 2: Build and preview**
+
+```bash
+hugo server
+```
+Confirm: dark gray `#1a1a2e` background, frosted glass form panel, silver accents, 📬 emoji.
+
+- [ ] **Step 3: Commit**
+
+```bash
+git add layouts/index.html
+git commit -m "feat: contact — glassmorphism form panel, dark gray bg, silver accent"
+```
+
+---
+
+### Task 11: Update FAQ section
+
+**Files:**
+- Modify: `layouts/index.html` (FAQ section)
+
+- [ ] **Step 1: Replace the FAQ section in `layouts/index.html`**
+
+Find `<!-- ═══════════════════ FAQ ═══════════════════ -->` through the section's closing `</section>`.
+
+Replace with:
+```html
 <!-- ═══════════════════ FAQ ═══════════════════ -->
-</div>
-<div class="card-float">
 <section class="faq-section" id="faq">
   <div class="faq-wrapper">
     <div class="faq-left">
@@ -891,49 +1676,206 @@
     </div>
   </div>
 </section>
+```
 
-<!-- ═══════════════════ RESOURCES ═══════════════════ -->
-</div>
+- [ ] **Step 2: Build and preview FAQ**
 
-{{ partial "footer.html" . }}
+```bash
+hugo server
+```
+Confirm: white background, `#f0f4ff` lavender-blue left panel, blue accent bar, ❓ emojis on questions, 💬 heading, blue toggle icons.
 
-<!-- ═══════════════════ SCRIPTS ═══════════════════ -->
-<script>
-  // IntersectionObserver fade-up
-  (function () {
-    var els = document.querySelectorAll('.fade-up');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.06, rootMargin: '0px 0px -36px 0px' });
-    els.forEach(function (el) { io.observe(el); });
-  })();
+- [ ] **Step 3: Commit**
 
-  // FAQ accordion toggle — one open at a time
-  (function () {
-    document.querySelectorAll('.faq-question').forEach(function (question) {
-      question.addEventListener('click', function () {
-        var item = question.closest('.faq-item');
-        var isOpen = item.classList.contains('open');
-        // Close all items
-        document.querySelectorAll('.faq-item').forEach(function (el) {
-          el.classList.remove('open');
-          el.querySelector('.faq-toggle').textContent = '+';
-        });
-        // Open clicked item if it was closed
-        if (!isOpen) {
-          item.classList.add('open');
-          question.querySelector('.faq-toggle').textContent = '−';
-        }
-      });
-    });
-  })();
+```bash
+git add layouts/index.html
+git commit -m "feat: FAQ — white bg, lavender-blue left panel, blue accents, emojis"
+```
 
-  // Contact form is handled by forms.js with Formspree integration
-</script>
+---
 
-{{ end }}
+### Task 12: Update inner pages (service-css.html)
+
+**Files:**
+- Modify: `layouts/partials/service-css.html`
+
+- [ ] **Step 1: In `layouts/partials/service-css.html`, replace the `body` rule to remove gridlines**
+
+Find:
+```css
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  background-image:
+    linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+  background-size: 64px 20px;
+  background-attachment: fixed;
+  line-height: 1.6;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+```
+
+Replace with:
+```css
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  line-height: 1.6;
+  padding-top: var(--nav-height);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+```
+
+- [ ] **Step 2: Remove the `body::before` overlay block**
+
+Find and delete:
+```css
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+  pointer-events: none;
+  z-index: 0;
+}
+```
+
+- [ ] **Step 3: Update `.hero` in service-css.html to remove floating card**
+
+Find:
+```css
+.hero {
+  background: radial-gradient(circle at center, #edeef7 0%, #fff 72%);
+  padding: 80px 48px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 31px 25px 22px 22px;
+  border-radius: 20px;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  opacity: 0.98;
+}
+```
+
+Replace with:
+```css
+.hero {
+  background: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
+  padding: 80px 48px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  overflow: hidden;
+}
+```
+
+- [ ] **Step 4: Update inner page section variables to use new palette**
+
+Find the `:root` block at the top of service-css.html:
+```css
+:root {
+  --primary-dark: #062215;
+  --primary: #15482E;
+  --primary-darkest: #041f12;
+  --accent: #3a8b5f;
+  --bg: #e8e8e8;
+  --bg-alt: #e0e0e0;
+  --text-dark: #0f2818;
+  --text-mid: #3d6b52;
+  --navy: #062215;
+  --navy-dark: #041f12;
+  --card-radius: 14px;
+  --nav-height: 68px;
+}
+```
+
+Replace with:
+```css
+:root {
+  --primary-dark: #1a1a2e;
+  --primary: #569CD6;
+  --primary-darkest: #0d1117;
+  --accent: #4EC9B0;
+  --bg: #f8f7ff;
+  --bg-alt: #edeef7;
+  --text-dark: #1a1a2e;
+  --text-mid: #4a5568;
+  --navy: #1a1a2e;
+  --navy-dark: #0d1117;
+  --card-radius: 8px;
+  --nav-height: 68px;
+}
+```
+
+- [ ] **Step 5: Build and check an inner page**
+
+```bash
+hugo server
+```
+Navigate to `http://localhost:1313/services/individual-tax/`. Confirm: no gridlines, no floating card on hero, updated colors.
+
+- [ ] **Step 6: Commit**
+
+```bash
+git add layouts/partials/service-css.html
+git commit -m "feat: inner pages — remove gridlines, remove floating card hero, update palette"
+```
+
+---
+
+### Task 13: Final build, verify, and cleanup
+
+**Files:**
+- No new changes — verification only
+
+- [ ] **Step 1: Full production build**
+
+```bash
+hugo
+```
+Expected: 0 errors, 0 warnings about missing files.
+
+- [ ] **Step 2: Start dev server and do a full page walkthrough**
+
+```bash
+hugo server
+```
+
+Check each of the following at `http://localhost:1313`:
+
+| Page | What to verify |
+|---|---|
+| Home `/` | Nav glassmorphism, hero gradient + image, 4 service sections with correct colors + images + emojis, Who We Serve dark gray, Process dark navy, Contact glassmorphism form, FAQ white + lavender panel, footer dark gray |
+| `/services/individual-tax/` | No gridlines, no floating card, blue accent, correct colors |
+| `/services/business-tax/` | No gridlines, orange accent |
+| `/services/international-tax/` | No gridlines, green accent |
+| Any resource page `/resources/` | No gridlines, updated colors |
+
+- [ ] **Step 3: Check mobile (resize browser to 375px width)**
+
+Confirm:
+- Nav collapses to hamburger, mobile menu opens with dark gray bg
+- Hero goes single-column, brand name wraps cleanly
+- All 4 service sections go full-width (image panels hidden)
+- Full Office grid goes 2-column then 1-column at 480px
+- FAQ stacks vertically
+
+- [ ] **Step 4: Final commit**
+
+```bash
+git add -A
+git commit -m "feat: complete website redesign — VS Code palette, glassmorphism, 4 service sections, full-width layout"
+```

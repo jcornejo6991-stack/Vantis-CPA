@@ -7,7 +7,7 @@ slug: "expats"
 aliases:
   - /expertise/expats/
 subtitle: "Tax compliance and planning for Americans living and earning abroad."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-expats.jpg"
 sections:
   - title: "U.S. Expat Tax Filing and Planning"
     body: |

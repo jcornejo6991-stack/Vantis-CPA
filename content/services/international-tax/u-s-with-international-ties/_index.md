@@ -7,7 +7,7 @@ slug: "outbound"
 aliases:
   - /expertise/outbound/
 subtitle: "Tax compliance and planning for U.S. citizens, dual citizens, and green card holders with foreign financial ties."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-expats.jpg"
 sections:
   - title: "Country-Specific Engagements"
     body: |

@@ -3,6 +3,7 @@ title: "Full Suite"
 description: "Back-office support, bookkeeping, payroll, and sales tax services organized as one operating-services hub."
 layout: "service"
 subtitle: "Operational support for businesses that need the accounting infrastructure behind the tax work."
+heroImage: "/images/card-local.jpg"
 sections:
   - title: "The Operating Side of the Engagement"
     body: |

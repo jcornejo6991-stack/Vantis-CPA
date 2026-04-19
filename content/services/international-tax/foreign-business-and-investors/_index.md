@@ -7,7 +7,7 @@ slug: "inbound"
 aliases:
   - /expertise/inbound/
 subtitle: "Tax and accounting services for foreign businesses and investors entering or operating in the U.S."
-heroImage: "/images/globe-hero.jpg"
+heroImage: "/images/card-inbound.jpg"
 sections:
   - title: "Tax Support for Foreign Owners Entering the U.S."
     body: |
