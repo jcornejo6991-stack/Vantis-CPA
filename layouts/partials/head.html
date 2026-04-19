@@ -2,11 +2,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  {{ $faviconVersion := md5 (readFile "static/favicon.svg") }}
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="apple-touch-icon" href="/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="{{ printf "/favicon.svg?v=%s" $faviconVersion }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ printf "/favicon-32.png?v=%s" $faviconVersion }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ printf "/favicon.png?v=%s" $faviconVersion }}">
+  <link rel="shortcut icon" href="{{ printf "/favicon.ico?v=%s" $faviconVersion }}">
+  <link rel="icon" type="image/x-icon" href="{{ printf "/favicon.ico?v=%s" $faviconVersion }}">
 
   <title>{{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} | {{ .Site.Data.siteconfig.company.name }}{{ end }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
