@@ -22,7 +22,11 @@ sections:
       * State registration and compliance planning
       * Initial tax and filing calendar buildout
 
-      This is where the distinction between a true U.S. subsidiary and a direct foreign branch matters. If the business is operating directly in the U.S. through the foreign corporation, [Form 1120-F Filing Requirements for Foreign Corporations](/resources/form-1120-f/) may need to be evaluated instead of or alongside subsidiary planning.
+      This is where the distinction between a true U.S. subsidiary and a direct foreign branch matters. If the business is operating directly in the U.S. through the foreign corporation, Form 1120-F filing requirements may need to be evaluated instead of or alongside subsidiary planning.
+    cards:
+      - label: "Form 1120-F Filing Requirements for Foreign Corporations"
+        description: "When foreign corporations need to file in the U.S., what triggers the obligation, and what the return covers."
+        url: "/resources/form-1120-f/"
   - title: "What Ongoing Support Usually Includes"
     body: |
       After formation, the U.S. subsidiary usually needs:

@@ -201,13 +201,18 @@
         {{ end }}
       </div>
 
-      {{ if eq .Section "services" }}
+      {{ if and (eq .Section "services") (not .Params.hideChildLinks) }}
         {{ $serviceLinks := slice }}
+        {{ $serviceSectionTitle := "" }}
+        {{ $serviceSectionIntro := "" }}
         {{ if .IsSection }}
+          {{ $serviceSectionTitle = .Params.childSectionTitle | default "Explore This Service" }}
+          {{ $serviceSectionIntro = .Params.childSectionIntro | default "" }}
           {{ range .Pages.ByWeight }}
             {{ $serviceLinks = $serviceLinks | append . }}
           {{ end }}
         {{ else if .Parent }}
+          {{ $serviceSectionTitle = printf "More in %s" .Parent.Title }}
           {{ range .Parent.Pages.ByWeight }}
             {{ if ne .RelPermalink $.RelPermalink }}
               {{ $serviceLinks = $serviceLinks | append . }}
@@ -216,7 +221,8 @@
         {{ end }}
         {{ if $serviceLinks }}
         <div class="content-section">
-          <h3 class="section-title">{{ if .IsSection }}Explore This Service{{ else }}More in {{ .Parent.Title }}{{ end }}</h3>
+          <h3 class="section-title">{{ $serviceSectionTitle }}</h3>
+          {{ with $serviceSectionIntro }}<p class="section-intro">{{ . }}</p>{{ end }}
           <div class="cross-link-grid">
             {{ range $serviceLinks }}
             <a href="{{ .RelPermalink }}" class="cross-link-card">{{ .Params.nav_title | default .Title }}<span class="cross-link-arrow">&rarr;</span></a>
@@ -233,6 +239,27 @@
           </div>
         </div>
         {{ end }}
+      {{ end }}
+
+      {{ if .Params.showCoreServiceLinks }}
+        {{ $coreServiceLinks := slice
+          (dict "label" "Individual Tax" "url" "/services/individual-tax/")
+          (dict "label" "Business Tax" "url" "/services/business-tax/")
+          (dict "label" "International Tax" "url" "/services/international-tax/")
+          (dict "label" "Back Office" "url" "/services/full-suite/back-office/")
+          (dict "label" "Bookkeeping" "url" "/services/full-suite/bookkeeping/")
+          (dict "label" "Payroll" "url" "/services/full-suite/payroll/")
+          (dict "label" "Sales Tax" "url" "/services/full-suite/sales-tax/")
+        }}
+        <div class="content-section">
+          <h3 class="section-title">{{ .Params.coreServiceLinksTitle | default "Explore Other Services" }}</h3>
+          {{ with .Params.coreServiceLinksIntro }}<p class="section-intro">{{ . }}</p>{{ end }}
+          <div class="cross-link-grid">
+            {{ range $coreServiceLinks }}
+            <a href="{{ .url }}" class="cross-link-card">{{ .label }}<span class="cross-link-arrow">&rarr;</span></a>
+            {{ end }}
+          </div>
+        </div>
       {{ end }}
     </div>
   </div>

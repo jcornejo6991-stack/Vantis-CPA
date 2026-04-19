@@ -1,229 +1,171 @@
 {{ define "main" }}
-  <style>
-    :root {
-      --primary-dark: #062215;
-      --primary: #15482E;
-      --primary-darkest: #041f12;
-      --accent: #3a8b5f;
-      --text-dark: #0f2818;
-      --text-mid: #3d6b52;
-      --navy: #062215;
-      --navy-dark: #041f12;
-      --card-radius: 14px;
-      --nav-height: 68px;
-      --card-gap: 22px;
-    }
+<style>
+  :root {
+    --navy: #1a1a2e;
+    --accent: #4EC9B0;
+    --primary: #569CD6;
+  }
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background-color: #ffffff;
-      background-image:
-        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
-      background-size: 64px 20px;
-      background-attachment: fixed;
-      line-height: 1.6;
-      padding-top: var(--nav-height);
-      overflow-x: hidden;
-      -webkit-font-smoothing: antialiased;
-    }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #ffffff;
+    background-image:
+      linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+    background-size: 64px 20px;
+    background-attachment: fixed;
+    line-height: 1.6;
+    padding-top: 68px;
+    -webkit-font-smoothing: antialiased;
+  }
 
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
-      pointer-events: none;
-      z-index: 0;
-    }
+  /* ─── SINGLE FLOATING CARD ─── */
+  .services-landing {
+    margin: 52px 22px 22px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+  }
 
-    .hero a, .landing-grid-section a:not(.landing-card) { color: var(--primary); text-decoration: none; }
-    .hero a:hover, .landing-grid-section a:not(.landing-card):hover { color: var(--accent); text-decoration: underline; }
+  /* ─── HERO (dark navy) ─── */
+  .services-hero {
+    background: #1a1a2e;
+    padding: 64px 48px 52px;
+  }
+  .services-hero .section-label {
+    font-size: 11px; font-weight: 700;
+    letter-spacing: 3px; text-transform: uppercase;
+    color: #569CD6; margin-bottom: 10px; display: block;
+  }
+  .services-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 54px);
+    font-weight: 700; color: #fff;
+    margin: 0 0 16px; line-height: 1.15;
+  }
+  .services-hero p {
+    font-size: 18px; color: #b0b8c8;
+    margin: 0; max-width: 640px; line-height: 1.65;
+  }
 
-    .container {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
+  /* ─── CARDS BODY (white gradient) ─── */
+  .services-body {
+    background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
+    padding: 40px 48px 56px;
+  }
 
-    /* Nav handled by nav-css partial */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
 
-    /* ─── HERO ─── */
-    .hero {
-      background: radial-gradient(circle at center, #edeef7 0%, #fff 72%);
-      padding: 80px 48px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-      margin: 31px 25px 22px 22px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      opacity: 0.98;
-    }
+  /* ─── GLASS CARDS ─── */
+  .service-card {
+    display: block; text-decoration: none; color: inherit;
+    backdrop-filter: blur(12px) saturate(150%);
+    -webkit-backdrop-filter: blur(12px) saturate(150%);
+    background: rgba(255,255,255,0.75);
+    border: 1px solid rgba(26,26,46,0.08);
+    border-radius: 12px;
+    padding: 28px 28px 24px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(36px, 6vw, 64px);
-      font-weight: 700;
-      color: var(--primary);
-      margin: 0;
-      line-height: 1.15;
-      letter-spacing: -0.5px;
-    }
+  .service-card.individual   { border-top: 2px solid #569CD6; }
+  .service-card.individual   .card-label,
+  .service-card.individual   .card-cta { color: #569CD6; }
 
-    .hero-subtitle {
-      font-size: 17px;
-      color: var(--text-mid);
-      margin-top: 16px;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      font-weight: 400;
-      line-height: 1.6;
-    }
+  .service-card.business     { border-top: 2px solid #CE9178; }
+  .service-card.business     .card-label,
+  .service-card.business     .card-cta { color: #CE9178; }
 
-    /* ─── CARDS GRID ─── */
-    .landing-grid-section {
-      margin: 0 25px 22px 22px;
-      padding: 60px 0;
-      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
-      z-index: 1;
-      opacity: 0.98;
-    }
+  .service-card.international { border-top: 2px solid #4EC9B0; }
+  .service-card.international .card-label,
+  .service-card.international .card-cta { color: #4EC9B0; }
 
-    .landing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-    }
+  .service-card.fullsuite    { border-top: 2px solid #569CD6; }
+  .service-card.fullsuite    .card-label,
+  .service-card.fullsuite    .card-cta { color: #4a90b8; }
 
-    /* ─── CARD ─── */
-    .landing-card {
-      background: white;
-      border-radius: 14px;
-      padding: 24px 28px 24px 24px;
-      border: 1px solid #e8e8e8;
-      border-top: 4px solid var(--primary);
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-      transition: box-shadow 0.2s, transform 0.2s;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-      color: inherit;
-    }
+  .card-label {
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    margin-bottom: 12px; display: block;
+  }
+  .card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem; font-weight: 700;
+    color: #1a1a2e; margin-bottom: 12px; line-height: 1.2;
+  }
+  .card-desc {
+    font-size: 0.95rem; color: #4a5568;
+    line-height: 1.75; margin-bottom: 20px;
+  }
+  .card-cta { font-size: 14px; font-weight: 600; }
 
-    .landing-card:hover {
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      transform: translateY(-3px);
-      text-decoration: none;
-      color: inherit;
-    }
+  /* ─── FADE-UP ─── */
+  .fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; }
+  .fade-up.visible { opacity: 1; transform: none; }
+  .fade-up-d1 { transition-delay: 0.08s; }
+  .fade-up-d2 { transition-delay: 0.16s; }
+  .fade-up-d3 { transition-delay: 0.24s; }
+  .fade-up-d4 { transition-delay: 0.32s; }
 
-    .landing-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      font-weight: 600;
-      color: var(--primary);
-      margin: 0;
-    }
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 768px) {
+    .services-landing { margin: 16px 12px; }
+    .services-hero { padding: 48px 24px 40px; }
+    .services-body { padding: 32px 24px 40px; }
+    .services-grid { grid-template-columns: 1fr; }
+  }
+</style>
+{{ partial "nav-css.html" . }}
+{{ partial "footer-css.html" . }}
 
-    .landing-card-desc {
-      font-size: 15px;
-      color: #3d6b52;
-      line-height: 1.5;
-      margin: 0;
-      font-weight: 500;
-    }
+{{ partial "nav.html" . }}
 
-    .landing-card-cta {
-      font-size: 14px;
-      color: #15482E;
-      font-weight: 600;
-      margin-top: auto;
-      padding-top: 8px;
-    }
+<div class="services-landing">
 
-    .landing-card:hover .landing-card-cta {
-      color: var(--accent);
-    }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 768px) {
-      .hero {
-        padding: 48px 20px;
-        margin: 12px;
-        border-radius: 14px;
-      }
-
-      .landing-grid-section {
-        margin: 0 12px 12px;
-        border-radius: 14px;
-        padding: 40px 0;
-      }
-
-      .landing-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .hero {
-        padding: 48px 15px;
-        margin: 8px;
-        border-radius: 12px;
-      }
-
-      .landing-grid-section {
-        margin: 0 8px 8px;
-        border-radius: 12px;
-      }
-    }
-  </style>
-  {{ partial "nav-css.html" . }}
-  {{ partial "footer-css.html" . }}
-
-  {{ partial "nav.html" . }}
-
-  <!-- Hero -->
-  <section class="hero">
-    <h1>{{ .Title }}</h1>
-    <p class="hero-subtitle">{{ .Params.subtitle }}</p>
+  <section class="services-hero">
+    <span class="section-label fade-up">Our Services</span>
+    <h1 class="fade-up fade-up-d1">{{ .Title }}</h1>
+    <p class="fade-up fade-up-d2">{{ .Params.subtitle }}</p>
   </section>
 
-  <!-- Cards Grid -->
-  <section class="landing-grid-section">
-    <div class="container">
-      <div class="landing-grid">
-        {{ if .Params.dataSource }}
-          {{ $data := index .Site.Data .Params.dataSource }}
-          {{ range $data }}
-          <a href="{{ .url }}" class="landing-card">
-            <h3 class="landing-card-title">{{ .name }}</h3>
-            <p class="landing-card-desc">{{ .description }}</p>
-            <span class="landing-card-cta">Learn More &rarr;</span>
-          </a>
-          {{ end }}
-        {{ else }}
-          {{ range .Params.items }}
-          <a href="{{ .url }}" class="landing-card">
-            <h3 class="landing-card-title">{{ .label }}</h3>
-            <p class="landing-card-desc">{{ .description }}</p>
-            <span class="landing-card-cta">Learn More &rarr;</span>
-          </a>
-          {{ end }}
-        {{ end }}
-      </div>
+  <div class="services-body">
+    <div class="services-grid">
+      {{ range $i, $item := .Params.items }}
+      <a href="{{ $item.url }}" class="service-card {{ $item.theme }} fade-up fade-up-d{{ add $i 1 }}">
+        <span class="card-label">{{ $item.eyebrow }}</span>
+        <h3 class="card-title">{{ $item.label }}</h3>
+        <p class="card-desc">{{ $item.description }}</p>
+        <span class="card-cta">Learn More &rarr;</span>
+      </a>
+      {{ end }}
     </div>
-  </section>
+  </div>
 
-  {{ partial "footer.html" . }}
+</div>
 
+{{ partial "footer.html" . }}
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    });
+  }, { threshold: 0.06, rootMargin: '-36px 0px' });
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+</script>
 {{ end }}

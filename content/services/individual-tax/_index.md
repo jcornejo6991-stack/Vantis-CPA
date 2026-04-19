@@ -1,19 +1,21 @@
 ---
 title: "Individual Tax"
-description: "Individual tax returns and year-round tax planning for people with income from multiple sources — W-2, 1099, K-1, rental, equity compensation, and investment income."
+description: "Individual tax returns and year-round tax planning for people with income from multiple sources, including W-2, 1099, K-1, rental, equity compensation, and investment income."
 layout: "service"
-subtitle: "Individual tax returns and year-round planning, handled completely."
+subtitle: "Individual tax returns and year-round planning, with related trust and gift tax filings handled in the same overall picture."
 heroImage: "/images/card-local.jpg"
 aliases:
   - /expertise/individuals/
   - /expertise/local/
+hideChildLinks: true
+showCoreServiceLinks: true
+coreServiceLinksTitle: "Explore Other Services"
 sections:
-  - title: "Individual Tax Done Completely"
+  - title: "Individual Tax"
     body: |
-      For anyone whose income comes from more than one source, tax preparation and tax planning are the same job. The return reflects decisions made throughout the year — when income was recognized, which elections were made, which accounts were funded, and which transactions were timed deliberately. Filing the return is the end of a process, not the beginning. This service handles both sides: the year-round planning work that creates the outcome, and the preparation work that records it correctly.
-  - title: "Tax Preparation — What We Handle"
-    body: |
-      We prepare federal and state individual tax returns for straightforward and complex situations. Income from wages, self-employment, investments, rental properties, partnerships, trusts, and equity compensation all require different treatment, and we handle all of it.
+      For anyone with income from more than one source, tax preparation and tax planning are part of the same job. A return reflects decisions made throughout the year, from income timing and elections to account funding and major transactions. Filing is the final step, not the starting point. This service covers both the planning that shapes the result and the preparation that reports it correctly.
+
+      We prepare federal and state individual tax returns for both straightforward and complex situations, including wages, self-employment, investments, rental properties, partnerships, trusts, and equity compensation.
 
       Common forms and schedules include:
 
@@ -28,24 +30,25 @@ sections:
       * Active trader returns, wash sale analysis, and mark-to-market elections
       * Multi-state and nonresident returns
       * Trust and estate returns (Form 1041)
+      * Gift tax returns (Form 709)
       * Amended returns (Form 1040-X)
+  - title: "Trusts and Gift Tax"
+    body: |
+      Many families first come in through an individual return, then realize a separate trust return or gift tax return is part of the same tax picture. A trust may issue beneficiary K-1s that need to line up with the related Form 1040. A large gift, trust funding transaction, or spouse-splitting election may require Form 709 even when no current gift tax is due.
+
+      We treat those filings as connected work, not side issues. That keeps the reporting, basis tracking, exemption usage, and related individual returns coordinated.
     cards:
       - label: "Grantor and Non-Grantor Trust Returns"
-        description: "Form 1041 filings, beneficiary K-1s, DNI, and coordination between the trust return and the related individual return."
+        description: "Form 1041 filings, beneficiary K-1s, DNI analysis, and coordination with the related individual return."
         url: "/services/individual-tax/trusts/"
+      - label: "Gift Tax Returns"
+        description: "Form 709 preparation for reportable gifts, spouse gift-splitting elections, trust funding, and exemption tracking."
+        url: "/services/individual-tax/gift-tax/"
   - title: "Tax Planning Throughout the Year"
     body: |
-      Most individual tax decisions have timing components. Estimated quarterly payments need to be calibrated to actual income. Retirement contributions reduce taxable income when funded before year-end. Equity compensation — RSU vests, option exercises — creates income that can be managed with the right timing. Capital gains can be offset by harvesting losses across the same portfolio. Income and deductions can sometimes be shifted between years to take advantage of rate differences.
+      Most individual tax decisions have timing components. Estimated quarterly payments need to be calibrated to actual income. Retirement contributions reduce taxable income when funded before year-end. Equity compensation, including RSU vests and option exercises, creates income that can be managed with the right timing. Capital gains can be offset by harvesting losses across the same portfolio. Income and deductions can sometimes be shifted between years to take advantage of rate differences.
 
       None of this is automatic. It requires someone watching the full picture throughout the year and flagging decisions before the window closes. For individuals with meaningful tax complexity, the planning conversation needs to happen in September, not April.
-  - title: "Life Events That Change the Return"
-    body: |
-      Certain events reshape a return in ways most filers are not prepared for. Changing jobs mid-year affects withholding and may trigger estimated tax requirements. RSUs that vest create ordinary income that does not always match what the broker reports. Selling a home triggers gain calculations that depend on ownership period, use, and improvements made. Getting married or divorced changes filing status, income thresholds, and deduction strategies. Starting a rental property opens up depreciation, passive activity rules, and Schedule E reporting. Receiving an inheritance may involve basis step-ups or reporting requirements for foreign assets.
-
-      These situations rarely fix themselves on a standard return, and most require planning before the event, not just reporting after.
-  - title: "When Things Go Wrong"
-    body: |
-      IRS and state tax notices, prior year errors, and missed filings are stressful to handle alone. A notice does not always mean you owe more — many are automated responses to mismatched information that can be resolved with a clear written reply. Prior year returns can be amended when errors are discovered. If you are behind on filing, there are structured ways to come back into compliance without penalties compounding further. We handle the response and the resolution, not just the current year return.
   - title: "Who This Is For"
     body: |
       This service fits individuals and families with income from more than one source, anyone navigating a significant financial event, and people who want a CPA involved before the transactions happen, not just when it is time to report them. If your tax situation has gotten more complex than it used to be, or you are not confident the last few returns were handled correctly, this is a good place to start.
@@ -65,6 +68,8 @@ specializations:
   - label: "Multi-State and Nonresident Returns"
   - label: "Trust and Estate Returns (Form 1041)"
     url: "/services/individual-tax/trusts/"
+  - label: "Gift Tax Returns (Form 709)"
+    url: "/services/individual-tax/gift-tax/"
   - label: "Amended Returns (Form 1040-X)"
   - label: "Quarterly Estimated Tax Planning"
   - label: "Year-End Tax Planning"

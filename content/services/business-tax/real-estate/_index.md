@@ -50,7 +50,7 @@ sections:
       The foreign partner then uses that withholding on their own Form 1040-NR. In practice, that means the partnership return and the nonresident individual filing need to be coordinated. We handle the partnership-level withholding and reporting as well as the partner-side filing when both pieces are part of the engagement.
   - title: "Who This Is For"
     body: |
-      This page is for domestic real estate owners and investors: individuals and families with rental property, short-term rental operators, commercial and residential property owners, and partnerships holding investment real estate. If the main issue is foreign ownership of U.S. property, FIRPTA, Section 871(d), ADS depreciation for foreign property, or nonresident filing strategy, see the international real estate page.
+      This page is for domestic real estate owners and investors: individuals and families with rental property, short-term rental operators, commercial and residential property owners, and partnerships holding investment real estate. If the main issue is foreign ownership of U.S. property, FIRPTA, Section 871(d), or nonresident filing strategy, see the U.S. Real Estate Owned by Foreign Investors page under International Tax.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Schedule E Rental Income and Expense Reporting"

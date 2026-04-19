@@ -33,7 +33,14 @@ sections:
       * U.S. tax filing coordination for the investment structure
       * FIRPTA, estate tax, or restructuring review depending on the asset
 
-      If the investment is U.S. real estate, the structure also needs to be coordinated with [U.S. Estate Tax Planning for Foreign Nationals with U.S. Assets](/resources/estate-planning-blockers-foreign-nationals/) and, where relevant, FIRPTA and sale-planning issues.
+      If the investment is U.S. real estate, the structure also needs to be coordinated with estate tax planning and FIRPTA withholdings on sale.
+    cards:
+      - label: "Estate Planning for Foreign Nationals with U.S. Assets"
+        description: "Blocker structures, treaty analysis, and U.S. estate tax exposure for nonresident owners."
+        url: "/resources/estate-planning-blockers-foreign-nationals/"
+      - label: "FIRPTA Withholdings on Sale"
+        description: "Withholding certificates, gain reporting, buyer obligations, and sale-year 1040-NR filing."
+        url: "/resources/firpta-us-real-estate-sales/"
   - title: "Common Mistakes"
     body: |
       Common mistakes include assuming a U.S. LLC solves estate tax exposure, using the same structure for active operations and passive investment without review, treating owner inflows and outflows casually, and forming the entity before the acquisition terms and long-term exit plan are mapped out.

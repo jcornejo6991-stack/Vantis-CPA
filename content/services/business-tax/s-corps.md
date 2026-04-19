@@ -52,7 +52,7 @@ sections:
       We do more than prepare the return. We help clients decide whether the election should be made in the first place, model the wage-versus-distribution split, coordinate payroll, track shareholder basis, clean up owner transactions, and keep the annual filing aligned with the owner's individual return. If the current structure is already messy, we work backward through the books and fix it rather than just carrying the problems forward.
   - title: "Who This Is For"
     body: |
-      This page fits owner-operated businesses evaluating an S-corp election, existing S-corps that want the salary and basis work handled correctly, and business owners trying to decide whether the S-corp savings are real or just internet lore. If the business has multiple owners, flexible economics, or investor-style allocations, see the flowthrough page as well.
+      This page fits owner-operated businesses evaluating an S-corp election, existing S-corps that want the salary and basis work handled correctly, and business owners trying to decide whether the S-corp savings are real or just internet lore. If the business has multiple owners, flexible economics, or investor-style allocations, see the partnerships page as well.
 sectionTitle: "What We Handle"
 specializations:
   - label: "S-Corp Election Modeling and Timing"

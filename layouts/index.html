@@ -251,25 +251,30 @@
 
     /* ─── WHO WE WORK WITH (dark gray) ─── */
     .industries { padding: 80px 0; background: #1a1a2e; }
-    .industries .section-label { color: #569CD6; }
+    .industries .container { max-width: 1400px; padding: 0; }
+    .industries .section-label { color: #CE9178; }
     .industries .section-heading { color: #e8e8e8; }
     .industries .section-subheading { color: #b0b8c8; }
-    .industries-header { margin-bottom: 48px; }
+    .industries-header { max-width: 1200px; margin: 0 auto 48px; padding: 0 32px; }
+    .client-grid-wrap { padding: 0 32px; }
     .client-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
-      gap: 1px; background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.07); border-radius: 8px; overflow: hidden;
+      gap: 16px;
     }
     .client-tile {
-      background: #1a1a2e;
+      backdrop-filter: blur(12px) saturate(150%);
+      -webkit-backdrop-filter: blur(12px) saturate(150%);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-top: 2px solid rgba(206,145,120,0.55);
+      border-radius: 10px;
       padding: 28px 24px;
       display: flex; flex-direction: column; gap: 10px;
       min-height: 100%;
-      border-top: 2px solid rgba(86,156,214,0.28);
     }
     .client-category {
       font-size: 10px; font-weight: 700; letter-spacing: 0.12em;
-      text-transform: uppercase; color: #569CD6;
+      text-transform: uppercase; color: #CE9178;
     }
     .client-name {
       font-family: 'Playfair Display', serif;
@@ -278,52 +283,52 @@
     }
     .client-desc { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin: 0; }
 
-    /* ─── PROCESS + WHAT TO BRING (dark navy) ─── */
-    .process-bring-section { padding: 80px 0; background: #0d1117; }
-    .process-bring-section .section-label { color: #4EC9B0; }
-    .process-bring-section .section-heading { color: #e8e8e8; }
-    .process-bring-section .section-subheading { color: #b0b8c8; }
+    /* ─── PROCESS + WHAT TO BRING (white, light blue highlights — mirrors Individual Tax) ─── */
+    .process-bring-section { padding: 80px 0; background: #ffffff; }
+    .process-bring-section .section-label { color: #569CD6; }
+    .process-bring-section .section-heading { color: #1a1a2e; }
+    .process-bring-section .section-subheading { color: #4a5568; }
     .process-bring-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
     .process-steps { display: flex; flex-direction: column; }
     .process-step { display: flex; gap: 18px; align-items: flex-start; }
-    .process-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .process-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding-top: 36px; }
     .process-step-badge {
       width: 40px; height: 40px; border-radius: 50%;
-      background: #4EC9B0; color: #0d1117;
+      background: #569CD6; color: #fff;
       font-size: 12px; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
     .process-step-connector {
       width: 2px; flex: 1; min-height: 28px;
-      background: repeating-linear-gradient(to bottom, rgba(78,201,176,0.4) 0px, rgba(78,201,176,0.4) 5px, transparent 5px, transparent 10px);
+      background: repeating-linear-gradient(to bottom, rgba(86,156,214,0.4) 0px, rgba(86,156,214,0.4) 5px, transparent 5px, transparent 10px);
       margin: 5px 0;
     }
     .process-step-content { padding-bottom: 24px; padding-top: 8px; }
     .process-step:last-child .process-step-content { padding-bottom: 0; }
     .process-step-pill {
       display: inline-block; font-size: 10.5px; font-weight: 600;
-      color: #4EC9B0; background: rgba(78,201,176,0.1);
+      color: #569CD6; background: rgba(86,156,214,0.1);
       border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; letter-spacing: 0.04em;
     }
-    .process-step-title { font-size: 16px; font-weight: 700; color: #e8e8e8; margin-bottom: 5px; }
-    .process-step-desc { font-size: 13.5px; color: #b0b8c8; line-height: 1.6; }
-    .bring-intro { font-size: 13.5px; color: #b0b8c8; line-height: 1.6; margin-top: 8px; margin-bottom: 24px; }
+    .process-step-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 5px; }
+    .process-step-desc { font-size: 13.5px; color: #4a5568; line-height: 1.6; }
+    .bring-intro { font-size: 13.5px; color: #4a5568; line-height: 1.6; margin-top: 8px; margin-bottom: 24px; }
     .bring-list { display: flex; flex-direction: column; gap: 10px; }
     .bring-item {
       display: flex; align-items: center; gap: 12px;
       padding: 12px 16px;
-      border-left: 2px solid #4EC9B0;
-      background: rgba(78,201,176,0.04);
+      border-left: 2px solid #569CD6;
+      background: rgba(86,156,214,0.04);
       border-radius: 0 6px 6px 0;
     }
     .bring-check {
       width: 22px; height: 22px; border-radius: 50%;
-      background: #4EC9B0; color: #0d1117;
+      background: #569CD6; color: #fff;
       font-size: 12px; display: flex;
       align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700;
     }
-    .bring-text { font-size: 13.5px; color: #e8e8e8; font-weight: 400; line-height: 1.3; }
+    .bring-text { font-size: 13.5px; color: #1a1a2e; font-weight: 400; line-height: 1.3; }
 
     /* ─── CONTACT (dark gray, glassmorphism) ─── */
     .contact { padding: 80px 0; background: #1a1a2e; }
@@ -456,6 +461,44 @@
       .full-office-item:last-child { border-bottom: none; }
       .client-tile { padding: 24px 20px; }
     }
+
+    /* WHO WE ARE (mirrors International Tax) */
+    .who-we-are {
+      background: #0d1117;
+      padding: 80px 0;
+    }
+    .who-we-are-inner {
+      text-align: left;
+    }
+    .who-we-are .section-label { color: #4EC9B0; }
+    .who-we-are .section-heading {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      color: #e8e8e8;
+      margin-bottom: 28px;
+      font-style: italic;
+    }
+    .who-we-are-body {
+      color: #b0b8c8;
+      font-size: 1.05rem;
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    .who-we-are-callout {
+      border-left: 2px solid #4EC9B0;
+      background: rgba(78,201,176,0.06);
+      border-radius: 0 6px 6px 0;
+      padding: 16px 20px;
+    }
+    .who-we-are-callout p {
+      color: #4EC9B0;
+      font-size: 1rem;
+      font-style: italic;
+      margin: 0;
+    }
+    @media (max-width: 768px) {
+      .who-we-are { padding: 56px 0; }
+      .who-we-are-body { font-size: 0.97rem; }
+    }
   </style>
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
@@ -527,15 +570,15 @@
 <section class="svc-section individual-tax" id="individual-tax" aria-labelledby="individual-tax-heading">
   <div class="svc-layout">
     <div class="svc-content fade-up">
-      <p class="section-label">👤 Individual Tax</p>
+      <p class="section-label">Tax Compliance and Planning</p>
       <h2 class="section-heading" id="individual-tax-heading">Individual Tax</h2>
       <p class="section-subheading">Tax returns and year-round planning for individuals with income from W-2, 1099, K-1, investments, and rental properties.</p>
       <ul class="svc-list">
-        <li><span>📋</span> 1040 Preparation</li>
-        <li><span>📋</span> Quarterly Estimates</li>
-        <li><span>📋</span> State Returns</li>
-        <li><span>📋</span> IRS Notices and Amended Returns</li>
-        <li><span>📋</span> Year-Round Tax Planning</li>
+        <li><span>👤</span> 1040 Preparation</li>
+        <li><span>👤</span> Quarterly Estimates</li>
+        <li><span>👤</span> State Returns</li>
+        <li><span>👤</span> IRS Notices and Amended Returns</li>
+        <li><span>👤</span> Year-Round Tax Planning</li>
       </ul>
       <a href="/services/individual-tax/" class="svc-learn-more">Learn More →</a>
     </div>
@@ -554,7 +597,7 @@
       <img src="/images/card-founders.jpg" alt="" loading="lazy">
     </div>
     <div class="svc-content fade-up">
-      <p class="section-label">🏢 Business Tax</p>
+      <p class="section-label">Tax Compliance and Planning</p>
       <h2 class="section-heading" id="business-tax-heading">Business Tax</h2>
       <p class="section-subheading">Business tax returns, entity structure, and year-round tax planning for sole proprietors, partnerships, S-corps, and C-corps.</p>
       <ul class="svc-list">
@@ -576,7 +619,7 @@
   <div class="intl-watermark" aria-hidden="true">🌐</div>
   <div class="svc-layout">
     <div class="svc-content fade-up">
-      <p class="section-label">🌐 International Tax</p>
+      <p class="section-label">Tax Compliance and Planning</p>
       <h2 class="section-heading" id="international-tax-heading">International Tax</h2>
       <p class="section-subheading">Cross-border tax is where the code gets technical and the penalties get serious. We structure it to minimize what you owe worldwide.</p>
       <ul class="svc-list">
@@ -600,15 +643,15 @@
 <section class="full-office" id="full-office" aria-labelledby="full-office-heading">
   <div class="container">
     <div class="fade-up">
-      <p class="section-label">🗂️ Full Office</p>
-      <h2 class="section-heading" id="full-office-heading">Full Office</h2>
-      <p class="section-subheading">Everything your business needs beyond tax — handled under one roof.</p>
+      <p class="section-label">Beyond the Tax Return</p>
+      <h2 class="section-heading" id="full-office-heading">Full Suite</h2>
+      <p class="section-subheading">Everything your business needs beyond tax, handled under one roof.</p>
     </div>
     <div class="full-office-grid">
       <div class="full-office-item fade-up fade-up-d1">
         <div class="full-office-item-title">📚 Bookkeeping</div>
         <p class="full-office-item-desc">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management.</p>
-        <p class="full-office-item-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
+        <p class="full-office-item-tools">QuickBooks · Financial Statements</p>
         <a href="/services/full-suite/bookkeeping" class="full-office-learn-more">Learn More →</a>
       </div>
       <div class="full-office-item fade-up fade-up-d2">
@@ -639,40 +682,56 @@
 <section class="industries" id="industries" aria-labelledby="industries-heading">
   <div class="container">
     <div class="industries-header">
-      <p class="section-label fade-up">🤝 Who We Work With</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Who We Work With</h2>
+      <p class="section-label fade-up">Who We Work With</p>
+      <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">From Local to Global</h2>
       <p class="section-subheading fade-up fade-up-d2">We typically work with people and businesses dealing with more moving parts than a standard return.</p>
     </div>
-    <div class="client-grid">
+    <div class="client-grid-wrap"><div class="client-grid">
       <div class="client-tile fade-up fade-up-d1">
-        <span class="client-category">Families</span>
+        <span class="client-category">Individual Tax</span>
         <h3 class="client-name">Individuals &amp; Families</h3>
-        <p class="client-desc">Tax preparation for individuals and families with W-2s, 1099s, K-1s, rental income, equity compensation, and investment complexity.</p>
+        <p class="client-desc">Tax preparation and year-round planning for individuals with W-2s, 1099s, K-1s, rental income, equity compensation, and investments.</p>
       </div>
       <div class="client-tile fade-up fade-up-d2">
-        <span class="client-category">Cross-Border</span>
-        <h3 class="client-name">U.S. Individuals with International Ties</h3>
-        <p class="client-desc">Tax compliance and planning for citizens, green card holders, and dual residents with foreign accounts, foreign companies, and cross-border complexity.</p>
+        <span class="client-category">Business Tax</span>
+        <h3 class="client-name">Local and Online Businesses</h3>
+        <p class="client-desc">Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital services.</p>
       </div>
       <div class="client-tile fade-up fade-up-d3">
-        <span class="client-category">Business Owners</span>
-        <h3 class="client-name">Local and Online Businesses</h3>
-        <p class="client-desc">Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online businesses and digital service companies.</p>
+        <span class="client-category">Business Tax</span>
+        <h3 class="client-name">Real Estate Owners</h3>
+        <p class="client-desc">Tax planning and compliance for residential and commercial property owners, short-term rental operators, and real estate partnership investors.</p>
       </div>
       <div class="client-tile fade-up fade-up-d4">
-        <span class="client-category">Inbound U.S.</span>
-        <h3 class="client-name">Foreign Businesses &amp; Investors</h3>
-        <p class="client-desc">Comprehensive services to help foreign businesses and investors enter and operate in the U.S. efficiently and compliantly.</p>
+        <span class="client-category">International Tax</span>
+        <h3 class="client-name">U.S. Individuals with International Ties</h3>
+        <p class="client-desc">Tax compliance and planning for U.S. citizens, green card holders, and dual residents with foreign accounts, companies, and cross-border complexity.</p>
       </div>
       <div class="client-tile fade-up fade-up-d5">
-        <span class="client-category">Real Estate</span>
-        <h3 class="client-name">Real Estate Owners</h3>
-        <p class="client-desc">Tax planning for property owners, short-term rental operators, and investors in real estate partnerships and funds.</p>
+        <span class="client-category">International Tax</span>
+        <h3 class="client-name">Foreign Businesses &amp; Investors</h3>
+        <p class="client-desc">Tax, compliance, and structuring services for foreign businesses and investors entering, operating, or investing in the U.S. market.</p>
       </div>
       <div class="client-tile fade-up fade-up-d6">
-        <span class="client-category">Americans Abroad</span>
+        <span class="client-category">International Tax</span>
         <h3 class="client-name">U.S. Expats Abroad</h3>
-        <p class="client-desc">Remote compliance support bridging the gap between the U.S. tax system and international residency requirements.</p>
+        <p class="client-desc">U.S. tax compliance for Americans living abroad, covering foreign income exclusions, FBAR, FATCA, and treaty-based planning.</p>
+      </div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════ WHO WE ARE ═══════════════════ -->
+</div>
+<div class="card-float">
+<section class="who-we-are" id="who-we-are" aria-labelledby="who-we-are-heading">
+  <div class="container">
+    <div class="who-we-are-inner">
+      <p class="section-label fade-up fade-up-d1">Who We Are</p>
+      <h2 class="section-heading fade-up fade-up-d2" id="who-we-are-heading">"The playbook exists. Most people just never find it."</h2>
+      <p class="who-we-are-body fade-up fade-up-d3">A licensed CPA based in Florida, with a career that started at boutique international tax firms specializing in cross-border structures, multi-country filings, and protecting wealth across jurisdictions. From there, a move to a firm serving high-profile clients in tech, where the planning strategies that most people never get exposure to became second nature. What came out of both is a simple belief: the tax code has more room in it than most people realize. This firm exists to find that room.</p>
+      <div class="who-we-are-callout fade-up fade-up-d4">
+        <p>The code works the same for everyone. Let's make it work for you.</p>
       </div>
     </div>
   </div>
@@ -687,7 +746,7 @@
 
       <!-- Our Process -->
       <div>
-        <p class="section-label fade-up">🔄 How It Works</p>
+        <p class="section-label fade-up">How It Works</p>
         <h2 class="section-heading fade-up fade-up-d1" id="process-heading">Our Process</h2>
         <p class="section-subheading fade-up fade-up-d2">Three straightforward steps from your first message to a fully managed tax strategy.</p>
 
@@ -731,7 +790,7 @@
 
       <!-- What to Bring -->
       <div class="fade-up fade-up-d2">
-        <p class="section-label">📋 First Meeting Checklist</p>
+        <p class="section-label">First Meeting Checklist</p>
         <h2 class="section-heading fade-up-d1">What to Bring</h2>
         <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
 
@@ -842,7 +901,7 @@
   <div class="faq-wrapper">
     <div class="faq-left">
       <div class="faq-accent-bar"></div>
-      <h2 class="faq-title">💬 Your Questions Answered</h2>
+      <h2 class="faq-title">Your Questions Answered</h2>
       <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
     </div>
 

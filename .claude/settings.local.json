@@ -109,7 +109,8 @@
       "Bash(python -c \"from PIL import Image, ImageDraw, ImageFont; print\\('pillow ok'\\)\")",
       "Bash(python -c ':*)",
       "Bash(xargs ls:*)",
-      "Bash(hugo --quiet)"
+      "Bash(hugo --quiet)",
+      "Bash(xargs head *)"
     ]
   }
 }

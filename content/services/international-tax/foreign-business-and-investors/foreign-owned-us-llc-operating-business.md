@@ -34,7 +34,11 @@ sections:
       * State filing review where applicable
       * Year-end tax planning and structural review
 
-      If the structure involves a foreign corporation, treaty questions, or effectively connected income exposure, we also review whether [Form 1120-F Filing Requirements for Foreign Corporations](/resources/form-1120-f/) need to be analyzed alongside the LLC filing work.
+      If the structure involves a foreign corporation, treaty questions, or effectively connected income exposure, we also review whether Form 1120-F filing requirements need to be analyzed alongside the LLC filing work.
+    cards:
+      - label: "Form 1120-F Filing Requirements for Foreign Corporations"
+        description: "When foreign corporations need to file in the U.S., what triggers the obligation, and what the return covers."
+        url: "/resources/form-1120-f/"
   - title: "Common Mistakes"
     body: |
       The most common problems are forming the LLC without deciding how it should be classified, moving money between the owner and the company without records, assuming a disregarded entity means no U.S. filing, and waiting until tax season to reconstruct the books. Foreign-owned LLCs are manageable, but only if the structure and the accounting are handled deliberately.

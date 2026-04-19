@@ -11,10 +11,7 @@ heroImage: "/images/card-inbound.jpg"
 sections:
   - title: "Tax Support for Foreign Owners Entering the U.S."
     body: |
-      Foreign owners entering the U.S. often need help with much more than a tax return. Entity setup, Form 5472 exposure, EIN and ITIN applications, U.S. bank setup support, ongoing filings, and overall structure all need to be handled in a way that fits the business and the owner. We help foreign businesses and investors get established in the U.S. with cleaner tax and administrative foundations.
-  - title: "Direct Offerings by Structure"
-    body: |
-      Some inbound clients consistently need the same setup and compliance stack. We break those situations into focused offerings so the structure, filings, and monthly support are easier to understand up front.
+      Foreign owners entering the U.S. often need help with much more than a tax return. Entity setup, Form 5472 exposure, EIN and ITIN applications, U.S. bank setup support, ongoing filings, and overall structure all need to be handled in a way that fits the business and the owner. We work with three common structures, each with its own focused offering:
     cards:
       - label: "Foreign-Owned U.S. LLCs for Operating Businesses"
         url: "/services/international-tax/foreign-business-and-investors/foreign-owned-us-llc-operating-business/"
@@ -27,7 +24,7 @@ sections:
         description: "For foreign parent companies opening U.S. operations through a U.S. subsidiary structure."
   - title: "What Foreign Owners Usually Need"
     body: |
-      Common inbound needs include:
+      We can help at formation and stay involved through ongoing operations. Common needs include:
 
       * U.S. entity formation and structure analysis
       * Form 5472 and related-party disclosure compliance
@@ -38,10 +35,7 @@ sections:
       * Inbound investment structuring
       * Back-office support for setup, renewals, and filings
 
-      The right setup reduces later cleanup, keeps compliance manageable, and makes U.S. operations easier to run.
-  - title: "From Entry Through Ongoing Operations"
-    body: |
-      We can help at formation and stay involved through ongoing operations. That includes annual filings, related-party reporting, renewals, tax return support, and cleanup if the business was formed before the structure was fully thought through. Good inbound planning is about making the U.S. side workable year after year.
+      Good inbound planning is about making the U.S. side workable year after year, not just at formation.
   - title: "Who This Is For"
     body: |
       This expertise area fits foreign nationals opening U.S. LLCs, foreign-owned U.S. subsidiaries, inbound real estate investors, and non-U.S. owners who need both tax and practical setup support in the U.S.

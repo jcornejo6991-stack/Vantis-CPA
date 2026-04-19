@@ -164,7 +164,7 @@
     .article-back {
       display: inline-block;
       font-size: 14px;
-      color: var(--article-green);
+      color: #1a1a2e;
       font-weight: 500;
       margin-bottom: 28px;
       text-decoration: none;
@@ -172,7 +172,7 @@
     }
 
     .article-back:hover {
-      color: var(--article-green);
+      color: #1a1a2e;
       text-decoration: underline;
     }
 
@@ -223,15 +223,22 @@
       color: var(--article-green);
     }
 
+    .article-content .article-back,
+    .article-content .article-back:hover {
+      color: #1a1a2e;
+    }
+
     .strategy-snapshot {
-      background: rgba(255,244,240,0.52);
-      border: 1px solid rgba(206,145,120,0.28);
-      border-radius: 18px;
-      padding: 24px 24px 22px;
-      margin: 0 0 28px;
-      box-shadow: 0 22px 42px rgba(13,17,23,0.12), inset 0 1px 0 rgba(255,255,255,0.58);
-      backdrop-filter: blur(22px) saturate(185%);
-      -webkit-backdrop-filter: blur(22px) saturate(185%);
+      background: transparent;
+      border: none;
+      border-top: 1px solid rgba(13,17,23,0.12);
+      border-bottom: 1px solid rgba(13,17,23,0.08);
+      border-radius: 0;
+      padding: 24px 0 26px;
+      margin: 0 0 32px;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .strategy-snapshot-kicker {
@@ -250,7 +257,7 @@
       content: "";
       width: 24px;
       height: 1px;
-      background: rgba(206,145,120,0.4);
+      background: rgba(206,145,120,0.32);
     }
 
     .strategy-snapshot h2 {
@@ -268,16 +275,24 @@
     .strategy-snapshot-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
+      gap: 24px;
+      margin-top: 18px;
+      border-top: none;
+      padding: 0;
     }
 
     .strategy-snapshot-item {
-      background: rgba(255,248,244,0.62);
-      border-radius: 14px;
-      padding: 16px 16px 14px;
-      border: 1px solid rgba(206,145,120,0.18);
-      backdrop-filter: blur(14px) saturate(145%);
-      -webkit-backdrop-filter: blur(14px) saturate(145%);
+      background: transparent;
+      border: none;
+      border-right: none;
+      border-radius: 0;
+      padding: 0;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+    }
+
+    .strategy-snapshot-item:last-child {
+      border-right: none;
     }
 
     .strategy-snapshot-item-label {
@@ -300,23 +315,22 @@
 
     .article-callout {
       margin: 28px 0;
-      padding: 20px 22px;
-      border-radius: 16px;
-      border: 1px solid rgba(255,255,255,0.74);
-      background: rgba(255,255,255,0.34);
-      box-shadow: 0 22px 42px rgba(13,17,23,0.12), inset 0 1px 0 rgba(255,255,255,0.58);
-      backdrop-filter: blur(22px) saturate(185%);
-      -webkit-backdrop-filter: blur(22px) saturate(185%);
+      padding: 4px 0 4px 18px;
+      border: none;
+      border-left: 3px solid rgba(206,145,120,0.55);
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
     }
 
     .article-callout[data-tone="warning"] {
-      background: rgba(255,244,240,0.42);
-      border-color: rgba(255,255,255,0.74);
+      border-left-color: rgba(206,145,120,0.55);
     }
 
     .article-callout[data-tone="opportunity"] {
-      background: rgba(240,255,250,0.4);
-      border-color: rgba(255,255,255,0.74);
+      border-left-color: rgba(86,156,214,0.5);
     }
 
     .article-callout[data-tone="comparison"] {
@@ -337,6 +351,10 @@
 
     .article-callout[data-tone="warning"] .article-callout-title {
       color: var(--article-orange);
+    }
+
+    .article-callout[data-tone="opportunity"] .article-callout-title {
+      color: var(--article-blue);
     }
 
     .article-callout p:last-child,
@@ -607,7 +625,7 @@
       background: rgba(255,255,255,0.34);
       border-radius: 10px;
       border: 1px solid rgba(255,255,255,0.74);
-      border-top: 3px solid var(--article-orange);
+      border-top: 3px solid #1a1a2e;
       padding: 18px 20px;
       box-shadow: 0 22px 42px rgba(13,17,23,0.12), inset 0 1px 0 rgba(255,255,255,0.58);
       backdrop-filter: blur(22px) saturate(185%);
@@ -617,7 +635,7 @@
     .bottom-card h4 {
       font-size: 11px;
       font-weight: 700;
-      color: #1a1a2e;
+      color: var(--article-blue);
       text-transform: uppercase;
       letter-spacing: 1px;
       margin: 0 0 12px;
@@ -626,7 +644,7 @@
     .bottom-link {
       display: block;
       font-size: 14px;
-      color: var(--article-orange);
+      color: #1a1a2e;
       font-weight: 500;
       padding: 5px 0;
       border-bottom: 1px solid #f0f0f0;
@@ -657,8 +675,15 @@
         padding: 24px 24px 32px;
       }
 
-       .strategy-snapshot-grid {
+      .strategy-snapshot-grid {
         grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .strategy-snapshot-item {
+        border-right: none;
+        border-top: none;
+        padding: 0;
       }
     }
 
@@ -708,9 +733,12 @@
         padding: 28px 20px 24px;
       }
 
-      .strategy-snapshot,
-      .article-callout {
+      .strategy-snapshot {
         padding: 18px;
+      }
+
+      .article-callout {
+        padding: 2px 0 2px 16px;
       }
 
       .article-pullquote {

@@ -1,19 +1,21 @@
 ---
 title: "Business Tax"
-description: "Business tax returns, entity structure, and year-round tax planning for owner-operated businesses — partnerships, S-corps, C-corps, and sole proprietors."
+description: "Business tax returns, entity structure, and year-round tax planning for owner-operated businesses, including partnerships, S-corps, C-corps, and sole proprietors."
 layout: "service"
 subtitle: "Business tax returns, entity structure, and year-round tax management for owner-operated businesses."
 heroImage: "/images/card-founders.jpg"
 aliases:
   - /expertise/business/
   - /expertise/founders/
+hideChildLinks: true
+showCoreServiceLinks: true
+coreServiceLinksTitle: "Explore Other Services"
 sections:
-  - title: "Business Tax as a Complete Engagement"
+  - title: "Business Tax"
     body: |
-      Most business owners pay more in tax than necessary — not because they are missing obscure loopholes, but because structure, filing, and planning are handled separately or not handled at all. The entity structure determines how self-employment tax applies to the owner's earnings. The filing reflects decisions made throughout the year. The planning work — compensation strategy, retirement contributions, income timing, depreciation elections — only produces a result if someone is actually executing it. This service handles all three: the structural decisions, the planning work, and the returns that record the outcome.
-  - title: "Business Tax Returns"
-    body: |
-      We prepare business tax returns for entities at every stage. That includes annual income tax returns, extensions, quarterly estimates, and catch-up work when prior years have been missed or filed incorrectly.
+      Most business owners pay more in tax than necessary, not because they are missing obscure loopholes, but because structure, filing, and planning are handled separately. Entity choice affects self-employment tax, owner compensation, and how income flows through to the return. Filing reflects decisions made throughout the year, and planning only matters if someone is actually executing it. This service handles the structure, the planning, and the returns together.
+
+      We prepare business tax returns for entities at every stage, including annual income tax returns, extensions, quarterly estimates, and catch-up work when prior years were missed or filed incorrectly.
 
       Common filings include:
 
@@ -23,39 +25,38 @@ sections:
       * Schedule C for sole proprietors and single-member LLCs
       * State business income tax returns
       * Extension filings and quarterly estimated tax payment support
-  - title: "Entity Structure and Tax Planning"
+  - title: "Related Business Tax Pages"
     body: |
-      The entity structure is not a one-time decision. As income grows, the case for an S-corp election changes. As the business evolves, ownership structure, compensation strategy, and distribution planning all affect what the owner keeps. We review entity structure regularly, model the tax impact of elections before they are made, and help implement changes through the appropriate filings and payroll adjustments.
-
-      Key planning areas include:
-
-      * Entity type analysis and S-corp election strategy
-      * Reasonable compensation planning for S-corp owners
-      * Owner distribution and compensation structure
-      * Retirement plan strategy (SEP-IRA, Solo 401(k), defined benefit)
-      * Depreciation and cost recovery planning
-      * Income and deduction timing across years
+      Some businesses need a deeper look at entity structure, multi-owner partnership issues, or real estate-specific tax strategy. These pages go further on the situations that most often drive the tax result.
     cards:
       - label: "S-Corporations"
         description: "Wages, self-employment tax savings, basis, ownership limits, and when the election is a bad fit."
         url: "/services/business-tax/s-corps/"
-      - label: "Flowthrough Entities"
-        description: "Partnerships, LLCs, LPs, LLPs, LLLPs, allocations, basis, and multi-owner tax planning."
-        url: "/services/business-tax/flowthroughs/"
+      - label: "Partnerships"
+        description: "LLCs, LPs, LLPs, LLLPs, allocations, basis, and multi-owner tax planning."
+        url: "/services/business-tax/partnerships/"
+      - label: "C-Corporations"
+        description: "Form 1120 filing, owner compensation, retained earnings, distributions, and double-tax planning."
+        url: "/services/business-tax/c-corporations/"
+      - label: "Schedule C"
+        description: "Sole proprietors, single-member LLCs, deductions, self-employment tax, and entity-fit review."
+        url: "/services/business-tax/schedule-c/"
       - label: "Real Estate"
         description: "Domestic real estate tax planning for rental owners, partnerships, REPS, short-term rentals, and 1031s."
         url: "/services/business-tax/real-estate/"
-  - title: "Year-Round Tax Management"
+  - title: "Entity Structure and Tax Planning"
     body: |
-      Business taxes are not a once-a-year event. Quarterly estimated payments need to be calibrated to actual income. Depreciation elections need to be made before year-end. Multi-year projections help owners understand where they are heading and make adjustments before the window closes. For businesses that are growing, the tax structure that worked at one revenue level may not be optimal at the next.
+      Business tax planning works best when structure and year-round decisions are handled together. As income grows, the right entity, the right owner-pay strategy, and the right timing decisions can all change.
 
-      We provide the year-round oversight that keeps the business current: quarterly planning conversations, updated projections when income changes significantly, and proactive flagging of decisions that need to happen before the return is filed.
-  - title: "Notices, Catch-Up, and Problem Resolution"
-    body: |
-      Business tax notices require a faster response than personal ones — the amounts are larger and the issues compound quickly. We handle IRS and state business tax notices, amended returns for prior years, and catch-up work for businesses that are behind on filings. If prior year returns were not filed correctly — or not filed at all — we work through the backlog systematically and get the business current.
+      Our work in this area focuses on:
+
+      * Entity structure review
+      * Tax planning around owner compensation, distributions, and timing
+      * Quarterly estimate calculations and planning discussions
+      * Year-round tax planning as income and business needs change
   - title: "Who This Is For"
     body: |
-      This service fits sole proprietors, single-member LLCs, S-corporations, partnerships, and C-corporations that want a CPA involved year-round, not just at filing time. It is particularly well-suited for owner-operated businesses where the owner's personal and business tax situations are connected — the business return feeds the personal return, and the planning work needs to account for both.
+      This service fits sole proprietors, single-member LLCs, S-corporations, partnerships, and C-corporations that want a CPA involved year-round, not just at filing time. It is particularly well-suited for owner-operated businesses where the owner's personal and business tax situations are connected. The business return feeds the personal return, and the planning work needs to account for both.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Business Returns - Form 1065 (Partnership)"
