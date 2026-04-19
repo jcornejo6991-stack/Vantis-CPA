@@ -5,7 +5,10 @@ layout: "service"
 aliases:
   - /services/back-office/
 subtitle: "Entity setup, renewals, paperwork, and admin support that keep your business moving."
-heroImage: "/images/card-local.jpg"
+heroImage: "/images/full-suite-hero-paperwork.jpg"
+heroImagePosition: "center center"
+heroImageSize: "cover"
+heroImageScale: 1
 sections:
   - title: "Entity Setup, Renewals, and Administrative Support"
     body: |
@@ -14,7 +17,7 @@ sections:
     body: |
       We handle the practical setup and admin work that gets a business started and keeps it in good standing:
 
-      * LLC formation in Florida, Texas, and Wyoming
+      * LLC formation in Florida and Wyoming
       * Entity renewals and annual report filings
       * S-corp and C-corp elections
       * EIN and ITIN applications
@@ -34,7 +37,6 @@ sections:
 sectionTitle: "What We Help With"
 specializations:
   - label: "Florida LLC Formation and Operating Agreements"
-  - label: "Texas LLC Formation and Operating Agreements"
   - label: "Wyoming LLC Formation and Operating Agreements"
   - label: "Entity Renewals and Annual Report Filings"
   - label: "S-Corp and C-Corp Elections"

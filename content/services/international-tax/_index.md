@@ -57,16 +57,22 @@ sections:
       * International tax planning for U.S. businesses expanding abroad
 
       This side of the work is about keeping U.S. reporting complete while making sure foreign activity does not create avoidable U.S. tax problems.
-  - title: "Operations Support for Cross-Border Clients"
+  - title: "Full Suite for Cross-Border Clients"
     body: |
-      International clients often need more than just tax filings. Foreign investors and business owners entering the U.S. frequently need help setting up the operational side before the first return is ever due. We offer back office and bookkeeping support alongside the tax work so the setup, the books, and the filings all stay in one place.
+      International clients often need more than just tax filings. Foreign investors and business owners entering the U.S. frequently need operational support before the first return is ever due. Full Suite covers the services that keep the entity, the books, payroll, and the filing infrastructure organized so the setup and the tax work stay coordinated in one place.
     cards:
       - label: "Back Office"
-        description: "LLC registration, annual renewals, EIN setup, U.S. mailing address, and administrative support for foreign-owned U.S. entities."
+        description: "Entity setup, renewals, EIN support, U.S. mailing address, and administrative help for foreign-owned U.S. entities."
         url: "/services/full-suite/back-office/"
       - label: "Bookkeeping"
-        description: "Monthly bookkeeping and clean financials for foreign-owned U.S. businesses and rental properties."
+        description: "Monthly bookkeeping, reconciliations, and clean financials for foreign-owned U.S. businesses and rental activity."
         url: "/services/full-suite/bookkeeping/"
+      - label: "Payroll"
+        description: "Payroll setup, recurring runs, tax deposits, filings, and employee-pay support for U.S. operations."
+        url: "/services/full-suite/payroll/"
+      - label: "Sales Tax"
+        description: "Registration, filing, and multistate sales tax compliance for foreign-owned U.S. businesses selling into the U.S."
+        url: "/services/full-suite/sales-tax/"
   - title: "Why International Tax Needs Its Own Lane"
     body: |
       International tax is where filing obligations multiply quickly and small mistakes become expensive. The forms are technical, the penalties are real, and the right filing path depends heavily on who owns what, where they live, and how the income moves. Good cross-border work keeps compliance complete while also shaping the structure, elections, and reporting positions in a way that holds up over time.

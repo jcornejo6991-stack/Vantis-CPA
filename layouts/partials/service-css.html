@@ -64,9 +64,10 @@
       position: absolute;
       inset: 0;
       background-image: var(--hero-image);
-      background-size: cover;
+      background-size: var(--hero-size, cover);
       background-position: var(--hero-position, center center);
-      transform: scale(1.02);
+      background-repeat: no-repeat;
+      transform: scale(var(--hero-scale, 1.02));
       filter: saturate(1.05);
     }
 
@@ -78,6 +79,7 @@
         radial-gradient(circle at top right, rgba(86, 156, 214, 0.24) 0%, transparent 28%),
         linear-gradient(118deg, rgba(13, 17, 23, 0.9) 0%, rgba(13, 17, 23, 0.8) 42%, rgba(13, 17, 23, 0.58) 100%),
         linear-gradient(180deg, rgba(13, 17, 23, 0.18) 0%, rgba(13, 17, 23, 0.72) 100%);
+      opacity: var(--hero-overlay-opacity, 1);
     }
 
     .hero-inner {

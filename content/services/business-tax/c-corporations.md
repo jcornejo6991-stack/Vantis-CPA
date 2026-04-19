@@ -7,6 +7,8 @@ nav_title: "C-Corporations"
 aliases:
   - /expertise/business/c-corps/
 subtitle: "Form 1120 compliance and planning for businesses taxed as C-corporations."
+heroImagePosition: "center 200%"
+heroOverlayOpacity: 0.85
 sections:
   - title: "C-Corporations Are a Different Tax System"
     body: |

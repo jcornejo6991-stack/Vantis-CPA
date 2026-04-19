@@ -69,7 +69,7 @@
     {{ end }}
   {{ end }}
 
-  <section class="hero{{ if $isServiceNested }} hero-subpage{{ end }}" style="--hero-image: url('{{ $heroImage | safeURL }}');{{ with .Params.heroImagePosition }} --hero-position: {{ . }};{{ end }}">
+  <section class="hero{{ if $isServiceNested }} hero-subpage{{ end }}" style="--hero-image: url('{{ $heroImage | safeURL }}');{{ with .Params.heroImagePosition }} --hero-position: {{ . }};{{ end }}{{ with .Params.heroImageSize }} --hero-size: {{ . }};{{ end }}{{ with .Params.heroImageScale }} --hero-scale: {{ . }};{{ end }}{{ with .Params.heroOverlayOpacity }} --hero-overlay-opacity: {{ . }};{{ end }}">
     <div class="hero-inner">
       <div class="hero-copy">
         {{ if $isServiceNested }}

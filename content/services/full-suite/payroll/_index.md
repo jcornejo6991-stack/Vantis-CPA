@@ -5,7 +5,10 @@ layout: "service"
 aliases:
   - /services/payroll/
 subtitle: "Payroll processing, tax deposits, and year-round compliance handled cleanly."
-heroImage: "/images/card-local.jpg"
+heroImage: "/images/full-suite-hero-paperwork.jpg"
+heroImagePosition: "center center"
+heroImageSize: "cover"
+heroImageScale: 1
 sections:
   - title: "Payroll That Supports Compliance and Tax Strategy"
     body: |
