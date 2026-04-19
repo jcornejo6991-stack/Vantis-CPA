@@ -1,24 +1,51 @@
 :root {
-  /* Colors from config */
-  --primary: #15482E;
-  --primary-dark: #03120b;
-  --accent: #3a8b5f;
-  --accent-light: #e8e8e8;
-  --text-dark: #0f2818;
-  --text-light: #ffffff;
-  --bg-light: #f9faf9;
+  /* Nav & Footer — premium dark gray */
+  --nav-bg: rgba(26, 26, 46, 0.82);
+  --footer-bg: #1a1a2e;
+
+  /* Section backgrounds */
+  --dark-navy: #0d1117;
+  --dark-gray: #1a1a2e;
+  --section-white: #ffffff;
+
+  /* Hero */
+  --hero-gradient: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
+
+  /* VS Code terminal accent colors */
+  --accent-blue: #569CD6;
+  --accent-orange: #CE9178;
+  --accent-green: #4EC9B0;
+  --accent-silver: #9CDCFE;
+  --accent-silver-dark: #4a90b8;
+
+  /* Text */
+  --text-light: #e8e8e8;
+  --text-dark: #1a1a2e;
+  --text-mid-dark: #b0b8c8;
+  --text-mid-light: #4a5568;
+
+  /* Legacy aliases — keep for inner page compatibility */
+  --primary: #569CD6;
+  --primary-dark: #1a1a2e;
+  --primary-darkest: #0d1117;
+  --accent: #4EC9B0;
+  --accent-light: #e8e6f5;
+  --bg-light: #f8f7ff;
   --bg-accent: #edeef7;
+  --bg: #e8e8e8;
+  --bg-alt: #e0e0e0;
   --border: #d0d0d0;
+  --navy: #1a1a2e;
+  --navy-mid: #569CD6;
+  --navy-dark: #0d1117;
+  --text-mid: #4a5568;
+  --card-radius: 8px;
 
-  /* Dark green for nav/footer */
-  --navy: #03120b;
-  --navy-dark: #03120b;
-
-  /* Fonts from config */
+  /* Fonts */
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
 
-  /* Spacing from config */
+  /* Spacing */
   --spacing-xs: 4px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
@@ -26,9 +53,10 @@
   --spacing-xl: 32px;
   --spacing-xxl: 48px;
 
-  /* Derived values */
+  /* Misc */
   --border-radius: 8px;
   --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --nav-height: 68px;
 }
 
 @media (max-width: 768px) {
