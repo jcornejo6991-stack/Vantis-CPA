@@ -1,92 +1,33 @@
 {{ define "main" }}
 
   <style>
-    :root {
-      --primary-dark: #062215;
-      --primary: #15482E;
-      --primary-darkest: #041f12;
-      --accent: #3a8b5f;
-      --accent-light: #e8e8e8;
-      --bg: #e8e8e8;
-      --bg-alt: #e0e0e0;
-      --text-dark: #0f2818;
-      --text-mid: #3d6b52;
-      --card-radius: 14px;
-      --nav-height: 68px;
-      --card-shadow: 0 2px 16px rgba(0,0,0,0.2), 0 1px 4px rgba(0,0,0,0.1);
-      --card-gap: 14px;
-      --page-bg: #ffffff;
-      /* Legacy aliases for backwards compatibility */
-      --navy: var(--primary-dark);
-      --navy-mid: var(--primary);
-      --navy-dark: var(--primary-darkest);
-    }
-
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; overflow-x: hidden; }
     body {
       font-family: 'Inter', sans-serif;
-      color: var(--text-dark);
-      background-color: var(--page-bg);
-      background-image:
-        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
-      background-size: 64px 20px;
-      background-attachment: fixed;
+      background: #ffffff;
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      padding-top: var(--nav-height);
-      position: relative;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
-      pointer-events: none;
-      z-index: 0;
+      padding-top: var(--nav-height, 68px);
     }
 
     /* ─── LAYOUT ─── */
-    .container {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0 18px;
-    }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
     .section-label {
-      font-size: 14.4px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 12px;
+      font-size: 13px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 8px;
     }
     .section-heading {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(33.6px, 4.8vw, 48px);
-      font-weight: 700;
-      color: var(--navy);
-      line-height: 1.2;
+      font-size: clamp(28px, 4vw, 42px); font-weight: 700;
+      line-height: 1.2; margin-bottom: 12px;
     }
-    .section-subheading {
-      font-size: 20.4px;
-      color: var(--text-mid);
-      margin-top: 12px;
-      max-width: 640px;
-      line-height: 1.65;
-    }
+    .section-subheading { font-size: 17px; line-height: 1.65; max-width: 600px; margin-top: 8px; }
 
     /* ─── FADE ANIMATIONS ─── */
-    .fade-up {
-      opacity: 0;
-      transform: translateY(22px);
-      transition: opacity 0.55s ease, transform 0.55s ease;
-    }
+    .fade-up { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .fade-up.visible { opacity: 1; transform: translateY(0); }
     .fade-up-d1 { transition-delay: 0.08s; }
     .fade-up-d2 { transition-delay: 0.16s; }
@@ -96,1237 +37,441 @@
     .fade-up-d6 { transition-delay: 0.48s; }
 
     /* ─── HERO ─── */
-    /* ─── FLOATING CARD SECTIONS ─── */
-    .hero,
-    .differentiators,
-    .services,
-    .industries,
-    .about,
-    .client-resources,
-    .contact,
-    .process-bring-section {
-      margin: 0 var(--card-gap) var(--card-gap);
-      border-radius: 14px;
-      box-shadow: var(--card-shadow);
-      overflow: hidden;
-      opacity: 0.98;
-    }
-    .footer {
-      margin: 0 var(--card-gap) var(--card-gap);
-      border-radius: 14px;
-      box-shadow: var(--card-shadow);
-      overflow: hidden;
-      opacity: 0.98;
-    }
-
     .hero {
-      background: radial-gradient(circle at center, #edeef7 0%, #fff 72%);
-      padding: 77px 0;
-      position: relative;
-      margin: 31px 25px 22px 22px;
-      border-radius: 20px;
-      min-height: 75vh;
+      background: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
+      min-height: 80vh;
       display: flex;
       align-items: center;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow-x: hidden;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-body {
+      padding: 80px 0;
+      position: relative;
+      z-index: 1;
+      width: 100%;
     }
     .hero-inner {
       display: grid;
-      grid-template-columns: 0.7fr 1px 1.3fr;
+      grid-template-columns: 0.8fr 1px 1.2fr;
       gap: 0 48px;
       align-items: center;
     }
-    /* Left column */
+    .hero-watermark {
+      position: absolute;
+      top: 20px; right: 36%;
+      font-size: 88px;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: 0;
+      line-height: 1;
+    }
     .hero-left { padding-right: 8px; }
     .hero-brand-name {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(72px, 9.6vw, 132px);
-      white-space: nowrap;
-      font-weight: 700;
-      color: #2f5342;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 16px;
+      font-size: clamp(56px, 8vw, 100px);
+      font-weight: 700; color: #1a1a2e;
+      line-height: 1.05; letter-spacing: -0.02em;
+      margin-bottom: 12px; white-space: nowrap;
     }
     .hero-tagline {
       font-family: 'Playfair Display', serif;
-      font-size: clamp(16px, 2vw, 20px);
-      font-style: italic;
-      color: var(--accent);
-      letter-spacing: 0.01em;
+      font-size: clamp(14px, 1.8vw, 18px);
+      font-style: italic; color: #569CD6; letter-spacing: 0.01em;
     }
-    /* Divider */
-    .hero-divider {
-      width: 1px;
-      align-self: stretch;
-      background: #d0d0d0;
-    }
-    /* Right column */
+    .hero-divider { width: 1px; background: rgba(26,26,46,0.15); align-self: stretch; }
     .hero-right { padding-left: 8px; }
     .hero-intro-label {
-      font-size: 11px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #2d5c47;
-      margin-bottom: 10px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.12em;
+      text-transform: uppercase; color: #4a5568; margin-bottom: 10px;
     }
-    .hero-sub {
-      font-size: 15px;
-      color: var(--text-dark);
-      line-height: 1.7;
-      margin-bottom: 24px;
-    }
+    .hero-sub { font-size: 15px; color: #1a1a2e; line-height: 1.7; margin-bottom: 24px; }
+
+    /* Hero contact box — glassmorphism */
     .hero-contact-box {
-      border: 1.5px solid var(--accent);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(255,255,255,0.6);
       border-radius: 10px;
       padding: 18px 22px;
-      background: var(--accent-light);
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 10px 24px;
+      margin-bottom: 24px;
     }
-    .hero-contact-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
+    .hero-contact-item { display: flex; flex-direction: column; gap: 2px; }
     .hero-contact-item .label {
-      font-size: 10px;
-      font-weight: 600;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--accent);
+      font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: #569CD6;
     }
     .hero-contact-item .value {
-      font-size: 14px;
-      font-weight: 600;
-      color: var(--navy);
-      text-decoration: none;
+      font-size: 13px; font-weight: 600; color: #1a1a2e; text-decoration: none;
     }
-    .hero-contact-item .value:hover { text-decoration: underline; }
-    .hero-ctas {
-      display: flex;
-      gap: 14px;
-      flex-wrap: nowrap;
-      margin-top: 24px;
-    }
+    .hero-contact-item .value:hover { text-decoration: underline; color: #569CD6; }
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
     .btn-primary {
-      background: #2f5342;
-      color: #fff;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid #2f5342;
-      display: inline-block;
+      background: #569CD6; color: #fff; padding: 13px 26px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      border: 2px solid #569CD6; display: inline-block;
       transition: background 0.2s, transform 0.15s;
     }
-    .btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); transform: translateY(-1px); }
+    .btn-primary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
     .btn-secondary {
-      background: transparent;
-      color: var(--navy);
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-size: 15px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 2px solid var(--navy);
-      display: inline-block;
+      background: transparent; color: #1a1a2e; padding: 13px 26px; border-radius: 8px;
+      font-size: 14px; font-weight: 600; text-decoration: none;
+      border: 2px solid #1a1a2e; display: inline-block;
       transition: background 0.2s, color 0.2s, transform 0.15s;
     }
-    .btn-secondary:hover { background: var(--navy); color: #fff; transform: translateY(-1px); }
+    .btn-secondary:hover { background: #1a1a2e; color: #fff; transform: translateY(-1px); text-decoration: none; }
 
-    /* ─── ASPIRATION IMAGES ─── */
-    .aspiration-image {
-      padding: 60px 0;
-      background: #ffffff;
-      margin: 25px 25px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .aspiration-image .container {
-      max-width: 1600px;
-      margin: 0 auto;
-      padding: 0;
-    }
-
-    .aspiration-img {
-      display: block;
-      width: 100%;
-      height: auto;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
-      border-radius: 12px;
-    }
-
-    .aspiration-image-2 {
-      padding: 0;
-      background: #ffffff;
-      margin: 25px 25px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .aspiration-image-2 .aspiration-img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .aspiration-image-3 {
-      padding: 0;
-      background: #ffffff;
-      margin: 25px 25px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-    }
-
-    .aspiration-image-3 .aspiration-img {
-      border-radius: 12px;
-      width: 100%;
-      height: auto;
-      display: block;
-      aspect-ratio: 5 / 1;
-      object-fit: cover;
-    }
-
-    .trust-signals {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px 0;
-      align-items: center;
-    }
-    .trust-signal {
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-mid);
-      padding: 0 16px 0 0;
-    }
-    .trust-signal::before {
-      content: '';
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--accent);
-      flex-shrink: 0;
-    }
-
-    /* ─── DIFFERENTIATORS ─── */
-    .differentiators { padding: 80px 0; background: #fff; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
-    .diff-header { margin-bottom: 48px; }
-
-    .diff-journey { display: flex; flex-direction: column; gap: 60px; max-width: 800px; margin: 60px auto 0; }
-
-    .diff-stage { text-align: center; }
-
-    .diff-stage-number { font-size: 48px; font-weight: 700; color: var(--primary); margin-bottom: 16px; }
-
-    .diff-stage-text { font-size: 16px; color: var(--text-mid); line-height: 1.6; }
-
-    /* ─── SERVICES ─── */
-    .services { padding: 80px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px); background-color: #041f12; border-left: 4px solid #fff; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; }
-    .services::before {
-      content: '';
+    /* Hero image panel */
+    .hero-image-panel {
       position: absolute;
-      inset: 0;
-      opacity: 0.08;
+      top: 0; right: 0; bottom: 0;
+      width: 32%;
+      overflow: hidden;
       pointer-events: none;
-      z-index: 0;
-      border-radius: 20px;
     }
-    .services > * { position: relative; z-index: 1; }
-    .services-header { margin-bottom: 48px; }
-    .services-header .section-label { color: rgba(255,255,255,0.7); }
-    .services-header .section-heading { color: #fff; }
-    .services-header .section-subheading { color: rgba(255,255,255,0.85); }
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 26px;
-    }
-    .core-services-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-    }
-    .support-services-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      max-width: 100%;
-    }
-    .services-category-heading {
-      grid-column: 1 / -1;
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 20px;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 1.5px solid rgba(255,255,255,0.3);
-      display: inline-block;
-    }
-    .services-category-heading:first-child { margin-top: 0; }
-    .service-card {
-      background: #f5f9f7;
-      border-radius: var(--card-radius);
-      padding: 28px 24px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-left: 4px solid #fff;
-      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s, background 0.3s;
-      position: relative;
-      overflow: hidden;
-    }
-    .support-service-card {
-      padding: 14px 12px;
-      display: flex;
-      flex-direction: column;
-    }
-    .support-service-card .service-title {
-      font-size: 14px;
-      margin-bottom: 6px;
-    }
-    .support-service-card .service-description {
-      font-size: 11px;
-      line-height: 1.3;
-    }
-    .support-service-card .service-tools {
-      font-size: 10px;
-      padding-top: 8px;
-    }
-    .support-service-card .service-learn-more {
-      position: static;
-      font-size: 11px;
-      margin-top: auto;
-      text-align: right;
-    }
-    .service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
-    .service-icon {
-      width: 56px;
-      height: 56px;
-      background: var(--accent-light);
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .service-icon svg { width: 28px; height: 28px; stroke: var(--accent); fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-    .service-subtitle {
-      font-size: 11px;
-      font-weight: 600;
-      color: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-bottom: 4px;
-    }
-    .service-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: #041f12;
-      margin-bottom: 14px;
-      letter-spacing: -0.01em;
-    }
-    .support-service-card .service-title {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-    .service-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .service-list li {
-      font-size: 13.5px;
-      color: var(--text-dark);
-      font-weight: 500;
-      padding-left: 18px;
-      position: relative;
-      line-height: 1.5;
-    }
-    .service-list li::before {
-      content: '✓';
-      position: absolute;
-      left: -2px;
-      color: var(--accent);
-      font-size: 12px;
-      font-weight: 600;
-      line-height: 1.5;
-    }
-    .service-learn-more {
-      position: absolute;
-      bottom: 24px;
-      right: 24px;
-      font-size: 13px;
-      font-weight: 600;
-      color: var(--accent);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .service-learn-more:hover {
-      color: var(--navy);
-    }
-
-    /* ─── INDUSTRIES ─── */
-    .industries { padding: 80px 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
-    .industries-header { margin-bottom: 40px; text-align: center; }
-    .industries-header .section-subheading { margin: 0 auto; max-width: 600px; }
-    .industries-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      column-gap: 28px;
-      row-gap: 0;
-      max-width: 940px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .industry-card {
-      position: relative;
-      text-decoration: none;
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(120px, auto);
-      align-items: center;
-      gap: 18px;
-      min-height: 0;
-      padding: 28px 10px;
-      cursor: pointer;
-      color: var(--navy);
-      background: transparent;
-      transition: background 0.25s ease, padding 0.25s ease;
-    }
-    .industry-card::after {
+    .hero-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hero-image-panel::before {
       content: '';
-      position: absolute;
-      inset: 0 auto 0 0;
-      width: 4px;
-      background: var(--primary);
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-    .industry-title-group {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      min-width: 0;
-    }
-    .industry-category-label {
-      display: inline-flex;
-      align-items: center;
-      align-self: flex-start;
-      padding: 5px 10px;
-      border-radius: 999px;
-      background: rgba(21, 72, 46, 0.08);
-      color: var(--primary);
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      white-space: nowrap;
-    }
-    .industry-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(20px, 2vw, 28px);
-      font-weight: 700;
-      color: var(--primary);
-      margin: 0;
-      line-height: 1.1;
-      text-align: left;
-      letter-spacing: -0.02em;
-      white-space: normal;
-      text-wrap: balance;
-    }
-    .industry-description {
-      color: var(--text-mid);
-      font-size: 13.5px;
-      line-height: 1.6;
-      margin: 0;
-      max-width: 560px;
-    }
-    .industry-learn-more {
-      font-size: 12px;
-      color: var(--primary);
-      font-weight: 700;
-      display: inline-block;
-      justify-self: end;
-      align-self: center;
-      white-space: nowrap;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      transition: letter-spacing 0.2s ease, transform 0.2s ease;
-    }
-    .industry-card-wrapper:hover .industry-card {
-      background: rgba(255, 255, 255, 0.64);
-      padding-left: 24px;
-      padding-right: 24px;
-    }
-    .industry-card-wrapper:hover .industry-card::after { opacity: 1; }
-    .industry-card-wrapper:hover .industry-learn-more { color: #15482E; letter-spacing: 0.04em; transform: translateX(2px); }
-    .industry-niches { display: none; }
-    .industry-niche-link {
-      font-size: 14px;
-      color: var(--navy);
-      text-decoration: none;
-      font-weight: 500;
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-    .industry-card-wrapper {
-      position: relative;
-      border-top: 1px solid rgba(6, 34, 21, 0.14);
-      transition: transform 0.3s ease;
-    }
-    .industry-card-wrapper:nth-last-child(-n + 2) { border-bottom: 1px solid rgba(6, 34, 21, 0.14); }
-    .industry-card-wrapper:hover { transform: none; }
-    .industry-dropdown {
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(5, 40, 24, 0.95);
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      border-radius: 12px;
-      min-width: 200px;
-      margin-top: 8px;
-      padding: 8px 0;
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.2s ease, visibility 0.2s ease;
-      z-index: 10;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    }
-    .industry-sub-niche {
-      display: block;
-      padding: 10px 16px;
-      color: #fff;
-      font-size: 13px;
-      text-decoration: none;
-      transition: background 0.15s ease, color 0.15s ease;
-    }
-    .industry-sub-niche:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-    .industry-sub-niche:first-child { padding-top: 12px; }
-    .industry-sub-niche:last-child { padding-bottom: 12px; }
-
-    /* ─── ABOUT ─── */
-    .about { padding: 80px 0; background: linear-gradient(to bottom, var(--bg) 0%, #fff 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
-    .about-header { margin-bottom: 48px; }
-
-    .about-values { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 60px; max-width: 900px; margin-left: auto; margin-right: auto; }
-
-    .about-value { text-align: center; }
-
-    .about-value-label { font-size: 20px; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
-
-    .about-value-desc { font-size: 16px; color: var(--text-mid); line-height: 1.6; }
-
-
-    /* ─── CLIENT RESOURCES ─── */
-    .grain-overlay { position: relative; overflow: hidden; }
-    .grain-overlay::before {
-      content: '';
-      position: absolute;
-      inset: -50%;
-      width: 200%;
-      height: 200%;
-      opacity: 0.04;
-      pointer-events: none;
-      z-index: 0;
-    }
-    .grain-overlay > * { position: relative; z-index: 1; }
-    .client-resources { padding: 77px 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); }
-    .client-resources .container { display: flex; align-items: center; gap: 60px; justify-content: center; }
-    .client-resources .section-label { color: var(--accent); display: block; }
-    .client-resources .section-heading { color: var(--navy); }
-    .client-resources .section-subheading { color: var(--text-dark); max-width: none; }
-    .resources-header { text-align: left; margin-bottom: 0; display: flex; flex-direction: column; justify-content: center; min-width: 200px; flex-shrink: 0; }
-    .resources-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .resource-card {
-      background: #fff;
-      border: 1px solid #e4e6f0;
-      border-radius: var(--card-radius);
-      padding: 24px 20px;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .resource-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--navy);
-      margin-bottom: 8px;
-    }
-    .resource-card-text { font-size: 13px; color: var(--text-dark); line-height: 1.5; margin-bottom: 16px; }
-    .btn-resource {
-      display: inline-block;
-      background: #f0f7ec;
-      color: #2f5342;
-      padding: 11px 20px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      border: 1px solid rgba(255,255,255,0.2);
-      transition: background 0.2s;
-    }
-    .btn-resource:hover { background: rgba(255,255,255,0.2); }
-    .resource-contact-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-    .resource-contact-list li {
-      font-size: 14px;
-      color: #7aaa8f;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .resource-contact-list li a { color: #e8e8e8; text-decoration: none; font-weight: 500; }
-    .resource-contact-list li a:hover { color: #fff; }
-    .resource-contact-list li svg { width: 15px; height: 15px; stroke: var(--accent); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
-
-    /* ─── RESOURCES SECTION ─── */
-    .resources {
-      padding: 20px 0;
-      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
-      margin: 25px 25px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      position: relative;
+      position: absolute; top: 0; left: 0; bottom: 0;
+      width: 120px;
+      background: linear-gradient(to right, #edeef7, transparent);
       z-index: 1;
     }
 
-    .resources .resources-header {
-      text-align: center;
-      margin-bottom: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 0;
+    /* ─── SERVICE SECTIONS SHARED ─── */
+    .svc-section { position: relative; overflow: hidden; }
+    .svc-layout { display: grid; align-items: stretch; min-height: 460px; }
+    .svc-content {
+      padding: 80px 60px;
+      display: flex; flex-direction: column; justify-content: center;
     }
+    .svc-image-panel { overflow: hidden; }
+    .svc-image-panel img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 460px; }
+    .svc-list {
+      list-style: none; display: flex; flex-direction: column;
+      gap: 8px; margin: 20px 0 28px;
+    }
+    .svc-list li {
+      font-size: 14px; font-weight: 500;
+      padding: 10px 14px; padding-left: 16px;
+      border-left: 2px solid;
+      line-height: 1.5;
+      display: flex; align-items: center; gap: 10px;
+      border-radius: 0 4px 4px 0;
+    }
+    .svc-learn-more {
+      font-size: 13px; font-weight: 700;
+      text-decoration: none; letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: letter-spacing 0.2s, opacity 0.2s;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .svc-learn-more:hover { letter-spacing: 0.1em; text-decoration: none; }
 
-    .resources .section-label,
-    .resources .section-heading,
-    .resources .section-subheading {
+    /* ─── INDIVIDUAL TAX (white) ─── */
+    .individual-tax { background: #ffffff; }
+    .individual-tax .svc-layout { grid-template-columns: 1fr 38%; }
+    .individual-tax .section-label { color: #569CD6; }
+    .individual-tax .section-heading { color: #1a1a2e; }
+    .individual-tax .section-subheading { color: #4a5568; }
+    .individual-tax .svc-list li { border-left-color: #569CD6; color: #1a1a2e; background: rgba(86,156,214,0.04); }
+    .individual-tax .svc-learn-more { color: #569CD6; }
+    .individual-tax .svc-learn-more:hover { color: #1a1a2e; }
+
+    /* ─── BUSINESS TAX (dark gray) ─── */
+    .business-tax { background: #1a1a2e; }
+    .business-tax .svc-layout { grid-template-columns: 38% 1fr; }
+    .business-tax .section-label { color: #CE9178; }
+    .business-tax .section-heading { color: #e8e8e8; }
+    .business-tax .section-subheading { color: #b0b8c8; }
+    .business-tax .svc-list li { border-left-color: #CE9178; color: #e8e8e8; background: rgba(206,145,120,0.06); }
+    .business-tax .svc-learn-more { color: #CE9178; }
+    .business-tax .svc-learn-more:hover { color: #e8e8e8; }
+
+    /* ─── INTERNATIONAL TAX (dark navy) ─── */
+    .international-tax { background: #0d1117; }
+    .international-tax .svc-layout { grid-template-columns: 1fr 38%; }
+    .international-tax .section-label { color: #4EC9B0; }
+    .international-tax .section-heading { color: #e8e8e8; }
+    .international-tax .section-subheading { color: #b0b8c8; }
+    .international-tax .svc-list li { border-left-color: #4EC9B0; color: #e8e8e8; background: rgba(78,201,176,0.06); }
+    .international-tax .svc-learn-more { color: #4EC9B0; }
+    .international-tax .svc-learn-more:hover { color: #e8e8e8; }
+    .intl-watermark {
+      position: absolute; top: 40px; right: 42%;
+      font-size: 120px; opacity: 0.05;
+      pointer-events: none; z-index: 0; line-height: 1;
+    }
+    .international-tax .svc-content { position: relative; z-index: 1; }
+
+    /* ─── FULL OFFICE (white) ─── */
+    .full-office { background: #ffffff; position: relative; overflow: hidden; padding: 80px 0; }
+    .full-office-bg {
+      position: absolute; inset: 0;
+      background-image: url('/images/card-realestate.jpg');
+      background-size: cover; background-position: center;
+      opacity: 0.05; z-index: 0;
+    }
+    .full-office > .container { position: relative; z-index: 1; }
+    .full-office .section-label { color: #4a90b8; }
+    .full-office .section-heading { color: #1a1a2e; }
+    .full-office .section-subheading { color: #4a5568; }
+    .full-office-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      gap: 0; margin-top: 40px;
+      border-top: 1px solid rgba(26,26,46,0.08);
+    }
+    .full-office-item {
+      padding: 28px 24px;
+      border-right: 1px solid rgba(26,26,46,0.08);
+      border-top: 2px solid #9CDCFE;
+    }
+    .full-office-item:last-child { border-right: none; }
+    .full-office-item-title {
+      font-size: 16px; font-weight: 700; color: #1a1a2e;
+      margin-bottom: 10px; display: flex; align-items: center; gap: 8px;
+    }
+    .full-office-item-desc { font-size: 13px; color: #4a5568; line-height: 1.6; margin-bottom: 10px; }
+    .full-office-item-tools { font-size: 11px; color: #4a90b8; font-weight: 500; letter-spacing: 0.02em; margin-bottom: 12px; }
+    .full-office-learn-more {
+      font-size: 12px; font-weight: 700; color: #4a90b8;
+      text-decoration: none; text-transform: uppercase;
+      letter-spacing: 0.06em; display: inline-block;
+      transition: letter-spacing 0.2s, color 0.2s;
+    }
+    .full-office-learn-more:hover { letter-spacing: 0.1em; color: #1a1a2e; text-decoration: none; }
+
+    /* ─── WHO WE SERVE (dark gray) ─── */
+    .industries { padding: 80px 0; background: #1a1a2e; }
+    .industries .section-label { color: #569CD6; }
+    .industries .section-heading { color: #e8e8e8; }
+    .industries .section-subheading { color: #b0b8c8; }
+    .industries-header { margin-bottom: 40px; }
+    .industries-grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 0; max-width: 900px; margin: 0 auto;
+    }
+    .industry-card-wrapper {
+      border-top: 1px solid rgba(255,255,255,0.08);
+      position: relative; transition: background 0.25s;
+    }
+    .industry-card-wrapper:nth-last-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,0.08); }
+    .industry-card-wrapper:hover { background: rgba(255,255,255,0.04); }
+    .industry-card {
+      display: grid; grid-template-columns: minmax(0,1fr) auto;
+      gap: 18px; align-items: center;
+      padding: 24px 12px; text-decoration: none; color: #e8e8e8;
+      transition: padding 0.25s;
+    }
+    .industry-card-wrapper:hover .industry-card { padding-left: 20px; }
+    .industry-card-wrapper:hover .industry-learn-more { letter-spacing: 0.04em; color: #9CDCFE; }
+    .industry-row-left { display: flex; align-items: center; gap: 14px; }
+    .industry-thumbnail {
+      width: 36px; height: 36px; border-radius: 50%;
+      object-fit: cover; flex-shrink: 0; opacity: 0.75;
+    }
+    .industry-title-group { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+    .industry-category-label {
+      display: inline-flex; align-items: center; align-self: flex-start;
+      padding: 3px 8px; border-radius: 999px;
+      background: rgba(86,156,214,0.12); color: #569CD6;
+      font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    }
+    .industry-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(18px, 2vw, 24px); font-weight: 700;
+      color: #e8e8e8; line-height: 1.1; letter-spacing: -0.01em;
       margin: 0;
     }
+    .industry-description { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin: 0; }
+    .industry-learn-more {
+      font-size: 11px; color: #569CD6; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.1em; white-space: nowrap;
+      transition: letter-spacing 0.2s, color 0.2s;
+    }
+    .industry-niches { display: none; }
 
-
-    .resources-carousel-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-top: 12px;
-    }
-
-    .resources-carousel {
-      flex: 1;
-      overflow: hidden;
-      padding: 20px 0;
-    }
-
-    .resources-articles {
-      display: flex;
-      gap: 24px;
-      scroll-behavior: smooth;
-      overflow-x: auto;
-      overflow-y: hidden;
-      padding: 0 22px;
-      padding-bottom: 0;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-
-    .resources-articles::-webkit-scrollbar {
-      display: none;
-    }
-
-    .carousel-nav {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 44px;
-      height: 44px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      background: #fff;
-      color: var(--text-dark);
-      cursor: pointer;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-      padding: 0;
-    }
-
-    .carousel-nav:hover {
-      border-color: var(--primary);
-      color: var(--primary);
-      background: #f9f9f9;
-    }
-
-    .carousel-nav svg {
-      width: 20px;
-      height: 20px;
-    }
-
-    .resources .resource-card {
-      flex: 0 0 calc(25% - 18px);
-      padding: 14px;
-      background: #f9f9f9;
-      border-radius: 8px;
-      border-left: 3px solid var(--primary);
-      transition: all 0.3s ease;
-      min-width: 250px;
-    }
-
-    .resources .resource-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    }
-
-    .resources .resource-card .resource-title {
-      font-size: 18px;
-      font-weight: 600;
-      color: var(--text-dark);
-      margin-bottom: 12px;
-    }
-
-    .resources .resource-card .resource-description {
-      font-size: 14px;
-      color: var(--text-mid);
-      line-height: 1.6;
-      margin-bottom: 16px;
-    }
-
-    .resources .resource-link {
-      color: var(--primary);
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
-
-    .resources .resource-link:hover {
-      color: var(--primary-dark);
-    }
-
-    @media (max-width: 768px) {
-      .resources-articles {
-        gap: 16px;
-        padding: 0 16px;
-      }
-
-      .resources .resource-card {
-        flex: 0 0 calc(100% - 32px);
-        max-width: 420px;
-      }
-    }
-
-    /* ─── CONTACT ─── */
-    .contact { padding: 60px 0; background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px), repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px); background-color: #041f12; margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; }
-    .contact .section-label { color: #5a8b6f; }
-    .contact .section-heading { color: #fff; }
-    .contact .section-subheading { color: #7aaa8f; }
-    .contact-header { margin-bottom: 48px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .contact-header .section-subheading { white-space: nowrap; width: fit-content; margin-left: auto; margin-right: auto; }
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 36px;
-      align-items: start;
-      justify-content: center;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
-    .form-group label { font-size: 16.2px; font-weight: 600; color: #fff; letter-spacing: 0.02em; }
-    .form-group input,
-    .form-group textarea {
-      font-family: 'Inter', sans-serif;
-      font-size: 18.6px;
-      color: #fff;
-      background: rgba(255,255,255,0.1);
-      border: 1.5px solid rgba(255,255,255,0.2);
-      border-radius: 8px;
-      padding: 13px 14px;
-      outline: none;
-      transition: border-color 0.2s;
-      width: 100%;
-    }
-    .form-group input:focus,
-    .form-group textarea:focus { border-color: #fff; }
-    .form-group input::placeholder,
-    .form-group textarea::placeholder { color: rgba(255,255,255,0.5); }
-    .form-group textarea { resize: vertical; min-height: 250px; }
-    .form-label-note { font-weight: 400; color: var(--text-mid); }
-    .form-submit {
-      background: #2f5342;
-      color: #fff;
-      border: none;
-      padding: 15px 32px;
-      border-radius: 8px;
-      font-family: 'Inter', sans-serif;
-      font-size: 15.5px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.15s;
-    }
-    .form-submit:hover { background: var(--navy-dark); transform: translateY(-1px); }
-    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
-    .form-submit-row { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
-    .form-success {
-      display: none;
-      background: rgba(142, 184, 88, 0.1);
-      border: 1.5px solid #8eb858;
-      border-radius: 10px;
-      padding: 20px 24px;
-      font-size: 15px;
-      color: #a8d56e;
-      line-height: 1.6;
-    }
-    .form-success.visible { display: block; }
-    .form-privacy-note { font-size: 13px; font-style: italic; color: #7aaa8f; margin: 0; }
-    .contact-right-column { display: flex; flex-direction: column; gap: 16px; margin-top: 25px; }
-    .contact-info {
-      background: rgba(255,255,255,0.06);
-      border-radius: var(--card-radius);
-      padding: 14px 12px;
-      border: 1px solid rgba(255,255,255,0.12);
-      margin-top: 0;
-      text-align: center;
-    }
-    .contact-calendar {
-      background: rgba(255,255,255,0.06);
-      border-radius: var(--card-radius);
-      padding: 20px 20px;
-      border: 1px solid rgba(255,255,255,0.12);
-      margin-top: 0;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-grow: 1;
-    }
-    .contact-calendar-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 12px;
-    }
-    .contact-calendar-desc {
-      color: rgba(255,255,255,0.85);
-      font-size: 16px;
-      margin-bottom: 20px;
-    }
-    .contact-calendar .btn-primary {
-      display: inline-block;
-    }
-    .contact-info-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      margin-bottom: 14px;
-    }
-    .contact-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 6px;
-      margin-bottom: 14px;
-      font-size: 13px;
-    }
-    .contact-item:last-of-type { margin-bottom: 0; }
-    .contact-item-icon {
-      width: 34px;
-      height: 34px;
-      background: rgba(255,255,255,0.1);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-    }
-    .contact-item-icon svg { width: 16px; height: 16px; stroke: #7aaa8f; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
-    .contact-item-label { font-size: 11px; font-weight: 600; color: #5a8b6f; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
-    .contact-item-value { font-size: 14.5px; color: #fff; font-weight: 500; }
-    .contact-item-value a { color: #fff; text-decoration: none; }
-    .contact-item-value a:hover { color: #7aaa8f; text-decoration: underline; }
-    .contact-item-note { font-size: 12.5px; color: #7aaa8f; margin-top: 2px; }
-    .response-badge {
-      margin-top: 24px;
-      background: var(--accent-light);
-      border-radius: 8px;
-      padding: 12px 16px;
-      font-size: 13.5px;
-      color: var(--accent);
-      font-weight: 500;
-      text-align: center;
-    }
-
-    /* ─── FAQ ─── */
-    .faq-section { padding: 0; background: linear-gradient(90deg, #fff 0%, #edeef7 100%); margin: 25px 25px; border-radius: 20px; box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1); position: relative; z-index: 1; overflow: hidden; }
-    .faq-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: 600px;
-      max-width: none;
-      margin: 0;
-      box-shadow: none;
-      border-radius: 0;
-      overflow: hidden;
-    }
-    .faq-left {
-      background: linear-gradient(135deg, #f0f6f2 0%, #f5f9f7 100%);
-      padding: 80px 40px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      position: relative;
-    }
-    .faq-accent-bar {
-      width: 60px;
-      height: 4px;
-      background: var(--accent);
-      margin-bottom: 24px;
-    }
-    .faq-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 16px;
-      line-height: 1.2;
-    }
-    .faq-subtitle {
-      font-size: 16px;
-      line-height: 1.8;
-      color: #666;
-    }
-    .faq-right {
-      padding: 60px 40px;
-      overflow-y: auto;
-      background: white;
-      max-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .faq-items {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      width: 100%;
-    }
-    .faq-item {
-      cursor: pointer;
-      padding-bottom: 20px;
-      border-bottom: 1px solid #e8e8e8;
-    }
-    .faq-item:last-child {
-      border-bottom: none;
-    }
-    .faq-question {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 12px;
-      user-select: none;
-    }
-    .faq-q-text {
-      font-weight: 600;
-      color: var(--text-dark);
-      font-size: 16px;
-      flex: 1;
-      line-height: 1.4;
-    }
-    .faq-toggle {
-      color: var(--accent);
-      font-size: 20px;
-      font-weight: 300;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .faq-answer {
-      color: #555;
-      font-size: 15px;
-      line-height: 1.7;
-      margin-top: 14px;
-      display: none;
-    }
-    .faq-item.open .faq-answer {
-      display: block;
-    }
-
-    @media (max-width: 900px) {
-      .faq-wrapper {
-        grid-template-columns: 1fr;
-        min-height: auto;
-      }
-      .faq-left, .faq-right {
-        padding: 40px;
-        max-height: none;
-        overflow: visible;
-      }
-    }
-
-    /* ─── FOOTER ─── */
-
-    /* Desktop: no wrap */
-    .services-header .section-subheading { white-space: nowrap; }
-    .industries-header .section-subheading { white-space: nowrap; }
-
-    /* Core Services Grid */
-    .core-services-grid,
-    .support-services-grid {
-      display: grid;
-    }
-    .core-services-grid {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 26px;
-      margin-bottom: 48px;
-    }
-    .support-services-grid {
-      grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-    }
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 1024px) {
-      .services-header .section-subheading { white-space: normal; }
-      .industries-header .section-subheading { white-space: normal; }
-      .services-grid { grid-template-columns: 1fr 1fr; }
-      .core-services-grid { grid-template-columns: 1fr 1fr; }
-      .support-services-grid { grid-template-columns: 1fr 1fr; }
-      .industry-card { grid-template-columns: minmax(0, 1fr) minmax(100px, auto); gap: 16px; min-height: 0; height: auto; }
-      .industry-title { font-size: clamp(19px, 3.2vw, 24px); }
-      .industry-description { max-width: none; }
-      .resources-grid { grid-template-columns: 1fr 1fr; }
-      .contact { margin: 12px 12px; }
-      .contact-grid { grid-template-columns: 1fr; gap: 36px; }
-    }
-    @media (max-width: 768px) {
-      .about-values { grid-template-columns: 1fr; }
-      .services-grid,
-      .resources-grid { grid-template-columns: 1fr; }
-      .core-services-grid,
-      .support-services-grid { grid-template-columns: 1fr; }
-      .industries-grid { grid-template-columns: 1fr; }
-      .contact-header .section-subheading { white-space: normal; width: auto; }
-      .industry-card { grid-template-columns: 1fr; align-items: flex-start; gap: 10px; min-height: 0; height: auto; padding: 22px 0; }
-      .industry-title-group { gap: 8px; }
-      .industry-title { font-size: clamp(18px, 5vw, 22px); }
-      .industry-description { font-size: 13px; }
-      .industry-learn-more { justify-self: start; align-self: flex-start; }
-      .industry-card-wrapper:nth-last-child(-n + 2) { border-bottom: 0; }
-      .industry-card-wrapper:last-child { border-bottom: 1px solid rgba(6, 34, 21, 0.14); }
-      .industry-card-wrapper:hover .industry-card { padding-left: 12px; padding-right: 12px; }
-      .form-row { grid-template-columns: 1fr; }
-      .hero { padding: 48px 0 40px; margin: 12px 12px 12px 12px; }
-      .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-      .hero-brand-name { font-size: clamp(36px, 10vw, 60px); }
-      .hero-divider { display: none; }
-      .hero-left { padding-right: 0; min-width: 0; }
-      .hero-right { padding-left: 0; min-width: 0; }
-      .hero-contact-box { grid-template-columns: 1fr 1fr; }
-      .contact-right-column { height: auto; max-width: 100%; }
-    }
-    /* Core Service Cards */
-    .core-service-card {
-      background: #f5f9f7;
-      border-radius: var(--card-radius);
-      padding: 28px 24px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-left: 4px solid #fff;
-      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-    }
-    .core-service-card .service-learn-more {
-      position: static;
-      margin-top: auto;
-      align-self: flex-end;
-      padding-top: 20px;
-    }
-    .core-service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
-    /* Service Label Badge */
-    .service-label-badge {
-      display: inline-block;
-      align-self: flex-start;
-      width: fit-content;
-      font-size: 10px;
-      font-weight: 700;
-      color: #fff;
-      background: var(--accent);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: 12px;
-    }
-    /* Service Description */
-    .service-description {
-      font-size: 13.5px;
-      color: var(--text-dark);
-      line-height: 1.6;
-      margin-bottom: 16px;
-      font-weight: 500;
-    }
-    /* Support Service Cards */
-    .support-service-card {
-      background: #f5f9f7;
-      border-radius: var(--card-radius);
-      padding: 28px 24px;
-      border: 1px solid rgba(255,255,255,0.2);
-      border-left: 4px solid #fff;
-      transition: box-shadow 0.3s, transform 0.3s, border-left-color 0.3s;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-    }
-    .support-service-card:hover { box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 24px rgba(255,255,255,0.1); transform: translateY(-8px); border-left-color: var(--accent); }
-    .support-service-card .service-title {
-      color: #041f12;
-    }
-    .support-service-card .service-description {
-      color: var(--text-dark);
-    }
-    /* Service Tools Tagline */
-    .service-tools {
-      font-size: 12px;
-      color: rgba(255,255,255,0.75);
-      font-weight: 500;
-      margin-top: auto;
-      padding-top: 16px;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      letter-spacing: 0.02em;
-    }
-    .support-service-card .service-tools {
-      padding-top: 12px;
-      font-size: 11px;
-    }
-    .support-service-card .service-tools {
-      color: var(--accent);
-      border-top: 1px solid rgba(10,53,33,0.15);
-    }
-    /* Services Section Heading */
-    .services-section-heading {
-      font-size: 14px;
-      font-weight: 700;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      margin-top: 48px;
-      margin-bottom: 28px;
-      padding-bottom: 16px;
-      border-bottom: 1.5px solid rgba(255,255,255,0.3);
-      display: block;
-    }
-    .services-section-heading:first-of-type { margin-top: 0; }
-
-    /* ── Process + What to Bring ── */
-    .process-bring-section {
-      background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
-      padding: 60px 0;
-      margin: 25px 25px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .process-bring-section .section-heading {
-      font-size: clamp(22px, 2.4vw, 28px);
-      color: var(--primary-dark);
-      margin-bottom: 8px;
-    }
-    .process-bring-section .section-subheading {
-      font-size: 13.5px;
-      color: var(--text-mid);
-      margin-top: 8px;
-      margin-bottom: 28px;
-    }
-    .process-bring-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 56px;
-      align-items: start;
-      padding: 0 180px;
-    }
+    /* ─── PROCESS + WHAT TO BRING (dark navy) ─── */
+    .process-bring-section { padding: 80px 0; background: #0d1117; }
+    .process-bring-section .section-label { color: #4EC9B0; }
+    .process-bring-section .section-heading { color: #e8e8e8; }
+    .process-bring-section .section-subheading { color: #b0b8c8; }
+    .process-bring-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
     .process-steps { display: flex; flex-direction: column; }
     .process-step { display: flex; gap: 18px; align-items: flex-start; }
     .process-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
     .process-step-badge {
       width: 40px; height: 40px; border-radius: 50%;
-      background: #15482E; color: #fff;
+      background: #4EC9B0; color: #0d1117;
       font-size: 12px; font-weight: 700;
       display: flex; align-items: center; justify-content: center;
-      letter-spacing: 0.04em; flex-shrink: 0;
-      box-shadow: 0 2px 8px rgba(21,72,46,0.25);
+      flex-shrink: 0;
     }
     .process-step-connector {
       width: 2px; flex: 1; min-height: 28px;
-      background: repeating-linear-gradient(to bottom, #b8d4c4 0px, #b8d4c4 5px, transparent 5px, transparent 10px);
+      background: repeating-linear-gradient(to bottom, rgba(78,201,176,0.4) 0px, rgba(78,201,176,0.4) 5px, transparent 5px, transparent 10px);
       margin: 5px 0;
     }
     .process-step-content { padding-bottom: 24px; padding-top: 8px; }
     .process-step:last-child .process-step-content { padding-bottom: 0; }
     .process-step-pill {
       display: inline-block; font-size: 10.5px; font-weight: 600;
-      color: #3a8b5f; background: rgba(58,139,95,0.1);
+      color: #4EC9B0; background: rgba(78,201,176,0.1);
       border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; letter-spacing: 0.04em;
     }
-    .process-step-title { font-size: 16px; font-weight: 700; color: #062215; margin-bottom: 5px; }
-    .process-step-desc { font-size: 13.5px; color: #3d6b52; line-height: 1.6; }
-    .bring-intro { font-size: 13.5px; color: #3d6b52; line-height: 1.6; margin-top: 8px; margin-bottom: 28px; }
-    .bring-list { display: flex; flex-direction: column; gap: 14px; width: fit-content; }
+    .process-step-title { font-size: 16px; font-weight: 700; color: #e8e8e8; margin-bottom: 5px; }
+    .process-step-desc { font-size: 13.5px; color: #b0b8c8; line-height: 1.6; }
+    .bring-intro { font-size: 13.5px; color: #b0b8c8; line-height: 1.6; margin-top: 8px; margin-bottom: 24px; }
+    .bring-list { display: flex; flex-direction: column; gap: 10px; }
     .bring-item {
       display: flex; align-items: center; gap: 12px;
-      background: rgba(255,255,255,0.7);
-      border: 1px solid rgba(58,139,95,0.15);
-      border-radius: 8px; padding: 11px 14px;
-      width: 100%;
+      padding: 12px 16px;
+      border-left: 2px solid #4EC9B0;
+      background: rgba(78,201,176,0.04);
+      border-radius: 0 6px 6px 0;
     }
     .bring-check {
-      width: 20px; height: 20px; border-radius: 50%;
-      background: #15482E; color: #fff;
-      font-size: 11px; display: flex;
-      align-items: center; justify-content: center; flex-shrink: 0;
+      width: 22px; height: 22px; border-radius: 50%;
+      background: #4EC9B0; color: #0d1117;
+      font-size: 12px; display: flex;
+      align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700;
     }
-    .bring-text { font-size: 13px; color: #0f2818; font-weight: 400; line-height: 1.3; }
-    @media (max-width: 860px) {
-      .process-bring-grid { grid-template-columns: 1fr; gap: 48px; padding: 0 24px; }
+    .bring-text { font-size: 13.5px; color: #e8e8e8; font-weight: 400; line-height: 1.3; }
+
+    /* ─── CONTACT (dark gray, glassmorphism) ─── */
+    .contact { padding: 80px 0; background: #1a1a2e; }
+    .contact .section-label { color: #9CDCFE; }
+    .contact .section-heading { color: #e8e8e8; }
+    .contact .section-subheading { color: #b0b8c8; }
+    .contact-header { margin-bottom: 48px; text-align: center; }
+    .contact-header .section-subheading { margin: 8px auto 0; }
+    .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; max-width: 860px; margin: 0 auto; }
+    .contact-form-panel {
+      backdrop-filter: blur(16px) saturate(150%);
+      -webkit-backdrop-filter: blur(16px) saturate(150%);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px; padding: 32px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+    .form-group label { font-size: 14px; font-weight: 600; color: #e8e8e8; letter-spacing: 0.02em; }
+    .form-group input, .form-group textarea {
+      font-family: 'Inter', sans-serif; font-size: 15px; color: #e8e8e8;
+      background: rgba(255,255,255,0.07);
+      border: 1.5px solid rgba(255,255,255,0.15);
+      border-radius: 8px; padding: 12px 14px; outline: none;
+      transition: border-color 0.2s; width: 100%;
+    }
+    .form-group input:focus, .form-group textarea:focus { border-color: #9CDCFE; }
+    .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+    .form-group textarea { resize: vertical; min-height: 220px; }
+    .form-submit-row { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+    .form-submit {
+      background: #569CD6; color: #fff; border: none;
+      padding: 14px 32px; border-radius: 8px;
+      font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600;
+      cursor: pointer; transition: background 0.2s, transform 0.15s;
+    }
+    .form-submit:hover { background: #4a88be; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+    .form-privacy-note { font-size: 13px; font-style: italic; color: #6b7280; margin: 0; }
+    .form-success {
+      display: none; background: rgba(78,201,176,0.08);
+      border: 1.5px solid #4EC9B0; border-radius: 10px;
+      padding: 20px 24px; font-size: 15px; color: #4EC9B0; line-height: 1.6;
+    }
+    .form-success.visible { display: block; }
+    .contact-right-column { display: flex; flex-direction: column; gap: 16px; margin-top: 0; }
+    .contact-info, .contact-calendar {
+      backdrop-filter: blur(16px) saturate(150%);
+      -webkit-backdrop-filter: blur(16px) saturate(150%);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 14px; padding: 24px; text-align: center;
+    }
+    .contact-info-title, .contact-calendar-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 600; color: #e8e8e8; margin-bottom: 14px;
+    }
+    .contact-item { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 14px; font-size: 13px; }
+    .contact-item:last-of-type { margin-bottom: 0; }
+    .contact-item-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+    .contact-item-icon svg { width: 16px; height: 16px; stroke: #9CDCFE; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .contact-item-label { font-size: 11px; font-weight: 600; color: #9CDCFE; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+    .contact-item-value { font-size: 14.5px; color: #e8e8e8; font-weight: 500; }
+    .contact-item-value a { color: #e8e8e8; text-decoration: none; }
+    .contact-item-value a:hover { color: #9CDCFE; text-decoration: underline; }
+    .contact-calendar-desc { color: #b0b8c8; font-size: 14px; margin-bottom: 20px; }
+
+    /* ─── FAQ (white) ─── */
+    .faq-section { background: #ffffff; overflow: hidden; }
+    .faq-wrapper { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+    .faq-left {
+      background: #f0f4ff;
+      padding: 80px 48px;
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .faq-accent-bar { width: 48px; height: 3px; background: #569CD6; margin-bottom: 20px; }
+    .faq-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; line-height: 1.2; }
+    .faq-subtitle { font-size: 15px; line-height: 1.8; color: #4a5568; }
+    .faq-right { padding: 60px 48px; background: #ffffff; display: flex; align-items: center; }
+    .faq-items { display: flex; flex-direction: column; width: 100%; }
+    .faq-item { cursor: pointer; border-bottom: 1px solid #e8e8e8; }
+    .faq-item:first-child { border-top: 1px solid #e8e8e8; }
+    .faq-question { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 18px 0; user-select: none; }
+    .faq-q-text { font-size: 15px; font-weight: 600; color: #1a1a2e; flex: 1; line-height: 1.4; display: flex; align-items: center; gap: 8px; }
+    .faq-toggle { color: #569CD6; font-size: 22px; font-weight: 300; flex-shrink: 0; transition: transform 0.3s ease; }
+    .faq-item.open .faq-toggle { transform: rotate(45deg); }
+    .faq-answer { color: #4a5568; font-size: 14px; line-height: 1.7; padding: 0 0 18px; display: none; }
+    .faq-item.open .faq-answer { display: block; }
+
+    /* ─── TRUST SIGNALS ─── */
+    .trust-signals { display: flex; flex-wrap: wrap; gap: 10px 0; align-items: center; }
+    .trust-signal {
+      display: flex; align-items: center; gap: 7px;
+      font-size: 13px; font-weight: 500; color: #4a5568;
+      padding: 0 16px 0 0;
+    }
+    .trust-signal::before {
+      content: ''; display: inline-block; width: 6px; height: 6px;
+      border-radius: 50%; background: #569CD6; flex-shrink: 0;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 1024px) {
+      .hero-inner { grid-template-columns: 1fr 1px 1fr; }
+      .hero-image-panel { display: none; }
+      .individual-tax .svc-layout,
+      .international-tax .svc-layout { grid-template-columns: 1fr; }
+      .individual-tax .svc-image-panel,
+      .international-tax .svc-image-panel { display: none; }
+      .business-tax .svc-layout { grid-template-columns: 1fr; }
+      .business-tax .svc-image-panel { display: none; }
+      .full-office-grid { grid-template-columns: 1fr 1fr; }
+      .industries-grid { grid-template-columns: 1fr; }
+      .industries-header .section-subheading { max-width: none; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .faq-wrapper { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+      .hero-divider { display: none; }
+      .hero-brand-name { font-size: clamp(36px, 10vw, 60px); white-space: normal; }
+      .hero-contact-box { grid-template-columns: 1fr 1fr; }
+      .svc-content { padding: 48px 24px; }
+      .process-bring-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-form-panel { padding: 24px 20px; }
+      .faq-left, .faq-right { padding: 40px 24px; }
     }
     @media (max-width: 480px) {
-      .process-bring-section { padding: 56px 0; }
-      .industry-card { gap: 12px; min-height: 0; height: auto; }
-      .industry-category-label { font-size: 9px; letter-spacing: 0.1em; }
-      .industry-title { font-size: clamp(17px, 6vw, 20px); }
+      .full-office-grid { grid-template-columns: 1fr; }
+      .full-office-item { border-right: none; border-bottom: 1px solid rgba(26,26,46,0.08); }
+      .full-office-item:last-child { border-bottom: none; }
+      .industry-card { grid-template-columns: 1fr; }
     }
   </style>
   {{ partial "nav-css.html" . }}
@@ -1338,161 +483,195 @@
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <section class="hero" aria-label="Introduction">
-  <div class="container">
-    <div class="hero-inner">
+  <div aria-hidden="true" class="hero-watermark">🧭</div>
+  <div class="hero-body">
+    <div class="container">
+      <div class="hero-inner">
 
-      <!-- Left: Brand name -->
-      <div class="hero-left fade-up">
-        <h1 class="hero-brand-name">Vantis CPA</h1>
-      </div>
+        <!-- Left: Brand name -->
+        <div class="hero-left fade-up">
+          <h1 class="hero-brand-name">Vantis CPA</h1>
+          <p class="hero-tagline">Tax &amp; Accounting for Local &amp; Global Clients</p>
+        </div>
 
-      <!-- Divider -->
-      <div class="hero-divider" aria-hidden="true"></div>
+        <!-- Divider -->
+        <div class="hero-divider" aria-hidden="true"></div>
 
-      <!-- Right: Intro + contact box -->
-      <div class="hero-right fade-up fade-up-d1">
-        <p class="hero-intro-label">About...</p>
-        <p class="hero-sub">A tax and accounting company dedicated to local and global taxpayers. We provide a suite of services including proactive tax planning, seamless compliance and full-service accounting, delivered with depth and clear communication. The goal is straightforward: minimize your tax exposure and put the code to work for you. The clients we serve are the ones others look to for advice.</p>
+        <!-- Right: Intro + contact box -->
+        <div class="hero-right fade-up fade-up-d1">
+          <p class="hero-intro-label">About...</p>
+          <p class="hero-sub">A tax and accounting company dedicated to local and global taxpayers. We provide a suite of services including proactive tax planning, seamless compliance and full-service accounting, delivered with depth and clear communication. The goal is straightforward: minimize your tax exposure and put the code to work for you. The clients we serve are the ones others look to for advice.</p>
 
-        <div class="hero-contact-box">
-          <div class="hero-contact-item">
-            <span class="label">Email</span>
-            <a href="mailto:info@vantiscpa.com" class="value">info@vantiscpa.com</a>
+          <div class="hero-contact-box">
+            <div class="hero-contact-item">
+              <span class="label">Email</span>
+              <a href="mailto:info@vantiscpa.com" class="value">info@vantiscpa.com</a>
+            </div>
+            <div class="hero-contact-item">
+              <span class="label">Phone</span>
+              <a href="tel:+13055635551" class="value">(305) 563-5551</a>
+            </div>
+            <div class="hero-contact-item">
+              <span class="label">Experience</span>
+              <span class="value">10+ Years</span>
+            </div>
+            <div class="hero-contact-item">
+              <span class="label">Languages</span>
+              <span class="value">English &amp; Spanish</span>
+            </div>
+            <div class="hero-contact-item">
+              <span class="label">License</span>
+              <span class="value">Licensed CPA &middot; Florida</span>
+            </div>
+            <div class="hero-contact-item">
+              <span class="label">Graduate Degree</span>
+              <span class="value">Master of Taxation</span>
+            </div>
           </div>
-          <div class="hero-contact-item">
-            <span class="label">Phone</span>
-            <a href="tel:+13055635551" class="value">(305) 563-5551</a>
-          </div>
-          <div class="hero-contact-item">
-            <span class="label">Experience</span>
-            <span class="value">10+ Years</span>
-          </div>
-          <div class="hero-contact-item">
-            <span class="label">Languages</span>
-            <span class="value">English &amp; Spanish</span>
-          </div>
-          <div class="hero-contact-item">
-            <span class="label">License</span>
-            <span class="value">Licensed CPA &middot; Florida</span>
-          </div>
-          <div class="hero-contact-item">
-            <span class="label">Graduate Degree</span>
-            <span class="value">Master of Taxation</span>
+
+          <div class="hero-ctas fade-up fade-up-d2">
+            <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
+            <a href="#contact" class="btn-secondary">Send Us an Email</a>
           </div>
         </div>
 
-        <div class="hero-ctas fade-up fade-up-d2">
-          <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Schedule a Consultation</a>
-          <a href="#contact" class="btn-secondary">Send Us an Email</a>
-        </div>
       </div>
+    </div>
+  </div>
 
+  <!-- Right-side image panel -->
+  <div class="hero-image-panel" aria-hidden="true">
+    <img src="/images/globe-hero.jpg" alt="" loading="eager">
+  </div>
+</section>
+
+<!-- ═══════════════════ INDIVIDUAL TAX ═══════════════════ -->
+<section class="svc-section individual-tax" id="individual-tax" aria-labelledby="individual-tax-heading">
+  <div class="svc-layout">
+    <div class="svc-content fade-up">
+      <p class="section-label">👤 Individual Tax</p>
+      <h2 class="section-heading" id="individual-tax-heading">Individual Tax</h2>
+      <p class="section-subheading">Tax returns and year-round planning for individuals with income from W-2, 1099, K-1, investments, and rental properties.</p>
+      <ul class="svc-list">
+        <li><span>📋</span> 1040 Preparation</li>
+        <li><span>📋</span> Quarterly Estimates</li>
+        <li><span>📋</span> State Returns</li>
+        <li><span>📋</span> IRS Notices and Amended Returns</li>
+        <li><span>📋</span> Year-Round Tax Planning</li>
+      </ul>
+      <a href="/services/individual-tax/" class="svc-learn-more">Learn More →</a>
+    </div>
+    <div class="svc-image-panel" aria-hidden="true">
+      <img src="/images/card-local.jpg" alt="" loading="lazy">
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ DIFFERENTIATORS ═══════════════════ -->
-<!-- ═══════════════════ SERVICES ═══════════════════ -->
-<section class="services" id="services" aria-labelledby="services-heading">
+<!-- ═══════════════════ BUSINESS TAX ═══════════════════ -->
+<section class="svc-section business-tax" id="business-tax" aria-labelledby="business-tax-heading">
+  <div class="svc-layout">
+    <div class="svc-image-panel" aria-hidden="true">
+      <img src="/images/card-founders.jpg" alt="" loading="lazy">
+    </div>
+    <div class="svc-content fade-up">
+      <p class="section-label">🏢 Business Tax</p>
+      <h2 class="section-heading" id="business-tax-heading">Business Tax</h2>
+      <p class="section-subheading">Business tax returns, entity structure, and year-round tax planning for sole proprietors, partnerships, S-corps, and C-corps.</p>
+      <ul class="svc-list">
+        <li><span>📊</span> S-Corp &amp; Partnership Returns</li>
+        <li><span>📊</span> Entity Structure &amp; Elections</li>
+        <li><span>📊</span> Owner Compensation Planning</li>
+        <li><span>📊</span> Prior-Year &amp; Catch-Up Filing</li>
+        <li><span>📊</span> Year-Round Tax Management</li>
+      </ul>
+      <a href="/services/business-tax/" class="svc-learn-more">Learn More →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ INTERNATIONAL TAX ═══════════════════ -->
+<section class="svc-section international-tax" id="international-tax" aria-labelledby="international-tax-heading">
+  <div class="intl-watermark" aria-hidden="true">🌐</div>
+  <div class="svc-layout">
+    <div class="svc-content fade-up">
+      <p class="section-label">🌐 International Tax</p>
+      <h2 class="section-heading" id="international-tax-heading">International Tax</h2>
+      <p class="section-subheading">Cross-border tax is where the code gets technical and the penalties get serious. We structure it to minimize what you owe worldwide.</p>
+      <ul class="svc-list">
+        <li><span>✈️</span> U.S. Persons with Foreign Assets</li>
+        <li><span>✈️</span> U.S. Expats Abroad</li>
+        <li><span>✈️</span> Pre-Immigration</li>
+        <li><span>✈️</span> Foreign Investors and Real Estate Owners</li>
+        <li><span>✈️</span> U.S. Foreign-Owned Subsidiaries</li>
+      </ul>
+      <a href="/services/international-tax" class="svc-learn-more">Learn More →</a>
+    </div>
+    <div class="svc-image-panel" aria-hidden="true">
+      <img src="/images/card-expats.jpg" alt="" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FULL OFFICE ═══════════════════ -->
+<section class="full-office" id="full-office" aria-labelledby="full-office-heading">
+  <div class="full-office-bg" aria-hidden="true"></div>
   <div class="container">
-    <div class="services-header">
-      <p class="section-label fade-up">Full-service CPA firm</p>
-      <h2 class="section-heading fade-up fade-up-d1" id="services-heading">What We Do</h2>
-      <p class="section-subheading fade-up fade-up-d2">Everything from entity formation and tax strategy to compliance and bookkeeping, handled with the expertise your situation requires.</p>
+    <div class="fade-up">
+      <p class="section-label">🗂️ Full Office</p>
+      <h2 class="section-heading" id="full-office-heading">Full Office</h2>
+      <p class="section-subheading">Everything your business needs beyond tax — handled under one roof.</p>
     </div>
-    <!-- Core Services Grid -->
-    <h3 class="services-section-heading">Tax Consulting and Compliance</h3>
-    <div class="services-grid core-services-grid">
-      <div class="service-card core-service-card fade-up fade-up-d1">
-        <span class="service-label-badge">Expert</span>
-        <h4 class="service-title">Individual Tax</h4>
-        <p class="service-description">Tax returns and year-round planning for individuals with income from W-2, 1099, K-1, investments, and rental properties.</p>
-        <ul class="service-list">
-          <li>1040 Preparation</li>
-          <li>Quarterly Estimates</li>
-          <li>State Returns</li>
-          <li>IRS Notices and Amended Returns</li>
-          <li>Year-Round Tax Planning</li>
-        </ul>
-        <a href="/services/individual-tax/" class="service-learn-more">Learn More →</a>
+    <div class="full-office-grid">
+      <div class="full-office-item fade-up fade-up-d1">
+        <div class="full-office-item-title">📚 Bookkeeping</div>
+        <p class="full-office-item-desc">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management.</p>
+        <p class="full-office-item-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
+        <a href="/services/full-suite/bookkeeping" class="full-office-learn-more">Learn More →</a>
       </div>
-
-      <div class="service-card core-service-card fade-up fade-up-d2">
-        <span class="service-label-badge">Expert</span>
-        <h4 class="service-title">Business Tax</h4>
-        <p class="service-description">Business tax returns, entity structure, and year-round tax planning for sole proprietors, partnerships, S-corps, and C-corps.</p>
-        <ul class="service-list">
-          <li>S-Corp &amp; Partnership Returns</li>
-          <li>Entity Structure &amp; Elections</li>
-          <li>Owner Compensation Planning</li>
-          <li>Prior-Year &amp; Catch-Up Filing</li>
-          <li>Year-Round Tax Management</li>
-        </ul>
-        <a href="/services/business-tax/" class="service-learn-more">Learn More →</a>
+      <div class="full-office-item fade-up fade-up-d2">
+        <div class="full-office-item-title">💳 Payroll</div>
+        <p class="full-office-item-desc">Complete payroll setup and ongoing management. We handle all filings, deposits, and compliance.</p>
+        <p class="full-office-item-tools">Gusto · W-2 &amp; 1099 · State Filings</p>
+        <a href="/services/full-suite/payroll" class="full-office-learn-more">Learn More →</a>
       </div>
-
-      <div class="service-card core-service-card fade-up fade-up-d3">
-        <span class="service-label-badge">Expert</span>
-        <h4 class="service-title">International Tax</h4>
-        <p class="service-description">Cross-border tax is where the code gets technical and the penalties get serious. We structure it to minimize what you owe worldwide.</p>
-        <ul class="service-list">
-          <li>U.S. Persons with Foreign Assets</li>
-          <li>U.S. Expats Abroad</li>
-          <li>Pre-Immigration</li>
-          <li>Foreign Investors and Real Estate Owners</li>
-          <li>U.S. Foreign-Owned Subsidiaries</li>
-        </ul>
-        <a href="/services/international-tax" class="service-learn-more">Learn More →</a>
+      <div class="full-office-item fade-up fade-up-d3">
+        <div class="full-office-item-title">🧾 Sales Tax</div>
+        <p class="full-office-item-desc">Florida sales tax filings, nexus compliance, and timely remittances. Fully handled.</p>
+        <p class="full-office-item-tools">Florida Sales Tax · Nexus · Filings</p>
+        <a href="/services/full-suite/sales-tax" class="full-office-learn-more">Learn More →</a>
       </div>
-    </div>
-
-    <!-- Support Services Grid -->
-    <h3 class="services-section-heading">Full Suite</h3>
-    <div class="services-grid support-services-grid">
-      <div class="service-card support-service-card fade-up fade-up-d1">
-        <h4 class="service-title">Back Office</h4>
-        <p class="service-description">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs.</p>
-        <p class="service-tools">LLC Renewals · Registered Agent · EIN/ITIN</p>
-        <a href="/services/back-office" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card support-service-card fade-up fade-up-d2">
-        <h4 class="service-title">Bookkeeping</h4>
-        <p class="service-description">Clean books, monthly reconciliations, and financial reporting. QuickBooks setup and management.</p>
-        <p class="service-tools">QuickBooks · Monthly Reconcile · Cash Flow</p>
-        <a href="/services/bookkeeping" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card support-service-card fade-up fade-up-d3">
-        <h4 class="service-title">Payroll</h4>
-        <p class="service-description">Complete payroll setup and ongoing management. We handle all filings, deposits, and compliance.</p>
-        <p class="service-tools">Gusto · W-2 &amp; 1099 · State Filings</p>
-        <a href="/services/payroll" class="service-learn-more">Learn More →</a>
-      </div>
-
-      <div class="service-card support-service-card fade-up fade-up-d4">
-        <h4 class="service-title">Sales Tax</h4>
-        <p class="service-description">Florida sales tax filings, nexus compliance, and timely remittances. Fully handled.</p>
-        <p class="service-tools">Florida Sales Tax · Nexus · Filings</p>
-        <a href="/services/sales-tax" class="service-learn-more">Learn More →</a>
+      <div class="full-office-item fade-up fade-up-d4">
+        <div class="full-office-item-title">🗃️ Back Office</div>
+        <p class="full-office-item-desc">Business mailing, banking setup, LLC renewals, and registered agent service. We obtain EINs and ITINs.</p>
+        <p class="full-office-item-tools">LLC Renewals · Registered Agent · EIN/ITIN</p>
+        <a href="/services/full-suite/back-office" class="full-office-learn-more">Learn More →</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══════════════════ INDUSTRIES ═══════════════════ -->
+<!-- ═══════════════════ WHO WE SERVE ═══════════════════ -->
 <section class="industries" id="industries" aria-labelledby="industries-heading">
   <div class="container">
     <div class="industries-header">
-      <p class="section-label fade-up">FOCUSED EXPERTISE</p>
+      <p class="section-label fade-up">🤝 Who We Serve</p>
       <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">Focused Expertise</h2>
       <p class="section-subheading fade-up fade-up-d2">Choose the tax lane that matches the complexity of your situation.</p>
     </div>
     <div class="industries-grid" id="industries-grid">
-      <!-- Will be populated by JavaScript -->
+      <!-- Populated by JavaScript below -->
     </div>
 
     <script>
+      const industryThumbnails = {
+        'individuals': '/images/card-local.jpg',
+        'business': '/images/card-founders.jpg',
+        'international': '/images/card-expats.jpg',
+        'real-estate': '/images/card-realestate.jpg',
+        'expats': '/images/card-expats.jpg',
+        'inbound': '/images/card-inbound.jpg',
+      };
+
       const industriesGrid = document.getElementById('industries-grid');
 
       Object.values(practicesData).forEach((practice, index) => {
@@ -1503,8 +682,22 @@
         const card = document.createElement('a');
         card.href = practice.href;
         card.className = `industry-card fade-up ${delayClass}`;
-        card.setAttribute('data-accent', practice.accent);
         card.setAttribute('aria-label', practice.name.replace(/&/g, 'and'));
+
+        // Left side: thumbnail + title group
+        const rowLeft = document.createElement('div');
+        rowLeft.className = 'industry-row-left';
+
+        // Thumbnail
+        const thumbKey = Object.keys(industryThumbnails).find(k => practice.href && practice.href.includes(k));
+        if (thumbKey) {
+          const thumb = document.createElement('img');
+          thumb.src = industryThumbnails[thumbKey];
+          thumb.alt = '';
+          thumb.className = 'industry-thumbnail';
+          thumb.loading = 'lazy';
+          rowLeft.appendChild(thumb);
+        }
 
         const titleGroup = document.createElement('div');
         titleGroup.className = 'industry-title-group';
@@ -1525,32 +718,19 @@
         description.className = 'industry-description';
         description.textContent = practice.description;
         titleGroup.appendChild(description);
-        card.appendChild(titleGroup);
+
+        rowLeft.appendChild(titleGroup);
+        card.appendChild(rowLeft);
 
         const learnMore = document.createElement('span');
         learnMore.className = 'industry-learn-more';
         learnMore.textContent = 'Learn More →';
         card.appendChild(learnMore);
 
-        // Niches list (hidden, preserved for future use)
-        const nichesList = document.createElement('ul');
-        nichesList.className = 'industry-niches';
-        practice.niches.forEach(niche => {
-          const nicheItem = document.createElement('li');
-          const nicheLink = document.createElement('a');
-          nicheLink.href = niche.href;
-          nicheLink.className = 'industry-niche-link';
-          nicheLink.innerHTML = niche.name + ' <span aria-hidden="true">→</span>';
-          nicheItem.appendChild(nicheLink);
-          nichesList.appendChild(nicheItem);
-        });
-        card.appendChild(nichesList);
-
         wrapper.appendChild(card);
         industriesGrid.appendChild(wrapper);
       });
     </script>
-    </div>
   </div>
 </section>
 
@@ -1561,12 +741,11 @@
 
       <!-- Our Process -->
       <div>
-        <p class="section-label fade-up">How It Works</p>
+        <p class="section-label fade-up">🔄 How It Works</p>
         <h2 class="section-heading fade-up fade-up-d1" id="process-heading">Our Process</h2>
         <p class="section-subheading fade-up fade-up-d2">Three straightforward steps from your first message to a fully managed tax strategy.</p>
 
         <div class="process-steps">
-
           <div class="process-step fade-up fade-up-d1">
             <div class="process-step-left">
               <div class="process-step-badge">01</div>
@@ -1601,13 +780,12 @@
               <div class="process-step-desc">We execute the plan, file accurately, and stay in your corner year-round, flagging opportunities before they pass.</div>
             </div>
           </div>
-
         </div>
       </div>
 
       <!-- What to Bring -->
       <div class="fade-up fade-up-d2">
-        <p class="section-label">First Meeting Checklist</p>
+        <p class="section-label">📋 First Meeting Checklist</p>
         <h2 class="section-heading fade-up-d1">What to Bring</h2>
         <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
 
@@ -1643,34 +821,35 @@
 <section class="contact" id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-header">
-      <p class="section-label fade-up">Next Steps</p>
+      <p class="section-label fade-up">📬 Next Steps</p>
       <h2 class="section-heading fade-up fade-up-d1" id="contact-heading">Get in Touch</h2>
       <p class="section-subheading fade-up fade-up-d2">Tell us about your situation — we'll let you know how we can help</p>
     </div>
     <div class="contact-grid">
 
       <div class="fade-up fade-up-d1">
-        <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" autocomplete="name" required />
+        <div class="contact-form-panel">
+          <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" autocomplete="email" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Provide a Brief Background</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <div class="form-submit-row">
+              <button type="submit" class="form-submit">Send Us an Email</button>
+            </div>
+          </form>
+          <div class="form-success" id="formSuccess" role="alert">
+            <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
           </div>
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" autocomplete="email" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Provide a Brief Background</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
-          </div>
-          <div class="form-submit-row">
-            <button type="submit" class="form-submit">Send Us an Email</button>
-          </div>
-        </form>
-        <div class="form-success" id="formSuccess" role="alert">
-          <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
         </div>
-
       </div>
 
       <div class="contact-right-column">
@@ -1696,10 +875,9 @@
               <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
             </div>
           </div>
-
         </div>
 
-        <div class="contact-calendar fade-up fade-up-d2">
+        <div class="contact-calendar fade-up fade-up-d3">
           <h3 class="contact-calendar-title">Schedule a Meeting</h3>
           <p class="contact-calendar-desc">Book a 30-minute consultation</p>
           <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
@@ -1713,27 +891,25 @@
 <!-- ═══════════════════ FAQ ═══════════════════ -->
 <section class="faq-section" id="faq">
   <div class="faq-wrapper">
-    <!-- LEFT PANEL: Light Green with messaging -->
     <div class="faq-left">
       <div class="faq-accent-bar"></div>
-      <h2 class="faq-title">Your Questions Answered</h2>
+      <h2 class="faq-title">💬 Your Questions Answered</h2>
       <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
     </div>
 
-    <!-- RIGHT PANEL: Scrollable Q&A -->
     <div class="faq-right">
       <div class="faq-items">
         <div class="faq-item open">
           <div class="faq-question">
-            <span class="faq-q-text">What makes Vantis different from other CPAs?</span>
-            <span class="faq-toggle">−</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> What makes Vantis different from other CPAs?</span>
+            <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">We combine proactive tax strategy with responsive communication. Rather than waiting for tax season, we work year-round to optimize your situation and flag opportunities before they pass.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text">How do you avoid surprise billing?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> How do you avoid surprise billing?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay.</div>
@@ -1741,7 +917,7 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text">Why get proactive tax advice instead of just filing?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> Why get proactive tax advice instead of just filing?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense.</div>
@@ -1749,7 +925,7 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text">What services do you offer beyond tax filing?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> What services do you offer beyond tax filing?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">We offer bookkeeping, back-office services, payroll processing, sales tax management, and full-service accounting. One firm for all your business needs.</div>
@@ -1757,7 +933,7 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text">What happens in our first consultation?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> What happens in our first consultation?</span>
             <span class="faq-toggle">+</span>
           </div>
           <div class="faq-answer">We'll discuss your business, current situation, and biggest challenges. You'll get a clear sense of how we work and whether we're a good fit. No pressure, no sales pitch.</div>
