@@ -1,16 +1,16 @@
 <style>
     :root {
-      --primary-dark: #062215;
-      --primary: #15482E;
-      --primary-darkest: #041f12;
-      --accent: #3a8b5f;
-      --bg: #e8e8e8;
-      --bg-alt: #e0e0e0;
-      --text-dark: #0f2818;
-      --text-mid: #3d6b52;
-      --navy: #062215;
-      --navy-dark: #041f12;
-      --card-radius: 14px;
+      --primary-dark: #1a1a2e;
+      --primary: #569CD6;
+      --primary-darkest: #0d1117;
+      --accent: #4EC9B0;
+      --bg: #f8f7ff;
+      --bg-alt: #edeef7;
+      --text-dark: #1a1a2e;
+      --text-mid: #4a5568;
+      --navy: #1a1a2e;
+      --navy-dark: #0d1117;
+      --card-radius: 8px;
       --nav-height: 68px;
     }
 
@@ -24,27 +24,10 @@
       font-family: 'Inter', sans-serif;
       color: var(--text-dark);
       background-color: #ffffff;
-      background-image:
-        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
-      background-size: 64px 20px;
-      background-attachment: fixed;
       line-height: 1.6;
       padding-top: var(--nav-height);
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
-    }
-
-    body::before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
-      pointer-events: none;
-      z-index: 0;
     }
 
     a {
@@ -57,25 +40,24 @@
       text-decoration: underline;
     }
 
-    /* Hero Section — floating card style */
+    /* Hero Section */
     .hero {
-      background: radial-gradient(circle at center, #edeef7 0%, #fff 72%);
+      background: linear-gradient(135deg, #f8f7ff 0%, #edeef7 60%, #e8e6f5 100%);
       padding: 80px 48px;
       text-align: center;
       position: relative;
       z-index: 1;
-      margin: 31px 25px 22px 22px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
       overflow: hidden;
-      opacity: 0.98;
     }
 
     .hero h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 6vw, 64px);
       font-weight: 700;
-      color: #2f5342;
+      color: #1a1a2e;
       margin: 0;
       line-height: 1.15;
       letter-spacing: -0.5px;
@@ -204,10 +186,9 @@
       min-height: calc(100vh - var(--nav-height) - 300px);
       position: relative;
       z-index: 1;
-      margin: 0 25px 22px 22px;
-      border-radius: 20px;
-      box-shadow: 0 16px 48px rgba(0,0,0,0.2), 0 2px 8px rgba(0,0,0,0.1);
-      opacity: 0.98;
+      margin: 0;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     .left-column {
@@ -215,23 +196,21 @@
       flex-direction: column;
       background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px),
                         repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px);
-      background-color: #041f12;
-      border-radius: 20px 0 0 20px;
+      background-color: #1a1a2e;
+      border-radius: 0;
     }
 
     .right-column {
       display: flex;
       flex-direction: column;
       padding: 80px 40px 80px 60px;
-      background: radial-gradient(circle at 70% 30%, #edeef7 0%, #fff 65%);
-      border-radius: 0 20px 20px 0;
+      background: #ffffff;
+      border-radius: 0;
     }
 
-    /* Contact Form - Berkowitz-style flush sidebar */
+    /* Contact Form - flush sidebar */
     .contact-form {
-      background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px),
-                        repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.01) 2px, rgba(255, 255, 255, 0.01) 4px);
-      background-color: #041f12;
+      background-color: #1a1a2e;
       border: none;
       padding: 48px 40px;
       border-radius: 20px 0 0 20px;
@@ -342,7 +321,7 @@
 
     .form-submit {
       padding: 14px 32px;
-      background: #2f5342;
+      background: #569CD6;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -351,14 +330,13 @@
       font-weight: 600;
       cursor: pointer;
       transition: all 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
       width: 100%;
       margin-top: 8px;
     }
 
     .form-submit:hover {
+      background: #4a88be;
       transform: translateY(-2px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
     }
 
     /* Trust Bar — inside hero card, flush to bottom edge */
@@ -479,13 +457,13 @@
     }
 
     .form-button.primary {
-      background: #2f5342;
-      border-color: #2f5342;
+      background: #569CD6;
+      border-color: #569CD6;
     }
 
     .form-button.primary:hover {
-      background: #3d6b52;
-      border-color: #3d6b52;
+      background: #4a88be;
+      border-color: #4a88be;
     }
 
     /* Main Content */
@@ -800,13 +778,13 @@
     @media (max-width: 768px) {
       .hero {
         padding: 48px 20px;
-        margin: 12px;
-        border-radius: 14px;
+        margin: 0;
+        border-radius: 0;
       }
 
       .main-container {
-        margin: 0 12px 12px;
-        border-radius: 14px;
+        margin: 0;
+        border-radius: 0;
       }
 
       .hero h1 {
@@ -866,13 +844,13 @@
     @media (max-width: 480px) {
       .hero {
         padding: 48px 15px;
-        margin: 8px;
-        border-radius: 12px;
+        margin: 0;
+        border-radius: 0;
       }
 
       .main-container {
-        margin: 0 8px 8px;
-        border-radius: 12px;
+        margin: 0;
+        border-radius: 0;
       }
 
       .hero h1 {
