@@ -1,0 +1,38 @@
+# Legacy expertise hub
+/expertise/ /services/ 301
+
+# Legacy business pages
+/expertise/business/ /services/business-tax/ 301
+/expertise/founders/ /services/business-tax/ 301
+/expertise/business/c-corps/ /services/business-tax/c-corporations/ 301
+/expertise/business/flowthroughs/ /services/business-tax/partnerships/ 301
+/services/business-tax/flowthroughs/ /services/business-tax/partnerships/ 301
+/expertise/business/s-corps/ /services/business-tax/s-corps/ 301
+/expertise/business/schedule-c/ /services/business-tax/schedule-c/ 301
+/expertise/realestate/ /services/business-tax/real-estate/ 301
+
+# Legacy individual pages
+/expertise/individuals/ /services/individual-tax/ 301
+/expertise/local/ /services/individual-tax/ 301
+
+# Legacy full-suite pages
+/services/back-office/ /services/full-suite/back-office/ 301
+/services/bookkeeping/ /services/full-suite/bookkeeping/ 301
+/services/payroll/ /services/full-suite/payroll/ 301
+/services/sales-tax/ /services/full-suite/sales-tax/ 301
+
+# Legacy international tax pages
+/expertise/expats/ /services/international-tax/expats/ 301
+/expertise/outbound/ /services/international-tax/u-s-with-international-ties/ 301
+/expertise/outbound/canada/ /services/international-tax/canada/ 301
+/services/international-tax/u-s-with-international-ties/canada/ /services/international-tax/canada/ 301
+/expertise/outbound/latam/ /services/international-tax/latin-america/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/ /services/international-tax/latin-america/ 301
+/expertise/inbound/ /services/international-tax/foreign-business-and-investors/ 301
+/expertise/realestate/international/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
+/services/international-tax/real-estate/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
+
+# Legacy international tax child pages
+/expertise/inbound/* /services/international-tax/foreign-business-and-investors/:splat 301
+/expertise/outbound/latam/* /services/international-tax/latin-america/:splat 301
+/services/international-tax/u-s-with-international-ties/latin-america/* /services/international-tax/latin-america/:splat 301
