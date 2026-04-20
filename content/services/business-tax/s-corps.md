@@ -7,7 +7,7 @@ nav_title: "S-Corporations"
 aliases:
   - /expertise/business/s-corps/
 subtitle: "Reasonable compensation, payroll tax savings, basis tracking, and S-corp strategy for owner-operated businesses."
-heroImagePosition: "center 200%"
+heroImagePosition: "center center"
 heroOverlayOpacity: 0.85
 sections:
   - title: "An S-Corp Is a Tax Strategy, Not a Milestone"

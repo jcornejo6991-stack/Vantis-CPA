@@ -7,7 +7,7 @@ nav_title: "Schedule C"
 aliases:
   - /expertise/business/schedule-c/
 subtitle: "Tax reporting and planning for sole proprietors and single-member LLCs."
-heroImagePosition: "center 200%"
+heroImagePosition: "center center"
 heroOverlayOpacity: 0.85
 sections:
   - title: "Schedule C Is Often Simpler, But It Is Not Casual"

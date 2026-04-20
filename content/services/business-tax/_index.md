@@ -4,7 +4,7 @@ description: "Business tax returns, entity structure, and year-round tax plannin
 layout: "service"
 subtitle: "Business tax returns, entity structure, and year-round tax management for owner-operated businesses."
 heroImage: "/images/business-tax-hero-handshake.jpg"
-heroImagePosition: "center 200%"
+heroImagePosition: "center center"
 heroImageScale: 1
 heroOverlayOpacity: 0.85
 aliases:

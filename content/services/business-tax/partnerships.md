@@ -8,7 +8,7 @@ aliases:
   - /services/business-tax/flowthroughs/
   - /expertise/business/flowthroughs/
 subtitle: "Partnership tax, allocations, basis, and year-round planning for LLCs and other multi-owner businesses."
-heroImagePosition: "center 200%"
+heroImagePosition: "center center"
 heroOverlayOpacity: 0.85
 sections:
   - title: "Partnerships and Multi-Owner Entities"
