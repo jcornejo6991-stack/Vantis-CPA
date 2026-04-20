@@ -24,15 +24,30 @@
 # Legacy international tax pages
 /expertise/expats/ /services/international-tax/expats/ 301
 /expertise/outbound/ /services/international-tax/u-s-with-international-ties/ 301
-/expertise/outbound/canada/ /services/international-tax/canada/ 301
-/services/international-tax/u-s-with-international-ties/canada/ /services/international-tax/canada/ 301
-/expertise/outbound/latam/ /services/international-tax/latin-america/ 301
-/services/international-tax/u-s-with-international-ties/latin-america/ /services/international-tax/latin-america/ 301
+/expertise/outbound/canada/ /resources/us-tax-for-canadians/ 301
+/services/international-tax/u-s-with-international-ties/canada/ /resources/us-tax-for-canadians/ 301
+/services/international-tax/canada/ /resources/us-tax-for-canadians/ 301
+/expertise/outbound/latam/ /resources/latin-america-us-tax-planning/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/ /resources/latin-america-us-tax-planning/ 301
+/services/international-tax/latin-america/ /resources/latin-america-us-tax-planning/ 301
 /expertise/inbound/ /services/international-tax/foreign-business-and-investors/ 301
 /expertise/realestate/international/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
 /services/international-tax/real-estate/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
 
 # Legacy international tax child pages
 /expertise/inbound/* /services/international-tax/foreign-business-and-investors/:splat 301
-/expertise/outbound/latam/* /services/international-tax/latin-america/:splat 301
-/services/international-tax/u-s-with-international-ties/latin-america/* /services/international-tax/latin-america/:splat 301
+/expertise/outbound/latam/mexico/ /resources/us-tax-in-mexico/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/mexico/ /resources/us-tax-in-mexico/ 301
+/services/international-tax/latin-america/mexico/ /resources/us-tax-in-mexico/ 301
+/expertise/outbound/latam/brazil/ /resources/us-tax-for-brazilians/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/brazil/ /resources/us-tax-for-brazilians/ 301
+/services/international-tax/latin-america/brazil/ /resources/us-tax-for-brazilians/ 301
+/expertise/outbound/latam/colombia/ /resources/us-tax-for-colombians/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/colombia/ /resources/us-tax-for-colombians/ 301
+/services/international-tax/latin-america/colombia/ /resources/us-tax-for-colombians/ 301
+/expertise/outbound/latam/argentina/ /resources/us-tax-for-argentines/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/argentina/ /resources/us-tax-for-argentines/ 301
+/services/international-tax/latin-america/argentina/ /resources/us-tax-for-argentines/ 301
+/expertise/outbound/latam/chile/ /resources/us-tax-for-chileans/ 301
+/services/international-tax/u-s-with-international-ties/latin-america/chile/ /resources/us-tax-for-chileans/ 301
+/services/international-tax/latin-america/chile/ /resources/us-tax-for-chileans/ 301

@@ -21,16 +21,19 @@ sections:
       - label: "U.S. Real Estate Owned by Foreign Investors"
         url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
         description: "FIRPTA, 1040-NR, Section 871(d), withholding, foreign-owned U.S. rental property, and ownership-structure planning."
-  - title: "Country-Specific Pages"
+  - title: "Country Guides in the Resource Library"
     body: |
-      Some cross-border situations are shaped as much by the specific country as by the type of issue. These pages cover how U.S. tax rules interact with each country across all four service areas: U.S. individuals with ties to that country, U.S. expats living there, investors from that country coming into the U.S., and foreign buyers of U.S. real estate.
+      Country-driven questions usually start as research, not as an engagement scope. We keep those pages in the resource library so readers can begin with the actual search topic - Canada, Mexico, Brazil, Colombia, Argentina, or Chile - and then move into the right service lane once the facts are clear.
     cards:
-      - label: "Canada"
-        description: "RRSP and TFSA treatment, U.S.-Canada treaty, CCPC reporting, expat filing, and real estate and inbound investment considerations."
-        url: "/services/international-tax/canada/"
-      - label: "Latin America"
-        description: "Mexico, Brazil, Colombia, Argentina, and Chile — entity reporting, expat filing, inbound investment, and U.S. real estate for Latin American cross-border situations."
-        url: "/services/international-tax/latin-america/"
+      - label: "Canada Cross-Border Tax Guide"
+        description: "RRSPs, TFSAs, Americans in Canada, Canadian-owned U.S. LLCs, treaty coordination, and U.S. real estate."
+        url: "/resources/us-tax-for-canadians/"
+      - label: "Latin America U.S. Tax Planning"
+        description: "Country guides for Mexico, Brazil, Colombia, Argentina, and Chile covering expat filing, inbound structuring, and cross-border planning."
+        url: "/resources/latin-america-us-tax-planning/"
+      - label: "International Tax Resource Hub"
+        description: "Browse FEIE, foreign tax credit, Form 5471, Form 5472, pre-immigration, and country-specific planning guides."
+        url: "/resources/international-tax/"
   - title: "Inbound International Tax"
     body: |
       Inbound work covers foreign individuals, foreign-owned businesses, and investors entering the U.S. market. Common inbound needs include:

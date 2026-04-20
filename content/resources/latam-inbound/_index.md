@@ -1,6 +1,6 @@
 ---
-title: "U.S. Tax Resources for Latin American Investors"
-description: "Form 1120-F, Form 5472, estate planning blockers, and Form 8832 guides for foreign nationals and Latin American businesses investing in the U.S."
+title: "Latin America U.S. Tax Guides"
+description: "Country guides for Mexico, Brazil, Colombia, Argentina, and Chile covering U.S. expat filing, foreign-owned U.S. LLCs, inbound investment, and cross-border planning."
 layout: hub
 cluster: latam-inbound
 ---
