@@ -21,19 +21,6 @@ sections:
       - label: "U.S. Real Estate Owned by Foreign Investors"
         url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
         description: "FIRPTA, 1040-NR, Section 871(d), withholding, foreign-owned U.S. rental property, and ownership-structure planning."
-  - title: "Country Guides in the Resource Library"
-    body: |
-      Country-driven questions usually start as research, not as an engagement scope. We keep those pages in the resource library so readers can begin with the actual search topic - Canada, Mexico, Brazil, Colombia, Argentina, or Chile - and then move into the right service lane once the facts are clear.
-    cards:
-      - label: "Canada Cross-Border Tax Guide"
-        description: "RRSPs, TFSAs, Americans in Canada, Canadian-owned U.S. LLCs, treaty coordination, and U.S. real estate."
-        url: "/resources/us-tax-for-canadians/"
-      - label: "Latin America U.S. Tax Planning"
-        description: "Country guides for Mexico, Brazil, Colombia, Argentina, and Chile covering expat filing, inbound structuring, and cross-border planning."
-        url: "/resources/latin-america-us-tax-planning/"
-      - label: "International Tax Resource Hub"
-        description: "Browse FEIE, foreign tax credit, Form 5471, Form 5472, pre-immigration, and country-specific planning guides."
-        url: "/resources/international-tax/"
   - title: "Inbound International Tax"
     body: |
       Inbound work covers foreign individuals, foreign-owned businesses, and investors entering the U.S. market. Common inbound needs include:
