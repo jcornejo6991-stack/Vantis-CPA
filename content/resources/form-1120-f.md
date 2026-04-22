@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["inbound", "business"]
 services: ["international-tax", "business-tax"]
 featured: false
+subtopic: "Compliance & Reporting"
 primary_cluster: "latam-inbound"
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:

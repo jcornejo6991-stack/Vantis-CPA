@@ -5,6 +5,7 @@ date: 2026-04-19
 practices: ["inbound"]
 services: ["international-tax"]
 featured: false
+subtopic: "International & Treaties"
 primary_cluster: "international-tax"
 clusters: ["international-tax", "real-estate-tax", "latam-inbound"]
 aliases:

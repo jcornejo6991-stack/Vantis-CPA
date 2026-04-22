@@ -26,7 +26,9 @@ sections:
       Inbound work covers foreign individuals, foreign-owned businesses, and investors entering the U.S. market. Common inbound needs include:
 
       * Foreign-owned U.S. LLC and subsidiary setup
-      * Form 5472 compliance
+      * Form 5472 compliance (foreign-owned U.S. entities)
+      * Form 1120-F (foreign corporation U.S. tax returns)
+      * Form 1040-NR (nonresident alien tax returns)
       * EIN and ITIN applications
       * Entity classification and check-the-box elections
       * Foreign-owned U.S. business compliance
@@ -40,7 +42,9 @@ sections:
       Outbound work covers U.S. individuals and U.S. businesses with foreign income, foreign entities, or overseas operations. Common outbound needs include:
 
       * FBAR and FATCA reporting
-      * Form 5471 compliance
+      * Form 5471 compliance (U.S. shareholders of foreign corporations)
+      * Form 8865 (U.S. partners in foreign partnerships)
+      * Form 8858 (U.S. owners of foreign disregarded entities)
       * Foreign tax credit and FEIE analysis
       * U.S. reporting for foreign subsidiaries
       * Cross-border income and ownership reporting
@@ -70,6 +74,8 @@ sectionTitle: "Compliance & Planning Services"
 specializations:
   - label: "Form 5472 Compliance"
     url: "/resources/smllc-5472/"
+  - label: "Form 1120-F Filing"
+  - label: "Form 1040-NR Filing"
   - label: "Inbound U.S. Tax Structuring"
     url: "/services/international-tax/foreign-business-and-investors/"
   - label: "Entity Classification Elections"

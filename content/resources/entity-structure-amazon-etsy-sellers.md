@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["business", "individuals", "inbound"]
 services: ["business-tax", "bookkeeping"]
 featured: false
+subtopic: "Entity & Structure"
 primary_cluster: "ecommerce-sellers"
 clusters: ["ecommerce-sellers", "business-tax"]
 strategy_snapshot:

@@ -13,6 +13,8 @@
     {{ end }}
   {{ end }}
 
+  {{ $subtopicOrder := slice "Filing & Deadlines" "Entity & Structure" "Deductions & Credits" "Compliance & Reporting" "Planning Strategies" "International & Treaties" "Residency & Status" }}
+
   <style>
     .hub-wrap {
       --hub-orange: #CE9178;
@@ -82,87 +84,147 @@
       padding: 44px 48px 48px;
     }
 
-    .hub-section-label {
+    /* Layout: sidebar + article list */
+    .hub-layout {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    /* Sidebar */
+    .hub-sidebar {
+      width: 172px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
+    }
+
+    .hub-sidebar-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    .hub-sidebar-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #555;
+      padding: 7px 10px;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.15s;
+      margin-bottom: 2px;
+    }
+
+    .hub-sidebar-item:hover {
+      background: rgba(26,26,46,0.06);
+      color: #1a1a2e;
+      border-left-color: #1a1a2e;
+      text-decoration: none;
+    }
+
+    .hub-sidebar-item.active {
+      background: rgba(26,26,46,0.08);
+      color: #1a1a2e;
+      font-weight: 600;
+      border-left-color: #1a1a2e;
+    }
+
+    .hub-sidebar-count {
+      font-size: 11px;
+      color: #aaa;
+      font-weight: 400;
+      background: rgba(26,26,46,0.06);
+      padding: 1px 7px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Article list */
+    .hub-articles {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .hub-topic-section {
+      margin-bottom: 36px;
+      scroll-margin-top: 24px;
+    }
+
+    .hub-topic-header {
+      font-family: inherit;
       font-size: 11px;
       font-weight: 700;
-      color: var(--hub-orange);
-      text-transform: uppercase;
-      letter-spacing: 1.5px;
-      margin-bottom: 20px;
-    }
-
-    .hub-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 16px;
-      margin-bottom: 36px;
-    }
-
-    .hub-card {
-      background: #ffffff;
-      border-radius: 10px;
-      border: 1px solid rgba(26,26,46,0.08);
-      border-top: 3px solid var(--hub-navy);
-      padding: 20px;
-      box-shadow: 0 18px 38px rgba(13,17,23,0.08);
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      transition: transform 0.2s, box-shadow 0.2s;
-      color: inherit;
-    }
-
-    .hub-card:hover {
-      transform: translateY(-2px);
-      background: #ffffff;
-      box-shadow: 0 24px 44px rgba(13,17,23,0.12);
-      border-color: rgba(26,26,46,0.14);
-      border-top-color: var(--hub-navy);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .hub-card-stub {
-      opacity: 0.5;
-      border-top-color: rgba(26,26,46,0.18);
-      pointer-events: none;
-    }
-
-    .hub-card-coming {
-      font-size: 10px;
+      color: var(--hub-blue);
       text-transform: uppercase;
       letter-spacing: 1px;
-      color: var(--hub-orange);
-      font-weight: 700;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--hub-navy);
+      margin: 0;
     }
 
-    .hub-card .hub-card-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 16px;
-      font-weight: 700;
+    .hub-article-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(26,26,46,0.07);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hub-article-row:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .hub-article-row:hover .hub-article-title {
+      color: var(--hub-blue);
+    }
+
+    .hub-article-row:hover .hub-article-arrow {
+      opacity: 1;
+    }
+
+    .hub-article-main {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .hub-article-title {
+      font-size: 15px;
+      font-weight: 600;
       color: #1a1a2e;
       line-height: 1.3;
+      transition: color 0.15s;
     }
 
-    .hub-card-stub .hub-card-title {
-      color: #aaa;
-    }
-
-    .hub-card .hub-card-desc {
-      font-size: 14px;
-      color: #4a5568;
-      line-height: 1.6;
-      flex: 1;
-    }
-
-    .hub-card .hub-card-link {
+    .hub-article-desc {
       font-size: 13px;
-      color: var(--hub-blue);
-      font-weight: 600;
-      margin-top: 4px;
+      color: #6a7385;
+      line-height: 1.5;
     }
 
+    .hub-article-arrow {
+      font-size: 16px;
+      color: var(--hub-blue);
+      flex-shrink: 0;
+      opacity: 0.4;
+      transition: opacity 0.15s;
+    }
+
+    /* CTA */
     .hub-cta {
       background: #f6f7fc;
       border: 1px solid rgba(26,26,46,0.08);
@@ -213,14 +275,39 @@
     }
 
     @media (max-width: 1024px) {
-      .hub-grid { grid-template-columns: repeat(2, 1fr); }
+      .hub-layout { gap: 32px; }
+      .hub-sidebar { width: 148px; }
     }
 
     @media (max-width: 768px) {
       .hub-wrap { margin: 20px 16px 16px; border-radius: 18px; }
       .hub-hero { padding: 36px 24px 32px; }
       .hub-body { padding: 28px 24px 32px; }
-      .hub-grid { grid-template-columns: 1fr; }
+      .hub-layout { flex-direction: column; gap: 20px; }
+      .hub-sidebar {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+      }
+      .hub-sidebar-label { width: 100%; padding-left: 0; margin-bottom: 4px; }
+      .hub-sidebar-item {
+        border-left: none;
+        border: 1px solid rgba(26,26,46,0.12);
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+      .hub-sidebar-item:hover,
+      .hub-sidebar-item.active {
+        background: rgba(26,26,46,0.08);
+        border-color: rgba(26,26,46,0.3);
+        border-left: none;
+        font-weight: 600;
+      }
       .hub-cta { flex-direction: column; align-items: flex-start; }
     }
 
@@ -243,28 +330,81 @@
     </div>
 
     <div class="hub-body">
-      {{ if or $spokes .Params.coming_soon }}
-        <div class="hub-section-label">Articles in this cluster</div>
-        <div class="hub-grid">
-          {{ range $spokes }}
-          <a href="{{ .RelPermalink }}" class="hub-card">
-            <div class="hub-card-title">{{ .Title }}</div>
-            <div class="hub-card-desc">{{ .Description }}</div>
-            <div class="hub-card-link">Read article &rarr;</div>
-          </a>
-          {{ end }}
 
-          {{ range .Params.coming_soon }}
-          <div class="hub-card hub-card-stub">
-            <div class="hub-card-coming">Coming Soon</div>
-            <div class="hub-card-title">{{ .title }}</div>
-            <div class="hub-card-desc">{{ .description }}</div>
+      {{ if $spokes }}
+        <div class="hub-layout">
+
+          {{/* Sidebar */}}
+          <nav class="hub-sidebar">
+            <div class="hub-sidebar-label">Topics</div>
+            <a href="#" class="hub-sidebar-item hub-sidebar-all" id="hub-show-all">Show All</a>
+            {{ range $subtopicOrder }}
+              {{ $sub := . }}
+              {{ $count := 0 }}
+              {{ range $spokes }}
+                {{ if eq (.Params.subtopic | default "") $sub }}
+                  {{ $count = add $count 1 }}
+                {{ end }}
+              {{ end }}
+              {{ if gt $count 0 }}
+              <a href="#{{ $sub | urlize }}" class="hub-sidebar-item">
+                {{ $sub }}<span class="hub-sidebar-count">{{ $count }}</span>
+              </a>
+              {{ end }}
+            {{ end }}
+          </nav>
+
+          {{/* Article list grouped by subtopic */}}
+          <div class="hub-articles">
+            {{ range $subtopicOrder }}
+              {{ $sub := . }}
+              {{ $articles := slice }}
+              {{ range $spokes }}
+                {{ if eq (.Params.subtopic | default "") $sub }}
+                  {{ $articles = $articles | append . }}
+                {{ end }}
+              {{ end }}
+              {{ if $articles }}
+              <div id="{{ $sub | urlize }}" class="hub-topic-section">
+                <h2 class="hub-topic-header">{{ $sub }}</h2>
+                {{ range $articles }}
+                <a href="{{ .RelPermalink }}" class="hub-article-row">
+                  <div class="hub-article-main">
+                    <span class="hub-article-title">{{ .Title }}</span>
+                    <span class="hub-article-desc">{{ .Description }}</span>
+                  </div>
+                  <span class="hub-article-arrow">&rarr;</span>
+                </a>
+                {{ end }}
+              </div>
+              {{ end }}
+            {{ end }}
+
+            {{/* Fallback for articles without a subtopic */}}
+            {{ $untagged := slice }}
+            {{ range $spokes }}
+              {{ if not .Params.subtopic }}
+                {{ $untagged = $untagged | append . }}
+              {{ end }}
+            {{ end }}
+            {{ if $untagged }}
+            <div class="hub-topic-section">
+              <h2 class="hub-topic-header">Articles</h2>
+              {{ range $untagged }}
+              <a href="{{ .RelPermalink }}" class="hub-article-row">
+                <div class="hub-article-main">
+                  <span class="hub-article-title">{{ .Title }}</span>
+                  <span class="hub-article-desc">{{ .Description }}</span>
+                </div>
+                <span class="hub-article-arrow">&rarr;</span>
+              </a>
+              {{ end }}
+            </div>
+            {{ end }}
           </div>
-          {{ end }}
-        </div>
-      {{ end }}
 
-      {{ if and (not $spokes) (not .Params.coming_soon) }}
+        </div>
+      {{ else }}
         <p style="color:#888;font-size:15px;margin-bottom:32px;">Articles coming soon.</p>
       {{ end }}
 
@@ -277,6 +417,44 @@
     </div>
 
   </div>
+
+  <script>
+    (function () {
+      var items = document.querySelectorAll('.hub-sidebar-item:not(#hub-show-all)');
+      var showAll = document.getElementById('hub-show-all');
+      var sections = document.querySelectorAll('.hub-topic-section');
+      if (!items.length || !sections.length) return;
+
+      function activateTopic(item) {
+        var target = item.getAttribute('href').replace('#', '');
+        sections.forEach(function (s) { s.style.display = 'none'; });
+        var el = document.getElementById(target);
+        if (el) el.style.display = '';
+        document.querySelectorAll('.hub-sidebar-item').forEach(function (i) { i.classList.remove('active'); });
+        item.classList.add('active');
+      }
+
+      function activateAll() {
+        sections.forEach(function (s) { s.style.display = ''; });
+        document.querySelectorAll('.hub-sidebar-item').forEach(function (i) { i.classList.remove('active'); });
+        showAll.classList.add('active');
+      }
+
+      items.forEach(function (item) {
+        item.addEventListener('click', function (e) {
+          e.preventDefault();
+          activateTopic(item);
+        });
+      });
+
+      showAll.addEventListener('click', function (e) {
+        e.preventDefault();
+        activateAll();
+      });
+
+      activateTopic(items[0]);
+    })();
+  </script>
 
   {{ partial "footer.html" . }}
 {{ end }}

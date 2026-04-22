@@ -5,6 +5,7 @@ date: 2026-04-19
 practices: ["business"]
 services: ["business-tax"]
 featured: false
+subtopic: "Entity & Structure"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:

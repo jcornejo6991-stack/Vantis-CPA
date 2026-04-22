@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["all"]
 services: ["individual-tax", "business-tax"]
 featured: true
+subtopic: "Filing & Deadlines"
 primary_cluster: "general-tax-compliance"
 clusters: ["general-tax-compliance"]
 strategy_snapshot:

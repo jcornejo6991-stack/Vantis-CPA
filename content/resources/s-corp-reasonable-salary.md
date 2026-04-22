@@ -5,6 +5,7 @@ date: 2026-04-16
 practices: ["business", "individuals", "realestate"]
 services: ["business-tax", "payroll"]
 featured: false
+subtopic: "Planning Strategies"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:

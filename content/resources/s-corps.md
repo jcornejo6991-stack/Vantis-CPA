@@ -5,6 +5,7 @@ date: 2025-01-15
 practices: ["business", "individuals", "realestate"]
 services: ["business-tax"]
 featured: true
+subtopic: "Entity & Structure"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:

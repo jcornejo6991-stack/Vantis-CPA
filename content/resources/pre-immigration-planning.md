@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["expats", "business"]
 services: ["international-tax", "individual-tax"]
 featured: false
+subtopic: "Planning Strategies"
 primary_cluster: "international-tax"
 clusters: ["international-tax", "latam-inbound"]
 strategy_snapshot:

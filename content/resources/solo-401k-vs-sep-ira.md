@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["business", "individuals"]
 services: ["business-tax"]
 featured: false
+subtopic: "Planning Strategies"
 primary_cluster: "individual-tax"
 clusters: ["individual-tax"]
 strategy_snapshot:

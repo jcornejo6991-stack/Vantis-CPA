@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["realestate", "individuals"]
 services: ["individual-tax", "sales-tax", "bookkeeping"]
 featured: false
+subtopic: "Compliance & Reporting"
 primary_cluster: "real-estate-tax"
 clusters: ["real-estate-tax"]
 strategy_snapshot:

@@ -6,6 +6,7 @@ weight: 10
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
+subtopic: "International & Treaties"
 primary_cluster: "international-tax"
 clusters: ["international-tax"]
 strategy_snapshot:

@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["realestate"]
 services: ["individual-tax"]
 featured: false
+subtopic: "Planning Strategies"
 primary_cluster: "real-estate-tax"
 clusters: ["real-estate-tax"]
 strategy_snapshot:

@@ -5,6 +5,7 @@ date: 2026-04-19
 practices: ["business", "individuals"]
 services: ["business-tax"]
 featured: false
+subtopic: "Deductions & Credits"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:

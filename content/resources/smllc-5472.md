@@ -5,6 +5,7 @@ date: 2025-01-20
 practices: ["business", "individuals", "inbound"]
 services: ["international-tax", "business-tax"]
 featured: false
+subtopic: "Compliance & Reporting"
 primary_cluster: "international-tax"
 clusters: ["international-tax", "ecommerce-sellers", "latam-inbound"]
 strategy_snapshot:

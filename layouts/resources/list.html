@@ -24,7 +24,6 @@
   <style>
     .resource-library {
       --resource-orange: #CE9178;
-      --resource-orange-dark: #b97960;
       --resource-blue: #569CD6;
       --resource-blue-dark: #4a88be;
       --resource-navy: #1a1a2e;
@@ -70,92 +69,148 @@
 
     .library-body {
       background: linear-gradient(90deg, #fff 0%, #edeef7 100%);
-      padding: 40px 48px 48px;
+      padding: 44px 48px 48px;
     }
 
-    .library-intro {
-      font-size: 16px;
-      color: #4a5568;
-      line-height: 1.75;
-      max-width: 70ch;
-      margin: 0 0 32px;
-      padding-left: 18px;
-      border-left: 3px solid rgba(86,156,214,0.3);
+    /* Layout */
+    .library-layout {
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      margin-bottom: 40px;
     }
 
-    .library-section + .library-section {
-      margin-top: 40px;
-      padding-top: 32px;
-      border-top: 1px solid rgba(26,26,46,0.08);
+    /* Sidebar */
+    .library-sidebar {
+      width: 172px;
+      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
     }
 
-    .library-section-label {
+    .library-sidebar-label {
+      font-size: 10px;
+      font-weight: 700;
+      color: #999;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      margin-bottom: 10px;
+      padding-left: 10px;
+    }
+
+    .library-sidebar-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: #555;
+      padding: 7px 10px;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.15s;
+      margin-bottom: 2px;
+    }
+
+    .library-sidebar-item:hover {
+      background: rgba(26,26,46,0.06);
+      color: #1a1a2e;
+      border-left-color: #1a1a2e;
+      text-decoration: none;
+    }
+
+    .library-sidebar-count {
+      font-size: 11px;
+      color: #aaa;
+      font-weight: 400;
+      background: rgba(26,26,46,0.06);
+      padding: 1px 7px;
+      border-radius: 10px;
+      flex-shrink: 0;
+    }
+
+    /* Hub list */
+    .library-hubs {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .library-section {
+      margin-bottom: 36px;
+      scroll-margin-top: 24px;
+    }
+
+    .library-section-header {
+      font-family: inherit;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      color: var(--resource-blue);
       text-transform: uppercase;
-      color: var(--resource-orange);
-      margin-bottom: 18px;
-    }
-
-    .library-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .library-topic-card {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      padding: 20px 20px 18px;
-      border-radius: 14px;
-      background: #ffffff;
-      border: 1px solid rgba(26,26,46,0.08);
-      border-top: 3px solid var(--resource-navy);
-      box-shadow: 0 18px 38px rgba(13,17,23,0.08);
-      text-decoration: none;
-      color: inherit;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
-    }
-
-    .library-topic-card:hover {
-      transform: translateY(-2px);
-      background: #ffffff;
-      box-shadow: 0 24px 44px rgba(13,17,23,0.12);
-      border-color: rgba(26,26,46,0.14);
-      text-decoration: none;
-      color: inherit;
-    }
-
-    .library-topic-card h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 19px;
-      line-height: 1.3;
-      color: #1a1a2e;
+      letter-spacing: 1px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--resource-navy);
       margin: 0;
     }
 
-    .library-topic-link {
-      display: inline-flex;
+    .library-hub-row {
+      display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 13px;
-      font-weight: 600;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(26,26,46,0.07);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .library-hub-row:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .library-hub-row:hover .library-hub-title {
       color: var(--resource-blue);
-      transition: color 0.2s;
     }
 
-    .library-topic-card:hover .library-topic-link {
-      color: var(--resource-blue-dark);
+    .library-hub-row:hover .library-hub-arrow {
+      opacity: 1;
     }
 
+    .library-hub-main {
+      flex: 1;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .library-hub-title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.3;
+      transition: color 0.15s;
+    }
+
+    .library-hub-desc {
+      font-size: 13px;
+      color: #6a7385;
+      line-height: 1.5;
+    }
+
+    .library-hub-arrow {
+      font-size: 16px;
+      color: var(--resource-blue);
+      flex-shrink: 0;
+      opacity: 0.4;
+      transition: opacity 0.15s;
+    }
+
+    /* CTA */
     .library-cta {
-      margin-top: 40px;
-      padding: 28px;
       background: #f6f7fc;
       border: 1px solid rgba(26,26,46,0.08);
-      border-radius: 16px;
+      border-radius: 12px;
+      padding: 24px 28px;
       box-shadow: 0 18px 36px rgba(13,17,23,0.06);
       display: flex;
       align-items: center;
@@ -165,84 +220,76 @@
 
     .library-cta-title {
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
+      font-size: 20px;
       color: #1a1a2e;
-      margin: 0 0 8px;
+      margin: 0 0 6px;
       line-height: 1.2;
     }
 
     .library-cta-copy {
-      font-size: 15px;
+      font-size: 14px;
       color: #4a5568;
       margin: 0;
       line-height: 1.6;
-      max-width: 48ch;
     }
 
     .library-cta-btn {
       background: #569CD6;
       color: #fff;
-      padding: 13px 24px;
+      padding: 12px 22px;
       border-radius: 8px;
       font-size: 14px;
       font-weight: 600;
       text-decoration: none;
-      border: 2px solid #569CD6;
       white-space: nowrap;
-      transition: background 0.2s, border-color 0.2s, transform 0.15s;
+      transition: background 0.2s;
     }
 
     .library-cta-btn:hover {
       background: #4a88be;
-      border-color: #4a88be;
       color: #fff;
       text-decoration: none;
-      transform: translateY(-1px);
     }
 
     @media (max-width: 1024px) {
-      .library-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
+      .library-layout { gap: 32px; }
+      .library-sidebar { width: 148px; }
     }
 
     @media (max-width: 768px) {
-      .resource-library {
-        margin: 20px 16px 16px;
-        border-radius: 18px;
+      .resource-library { margin: 20px 16px 16px; border-radius: 18px; }
+      .library-hero { padding: 42px 24px 34px; }
+      .library-body { padding: 28px 24px 32px; }
+      .library-layout { flex-direction: column; gap: 20px; }
+      .library-sidebar {
+        width: 100%;
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
       }
-
-      .library-hero {
-        padding: 42px 24px 34px;
+      .library-sidebar-label { width: 100%; padding-left: 0; margin-bottom: 4px; }
+      .library-sidebar-item {
+        border-left: none;
+        border: 1px solid rgba(26,26,46,0.12);
+        border-radius: 20px;
+        padding: 5px 12px;
+        font-size: 12px;
+        margin-bottom: 0;
       }
-
-      .library-body {
-        padding: 28px 24px 32px;
+      .library-sidebar-item:hover {
+        background: rgba(26,26,46,0.06);
+        border-color: rgba(26,26,46,0.2);
+        border-left: none;
       }
-
-      .library-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .library-cta {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      .library-cta { flex-direction: column; align-items: flex-start; }
     }
 
     @media (max-width: 480px) {
-      .resource-library {
-        margin: 16px 12px 12px;
-        border-radius: 16px;
-      }
-
-      .library-hero {
-        padding: 36px 18px 30px;
-      }
-
-      .library-body {
-        padding: 24px 18px 28px;
-      }
+      .resource-library { margin: 16px 12px 12px; border-radius: 16px; }
+      .library-hero { padding: 36px 18px 30px; }
+      .library-body { padding: 24px 18px 28px; }
     }
   </style>
 
@@ -256,35 +303,52 @@
     </div>
 
     <div class="library-body">
-      <p class="library-intro">Start with the topic cluster that matches your situation. Each hub organizes the most relevant planning guides, compliance articles, and technical explainers in one place.</p>
+      <div class="library-layout">
 
-      <section class="library-section">
-        <div class="library-section-label">General Topics</div>
-        <div class="library-grid">
-          {{ range $generalTopics }}
-          <a href="{{ .RelPermalink }}" class="library-topic-card">
-            {{ $displayTitle := .Title }}
-            {{ with index $generalTopicLabels .RelPermalink }}
-              {{ $displayTitle = . }}
+        <nav class="library-sidebar">
+          <div class="library-sidebar-label">Sections</div>
+          <a href="#general-topics" class="library-sidebar-item">
+            General Topics<span class="library-sidebar-count">{{ len $generalTopics }}</span>
+          </a>
+          <a href="#focused-areas" class="library-sidebar-item">
+            Focused Areas<span class="library-sidebar-count">{{ len $focusedAreas }}</span>
+          </a>
+        </nav>
+
+        <div class="library-hubs">
+
+          <div id="general-topics" class="library-section">
+            <h2 class="library-section-header">General Topics</h2>
+            {{ range $generalTopics }}
+            <a href="{{ .RelPermalink }}" class="library-hub-row">
+              <div class="library-hub-main">
+                {{ $displayTitle := .Title }}
+                {{ with index $generalTopicLabels .RelPermalink }}
+                  {{ $displayTitle = . }}
+                {{ end }}
+                <span class="library-hub-title">{{ $displayTitle }}</span>
+                <span class="library-hub-desc">{{ .Description }}</span>
+              </div>
+              <span class="library-hub-arrow">&rarr;</span>
+            </a>
             {{ end }}
-            <h2>{{ $displayTitle }}</h2>
-            <span class="library-topic-link">Open Hub &rarr;</span>
-          </a>
-          {{ end }}
-        </div>
-      </section>
+          </div>
 
-      <section class="library-section library-section-focused">
-        <div class="library-section-label">Focused Areas</div>
-        <div class="library-grid">
-          {{ range $focusedAreas }}
-          <a href="{{ .RelPermalink }}" class="library-topic-card">
-            <h2>{{ .Title }}</h2>
-            <span class="library-topic-link">Open Hub &rarr;</span>
-          </a>
-          {{ end }}
+          <div id="focused-areas" class="library-section">
+            <h2 class="library-section-header">Focused Areas</h2>
+            {{ range $focusedAreas }}
+            <a href="{{ .RelPermalink }}" class="library-hub-row">
+              <div class="library-hub-main">
+                <span class="library-hub-title">{{ .Title }}</span>
+                <span class="library-hub-desc">{{ .Description }}</span>
+              </div>
+              <span class="library-hub-arrow">&rarr;</span>
+            </a>
+            {{ end }}
+          </div>
+
         </div>
-      </section>
+      </div>
 
       <div class="library-cta">
         <div>

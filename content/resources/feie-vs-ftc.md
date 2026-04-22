@@ -5,6 +5,7 @@ date: 2026-01-01
 practices: ["expats"]
 services: ["international-tax", "individual-tax"]
 featured: false
+subtopic: "Deductions & Credits"
 primary_cluster: "international-tax"
 clusters: ["international-tax"]
 strategy_snapshot:

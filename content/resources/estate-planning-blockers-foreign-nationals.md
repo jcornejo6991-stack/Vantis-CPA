@@ -5,6 +5,7 @@ date: 2026-04-11
 practices: ["inbound", "realestate"]
 services: ["international-tax", "individual-tax"]
 featured: false
+subtopic: "Planning Strategies"
 primary_cluster: "latam-inbound"
 clusters: ["latam-inbound", "international-tax"]
 strategy_snapshot:
