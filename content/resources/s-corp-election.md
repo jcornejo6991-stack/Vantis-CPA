@@ -6,8 +6,8 @@ practices: ["business", "individuals", "realestate"]
 services: ["business-tax"]
 featured: true
 subtopic: "Entity & Structure"
-primary_cluster: "business-tax"
-clusters: ["business-tax"]
+primary_cluster: "s-corps"
+clusters: ["s-corps", "business-tax"]
 strategy_snapshot:
   summary: "An S-Corp election is a margin strategy, not a milestone. It starts to work when profits are consistently high enough to support a defensible salary after paying for payroll, a separate return, and whatever state-level friction applies."
   bullets:
@@ -70,6 +70,8 @@ If the business is still too small to support clean payroll, it is usually too s
 File [IRS Form 2553](https://www.irs.gov/forms-pubs/about-form-2553) within 75 days of the tax year you want the election to apply, or within 75 days of forming your entity. Late elections may be accepted with a reasonable cause statement.
 
 You must also set up payroll immediately. The IRS requires S-Corp owners who perform services to take a "reasonable salary," meaning compensation comparable to what you'd pay a third party to do the same work. Underpaying yourself is one of the most common S-Corp audit triggers.
+
+If the deadline was missed, the election may still be fixable. See [Late S-Corp Election Relief: When Form 2553 Can Still Be Fixed](/resources/late-s-corp-election-relief/) for the common relief path and the situations where it breaks down.
 
 ## State Tax Considerations
 

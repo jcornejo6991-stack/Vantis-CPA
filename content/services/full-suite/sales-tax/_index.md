@@ -27,9 +27,9 @@ sections:
       * Back-filing and DOR cleanup
 
       We review your business activities to determine what is taxable, register you correctly, and keep the filings moving so nothing lapses.
-  - title: "Who This Is For"
+  - title: "When Sales Tax Support Helps"
     body: |
-      This service is a fit for Florida businesses selling taxable products, service businesses with taxable transactions, property owners with short-term or commercial rental activity, and e-commerce sellers who need Florida sales tax handled correctly. It is also a fit for businesses that are behind on filings or already dealing with DOR notices.
+      We work with Florida businesses selling taxable products, service businesses with taxable transactions, property owners with short-term or commercial rental activity, and e-commerce sellers who need Florida sales tax handled correctly. It is also useful for businesses that are behind on filings or already dealing with DOR notices.
   - title: "Registration, Filing, and Notice Support"
     body: |
       Sales tax compliance is ongoing administrative work as much as technical work. We manage the registration, filing schedule, payments, and notice response so the obligation stays current. If prior returns are missing, we can also help bring the account back into compliance and reduce the amount of cleanup still left to do.

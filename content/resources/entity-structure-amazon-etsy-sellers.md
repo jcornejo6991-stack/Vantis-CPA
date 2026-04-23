@@ -1,6 +1,6 @@
 ---
-title: "Best Entity Structure for Amazon and Etsy Sellers"
-description: "Amazon and Etsy sellers often choose between a sole proprietorship, LLC, and S-Corp. The right structure affects liability protection, self-employment tax, and how efficiently an online store can scale."
+title: "Best Entity Structure for Ecommerce Sellers: Schedule C, LLC, or S-Corp"
+description: "Shopify, Amazon, Etsy, Walmart Marketplace, and other ecommerce sellers usually end up choosing between Schedule C, an LLC, and S-Corp treatment. The right structure depends on profit, risk, bookkeeping quality, and growth plans."
 date: 2026-04-11
 practices: ["business", "individuals", "inbound"]
 services: ["business-tax", "bookkeeping"]
@@ -18,15 +18,15 @@ strategy_snapshot:
     - label: Model S-Corp when
       text: "Net profit is consistently in the $50,000 to $75,000+ range and you can support a reasonable salary with reliable cash flow."
 faqs:
-  - q: "Should Amazon or Etsy sellers form an LLC right away?"
+  - q: "Should ecommerce sellers form an LLC right away?"
     a: "Not always. An LLC helps with liability protection and business administration, but for many newer sellers the tax result is the same as a sole proprietorship until profits become meaningful or risk exposure increases."
-  - q: "When does an S-Corp election make sense for an online seller?"
+  - q: "When does an S-Corp election make sense for an ecommerce business?"
     a: "Usually when net profit is consistently high enough to justify payroll, separate filings, and added admin costs. For many sellers that starts somewhere around $50,000 to $75,000 of annual net profit, depending on margins and state rules."
   - q: "Can a foreign owner use a regular LLC for a U.S. marketplace business?"
     a: "Yes, but foreign ownership creates special filing rules. A foreign-owned single-member LLC often triggers Form 5472 reporting and may need a separate review for withholding, effectively connected income, and state registration."
 ---
 
-Selling on Amazon, Etsy, Walmart Marketplace, Shopify, or eBay is easy to start and surprisingly easy to outgrow from a tax and legal perspective. Many sellers begin as sole proprietors, then hear they "need an LLC" or "should elect S-Corp status" without understanding what actually changes. The best entity structure for an Amazon or Etsy seller depends on profit level, operational risk, ownership, and where you want the business to go over the next two to three years.
+Selling online through marketplaces, Shopify, TikTok Shop, or other direct-to-consumer channels is easy to start and surprisingly easy to outgrow from a tax and legal perspective. Many sellers begin as sole proprietors, then hear they "need an LLC" or "should elect S-Corp status" without understanding what actually changes. The best entity structure for an ecommerce seller depends on profit level, operational risk, ownership, and where you want the business to go over the next two to three years.
 
 ## Fast Comparison
 
@@ -132,7 +132,7 @@ For an online seller with $120,000 of annual net profit, paying a reasonable sal
 If the books do not measure true profit, the entity decision is just branding.
 {{< /pullquote >}}
 
-For Amazon and Etsy sellers, inventory accounting often matters more than the entity choice. If your books do not properly track:
+For ecommerce sellers, inventory accounting often matters more than the entity choice. If your books do not properly track:
 
 - Beginning and ending inventory
 - Cost of goods sold
@@ -156,7 +156,7 @@ Some foreign owners also assume an LLC eliminates U.S. filing exposure. It does 
 
 ## A Practical Decision Framework
 
-For most online sellers, the sequence is:
+For most ecommerce sellers, the sequence is:
 
 1. Start with clean bookkeeping and separate accounts
 2. Form an LLC when legal and operational complexity justify it

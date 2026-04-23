@@ -22,11 +22,11 @@ sections:
       * State registration and compliance planning
       * Initial tax and filing calendar buildout
 
-      This is where the distinction between a true U.S. subsidiary and a direct foreign branch matters. If the business is operating directly in the U.S. through the foreign corporation, Form 1120-F filing requirements may need to be evaluated instead of or alongside subsidiary planning.
+      This is where the distinction between a true U.S. subsidiary and a direct foreign branch matters. If the business is operating directly in the U.S. through the foreign corporation, Form 1120-F filing requirements may need to be evaluated instead of or alongside subsidiary planning. The hub below covers that broader inbound planning context.
     cards:
-      - label: "Form 1120-F Filing Requirements for Foreign Corporations"
-        description: "When foreign corporations need to file in the U.S., what triggers the obligation, and what the return covers."
-        url: "/resources/form-1120-f/"
+      - label: "International Tax Strategy Hub"
+        description: "Inbound structuring, subsidiary planning, 1120-F exposure, and other cross-border guides for foreign companies entering the U.S."
+        url: "/resources/international-tax/"
   - title: "What Ongoing Support Usually Includes"
     body: |
       After formation, the U.S. subsidiary usually needs:
@@ -42,9 +42,9 @@ sections:
   - title: "Common Mistakes"
     body: |
       Common mistakes include treating the U.S. company like an extension of the foreign bank account, failing to document intercompany flows, setting up payroll late, mixing U.S. and parent-company expenses, and choosing a subsidiary when the actual legal and tax facts point to branch exposure instead.
-  - title: "Who This Is For"
+  - title: "Foreign Parent Companies We Work With"
     body: |
-      This page fits foreign parent companies opening U.S. operations, hiring in the U.S., launching a U.S. revenue stream, or deciding between a U.S. subsidiary and direct foreign-company operations in the U.S.
+      We work with foreign parent companies opening U.S. operations, hiring in the U.S., launching a U.S. revenue stream, or deciding between a U.S. subsidiary and direct foreign-company operations in the U.S.
 sectionTitle: "What We Handle"
 specializations:
   - label: "U.S. Subsidiary Setup"
@@ -57,7 +57,7 @@ specializations:
   - label: "U.S. Corporate Tax Compliance"
     url: "/services/business-tax/"
   - label: "1120-F Exposure Review"
-    url: "/resources/form-1120-f/"
+    url: "/resources/international-tax/"
   - label: "International Tax Coordination"
     url: "/services/international-tax/"
 ---

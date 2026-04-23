@@ -36,9 +36,9 @@ sections:
       * Back-office support for setup, renewals, and filings
 
       Good inbound planning is about making the U.S. side workable year after year, not just at formation.
-  - title: "Who This Is For"
+  - title: "Foreign Owners We Help in the U.S."
     body: |
-      This expertise area fits foreign nationals opening U.S. LLCs, foreign-owned U.S. subsidiaries, inbound real estate investors, and non-U.S. owners who need both tax and practical setup support in the U.S.
+      We help foreign nationals opening U.S. LLCs, foreign-owned U.S. subsidiaries, inbound real estate investors, and non-U.S. owners who need both tax and practical setup support in the U.S.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Operating-Business LLCs"
@@ -48,15 +48,15 @@ specializations:
   - label: "U.S. Subsidiaries of Foreign Companies"
     url: "/services/international-tax/foreign-business-and-investors/us-subsidiaries-of-foreign-companies/"
   - label: "Form 5472 Compliance"
-    url: "/resources/smllc-5472/"
+    url: "/resources/international-tax/"
   - label: "EIN and ITIN Applications"
   - label: "U.S. Entity Formation"
   - label: "Inbound Investment Structuring"
   - label: "Treaty and Classification Analysis"
-    url: "/resources/form-8832-entity-classification-elections/"
+    url: "/resources/international-tax/"
   - label: "Estate Tax Exposure Review"
-    url: "/resources/estate-planning-blockers-foreign-nationals/"
+    url: "/resources/international-tax/"
   - label: "U.S. Tax Return Support"
-    url: "/resources/form-1120-f/"
+    url: "/resources/international-tax/"
   - label: "Renewals and Back-Office Support"
 ---

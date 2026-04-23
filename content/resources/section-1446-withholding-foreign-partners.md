@@ -6,8 +6,8 @@ practices: ["inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "real-estate-tax", "latam-inbound"]
+primary_cluster: "us-real-estate-owned-by-foreign-investors"
+clusters: ["us-real-estate-owned-by-foreign-investors", "international-tax", "real-estate-tax", "latam-inbound"]
 strategy_snapshot:
   summary: "Section 1446 withholding is triggered by the allocation of effectively connected income to a foreign partner — not by a cash distribution. Partnerships that miss this often discover the problem during a sale or audit."
   bullets:

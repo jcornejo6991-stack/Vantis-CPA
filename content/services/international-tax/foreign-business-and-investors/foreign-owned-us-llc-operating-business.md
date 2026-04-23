@@ -34,17 +34,17 @@ sections:
       * State filing review where applicable
       * Year-end tax planning and structural review
 
-      If the structure involves a foreign corporation, treaty questions, or effectively connected income exposure, we also review whether Form 1120-F filing requirements need to be analyzed alongside the LLC filing work.
+      If the structure involves a foreign corporation, treaty questions, or effectively connected income exposure, we also review whether Form 1120-F filing requirements need to be analyzed alongside the LLC filing work. The hub below covers those broader international filing and structuring issues.
     cards:
-      - label: "Form 1120-F Filing Requirements for Foreign Corporations"
-        description: "When foreign corporations need to file in the U.S., what triggers the obligation, and what the return covers."
-        url: "/resources/form-1120-f/"
+      - label: "International Tax Strategy Hub"
+        description: "Form 5472, entity classification, 1120-F exposure, and other inbound U.S. tax guides for foreign owners."
+        url: "/resources/international-tax/"
   - title: "Common Mistakes"
     body: |
       The most common problems are forming the LLC without deciding how it should be classified, moving money between the owner and the company without records, assuming a disregarded entity means no U.S. filing, and waiting until tax season to reconstruct the books. Foreign-owned LLCs are manageable, but only if the structure and the accounting are handled deliberately.
-  - title: "Who This Is For"
+  - title: "Foreign Founders and Operators We Work With"
     body: |
-      This page fits foreign founders, foreign ecommerce sellers, foreign consultants, agencies, and other non-U.S. owners using a U.S. LLC for active business operations in the U.S. market.
+      We work with foreign founders, foreign ecommerce sellers, foreign consultants, agencies, and other non-U.S. owners using a U.S. LLC for active business operations in the U.S. market.
 sectionTitle: "What We Handle"
 specializations:
   - label: "U.S. LLC Structure Review"
@@ -53,11 +53,11 @@ specializations:
   - label: "Monthly Bookkeeping"
     url: "/services/full-suite/bookkeeping/"
   - label: "Form 5472 Compliance"
-    url: "/resources/smllc-5472/"
+    url: "/resources/international-tax/"
   - label: "1120-F Review Where Applicable"
-    url: "/resources/form-1120-f/"
+    url: "/resources/international-tax/"
   - label: "Entity Classification Elections"
-    url: "/resources/form-8832-entity-classification-elections/"
+    url: "/resources/international-tax/"
   - label: "International Tax Support"
     url: "/services/international-tax/"
 ---

@@ -23,17 +23,11 @@ sections:
       * Form 2553 (S-corp election, including late elections)
   - title: "Wages, Distributions, and When It Works"
     body: |
-      The savings come from splitting owner income between wages and distributions. Wages are subject to payroll taxes; distributions are not. When the business is profitable enough and the salary is defensible, the gap creates real savings. The election is often oversold though. It is a poor fit for low-profit businesses, real estate owners, and owners not ready to run payroll. When it does fit, ownership restrictions and basis tracking both require attention. The resources below go deeper on each area.
+      The savings come from splitting owner income between wages and distributions. Wages are subject to payroll taxes; distributions are not. When the business is profitable enough and the salary is defensible, the gap creates real savings. The election is often oversold though. It is a poor fit for low-profit businesses, real estate owners, and owners not ready to run payroll. When it does fit, ownership restrictions and basis tracking both require attention. The hub below pulls together the main planning and compliance issues in one place.
     cards:
-      - label: "When an S-Corp Election Makes Sense"
-        description: "The margin math, the threshold question, and when added complexity is worth it."
+      - label: "S-Corporations"
+        description: "Election timing, reasonable salary, basis, ownership rules, shareholder loans, and when S-corp treatment is the right fit."
         url: "/resources/s-corps/"
-      - label: "Reasonable Salary for S-Corp Owners"
-        description: "How to set wages without relying on internet formulas that create audit risk."
-        url: "/resources/s-corp-reasonable-salary/"
-      - label: "S-Corp Basis, Ownership Rules, and Shareholder Loans"
-        description: "Who can own S-corp stock, how basis works, and why shareholder loans need to be structured correctly."
-        url: "/resources/s-corp-basis-and-ownership/"
   - title: "Full Suite"
     body: |
       S-corp work is cleaner when the books behind it are clean. For owners who want one firm handling payroll, bookkeeping, and the return, we offer full-service support alongside the tax work.
@@ -43,12 +37,12 @@ sections:
         url: "/services/full-suite/"
   - title: "S-Corp Owners We Work With"
     body: |
-      This page fits owner-operated businesses evaluating an S-corp election, existing S-corps that want the salary and basis work handled correctly, and business owners trying to decide whether the savings are real. We keep the S-corp filing aligned with the owner's individual return so nothing falls through the gap.
+      We work with owner-operated businesses evaluating an S-corp election, existing S-corps that want the salary and basis work handled correctly, and owners trying to decide whether the savings are real. We keep the S-corp filing aligned with the owner's individual return so nothing falls through the gap.
 sectionTitle: "What We Handle"
 specializations:
   - label: "S-Corp Election Modeling and Timing"
   - label: "Reasonable Compensation Analysis"
-    url: "/resources/s-corp-reasonable-salary/"
+    url: "/resources/s-corps/"
   - label: "Wages vs. Distributions Strategy"
   - label: "Shareholder Basis and Loan Tracking"
   - label: "Ownership Eligibility and Structure Review"

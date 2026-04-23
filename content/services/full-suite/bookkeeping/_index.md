@@ -26,9 +26,9 @@ sections:
       * Coordination with tax filing and payroll
 
       Everything is built around a clean close process so the books stay usable instead of becoming a year-end rescue project.
-  - title: "Who This Is For"
+  - title: "Businesses We Keep Current"
     body: |
-      This service fits owners who need monthly books, growing businesses that have outgrown DIY bookkeeping, companies preparing for tax filings or financing, and businesses with messy historical records that need cleanup. Whether you need regular monthly support or a catch-up project before tax season, the goal is the same: current books and fewer surprises.
+      We work with owners who need monthly books, growing businesses that have outgrown DIY bookkeeping, companies preparing for tax filings or financing, and businesses with messy historical records that need cleanup. Whether the need is regular monthly support or a catch-up project before tax season, the goal is the same: current books and fewer surprises.
   - title: "Reporting That Actually Gets Used"
     body: |
       Good bookkeeping should make tax filing easier and management faster. We help keep the chart of accounts clean, the reconciliations current, and the monthly reports useful. That means less time hunting for answers, less cleanup at year-end, and a clearer picture of profitability, owner draws, and cash flow.

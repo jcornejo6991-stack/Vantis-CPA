@@ -26,14 +26,14 @@ sections:
       * Cleanup of owner draws, loans, and multi-owner issues
   - title: "Basis, Allocations, and Structure"
     body: |
-      Partnerships offer more structural flexibility than any other entity. Income, loss, depreciation, guaranteed payments, and distributions do not have to follow simple ownership percentages. That makes them useful for operating businesses, family ventures, investment entities, and deals where one owner brings capital and another brings management. It also means the returns get complex quickly.
+      Partnerships offer more structural flexibility than any other entity. Income, loss, depreciation, guaranteed payments, and distributions do not have to follow simple ownership percentages. That makes them useful for operating businesses, family ventures, investment entities, and deals where one owner brings capital and another brings management. It also means the returns get complex quickly. The hubs below go deeper on partnership mechanics and the S-corp comparison.
     cards:
-      - label: "Partnership Basis, Allocations, and Capital Accounts"
-        description: "How basis works in a partnership, what capital accounts track, and how allocations affect each owner's tax result."
-        url: "/resources/partnership-basis-and-allocations/"
+      - label: "Business Tax Strategy Hub"
+        description: "Partnership basis, allocations, capital accounts, entity structure, and other business tax planning guides."
+        url: "/resources/business-tax/"
       - label: "S-Corp vs. Partnership"
-        description: "How the two structures compare on flexibility, self-employment tax, ownership rules, and economics."
-        url: "/resources/s-corp-vs-partnership/"
+        description: "S-corp election timing, reasonable salary, basis, and where partnership taxation is the better fit."
+        url: "/resources/s-corps/"
   - title: "Full Suite"
     body: |
       Partnership returns are only as good as the books behind them. For owners who want one firm handling bookkeeping, back office, and the return, we offer full-service support alongside the tax work.
@@ -43,19 +43,19 @@ sections:
         url: "/services/full-suite/"
   - title: "Multi-Owner Businesses We Work With"
     body: |
-      This page fits multi-member LLCs, LPs, LLPs, LLLPs, family and investor-owned entities, and any business with more than one owner where the economics need to be handled thoughtfully. It also fits owners deciding between partnership taxation and S-corp treatment who want the tradeoffs explained in practical terms. We help clients choose the right structure, prepare partnership returns, maintain basis and capital reporting, and coordinate K-1 consequences with each owner's individual return.
+      We work with multi-member LLCs, LPs, LLPs, LLLPs, family and investor-owned entities, and other businesses with more than one owner where the economics need to be handled thoughtfully. It is also a good fit for owners deciding between partnership taxation and S-corp treatment who want the tradeoffs explained in practical terms. We help clients choose the right structure, prepare partnership returns, maintain basis and capital reporting, and coordinate K-1 consequences with each owner's individual return.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Multi-Member LLCs, LPs, LLPs, and LLLPs"
   - label: "Partnership and Form 1065 Reporting"
   - label: "Entity Selection and Restructuring"
-    url: "/resources/entity-structure-amazon-etsy-sellers/"
+    url: "/resources/business-tax/"
   - label: "Special Allocations and Profit-Sharing Design"
   - label: "Guaranteed Payments, Contributions, and Distributions"
   - label: "Basis, Capital Account, and Partner Loan Tracking"
   - label: "K-1 Preparation and Owner Coordination"
   - label: "S-Corp vs. Partnership Analysis"
-    url: "/resources/s-corp-vs-partnership/"
+    url: "/resources/s-corps/"
   - label: "Operating Agreement and Tax Alignment Review"
   - label: "Cleanup of Owner Draws, Loans, and Multi-Owner Issues"
 ---

@@ -9,35 +9,40 @@ aliases:
 subtitle: "Tax compliance and planning for Americans living and earning abroad."
 heroImage: "/images/card-expats.jpg"
 sections:
-  - title: "U.S. Expat Tax Filing and Planning"
+  - title: "Expat Tax Is More Than Filing a Form 1040"
     body: |
-      U.S. citizens and green card holders still have U.S. filing obligations even while living abroad. That usually means more than just filing a Form 1040. FBAR, FATCA, foreign tax credit decisions, FEIE elections, and state tax issues can all affect the result. We help expats get current, stay compliant, and avoid paying more U.S. tax than necessary.
-  - title: "What Expats Usually Need"
-    body: |
-      Common expat tax needs include:
+      U.S. citizens and green card holders still have U.S. filing obligations while living abroad. The issue is usually not whether a return is required, but how the foreign income, foreign accounts, local tax, and residency facts all fit together. FBAR, FATCA, FEIE, foreign tax credits, state residency, and self-employment rules can all change the result.
 
-      * Form 1040 with foreign income
-      * Foreign tax credit and FEIE analysis
+      Common expat filing work includes:
+
+      * Form 1040 with foreign wage, self-employment, pension, and investment income
       * FBAR and FATCA reporting
+      * Foreign tax credit and FEIE analysis
       * State domicile and residency review
-      * Self-employment income earned abroad
       * Foreign pension and account reporting
-      * Streamlined filings for missed prior years
+      * Streamlined filing support for missed prior years
+  - title: "The Filing Position Matters More Than Most Expats Expect"
+    body: |
+      For many expats, the real planning question is not whether they file, but how. FEIE and foreign tax credits do not produce the same result, state tax ties can linger after a move abroad, and self-employment income can create U.S. tax even where local income tax is already being paid.
 
-      The right filing position can materially change the tax result, especially when the foreign tax credit and FEIE produce different outcomes.
-  - title: "Behind on Prior Years"
+      We help compare the filing options, choose the position that fits the facts, and keep the annual reporting consistent year after year. The hub below goes deeper on FEIE, foreign tax credits, and other expat filing issues.
+    cards:
+      - label: "International Tax Strategy Hub"
+        description: "FEIE, foreign tax credits, FBAR, FATCA, foreign entity reporting, and other cross-border tax guides."
+        url: "/resources/international-tax/"
+  - title: "Getting Current and Staying Current"
     body: |
-      If you have missed returns, FBARs, or other foreign filings, we can help assess whether streamlined filing procedures are the right path. The goal is to get current in a way that reduces penalty exposure and puts you back into a manageable annual filing rhythm.
-  - title: "Ongoing Expat Support"
+      If you are behind on returns, FBARs, or other foreign filings, the goal is usually to get current in the cleanest way possible and then keep the process manageable going forward. We can help assess streamlined filing procedures, clean up prior-year reporting, and put the annual filing on a repeatable system.
+  - title: "Expats We Work With"
     body: |
-      Expat tax work is rarely one form and done. We can stay involved year after year as your country, income type, account reporting, or residency status changes. That continuity matters because the tax choices you make abroad often have long-term consequences.
+      We work with Americans living abroad, dual citizens filing as U.S. taxpayers, green card holders outside the U.S., and expats with foreign employment, self-employment, pensions, or investment accounts. This is especially useful when the filing has gotten more complex than a basic expat return or prior years were missed.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Form 1040 for U.S. Expats"
   - label: "Foreign Tax Credit Analysis"
-    url: "/resources/feie-vs-ftc/"
+    url: "/resources/international-tax/"
   - label: "Foreign Earned Income Exclusion"
-    url: "/resources/feie-vs-ftc/"
+    url: "/resources/international-tax/"
   - label: "FBAR Filing"
   - label: "FATCA Reporting"
   - label: "Streamlined Filing Support"

@@ -1011,62 +1011,122 @@
     .cross-link-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8px;
+      gap: 10px;
     }
     .cross-link-grid-stack {
       margin-top: 22px;
       grid-template-columns: 1fr;
+      gap: 12px;
     }
 
     .cross-link-card {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
       align-items: center;
-      padding: 10px 14px;
-      border-radius: 10px;
-      background: linear-gradient(135deg, rgba(86, 156, 214, 0.06) 0%, rgba(156, 220, 254, 0.1) 100%);
-      border: 1px solid rgba(86, 156, 214, 0.2);
+      gap: 18px;
+      padding: 18px 20px;
+      border-radius: 8px;
+      background: #ffffff;
+      border: 1px solid rgba(26, 26, 46, 0.1);
       font-size: 13px;
       font-weight: 500;
       color: #0d1117;
       text-decoration: none;
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
-      transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+      box-shadow: 0 1px 2px rgba(13, 17, 23, 0.03);
+      transition: border-color 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+
+    .cross-link-card-resource {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfdff 100%);
+      border-color: rgba(86, 156, 214, 0.2);
+    }
+
+    .cross-link-copy {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .cross-link-label {
+      display: block;
+      font-size: 17px;
+      font-weight: 600;
+      color: #1a1a2e;
+      line-height: 1.35;
+      letter-spacing: -0.01em;
     }
 
     .cross-link-card:hover {
-      background: linear-gradient(135deg, rgba(86, 156, 214, 0.1) 0%, rgba(78, 201, 176, 0.12) 100%);
-      border-color: var(--accent);
+      background: #f8fbfe;
+      border-color: rgba(86, 156, 214, 0.3);
       text-decoration: none;
       color: #0d1117;
-      transform: translateY(-1px);
-      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6), 0 10px 24px rgba(13, 17, 23, 0.08);
+      box-shadow: 0 1px 2px rgba(13, 17, 23, 0.03);
+    }
+
+    .cross-link-card:hover .cross-link-label {
+      color: var(--primary);
     }
 
     .cross-link-desc {
       display: block;
-      margin-top: 4px;
-      font-size: 12px;
+      margin-top: 0;
+      font-size: 14px;
       font-weight: 400;
-      color: #4a5568;
-      line-height: 1.45;
+      color: #5f6b7c;
+      line-height: 1.55;
     }
 
     .cross-link-arrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 0;
+      border: none;
+      background: transparent;
       color: var(--primary);
-      font-size: 12px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
       flex-shrink: 0;
       margin-left: 8px;
-      transition: color 0.15s;
+      transition: color 0.18s ease, transform 0.18s ease;
+      box-shadow: none;
+    }
+
+    .cross-link-arrow-text {
+      white-space: nowrap;
+    }
+
+    .cross-link-arrow-icon {
+      font-size: 15px;
+      line-height: 1;
+      transition: transform 0.18s ease;
     }
 
     .cross-link-card:hover .cross-link-arrow {
-      color: var(--accent);
+      color: var(--primary);
+    }
+
+    .cross-link-card:hover .cross-link-arrow-icon {
+      transform: translateX(2px);
     }
 
     @media (max-width: 600px) {
       .cross-link-grid {
         grid-template-columns: 1fr;
+      }
+
+      .cross-link-card {
+        grid-template-columns: 1fr;
+        align-items: flex-start;
+        padding: 16px 16px 18px;
+      }
+
+      .cross-link-arrow {
+        margin-left: 0;
       }
     }
   </style>

@@ -6,8 +6,8 @@ practices: ["business"]
 services: ["business-tax"]
 featured: false
 subtopic: "Entity & Structure"
-primary_cluster: "business-tax"
-clusters: ["business-tax"]
+primary_cluster: "s-corps"
+clusters: ["s-corps", "business-tax"]
 strategy_snapshot:
   summary: "S-corp basis determines how much of a loss you can actually deduct. Stock basis tracks contributions and income; loan basis requires a direct loan from the shareholder to the corporation. Third-party debt and guarantees do not create basis the way they do in a partnership."
   bullets:

@@ -6,8 +6,8 @@ practices: ["business"]
 services: ["business-tax"]
 featured: false
 subtopic: "Entity & Structure"
-primary_cluster: "business-tax"
-clusters: ["business-tax"]
+primary_cluster: "s-corps"
+clusters: ["s-corps", "business-tax"]
 strategy_snapshot:
   summary: "S-corps and partnerships are both pass-through entities, but they are built for different situations. S-corps work best for a single profitable owner trying to reduce self-employment tax. Partnerships work best when there are multiple owners, custom economics, or a need for flexibility that S-corp structure cannot accommodate."
   bullets:

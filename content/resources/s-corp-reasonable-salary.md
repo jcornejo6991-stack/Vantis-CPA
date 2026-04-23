@@ -6,8 +6,8 @@ practices: ["business", "individuals", "realestate"]
 services: ["business-tax", "payroll"]
 featured: false
 subtopic: "Planning Strategies"
-primary_cluster: "business-tax"
-clusters: ["business-tax"]
+primary_cluster: "s-corps"
+clusters: ["s-corps", "business-tax"]
 strategy_snapshot:
   summary: "Reasonable salary is not a fixed ratio or a rule-of-thumb percentage. It is a facts-and-circumstances question about what the owner actually does, what similar work pays, and how much of the company’s revenue is really being produced by the shareholder’s services."
   bullets:
@@ -119,7 +119,7 @@ The IRS also scrutinizes situations where owners use the business to pay:
 - fringe benefits handled incorrectly,
 - or reimbursements without proper structure.
 
-Those items can become wage issues too. That is one reason this page pairs naturally with your broader [S-Corporation Election: When It Makes Sense (and When It Doesn't)](/resources/s-corps/) guide.
+Those items can become wage issues too. That is one reason this page pairs naturally with your broader [S-Corporation Election: When It Makes Sense (and When It Doesn't)](/resources/s-corp-election/) guide.
 
 ## Quick Comparison
 

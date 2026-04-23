@@ -9,46 +9,43 @@ aliases:
 subtitle: "Tax compliance and planning for U.S. citizens, dual citizens, and green card holders with foreign financial ties."
 heroImage: "/images/card-expats.jpg"
 sections:
-  - title: "International Tax for U.S. Individuals and Families"
+  - title: "You Can Have International Tax Issues Without Living Abroad"
     body: |
-      You don't have to be living abroad to have complex international tax obligations. U.S. residents with foreign bank accounts, investments, inherited assets, or dual citizenship face reporting requirements that go well beyond a standard 1040. Missing these filings, even when no additional tax is owed, can result in significant penalties.
-  - title: "What U.S. Individuals with Foreign Ties Usually Need"
-    body: |
-      Common needs include:
+      You do not have to be living abroad to have complex international tax obligations. U.S. residents with foreign bank accounts, investments, inherited assets, or dual citizenship often have reporting requirements that go well beyond a standard 1040. Missing them can create significant penalties even when no additional tax is owed.
 
-      * FBAR filing for foreign financial accounts exceeding $10,000
+      Common filing work includes:
+
+      * FBAR for foreign financial accounts
       * FATCA / Form 8938 for foreign financial assets
-      * Form 5471 for U.S. persons with ownership in a foreign corporation
-      * Form 8865 for U.S. persons with an interest in a foreign partnership
-      * Form 8858 for U.S. persons who own a foreign disregarded entity
       * Form 3520 for foreign gifts or inheritances received
-      * Foreign tax credit for taxes paid to foreign governments
-      * Dual citizenship filing analysis and strategy
-      * Green card holder U.S. tax obligations
+      * Form 5471, 8865, or 8858 where foreign entities are involved
+      * Foreign tax credit analysis
       * Foreign pension and account reporting
-      * State tax considerations for foreign income
-  - title: "Receiving a Foreign Inheritance or Gift"
+      * State tax review where foreign income is involved
+  - title: "Planning Around Foreign Gifts, Inheritances, and Ownership"
     body: |
-      Many U.S. individuals receive assets from abroad, whether an inheritance from a foreign parent, a gift from a foreign relative, or a transfer from a foreign trust, and do not realize a U.S. filing requirement exists. Form 3520 is required in many of these situations, and the penalties for missing it are steep. We help clients identify when reporting is required and handle it correctly.
-  - title: "Dual Citizens and Green Card Holders"
+      International reporting often starts with an event that does not look like a tax problem at first: receiving a gift from abroad, inheriting foreign assets, becoming an owner of a foreign company, or getting signature authority over an account. The planning value is in identifying the filing early, keeping the right records, and making sure the foreign activity is reported in the right place from the start.
+
+      We help clients evaluate the reporting consequences before the deadline, coordinate the international forms with the individual return, and make the reporting path clear before anything is missed.
+
+      If prior years were missed, we can still assess streamlined procedures or another cleanup approach. The goal, though, is to catch the issue early enough that it never turns into a penalty problem.
+    cards:
+      - label: "International Tax Strategy Hub"
+        description: "Guides on foreign gifts, foreign company reporting, tax credits, pre-immigration planning, and other cross-border issues."
+        url: "/resources/international-tax/"
+  - title: "Individuals and Families We Work With"
     body: |
-      U.S. tax law applies based on citizenship and residency status, not just where you live. Dual citizens and green card holders often have obligations that aren't obvious, including foreign account reporting, treaty considerations, and in some cases reporting on foreign entities or pensions. We help clients understand what applies to them and stay current without overpaying.
-  - title: "Behind on Prior Years"
-    body: |
-      If you have missed FBARs, Form 8938, Form 3520, or other foreign filings, streamlined filing procedures may reduce or eliminate penalties. We assess the situation, determine the right approach, and help you get current with as little exposure as possible.
-  - title: "Year-Round International Tax Support"
-    body: |
-      International tax situations change as accounts open and close, inheritances arrive, and residency status shifts. We provide ongoing support for clients whose lives include a foreign dimension, keeping filings current and flagging issues before they become problems.
+      We work with U.S. citizens, dual citizens, green card holders, and U.S. residents who have a foreign financial or family connection. This is especially useful when the foreign reporting needs to be coordinated with the rest of the individual return instead of handled as an isolated form.
 sectionTitle: "What We Handle"
 specializations:
   - label: "FBAR Filing"
   - label: "FATCA / Form 8938 Reporting"
   - label: "Form 5471: Foreign Corporation Reporting"
-    url: "/resources/form-5471/"
+    url: "/resources/international-tax/"
   - label: "Form 8865: Foreign Partnership Reporting"
   - label: "Form 8858: Foreign Disregarded Entity"
   - label: "Foreign Tax Credit"
-    url: "/resources/feie-vs-ftc/"
+    url: "/resources/international-tax/"
   - label: "Form 3520: Foreign Gifts & Inheritance"
   - label: "Dual Citizen Tax Compliance"
   - label: "Green Card Holder U.S. Tax Obligations"

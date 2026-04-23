@@ -69,9 +69,9 @@ sections:
       - label: "Sales Tax"
         description: "Sales tax registration, filing, and nexus review for businesses selling across state lines."
         url: "/services/full-suite/sales-tax/"
-  - title: "Who This Is For"
+  - title: "Business Owners We Work With"
     body: |
-      This service fits sole proprietors, single-member LLCs, S-corporations, partnerships, and C-corporations that want a CPA involved year-round, not just at filing time. It is particularly well-suited for owner-operated businesses where the owner's personal and business tax situations are connected. The business return feeds the personal return, and the planning work needs to account for both.
+      We work with sole proprietors, single-member LLCs, S-corporations, partnerships, and C-corporations that want a CPA involved year-round, not just at filing time. This is especially useful for owner-operated businesses where the owner's personal and business tax situations are connected. The business return feeds the personal return, and the planning work needs to account for both.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Business Returns - Form 1065 (Partnership)"

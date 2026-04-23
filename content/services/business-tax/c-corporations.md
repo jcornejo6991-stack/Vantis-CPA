@@ -24,17 +24,11 @@ sections:
       * The tax cost of future distributions or a sale
   - title: "Managing the Double Tax"
     body: |
-      Good C-corp work means looking at both the current return and the path the owners are setting for later years. Many businesses are also comparing a C-corp to an S-corp or partnership structure. Those choices affect whether income is taxed once or twice, whether owners can use losses currently, how flexible the economics can be, and what outside ownership is allowed. We help clients compare those tradeoffs before the structure is locked in.
+      Good C-corp work means looking at both the current return and the path the owners are setting for later years. Many businesses are also comparing a C-corp to an S-corp or partnership structure. Those choices affect whether income is taxed once or twice, whether owners can use losses currently, how flexible the economics can be, and what outside ownership is allowed. We help clients compare those tradeoffs before the structure is locked in, and the hub below covers the broader business-tax side of that decision.
     cards:
-      - label: "C-Corporation Tax Planning"
-        description: "Double taxation, retained earnings, owner compensation vs. dividends, and exit planning in a C-corp."
-        url: "/resources/c-corporation-tax-planning/"
-      - label: "S-Corporations"
-        description: "Owner wages, payroll tax savings, basis, and where S-corp status works better."
-        url: "/services/business-tax/s-corps/"
-      - label: "Partnerships"
-        description: "Multi-owner flexibility, allocations, and when pass-through treatment is the better fit."
-        url: "/services/business-tax/partnerships/"
+      - label: "Business Tax Strategy Hub"
+        description: "Entity planning, S-corp elections, partnership structure, and other business tax strategy guides."
+        url: "/resources/business-tax/"
   - title: "Full Suite"
     body: |
       C-corp work is cleaner when the books behind it are clean. For owners who want one firm handling bookkeeping, payroll, and the return, we offer full-service support alongside the tax work.
@@ -46,7 +40,7 @@ sections:
     body: |
       We prepare the Form 1120 and help owners think through compensation, distributions, retained earnings, related-party activity, and whether the current structure still fits. If the C-corp was formed for a good reason, we help run it correctly. If it was formed by habit or generic advice, we help evaluate whether another structure works better.
 
-      This page fits businesses already taxed as C-corporations, owners deciding whether C-corp treatment makes sense, and companies with growth or ownership plans that do not fit neatly into a pass-through structure.
+      We work with businesses already taxed as C-corporations, owners deciding whether C-corp treatment makes sense, and companies with growth or ownership plans that do not fit neatly into a pass-through structure.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Form 1120 Preparation"
@@ -56,7 +50,5 @@ specializations:
   - label: "State Corporate Tax Filings"
   - label: "Shareholder Loan and Related-Party Transaction Review"
   - label: "C-Corp vs. S-Corp Analysis"
-    url: "/services/business-tax/s-corps/"
   - label: "C-Corp vs. Partnership Analysis"
-    url: "/services/business-tax/partnerships/"
 ---

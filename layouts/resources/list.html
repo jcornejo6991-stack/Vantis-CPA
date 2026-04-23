@@ -3,23 +3,9 @@
   {{ partial "nav-css.html" . }}
   {{ partial "footer-css.html" . }}
 
-  {{ $generalTopics := slice }}
-  {{ with .Site.GetPage "/resources/international-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
-  {{ with .Site.GetPage "/resources/real-estate-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
-  {{ with .Site.GetPage "/resources/individual-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
-  {{ with .Site.GetPage "/resources/business-tax" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
-  {{ with .Site.GetPage "/resources/general-tax-compliance" }}{{ $generalTopics = $generalTopics | append . }}{{ end }}
-
-  {{ $focusedAreas := slice }}
-  {{ with .Site.GetPage "/resources/ecommerce-sellers" }}{{ $focusedAreas = $focusedAreas | append . }}{{ end }}
-  {{ with .Site.GetPage "/resources/latam-inbound" }}{{ $focusedAreas = $focusedAreas | append . }}{{ end }}
-
-  {{ $generalTopicLabels := dict
-    "/resources/international-tax/" "International U.S. Tax Strategies"
-    "/resources/individual-tax/" "Individual Tax Strategies"
-    "/resources/business-tax/" "Business Tax Strategies"
-    "/resources/real-estate-tax/" "Real Estate Tax Strategies"
-  }}
+  {{ $hubPages := where (where (where .Site.Pages "Section" "resources") "Kind" "section") "Params.layout" "hub" }}
+  {{ $generalTopics := sort (where $hubPages "Params.hub_group" "general") "Params.weight" }}
+  {{ $focusedAreas := sort (where $hubPages "Params.hub_group" "focused") "Params.weight" }}
 
   <style>
     .resource-library {
@@ -323,9 +309,6 @@
             <a href="{{ .RelPermalink }}" class="library-hub-row">
               <div class="library-hub-main">
                 {{ $displayTitle := .Title }}
-                {{ with index $generalTopicLabels .RelPermalink }}
-                  {{ $displayTitle = . }}
-                {{ end }}
                 <span class="library-hub-title">{{ $displayTitle }}</span>
                 <span class="library-hub-desc">{{ .Description }}</span>
               </div>

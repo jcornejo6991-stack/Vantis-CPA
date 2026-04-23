@@ -45,7 +45,7 @@ sections:
         url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
   - title: "Rental Owners and Investors We Work With"
     body: |
-      This page fits individual landlords reporting on Schedule E, short-term rental operators, commercial property owners, and partnerships or LLCs that hold investment real estate and file a Form 1065. It also fits owners who are behind on depreciation, planning a sale, or trying to understand whether their losses are actually deductible.
+      We work with individual landlords reporting on Schedule E, short-term rental operators, commercial property owners, and partnerships or LLCs that hold investment real estate and file Form 1065. It is also a good fit for owners who are behind on depreciation, planning a sale, or trying to understand whether their losses are actually deductible.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Schedule E Rental Income and Expense Reporting"
@@ -53,14 +53,14 @@ specializations:
   - label: "Residential Rental Property (27.5-Year)"
   - label: "Commercial Real Estate (39-Year)"
   - label: "Long-Term and Short-Term Rental Tax Planning"
-    url: "/resources/short-term-rental-taxes/"
+    url: "/resources/real-estate-tax/"
   - label: "Real Estate Professional Status (REPS)"
-    url: "/resources/real-estate-professional-status/"
+    url: "/resources/real-estate-tax/"
   - label: "Passive Loss and Grouping Elections"
   - label: "Cost Segregation and Bonus Depreciation"
   - label: "Expense vs. Capitalization Analysis"
   - label: "1031 Exchange Planning"
-    url: "/resources/1031-exchange/"
+    url: "/resources/real-estate-tax/"
   - label: "Partnership Returns (Form 1065)"
   - label: "Special Allocations and Waterfall Structures"
   - label: "K-1 Preparation and Partner Reporting"

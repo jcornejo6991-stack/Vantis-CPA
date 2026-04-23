@@ -61,6 +61,7 @@
       --article-glass-bg: rgba(255,255,255,0.5);
       --article-glass-bg-strong: rgba(255,255,255,0.68);
       --article-glass-border: rgba(255,255,255,0.58);
+      --article-sticky-top: calc(var(--nav-height, 68px) + 44px);
       display: flex;
       flex-direction: column;
       gap: 18px;
@@ -486,7 +487,7 @@
       border-radius: 16px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.25), 0 2px 8px rgba(0,0,0,0.15);
       position: sticky;
-      top: var(--nav-height);
+      top: var(--article-sticky-top);
     }
 
     .article-sidebar h3 {

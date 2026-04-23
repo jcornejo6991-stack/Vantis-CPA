@@ -27,9 +27,9 @@ sections:
       * Payroll integration with bookkeeping
 
       We can help with setup, cleanup, or ongoing management depending on where your payroll process currently stands.
-  - title: "Who This Is For"
+  - title: "Businesses We Support on Payroll"
     body: |
-      This service is a fit for businesses hiring their first employees, growing companies that need recurring payroll support, owners converting to an S-corp, and businesses cleaning up payroll issues that have created notices or bookkeeping problems. Payroll should not be an isolated system. It should connect cleanly to the books and the tax return.
+      We work with businesses hiring their first employees, growing companies that need recurring payroll support, owners converting to an S-corp, and businesses cleaning up payroll issues that have created notices or bookkeeping problems. Payroll should not be an isolated system. It should connect cleanly to the books and the tax return.
   - title: "Ongoing Payroll Support"
     body: |
       We can stay involved after setup to keep the process running cleanly through the year. That includes payroll review, tax deposit monitoring, year-end form preparation, and coordination with bookkeeping and tax filings. The result is a payroll process that stays current instead of becoming a year-end reconciliation problem.

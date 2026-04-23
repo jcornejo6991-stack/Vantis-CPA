@@ -32,7 +32,7 @@ sections:
     body: |
       Trust and gift tax returns are often part of the same picture as the individual return. A trust may issue K-1s that need to line up with the related Form 1040, and a large gift or trust funding transaction may require Form 709 even when no current gift tax is due. We treat those filings as connected work, which keeps reporting, basis tracking, and exemption usage coordinated.
     cards:
-      - label: "Grantor and Non-Grantor Trust Returns"
+      - label: "Trust Returns"
         description: "Form 1041 filings, beneficiary K-1s, DNI analysis, and coordination with the related individual return."
         url: "/services/individual-tax/trusts/"
       - label: "Gift Tax Returns"
@@ -57,9 +57,9 @@ sections:
       - label: "Full Suite"
         description: "Bookkeeping, payroll, sales tax, and back office support for businesses that want one firm for everything."
         url: "/services/full-suite/"
-  - title: "Who This Is For"
+  - title: "Individuals and Families We Work With"
     body: |
-      This service fits individuals and families with income from more than one source, anyone navigating a significant financial event, and people who want a CPA involved before the transactions happen, not just when it is time to report them. If your tax situation has gotten more complex than it used to be, or you are not confident the last few returns were handled correctly, this is a good place to start.
+      We work with individuals and families with income from more than one source, anyone navigating a significant financial event, and people who want a CPA involved before the transactions happen, not just when it is time to report them. If your tax situation has gotten more complex than it used to be, or you are not confident the last few returns were handled correctly, this is a good place to start.
 sectionTitle: "What We Cover"
 specializations:
   - label: "1040 Return Preparation"

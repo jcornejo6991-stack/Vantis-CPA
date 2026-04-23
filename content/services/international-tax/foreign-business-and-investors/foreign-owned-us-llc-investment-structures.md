@@ -33,31 +33,28 @@ sections:
       * U.S. tax filing coordination for the investment structure
       * FIRPTA, estate tax, or restructuring review depending on the asset
 
-      If the investment is U.S. real estate, the structure also needs to be coordinated with estate tax planning and FIRPTA withholdings on sale.
+      If the investment is U.S. real estate, the structure also needs to be coordinated with estate tax planning and FIRPTA withholdings on sale. The hub below covers the real-estate side of that planning in one place.
     cards:
-      - label: "Estate Planning for Foreign Nationals with U.S. Assets"
-        description: "Blocker structures, treaty analysis, and U.S. estate tax exposure for nonresident owners."
-        url: "/resources/estate-planning-blockers-foreign-nationals/"
-      - label: "FIRPTA Withholdings on Sale"
-        description: "Withholding certificates, gain reporting, buyer obligations, and sale-year 1040-NR filing."
-        url: "/resources/firpta-us-real-estate-sales/"
+      - label: "Foreign Investors in U.S. Real Estate"
+        description: "Section 871(d), FIRPTA, ownership structure, partnership withholding, and estate tax issues for foreign real estate investors."
+        url: "/resources/us-real-estate-owned-by-foreign-investors/"
   - title: "Common Mistakes"
     body: |
       Common mistakes include assuming a U.S. LLC solves estate tax exposure, using the same structure for active operations and passive investment without review, treating owner inflows and outflows casually, and forming the entity before the acquisition terms and long-term exit plan are mapped out.
-  - title: "Who This Is For"
+  - title: "Foreign Investors We Work With"
     body: |
-      This page fits foreign investors using U.S. LLCs for real estate, holding vehicles, passive investments, or mixed inbound ownership structures that need better U.S. tax and compliance coordination.
+      We work with foreign investors using U.S. LLCs for real estate, holding vehicles, passive investments, or mixed inbound ownership structures that need better U.S. tax and compliance coordination.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Investment LLC Structure Review"
   - label: "EIN and Administrative Setup"
   - label: "Capital and Owner Transaction Tracking"
   - label: "Form 5472 Review"
-    url: "/resources/smllc-5472/"
+    url: "/resources/international-tax/"
   - label: "Estate Tax Exposure Review"
-    url: "/resources/estate-planning-blockers-foreign-nationals/"
+    url: "/resources/us-real-estate-owned-by-foreign-investors/"
   - label: "Entity Classification Review"
-    url: "/resources/form-8832-entity-classification-elections/"
+    url: "/resources/international-tax/"
   - label: "International Tax Support"
     url: "/services/international-tax/"
   - label: "Bookkeeping Support"

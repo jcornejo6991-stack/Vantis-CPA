@@ -6,8 +6,8 @@ practices: ["outbound", "inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "real-estate-tax", "latam-inbound"]
+primary_cluster: "us-real-estate-owned-by-foreign-investors"
+clusters: ["us-real-estate-owned-by-foreign-investors", "international-tax", "real-estate-tax", "latam-inbound"]
 aliases:
   - /services/international-tax/real-estate/firpta-us-real-estate-sales/
   - /expertise/realestate/firpta-us-real-estate-sales/

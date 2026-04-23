@@ -182,12 +182,16 @@
             {{ if .cards }}
             <div class="cross-link-grid cross-link-grid-stack">
               {{ range .cards }}
-              <a href="{{ .url }}" class="cross-link-card">
-                <span>
-                  {{ .label }}
+              {{ $isResourceCard := hasPrefix .url "/resources/" }}
+              <a href="{{ .url }}" class="cross-link-card{{ if $isResourceCard }} cross-link-card-resource{{ end }}">
+                <span class="cross-link-copy">
+                  <span class="cross-link-label">{{ .label }}</span>
                   {{ with .description }}<small class="cross-link-desc">{{ . }}</small>{{ end }}
                 </span>
-                <span class="cross-link-arrow">Learn More &rarr;</span>
+                <span class="cross-link-arrow">
+                  <span class="cross-link-arrow-text">Learn More</span>
+                  <span class="cross-link-arrow-icon" aria-hidden="true">&rarr;</span>
+                </span>
               </a>
               {{ end }}
             </div>
@@ -217,7 +221,12 @@
           {{ with .Params.coreServiceLinksIntro }}<p class="section-intro">{{ . }}</p>{{ end }}
           <div class="cross-link-grid">
             {{ range $coreServiceLinks }}
-            <a href="{{ .url }}" class="cross-link-card">{{ .label }}<span class="cross-link-arrow">&rarr;</span></a>
+            <a href="{{ .url }}" class="cross-link-card">
+              <span class="cross-link-label">{{ .label }}</span>
+              <span class="cross-link-arrow">
+                <span class="cross-link-arrow-icon" aria-hidden="true">&rarr;</span>
+              </span>
+            </a>
             {{ end }}
           </div>
         </div>

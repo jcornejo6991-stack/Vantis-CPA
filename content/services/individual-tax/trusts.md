@@ -1,48 +1,57 @@
 ---
-title: "Grantor and Non-Grantor Trust Returns"
-description: "Preparation and planning for grantor and non-grantor trust tax returns, including Form 1041 filings, distribution reporting, DNI analysis, and coordination with the grantor's or beneficiary's individual return."
+title: "Trust Returns"
+description: "Form 1041 preparation and planning for revocable, irrevocable, grantor, and non-grantor trusts, including beneficiary K-1s, DNI analysis, and coordination with the related individual return."
 layout: "service"
 weight: 10
 nav_title: "Trust Returns"
-subtitle: "Form 1041 preparation and year-round tax support for grantor and non-grantor trusts."
+subtitle: "Form 1041 preparation and year-round support for trustees, grantors, and families managing trust reporting."
 sections:
-  - title: "Trust Returns Need the Fiduciary Side and the Individual Side"
+  - title: "Trust Returns Need the Structure and the Tax Reporting to Match"
     body: |
-      Trust taxation rarely stands alone. A grantor trust may push items back to the grantor's individual return even when the assets sit inside the trust. A non-grantor trust may file its own Form 1041, issue K-1s to beneficiaries, and require decisions about distributions, timing, and how fiduciary accounting income is being treated. The return only makes sense when those moving pieces are being reviewed together.
+      Trust taxation rarely stands alone. A trust may hold the assets, but the income may still belong on the grantor's Form 1040, or the trust may be its own taxpayer filing Form 1041 and issuing K-1s to beneficiaries. The work only makes sense when the trust document, the actual administration, and the tax reporting all line up.
 
-      We handle both the fiduciary filing and the coordination work around it. That includes reading the practical tax consequences of the trust structure, reporting the income in the correct place, and making sure the trust return and the related individual returns agree with each other.
-  - title: "Grantor Trust Reporting"
-    body: |
-      Grantor trusts are often misunderstood because the legal entity exists, but the tax result usually flows back to the grantor. In some cases the filing is simplified through grantor reporting statements. In others, a Form 1041 is still used as an information return while the taxable income is reported on the grantor's Form 1040.
+      Common trust return work includes:
 
-      The real work is not just choosing a filing format. It is tracing interest, dividends, capital gains, rental activity, business interests, and other items to the correct taxpayer and keeping the reporting consistent across broker statements, prior-year filings, and the grantor's individual return.
-  - title: "Non-Grantor Trust Returns"
+      * Form 1041 preparation and filing
+      * Grantor trust reporting statements and information returns
+      * Beneficiary K-1 reporting
+      * Distribution timing and DNI analysis
+      * First-year filings after death and EIN transitions
+      * Coordination with the related grantor, beneficiary, or estate return
+  - title: "How Trust Types and Reporting Fit Together"
     body: |
-      Non-grantor trusts are their own taxpayers, which means the filing stakes are higher. Trust tax brackets are compressed, distribution timing matters, and DNI calculations affect whether income is retained at the trust level or carried out to beneficiaries. If the trust has investment accounts, rental property, partnership interests, or sales activity, the return can become technical quickly.
+      These labels overlap, but they answer different questions:
 
-      We prepare Form 1041 returns, calculate beneficiary reporting, review distributions and timing issues, and coordinate the K-1 reporting so the trust return and beneficiary returns fit together cleanly.
-  - title: "Common Issues We Handle"
-    body: |
-      Trust returns tend to become messy when the administrative documents and the tax documents do not line up. Trustees may not have a clean income summary. Brokerage accounts may still be under an old taxpayer ID. Prior preparers may have changed reporting methods from year to year. Capital gains may or may not stay inside the trust depending on the governing document and the actual administration. Distributions may be made without anyone thinking through the tax effect until after year-end.
+      * Revocable vs. irrevocable: whether the trust can still be changed or revoked.
+      * Grantor vs. non-grantor: where the income is taxed.
+      * Revocable trusts are usually taxed to the grantor.
+      * Irrevocable trusts can still be grantor trusts, or they can be separate taxpayers filing Form 1041.
 
-      We work through those gaps directly. That includes first-year trust filings, EIN transitions after death, catch-up filings, beneficiary K-1 issues, trust-versus-individual reporting questions, and coordination with the attorney or trustee when the paperwork needs to be reconciled before the return can be filed correctly.
-  - title: "How We Help"
-    body: |
-      We prepare the return, but we also help trustees and families understand what is actually being reported and why. When the trust is part of a larger family tax picture, we coordinate the fiduciary filing with the related individual returns rather than handling them in isolation. That usually matters more than the form itself.
+      What makes trust returns technical is not the form alone. We usually have to reconcile the trust document, taxpayer ID, account reporting, distributions, and the related individual or estate return before the filing is actually clean.
 
-      If the trust is straightforward, we keep the process straightforward. If the trust has multiple accounts, beneficiaries, distributions, or prior-year problems, we sort through the reporting and clean it up instead of papering over inconsistencies.
-  - title: "Who This Is For"
+      Common issues include:
+
+      * Accounts still under the wrong taxpayer ID
+      * Capital gains and distributions that were handled without clear tax planning
+      * Rental property, business interests, or K-1s inside the trust
+      * First-year post-death filings and revocable-to-irrevocable transitions
+      * Prior-year filings that were inconsistent or incomplete
+
+      A grantor trust return has to line up with the grantor's Form 1040. A non-grantor trust return has to line up with beneficiary reporting and K-1s. We handle the filing itself, but we also make sure the trust return fits the larger tax picture.
+  - title: "Trustees and Families We Work With"
     body: |
-      This page fits revocable and irrevocable trust situations that need tax reporting handled correctly, trustees filing Form 1041 for the first time, families managing the transition after a death, and beneficiaries or grantors trying to understand why trust income is showing up where it is. If the trust return connects to a broader individual tax planning issue, we handle that as one engagement instead of splitting the work apart.
+      We work with trustees filing Form 1041 for the first time, families dealing with the first filing after a death, grantors trying to understand why trust income is still hitting the individual return, and beneficiaries who need the trust reporting cleaned up and explained. When the trust return connects to a broader individual tax issue, we handle the work together instead of splitting the picture apart.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Grantor Trust Reporting"
   - label: "Non-Grantor Trust Returns"
+  - label: "Revocable Trust Post-Death Reporting"
+  - label: "Irrevocable Trust Income Tax Reporting"
   - label: "Form 1041 Preparation"
   - label: "Beneficiary K-1 Reporting"
   - label: "Distribution and DNI Analysis"
   - label: "Trust and Individual Return Coordination"
   - label: "First-Year and Post-Death Trust Filings"
-  - label: "EIN and Reporting Transition Cleanup"
   - label: "Catch-Up and Prior-Year Trust Filings"
+  - label: "EIN and Reporting Transition Cleanup"
 ---

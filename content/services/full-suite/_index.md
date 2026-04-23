@@ -32,9 +32,9 @@ sections:
   - title: "How We Help"
     body: |
       We do not treat these as isolated tasks. Back-office work affects bookkeeping. Bookkeeping affects payroll and sales tax. All of it affects the tax return. We help clients build an operating system that supports cleaner decisions, cleaner filings, and less year-end reconstruction.
-  - title: "Who This Is For"
+  - title: "Businesses That Need Ongoing Support"
     body: |
-      This page is for business owners who want more than a tax preparer. It fits companies that need day-to-day accounting support, growing businesses adding payroll or multistate exposure, and owners who want one firm coordinating the operational side with the tax side.
+      This service is built for owners who want more than a tax preparer: companies that need day-to-day accounting support, growing businesses adding payroll or multistate exposure, and owners who want one firm coordinating the operational side with the tax side.
 sectionTitle: "What We Handle"
 specializations:
   - label: "Back-Office Setup and Maintenance"
