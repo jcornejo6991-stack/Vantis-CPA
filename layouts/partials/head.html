@@ -368,6 +368,21 @@
   </script>
   {{ end }}
 
+  <!-- Flag icons (language toggle) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@7.2.3/css/flag-icons.min.css">
+
+  <!-- Google Translate (language toggle) -->
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,es,pt',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
   <!-- Google Analytics -->
   {{ if .Site.Data.siteconfig.integrations.analytics.ga4Id }}
   <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Data.siteconfig.integrations.analytics.ga4Id }}"></script>

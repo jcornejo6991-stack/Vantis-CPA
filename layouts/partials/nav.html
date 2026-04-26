@@ -18,7 +18,7 @@
 
   <div class="nav-main-row">
     <div class="nav-inner">
-      <a href="/" class="nav-brand" aria-label="Vantis CPA - Home">
+      <a href="/" class="nav-brand" aria-label="Vantis CPA - Home" translate="no">
         <div class="nav-gv-mark" aria-hidden="true">Vantis CPA</div>
       </a>
 
@@ -45,6 +45,20 @@
 
         <li><a href="/resources/" class="nav-pill">Resources</a></li>
         <li><a href="/contact/">Contact Us</a></li>
+        <li class="lang-select-wrap">
+          <div class="lang-select">
+            <button class="lang-trigger" id="langTrigger" aria-haspopup="true" aria-expanded="false" translate="no">
+              <span class="fi fi-us" id="langFlag"></span>
+              <span id="langCode">EN</span>
+              <svg width="8" height="5" viewBox="0 0 8 5" fill="none" aria-hidden="true"><path d="M1 1l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+            <div class="lang-menu" id="langMenu">
+              <button class="lang-option" data-lang="en" onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+              <button class="lang-option" data-lang="es" onclick="setLang('es')"><span class="fi fi-mx"></span> ES</button>
+              <button class="lang-option" data-lang="pt" onclick="setLang('pt')"><span class="fi fi-br"></span> PT</button>
+            </div>
+          </div>
+        </li>
       </ul>
 
       <script>
@@ -130,10 +144,31 @@
         <a href="{{ . }}" role="menuitem" target="_blank" rel="noopener noreferrer">Pay Bill</a>
         {{ end }}
         <a href="/contact/" role="menuitem">Contact Us</a>
+        <div class="lang-toggle-mobile" translate="no">
+          <button class="lang-btn-m" data-lang="en" onclick="setLang('en')"><span class="fi fi-us"></span> EN</button>
+          <button class="lang-btn-m" data-lang="es" onclick="setLang('es')"><span class="fi fi-mx"></span> ES</button>
+          <button class="lang-btn-m" data-lang="pt" onclick="setLang('pt')"><span class="fi fi-br"></span> PT</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <script>
+    (function() {
+      var trigger = document.getElementById('langTrigger');
+      var menu = document.getElementById('langMenu');
+      if (!trigger || !menu) return;
+      trigger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var open = menu.classList.toggle('open');
+        trigger.setAttribute('aria-expanded', String(open));
+      });
+      document.addEventListener('click', function() {
+        menu.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      });
+    })();
+  </script>
 </nav>
 
 <script>

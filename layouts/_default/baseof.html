@@ -9,5 +9,49 @@
     <script src="/js/forms.js"></script>
     <script src="/js/integrations.js"></script>
     <script src="/js/geo.js"></script>
+
+    <div id="google_translate_element" style="display:none"></div>
+    <script>
+      var _langMeta = { en: { flag: 'us', code: 'EN' }, es: { flag: 'mx', code: 'ES' }, pt: { flag: 'br', code: 'PT' } };
+
+      function _updateTrigger(lang) {
+        var m = _langMeta[lang] || _langMeta.en;
+        var f = document.getElementById('langFlag');
+        var c = document.getElementById('langCode');
+        if (f) f.className = 'fi fi-' + m.flag;
+        if (c) c.textContent = m.code;
+        document.querySelectorAll('.lang-option, .lang-btn-m').forEach(function(b) {
+          b.classList.toggle('lang-active', b.dataset.lang === lang);
+        });
+      }
+
+      function setLang(lang) {
+        var menu = document.getElementById('langMenu');
+        var trigger = document.getElementById('langTrigger');
+        if (menu) menu.classList.remove('open');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+        if (lang === 'en') {
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
+          document.cookie = 'googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=.' + location.hostname;
+          location.reload();
+          return;
+        }
+        var el = document.querySelector('.goog-te-combo');
+        if (el) { el.value = lang; el.dispatchEvent(new Event('change')); }
+        _updateTrigger(lang);
+      }
+
+      (function() {
+        var match = document.cookie.match(/googtrans=\/en\/(\w+)/);
+        _updateTrigger(match ? match[1] : 'en');
+      })();
+
+      // Prevent Google Translate from shifting the page body down
+      new MutationObserver(function() {
+        if (document.body.style.top && document.body.style.top !== '0px') {
+          document.body.style.top = '0';
+        }
+      }).observe(document.body, { attributes: true, attributeFilter: ['style'] });
+    </script>
   </body>
 </html>
