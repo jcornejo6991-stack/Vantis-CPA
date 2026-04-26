@@ -259,6 +259,7 @@
     .client-grid-wrap { padding: 0 32px; }
     .client-grid {
       display: grid; grid-template-columns: repeat(3, 1fr);
+      grid-auto-rows: 1fr;
       gap: 16px;
     }
     .client-tile {
@@ -514,9 +515,46 @@
       font-style: italic;
       margin: 0;
     }
+    .who-we-are-bottom {
+      display: flex;
+      align-items: flex-start;
+      gap: 40px;
+      margin-top: 36px;
+    }
+    .who-we-are-pillars {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+    }
+    .wwa-pillar-label {
+      color: #4EC9B0;
+      font-weight: 600;
+      font-size: 0.88rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin: 0 0 5px;
+    }
+    .wwa-pillar p {
+      color: #b0b8c8;
+      font-size: 0.97rem;
+      line-height: 1.75;
+      margin: 0;
+    }
+    .who-we-are-img {
+      flex: 0 0 450px;
+    }
+    .who-we-are-img img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      display: block;
+    }
     @media (max-width: 768px) {
       .who-we-are { padding: 56px 0; }
       .who-we-are-body { font-size: 0.97rem; }
+      .who-we-are-bottom { flex-direction: column-reverse; }
+      .who-we-are-img { flex: 0 0 auto; width: 100%; max-width: 300px; }
     }
   </style>
   {{ partial "nav-css.html" . }}
@@ -703,7 +741,7 @@
     <div class="industries-header">
       <p class="section-label fade-up">Who We Work With</p>
       <h2 class="section-heading fade-up fade-up-d1" id="industries-heading">From Local to Global</h2>
-      <p class="section-subheading fade-up fade-up-d2">We typically work with people and businesses dealing with more moving parts than a standard return.</p>
+      <p class="section-subheading fade-up fade-up-d2" style="white-space: nowrap;">We typically work with people and businesses dealing with moving parts.</p>
     </div>
     <div class="client-grid-wrap"><div class="client-grid">
       <div class="client-tile fade-up fade-up-d1">
@@ -753,10 +791,29 @@
   <div class="container">
     <div class="who-we-are-inner">
       <p class="section-label fade-up fade-up-d1">Who We Are</p>
-      <h2 class="section-heading fade-up fade-up-d2" id="who-we-are-heading">"The playbook exists. Most people just never find it."</h2>
-      <p class="who-we-are-body fade-up fade-up-d3">Vantis CPA was built on experience spanning cross-border tax matters, international filings, and later expanding into advanced planning work for clients in tech. That mix shaped a firm designed to go beyond standard preparation and into real strategy. That means looking beyond what has to be filed and focusing on what can be structured, timed, and planned in advance. The firm exists for one reason: to help clients see and use the opportunities in the tax code that most never hear about.</p>
+      <h2 class="section-heading fade-up fade-up-d2" id="who-we-are-heading">The playbook exists. Most people just never find it.</h2>
+      <p class="who-we-are-body fade-up fade-up-d3">Vantis CPA was built on experience spanning cross-border tax matters, international filings, and later expanding into advanced planning work for entrepreneurs and closely held businesses. That mix shaped a firm designed to go beyond standard preparation and into real strategy. That means looking beyond what has to be filed and focusing on what can be structured, timed, and planned in advance. Most of that work happens before anything is filed.</p>
       <div class="who-we-are-callout fade-up fade-up-d4">
         <p>The code works the same for everyone. Let's make it work for you.</p>
+      </div>
+      <div class="who-we-are-bottom fade-up fade-up-d5">
+        <div class="who-we-are-pillars">
+          <div class="wwa-pillar">
+            <p class="wwa-pillar-label">One Point of Contact</p>
+            <p>Every client gets direct attention. Your goals, your timeline, your tax picture handled with care from start to finish.</p>
+          </div>
+          <div class="wwa-pillar">
+            <p class="wwa-pillar-label">Responsive by Default</p>
+            <p>Questions get answered, not queued. When your situation changes, we move with it.</p>
+          </div>
+          <div class="wwa-pillar">
+            <p class="wwa-pillar-label">We Reach Out, You Don't Have To</p>
+            <p>You shouldn't have to chase your accountant. If something changes or an opportunity comes up, we bring it to you.</p>
+          </div>
+        </div>
+        <div class="who-we-are-img">
+          <img src="/images/trent-erwin-UgA3Xvi3SkA-unsplash.jpg" alt="Professional workspace" loading="lazy">
+        </div>
       </div>
     </div>
   </div>
@@ -942,18 +999,18 @@
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text"><span aria-hidden="true">❓</span> How do you avoid surprise billing?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> Who do you typically work with?</span>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">We quote all engagements upfront and discuss scope before starting work. No hidden fees, no surprise invoices. What we quote is what you pay.</div>
+          <div class="faq-answer">We work with individuals, families, business owners, real estate investors, and clients with international ties. If your taxes involve more than a simple return, or you want someone who actually looks ahead, we're likely a good fit.</div>
         </div>
 
         <div class="faq-item">
           <div class="faq-question">
-            <span class="faq-q-text"><span aria-hidden="true">❓</span> Why get proactive tax advice instead of just filing?</span>
+            <span class="faq-q-text"><span aria-hidden="true">❓</span> Can you help clean things up and start over the right way?</span>
             <span class="faq-toggle">+</span>
           </div>
-          <div class="faq-answer">Reactive filing costs more over time. Proactive strategy finds deductions and structures you'd otherwise miss, turning tax planning into a profit center rather than an expense.</div>
+          <div class="faq-answer">Yes. Whether you have unfiled years, mismatched records, or just want a clean slate, we can help get things current and set up properly going forward.</div>
         </div>
 
         <div class="faq-item">
