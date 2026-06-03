@@ -22,6 +22,8 @@ sections:
       * Payroll and contractor setup support
       * State registration and compliance planning
       * Form 1120-F evaluation where a foreign holding company has direct U.S. activity
+      * Debt-versus-equity financing analysis for the U.S. subsidiary's capital structure
+      * Treaty-based position planning for cross-border payments
       * Initial tax and filing calendar buildout
 
       This is where the distinction between a true U.S. subsidiary and a direct foreign branch matters. If the business is operating directly in the U.S. through the foreign corporation, Form 1120-F filing requirements may need to be evaluated instead of or alongside subsidiary planning. The hub below covers that broader inbound planning context.
@@ -40,6 +42,8 @@ sections:
       * Intercompany transaction cleanup
       * Annual Form 5472 reporting and intercompany transfer-pricing monitoring
       * Form 1120-F support where a foreign parent or holding company files directly
+      * Repatriation-of-earnings planning across dividends, interest, and royalties
+      * Treaty-based withholding review on cross-border payments
       * Ongoing international tax review where the parent and subsidiary interact
 
       The key is keeping the U.S. entity clean enough that filings, owner reporting, and year-end tax work do not become a reconstruction project.
