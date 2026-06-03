@@ -37,10 +37,10 @@ Brazil work usually gets expensive when the entity gets opened first and the cro
 
 That search usually means:
 
-- a Brazilian resident is opening a U.S. LLC or corporation
-- an American is living in Brazil and still needs U.S. filing support
-- a U.S. person owns Brazilian entities or accounts
-- a Brazilian investor is buying U.S. real estate or other U.S. assets
+- A Brazilian resident is opening a U.S. LLC or corporation
+- An American is living in Brazil and still needs U.S. filing support
+- A U.S. person owns Brazilian entities or accounts
+- A Brazilian investor is buying U.S. real estate or other U.S. assets
 
 Each one uses a different mix of reporting, withholding, and planning.
 
@@ -50,11 +50,11 @@ For U.S. tax purposes, the first question is usually how the Brazilian entity or
 
 That mix usually pushes the analysis toward:
 
-- entity classification for Brazilian companies and holdings
-- foreign account reporting for Brazilian banks and investment accounts
-- foreign entity reporting where ownership crosses U.S. thresholds
-- withholding analysis when money moves between Brazil and the U.S.
-- timing questions if the owner expects to move to or from the U.S.
+- Entity classification for Brazilian companies and holdings
+- Foreign account reporting for Brazilian banks and investment accounts
+- Foreign entity reporting where ownership crosses U.S. thresholds
+- Withholding analysis when money moves between Brazil and the U.S.
+- Timing questions if the owner expects to move to or from the U.S.
 
 In other words, Brazil files usually reward planning before filing.
 
@@ -64,11 +64,11 @@ For Americans in Brazil, the recurring issue is not just "Do I still file?" It i
 
 The first pass normally covers:
 
-- foreign tax credits versus FEIE
-- whether a U.S. state filing obligation survived the move
-- reporting for Brazilian salary, self-employment income, or business ownership
+- Foreign tax credits versus FEIE
+- Whether a U.S. state filing obligation survived the move
+- Reporting for Brazilian salary, self-employment income, or business ownership
 - FBAR and FATCA exposure
-- how any local retirement or social-security coordination should be documented
+- How any local retirement or social-security coordination should be documented
 
 This is one of those country files where the annual return is easy to underestimate because the hard part is usually the fact pattern, not the forms.
 
@@ -81,8 +81,8 @@ The setup usually needs review around:
 - U.S. entity choice before contracts and banking are finalized
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- bookkeeping and payroll support once the U.S. side turns operational
-- how profits, loans, or service payments will move back to Brazil
+- Bookkeeping and payroll support once the U.S. side turns operational
+- How profits, loans, or service payments will move back to Brazil
 
 That is where consulting pays for itself quickly. The wrong entity can create recurring friction every year.
 
@@ -92,11 +92,11 @@ U.S. real estate is a common entry point for Brazilian investors, especially in 
 
 That means reviewing:
 
-- direct ownership versus holding through an entity
-- annual rental-income reporting
+- Direct ownership versus holding through an entity
+- Annual rental-income reporting
 - FIRPTA on sale
-- nonresident return mechanics
-- estate exposure if the property is held the wrong way for the owner's goals
+- Nonresident return mechanics
+- Estate exposure if the property is held the wrong way for the owner's goals
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
 If the issue is U.S. reporting for Brazilian entities, accounts, or ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

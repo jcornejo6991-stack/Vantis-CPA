@@ -37,10 +37,10 @@ Most Canada files are not solved by a single form. They are solved by lining up 
 
 That search usually means one of four real situations:
 
-- a U.S. person has Canadian bank accounts, investments, or business interests that now need U.S. reporting
-- an American is living in Canada and needs annual U.S. filing plus Canadian coordination
-- a Canadian resident is buying U.S. real estate or opening a U.S. business
-- a family is moving to the U.S. and wants to clean up Canadian holdings before residency changes
+- A U.S. person has Canadian bank accounts, investments, or business interests that now need U.S. reporting
+- An American is living in Canada and needs annual U.S. filing plus Canadian coordination
+- A Canadian resident is buying U.S. real estate or opening a U.S. business
+- A family is moving to the U.S. and wants to clean up Canadian holdings before residency changes
 
 Those are different projects. The value is not just filing forms correctly. It is identifying which lane you are in early enough to structure the work the right way.
 
@@ -50,11 +50,11 @@ Canada is one of the few countries where treaty coordination and pension coordin
 
 The issues that usually need review first are:
 
-- foreign account reporting for Canadian bank, brokerage, and other financial accounts
-- how registered accounts such as RRSPs and TFSAs should be handled on the U.S. side
-- ownership in Canadian corporations, partnerships, or disregarded entities
-- whether a planned move to the U.S. should happen before or after an ownership cleanup
-- whether prior-year U.S. filings missed foreign forms or treaty disclosures
+- Foreign account reporting for Canadian bank, brokerage, and other financial accounts
+- How registered accounts such as RRSPs and TFSAs should be handled on the U.S. side
+- Ownership in Canadian corporations, partnerships, or disregarded entities
+- Whether a planned move to the U.S. should happen before or after an ownership cleanup
+- Whether prior-year U.S. filings missed foreign forms or treaty disclosures
 
 For many people, the consulting value is simply separating what is merely Canadian from what is actually a U.S. reporting trigger.
 
@@ -64,11 +64,11 @@ Americans in Canada still live inside the U.S. tax system. The return usually ne
 
 The most common review areas are:
 
-- whether foreign tax credits or FEIE should be the main planning tool
-- whether a state filing obligation survived the move
-- how employment income, self-employment income, or owner compensation is sourced and documented
-- how CPP or QPP interaction affects social-security analysis
-- whether the client is current on FBAR, FATCA, and prior-year filings
+- Whether foreign tax credits or FEIE should be the main planning tool
+- Whether a state filing obligation survived the move
+- How employment income, self-employment income, or owner compensation is sourced and documented
+- How CPP or QPP interaction affects social-security analysis
+- Whether the client is current on FBAR, FATCA, and prior-year filings
 
 This is also where treaty language often gets over-trusted. A treaty can reduce friction, but it does not replace the residency analysis, credit calculation, or filing mechanics.
 
@@ -78,11 +78,11 @@ From the inbound side, the questions change quickly. The first issue is usually 
 
 The U.S. setup often needs to address:
 
-- entity choice before opening bank accounts and signing contracts
+- Entity choice before opening bank accounts and signing contracts
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- bookkeeping and payroll support once the operation is live
-- withholding and treaty review before profits start moving across the border
+- Bookkeeping and payroll support once the operation is live
+- Withholding and treaty review before profits start moving across the border
 
 The clients who usually do best here are the ones who get structure right before revenue starts.
 
@@ -92,11 +92,11 @@ Canadian ownership of U.S. real estate is common, but the tax side is rarely as 
 
 That usually means reviewing:
 
-- whether the property is owned directly or through an entity
-- how rental income will be reported each year
-- how FIRPTA will affect the eventual sale
-- whether the ownership structure creates unnecessary estate exposure
-- how U.S. filing will interact with Canadian reporting and foreign tax credits
+- Whether the property is owned directly or through an entity
+- How rental income will be reported each year
+- How FIRPTA will affect the eventual sale
+- Whether the ownership structure creates unnecessary estate exposure
+- How U.S. filing will interact with Canadian reporting and foreign tax credits
 
 This is one of the clearest examples of why a country guide belongs in the resource library: searchers often arrive with a property question, then discover the real issue is cross-border planning.
 

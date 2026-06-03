@@ -37,10 +37,10 @@ The right first question is not "What is the Latin America tax answer?" It is "W
 
 Most Latin America search traffic maps to one of these situations:
 
-- an American living in Mexico, Colombia, Brazil, Argentina, or Chile who still needs U.S. filing
-- a U.S. person with local companies, bank accounts, or investment structures in the region
-- a Latin American resident opening a U.S. LLC or U.S. corporation
-- a Latin American family buying U.S. real estate or planning a move to the U.S.
+- An American living in Mexico, Colombia, Brazil, Argentina, or Chile who still needs U.S. filing
+- A U.S. person with local companies, bank accounts, or investment structures in the region
+- A Latin American resident opening a U.S. LLC or U.S. corporation
+- A Latin American family buying U.S. real estate or planning a move to the U.S.
 
 Those are not interchangeable. An expat filing project is different from an inbound structuring project, even when the same country is involved.
 
@@ -74,9 +74,9 @@ If the facts are broader than one country, the International Tax resource hub is
 
 By the time a reader finishes a country guide, they usually know which of three service lanes fits:
 
-- outbound reporting for U.S. persons with foreign accounts, foreign entities, or cross-border ownership
-- expat filing for Americans living abroad who need annual 1040, FBAR, and planning support
-- inbound structuring for foreign owners and investors entering the U.S.
+- Outbound reporting for U.S. persons with foreign accounts, foreign entities, or cross-border ownership
+- Expat filing for Americans living abroad who need annual 1040, FBAR, and planning support
+- Inbound structuring for foreign owners and investors entering the U.S.
 
 {{< callout title="Move from research to the right service lane" tone="opportunity" >}}
 If the issue is mainly U.S. reporting for foreign assets or foreign entities, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

@@ -37,10 +37,10 @@ Argentina work rarely gets easier by waiting. It usually gets harder because the
 
 That search usually points to one of these situations:
 
-- an Argentine resident is forming a U.S. LLC or buying U.S. property
-- an American is living in Argentina and needs recurring U.S. filing support
-- a U.S. person owns Argentine entities, accounts, or investments
-- a family is planning a move to the U.S. and wants to clean up ownership first
+- An Argentine resident is forming a U.S. LLC or buying U.S. property
+- An American is living in Argentina and needs recurring U.S. filing support
+- A U.S. person owns Argentine entities, accounts, or investments
+- A family is planning a move to the U.S. and wants to clean up ownership first
 
 Those are related, but they are not the same file.
 
@@ -50,11 +50,11 @@ The IRS maintains the official [U.S. income tax treaty list](https://www.irs.gov
 
 The first review points are usually:
 
-- foreign account reporting for Argentine financial accounts
-- classification and reporting for Argentine entities
-- whether ownership triggers separate U.S. information returns
-- basis and documentation before a move to the U.S.
-- whether prior-year filings already missed international forms
+- Foreign account reporting for Argentine financial accounts
+- Classification and reporting for Argentine entities
+- Whether ownership triggers separate U.S. information returns
+- Basis and documentation before a move to the U.S.
+- Whether prior-year filings already missed international forms
 
 Argentina is one of those countries where cleaning up the fact pattern early can matter as much as the tax return itself.
 
@@ -64,11 +64,11 @@ For Americans in Argentina, the U.S. return is still there every year. The diffi
 
 That review normally covers:
 
-- foreign tax credits versus FEIE
-- whether a state filing obligation survived the move
-- salary, consulting income, or business ownership connected to Argentina
+- Foreign tax credits versus FEIE
+- Whether a state filing obligation survived the move
+- Salary, consulting income, or business ownership connected to Argentina
 - FBAR and FATCA exposure
-- whether the client is current on prior years or needs cleanup work
+- Whether the client is current on prior years or needs cleanup work
 
 When a client is also considering a future return to the U.S., pre-move planning becomes even more important.
 
@@ -78,11 +78,11 @@ Inbound Argentina work often begins with a U.S. LLC question, but the right answ
 
 That usually means reviewing:
 
-- entity choice before signing contracts and wiring capital
+- Entity choice before signing contracts and wiring capital
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- how profits or loans will move between the U.S. and Argentina
-- bookkeeping and compliance support once the U.S. activity goes live
+- How profits or loans will move between the U.S. and Argentina
+- Bookkeeping and compliance support once the U.S. activity goes live
 
 This is the kind of file where structure discipline upfront can save years of recurring friction.
 
@@ -92,11 +92,11 @@ U.S. real estate remains a common planning topic for Argentine families and inve
 
 The main review areas are:
 
-- direct ownership versus entity ownership
-- annual rental-income reporting
+- Direct ownership versus entity ownership
+- Annual rental-income reporting
 - FIRPTA on the eventual sale
-- nonresident return mechanics and ITIN requirements
-- estate exposure if U.S. situs assets are held in the wrong way
+- Nonresident return mechanics and ITIN requirements
+- Estate exposure if U.S. situs assets are held in the wrong way
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
 If the issue is U.S. reporting for Argentine accounts, entities, or foreign ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

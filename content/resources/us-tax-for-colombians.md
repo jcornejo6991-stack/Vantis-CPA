@@ -37,10 +37,10 @@ Most Colombia files need a structure answer before they need a filing answer.
 
 That search is usually pointing to one of these situations:
 
-- a Colombian resident is opening a U.S. entity
-- a Colombian investor is buying U.S. real estate
-- an American is living in Colombia and needs ongoing U.S. filing
-- a U.S. person owns Colombian companies, accounts, or investment structures
+- A Colombian resident is opening a U.S. entity
+- A Colombian investor is buying U.S. real estate
+- An American is living in Colombia and needs ongoing U.S. filing
+- A U.S. person owns Colombian companies, accounts, or investment structures
 
 Those cases overlap, but they are not the same project.
 
@@ -50,11 +50,11 @@ The IRS maintains the official [U.S. income tax treaty list](https://www.irs.gov
 
 The first review items are usually:
 
-- foreign account reporting for Colombian financial accounts
-- classification and reporting for Colombian entities
-- whether ownership triggers separate U.S. information returns
-- whether the owner expects to move to the U.S. and should restructure first
-- whether prior-year U.S. filings already missed international forms
+- Foreign account reporting for Colombian financial accounts
+- Classification and reporting for Colombian entities
+- Whether ownership triggers separate U.S. information returns
+- Whether the owner expects to move to the U.S. and should restructure first
+- Whether prior-year U.S. filings already missed international forms
 
 In practice, this is where a country guide can save time because it helps the reader see the real compliance perimeter early.
 
@@ -64,11 +64,11 @@ For Americans in Colombia, the annual return is still due, but the real planning
 
 That usually means reviewing:
 
-- foreign tax credits versus FEIE
-- whether a state filing obligation survived the move
-- salary, contractor income, or owner distributions sourced through Colombia
+- Foreign tax credits versus FEIE
+- Whether a state filing obligation survived the move
+- Salary, contractor income, or owner distributions sourced through Colombia
 - FBAR and FATCA exposure
-- whether streamlined or prior-year cleanup is needed
+- Whether streamlined or prior-year cleanup is needed
 
 This is why expat cases often start with a search query and end with a consulting engagement. The filing itself is only part of the work.
 
@@ -81,8 +81,8 @@ The setup usually needs review around:
 - U.S. entity choice before signing contracts or opening accounts
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- how the U.S. books and payroll will be maintained
-- how profits or sale proceeds will move back to Colombia
+- How the U.S. books and payroll will be maintained
+- How profits or sale proceeds will move back to Colombia
 
 The earlier that review happens, the cheaper the compliance tends to be.
 
@@ -92,11 +92,11 @@ U.S. property purchases often bring a Colombian resident into the U.S. tax syste
 
 That review usually covers:
 
-- direct versus entity ownership
-- annual rental-income reporting
+- Direct versus entity ownership
+- Annual rental-income reporting
 - FIRPTA on a future sale
-- nonresident return mechanics and ITIN steps
-- estate exposure if U.S. situs assets are held the wrong way
+- Nonresident return mechanics and ITIN steps
+- Estate exposure if U.S. situs assets are held the wrong way
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
 If the issue is U.S. reporting for Colombian accounts, entities, or foreign ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

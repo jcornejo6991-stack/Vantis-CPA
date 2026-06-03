@@ -37,10 +37,10 @@ Mexico files usually go wrong when the return is treated as the project. The str
 
 That search usually maps to one of these situations:
 
-- an American has moved to Mexico and needs annual U.S. filing plus local coordination
-- a U.S. person owns Mexican entities or financial accounts
-- a Mexican resident is opening a U.S. LLC or U.S. corporation
-- a Mexican buyer is acquiring U.S. real estate and wants to avoid avoidable withholding or filing mistakes
+- An American has moved to Mexico and needs annual U.S. filing plus local coordination
+- A U.S. person owns Mexican entities or financial accounts
+- A Mexican resident is opening a U.S. LLC or U.S. corporation
+- A Mexican buyer is acquiring U.S. real estate and wants to avoid avoidable withholding or filing mistakes
 
 The answer changes depending on which one applies.
 
@@ -50,11 +50,11 @@ The U.S. still taxes citizens and many green card holders on worldwide income, s
 
 The first review items are usually:
 
-- whether foreign tax credits or FEIE should carry the planning load
-- whether the move actually broke state residency
-- how Mexican salary, self-employment income, and owner distributions are documented
-- foreign account reporting for Mexican bank and investment accounts
-- whether prior-year filings missed FBAR, FATCA, or local entity reporting
+- Whether foreign tax credits or FEIE should carry the planning load
+- Whether the move actually broke state residency
+- How Mexican salary, self-employment income, and owner distributions are documented
+- Foreign account reporting for Mexican bank and investment accounts
+- Whether prior-year filings missed FBAR, FATCA, or local entity reporting
 
 This is where a lot of readers realize the real issue is not "Do I still file?" but "What exactly am I filing around?"
 
@@ -64,11 +64,11 @@ Mexico often brings entity-classification issues into the foreground. U.S. taxpa
 
 That normally means reviewing:
 
-- whether the Mexican entity is being treated as a corporation, partnership, or disregarded entity for U.S. purposes
-- whether ownership triggers foreign information reporting
-- whether bank and brokerage accounts need separate reporting
-- whether a planned move to the U.S. should happen before a restructure or cleanup
-- whether the existing setup still works if profits start moving more regularly across the border
+- Whether the Mexican entity is being treated as a corporation, partnership, or disregarded entity for U.S. purposes
+- Whether ownership triggers foreign information reporting
+- Whether bank and brokerage accounts need separate reporting
+- Whether a planned move to the U.S. should happen before a restructure or cleanup
+- Whether the existing setup still works if profits start moving more regularly across the border
 
 The consulting work here is often about simplifying the fact pattern, not just preparing the next return.
 
@@ -78,11 +78,11 @@ On the inbound side, the question is usually structure before compliance. A Mexi
 
 The main review areas are:
 
-- whether a U.S. LLC or corporation fits the business or investment objective
+- Whether a U.S. LLC or corporation fits the business or investment objective
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- treaty review before relying on any reduced withholding position
-- bookkeeping, payroll, or operational support once the U.S. activity is live
+- Treaty review before relying on any reduced withholding position
+- Bookkeeping, payroll, or operational support once the U.S. activity is live
 
 This is where readers often move from article mode into consulting mode, because the wrong structure creates recurring compliance friction.
 
@@ -92,11 +92,11 @@ U.S. real estate often looks easy until the first rental payment or the eventual
 
 That review usually covers:
 
-- direct ownership versus entity ownership
-- rental-income reporting and withholding
+- Direct ownership versus entity ownership
+- Rental-income reporting and withholding
 - FIRPTA on a future sale
 - ITIN and nonresident filing mechanics
-- estate exposure if the property is held the wrong way for the owner's goals
+- Estate exposure if the property is held the wrong way for the owner's goals
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
 If the issue is foreign accounts, Mexican entities, or cross-border ownership for a U.S. person, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

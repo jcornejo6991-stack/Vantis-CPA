@@ -37,10 +37,10 @@ Treaty language can improve the answer, but only after the ownership structure a
 
 That search usually points to one of these situations:
 
-- a Chilean resident is opening a U.S. LLC or corporation
-- an American is living in Chile and needs ongoing U.S. filing support
-- a U.S. person owns Chilean entities or accounts
-- a Chilean investor is buying U.S. real estate
+- A Chilean resident is opening a U.S. LLC or corporation
+- An American is living in Chile and needs ongoing U.S. filing support
+- A U.S. person owns Chilean entities or accounts
+- A Chilean investor is buying U.S. real estate
 
 Those issues may share the same country, but they do not share the same planning answer.
 
@@ -50,11 +50,11 @@ The IRS includes Chile on its official [U.S. income tax treaty list](https://www
 
 The first review items are usually:
 
-- foreign account reporting for Chilean financial accounts
-- classification and reporting for Chilean entities
-- whether ownership triggers separate U.S. information returns
-- when a treaty position should be considered and documented
-- whether a planned move to or from the U.S. should happen before a restructure
+- Foreign account reporting for Chilean financial accounts
+- Classification and reporting for Chilean entities
+- Whether ownership triggers separate U.S. information returns
+- When a treaty position should be considered and documented
+- Whether a planned move to or from the U.S. should happen before a restructure
 
 This is where the country-specific consulting value usually appears.
 
@@ -64,11 +64,11 @@ For Americans in Chile, the annual U.S. filing question often becomes a broader 
 
 That usually means reviewing:
 
-- foreign tax credits versus FEIE
-- whether the U.S.-Chile treaty affects a particular income stream
-- whether a state filing obligation survived the move
+- Foreign tax credits versus FEIE
+- Whether the U.S.-Chile treaty affects a particular income stream
+- Whether a state filing obligation survived the move
 - FBAR and FATCA exposure
-- whether local payroll, self-employment, or business income has been classified correctly
+- Whether local payroll, self-employment, or business income has been classified correctly
 
 Treaty countries still need careful execution. They are just using a larger toolkit.
 
@@ -78,11 +78,11 @@ Inbound Chile work often starts with a U.S. LLC question and ends with a broader
 
 The setup usually needs review around:
 
-- entity choice before signing contracts and opening accounts
+- Entity choice before signing contracts and opening accounts
 - EIN and ITIN timing
 - Form 5472 exposure for foreign-owned U.S. entities
-- whether withholding positions should be tested under the treaty
-- bookkeeping and payroll support once U.S. operations start
+- Whether withholding positions should be tested under the treaty
+- Bookkeeping and payroll support once U.S. operations start
 
 This is why search-first country pages can be useful. Readers often arrive with a treaty question and leave realizing they really need structuring advice.
 
@@ -92,11 +92,11 @@ U.S. real estate still triggers the usual U.S. filing issues even when a treaty 
 
 That review normally covers:
 
-- direct ownership versus entity ownership
-- annual rental-income reporting
+- Direct ownership versus entity ownership
+- Annual rental-income reporting
 - FIRPTA on a later sale
-- nonresident return mechanics and ITIN steps
-- estate exposure if the ownership structure is not aligned with the owner's goals
+- Nonresident return mechanics and ITIN steps
+- Estate exposure if the ownership structure is not aligned with the owner's goals
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
 If the issue is U.S. reporting for Chilean accounts, entities, or foreign ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).

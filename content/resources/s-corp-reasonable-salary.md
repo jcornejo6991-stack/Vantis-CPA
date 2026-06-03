@@ -69,7 +69,7 @@ One of the most persistent mistakes is treating reasonable salary like a formula
 
 - 60% salary / 40% distributions
 - 50% salary / 50% distributions
-- a fixed dollar amount regardless of role
+- A fixed dollar amount regardless of role
 
 That is not how the IRS approaches it. The IRS instead points to a facts-and-circumstances analysis.
 

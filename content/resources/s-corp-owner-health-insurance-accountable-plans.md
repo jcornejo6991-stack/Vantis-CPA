@@ -102,8 +102,8 @@ S-corp owner-pay issues do not stop at the entity return. They usually affect:
 
 - The shareholder's self-employed health-insurance deduction
 - The wage number flowing into the personal return
-- retirement-planning calculations tied to payroll
-- basis and distribution analysis when the books are messy
+- Retirement-planning calculations tied to payroll
+- Basis and distribution analysis when the books are messy
 
 So even though the work starts inside the corporation, the cleanup almost always needs to line up with the owner's `1040`.
 

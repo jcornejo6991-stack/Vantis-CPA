@@ -39,11 +39,11 @@ For foreign-owned U.S. rental property, the biggest tax mistake is often not ove
 
 Foreign owners of U.S. rental property are taxed as nonresidents on U.S.-source income. The problem is that the default treatment can be more punitive than most owners expect. Without the right filing approach, withholding may apply to **gross rental receipts**, before accounting for:
 
-- mortgage interest
-- repairs
-- property taxes
-- management fees
-- depreciation
+- Mortgage interest
+- Repairs
+- Property taxes
+- Management fees
+- Depreciation
 
 That is why a property with real expenses can still produce an unnecessarily high U.S. tax result if the owner never fixes the reporting framework.
 
@@ -53,10 +53,10 @@ The key planning move is often the **Section 871(d) election**. That election ge
 
 Once the election is in place, the annual filing stack usually looks more like a normal rental return:
 
-- rent is reported
-- deductible expenses are claimed
-- depreciation is calculated
-- net income is taxed on **Form 1040-NR**
+- Rent is reported
+- Deductible expenses are claimed
+- Depreciation is calculated
+- Net income is taxed on **Form 1040-NR**
 
 For many foreign owners, that is the difference between a workable U.S. tax profile and an unnecessarily expensive one.
 
@@ -68,10 +68,10 @@ Many foreign owners do not discover the Section 871(d) election issue until seve
 
 How the property is held matters almost as much as the election itself. Direct ownership, ownership through a U.S. LLC, and ownership through a foreign entity can produce different results for:
 
-- ongoing reporting
-- future FIRPTA exposure on sale
-- withholding responsibilities
-- estate tax exposure on U.S.-situs property
+- Ongoing reporting
+- Future FIRPTA exposure on sale
+- Withholding responsibilities
+- Estate tax exposure on U.S.-situs property
 
 There is no one structure that is universally best. The right answer depends on the owner's country, the expected holding period, the expected exit, and whether the main goal is simplicity, liability protection, estate planning, or operational flexibility.
 
@@ -83,11 +83,11 @@ Owners often focus only on annual rental reporting, but the future sale matters 
 
 The most common issues are:
 
-- no Section 871(d) election in place
-- no ITIN when a return should have been filed
-- weak rental records
-- state filing obligations being missed
-- ownership structures that were set up without thinking through the eventual sale
+- No Section 871(d) election in place
+- No ITIN when a return should have been filed
+- Weak rental records
+- State filing obligations being missed
+- Ownership structures that were set up without thinking through the eventual sale
 
 These problems are usually fixable, but they are cheaper to address early.
 
