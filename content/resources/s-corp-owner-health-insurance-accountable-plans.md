@@ -5,9 +5,9 @@ date: 2026-04-22
 practices: ["business"]
 services: ["business-tax", "bookkeeping"]
 featured: false
-subtopic: "Compliance & Reporting"
-primary_cluster: "s-corps"
-clusters: ["s-corps", "business-tax"]
+subtopic: "S-Corporations"
+primary_cluster: "business-tax"
+clusters: ["business-tax"]
 strategy_snapshot:
   summary: "A lot of S-corp problems come from owner-pay cleanup, not entity choice. If health insurance is not run correctly, reimbursements are not under an accountable plan, and payroll does not match the real economics, the intended tax savings start to leak."
   bullets:

@@ -23,7 +23,7 @@ faqs:
   - q: "Can a married couple qualify if only one spouse works in real estate?"
     a: "Yes. Only one spouse needs to satisfy the 750-hour test. Once that spouse qualifies, their real estate professional status applies to the joint return, allowing rental losses to offset other income."
   - q: "Do real estate professionals still need to materially participate in each rental property?"
-    a: "Yes. Qualifying as a real estate professional removes the passive activity classification, but you must still materially participate in each rental property — or make a grouping election — to deduct losses against non-passive income."
+    a: "Yes. Qualifying as a real estate professional removes the passive activity classification, but you must still materially participate in each rental property, or make a grouping election, to deduct losses against non-passive income."
 ---
 
 Rental losses are normally **passive losses**, meaning they are deductible only against passive income and not your W-2 or business income. But if you qualify as a **Real Estate Professional (REPS)**, those same losses become unlimited deductions against ordinary income. A landlord with $80,000 in rental losses and $400,000 in W-2 income could save **$30,000 or more** in federal tax annually.

@@ -4,8 +4,7 @@
   {{ partial "footer-css.html" . }}
 
   {{ $hubPages := where (where (where .Site.Pages "Section" "resources") "Kind" "section") "Params.layout" "hub" }}
-  {{ $generalTopics := sort (where $hubPages "Params.hub_group" "general") "Params.weight" }}
-  {{ $focusedAreas := sort (where $hubPages "Params.hub_group" "focused") "Params.weight" }}
+  {{ $allHubs := sort $hubPages "Params.weight" }}
 
   <style>
     .resource-library {
@@ -289,48 +288,21 @@
     </div>
 
     <div class="library-body">
-      <div class="library-layout">
+      <div class="library-hubs">
 
-        <nav class="library-sidebar">
-          <div class="library-sidebar-label">Sections</div>
-          <a href="#general-topics" class="library-sidebar-item">
-            General Topics<span class="library-sidebar-count">{{ len $generalTopics }}</span>
+        <div class="library-section">
+          <h2 class="library-section-header">Browse Our Guides</h2>
+          {{ range $allHubs }}
+          <a href="{{ .RelPermalink }}" class="library-hub-row">
+            <div class="library-hub-main">
+              <span class="library-hub-title">{{ .Title }}</span>
+              <span class="library-hub-desc">{{ .Description }}</span>
+            </div>
+            <span class="library-hub-arrow">&rarr;</span>
           </a>
-          <a href="#focused-areas" class="library-sidebar-item">
-            Focused Areas<span class="library-sidebar-count">{{ len $focusedAreas }}</span>
-          </a>
-        </nav>
-
-        <div class="library-hubs">
-
-          <div id="general-topics" class="library-section">
-            <h2 class="library-section-header">General Topics</h2>
-            {{ range $generalTopics }}
-            <a href="{{ .RelPermalink }}" class="library-hub-row">
-              <div class="library-hub-main">
-                {{ $displayTitle := .Title }}
-                <span class="library-hub-title">{{ $displayTitle }}</span>
-                <span class="library-hub-desc">{{ .Description }}</span>
-              </div>
-              <span class="library-hub-arrow">&rarr;</span>
-            </a>
-            {{ end }}
-          </div>
-
-          <div id="focused-areas" class="library-section">
-            <h2 class="library-section-header">Focused Areas</h2>
-            {{ range $focusedAreas }}
-            <a href="{{ .RelPermalink }}" class="library-hub-row">
-              <div class="library-hub-main">
-                <span class="library-hub-title">{{ .Title }}</span>
-                <span class="library-hub-desc">{{ .Description }}</span>
-              </div>
-              <span class="library-hub-arrow">&rarr;</span>
-            </a>
-            {{ end }}
-          </div>
-
+          {{ end }}
         </div>
+
       </div>
 
       <div class="library-cta">

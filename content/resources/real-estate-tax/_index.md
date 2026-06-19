@@ -1,8 +1,8 @@
 ---
-title: "Real Estate Tax Strategy"
-description: "In-depth guides on 1031 exchanges, real estate professional status, and short-term rental taxes for investors and property owners."
+title: "Real Estate Owners"
+description: "Tax guides for property owners and investors: 1031 exchanges, real estate professional status, short-term rental taxes, and foreign ownership of U.S. real estate."
 layout: hub
 cluster: real-estate-tax
-hub_group: general
-weight: 20
+hub_group: audience
+weight: 30
 ---

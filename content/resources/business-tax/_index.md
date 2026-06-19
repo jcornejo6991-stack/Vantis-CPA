@@ -1,8 +1,8 @@
 ---
-title: "Business Tax Strategy"
-description: "S-Corp elections, entity planning, and tax strategy guides for small business owners, founders, and self-employed individuals."
+title: "Business Owners"
+description: "Tax and accounting guides for owner-operated and online businesses: S-corp elections and reasonable salary, entity structure, Schedule C deductions, partnerships, retirement plans, and 1099-K reporting."
 layout: hub
 cluster: business-tax
-hub_group: general
-weight: 40
+hub_group: audience
+weight: 20
 ---

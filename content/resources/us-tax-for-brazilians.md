@@ -6,9 +6,9 @@ weight: 20
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
-subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+subtopic: "Country Guides"
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Brazil cases often require more structural planning because entity classification, withholding, and foreign reporting usually matter more than treaty positions."
   bullets:

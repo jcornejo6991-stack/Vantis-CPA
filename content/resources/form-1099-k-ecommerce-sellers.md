@@ -6,8 +6,8 @@ practices: ["business"]
 services: ["business-tax", "bookkeeping"]
 featured: false
 subtopic: "Compliance & Reporting"
-primary_cluster: "ecommerce-sellers"
-clusters: ["ecommerce-sellers", "business-tax"]
+primary_cluster: "business-tax"
+clusters: ["business-tax"]
 strategy_snapshot:
   summary: "For ecommerce sellers, Form 1099-K is a starting point, not the tax answer. The box 1 total is gross payment flow, and the real tax work is reconciling it to fees, refunds, shipping, discounts, inventory, and the actual books."
   bullets:

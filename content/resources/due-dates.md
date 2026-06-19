@@ -6,8 +6,8 @@ practices: ["all"]
 services: ["individual-tax", "business-tax"]
 featured: true
 subtopic: "Filing & Deadlines"
-primary_cluster: "general-tax-compliance"
-clusters: ["general-tax-compliance"]
+primary_cluster: "business-tax"
+clusters: ["business-tax", "individual-tax"]
 strategy_snapshot:
   summary: "This page covers tax year 2025 filings that mostly come due during calendar year 2026. In practice, March, April, September, and October are the four dates that control most individual and business compliance."
   bullets:
@@ -19,7 +19,7 @@ strategy_snapshot:
       text: "Confusing an extension to file with an extension to pay; tax is still generally due by the original deadline."
 faqs:
   - q: "What is the deadline to file a personal tax return?"
-    a: "April 15 for most individuals. An automatic 6-month extension to October 15 is available by filing Form 4868, but any taxes owed are still due April 15 — the extension is to file, not to pay."
+    a: "April 15 for most individuals. An automatic 6-month extension to October 15 is available by filing Form 4868, but any taxes owed are still due April 15, the extension is to file, not to pay."
   - q: "What are the penalties for missing a tax deadline?"
     a: "The failure-to-file penalty is 5% of unpaid taxes per month (up to 25%). The failure-to-pay penalty is 0.5% per month. Both penalties plus interest accrue simultaneously from the due date."
   - q: "When are quarterly estimated tax payments due?"

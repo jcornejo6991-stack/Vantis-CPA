@@ -6,10 +6,10 @@ practices: ["inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "us-real-estate-owned-by-foreign-investors"
-clusters: ["us-real-estate-owned-by-foreign-investors", "international-tax", "real-estate-tax", "latam-inbound"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors", "real-estate-tax"]
 strategy_snapshot:
-  summary: "Section 1446 withholding is triggered by the allocation of effectively connected income to a foreign partner — not by a cash distribution. Partnerships that miss this often discover the problem during a sale or audit."
+  summary: "Section 1446 withholding is triggered by the allocation of effectively connected income to a foreign partner, not by a cash distribution. Partnerships that miss this often discover the problem during a sale or audit."
   bullets:
     - label: Trigger Point
       text: "A U.S. partnership allocates effectively connected taxable income to a nonresident partner, whether or not any cash is actually distributed."
@@ -26,7 +26,7 @@ faqs:
     a: "Yes. The foreign partner files Form 1040-NR to report the effectively connected income and claim credit for the Section 1446 withholding shown on Form 8805."
 ---
 
-U.S. real estate partnerships with foreign partners carry a withholding obligation that many partnerships either overlook or misunderstand. Section 1446 requires the partnership to withhold on a foreign partner's allocable share of effectively connected taxable income — not on distributions, not on cash flow, but on the income allocation itself. A partnership that collects rent, allocates it to a foreign partner, and reinvests the cash still owes withholding for that year.
+U.S. real estate partnerships with foreign partners carry a withholding obligation that many partnerships either overlook or misunderstand. Section 1446 requires the partnership to withhold on a foreign partner's allocable share of effectively connected taxable income, not on distributions, not on cash flow, but on the income allocation itself. A partnership that collects rent, allocates it to a foreign partner, and reinvests the cash still owes withholding for that year.
 
 {{< pullquote attribution="The compliance issue" >}}
 Section 1446 withholding belongs to the partnership. The foreign partner's failure to file does not excuse the partnership from its own obligations.
@@ -42,9 +42,9 @@ Rental income from U.S. real estate is the most common trigger. Depreciation and
 
 At the partnership level, Section 1446 compliance involves:
 
-- **Form 8813** — quarterly withholding payments due in April, June, September, and December
-- **Form 8804** — the annual Section 1446 withholding tax return, due March 15 (or September 15 with extension)
-- **Form 8805** — issued to each foreign partner by the same deadline, showing their allocable share of income and the withholding credited to them
+- **Form 8813**, quarterly withholding payments due in April, June, September, and December
+- **Form 8804**, the annual Section 1446 withholding tax return, due March 15 (or September 15 with extension)
+- **Form 8805**, issued to each foreign partner by the same deadline, showing their allocable share of income and the withholding credited to them
 
 The partnership is responsible for these filings regardless of whether the foreign partner separately complies with U.S. reporting requirements.
 
@@ -75,7 +75,7 @@ Partnerships sometimes file the 8804 and 8805 without coordinating with foreign 
 
 ## Sale-Year Withholding
 
-A sale of the underlying real estate is often the highest-stakes Section 1446 event. The gain allocation to foreign partners in the sale year can be large, and the partnership must account for withholding on that gain through the 8804 filing for that year. This overlaps with FIRPTA, which imposes a separate withholding obligation at closing based on the gross sales price. Both obligations need to be reviewed before closing — not after.
+A sale of the underlying real estate is often the highest-stakes Section 1446 event. The gain allocation to foreign partners in the sale year can be large, and the partnership must account for withholding on that gain through the 8804 filing for that year. This overlaps with FIRPTA, which imposes a separate withholding obligation at closing based on the gross sales price. Both obligations need to be reviewed before closing, not after.
 
 ## When to Get Help
 

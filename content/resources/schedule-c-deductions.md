@@ -5,16 +5,16 @@ date: 2026-04-19
 practices: ["business", "individuals"]
 services: ["business-tax"]
 featured: false
-subtopic: "Deductions & Credits"
+subtopic: "Sole Proprietors & Schedule C"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:
-  summary: "Schedule C income is subject to both income tax and self-employment tax. The deductions that reduce net profit reduce both. Getting common deductions right — home office, vehicle, contractor costs — has a larger tax impact than most owners expect because every dollar of deduction reduces SE tax as well."
+  summary: "Schedule C income is subject to both income tax and self-employment tax. The deductions that reduce net profit reduce both. Getting common deductions right, home office, vehicle, contractor costs, has a larger tax impact than most owners expect because every dollar of deduction reduces SE tax as well."
   bullets:
     - label: Home office
       text: "Must be used regularly and exclusively for business. The simplified method is easy; the actual method is usually larger for homeowners. Either way, the deduction must be based on real dedicated workspace."
     - label: Vehicle
-      text: "Standard mileage (70 cents/mile in 2025) or actual expenses — but you must keep a contemporaneous mileage log. Reconstructed logs created at year-end are weak documentation and frequently challenged."
+      text: "Standard mileage (70 cents/mile in 2025) or actual expenses, but you must keep a contemporaneous mileage log. Reconstructed logs created at year-end are weak documentation and frequently challenged."
     - label: SE tax deduction
       text: "You can deduct 50% of self-employment tax as an above-the-line deduction on your 1040. This reduces the income tax you owe even though it does not reduce the SE tax itself."
 faqs:
@@ -28,7 +28,7 @@ faqs:
 
 ## What Schedule C Covers
 
-Schedule C is the tax form for self-employment income and expenses. It is filed as part of Form 1040 by sole proprietors and single-member LLCs that have not elected corporate treatment. Net profit — income minus allowable deductions — is subject to income tax and self-employment tax.
+Schedule C is the tax form for self-employment income and expenses. It is filed as part of Form 1040 by sole proprietors and single-member LLCs that have not elected corporate treatment. Net profit, income minus allowable deductions, is subject to income tax and self-employment tax.
 
 Because SE tax is 15.3% on net profit up to the Social Security wage base, every dollar of legitimate deduction reduces both income tax and SE tax. The combined savings on a deductible expense is often higher than most owners expect.
 
@@ -36,17 +36,17 @@ Because SE tax is 15.3% on net profit up to the Social Security wage base, every
 
 Business expenses are deductible if they are ordinary and necessary for your trade or business. That standard covers a wide range of costs:
 
-- **Advertising and marketing** — website costs, digital ads, social media, promotional materials
-- **Contract labor** — payments to freelancers and independent contractors (Form 1099-NEC required for payments of $600 or more to non-corporations)
-- **Professional fees** — accounting, legal, and consulting services directly related to the business
-- **Supplies and materials** — items used or consumed in the course of doing business
-- **Software and subscriptions** — tools and platforms used for business purposes
-- **Phone and internet** — the business-use portion (document the allocation if mixed-use)
-- **Travel** — business trips, flights, hotels, and transportation to client sites (commuting is not deductible)
-- **Meals** — 50% deductible when there is a legitimate business purpose
-- **Insurance** — business liability, professional liability, and similar coverage
-- **Education and training** — courses, certifications, and materials that maintain or improve skills in your current trade (not to qualify for a new one)
-- **Bank fees and merchant processing** — costs directly tied to operating the business
+- **Advertising and marketing**, website costs, digital ads, social media, promotional materials
+- **Contract labor**, payments to freelancers and independent contractors (Form 1099-NEC required for payments of $600 or more to non-corporations)
+- **Professional fees**, accounting, legal, and consulting services directly related to the business
+- **Supplies and materials**, items used or consumed in the course of doing business
+- **Software and subscriptions**, tools and platforms used for business purposes
+- **Phone and internet**, the business-use portion (document the allocation if mixed-use)
+- **Travel**, business trips, flights, hotels, and transportation to client sites (commuting is not deductible)
+- **Meals**, 50% deductible when there is a legitimate business purpose
+- **Insurance**, business liability, professional liability, and similar coverage
+- **Education and training**, courses, certifications, and materials that maintain or improve skills in your current trade (not to qualify for a new one)
+- **Bank fees and merchant processing**, costs directly tied to operating the business
 
 ## Home Office Deduction
 
@@ -60,13 +60,13 @@ Deduct $5 per square foot of dedicated workspace, up to 300 square feet. Maximum
 
 **Actual expense method:**
 
-Deduct a percentage of your home's actual costs — rent or mortgage interest, property taxes, utilities, homeowner's insurance, and repairs — equal to the ratio of the office space to the total home square footage. More calculation required, but often produces a significantly larger deduction for homeowners. Depreciation on the business-use portion of the home is included and tracked.
+Deduct a percentage of your home's actual costs, rent or mortgage interest, property taxes, utilities, homeowner's insurance, and repairs, equal to the ratio of the office space to the total home square footage. More calculation required, but often produces a significantly larger deduction for homeowners. Depreciation on the business-use portion of the home is included and tracked.
 
 Note: If you use the actual method and deduct depreciation, there will be depreciation recapture when you sell the home. The simplified method avoids this.
 
 ## Vehicle Deductions
 
-Business use of a vehicle is deductible — but only the portion used for business, and only with adequate documentation.
+Business use of a vehicle is deductible, but only the portion used for business, and only with adequate documentation.
 
 **Standard mileage rate:**
 
@@ -74,7 +74,7 @@ Deduct a fixed rate per business mile. The 2025 rate is 70 cents per mile. Simpl
 
 **Actual expense method:**
 
-Deduct a percentage of all vehicle costs — gas, insurance, registration, repairs, depreciation — equal to the business-use percentage for the year. Often produces a larger deduction for expensive vehicles or vehicles with high operating costs.
+Deduct a percentage of all vehicle costs, gas, insurance, registration, repairs, depreciation, equal to the business-use percentage for the year. Often produces a larger deduction for expensive vehicles or vehicles with high operating costs.
 
 **Method selection:**
 
@@ -100,20 +100,20 @@ SE tax funds Social Security and Medicare in the same way that payroll taxes do 
 
 **The SE tax deduction:**
 
-You can deduct 50% of the SE tax you owe as an above-the-line deduction on Form 1040. This deduction does not reduce the SE tax itself — it reduces your adjusted gross income, which in turn reduces the income tax you owe.
+You can deduct 50% of the SE tax you owe as an above-the-line deduction on Form 1040. This deduction does not reduce the SE tax itself, it reduces your adjusted gross income, which in turn reduces the income tax you owe.
 
 **Self-employed health insurance:**
 
-Premiums paid for health insurance for yourself, your spouse, and dependents are deductible as an above-the-line deduction on Form 1040 — not on Schedule C. The deduction is limited to net profit from the business and is not available in months when you were eligible for employer-sponsored coverage through a spouse's plan.
+Premiums paid for health insurance for yourself, your spouse, and dependents are deductible as an above-the-line deduction on Form 1040, not on Schedule C. The deduction is limited to net profit from the business and is not available in months when you were eligible for employer-sponsored coverage through a spouse's plan.
 
 ## Qualified Business Income (QBI) Deduction
 
-Sole proprietors and single-member LLC owners with qualified business income may be eligible to deduct up to 20% of that income under Section 199A. The deduction reduces taxable income on the Form 1040 — it does not reduce self-employment income.
+Sole proprietors and single-member LLC owners with qualified business income may be eligible to deduct up to 20% of that income under Section 199A. The deduction reduces taxable income on the Form 1040, it does not reduce self-employment income.
 
 **Key limitations:**
 
 - The deduction phases out for certain specified service trades or businesses (professional services including accounting, law, consulting, financial services, and others) at higher income levels
-- At higher incomes, the deduction may be limited by W-2 wages paid and unadjusted basis of qualified property — a factor that typically does not help Schedule C filers who have no employees
+- At higher incomes, the deduction may be limited by W-2 wages paid and unadjusted basis of qualified property, a factor that typically does not help Schedule C filers who have no employees
 - The deduction cannot exceed 20% of taxable income (before the deduction)
 
 For Schedule C businesses that are not specified service trades, the QBI deduction is often available in full at lower and moderate income levels. For service businesses and higher-income filers, the calculation becomes more complex.

@@ -1,3 +1,37 @@
+# Legacy segment mini-sites (old flat-HTML architecture)
+/founders/ /services/business-tax/ 301
+/expats/ /services/international-tax/expats/ 301
+/local/ /services/individual-tax/ 301
+/realestate/ /services/business-tax/real-estate/ 301
+/inbound/ /services/international-tax/foreign-business-and-investors/ 301
+
+# Legacy categories taxonomy page
+/categories/ /resources/ 301
+
+# Resource hubs consolidated into audience-first hubs (2026 reorg)
+/resources/s-corps/ /resources/business-tax/ 301
+/resources/s-corps /resources/business-tax/ 301
+/resources/ecommerce-sellers/ /resources/business-tax/ 301
+/resources/ecommerce-sellers /resources/business-tax/ 301
+/resources/general-tax-compliance/ /resources/business-tax/ 301
+/resources/general-tax-compliance /resources/business-tax/ 301
+/resources/latam-inbound/ /resources/foreign-investors/ 301
+/resources/latam-inbound /resources/foreign-investors/ 301
+/resources/us-real-estate-owned-by-foreign-investors/ /resources/foreign-investors/ 301
+/resources/us-real-estate-owned-by-foreign-investors /resources/foreign-investors/ 301
+
+# Legacy service page names (pre-restructure)
+/services/bookkeeping-reporting /services/full-suite/bookkeeping/ 301
+/services/bookkeeping-reporting/ /services/full-suite/bookkeeping/ 301
+/services/tax-compliance /services/ 301
+/services/tax-compliance/ /services/ 301
+/services/tax-strategy-consulting /services/business-tax/ 301
+/services/tax-strategy-consulting/ /services/business-tax/ 301
+/services/payroll-sales-tax /services/full-suite/ 301
+/services/payroll-sales-tax/ /services/full-suite/ 301
+/services/tax-strategy /services/business-tax/ 301
+/services/tax-strategy/ /services/business-tax/ 301
+
 # Legacy expertise hub
 /expertise/ /services/ 301
 
@@ -19,6 +53,7 @@
 /services/back-office/ /services/full-suite/back-office/ 301
 /services/bookkeeping/ /services/full-suite/bookkeeping/ 301
 /services/payroll/ /services/full-suite/payroll/ 301
+/services/sales-tax /services/full-suite/sales-tax/ 301
 /services/sales-tax/ /services/full-suite/sales-tax/ 301
 
 # Legacy international tax pages
@@ -33,6 +68,12 @@
 /expertise/inbound/ /services/international-tax/foreign-business-and-investors/ 301
 /expertise/realestate/international/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
 /services/international-tax/real-estate/ /services/international-tax/us-real-estate-owned-by-foreign-investors/ 301
+
+# Legacy real estate resource child pages (Hugo alias noindex fix)
+/services/international-tax/real-estate/foreign-owned-us-rental-property/ /resources/foreign-owned-us-rental-property/ 301
+/services/international-tax/real-estate/firpta-us-real-estate-sales/ /resources/firpta-us-real-estate-sales/ 301
+/expertise/realestate/foreign-owned-us-rental-property/ /resources/foreign-owned-us-rental-property/ 301
+/expertise/realestate/firpta-us-real-estate-sales/ /resources/firpta-us-real-estate-sales/ 301
 
 # Legacy international tax child pages
 /expertise/inbound/* /services/international-tax/foreign-business-and-investors/:splat 301

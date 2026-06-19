@@ -5,9 +5,9 @@ date: 2026-04-22
 practices: ["business"]
 services: ["business-tax", "bookkeeping"]
 featured: false
-subtopic: "Compliance & Reporting"
-primary_cluster: "ecommerce-sellers"
-clusters: ["ecommerce-sellers", "business-tax", "s-corps"]
+subtopic: "Choosing & Changing Entity"
+primary_cluster: "business-tax"
+clusters: ["business-tax"]
 strategy_snapshot:
   summary: "A wrong 1099-K after an entity change is usually an operations problem, not a tax-law mystery. The payment processor or marketplace still has the old taxpayer information, while the tax return has moved to a new entity or EIN."
   bullets:

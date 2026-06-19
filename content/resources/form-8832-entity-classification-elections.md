@@ -6,8 +6,8 @@ practices: ["inbound", "business"]
 services: ["international-tax", "business-tax"]
 featured: false
 subtopic: "Entity & Structure"
-primary_cluster: "latam-inbound"
-clusters: ["latam-inbound", "international-tax"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Form 8832 is not a paperwork exercise. It changes who reports income, which information returns attach, and whether a later restructuring becomes taxable, so the election should be modeled before it is filed."
   bullets:

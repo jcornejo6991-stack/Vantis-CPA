@@ -6,8 +6,8 @@ practices: ["business", "inbound"]
 services: ["international-tax", "business-tax"]
 featured: false
 subtopic: "Entity & Structure"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "ecommerce-sellers", "latam-inbound"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "These are not true apples-to-apples options. Form 5472 is an information return tied to certain foreign-owned entities, Form 1120-F is an income tax return for a foreign corporation with U.S. activity, and a U.S. subsidiary is a structural choice that can change the filing profile entirely."
   bullets:

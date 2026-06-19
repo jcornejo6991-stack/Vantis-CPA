@@ -19,11 +19,11 @@ strategy_snapshot:
       text: "Treating the exchange like an ordinary sale and calling the intermediary after closing, when the deferral has already been lost."
 faqs:
   - q: "How long do I have to identify and close on replacement property in a 1031 exchange?"
-    a: "You have 45 days from the sale of the relinquished property to identify up to three replacement properties in writing, and 180 days total to close on the replacement property. Both deadlines run concurrently from the sale date and are strictly enforced — there are no extensions except in federally declared disaster areas."
+    a: "You have 45 days from the sale of the relinquished property to identify up to three replacement properties in writing, and 180 days total to close on the replacement property. Both deadlines run concurrently from the sale date and are strictly enforced, there are no extensions except in federally declared disaster areas."
   - q: "Can I use a 1031 exchange for foreign real estate?"
     a: "No. Since the Tax Cuts and Jobs Act of 2017, 1031 exchanges apply only to U.S. real property. Foreign property cannot be exchanged for domestic property under Section 1031."
   - q: "What happens to the deferred gain when I eventually sell the replacement property?"
-    a: "The deferred gain carries into the replacement property's basis. When you sell without another exchange, the full accumulated gain — including all prior deferred amounts — becomes taxable."
+    a: "The deferred gain carries into the replacement property's basis. When you sell without another exchange, the full accumulated gain, including all prior deferred amounts, becomes taxable."
 ---
 
 ## What Is a 1031 Exchange?

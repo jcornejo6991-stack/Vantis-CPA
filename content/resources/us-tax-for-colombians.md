@@ -6,9 +6,9 @@ weight: 30
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
-subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+subtopic: "Country Guides"
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Colombia work usually comes down to residency, entity ownership, and U.S. entry planning. The right answer depends less on one form and more on whether the cross-border structure was designed before filings started."
   bullets:

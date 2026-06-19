@@ -6,9 +6,9 @@ weight: 40
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
-subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+subtopic: "Country Guides"
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Argentina cases often need more up-front planning because valuation, documentation, account cleanup, and cross-border cash movement can distort what looks like a simple filing problem."
   bullets:

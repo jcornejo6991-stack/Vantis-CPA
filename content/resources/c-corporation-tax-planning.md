@@ -5,7 +5,7 @@ date: 2026-04-19
 practices: ["business"]
 services: ["business-tax"]
 featured: false
-subtopic: "Planning Strategies"
+subtopic: "C-Corporations"
 primary_cluster: "business-tax"
 clusters: ["business-tax"]
 strategy_snapshot:
@@ -21,16 +21,16 @@ faqs:
   - q: "Is the double tax always a problem?"
     a: "Not always. If the business is retaining earnings for reinvestment, the double tax may not arrive for years. The 21% corporate rate can also be lower than the owner's individual marginal rate on pass-through income, which creates a short-term deferral advantage. The problem shows up when distributions or a sale force a second level of tax on previously retained earnings."
   - q: "Can I avoid the double tax by paying myself a large salary?"
-    a: "Partially. Reasonable compensation is deductible by the corporation, which eliminates the corporate-level tax on that amount. But compensation that the IRS views as unreasonably high can be recharacterized as a constructive dividend — which is not deductible and creates the double tax anyway."
+    a: "Partially. Reasonable compensation is deductible by the corporation, which eliminates the corporate-level tax on that amount. But compensation that the IRS views as unreasonably high can be recharacterized as a constructive dividend, which is not deductible and creates the double tax anyway."
   - q: "What is the accumulated earnings tax?"
-    a: "A 20% penalty tax that can apply when a C-corp retains earnings beyond the reasonable needs of the business. The IRS gives corporations a baseline credit of $250,000 ($150,000 for personal service corporations). Retention for legitimate business purposes — working capital, expansion, debt repayment — is generally defensible."
+    a: "A 20% penalty tax that can apply when a C-corp retains earnings beyond the reasonable needs of the business. The IRS gives corporations a baseline credit of $250,000 ($150,000 for personal service corporations). Retention for legitimate business purposes, working capital, expansion, debt repayment, is generally defensible."
 ---
 
 ## The Double-Tax Framework
 
 A C-corporation is a separate taxpayer. It pays federal income tax on its net income at a flat 21% rate. When that income is later distributed to shareholders as dividends, the shareholders pay tax again.
 
-For most shareholders, qualified dividends are taxed at preferential rates: 0%, 15%, or 20% depending on their income level. At the highest levels, the combined federal tax burden on a dollar of corporate income distributed as a dividend approaches 40% — 21% at the corporate level plus up to 20% at the shareholder level (ignoring the net investment income tax).
+For most shareholders, qualified dividends are taxed at preferential rates: 0%, 15%, or 20% depending on their income level. At the highest levels, the combined federal tax burden on a dollar of corporate income distributed as a dividend approaches 40%, 21% at the corporate level plus up to 20% at the shareholder level (ignoring the net investment income tax).
 
 That is the double-tax problem. Whether it matters depends on what the business plans to do with its profits.
 
@@ -42,7 +42,7 @@ The double tax only arrives when money comes out. Businesses that retain earning
 
 **Multiple classes of equity:** C-corps can issue preferred stock, convertible notes, and other instruments that S-corps cannot. Businesses seeking institutional or venture investment typically need C-corp status.
 
-**QSBS exclusion (Section 1202):** Shareholders of qualified small business stock held for more than five years can exclude up to $10 million of gain (or 10x adjusted basis, if larger) from a stock sale. The exclusion only applies to C-corps, and the requirements are specific — the corporation must be a domestic C-corp, must be engaged in a qualified trade or business, gross assets cannot exceed $50 million at the time of issuance, and the stock must be original issue. This exclusion is one of the most significant tax benefits available in the tax code when the requirements are met.
+**QSBS exclusion (Section 1202):** Shareholders of qualified small business stock held for more than five years can exclude up to $10 million of gain (or 10x adjusted basis, if larger) from a stock sale. The exclusion only applies to C-corps, and the requirements are specific, the corporation must be a domestic C-corp, must be engaged in a qualified trade or business, gross assets cannot exceed $50 million at the time of issuance, and the stock must be original issue. This exclusion is one of the most significant tax benefits available in the tax code when the requirements are met.
 
 **Ownership structure:** Nonresident alien shareholders, corporate shareholders, and structures requiring multiple economic classes are all permitted in a C-corp. These are disqualifying for S-corp status.
 
@@ -55,7 +55,7 @@ The **accumulated earnings tax (AET)** is a 20% penalty tax that applies to earn
 - $250,000 for most corporations
 - $150,000 for personal service corporations (medical, legal, accounting, engineering, etc.)
 
-Earnings retained above those thresholds are subject to the AET unless the corporation can demonstrate a legitimate business purpose — planned capital expenditures, expansion, working capital requirements, debt repayment, or other documented needs.
+Earnings retained above those thresholds are subject to the AET unless the corporation can demonstrate a legitimate business purpose, planned capital expenditures, expansion, working capital requirements, debt repayment, or other documented needs.
 
 Vague or aspirational business plans are not sufficient. The retained earnings analysis should be documented in board minutes or business plans before the end of each tax year.
 
@@ -63,7 +63,7 @@ Vague or aspirational business plans are not sufficient. The retained earnings a
 
 ## Owner Compensation vs. Dividends
 
-Moving money from a C-corp to its owners creates the double-tax. The main tool for managing it is compensation — salary and bonuses paid to owner-employees are deductible by the corporation, which eliminates the corporate-level tax on that amount.
+Moving money from a C-corp to its owners creates the double-tax. The main tool for managing it is compensation, salary and bonuses paid to owner-employees are deductible by the corporation, which eliminates the corporate-level tax on that amount.
 
 **The structure that makes sense:**
 
@@ -73,7 +73,7 @@ Moving money from a C-corp to its owners creates the double-tax. The main tool f
 
 **The IRS challenge:**
 
-If owner compensation is disproportionately high relative to the services actually performed and what similar positions pay, the IRS can recharacterize the excess as a constructive dividend. A constructive dividend is not deductible by the corporation — so the benefit of the deduction is gone and the corporation pays corporate tax on those amounts.
+If owner compensation is disproportionately high relative to the services actually performed and what similar positions pay, the IRS can recharacterize the excess as a constructive dividend. A constructive dividend is not deductible by the corporation, so the benefit of the deduction is gone and the corporation pays corporate tax on those amounts.
 
 The reasonable compensation question in a C-corp runs in the opposite direction from an S-corp. In an S-corp, the IRS pushes to increase compensation (which is subject to payroll tax). In a C-corp, the IRS may push to reduce compensation that looks unreasonably high for a deduction-driven strategy.
 
@@ -87,7 +87,7 @@ The double-tax problem becomes most acute at exit.
 
 **Asset sale:** The corporation sells its assets and recognizes gain at the entity level. The corporation pays 21% corporate tax on that gain. The remaining proceeds are then distributed to shareholders as a liquidating distribution, triggering capital gain tax at the shareholder level. A business sold for a significant gain can lose 35 to 45 cents of every dollar to combined federal tax.
 
-**Stock sale:** The shareholders sell their stock directly. Only one level of tax applies — capital gain to the shareholders. No corporate-level tax. Buyers typically prefer asset deals because they receive a stepped-up basis in the assets, so they may push for an asset deal structure or demand a price concession to compensate.
+**Stock sale:** The shareholders sell their stock directly. Only one level of tax applies, capital gain to the shareholders. No corporate-level tax. Buyers typically prefer asset deals because they receive a stepped-up basis in the assets, so they may push for an asset deal structure or demand a price concession to compensate.
 
 **Planning implications:**
 

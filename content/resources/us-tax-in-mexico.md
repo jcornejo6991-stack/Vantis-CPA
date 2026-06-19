@@ -7,8 +7,8 @@ practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+primary_cluster: "expats"
+clusters: ["expats"]
 strategy_snapshot:
   summary: "Mexico cases usually sit at the intersection of residency, local entity classification, treaty analysis, and U.S. reporting. The goal is to solve the structure before the annual filing stack becomes fragmented."
   bullets:

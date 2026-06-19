@@ -6,8 +6,8 @@ practices: ["expats"]
 services: ["international-tax", "individual-tax"]
 featured: false
 subtopic: "Residency & Status"
-primary_cluster: "international-tax"
-clusters: ["international-tax"]
+primary_cluster: "expats"
+clusters: ["expats"]
 strategy_snapshot:
   summary: "The physical presence test is mechanical, but not forgiving. You need 330 full days in foreign countries during a qualifying 12-month window, and sloppy travel tracking is one of the easiest ways to lose the FEIE."
   bullets:

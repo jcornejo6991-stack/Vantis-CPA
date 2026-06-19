@@ -235,7 +235,7 @@
               </div>
               <div>
                 <p class="contact-item-label">Phone</p>
-                <p class="contact-item-value"><a href="tel:+13055635551">(305) 563-5551</a></p>
+                <p class="contact-item-value"><a href="tel:+13055635551" onclick="if(typeof gtag!=='undefined')gtag('event','phone_click',{event_category:'lead'})">(305) 563-5551</a></p>
               </div>
             </div>
             <div class="contact-item">
@@ -244,7 +244,7 @@
               </div>
               <div>
                 <p class="contact-item-label">Email</p>
-                <p class="contact-item-value"><a href="mailto:info@vantiscpa.com">info@vantiscpa.com</a></p>
+                <p class="contact-item-value"><a href="mailto:info@vantiscpa.com" onclick="if(typeof gtag!=='undefined')gtag('event','email_click',{event_category:'lead'})">info@vantiscpa.com</a></p>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
           <div class="contact-calendar fade-up fade-up-d2">
             <h3 class="contact-calendar-title">Schedule a Meeting</h3>
             <p class="contact-calendar-desc">Book a 30-minute consultation</p>
-            <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+            <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer" onclick="if(typeof gtag!=='undefined')gtag('event','calendar_click',{event_category:'lead'})">Open Calendar</a>
           </div>
         </div>
 
@@ -271,6 +271,34 @@
     }, { threshold: 0.1 });
     els.forEach(function(el) { obs.observe(el); });
   })();
+
+  // Contact form — AJAX submit + GA4 conversion event
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var form = this;
+    var btn = form.querySelector('.form-submit');
+    btn.disabled = true;
+    btn.textContent = 'Sending…';
+    fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(res) {
+      if (res.ok) {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').classList.add('visible');
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'contact_form_submit', { event_category: 'lead', event_label: 'Contact Form' });
+        }
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Send Us an Email';
+      }
+    }).catch(function() {
+      btn.disabled = false;
+      btn.textContent = 'Send Us an Email';
+    });
+  });
 </script>
 
 {{ partial "footer.html" . }}

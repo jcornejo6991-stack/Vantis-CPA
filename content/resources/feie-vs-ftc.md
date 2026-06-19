@@ -6,8 +6,8 @@ practices: ["expats"]
 services: ["international-tax", "individual-tax"]
 featured: false
 subtopic: "Deductions & Credits"
-primary_cluster: "international-tax"
-clusters: ["international-tax"]
+primary_cluster: "expats"
+clusters: ["expats", "international-tax"]
 strategy_snapshot:
   summary: "If you live in a high-tax country, the Foreign Tax Credit is usually the more durable long-term play. The FEIE can work well in lower-tax countries or lower-income years, but it can cost you flexibility if your situation changes."
   bullets:
@@ -21,7 +21,7 @@ faqs:
   - q: "Can I claim both the FEIE and the Foreign Tax Credit on the same income?"
     a: "No. You cannot apply the FEIE and the FTC to the same dollars of foreign income. However, you can use the FEIE to exclude some income and apply the FTC to taxes paid on non-excluded income above the exclusion threshold."
   - q: "What is the current FEIE exclusion limit?"
-    a: "The FEIE exclusion is adjusted annually for inflation by the IRS — it was $126,500 for 2024 and increases each year. Check the current IRS Revenue Procedure for the latest figure; income above the exclusion is still subject to U.S. tax, though the Foreign Tax Credit may offset remaining liability."
+    a: "The FEIE exclusion is adjusted annually for inflation by the IRS, it was $126,500 for 2024 and increases each year. Check the current IRS Revenue Procedure for the latest figure; income above the exclusion is still subject to U.S. tax, though the Foreign Tax Credit may offset remaining liability."
   - q: "Do I have to choose between the FEIE and the FTC every year?"
     a: "Yes. The election is made annually on Form 2555. Revoking a prior FEIE election requires IRS consent and typically bars you from re-electing for five years."
 ---

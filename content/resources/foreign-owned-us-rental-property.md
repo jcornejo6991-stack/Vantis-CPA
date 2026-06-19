@@ -6,8 +6,8 @@ practices: ["inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "us-real-estate-owned-by-foreign-investors"
-clusters: ["us-real-estate-owned-by-foreign-investors", "international-tax", "real-estate-tax", "latam-inbound"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors", "real-estate-tax"]
 aliases:
   - /services/international-tax/real-estate/foreign-owned-us-rental-property/
   - /expertise/realestate/foreign-owned-us-rental-property/

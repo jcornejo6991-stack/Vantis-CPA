@@ -7,8 +7,8 @@ practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
 subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Latin America work is not one category. The tax outcome changes quickly depending on whether the person is a U.S. citizen abroad, a Latin American resident buying into the U.S., or someone moving across the border with existing entities and accounts."
   bullets:

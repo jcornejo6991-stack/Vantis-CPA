@@ -6,8 +6,8 @@ practices: ["business", "inbound"]
 services: ["international-tax", "business-tax", "bookkeeping"]
 featured: false
 subtopic: "Entity & Structure"
-primary_cluster: "ecommerce-sellers"
-clusters: ["ecommerce-sellers", "international-tax", "latam-inbound"]
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "A foreign owner can use a U.S. LLC for ecommerce, but the LLC is only the shell. The real planning question is how the entity is classified, what filings attach, how the marketplaces and bank accounts are set up, and whether the owner picked a structure that will still work once sales and cash movement become real."
   bullets:

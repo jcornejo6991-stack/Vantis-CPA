@@ -6,8 +6,8 @@ practices: ["business", "individuals"]
 services: ["business-tax"]
 featured: false
 subtopic: "Planning Strategies"
-primary_cluster: "individual-tax"
-clusters: ["individual-tax"]
+primary_cluster: "business-tax"
+clusters: ["business-tax", "individual-tax"]
 strategy_snapshot:
   summary: "For most profitable solo business owners, the Solo 401(k) is the stronger tool because it layers employee deferrals on top of employer contributions. The SEP-IRA usually wins only when you need simplicity, missed the year-end setup deadline, or have employees."
   bullets:
@@ -18,7 +18,7 @@ strategy_snapshot:
     - label: Biggest trap
       text: "Owners often compare contribution limits without accounting for setup deadlines, payroll structure, and whether a second job already used their employee deferral."
 faqs:
-  - q: "Which allows higher contributions — a Solo 401(k) or SEP-IRA?"
+  - q: "Which allows higher contributions, a Solo 401(k) or SEP-IRA?"
     a: "Both allow employer contributions up to 25% of compensation or $70,000 (2025 limit, adjusted annually). However, the Solo 401(k) also allows an additional $23,500 employee deferral (plus $7,500 catch-up if age 50+), making it significantly more powerful for high-income self-employed individuals."
   - q: "Can I contribute to a Solo 401(k) if I have a day job with a 401(k)?"
     a: "The $23,000 employee deferral limit is shared across all 401(k) plans. If your day job 401(k) already maxes out employee deferrals, your Solo 401(k) contributions are limited to the employer (profit-sharing) portion only."

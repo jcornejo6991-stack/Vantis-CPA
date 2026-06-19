@@ -6,9 +6,9 @@ weight: 10
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
-subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax"]
+subtopic: "Country Guides"
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Canada cases are rarely about one form. The real work is coordinating residency, Canadian accounts, entity ownership, and treaty positions before a routine filing problem turns into a cleanup project."
   bullets:

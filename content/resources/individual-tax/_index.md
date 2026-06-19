@@ -1,8 +1,8 @@
 ---
-title: "Individual Tax Planning"
-description: "Retirement account strategy, crypto taxes, and tax-saving strategies for individuals, freelancers, and self-employed professionals."
+title: "Individuals & Families"
+description: "Tax planning for individuals and families: retirement account strategy, self-employed retirement plans, foreign gifts and inheritances, and filing deadlines."
 layout: hub
 cluster: individual-tax
-hub_group: general
-weight: 30
+hub_group: audience
+weight: 10
 ---

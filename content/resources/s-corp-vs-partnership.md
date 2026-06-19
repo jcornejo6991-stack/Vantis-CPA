@@ -1,25 +1,25 @@
 ---
 title: "S-Corp vs. Partnership: Choosing the Right Pass-Through Structure"
-description: "How S-corps and partnerships compare on flexibility, self-employment tax, ownership rules, and economics — and how to decide which structure fits your situation."
+description: "How S-corps and partnerships compare on flexibility, self-employment tax, ownership rules, and economics, and how to decide which structure fits your situation."
 date: 2026-04-19
 practices: ["business"]
 services: ["business-tax"]
 featured: false
-subtopic: "Entity & Structure"
-primary_cluster: "s-corps"
-clusters: ["s-corps", "business-tax"]
+subtopic: "Choosing & Changing Entity"
+primary_cluster: "business-tax"
+clusters: ["business-tax"]
 strategy_snapshot:
   summary: "S-corps and partnerships are both pass-through entities, but they are built for different situations. S-corps work best for a single profitable owner trying to reduce self-employment tax. Partnerships work best when there are multiple owners, custom economics, or a need for flexibility that S-corp structure cannot accommodate."
   bullets:
     - label: S-corp advantage
-      text: "Splitting owner income between wages and distributions reduces self-employment tax — but only when the business is profitable enough and the owner is prepared to run payroll correctly."
+      text: "Splitting owner income between wages and distributions reduces self-employment tax, but only when the business is profitable enough and the owner is prepared to run payroll correctly."
     - label: Partnership advantage
       text: "Partnerships can allocate income, loss, and distributions in ways that do not follow ownership percentages. S-corps cannot. That flexibility matters as soon as the economics get complicated."
     - label: The wrong choice is costly
       text: "An S-corp with the wrong ownership structure loses its election. A partnership with no tax planning around allocations and basis produces bad K-1s. The structure needs to fit the business from the start."
 faqs:
   - q: "Can a multi-member LLC be taxed as an S-corp?"
-    a: "No. S-corp status requires shareholders to be individuals (or certain trusts and estates). A multi-member LLC taxed as a partnership cannot directly elect S-corp status. If the owners want S-corp treatment, they generally need to convert to a corporation first, then make the S-corp election — which is rarely the right move for a multi-owner operating business."
+    a: "No. S-corp status requires shareholders to be individuals (or certain trusts and estates). A multi-member LLC taxed as a partnership cannot directly elect S-corp status. If the owners want S-corp treatment, they generally need to convert to a corporation first, then make the S-corp election, which is rarely the right move for a multi-owner operating business."
   - q: "Which structure saves more in self-employment tax?"
     a: "S-corps create SE tax savings by allowing the owner to take distributions that are not subject to SE tax. Partnerships can reduce SE tax exposure in some situations (limited partners and passive investors generally do not pay SE tax on their share of profits), but the analysis is more fact-specific. For a single active owner trying to reduce SE tax, an S-corp is usually the cleaner tool."
   - q: "What happens if an S-corp violates the eligibility rules?"
@@ -28,7 +28,7 @@ faqs:
 
 ## Two Pass-Through Entities, Different Tools
 
-Both S-corps and partnerships are pass-through entities — the business itself does not pay federal income tax, and income flows through to the owners. But that is where the similarity ends. They have different ownership rules, different flexibility, different mechanics for how income and losses reach each owner, and different planning considerations.
+Both S-corps and partnerships are pass-through entities, the business itself does not pay federal income tax, and income flows through to the owners. But that is where the similarity ends. They have different ownership rules, different flexibility, different mechanics for how income and losses reach each owner, and different planning considerations.
 
 Choosing between them is not a question of which is "better." It is a question of which fits how the business is actually structured and where it is going.
 
@@ -54,7 +54,7 @@ S-corps can only have one class of stock. All shares must carry the same economi
 
 ## Partnerships: Built for Flexibility
 
-Partnerships — including multi-member LLCs taxed as partnerships, LPs, LLPs, and LLLPs — are the right structure when the business needs flexibility that an S-corp cannot provide.
+Partnerships, including multi-member LLCs taxed as partnerships, LPs, LLPs, and LLLPs, are the right structure when the business needs flexibility that an S-corp cannot provide.
 
 **What partnerships can do that S-corps cannot:**
 
@@ -89,4 +89,4 @@ The right question is not "which saves more tax" in isolation. It is:
 
 A single-owner consulting business generating $300,000 in profit is a strong S-corp candidate. A three-partner real estate deal where one partner contributes capital and two contribute management is almost always a partnership.
 
-When the answer is not obvious, modeling the numbers across both structures — accounting for SE tax, payroll costs, entity-level fees, and projected distributions — is the right way to make the decision.
+When the answer is not obvious, modeling the numbers across both structures, accounting for SE tax, payroll costs, entity-level fees, and projected distributions, is the right way to make the decision.

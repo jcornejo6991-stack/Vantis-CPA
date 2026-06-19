@@ -6,9 +6,9 @@ weight: 50
 practices: ["outbound", "expats", "inbound"]
 services: ["international-tax"]
 featured: false
-subtopic: "International & Treaties"
-primary_cluster: "international-tax"
-clusters: ["international-tax", "latam-inbound"]
+subtopic: "Country Guides"
+primary_cluster: "foreign-investors"
+clusters: ["foreign-investors"]
 strategy_snapshot:
   summary: "Chile files tend to involve more treaty-driven planning than other Latin America work, but the treaty only helps when the ownership structure and reporting path are already clear."
   bullets:
