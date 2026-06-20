@@ -14,8 +14,8 @@ faqs:
     a: "Yes. Federal and international tax are the same wherever you live, and we work with New York clients remotely with secure document exchange. For cross-border matters especially, what matters is specialist expertise, not a local office."
   - q: "Do you work with foreign-owned LLCs and foreign investors?"
     a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
-  - q: "I am a U.S. citizen living abroad or I have foreign accounts. Can you help?"
-    a: "Yes. We handle expat filing, foreign income, and foreign account and asset reporting for U.S. persons with cross-border ties, along with pre-immigration planning for those preparing to become U.S. tax residents."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 sections:
   - title: "International Tax for New York"
     body: |
