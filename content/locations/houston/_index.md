@@ -1,17 +1,17 @@
 ---
 title: "Houston CPA"
-description: "A CPA for Houston's energy professionals, international families, and business owners. Federal and cross-border tax strategy, foreign reporting, and accounting, served remotely with year-round support."
+description: "A CPA for Houston's energy professionals, international families, and business owners. Federal and cross-border tax strategy, foreign reporting, and accounting with year-round support."
 layout: service
 slug: houston
 heroEyebrow: "Texas Service Areas"
-subtitle: "Federal and cross-border tax strategy for Houston's energy professionals, international families, and business owners, served remotely."
+subtitle: "Federal and cross-border tax strategy for Houston's energy professionals, international families, and business owners."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Houston Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
 sections:
   - title: "A CPA for Houston's Global Workforce"
     body: |
-      Houston pairs a global energy economy with one of the most international populations of any U.S. city, which makes cross-border tax a recurring theme here. We work with clients across the **Houston** area remotely, with secure document exchange and year-round access.
+      Houston pairs a global energy economy with one of the most international populations of any U.S. city, which makes cross-border tax a recurring theme here. We work with clients across the **Houston** area, with proactive planning and year-round access.
 
       Texas has no personal income tax, so the complexity rarely sits at the state level. It sits in the federal and international picture: foreign accounts, foreign income, equity from global employers, and the reporting that comes with all of it.
   - title: "Who We Work With in Houston"
@@ -37,5 +37,5 @@ sections:
         url: "/services/business-tax/"
   - title: "Work With Us From Houston"
     body: |
-      We serve Houston clients entirely remotely, with secure document exchange, bilingual service in English and Spanish, and year-round communication, so cross-border questions get answered before they become problems.
+      We work with Houston clients year-round, with secure document exchange, bilingual service in English and Spanish, and responsive communication, so cross-border questions get answered before they become problems.
 ---

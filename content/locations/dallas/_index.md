@@ -1,17 +1,17 @@
 ---
 title: "Dallas CPA"
-description: "A CPA for Dallas professionals, business owners, and real estate investors. Proactive federal tax strategy, entity planning, and full-service accounting, served remotely with year-round support."
+description: "A CPA for Dallas professionals, business owners, and real estate investors. Proactive federal tax strategy, entity planning, and full-service accounting with year-round support."
 layout: service
 slug: dallas
 heroEyebrow: "Texas Service Areas"
-subtitle: "Proactive federal tax strategy and full-service accounting for Dallas-Fort Worth's business owners, professionals, and investors, served remotely."
+subtitle: "Proactive federal tax strategy and full-service accounting for Dallas-Fort Worth's business owners, professionals, and investors."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Dallas Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
 sections:
   - title: "A CPA for Dallas-Fort Worth"
     body: |
-      Dallas-Fort Worth runs on corporate headquarters, finance, professional services, and one of the most active real estate markets in the country. We work with clients across the **Dallas-Fort Worth** area remotely, with secure document exchange and year-round access.
+      Dallas-Fort Worth runs on corporate headquarters, finance, professional services, and one of the most active real estate markets in the country. We work with clients across the **Dallas-Fort Worth** area, with proactive planning and year-round access.
 
       Texas has no personal income tax, so the opportunity for owners and investors sits at the federal level and in how you are structured. A profitable practice or a growing portfolio rewards planning that happens before the year closes, not after.
   - title: "Who We Work With in Dallas"
@@ -37,5 +37,5 @@ sections:
         url: "/services/full-suite/"
   - title: "Work With Us From Dallas"
     body: |
-      We serve Dallas-Fort Worth clients entirely remotely, with secure document exchange and year-round communication. Responsive, proactive help is the standard, not an upgrade.
+      We work with Dallas-Fort Worth clients year-round, with secure document exchange and responsive communication. Proactive help is the standard, not an upgrade.
 ---

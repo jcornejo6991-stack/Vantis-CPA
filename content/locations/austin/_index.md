@@ -1,17 +1,17 @@
 ---
 title: "Austin CPA"
-description: "A CPA for Austin founders, tech professionals, and consultants. Proactive federal tax strategy, equity compensation planning, and entity structure, served remotely with year-round support."
+description: "A CPA for Austin founders, tech professionals, and consultants. Proactive federal tax strategy, equity compensation planning, and entity structure with year-round support."
 layout: service
 slug: austin
 heroEyebrow: "Texas Service Areas"
-subtitle: "Proactive federal tax strategy and entity planning for Austin's founders, tech professionals, and consultants, served remotely from anywhere."
+subtitle: "Proactive federal tax strategy and entity planning for Austin's founders, tech professionals, and consultants."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Austin Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
 sections:
   - title: "A CPA for Austin's Builders"
     body: |
-      Austin has become one of the country's fastest-growing hubs for startups, tech talent, and independent consultants, with a steady wave of arrivals from higher-tax states. We work with Austin clients remotely, with secure document exchange and year-round access, across Austin and the surrounding **Travis County** area.
+      Austin has become one of the country's fastest-growing hubs for startups, tech talent, and independent consultants, with a steady wave of arrivals from higher-tax states. We work with clients across Austin and the surrounding **Travis County** area, with proactive planning and year-round access.
 
       Texas, like Florida, has no personal income tax. That makes the federal side and your entity structure the real levers. For a profitable consultant or a funded founder, getting that structure right early is where the savings live.
   - title: "Who We Work With in Austin"
@@ -37,5 +37,5 @@ sections:
         url: "/resources/solo-401k-vs-sep-ira/"
   - title: "Work With Us From Austin"
     body: |
-      We serve Austin clients entirely remotely, with secure document exchange, video meetings, and year-round communication. You get a proactive CPA who looks ahead, not one you only hear from at filing time.
+      Whether we meet by video or handle things through secure document exchange, you get year-round communication and a proactive CPA who looks ahead, not one you only hear from at filing time.
 ---
