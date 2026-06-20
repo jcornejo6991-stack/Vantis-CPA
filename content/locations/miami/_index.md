@@ -53,7 +53,7 @@ sections:
       * **We reach out, you don't have to.** If an opportunity or a deadline is coming, we bring it to you. You should never have to chase your accountant.
 
       It starts with a no-charge discovery call, moves to a clear scope and fixed fee, and then becomes year-round, proactive work, not a scramble every April.
-  - title: "Let's Talk"
+  - title: "Get Started in Miami"
     body: |
-      If you want a Miami CPA who handles the whole picture and actually looks ahead, we should talk. Reach out for a no-charge consultation and we'll show you how we work and whether we're the right fit.
+      Whether your situation is a single business return or a family with interests in several countries, we can handle it. Schedule a no-charge consultation and we'll walk through where you stand and how we would approach it.
 ---

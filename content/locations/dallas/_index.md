@@ -53,7 +53,7 @@ sections:
       * **We reach out, you don't have to.** If a deadline or an opportunity is coming, we bring it to you.
 
       It begins with a no-charge discovery call, moves to a clear scope and fixed fee, and becomes proactive, year-round work rather than an annual scramble.
-  - title: "Let's Talk"
+  - title: "Get Started in Dallas"
     body: |
-      If you want a Dallas CPA who handles the whole picture and looks ahead, reach out for a no-charge consultation. We'll walk through your situation and whether we're the right fit.
+      Bring us the practice, the portfolio, or the personal return. Schedule a no-charge consultation and we'll review where you stand and how we would handle it.
 ---

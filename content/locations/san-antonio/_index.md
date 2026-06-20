@@ -53,7 +53,7 @@ sections:
       * **We reach out, you don't have to.** If a deadline or an opportunity is coming, we bring it to you.
 
       It begins with a no-charge discovery call, moves to a clear scope and fixed fee, and becomes proactive, year-round work rather than an annual scramble.
-  - title: "Let's Talk"
+  - title: "Get Started in San Antonio"
     body: |
-      If you want a San Antonio CPA who handles the whole picture and looks ahead, reach out for a no-charge consultation. We'll walk through your situation and whether we're the right fit.
+      Whether you run a small business or need multi-state and residency questions handled correctly, schedule a no-charge consultation and we'll outline how we would approach it.
 ---

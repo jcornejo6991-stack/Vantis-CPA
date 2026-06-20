@@ -53,7 +53,7 @@ sections:
       * **We reach out, you don't have to.** If a deadline or an opportunity is coming, we bring it to you.
 
       It begins with a no-charge discovery call, moves to a clear scope and fixed fee, and becomes proactive, year-round work rather than an annual scramble.
-  - title: "Let's Talk"
+  - title: "Get Started in Houston"
     body: |
-      If you want a Houston CPA who handles the whole picture, including the cross-border pieces, reach out for a no-charge consultation. We'll walk through your situation and whether we're the right fit.
+      If the cross-border pieces are the part that worries you, that is exactly where we go deepest. Schedule a no-charge consultation and we'll walk through your situation.
 ---
