@@ -50,12 +50,12 @@ Texas pages use a federal-tax-and-service framing (the firm is Florida-licensed)
 
 Six sections, covering all services rather than a single specialty:
 
-1. **A CPA for [City]** — local economy, counties, neighborhoods, the no-income-tax angle (Florida and Texas both).
-2. **Who We Work With in [City]** — all audiences (individuals/families, business owners, investors, international), tied to the local economy.
-3. **Full-Service Tax and Accounting for [City]** — Individual Tax, Business Tax, International Tax, and Full-Suite accounting (bookkeeping, payroll, sales tax) in the city's context.
-4. **[City]'s standout angle** — the local specialty as one section, not the whole page.
-5. **Why [City] Clients Work With Us** — personalization grounded in real firm material: the three pillars (One Point of Contact, Responsive by Default, We Reach Out You Don't Have To), the process (discovery call, scope/fixed fee, year-round work), and credentials (licensed CPA, Master of Taxation, bilingual EN/ES). The CPA is not named in the body.
-6. **Get Started in [City]** — closing CTA, varied per city (no "Let's Talk / we should talk" phrasing).
+1. **A CPA for [City]**: local economy, counties, neighborhoods, the no-income-tax angle (Florida and Texas both).
+2. **Who We Work With in [City]**: all audiences (individuals/families, business owners, investors, international), tied to the local economy.
+3. **Full-Service Tax and Accounting for [City]**: Individual Tax, Business Tax, International Tax, and Full-Suite accounting (bookkeeping, payroll, sales tax) in the city's context.
+4. **[City]'s standout angle**: the local specialty as one section, not the whole page.
+5. **Why [City] Clients Work With Us**: personalization grounded in real firm material: the three pillars (One Point of Contact, Responsive by Default, We Reach Out You Don't Have To), the process (discovery call, scope/fixed fee, year-round work), and credentials (licensed CPA, Master of Taxation, bilingual EN/ES). The CPA is not named in the body.
+6. **Get Started in [City]**: closing CTA, varied per city (no "Let's Talk / we should talk" phrasing).
 
 Each page sets a unique `title` ("[City] CPA") and `description`. `head.html` renders `[Title] | Vantis CPA`.
 
@@ -67,8 +67,8 @@ City pages contain **no in-body links**. The only links are the service-page gri
 
 State-level shared images, one per state, set via `heroImage` frontmatter:
 
-- `/images/locations/florida.jpg` (Florida flag) — all Florida cities
-- `/images/locations/texas.jpg` (Texas flag) — all Texas cities
+- `/images/locations/florida.jpg` (Florida flag), used by all Florida cities
+- `/images/locations/texas.jpg` (Texas flag), used by all Texas cities
 
 Photos sourced from Unsplash. See memory `image-source`.
 
