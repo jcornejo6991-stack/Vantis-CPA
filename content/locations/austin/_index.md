@@ -29,12 +29,9 @@ sections:
       - label: "Business Tax"
         description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
         url: "/services/business-tax/"
-      - label: "S-Corp Reasonable Salary"
-        description: "How to set a defensible salary and avoid the most common S-corp audit trigger."
-        url: "/resources/s-corp-reasonable-salary/"
-      - label: "Solo 401(k) vs SEP IRA"
-        description: "Choosing the right retirement plan to shelter income as a self-employed earner."
-        url: "/resources/solo-401k-vs-sep-ira/"
+      - label: "Individual Tax"
+        description: "Preparation and planning for high earners, equity compensation, and concentrated positions."
+        url: "/services/individual-tax/"
   - title: "Work With Us From Austin"
     body: |
       Whether we meet by video or handle things through secure document exchange, you get year-round communication and a proactive CPA who looks ahead, not one you only hear from at filing time.

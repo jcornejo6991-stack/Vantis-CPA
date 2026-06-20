@@ -29,12 +29,9 @@ sections:
       - label: "Sales Tax"
         description: "Registration, collection, and filing handled so you stay compliant without the headache."
         url: "/services/full-suite/sales-tax/"
-      - label: "Short-Term Rental Taxes"
-        description: "Depreciation, the rules that catch operators off guard, and how to plan around them."
-        url: "/resources/short-term-rental-taxes/"
-      - label: "Florida Sales Tax for Small Business"
-        description: "What Florida businesses need to know about collecting and remitting sales tax."
-        url: "/resources/florida-sales-tax-small-business/"
+      - label: "Full Suite"
+        description: "Bookkeeping, back office, payroll, and sales tax. One firm for everything."
+        url: "/services/full-suite/"
   - title: "Work With Us Across Orlando"
     body: |
       We serve clients throughout Central Florida in person and remotely, with secure document exchange and year-round access, so support is there when you need it, not just at filing time.

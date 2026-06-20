@@ -29,12 +29,9 @@ sections:
       - label: "Foreign Business & Investors"
         description: "Foreign-owned LLCs, Form 5472, FIRPTA, and inbound U.S. investment structuring."
         url: "/services/international-tax/foreign-business-and-investors/"
-      - label: "FIRPTA on U.S. Real Estate Sales"
-        description: "How withholding works when a foreign owner sells U.S. property, and how to plan for it."
-        url: "/resources/firpta-us-real-estate-sales/"
-      - label: "Pre-Immigration Tax Planning"
-        description: "Steps to take before becoming a U.S. tax resident, while the options are still open."
-        url: "/resources/pre-immigration-planning/"
+      - label: "International Tax"
+        description: "Cross-border planning and compliance for individuals and businesses with U.S. ties."
+        url: "/services/international-tax/"
   - title: "Work With Us From Anywhere in Miami"
     body: |
       We meet Miami clients in person and remotely, with secure document exchange and bilingual service in English and Spanish. Wherever you sit in Miami-Dade, you get proactive, responsive help year-round, not just at filing time.

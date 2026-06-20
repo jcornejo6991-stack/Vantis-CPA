@@ -29,12 +29,9 @@ sections:
       - label: "Real Estate Tax"
         description: "Rental property, depreciation, REPS, 1031 exchanges, and short-term rental planning."
         url: "/services/business-tax/real-estate/"
-      - label: "Short-Term Rental Taxes"
-        description: "Depreciation, the rules that catch operators off guard, and how to plan around them."
-        url: "/resources/short-term-rental-taxes/"
-      - label: "Pre-Immigration Tax Planning"
-        description: "Steps to take before becoming a U.S. tax resident, while the options are still open."
-        url: "/resources/pre-immigration-planning/"
+      - label: "Individual Tax"
+        description: "Preparation and planning for high-net-worth individuals, retirees, and families."
+        url: "/services/individual-tax/"
   - title: "Work With Us Across Naples"
     body: |
       We serve clients throughout Collier County in person and remotely, with secure document exchange and year-round communication, so you get proactive help whenever you need it, not just at tax time.
