@@ -3,6 +3,7 @@ title: "Fort Lauderdale CPA"
 description: "A Fort Lauderdale CPA firm for the marine industry, professional practices, and second-home owners. Proactive tax strategy, business accounting, and real estate tax across Broward County."
 layout: service
 slug: fort-lauderdale
+heroImage: "/images/locations/florida.jpg"
 heroEyebrow: "Florida Service Areas"
 subtitle: "Proactive tax planning and full-service accounting for Fort Lauderdale's businesses, professionals, and property owners."
 showCoreServiceLinks: true

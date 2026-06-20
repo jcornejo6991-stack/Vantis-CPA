@@ -3,6 +3,7 @@ title: "San Antonio CPA"
 description: "A CPA for San Antonio small business owners, military families, and the self-employed. Proactive federal tax strategy and full-service accounting with year-round support."
 layout: service
 slug: san-antonio
+heroImage: "/images/locations/texas.jpg"
 heroEyebrow: "Texas Service Areas"
 subtitle: "Proactive federal tax strategy and accounting for San Antonio's small business owners, military families, and self-employed professionals."
 showCoreServiceLinks: true

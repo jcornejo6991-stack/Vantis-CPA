@@ -3,6 +3,7 @@ title: "Austin CPA"
 description: "A CPA for Austin founders, tech professionals, and consultants. Proactive federal tax strategy, equity compensation planning, and entity structure with year-round support."
 layout: service
 slug: austin
+heroImage: "/images/locations/texas.jpg"
 heroEyebrow: "Texas Service Areas"
 subtitle: "Proactive federal tax strategy and entity planning for Austin's founders, tech professionals, and consultants."
 showCoreServiceLinks: true

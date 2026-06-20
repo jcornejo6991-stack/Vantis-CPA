@@ -3,6 +3,7 @@ title: "Dallas CPA"
 description: "A CPA for Dallas professionals, business owners, and real estate investors. Proactive federal tax strategy, entity planning, and full-service accounting with year-round support."
 layout: service
 slug: dallas
+heroImage: "/images/locations/texas.jpg"
 heroEyebrow: "Texas Service Areas"
 subtitle: "Proactive federal tax strategy and full-service accounting for Dallas-Fort Worth's business owners, professionals, and investors."
 showCoreServiceLinks: true

@@ -3,6 +3,7 @@ title: "Miami CPA"
 description: "A Miami CPA firm for international families, foreign-owned businesses, and investors. Cross-border tax, foreign-owned LLCs, Form 5472, FIRPTA, and proactive planning across Miami-Dade."
 layout: service
 slug: miami
+heroImage: "/images/locations/florida.jpg"
 heroEyebrow: "Florida Service Areas"
 subtitle: "Cross-border tax strategy and year-round accounting for Miami's international families, foreign investors, and business owners."
 showCoreServiceLinks: true

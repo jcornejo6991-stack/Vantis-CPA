@@ -3,6 +3,7 @@ title: "Orlando CPA"
 description: "An Orlando CPA firm for hospitality businesses, vacation-rental operators, and franchises. Proactive tax strategy, sales tax, and full-service accounting across Central Florida."
 layout: service
 slug: orlando
+heroImage: "/images/locations/florida.jpg"
 heroEyebrow: "Florida Service Areas"
 subtitle: "Proactive tax planning and full-service accounting for Orlando's hospitality businesses, rental operators, and owners."
 showCoreServiceLinks: true

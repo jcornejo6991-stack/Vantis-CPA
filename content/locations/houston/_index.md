@@ -3,6 +3,7 @@ title: "Houston CPA"
 description: "A CPA for Houston's energy professionals, international families, and business owners. Federal and cross-border tax strategy, foreign reporting, and accounting with year-round support."
 layout: service
 slug: houston
+heroImage: "/images/locations/texas.jpg"
 heroEyebrow: "Texas Service Areas"
 subtitle: "Federal and cross-border tax strategy for Houston's energy professionals, international families, and business owners."
 showCoreServiceLinks: true

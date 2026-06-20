@@ -3,6 +3,7 @@ title: "Naples CPA"
 description: "A Naples CPA firm for high-net-worth retirees, real estate investors, and short-term rental owners. Proactive tax strategy, pre-immigration planning, and rental tax across Collier County."
 layout: service
 slug: naples
+heroImage: "/images/locations/florida.jpg"
 heroEyebrow: "Florida Service Areas"
 subtitle: "Tax strategy and year-round accounting for Naples's high-net-worth families, investors, and rental owners."
 showCoreServiceLinks: true
