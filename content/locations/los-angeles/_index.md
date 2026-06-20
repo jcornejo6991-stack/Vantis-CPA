@@ -1,18 +1,18 @@
 ---
 title: "Los Angeles International Tax CPA"
-description: "International and cross-border tax for Los Angeles: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA working with LA's international community."
+description: "International and cross-border tax for Los Angeles: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA for foreign investment and cross-border tax."
 layout: service
 slug: los-angeles
 heroImage: "/images/globe-hero.jpg"
 heroEyebrow: "International & Cross-Border Tax"
-subtitle: "A specialist CPA for Los Angeles's international community: foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
+subtitle: "Specialist international and cross-border tax for Los Angeles's foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Los Angeles Clients"
 coreServiceLinksIntro: "Whatever your cross-border situation, there's a service built for it."
 sections:
   - title: "International Tax for Los Angeles"
     body: |
-      Los Angeles sits at the center of one of the largest Latin American and immigrant populations in the country, with deep cross-border ties to Mexico and beyond and a steady flow of foreign investment into business and real estate. That international reach is exactly where our work sits.
+      Los Angeles is a global center for trade, entertainment, and foreign investment, with capital and businesses tied to markets around the world. That international reach is exactly where our work sits.
 
       We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national investing in the U.S., an American living abroad, or a family with assets in more than one country, this is the part of the tax code we focus on, and we work with Los Angeles clients with secure document exchange and bilingual service in English and Spanish.
   - title: "Who We Help in Los Angeles"

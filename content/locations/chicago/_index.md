@@ -1,18 +1,18 @@
 ---
 title: "Chicago International Tax CPA"
-description: "International and cross-border tax for Chicago: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA working with Chicago's international community."
+description: "International and cross-border tax for Chicago: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA for foreign investment and cross-border tax."
 layout: service
 slug: chicago
 heroImage: "/images/globe-hero.jpg"
 heroEyebrow: "International & Cross-Border Tax"
-subtitle: "A specialist CPA for Chicago's international community: foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
+subtitle: "Specialist international and cross-border tax for Chicago's foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Chicago Clients"
 coreServiceLinksIntro: "Whatever your cross-border situation, there's a service built for it."
 sections:
   - title: "International Tax for Chicago"
     body: |
-      Chicago is a major hub for international business and home to one of the largest Mexican and immigrant communities in the country, with cross-border ties that run through both companies and families. That international reach is exactly where our work sits.
+      Chicago is a major hub for international business and finance, with companies, investors, and individuals tied to markets around the world. That international reach is exactly where our work sits.
 
       We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national investing in the U.S., an American living abroad, or a family with accounts and assets in more than one country, this is the part of the tax code we focus on, and we work with Chicago clients with secure document exchange and bilingual service in English and Spanish.
   - title: "Who We Help in Chicago"

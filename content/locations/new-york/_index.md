@@ -1,18 +1,18 @@
 ---
 title: "New York International Tax CPA"
-description: "International and cross-border tax for New York: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA working with New York's international community."
+description: "International and cross-border tax for New York: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA for foreign investment and cross-border tax."
 layout: service
 slug: new-york
 heroImage: "/images/globe-hero.jpg"
 heroEyebrow: "International & Cross-Border Tax"
-subtitle: "A specialist CPA for New York's international community: foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
+subtitle: "Specialist international and cross-border tax for New York's foreign investors, foreign-owned businesses, expats, and families with cross-border ties."
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help New York Clients"
 coreServiceLinksIntro: "Whatever your cross-border situation, there's a service built for it."
 sections:
   - title: "International Tax for New York"
     body: |
-      New York is the most internationally connected market in the country, with foreign investors, multinational employees, and one of the largest Latin American communities in the U.S. That international reach is exactly where our work sits.
+      New York is the most internationally connected market in the country, a hub for foreign investment, multinational business, and globally mobile professionals. That international reach is exactly where our work sits.
 
       We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national investing in U.S. real estate, an American living abroad, or a family with accounts and assets in more than one country, this is the part of the tax code we focus on, and we work with New York clients with secure document exchange and bilingual service in English and Spanish.
   - title: "Who We Help in New York"
