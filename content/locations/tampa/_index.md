@@ -3,8 +3,6 @@ title: "Tampa CPA"
 description: "A Tampa CPA firm for fast-growing service businesses and relocated owners. Proactive tax strategy, S-corp planning, and full-service accounting across Hillsborough County."
 layout: service
 slug: tampa
-aliases:
-  - /locations/tampa-bay/
 heroEyebrow: "Florida Service Areas"
 subtitle: "Proactive tax planning and entity strategy for Tampa's growing businesses, owners, and professionals."
 showCoreServiceLinks: true
