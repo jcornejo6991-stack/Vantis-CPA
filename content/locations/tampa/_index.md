@@ -25,13 +25,6 @@ sections:
   - title: "Entity Strategy and S-Corp Planning"
     body: |
       For a profitable Tampa business, the S-corp question is one of the highest-leverage decisions you will make, from reasonable salary to the paperwork that keeps the election valid. It is one of our core areas.
-    cards:
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
-      - label: "Full Suite"
-        description: "Bookkeeping, back office, payroll, and sales tax. One firm for everything."
-        url: "/services/full-suite/"
   - title: "Work With Us Across Tampa"
     body: |
       We serve clients throughout the Tampa area in person and remotely, with secure document exchange and year-round access. You get a CPA who looks ahead, not one you only hear from in April.

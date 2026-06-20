@@ -25,13 +25,6 @@ sections:
   - title: "Entity Structure and Equity Planning"
     body: |
       As income climbs, the choice between a sole proprietorship, an S-corp, and a partnership stops being academic and starts being money. For equity-heavy professionals, timing and planning around RSUs and options matter just as much. Both are core to how we work.
-    cards:
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
-      - label: "Individual Tax"
-        description: "Preparation and planning for high earners, equity compensation, and concentrated positions."
-        url: "/services/individual-tax/"
   - title: "Work With Us From Austin"
     body: |
       Whether we meet by video or handle things through secure document exchange, you get year-round communication and a proactive CPA who looks ahead, not one you only hear from at filing time.

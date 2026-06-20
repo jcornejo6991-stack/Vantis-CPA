@@ -25,16 +25,6 @@ sections:
   - title: "Strategy Plus Day-to-Day Accounting"
     body: |
       Many Dallas owners want one firm for federal tax strategy and the bookkeeping and payroll that keep the business running. We offer both, with a team that already knows your numbers when planning decisions come up.
-    cards:
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
-      - label: "Real Estate Tax"
-        description: "Rental property, depreciation, REPS, 1031 exchanges, and investor planning."
-        url: "/services/business-tax/real-estate/"
-      - label: "Full Suite"
-        description: "Bookkeeping, back office, payroll, and sales tax. One firm for everything."
-        url: "/services/full-suite/"
   - title: "Work With Us From Dallas"
     body: |
       We work with Dallas-Fort Worth clients year-round, with secure document exchange and responsive communication. Proactive help is the standard, not an upgrade.

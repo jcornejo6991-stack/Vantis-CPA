@@ -25,13 +25,6 @@ sections:
   - title: "International Tax: Our Core Miami Specialty"
     body: |
       Inbound investment carries reporting rules that catch people off guard, from Form 5472 on foreign-owned LLCs to FIRPTA withholding on real estate sales. We handle the structuring and the compliance so the cost of a mistake never lands on you.
-    cards:
-      - label: "Foreign Business & Investors"
-        description: "Foreign-owned LLCs, Form 5472, FIRPTA, and inbound U.S. investment structuring."
-        url: "/services/international-tax/foreign-business-and-investors/"
-      - label: "International Tax"
-        description: "Cross-border planning and compliance for individuals and businesses with U.S. ties."
-        url: "/services/international-tax/"
   - title: "Work With Us From Anywhere in Miami"
     body: |
       We meet Miami clients in person and remotely, with secure document exchange and bilingual service in English and Spanish. Wherever you sit in Miami-Dade, you get proactive, responsive help year-round, not just at filing time.

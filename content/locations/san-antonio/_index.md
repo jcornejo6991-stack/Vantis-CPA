@@ -25,16 +25,6 @@ sections:
   - title: "Small Business Strategy and Clean Books"
     body: |
       Most San Antonio owners want the same two things: a tax structure that is not leaving money on the table, and books they can actually trust. We handle both, so strategy and compliance are not coming from two different places.
-    cards:
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
-      - label: "Individual Tax"
-        description: "Preparation and planning for individuals and families, including multi-state situations."
-        url: "/services/individual-tax/"
-      - label: "Full Suite"
-        description: "Bookkeeping, back office, payroll, and sales tax. One firm for everything."
-        url: "/services/full-suite/"
   - title: "Work With Us From San Antonio"
     body: |
       We work with San Antonio clients year-round, with secure document exchange, bilingual service in English and Spanish, and responsive communication. You get proactive help whenever you need it, not just at tax time.

@@ -25,16 +25,6 @@ sections:
   - title: "International and Cross-Border Tax"
     body: |
       Foreign accounts, foreign income, and inbound or outbound assignments carry reporting rules that are easy to trip over and expensive to get wrong. Cross-border tax is one of our deepest areas of focus.
-    cards:
-      - label: "U.S. Persons With International Ties"
-        description: "Foreign accounts, foreign income, and the reporting that comes with cross-border life."
-        url: "/services/international-tax/u-s-with-international-ties/"
-      - label: "International Tax"
-        description: "Cross-border planning and compliance for individuals and businesses."
-        url: "/services/international-tax/"
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
   - title: "Work With Us From Houston"
     body: |
       We work with Houston clients year-round, with secure document exchange, bilingual service in English and Spanish, and responsive communication, so cross-border questions get answered before they become problems.

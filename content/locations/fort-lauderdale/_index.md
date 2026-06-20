@@ -25,13 +25,6 @@ sections:
   - title: "One Firm for Strategy and Day-to-Day Accounting"
     body: |
       Many Fort Lauderdale owners want a single firm for tax strategy plus the bookkeeping, payroll, and sales tax work that keeps the business running. We offer both, with one team that already knows your numbers.
-    cards:
-      - label: "Business Tax"
-        description: "Entity strategy, S-corp planning, and tax compliance for owner-operated businesses."
-        url: "/services/business-tax/"
-      - label: "Full Suite"
-        description: "Bookkeeping, back office, payroll, and sales tax. One firm for everything."
-        url: "/services/full-suite/"
   - title: "Work With Us Across Fort Lauderdale"
     body: |
       We serve clients throughout Broward in person and remotely, with secure document exchange and year-round access. Responsive communication is part of the service, not an afterthought.

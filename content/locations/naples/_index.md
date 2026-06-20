@@ -25,13 +25,6 @@ sections:
   - title: "Real Estate, Rentals, and Wealth Planning"
     body: |
       Vacation and short-term rentals carry rules that surprise owners, from depreciation to county tourist development tax, and high-net-worth arrivals often have a narrow window to plan before residency changes their options. Both are core areas for us.
-    cards:
-      - label: "Real Estate Tax"
-        description: "Rental property, depreciation, REPS, 1031 exchanges, and short-term rental planning."
-        url: "/services/business-tax/real-estate/"
-      - label: "Individual Tax"
-        description: "Preparation and planning for high-net-worth individuals, retirees, and families."
-        url: "/services/individual-tax/"
   - title: "Work With Us Across Naples"
     body: |
       We serve clients throughout Collier County in person and remotely, with secure document exchange and year-round communication, so you get proactive help whenever you need it, not just at tax time.
