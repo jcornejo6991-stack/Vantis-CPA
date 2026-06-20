@@ -7,48 +7,53 @@
 
 City-based SEO landing pages for the firm, organized so the structure scales as cities and states are added without becoming overwhelming. Each city page targets "[City] CPA" search intent, covers the firm's full range of services, and carries genuinely unique local content to avoid Google's doorway-page penalty.
 
-## Final structure (two-tier state hubs)
+## Final structure
+
+The firm's strategy is split: **deep coverage in Florida** (where it is licensed and can rank locally and via Google Business Profile) and **niche-only pages elsewhere** (national, federal cross-border work where geography matters less).
 
 ```
-/locations/            state cards: Florida, Texas
-/locations/florida/    Florida city cards
-/locations/texas/      Texas city cards
+/locations/            Florida state card + niche city cards (New York, Los Angeles, Chicago)
+/locations/florida/    Florida city cards (14)
 /locations/<city>/     individual city pages (flat URLs)
 ```
 
-- **Top level** grows only when a state is added (slow), so it never becomes a wall.
-- **State hub pages** (`/locations/florida/`, `/locations/texas/`) are standalone "[State] CPA" pages that can rank on their own. Built on `layout: landing` (title + subtitle + card grid of that state's cities).
-- **City pages** keep flat URLs (`/locations/miami/`), so adding the state tier required no redirects.
-- All three levels reuse the existing glass-tile card styling.
+- **Top hub** mixes one Florida state card (leading to the Florida hub) with individual niche city cards. Niche cities are sparse and one-off per state, so forcing a thin single-city state hub for each was avoided; they link straight to the city page.
+- **Florida hub** (`/locations/florida/`) is a standalone "Florida CPA" page (`layout: landing`) listing the 14 Florida city cards.
+- **City pages** keep flat URLs (`/locations/miami/`), so structure changes never require redirects.
+- All levels reuse the existing glass-tile card styling.
 
-This superseded two earlier iterations: (1) three regional hubs (South/Tampa Bay/Southwest Florida), removed early; (2) a single filterable grid with a state filter bar, replaced by the two-tier hubs. The filter layout (`layouts/_default/locations.html`) was retired.
+Superseded iterations: (1) three regional hubs (South/Tampa Bay/Southwest Florida), removed early; (2) a single filterable grid with a state filter bar; (3) a symmetric two-tier state model with a Texas hub. The Texas pages and hub were removed in favor of Florida depth plus the international niche play. The filter layout (`layouts/_default/locations.html`) was retired.
 
 ## Cities (as built)
 
-- **Florida (7):** Miami, Fort Lauderdale, Tampa, Orlando, Naples, Fort Myers, Cape Coral
-- **Texas (4):** Austin, Dallas, Houston, San Antonio
-
-Local angle per city (the spine that keeps each page unique):
+**Florida (14), full-service format.** Local angle per city (the spine that keeps each page unique):
 
 | City | Angle |
 |---|---|
 | Miami | International / Latin America, foreign-owned LLCs, FIRPTA, inbound investment |
+| Coral Gables | International business, regional HQs, cross-border (Gateway to the Americas) |
 | Fort Lauderdale | Marine industry, professional practices, second homes |
-| Tampa | Fast-growth service businesses, S-corp / entity strategy |
+| West Palm Beach | Wealth, finance, residency planning (Palm Beach corridor) |
+| Boca Raton | Corporate HQs, professionals, affluent families |
+| Port St. Lucie | Small business, families, fast-growing Treasure Coast |
 | Orlando | Hospitality, vacation rentals, sales tax |
-| Naples | High-net-worth retirees, wealth planning, short-term rentals |
+| Tampa | Fast-growth service businesses, S-corp / entity strategy |
+| St. Petersburg | Small business, creative economy |
+| Sarasota | Retirees, real estate, wealth planning |
 | Fort Myers | Real estate investors, small business, retirees (Lee County) |
 | Cape Coral | Vacation rentals, waterfront/canal real estate (Lee County) |
-| Austin | Founders, tech equity, entity strategy |
-| Dallas | Real estate, professional practices |
-| Houston | Energy, international / cross-border |
-| San Antonio | Small business, military families |
+| Naples | High-net-worth retirees, wealth planning, short-term rentals |
+| Jacksonville | Small business and growth, largest FL city |
 
-Texas pages use a federal-tax-and-service framing (the firm is Florida-licensed) and a light touch on remote work, not a heavy "served remotely" pitch.
+**Niche cities (3), international-only format:** New York, Los Angeles, Chicago. These do not pursue generic "[City] CPA" intent (unwinnable out of state, weak conversion). They target the firm's cross-border moat: foreign investors, foreign-owned LLCs, FIRPTA, expats, U.S. persons with foreign ties, and the Latin American community in each metro. NY and LA are the strongest fits; Chicago leans on the Latino/cross-border-individual angle. DC and the Bay Area are noted as next-best if expanded.
 
-## City page format (`layout: service`)
+## City page formats (`layout: service`)
 
-Six sections, covering all services rather than a single specialty:
+There are two formats.
+
+### Florida full-service (six sections)
+
+Covers all services rather than a single specialty:
 
 1. **A CPA for [City]**: local economy, counties, neighborhoods, the no-income-tax angle (Florida and Texas both).
 2. **Who We Work With in [City]**: all audiences (individuals/families, business owners, investors, international), tied to the local economy.
@@ -59,16 +64,28 @@ Six sections, covering all services rather than a single specialty:
 
 Each page sets a unique `title` ("[City] CPA") and `description`. `head.html` renders `[Title] | Vantis CPA`.
 
+### Niche international (five sections)
+
+Used for non-Florida cities (New York, Los Angeles, Chicago). Leads with the cross-border specialty, not full service:
+
+1. **International Tax for [City]**: the metro's international/foreign-investor/Latin American character and the firm's specialist focus.
+2. **Who We Help in [City]**: foreign investors, foreign-owned LLCs, U.S. persons with foreign ties, expats, pre-immigration.
+3. **What We Handle**: foreign business and investors, FIRPTA, U.S. persons with foreign ties, expats and pre-immigration.
+4. **Why [City] Clients Work With Us**: same firm pillars and credentials, framed around the cross-border specialty.
+5. **Get Started in [City]**.
+
+Title targets the niche ("[City] International Tax CPA"), not generic "[City] CPA". `heroEyebrow` is "International & Cross-Border Tax". These pages avoid implying a local office or local licensure; international tax is federal.
+
 ### Links policy
 
 City pages contain **no in-body links**. The only links are the service-page grid at the bottom (`showCoreServiceLinks`, "How We Help [City] Clients"). No links into the `/resources/` library.
 
 ## Hero images
 
-State-level shared images, one per state, set via `heroImage` frontmatter:
+Set via `heroImage` frontmatter:
 
 - `/images/locations/florida.jpg` (Florida flag), used by all Florida cities
-- `/images/locations/texas.jpg` (Texas flag), used by all Texas cities
+- `/images/globe-hero.jpg` (globe), used by the niche international cities
 
 Photos sourced from Unsplash. See memory `image-source`.
 
@@ -85,5 +102,6 @@ Photos sourced from Unsplash. See memory `image-source`.
 
 ## Adding more later
 
-- **New city:** create `content/locations/<city>/_index.md` (copy an existing city, swap the local angle), then add one item to that state's hub `_index.md`.
-- **New state:** create `content/locations/<state>/_index.md` (copy `florida` or `texas`), add a state card to the top `/locations/_index.md`, and add a `/images/locations/<state>.jpg` hero.
+- **New Florida city:** create `content/locations/<city>/_index.md` (copy an existing Florida city, swap the local angle), then add one item to `content/locations/florida/_index.md`.
+- **New niche city:** create `content/locations/<city>/_index.md` (copy New York), reframe for the metro's international community, then add one card to the top `/locations/_index.md`. Uses the globe hero.
+- **Promoting a niche state to a hub:** once a non-Florida state has multiple cities, add `content/locations/<state>/_index.md` (copy `florida`), replace its top-hub city cards with a single state card, and optionally add a `/images/locations/<state>.jpg` hero.
