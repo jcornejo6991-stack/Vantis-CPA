@@ -55,7 +55,7 @@ There are two formats.
 
 Covers all services rather than a single specialty:
 
-1. **A CPA for [City]**: local economy, counties, neighborhoods, the no-income-tax angle (Florida and Texas both).
+1. **A CPA for [City]**: local economy, counties, neighborhoods, the Florida no-income-tax angle.
 2. **Who We Work With in [City]**: all audiences (individuals/families, business owners, investors, international), tied to the local economy.
 3. **Full-Service Tax and Accounting for [City]**: Individual Tax, Business Tax, International Tax, and Full-Suite accounting (bookkeeping, payroll, sales tax) in the city's context.
 4. **[City]'s standout angle**: the local specialty as one section, not the whole page.
