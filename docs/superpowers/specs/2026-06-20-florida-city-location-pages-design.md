@@ -22,11 +22,14 @@ They are surfaced only via the footer ("Florida Service Areas") and share repeat
 In scope:
 
 1. Five new city landing pages: Miami, Fort Lauderdale, Tampa, Naples, Orlando.
-2. Reworked `/locations/` hub: a flat grid of city cards (small `landing.html` enhancement if needed).
+2. A simple `/locations/` hub landing page: a flat grid of city cards linking to all 5 cities.
 3. Delete the 3 region pages (content + generated `public/` output).
 4. 301 redirects from the 3 old region URLs to their nearest flagship city.
-5. Nav: add a single "Locations" link (desktop + mobile), pointing to `/locations/`.
-6. Footer: replace the 3-region "Florida Service Areas" list with the hub + city links.
+5. Footer: replace the 3-region "Florida Service Areas" list with a single location link to the hub.
+
+Explicitly out of scope:
+
+- No navigation bar changes. `nav.html` is left untouched.
 
 Out of scope (future expansion):
 
@@ -87,19 +90,11 @@ Five cards fit the existing flat 2-column grid cleanly, so **no layout change is
 
 ## Navigation
 
-`nav.html` is hardcoded HTML (not Hugo menus). Add a single "Locations" link in two places:
-
-1. Desktop: a new `<li>` in `.nav-links` (a plain link, no dropdown), positioned after "Resources" and before "Contact Us".
-2. Mobile: a new `<a role="menuitem">` in `#mobileMenu`, in the same relative position.
-
-Both link to `/locations/`.
+No changes. `nav.html` is left untouched. Locations are discoverable via the hub page and the single footer link.
 
 ## Footer
 
-In `footer.html`, the "Florida Service Areas" block currently lists the 3 region URLs. Replace with:
-
-- A link to the hub (`/locations/`), and
-- The 5 city links.
+In `footer.html`, the "Florida Service Areas" block currently lists the 3 region URLs. Replace it with a single location link pointing to the hub (`/locations/`).
 
 ## Redirects (preserve existing SEO equity)
 
@@ -133,7 +128,6 @@ Implementation: add `aliases` frontmatter to the corresponding city `_index.md`.
 
 1. Create the 5 city `_index.md` files with unique content and `aliases`.
 2. Rework `/locations/_index.md` hub items to the 5 cities.
-3. Update `nav.html` (desktop + mobile) with the "Locations" link.
-4. Update `footer.html` "Florida Service Areas" block.
-5. Delete the 3 region content files.
-6. Build and verify: new pages render, hub grid shows 5 cities, old region URLs redirect, nav/footer links resolve, no em dashes.
+3. Update `footer.html`: replace the "Florida Service Areas" block with a single hub link.
+4. Delete the 3 region content files.
+5. Build and verify: new pages render, hub grid shows 5 cities, old region URLs redirect, footer link resolves, nav unchanged, no em dashes.
