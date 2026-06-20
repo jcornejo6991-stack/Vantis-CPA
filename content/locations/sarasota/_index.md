@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Sarasota's fam
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Sarasota Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Sarasota?"
+    a: "No. Most of our Sarasota clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Sarasota County. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Sarasota clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with retirees and real estate investors?"
+    a: "Yes. Both are central to our Sarasota work. We plan around residency, investment income, capital gains, and real estate, and we coordinate the personal and property sides so nothing is handled in isolation."
 sections:
   - title: "A CPA for Sarasota"
     body: |

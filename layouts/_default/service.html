@@ -21,6 +21,13 @@
   }
   </script>
 
+  <!-- FAQPage Structured Data -->
+  {{ with .Params.faqs }}
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ range $i, $f := . }}{{ if $i }},{{ end }}{"@type":"Question","name":"{{ $f.q }}","acceptedAnswer":{"@type":"Answer","text":"{{ $f.a }}"}}{{ end }}]}
+  </script>
+  {{ end }}
+
   {{ partial "nav.html" . }}
 
   {{ $displayTitle := .Title }}
@@ -205,6 +212,28 @@
         {{ end }}
       </div>
 
+      {{ with .Params.faqs }}
+      <style>
+        .faq-section .faq-item { border-top: 1px solid #e2e8f0; padding: 16px 0; }
+        .faq-section .faq-item:last-child { border-bottom: 1px solid #e2e8f0; }
+        .faq-section summary { cursor: pointer; font-weight: 600; color: #1a1a2e; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+        .faq-section summary::-webkit-details-marker { display: none; }
+        .faq-section summary::after { content: '+'; color: #569cd6; font-weight: 700; font-size: 1.25em; line-height: 1; }
+        .faq-section .faq-item[open] summary::after { content: '\2212'; }
+        .faq-section .faq-a { margin-top: 10px; color: #4a5568; line-height: 1.7; }
+        .faq-section .faq-a p { margin: 0 0 8px; }
+        .faq-section .faq-a p:last-child { margin-bottom: 0; }
+      </style>
+      <div class="content-section faq-section">
+        <h3 class="section-title">Frequently Asked Questions</h3>
+        {{ range . }}
+        <details class="faq-item">
+          <summary>{{ .q }}</summary>
+          <div class="faq-a">{{ .a | $.RenderString (dict "display" "block") }}</div>
+        </details>
+        {{ end }}
+      </div>
+      {{ end }}
 
       {{ if .Params.showCoreServiceLinks }}
         {{ $coreServiceLinks := slice

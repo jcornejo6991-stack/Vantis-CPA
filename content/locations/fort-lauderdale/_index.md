@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Fort Lauderdal
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Fort Lauderdale Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Fort Lauderdale?"
+    a: "No. Most of our Fort Lauderdale clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Broward. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Fort Lauderdale clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with the marine industry and professional practices?"
+    a: "Yes. Both are common among our Fort Lauderdale clients. We handle entity structure, owner compensation, and clean books for marine businesses and for law, medical, and consulting practices across Broward."
 sections:
   - title: "A CPA for Fort Lauderdale"
     body: |

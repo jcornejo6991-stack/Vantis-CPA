@@ -9,6 +9,13 @@ subtitle: "Specialist international and cross-border tax for Chicago's foreign i
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Chicago Clients"
 coreServiceLinksIntro: "Whatever your cross-border situation, there's a service built for it."
+faqs:
+  - q: "Can a Florida-based CPA handle my taxes in Chicago?"
+    a: "Yes. Federal and international tax are the same wherever you live, and we work with Chicago clients remotely with secure document exchange. For cross-border matters especially, what matters is specialist expertise, not a local office."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I am a U.S. citizen living abroad or I have foreign accounts. Can you help?"
+    a: "Yes. We handle expat filing, foreign income, and foreign account and asset reporting for U.S. persons with cross-border ties, along with pre-immigration planning for those preparing to become U.S. tax residents."
 sections:
   - title: "International Tax for Chicago"
     body: |

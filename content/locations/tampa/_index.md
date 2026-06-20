@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Tampa's busine
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Tampa Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Tampa?"
+    a: "No. Most of our Tampa clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across the Tampa Bay area. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Tampa clients consolidate with us instead of juggling separate advisors."
+  - q: "Should my Tampa business be an S-corp?"
+    a: "It depends on your profit and how you pay yourself, but for many profitable Tampa businesses the S-corp election saves real money. We run the numbers, set a defensible reasonable salary, and handle the paperwork that keeps the election valid."
 sections:
   - title: "A CPA for Tampa"
     body: |

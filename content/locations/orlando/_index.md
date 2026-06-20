@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Orlando's busi
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Orlando Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Orlando?"
+    a: "No. Most of our Orlando clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Central Florida. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Orlando clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you handle sales tax and short-term rental filings?"
+    a: "Yes. Vacation rentals and hospitality businesses sit squarely in Florida's sales and tourist development tax rules. We keep the sales tax clean, handle the day-to-day filing, and plan the depreciation and structure behind it."
 sections:
   - title: "A CPA for Orlando"
     body: |

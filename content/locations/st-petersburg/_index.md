@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for St. Petersburg
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help St. Petersburg Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in St. Petersburg?"
+    a: "No. Most of our St. Petersburg clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Pinellas County. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason St. Petersburg clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with self-employed professionals and creative businesses?"
+    a: "Yes. Studios, agencies, and self-employed creatives are a core part of our St. Petersburg work. We handle entity choice, retirement planning, and clean books, which matter more, not less, when income is irregular."
 sections:
   - title: "A CPA for St. Petersburg"
     body: |

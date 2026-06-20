@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Miami's busine
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Miami Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Miami?"
+    a: "No. Most of our Miami clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Miami-Dade. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Miami clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with foreign-owned businesses and international clients in Miami?"
+    a: "Yes. Cross-border tax is one of our deepest areas. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on real estate, U.S. subsidiaries, and pre-immigration planning, with bilingual service in English and Spanish."
 sections:
   - title: "A CPA for Miami"
     body: |

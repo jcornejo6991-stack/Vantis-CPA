@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Cape Coral's r
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Cape Coral Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Cape Coral?"
+    a: "No. Most of our Cape Coral clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Lee County. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Cape Coral clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you handle vacation rental and short-term rental taxes?"
+    a: "Yes. Cape Coral's waterfront market sees a lot of rental activity, and short-term rentals carry rules that surprise owners, from depreciation to county tourist development tax. We keep the sales tax clean and plan the structure behind it."
 sections:
   - title: "A CPA for Cape Coral"
     body: |

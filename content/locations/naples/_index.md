@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Naples's famil
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Naples Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Naples?"
+    a: "No. Most of our Naples clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Collier County. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Naples clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with high-net-worth families and short-term rental owners?"
+    a: "Yes. Both are central to our Naples work. We plan around residency, investments, and real estate for high-net-worth families, and we handle the depreciation and county tourist development tax that come with short-term rentals."
 sections:
   - title: "A CPA for Naples"
     body: |

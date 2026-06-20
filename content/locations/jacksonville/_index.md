@@ -9,6 +9,13 @@ subtitle: "Proactive tax strategy and full-service accounting for Jacksonville's
 showCoreServiceLinks: true
 coreServiceLinksTitle: "How We Help Jacksonville Clients"
 coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+faqs:
+  - q: "Do I need a local CPA in Jacksonville?"
+    a: "No. Most of our Jacksonville clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across the Jacksonville area. What matters most is proactive service and the right expertise for your situation."
+  - q: "Can you handle both my business and personal taxes?"
+    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Jacksonville clients consolidate with us instead of juggling separate advisors."
+  - q: "Do you work with small and growing businesses?"
+    a: "Yes. Small and growing businesses are a core part of our Jacksonville work. We handle entity strategy, S-corp planning, and the bookkeeping and payroll that keep things running as you scale."
 sections:
   - title: "A CPA for Jacksonville"
     body: |
