@@ -1,6 +1,6 @@
 ---
 title: "San Francisco International Tax CPA"
-description: "International and cross-border tax for San Francisco and the Bay Area: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist cross-border CPA."
+description: "International and cross-border tax for San Francisco and the Bay Area: foreign-owned LLCs, FIRPTA, foreign investors, and U.S. persons with foreign ties. A specialist cross-border CPA."
 layout: service
 slug: san-francisco
 heroImage: "/images/globe-hero.jpg"
@@ -21,7 +21,7 @@ sections:
     body: |
       San Francisco and the Bay Area are a global center for technology, capital, and foreign investment, drawing founders, investors, and companies from around the world. That international reach is exactly where our work sits.
 
-      We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign founder building a U.S. company, an American working abroad, or a family with accounts and assets in more than one country, this is the part of the tax code we focus on, and we work with Bay Area clients with secure document exchange and bilingual service in English and Spanish.
+      We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign founder building a U.S. company, a U.S. taxpayer with foreign accounts or income, or a family with assets in more than one country, this is the part of the tax code we focus on, and we work with Bay Area clients with secure document exchange and bilingual service in English and Spanish.
   - title: "Who We Help in San Francisco"
     body: |
       Our Bay Area clients tend to fall into a few groups:
@@ -29,7 +29,6 @@ sections:
       * Foreign founders and investors building or backing U.S. companies
       * Foreign-owned U.S. LLCs and U.S. subsidiaries of companies based abroad
       * U.S. citizens and green card holders with foreign accounts, income, or companies
-      * Americans living or working abroad who still have U.S. filing obligations
       * Dual residents and recent arrivals who need pre-immigration planning
   - title: "What We Handle"
     body: |
@@ -41,7 +40,7 @@ sections:
 
       **U.S. persons with foreign ties.** Foreign accounts, foreign income, and the reporting that comes with cross-border life.
 
-      **Expats and pre-immigration.** Filing for Americans abroad and planning for families before they become U.S. tax residents.
+      **Pre-immigration planning.** Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open.
   - title: "Why San Francisco Clients Work With Us"
     body: |
       You work directly with a licensed CPA who holds a Master of Taxation and focuses on cross-border tax, with bilingual service in English and Spanish. There is no rotating cast of preparers and no handoff.

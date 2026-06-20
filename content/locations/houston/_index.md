@@ -1,6 +1,6 @@
 ---
 title: "Houston International Tax CPA"
-description: "International and cross-border tax for Houston: foreign-owned LLCs, FIRPTA, foreign investors, expats, and U.S. persons with foreign ties. A specialist CPA for foreign investment and cross-border tax."
+description: "International and cross-border tax for Houston: foreign-owned LLCs, FIRPTA, foreign investors, and U.S. persons with foreign ties. A specialist CPA for foreign investment and cross-border tax."
 layout: service
 slug: houston
 heroImage: "/images/globe-hero.jpg"
@@ -21,7 +21,7 @@ sections:
     body: |
       Houston runs one of the most internationally connected economies in the country, anchored by global energy and trade, with capital, companies, and professionals tied to markets around the world. That international reach is exactly where our work sits.
 
-      We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national investing in the U.S., an energy professional with income or assignments abroad, or a family with accounts in more than one country, this is the part of the tax code we focus on, and we work with Houston clients with secure document exchange and bilingual service in English and Spanish.
+      We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national investing in the U.S., an energy professional with foreign income or holdings, or a family with accounts in more than one country, this is the part of the tax code we focus on, and we work with Houston clients with secure document exchange and bilingual service in English and Spanish.
   - title: "Who We Help in Houston"
     body: |
       Our Houston clients tend to fall into a few groups:
@@ -29,7 +29,6 @@ sections:
       * Foreign nationals and families investing in U.S. real estate or businesses
       * Foreign-owned U.S. LLCs and U.S. subsidiaries of companies based abroad
       * Energy and engineering professionals with international assignments or income
-      * Americans living or working abroad who still have U.S. filing obligations
       * Dual residents and recent arrivals who need pre-immigration planning
   - title: "What We Handle"
     body: |
@@ -41,7 +40,7 @@ sections:
 
       **U.S. persons with foreign ties.** Foreign accounts, foreign income, and the reporting that comes with cross-border life and international assignments.
 
-      **Expats and pre-immigration.** Filing for Americans abroad and planning for families before they become U.S. tax residents.
+      **Pre-immigration planning.** Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open.
   - title: "Why Houston Clients Work With Us"
     body: |
       You work directly with a licensed CPA who holds a Master of Taxation and focuses on cross-border tax, with bilingual service in English and Spanish. There is no rotating cast of preparers and no handoff.
