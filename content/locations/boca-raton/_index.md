@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Business Owners and Professionals"
     body: |
       Boca Raton's economy runs on owner-operated businesses and professional practices, and both reward getting entity choice, owner compensation, and retirement planning right rather than leaving money on the table.

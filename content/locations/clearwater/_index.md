@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Tourism, Short-Term Rentals, and Small Business"
     body: |
       Vacation rentals and hospitality businesses sit squarely in Florida's sales and tourist development tax rules, an area where mistakes compound quietly until the state catches up. For small business owners around the beaches, the bookkeeping and entity questions stack on top of that.

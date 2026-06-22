@@ -55,7 +55,7 @@ sections:
         description: "Foreign accounts, foreign corporations, inherited assets, dual citizenship, and ongoing reporting for U.S. individuals with international ties."
         url: "/services/international-tax/u-s-with-international-ties/"
       - label: "Full Suite"
-        description: "Bookkeeping, payroll, sales tax, and back office support for businesses that want one firm for everything."
+        description: "Bookkeeping, payroll, and sales tax for businesses that want one firm for everything."
         url: "/services/full-suite/"
   - title: "Individuals and Families We Work With"
     body: |

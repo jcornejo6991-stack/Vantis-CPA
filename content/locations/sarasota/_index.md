@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Retirees, Real Estate, and Wealth Planning"
     body: |
       For retirees and high earners making Sarasota their home, the work is rarely a single return. It is how residency, investment income, and real estate fit together, and how to keep Florida's no-income-tax advantage working in your favor.

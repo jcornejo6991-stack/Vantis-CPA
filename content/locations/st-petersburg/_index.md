@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Small Business and the Creative Economy"
     body: |
       Studios, agencies, and self-employed creatives often run lean and irregular, which makes entity choice, retirement planning, and clean books matter more, not less. As income grows, the S-corp question becomes real money.

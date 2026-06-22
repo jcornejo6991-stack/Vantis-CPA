@@ -50,7 +50,8 @@
 /expertise/local/ /services/individual-tax/ 301
 
 # Legacy full-suite pages
-/services/back-office/ /services/full-suite/back-office/ 301
+/services/back-office/ /services/full-suite/ 301
+/services/full-suite/back-office/ /services/full-suite/ 301
 /services/bookkeeping/ /services/full-suite/bookkeeping/ 301
 /services/payroll/ /services/full-suite/payroll/ 301
 /services/sales-tax /services/full-suite/sales-tax/ 301

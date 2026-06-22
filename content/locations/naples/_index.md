@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or families preparing to become U.S. tax residents.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Real Estate, Rentals, and Wealth Planning"
     body: |
       Vacation and short-term rentals carry rules that surprise owners, from depreciation to county tourist development tax, and high-net-worth arrivals often have a narrow window to plan before residency changes their options.

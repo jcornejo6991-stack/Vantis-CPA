@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for foreign owners, inbound investment, and families with foreign accounts or assets, a defining feature of the Miami market and one of our deepest areas.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy is built on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy is built on numbers you can trust.
   - title: "International Tax: A Miami Specialty"
     body: |
       Miami is a gateway for inbound investment, and cross-border tax is where we go deepest. If you or your business has foreign ownership, foreign accounts, or U.S. real estate held from abroad, the reporting rules are unforgiving and the cost of a misstep is high.

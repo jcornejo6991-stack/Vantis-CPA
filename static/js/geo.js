@@ -26,7 +26,6 @@
     "individual-tax":    { us: "Individual tax preparation and planning for clients in {location}", intl: "Individual tax preparation and planning for clients in {location}" },
     "business-tax":      { us: "Business tax returns and planning for businesses in {location}", intl: "U.S. business tax support for clients in {location}" },
     "international-tax": { us: null,                                                         intl: "International tax expertise for clients in {location}" },
-    "back-office":       { us: "Back-office support for businesses in {location}",          intl: "Remote back-office support for businesses in {location}" },
     bookkeeping:         { us: "Bookkeeping for businesses in {location}",                  intl: "Bookkeeping support for clients in {location}" },
     payroll:             { us: "Payroll services for businesses in {location}",             intl: "U.S. payroll support for teams in {location}" },
     "sales-tax":         { us: "Sales tax compliance for businesses in {location}",         intl: null },

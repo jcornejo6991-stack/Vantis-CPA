@@ -55,9 +55,6 @@ sections:
     body: |
       International clients often need more than just tax filings. Foreign investors and business owners entering the U.S. frequently need operational support before the first return is ever due. Full Suite covers the services that keep the entity, the books, payroll, and the filing infrastructure organized so the setup and the tax work stay coordinated in one place.
     cards:
-      - label: "Back Office"
-        description: "Entity setup, renewals, EIN support, U.S. mailing address, and administrative help for foreign-owned U.S. entities."
-        url: "/services/full-suite/back-office/"
       - label: "Bookkeeping"
         description: "Monthly bookkeeping, reconciliations, and clean financials for foreign-owned U.S. businesses and rental activity."
         url: "/services/full-suite/bookkeeping/"

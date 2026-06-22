@@ -51,7 +51,6 @@ content/
 - `/services/tax-strategy/` — Tax Strategy Consulting
 - `/services/tax-compliance/` — Tax Compliance & Filing
 - `/services/international-tax/` — International Tax Services
-- `/services/back-office/` — Back-Office Services
 - `/services/bookkeeping/` — Bookkeeping & Financial Reporting
 - `/services/payroll/` — Payroll Services
 - `/services/sales-tax/` — Sales Tax Services

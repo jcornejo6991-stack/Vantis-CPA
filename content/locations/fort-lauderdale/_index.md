@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad, common in a market with this much international movement.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Built for Fort Lauderdale's Industries"
     body: |
       The marine industry and professional practices both carry tax situations that a generalist preparer tends to miss, from how a brokerage or charter operation is structured to how a growing practice should handle entity choice, retirement plans, and owner compensation.

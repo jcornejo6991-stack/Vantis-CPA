@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for foreign owners, inbound investment, U.S. subsidiaries, and families with foreign accounts or assets, one of our deepest areas.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "International Business and Cross-Border Tax"
     body: |
       Inbound investment and international ownership carry reporting rules that are unforgiving, from Form 5472 on foreign-owned LLCs to FIRPTA withholding on real estate and the structuring of U.S. subsidiaries. For a market built on cross-border business, this is the part that matters most.

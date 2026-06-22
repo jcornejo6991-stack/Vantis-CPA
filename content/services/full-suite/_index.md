@@ -1,6 +1,6 @@
 ---
 title: "Full Suite"
-description: "Back-office support, bookkeeping, payroll, and sales tax services organized as one operating-services hub."
+description: "Bookkeeping, payroll, and sales tax services organized as one operating-services hub."
 layout: "service"
 subtitle: "Operational support for businesses that need the accounting infrastructure behind the tax work."
 heroImage: "/images/full-suite-hero-paperwork.jpg"
@@ -17,9 +17,6 @@ sections:
     body: |
       Full Suite covers the operational services that keep the business organized between returns:
     cards:
-      - label: "Back Office"
-        url: "/services/full-suite/back-office/"
-        description: "Entity formation, renewals, EIN support, registrations, and administrative setup."
       - label: "Bookkeeping"
         url: "/services/full-suite/bookkeeping/"
         description: "Clean books, reconciliations, monthly closes, and reporting you can actually use."
@@ -31,14 +28,12 @@ sections:
         description: "Registration, nexus review, filings, remittances, and multistate compliance."
   - title: "How We Help"
     body: |
-      We do not treat these as isolated tasks. Back-office work affects bookkeeping. Bookkeeping affects payroll and sales tax. All of it affects the tax return. We help clients build an operating system that supports cleaner decisions, cleaner filings, and less year-end reconstruction.
+      We do not treat these as isolated tasks. Bookkeeping affects payroll and sales tax, and all of it affects the tax return. We help clients build an operating system that supports cleaner decisions, cleaner filings, and less year-end reconstruction.
   - title: "Businesses That Need Ongoing Support"
     body: |
       This service is built for owners who want more than a tax preparer: companies that need day-to-day accounting support, growing businesses adding payroll or multistate exposure, and owners who want one firm coordinating the operational side with the tax side.
 sectionTitle: "What We Handle"
 specializations:
-  - label: "Back-Office Setup and Maintenance"
-    url: "/services/full-suite/back-office/"
   - label: "Bookkeeping and Monthly Financials"
     url: "/services/full-suite/bookkeeping/"
   - label: "Payroll Setup and Ongoing Payroll"

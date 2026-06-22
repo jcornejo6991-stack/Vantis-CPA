@@ -23,7 +23,7 @@ items:
     eyebrow: "Tax Compliance and Planning"
   - label: "Full Suite"
     url: "/services/full-suite/"
-    description: "Back-office support, bookkeeping, payroll, and sales tax services organized under one operating-services hub."
+    description: "Bookkeeping, payroll, and sales tax services organized under one operating-services hub."
     theme: "fullsuite"
     eyebrow: "Beyond the Tax Return"
 ---

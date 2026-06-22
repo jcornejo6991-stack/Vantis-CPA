@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Entity Strategy for a Growing Tampa"
     body: |
       Growth is where entity structure starts to matter. As income rises, the difference between a sole proprietorship, an S-corp, and a partnership becomes real money, and the S-corp question in particular, from reasonable salary to the paperwork that keeps the election valid, is one of the highest-leverage decisions a profitable Tampa business will make.

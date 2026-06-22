@@ -33,7 +33,7 @@ sections:
       The return is only as good as the records behind it. For owners who want one firm handling bookkeeping and the return together, we offer full-service support alongside the tax work.
     cards:
       - label: "Full Suite"
-        description: "Bookkeeping, payroll, back office, and sales tax for businesses that want one firm for everything."
+        description: "Bookkeeping, payroll, and sales tax for businesses that want one firm for everything."
         url: "/services/full-suite/"
   - title: "Sole Proprietors and Single-Member LLCs"
     body: |

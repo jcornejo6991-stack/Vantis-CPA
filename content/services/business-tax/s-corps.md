@@ -33,7 +33,7 @@ sections:
       S-corp work is cleaner when the books behind it are clean. For owners who want one firm handling payroll, bookkeeping, and the return, we offer full-service support alongside the tax work.
     cards:
       - label: "Full Suite"
-        description: "Payroll, bookkeeping, back office, and sales tax for businesses that want one firm for everything."
+        description: "Payroll, bookkeeping, and sales tax for businesses that want one firm for everything."
         url: "/services/full-suite/"
   - title: "S-Corp Owners We Work With"
     body: |

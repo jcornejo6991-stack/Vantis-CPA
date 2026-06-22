@@ -110,7 +110,14 @@
       "Bash(python -c ':*)",
       "Bash(xargs ls:*)",
       "Bash(hugo --quiet)",
-      "Bash(xargs head *)"
+      "Bash(xargs head *)",
+      "WebFetch(domain:vantiscpa.com)",
+      "Bash(python -c \"import sys,json; d=json.load\\(sys.stdin\\); print\\(json.dumps\\(d.get\\('integrations',{}\\), indent=2\\)\\)\")",
+      "Bash(git add *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git push *)",
+      "Bash(git -C \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" log --oneline --all -- \"content/expats*\" \"content/local*\" \"content/realestate*\")",
+      "Bash(git -C \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" log --oneline --all)"
     ]
   }
 }

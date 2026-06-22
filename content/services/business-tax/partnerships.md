@@ -36,10 +36,10 @@ sections:
         url: "/resources/s-corps/"
   - title: "Full Suite"
     body: |
-      Partnership returns are only as good as the books behind them. For owners who want one firm handling bookkeeping, back office, and the return, we offer full-service support alongside the tax work.
+      Partnership returns are only as good as the books behind them. For owners who want one firm handling bookkeeping and the return, we offer full-service support alongside the tax work.
     cards:
       - label: "Full Suite"
-        description: "Bookkeeping, payroll, back office, and sales tax for businesses that want one firm for everything."
+        description: "Bookkeeping, payroll, and sales tax for businesses that want one firm for everything."
         url: "/services/full-suite/"
   - title: "Multi-Owner Businesses We Work With"
     body: |

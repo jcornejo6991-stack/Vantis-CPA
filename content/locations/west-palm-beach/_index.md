@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Wealth, Finance, and Residency Planning"
     body: |
       For high earners moving to Palm Beach County, the planning is rarely a single return. It is how residency, investment income, real estate, and entity structure fit together, and how to make Florida's no-income-tax advantage actually hold up.

@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Vacation Rentals and Waterfront Real Estate"
     body: |
       Vacation and short-term rentals carry rules that surprise owners, from depreciation to county tourist development tax, and Cape Coral's waterfront market sees a lot of both investors and rental operators. The exposure compounds quietly until the state catches up.

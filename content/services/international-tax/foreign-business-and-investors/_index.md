@@ -33,7 +33,7 @@ sections:
       * Treaty and classification analysis
       * Estate tax and ownership structure review for U.S. assets
       * Inbound investment structuring
-      * Back-office support for setup, renewals, and filings
+      * Entity setup, annual renewals, and ongoing U.S. filings
 
       Good inbound planning is about making the U.S. side workable year after year, not just at formation.
   - title: "Foreign Owners We Help in the U.S."
@@ -58,5 +58,5 @@ specializations:
     url: "/resources/international-tax/"
   - label: "U.S. Tax Return Support"
     url: "/resources/international-tax/"
-  - label: "Renewals and Back-Office Support"
+  - label: "Entity Setup, Renewals, and Filings"
 ---

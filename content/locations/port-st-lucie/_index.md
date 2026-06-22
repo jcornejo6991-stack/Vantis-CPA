@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Small Business and a Growing Community"
     body: |
       Most Port St. Lucie owners want the same two things: a tax structure that is not leaving money on the table, and books they can actually trust as the business grows. In a fast-growing market, getting that footing right early pays off for years.

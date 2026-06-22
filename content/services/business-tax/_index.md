@@ -53,13 +53,10 @@ sections:
       * Tax planning around owner compensation, distributions, and timing
       * Quarterly estimate calculations and planning discussions
       * Year-round tax planning as income and business needs change
-  - title: "Operations and Back Office"
+  - title: "Operations and Accounting Support"
     body: |
-      Tax work is cleaner when the books behind it are clean. For business owners who want one firm handling everything, we offer back office services alongside the tax work: bookkeeping, payroll, sales tax, and entity back office support including LLC registration, annual renewals, registered agent coordination, and EIN setup. Having the same team handle the operations and the returns means no year-end scramble and no gap between what the books say and what gets filed.
+      Tax work is cleaner when the books behind it are clean. For business owners who want one firm handling everything, we offer operational support alongside the tax work: bookkeeping, payroll, and sales tax. Having the same team handle the operations and the returns means no year-end scramble and no gap between what the books say and what gets filed.
     cards:
-      - label: "Back Office"
-        description: "LLC registration, annual renewals, EIN setup, registered agent coordination, and administrative support."
-        url: "/services/full-suite/back-office/"
       - label: "Bookkeeping"
         description: "Monthly bookkeeping, reconciliations, and clean financials that feed directly into the tax return."
         url: "/services/full-suite/bookkeeping/"

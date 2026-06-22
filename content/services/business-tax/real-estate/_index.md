@@ -31,10 +31,10 @@ sections:
         url: "/resources/real-estate-tax/"
   - title: "Full Suite"
     body: |
-      Rental property returns are only as good as the records behind them. For owners who want one firm handling both sides, we offer bookkeeping and back office support alongside the tax work.
+      Rental property returns are only as good as the records behind them. For owners who want one firm handling both sides, we offer bookkeeping support alongside the tax work.
     cards:
       - label: "Full Suite"
-        description: "Bookkeeping, back office, payroll, and sales tax for businesses that want one firm for everything."
+        description: "Bookkeeping, payroll, and sales tax for businesses that want one firm for everything."
         url: "/services/full-suite/"
   - title: "Foreign Owners of U.S. Real Estate"
     body: |

@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Real Estate and Small Business"
     body: |
       Two situations come up constantly in Fort Myers: investors building a real estate portfolio, and owners running a growing small business or professional practice. Both reward getting the structure, depreciation, and bookkeeping right rather than sorting it out at year end.

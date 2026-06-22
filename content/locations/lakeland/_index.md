@@ -43,7 +43,7 @@ sections:
 
       **International tax.** Cross-border planning and compliance for clients with foreign accounts, foreign assets, or ties abroad.
 
-      **Full-suite accounting.** Bookkeeping, back-office support, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
+      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
   - title: "Logistics, Distribution, and Small Business Growth"
     body: |
       Lakeland's position on the I-4 corridor has made it a magnet for logistics and distribution, and those businesses, along with the trades and service firms around them, reward getting entity structure, owner compensation, and clean books right as they scale.
