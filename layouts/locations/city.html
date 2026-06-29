@@ -1,0 +1,459 @@
+{{ define "main" }}
+{{ $city := .Params.cityName | default .Title }}
+
+<!-- Service / LocalBusiness structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AccountingService",
+  "name": "{{ .Site.Data.siteconfig.company.name }} {{ $city }}",
+  "description": "{{ .Description | default .Site.Data.siteconfig.company.description }}",
+  "url": "{{ .Permalink }}",
+  "telephone": "{{ .Site.Data.siteconfig.company.phone }}",
+  "email": "{{ .Site.Data.siteconfig.company.email }}",
+  "areaServed": { "@type": "City", "name": "{{ $city }}", "containedInPlace": { "@type": "State", "name": "Florida" } }
+}
+</script>
+{{ with .Params.faqs }}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{{ range $i, $f := . }}{{ if $i }},{{ end }}{"@type":"Question","name":"{{ $f.q }}","acceptedAnswer":{"@type":"Answer","text":"{{ $f.a }}"}}{{ end }}]}
+</script>
+{{ end }}
+
+<style>
+  :root { --nav-height: 68px; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #edeef7;
+    background-image:
+      linear-gradient(rgba(26,26,46,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,26,46,0.08) 1px, transparent 1px);
+    background-size: 64px 20px;
+    background-attachment: fixed;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding-top: var(--nav-height);
+  }
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+
+  /* ─── BUTTONS ─── */
+  .btn-primary { background: #569CD6; color: #fff; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; border: 2px solid #569CD6; display: inline-block; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
+  .btn-secondary { background: transparent; color: #ffffff; padding: 13px 26px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; border: 2px solid rgba(255,255,255,0.5); display: inline-block; transition: background 0.2s, border-color 0.2s, transform 0.15s; }
+  .btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; transform: translateY(-1px); text-decoration: none; }
+
+  /* ─── HERO (service-style photo + trust bar) ─── */
+  .hero { background: #0d1117; padding: 28px 28px 0; position: relative; z-index: 1; margin: 52px 22px 20px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.35); box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12); overflow: hidden; isolation: isolate; }
+  .hero::before { content: ''; position: absolute; inset: 0; background-image: var(--hero-image); background-size: cover; background-position: var(--hero-position, center center); background-repeat: no-repeat; transform: scale(1.02); filter: saturate(1.05); }
+  .hero::after { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at top right, rgba(86,156,214,0.24) 0%, transparent 28%), linear-gradient(118deg, rgba(13,17,23,0.9) 0%, rgba(13,17,23,0.8) 42%, rgba(13,17,23,0.58) 100%), linear-gradient(180deg, rgba(13,17,23,0.18) 0%, rgba(13,17,23,0.72) 100%); }
+  .hero-inner { position: relative; z-index: 1; max-width: 1180px; min-height: 360px; margin: 0 auto; padding: 56px 56px 28px; display: flex; flex-direction: column; justify-content: flex-end; }
+  .hero-copy { max-width: 720px; text-align: left; }
+  .hero-kicker { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9CDCFE; margin-bottom: 14px; }
+  .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 68px); font-weight: 700; color: #fff; margin: 0; line-height: 1.05; letter-spacing: -0.04em; max-width: 12ch; text-wrap: balance; text-shadow: 0 18px 42px rgba(0,0,0,0.35); }
+  .hero-subtitle { font-size: 17px; color: rgba(255,255,255,0.84); margin-top: 18px; font-weight: 400; line-height: 1.7; max-width: 62ch; }
+
+  .trust-bar { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 1px; margin-top: 44px; border-radius: 18px; overflow: hidden; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.12); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+  .trust-bar-cell { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 18px 18px 16px; background: rgba(13,17,23,0.34); gap: 4px; text-align: center; }
+  .trust-bar-icon { width: 32px; height: 32px; border-radius: 8px; background: rgba(156,220,254,0.14); color: #9CDCFE; display: flex; align-items: center; justify-content: center; margin-bottom: 5px; flex-shrink: 0; }
+  .trust-bar-title { font-size: 12px; font-weight: 700; color: #fff; line-height: 1.25; }
+  .trust-bar-sub { font-size: 10.5px; color: rgba(255,255,255,0.7); line-height: 1.3; }
+
+  /* ─── CONTAINED SECTIONS ─── */
+  .loc-section { margin: 0 22px 20px; border-radius: 22px; overflow: hidden; box-shadow: 0 16px 48px rgba(0,0,0,0.22), 0 2px 8px rgba(0,0,0,0.12); }
+  .loc-section-inner { max-width: 1180px; margin: 0 auto; padding: 64px 60px; }
+  .loc-white { background: #ffffff; }
+  .loc-navy { background: #1a1a2e; }
+
+  .loc-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #569CD6; margin-bottom: 12px; }
+  .loc-navy .loc-eyebrow { color: #9CDCFE; }
+  .loc-h2 { font-family: 'Playfair Display', serif; font-size: clamp(26px, 3.4vw, 38px); font-weight: 700; color: #1a1a2e; line-height: 1.2; letter-spacing: -0.02em; margin: 0; }
+  .loc-navy .loc-h2 { color: #e8e8e8; }
+  .loc-sub { font-size: 16px; color: #4a5568; line-height: 1.7; max-width: 680px; margin-top: 12px; }
+  .loc-navy .loc-sub { color: #b0b8c8; }
+
+  .loc-intro-body { font-size: 16.5px; color: #4a5568; line-height: 1.85; max-width: none; margin-top: 20px; }
+  .loc-intro-body p { margin: 0 0 18px; }
+  .loc-intro-body p:last-child { margin-bottom: 0; }
+  .loc-intro-body strong { color: #1a1a2e; font-weight: 600; }
+
+  /* Who we work with — glass tiles */
+  .loc-client-grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 16px; margin-top: 32px; }
+  .loc-client-tile { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-top: 2px solid rgba(156,220,254,0.55); border-radius: 10px; padding: 26px 22px; display: flex; flex-direction: column; gap: 9px; backdrop-filter: blur(12px) saturate(150%); -webkit-backdrop-filter: blur(12px) saturate(150%); }
+  .loc-client-cat { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #9CDCFE; }
+  .loc-client-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: #e8e8e8; margin: 0; line-height: 1.2; }
+  .loc-client-desc { font-size: 13px; color: #b0b8c8; line-height: 1.6; margin: 0; }
+  .loc-client-more { margin-top: auto; padding-top: 4px; font-size: 11px; font-weight: 700; color: #9CDCFE; text-transform: uppercase; letter-spacing: 0.06em; text-decoration: none; transition: letter-spacing 0.2s; }
+  .loc-client-more:hover { letter-spacing: 0.1em; color: #fff; text-decoration: none; }
+
+  /* Services grid (not personalized) */
+  .loc-svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 16px; margin-top: 32px; }
+  .loc-svc-icon { font-size: 22px; display: block; margin-bottom: 2px; }
+
+  /* ─── PROCESS + WHAT TO BRING (exact homepage values) ─── */
+  .process-bring-section .section-label { color: #569CD6; }
+  .process-bring-section .section-heading { color: #1a1a2e; }
+  .process-bring-section .section-subheading { color: #4a5568; }
+  .section-label { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+  .section-heading { font-family: 'Playfair Display', serif; font-size: clamp(28px, 4vw, 42px); font-weight: 700; line-height: 1.2; margin-bottom: 12px; }
+  .section-subheading { font-size: 17px; line-height: 1.65; max-width: 600px; margin-top: 8px; }
+  .process-bring-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+  .process-steps { display: flex; flex-direction: column; }
+  .process-step { display: flex; gap: 18px; align-items: flex-start; }
+  .process-step-left { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; padding-top: 36px; }
+  .process-step-badge { width: 40px; height: 40px; border-radius: 50%; background: #569CD6; color: #fff; font-size: 12px; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .process-step-connector { width: 2px; flex: 1; min-height: 28px; background: repeating-linear-gradient(to bottom, rgba(86,156,214,0.4) 0px, rgba(86,156,214,0.4) 5px, transparent 5px, transparent 10px); margin: 5px 0; }
+  .process-step-content { padding-bottom: 24px; padding-top: 8px; }
+  .process-step:last-child .process-step-content { padding-bottom: 0; }
+  .process-step-pill { display: inline-block; font-size: 10.5px; font-weight: 600; color: #569CD6; background: rgba(86,156,214,0.1); border-radius: 20px; padding: 2px 10px; margin-bottom: 8px; letter-spacing: 0.04em; }
+  .process-step-title { font-size: 16px; font-weight: 700; color: #1a1a2e; margin-bottom: 5px; }
+  .process-step-desc { font-size: 13.5px; color: #4a5568; line-height: 1.6; }
+  .bring-intro { font-size: 17px; color: #4a5568; line-height: 1.65; max-width: 600px; margin-top: 8px; margin-bottom: 40px; }
+  .bring-list { display: flex; flex-direction: column; gap: 10px; }
+  .bring-item { display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-left: 2px solid #569CD6; background: rgba(86,156,214,0.04); border-radius: 0 6px 6px 0; }
+  .bring-check { width: 22px; height: 22px; border-radius: 50%; background: #569CD6; color: #fff; font-size: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-weight: 700; }
+  .bring-text { font-size: 13.5px; color: #1a1a2e; font-weight: 400; line-height: 1.3; }
+
+  /* ─── FAQ (homepage split design) ─── */
+  .faq-section { background: #ffffff; overflow: hidden; }
+  .faq-wrapper { display: grid; grid-template-columns: 1fr 1fr; min-height: 500px; }
+  .faq-left { background: #f0f4ff; padding: 80px 48px; display: flex; flex-direction: column; justify-content: center; }
+  .faq-accent-bar { width: 48px; height: 3px; background: #569CD6; margin-bottom: 20px; }
+  .faq-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: #1a1a2e; margin-bottom: 14px; line-height: 1.2; }
+  .faq-subtitle { font-size: 15px; line-height: 1.8; color: #4a5568; }
+  .faq-right { padding: 60px 48px; background: #ffffff; display: flex; align-items: center; }
+  .faq-items { display: flex; flex-direction: column; width: 100%; }
+  .faq-item { cursor: pointer; border-bottom: 1px solid #e8e8e8; }
+  .faq-item:first-child { border-top: 1px solid #e8e8e8; }
+  .faq-question { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; padding: 18px 0; user-select: none; }
+  .faq-q-text { font-size: 15px; font-weight: 600; color: #1a1a2e; flex: 1; line-height: 1.4; display: flex; align-items: center; gap: 8px; }
+  .faq-toggle { color: #569CD6; font-size: 22px; font-weight: 300; flex-shrink: 0; transition: transform 0.3s ease; }
+  .faq-item.open .faq-toggle { transform: rotate(45deg); }
+  .faq-answer { color: #4a5568; font-size: 14px; line-height: 1.7; padding: 0 0 18px; display: none; }
+  .faq-item.open .faq-answer { display: block; }
+
+  /* ─── CONTACT (homepage design) ─── */
+  .contact { padding: 80px 0; background: #1a1a2e; }
+  .contact .section-heading { color: #e8e8e8; }
+  .contact .section-subheading { color: #b0b8c8; }
+  .contact-header { margin-bottom: 48px; text-align: center; }
+  .contact-header .section-subheading { margin: 8px auto 0; }
+  .contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 36px; align-items: start; max-width: 860px; margin: 0 auto; }
+  .contact-form-panel { backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 32px; }
+  .form-group { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+  .form-group label { font-size: 14px; font-weight: 600; color: #e8e8e8; letter-spacing: 0.02em; }
+  .form-group input, .form-group textarea { font-family: 'Inter', sans-serif; font-size: 15px; color: #e8e8e8; background: rgba(255,255,255,0.07); border: 1.5px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 12px 14px; outline: none; transition: border-color 0.2s; width: 100%; }
+  .form-group input:focus, .form-group textarea:focus { border-color: #9CDCFE; }
+  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.35); }
+  .form-group textarea { resize: vertical; min-height: 220px; }
+  .form-submit-row { display: flex; gap: 16px; align-items: center; margin-bottom: 16px; }
+  .form-submit { background: #569CD6; color: #fff; border: none; padding: 14px 32px; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .form-submit:hover { background: #4a88be; transform: translateY(-1px); }
+  .form-success { display: none; background: rgba(78,201,176,0.08); border: 1.5px solid #4EC9B0; border-radius: 10px; padding: 20px 24px; font-size: 15px; color: #4EC9B0; line-height: 1.6; }
+  .form-success.visible { display: block; }
+  .contact-right-column { display: flex; flex-direction: column; gap: 16px; }
+  .contact-info, .contact-calendar { backdrop-filter: blur(16px) saturate(150%); -webkit-backdrop-filter: blur(16px) saturate(150%); background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.10); border-radius: 14px; padding: 24px; text-align: center; }
+  .contact-info-title, .contact-calendar-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 600; color: #e8e8e8; margin-bottom: 14px; }
+  .contact-item { display: flex; flex-direction: column; align-items: center; gap: 6px; margin-bottom: 14px; font-size: 13px; }
+  .contact-item:last-of-type { margin-bottom: 0; }
+  .contact-item-icon { width: 34px; height: 34px; background: rgba(255,255,255,0.08); border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+  .contact-item-icon svg { width: 16px; height: 16px; stroke: #9CDCFE; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .contact-item-label { font-size: 11px; font-weight: 600; color: #9CDCFE; text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 2px; }
+  .contact-item-value { font-size: 14.5px; color: #e8e8e8; font-weight: 500; }
+  .contact-item-value a { color: #e8e8e8; text-decoration: none; }
+  .contact-item-value a:hover { color: #9CDCFE; text-decoration: underline; }
+  .contact-calendar-desc { color: #b0b8c8; font-size: 14px; margin-bottom: 20px; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .loc-client-grid { grid-template-columns: repeat(2, 1fr); }
+    .loc-svc-grid { grid-template-columns: repeat(2, 1fr); }
+    .contact-grid { grid-template-columns: 1fr; }
+    .faq-wrapper { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 768px) {
+    .hero { padding: 20px 16px 0; margin: 20px 16px 16px; border-radius: 18px; }
+    .hero-inner { min-height: 0; padding: 50px 22px 24px; }
+    .hero h1 { font-size: 34px; }
+    .loc-section { margin: 0 16px 16px; border-radius: 18px; }
+    .loc-section-inner { padding: 44px 24px; }
+    .loc-client-grid { grid-template-columns: 1fr; }
+    .loc-svc-grid { grid-template-columns: 1fr; }
+    .process-bring-grid { grid-template-columns: 1fr; gap: 48px; }
+    .faq-left, .faq-right { padding: 40px 24px; }
+    .contact-form-panel { padding: 24px 20px; }
+  }
+  @media (max-width: 480px) {
+    .loc-section { margin: 0 12px 12px; border-radius: 16px; }
+    .loc-section-inner { padding: 36px 18px; }
+  }
+</style>
+{{ partial "nav-css.html" . }}
+{{ partial "footer-css.html" . }}
+
+{{ partial "nav.html" . }}
+
+<!-- ═══════════════════ HERO ═══════════════════ -->
+<section class="hero" style="--hero-image: url('{{ .Params.heroImage | default "/images/locations/florida.jpg" | safeURL }}');{{ with .Params.heroImagePosition }} --hero-position: {{ . }};{{ end }}">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <p class="hero-kicker">{{ .Params.heroEyebrow | default "Florida Service Areas" }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="hero-subtitle">{{ . }}</p>{{ end }}
+    </div>
+
+    <div class="trust-bar">
+      <div class="trust-bar-cell">
+        <div class="trust-bar-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><rect x="1.5" y="1.5" width="12" height="12" rx="2" stroke="currentColor" stroke-width="1.4"/><path d="M4.5 7.5l2 2 4-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="trust-bar-title">Licensed CPA</div>
+        <div class="trust-bar-sub">State of Florida</div>
+      </div>
+      <div class="trust-bar-cell">
+        <div class="trust-bar-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><path d="M7.5 1.5l1.4 4.3H13.5L9.6 8.6l1.5 4.4-3.6-2.6-3.6 2.6 1.5-4.4L1.5 5.8h4.6z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></div>
+        <div class="trust-bar-title">Master of Taxation</div>
+        <div class="trust-bar-sub">Graduate Degree</div>
+      </div>
+      <div class="trust-bar-cell">
+        <div class="trust-bar-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><path d="M7.5 4.5V8l2.5 1.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg></div>
+        <div class="trust-bar-title">10+ Years</div>
+        <div class="trust-bar-sub">Experience</div>
+      </div>
+      <div class="trust-bar-cell">
+        <div class="trust-bar-icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true"><circle cx="7.5" cy="7.5" r="5.5" stroke="currentColor" stroke-width="1.4"/><ellipse cx="7.5" cy="7.5" rx="2.5" ry="5.5" stroke="currentColor" stroke-width="1.3"/><path d="M2 7.5h11" stroke="currentColor" stroke-width="1.3"/></svg></div>
+        <div class="trust-bar-title">English &amp; Spanish</div>
+        <div class="trust-bar-sub">Bilingual Service</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ INTRO (centered) ═══════════════════ -->
+{{ with .Params.intro }}
+<section class="loc-section loc-white">
+  <div class="loc-section-inner">
+    {{ with .label }}<p class="loc-eyebrow">{{ . }}</p>{{ end }}
+    <h2 class="loc-h2">{{ .title }}</h2>
+    <div class="loc-intro-body">{{ .body | $.RenderString (dict "display" "block") }}</div>
+  </div>
+</section>
+{{ end }}
+
+<!-- ═══════════════════ HOW WE HELP / WHO WE WORK WITH (consolidated) ═══════════════════ -->
+{{ $clients := .Params.clients | default dict }}
+{{ $clientItems := $clients.items }}
+{{ if not $clientItems }}
+  {{ $clientItems = slice
+    (dict "category" "Individual Tax" "name" "Individuals & Families" "desc" "Tax preparation and year-round planning for individuals with W-2s, 1099s, K-1s, rental income, equity compensation, and investments." "url" "/services/individual-tax/")
+    (dict "category" "Business Tax" "name" "Local & Online Businesses" "desc" "Tax and accounting for owner-operated businesses, from local stores, trades, and professional practices to online and digital service companies." "url" "/services/business-tax/")
+    (dict "category" "Real Estate Tax" "name" "Real Estate Owners" "desc" "Tax planning and compliance for residential and commercial property owners, short-term rental operators, and real estate partnership investors." "url" "/services/business-tax/real-estate/")
+    (dict "category" "International Tax" "name" "U.S. Persons with International Ties" "desc" "Compliance and planning for citizens, green card holders, and dual residents with foreign accounts, companies, and cross-border complexity." "url" "/services/international-tax/u-s-with-international-ties/")
+    (dict "category" "International Tax" "name" "Foreign Businesses & Investors" "desc" "Structuring, tax, and compliance for foreign businesses and investors entering, operating, or investing in the U.S. market." "url" "/services/international-tax/foreign-business-and-investors/")
+    (dict "category" "International Tax" "name" "U.S. Expats Abroad" "desc" "U.S. tax compliance for Americans living abroad, covering foreign income exclusions, FBAR, FATCA, and treaty-based planning." "url" "/services/international-tax/expats/")
+  }}
+{{ end }}
+<section class="loc-section loc-navy">
+  <div class="loc-section-inner">
+    <p class="loc-eyebrow">One Firm, Your Whole Tax Picture</p>
+    <h2 class="loc-h2">How We Help {{ $city }} Clients</h2>
+    {{ if eq .Params.serviceGrid "international" }}
+    <p class="loc-sub">Cross-border tax is our focus. Here is where we go deepest, plus the day-to-day accounting to support it.</p>
+    {{ $services := slice
+      (dict "icon" "🌐" "name" "International Tax" "desc" "Cross-border planning and compliance, structured to minimize what you owe worldwide." "url" "/services/international-tax/")
+      (dict "icon" "🏢" "name" "Foreign Business & Investors" "desc" "Foreign-owned LLCs, Form 5472, U.S. subsidiaries, and inbound investment structuring." "url" "/services/international-tax/foreign-business-and-investors/")
+      (dict "icon" "🧾" "name" "U.S. Persons with International Ties" "desc" "FBAR, FATCA, and reporting for citizens and residents with foreign accounts, income, or companies." "url" "/services/international-tax/u-s-with-international-ties/")
+      (dict "icon" "✈️" "name" "U.S. Expats Abroad" "desc" "Foreign income exclusions, treaty positions, and compliance for Americans living overseas." "url" "/services/international-tax/expats/")
+      (dict "icon" "🏠" "name" "Foreign-Owned U.S. Real Estate" "desc" "FIRPTA withholding and planning when foreign owners buy, hold, or sell U.S. property." "url" "/services/international-tax/us-real-estate-owned-by-foreign-investors/")
+      (dict "icon" "📚" "name" "Full-Suite Accounting" "desc" "Bookkeeping, payroll, and sales tax, so the day-to-day runs on numbers you can trust." "url" "/services/full-suite/")
+    }}
+    <div class="loc-client-grid">
+      {{ range $services }}
+      <a href="{{ .url }}" class="loc-client-tile" style="text-decoration:none">
+        <h3 class="loc-client-name">{{ .name }}</h3>
+        <p class="loc-client-desc">{{ .desc }}</p>
+        <span class="loc-client-more">Learn More →</span>
+      </a>
+      {{ end }}
+    </div>
+    {{ else if .Params.serviceGrid }}
+    <p class="loc-sub">Whatever your situation, there is a service built for it, all handled under one roof.</p>
+    {{ $services := slice
+      (dict "icon" "👤" "name" "Individual Tax" "desc" "Tax returns and year-round planning for individuals and families, including investment, rental, and equity income." "url" "/services/individual-tax/")
+      (dict "icon" "📊" "name" "Business Tax" "desc" "Entity strategy, S-corp planning, and clean compliance for owner-operated and online businesses." "url" "/services/business-tax/")
+      (dict "icon" "✈️" "name" "International Tax" "desc" "Cross-border planning and compliance for foreign accounts, foreign assets, and ties abroad." "url" "/services/international-tax/")
+      (dict "icon" "📚" "name" "Full-Suite Accounting" "desc" "Bookkeeping, payroll, and sales tax, so the day-to-day runs on numbers you can trust." "url" "/services/full-suite/")
+    }}
+    <div class="loc-svc-grid">
+      {{ range $services }}
+      <a href="{{ .url }}" class="loc-client-tile" style="text-decoration:none">
+        <h3 class="loc-client-name">{{ .name }}</h3>
+        <p class="loc-client-desc">{{ .desc }}</p>
+        <span class="loc-client-more">Learn More →</span>
+      </a>
+      {{ end }}
+    </div>
+    {{ else }}
+    <p class="loc-sub">{{ with $clients.intro }}{{ . }}{{ else }}Whatever your situation, there is a service built for it, all handled under one roof.{{ end }}</p>
+    <div class="loc-client-grid">
+      {{ range $clientItems }}
+      <div class="loc-client-tile">
+        <span class="loc-client-cat">{{ .category }}</span>
+        <h3 class="loc-client-name">{{ .name }}</h3>
+        <p class="loc-client-desc">{{ .desc }}</p>
+        {{ with .url }}<a href="{{ . }}" class="loc-client-more">Learn More →</a>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ═══════════════════ OUR PROCESS + WHAT TO BRING (white, breaks the navy) ═══════════════════ -->
+<section class="loc-section loc-white process-bring-section">
+  <div class="loc-section-inner">
+    <div class="process-bring-grid">
+
+      <!-- Our Process -->
+      <div>
+        <p class="section-label">How It Works</p>
+        <h2 class="section-heading">Our Process</h2>
+        <p class="section-subheading">Three straightforward steps from your first message to a fully managed tax strategy.</p>
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="process-step-left"><div class="process-step-badge">01</div><div class="process-step-connector"></div></div>
+            <div class="process-step-content">
+              <span class="process-step-pill">30 minutes · No charge</span>
+              <div class="process-step-title">Discovery Call</div>
+              <div class="process-step-desc">We learn about your situation, your entity structure, cross-border exposure, and goals. You learn how we work and what to expect.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-left"><div class="process-step-badge">02</div><div class="process-step-connector"></div></div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Scoped engagement</span>
+              <div class="process-step-title">Technical Analysis</div>
+              <div class="process-step-desc">We review your documents, prior returns, and structure. We identify obligations, risks, and opportunities, then present a clear scope and fixed fee, with a formal engagement letter before anything starts.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <div class="process-step-left"><div class="process-step-badge">03</div></div>
+            <div class="process-step-content">
+              <span class="process-step-pill">Ongoing advisory</span>
+              <div class="process-step-title">Proactive Strategy &amp; Filing</div>
+              <div class="process-step-desc">We execute the plan, file accurately, and stay in your corner year-round, flagging opportunities before they pass.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- What to Bring -->
+      <div>
+        <p class="section-label">First Meeting Checklist</p>
+        <h2 class="section-heading">What to Bring</h2>
+        <p class="bring-intro">The more context you arrive with, the more we can give you in 30 minutes.</p>
+        <div class="bring-list">
+          <div class="bring-item"><div class="bring-check">✓</div><span class="bring-text">Prior Year Tax Returns</span></div>
+          <div class="bring-item"><div class="bring-check">✓</div><span class="bring-text">Financial Statements</span></div>
+          <div class="bring-item"><div class="bring-check">✓</div><span class="bring-text">IRS Notices or Open Correspondence</span></div>
+          <div class="bring-item"><div class="bring-check">✓</div><span class="bring-text">Tax Documents: W-2s, 1099s, K-1s</span></div>
+          <div class="bring-item"><div class="bring-check">✓</div><span class="bring-text">Entity Documents: Articles, Operating Agreement</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ CONTACT (homepage design) ═══════════════════ -->
+<section class="loc-section">
+  <div class="contact" id="contact">
+    <div class="container">
+      <div class="contact-header">
+        <h2 class="section-heading">Get in Touch</h2>
+        <p class="section-subheading">Tell us about your situation — we'll let you know how we can help</p>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <div class="contact-form-panel">
+            <form id="contactForm" action="https://formspree.io/f/mkopvwja" method="POST" novalidate>
+              <input type="hidden" name="_subject" value="Inquiry from {{ .Title }} page" />
+              <div class="form-group"><label for="name">Name</label><input type="text" id="name" name="name" autocomplete="name" required /></div>
+              <div class="form-group"><label for="email">Email Address</label><input type="email" id="email" name="email" autocomplete="email" required /></div>
+              <div class="form-group"><label for="message">Provide a Brief Background</label><textarea id="message" name="message" rows="4" required></textarea></div>
+              <div class="form-submit-row"><button type="submit" class="form-submit">Send Us an Email</button></div>
+            </form>
+            <div class="form-success" id="formSuccess" role="alert">
+              <strong>Application received.</strong> We'll review your information and be in touch. Thank you for considering us.
+            </div>
+          </div>
+        </div>
+        <div class="contact-right-column">
+          <div class="contact-info">
+            <h3 class="contact-info-title">Reach us directly</h3>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 015.1 12.73 19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg></div>
+              <div><p class="contact-item-label">Phone</p><p class="contact-item-value"><a href="tel:+13055635551">(305) 563-5551</a></p></div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-item-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+              <div><p class="contact-item-label">Email</p><p class="contact-item-value"><a href="mailto:{{ .Site.Data.siteconfig.company.email }}">{{ .Site.Data.siteconfig.company.email }}</a></p></div>
+            </div>
+          </div>
+          <div class="contact-calendar">
+            <h3 class="contact-calendar-title">Schedule a Meeting</h3>
+            <p class="contact-calendar-desc">Book a 30-minute consultation</p>
+            <a href="https://cal.com/vantis-cpa/30min" class="btn-primary" target="_blank" rel="noopener noreferrer">Open Calendar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════ FAQ (homepage split design) ═══════════════════ -->
+{{ with .Params.faqs }}
+<section class="loc-section">
+  <div class="faq-section" id="faq">
+    <div class="faq-wrapper">
+      <div class="faq-left">
+        <div class="faq-accent-bar"></div>
+        <h2 class="faq-title">Your Questions Answered</h2>
+        <p class="faq-subtitle">We believe in transparency. Everything you need to know about how we work, what we charge, and why we're different.</p>
+      </div>
+      <div class="faq-right">
+        <div class="faq-items">
+          {{ range $i, $f := . }}
+          <div class="faq-item{{ if eq $i 0 }} open{{ end }}">
+            <div class="faq-question">
+              <span class="faq-q-text"><span aria-hidden="true">❓</span> {{ $f.q }}</span>
+              <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">{{ $f.a }}</div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "footer.html" . }}
+
+<script>
+  (function () {
+    document.querySelectorAll('.faq-question').forEach(function (question) {
+      question.addEventListener('click', function () {
+        var item = question.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(function (el) {
+          el.classList.remove('open');
+          var t = el.querySelector('.faq-toggle'); if (t) t.textContent = '+';
+        });
+        if (!isOpen) { item.classList.add('open'); question.querySelector('.faq-toggle').textContent = '−'; }
+      });
+    });
+  })();
+</script>
+{{ end }}

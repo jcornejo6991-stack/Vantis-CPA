@@ -26,6 +26,13 @@
       padding: 64px 48px 52px;
     }
 
+    /* Centered content column (card backgrounds stay full-width) */
+    .library-hero-inner,
+    .library-body-inner {
+      max-width: 1104px;
+      margin: 0 auto;
+    }
+
     .library-hero .section-label {
       font-size: 11px;
       letter-spacing: 3px;
@@ -282,12 +289,15 @@
 
   <div class="resource-library">
     <div class="library-hero">
-      <span class="section-label">Knowledge Base</span>
-      <h1>{{ .Title }}</h1>
-      <p>{{ .Description }}</p>
+      <div class="library-hero-inner">
+        <span class="section-label">Knowledge Base</span>
+        <h1>{{ .Title }}</h1>
+        <p>{{ .Description }}</p>
+      </div>
     </div>
 
     <div class="library-body">
+      <div class="library-body-inner">
       <div class="library-hubs">
 
         <div class="library-section">
@@ -311,6 +321,7 @@
           <p class="library-cta-copy">Tell us what you're dealing with, and we'll point you toward the right next step.</p>
         </div>
         <a href="/contact/" class="library-cta-btn">Get in Touch</a>
+      </div>
       </div>
     </div>
   </div>

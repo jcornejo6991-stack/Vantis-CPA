@@ -1,5 +1,5 @@
 ---
-title: "U.S. Individuals with International Ties"
+title: "U.S. Persons with International Ties"
 description: "Tax compliance and planning for U.S. individuals and families with foreign financial accounts, foreign investments, foreign inheritance, or dual citizenship obligations."
 layout: "service"
 weight: 10

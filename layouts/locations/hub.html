@@ -1,0 +1,72 @@
+{{ define "main" }}
+<style>
+  :root { --nav-height: 68px; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: #edeef7;
+    background-image:
+      linear-gradient(rgba(26,26,46,0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(26,26,46,0.08) 1px, transparent 1px);
+    background-size: 64px 20px;
+    background-attachment: fixed;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+    padding-top: var(--nav-height);
+  }
+
+  /* ─── HERO with picker ─── */
+  .hub-hero { background: #0d1117; position: relative; margin: 52px 22px 20px; border-radius: 22px; box-shadow: 0 16px 48px rgba(0,0,0,0.28), 0 2px 8px rgba(0,0,0,0.14); overflow: hidden; isolation: isolate; }
+  .hub-hero::before { content: ''; position: absolute; inset: 0; background-image: url('/images/hero-handshake.avif'); background-size: cover; background-position: center 50%; }
+  .hub-hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(13,17,23,0.93) 0%, rgba(26,26,46,0.88) 60%, rgba(13,17,23,0.80) 100%); }
+  .hub-hero-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 96px 32px 92px; text-align: center; }
+  .hub-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #9CDCFE; margin-bottom: 14px; }
+  .hub-hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(40px, 6vw, 68px); font-weight: 700; color: #fff; line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 16px; text-shadow: 0 18px 42px rgba(0,0,0,0.35); }
+  .hub-sub { font-size: 17px; color: rgba(255,255,255,0.84); line-height: 1.7; max-width: 580px; margin: 0 auto 32px; }
+
+  .hub-picker-wrap { position: relative; max-width: 440px; margin: 0 auto 14px; }
+  .hub-picker {
+    appearance: none; -webkit-appearance: none; -moz-appearance: none;
+    width: 100%; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 600; color: #1a1a2e;
+    background: #ffffff; border: none; border-radius: 12px; padding: 18px 52px 18px 22px; cursor: pointer; outline: none;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.28); transition: box-shadow 0.2s, transform 0.15s;
+  }
+  .hub-picker:hover { transform: translateY(-1px); box-shadow: 0 20px 48px rgba(0,0,0,0.34); }
+  .hub-picker:focus { box-shadow: 0 0 0 4px rgba(156,220,254,0.4), 0 16px 40px rgba(0,0,0,0.28); }
+  .hub-picker-wrap::after { content: ''; position: absolute; right: 22px; top: 50%; width: 11px; height: 11px; border-right: 2.5px solid #569CD6; border-bottom: 2.5px solid #569CD6; transform: translateY(-65%) rotate(45deg); pointer-events: none; }
+  .hub-helper { font-size: 13px; color: rgba(255,255,255,0.62); font-style: italic; margin-top: 14px; }
+
+  @media (max-width: 768px) {
+    .hub-hero { margin: 24px 16px 0; }
+    .hub-hero-inner { padding: 72px 22px 68px; }
+  }
+</style>
+{{ partial "nav-css.html" . }}
+{{ partial "footer-css.html" . }}
+
+{{ partial "nav.html" . }}
+
+<!-- ═══════════════════ HERO + PICKER ═══════════════════ -->
+<section class="hub-hero" aria-label="Find your location">
+  <div class="hub-hero-inner">
+    <p class="hub-eyebrow">Vantis CPA · Service Areas</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subtitle }}<p class="hub-sub">{{ . }}</p>{{ end }}
+    <div class="hub-picker-wrap">
+      <select class="hub-picker" aria-label="Choose your location" onchange="if (this.value) window.location.href = this.value;">
+        <option value="">Choose your city…</option>
+        {{ range .Params.groups }}
+        <optgroup label="{{ .label }}">
+          {{ range .items }}<option value="{{ .url }}">{{ .label }}</option>{{ end }}
+        </optgroup>
+        {{ end }}
+      </select>
+    </div>
+    <p class="hub-helper">Florida statewide, plus specialist cross-border tax for clients nationwide.</p>
+  </div>
+</section>
+
+{{ partial "footer.html" . }}
+{{ end }}

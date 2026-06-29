@@ -1,14 +1,44 @@
 ---
 title: "Doral CPA"
 description: "A Doral CPA firm offering proactive tax strategy, international and cross-border tax, business and individual tax, and full-service accounting in Miami-Dade. One firm for your whole tax picture."
-layout: service
+layout: city
+serviceGrid: standard
 slug: doral
+cityName: "Doral"
 heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas"
+heroEyebrow: "Florida Service Areas · Miami-Dade County"
 subtitle: "Proactive tax strategy and full-service accounting for Doral's international businesses, owners, and families, all from one firm."
-showCoreServiceLinks: true
-coreServiceLinksTitle: "How We Help Doral Clients"
-coreServiceLinksIntro: "Whatever your situation, there's a service built for it."
+intro:
+  label: "Your CPA in Doral"
+  title: "A CPA for Doral"
+  body: |
+    Doral has become one of the most important centers for Latin American business in the United States, dense with regional headquarters, trade and logistics companies, and foreign-owned firms operating near Miami International Airport. We work with clients across Doral and the surrounding **Miami-Dade** area, including Doral, Medley, and Sweetwater.
+
+    Florida's lack of a personal income tax is part of the draw, but for Doral the defining issue is cross-border: foreign ownership, inbound investment, and businesses with operations in more than one country. We handle the whole picture, with the international pieces front and center, from Form 5472 and FIRPTA to the structuring of U.S. subsidiaries.
+clients:
+  title: "Who We Work With in Doral"
+  intro: "Doral's international character shapes who we serve. Most clients have both a business and a personal return, often with a cross-border element tying them together."
+  items:
+    - category: "International Tax"
+      name: "U.S. Subsidiaries & Regional HQs"
+      desc: "Tax, structuring, and compliance for U.S. subsidiaries and regional headquarters of companies based abroad."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Foreign-Owned & Trade Firms"
+      desc: "Cross-border tax for foreign-owned U.S. businesses and the trade and logistics firms clustered around the airport."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "Business Tax"
+      name: "Owner-Operated Businesses"
+      desc: "Entity strategy, S-corp planning, and clean compliance for owner-operated businesses and professional practices."
+      url: "/services/business-tax/"
+    - category: "International Tax"
+      name: "Foreign Investors & Families"
+      desc: "Planning for foreign nationals and families investing in U.S. real estate or businesses."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "Individual Tax"
+      name: "Individuals & Families"
+      desc: "Proactive, year-round planning including investment income, equity compensation, and residency questions."
+      url: "/services/individual-tax/"
 faqs:
   - q: "Do I need a local CPA in Doral?"
     a: "No. Most of our Doral clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Miami-Dade. What matters most is proactive service and the right expertise for your situation."
@@ -16,51 +46,4 @@ faqs:
     a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Doral clients consolidate with us instead of juggling separate advisors."
   - q: "Do you handle international business and cross-border tax in Doral?"
     a: "Yes. It is one of our deepest areas. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA, U.S. subsidiaries of foreign companies, and inbound investment structuring, with bilingual service in English and Spanish."
-sections:
-  - title: "A CPA for Doral"
-    body: |
-      Doral has become one of the most important centers for Latin American business in the United States, dense with regional headquarters, trade and logistics companies, and foreign-owned firms operating near Miami International Airport. We work with clients across Doral and the surrounding **Miami-Dade** area, including Doral, Medley, and Sweetwater.
-
-      Florida's lack of a personal income tax is part of the draw, but for Doral the defining issue is cross-border: foreign ownership, inbound investment, and businesses with operations in more than one country. We handle the whole picture, with the international pieces front and center.
-  - title: "Who We Work With in Doral"
-    body: |
-      Doral's international character shapes who we serve. Our clients here include:
-
-      * U.S. subsidiaries and regional headquarters of companies based abroad
-      * Foreign-owned U.S. businesses and trade and logistics firms
-      * Owner-operated businesses and professional practices
-      * Foreign nationals and families investing in U.S. real estate or businesses
-      * Individuals and families who want proactive, year-round planning
-
-      Most clients have both a business and a personal return, often with a cross-border element tying them together. One firm handling all of it keeps things coordinated instead of scattered across separate advisors.
-  - title: "Full-Service Tax and Accounting for Doral"
-    body: |
-      We handle your whole tax picture in one place, not just one slice of it.
-
-      **Individual tax.** Preparation and year-round planning for individuals and families, including investment income, equity compensation, and residency questions.
-
-      **Business tax.** Entity strategy, S-corp planning, and clean compliance for owner-operated businesses and professional practices.
-
-      **International tax.** Cross-border planning and compliance for foreign owners, inbound investment, U.S. subsidiaries, and families with foreign accounts or assets, one of our deepest areas.
-
-      **Full-suite accounting.** Bookkeeping, payroll, and sales tax, so the day-to-day runs cleanly and your strategy rests on numbers you can trust.
-  - title: "International Business and Cross-Border Tax"
-    body: |
-      Inbound investment and international ownership carry reporting rules that are unforgiving, from Form 5472 on foreign-owned LLCs to FIRPTA withholding on real estate and the structuring of U.S. subsidiaries. For a market built on cross-border business, this is the part that matters most.
-
-      It is one of our deepest areas. We handle the structuring and the compliance together, with bilingual service in English and Spanish, so the surprises land on those who did not plan, not on you.
-  - title: "Why Doral Clients Work With Us"
-    body: |
-      You work directly with a licensed CPA who holds a Master of Taxation, with bilingual service in English and Spanish. There is no rotating cast of preparers and no handoff.
-
-      Three things shape how we work:
-
-      * **One point of contact.** Your goals, your timeline, and your full tax picture handled with care from start to finish.
-      * **Responsive by default.** Questions get answered, not queued. When your situation changes, we move with it.
-      * **We reach out, you don't have to.** If a deadline or an opportunity is coming, we bring it to you.
-
-      It begins with a no-charge discovery call, moves to a clear scope and fixed fee, and becomes proactive, year-round work rather than an annual scramble.
-  - title: "Get Started in Doral"
-    body: |
-      Whether your situation is a U.S. subsidiary, an inbound investment, or a business operating across borders, schedule a no-charge consultation and we'll walk through how we would handle it.
 ---
