@@ -231,6 +231,18 @@
       transition: opacity 0.15s;
     }
 
+    /* Empty state prompt shown before a topic is selected */
+    .hub-empty {
+      color: #6a7385;
+      font-size: 15px;
+      line-height: 1.6;
+      padding: 18px 0 4px;
+    }
+
+    .hub-empty strong {
+      color: #1a1a2e;
+    }
+
     /* CTA */
     .hub-cta {
       background: #f6f7fc;
@@ -366,6 +378,7 @@
 
           {{/* Article list grouped by subtopic */}}
           <div class="hub-articles">
+            <p class="hub-empty" id="hub-empty">Choose a topic from the list to see related guides.</p>
             {{ range $subtopicOrder }}
               {{ $sub := . }}
               {{ $articles := slice }}
@@ -434,21 +447,34 @@
       var items = document.querySelectorAll('.hub-sidebar-item:not(#hub-show-all)');
       var showAll = document.getElementById('hub-show-all');
       var sections = document.querySelectorAll('.hub-topic-section');
+      var empty = document.getElementById('hub-empty');
       if (!items.length || !sections.length) return;
+
+      function clearActive() {
+        document.querySelectorAll('.hub-sidebar-item').forEach(function (i) { i.classList.remove('active'); });
+      }
 
       function activateTopic(item) {
         var target = item.getAttribute('href').replace('#', '');
         sections.forEach(function (s) { s.style.display = 'none'; });
         var el = document.getElementById(target);
         if (el) el.style.display = '';
-        document.querySelectorAll('.hub-sidebar-item').forEach(function (i) { i.classList.remove('active'); });
+        if (empty) empty.style.display = 'none';
+        clearActive();
         item.classList.add('active');
       }
 
       function activateAll() {
         sections.forEach(function (s) { s.style.display = ''; });
-        document.querySelectorAll('.hub-sidebar-item').forEach(function (i) { i.classList.remove('active'); });
+        if (empty) empty.style.display = 'none';
+        clearActive();
         showAll.classList.add('active');
+      }
+
+      function activateNone() {
+        sections.forEach(function (s) { s.style.display = 'none'; });
+        if (empty) empty.style.display = '';
+        clearActive();
       }
 
       items.forEach(function (item) {
@@ -463,7 +489,7 @@
         activateAll();
       });
 
-      activateAll();
+      activateNone();
     })();
   </script>
 
