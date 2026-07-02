@@ -8,6 +8,7 @@ subtitle: "Full-service tax and accounting across Florida, plus specialist inter
 groups:
   - label: "South Florida"
     items:
+      - { label: "South Florida (all areas)", url: "/locations/south-florida/" }
       - { label: "Miami", url: "/locations/miami/" }
       - { label: "Coral Gables", url: "/locations/coral-gables/" }
       - { label: "Doral", url: "/locations/doral/" }
