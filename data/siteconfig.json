@@ -68,6 +68,9 @@
       "publicKey": "pk_live_YOUR_STRIPE_PUBLIC_KEY",
       "billPayUrl": "https://buy.stripe.com/eVq4gA6DF2YV4eeff54sE00"
     },
+    "encyro": {
+      "uploadUrl": "https://www.encyro.com/vantiscpa"
+    },
     "analytics": {
       "ga4Id": "G-FFYDDX4MCN"
     },
