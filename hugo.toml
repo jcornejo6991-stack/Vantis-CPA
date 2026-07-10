@@ -3,6 +3,12 @@ languageCode = "en-us"
 title = "Vantis CPA"
 pluralizeListTitles = false
 disableKinds = ["taxonomy", "term"]
+enableGitInfo = true
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML"]
+page = ["HTML"]
 
 [params]
 description = "Tax consulting for founders, expats, and global businesses"

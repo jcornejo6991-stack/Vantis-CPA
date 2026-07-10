@@ -1,0 +1,147 @@
+{{ define "main" }}
+  {{ partial "nav-css.html" . }}
+  {{ partial "footer-css.html" . }}
+  <style>
+    :root {
+      --primary-dark: #062215;
+      --primary: #15482E;
+      --primary-darkest: #041f12;
+      --accent: #3a8b5f;
+      --text-dark: #0f2818;
+      --text-mid: #3d6b52;
+      --navy: #062215;
+      --navy-dark: #041f12;
+      --nav-height: 68px;
+    }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text-dark);
+      background-color: #ffffff;
+      background-image:
+        linear-gradient(rgba(180,180,180,0.4) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(180,180,180,0.4) 1px, transparent 1px);
+      background-size: 64px 20px;
+      background-attachment: fixed;
+      line-height: 1.6;
+      padding-top: var(--nav-height);
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(160deg, rgba(255,255,255,0.3) 0%, rgba(237,238,247,0.4) 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    main {
+      position: relative;
+      z-index: 1;
+      padding: 72px 18px 100px;
+    }
+
+    .nf-card {
+      max-width: 640px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12), 0 2px 8px rgba(0,0,0,0.06);
+      padding: 64px 56px;
+      text-align: center;
+    }
+
+    .nf-code {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .nf-card h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 700;
+      color: #2f5342;
+      line-height: 1.15;
+      letter-spacing: -0.5px;
+      margin-bottom: 14px;
+    }
+
+    .nf-card p {
+      font-size: 15px;
+      color: #2a4a37;
+      line-height: 1.75;
+      max-width: 420px;
+      margin: 0 auto 36px;
+    }
+
+    .nf-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .nf-links a {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--primary);
+      text-decoration: none;
+      border: 1px solid #d5e2da;
+      border-radius: 999px;
+      padding: 10px 22px;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+    }
+
+    .nf-links a:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .nf-links a.nf-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+    }
+
+    .nf-links a.nf-primary:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    @media (max-width: 640px) {
+      .nf-card {
+        padding: 44px 24px;
+        border-radius: 14px;
+      }
+    }
+  </style>
+
+  {{ partial "nav.html" . }}
+
+  <main>
+    <div class="nf-card">
+      <div class="nf-code">Error 404</div>
+      <h1>This page does not exist.</h1>
+      <p>The page you are looking for may have moved, or the link may be out of date. Here are a few places to go next.</p>
+      <div class="nf-links">
+        <a href="/" class="nf-primary">Home</a>
+        <a href="/services/">Services</a>
+        <a href="/resources/">Resources</a>
+        <a href="/contact/">Contact Us</a>
+      </div>
+    </div>
+  </main>
+
+  {{ partial "footer.html" . }}
+{{ end }}
