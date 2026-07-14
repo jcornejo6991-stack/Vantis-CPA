@@ -81,7 +81,7 @@ Qualifying for the FEIE also opens the **foreign housing exclusion**, claimed on
 
 ## FEIE and the Foreign Tax Credit: One Set of Dollars, One Benefit
 
-You cannot claim the [Foreign Tax Credit](feie-vs-ftc.md) for foreign taxes paid on income you excluded; that would be a double benefit on the same dollars. The two can be combined across *different* income: exclude wages up to $130,000, then credit foreign taxes attributable to income above the cap or to passive income. Two mechanical points shape the outcome:
+You cannot claim the [Foreign Tax Credit (Form 1116)](form-1116-foreign-tax-credit.md) for foreign taxes paid on income you excluded; that would be a double benefit on the same dollars. The two can be combined across *different* income: exclude wages up to $130,000, then credit foreign taxes attributable to income above the cap or to passive income. Two mechanical points shape the outcome:
 
 - **The stacking rule.** Excluded income still sets your bracket. Income above the exclusion is taxed at the rates that would apply had nothing been excluded, so the exclusion does not push your remaining income into low brackets.
 - **The five-year lockout.** The FEIE is elected on Form 2555 and stays in effect until revoked. Revoke it (by switching to the FTC on foreign earned income) and you generally cannot re-elect it for five years without IRS consent. The choice is sticky, which is why it should be made deliberately the first year abroad.
