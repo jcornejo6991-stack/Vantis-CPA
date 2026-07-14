@@ -1,49 +1,49 @@
 ---
-title: "Miami CPA"
-description: "A Miami CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Miami-Dade. One firm for your whole tax picture."
+title: "Miami International Tax CPA"
+description: "International and cross-border tax for Miami: foreign investors, Latin American business owners, foreign-owned LLCs, FIRPTA, and cross-border families. Bilingual in English and Spanish."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: miami
 cityName: "Miami"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Miami-Dade County"
-subtitle: "Proactive tax strategy and full-service accounting for Miami's business owners, investors, families, and international clients, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Miami's foreign investors, Latin American business owners, foreign-owned companies, and families with ties across borders."
 intro:
-  label: "Your CPA in Miami-Dade"
-  title: "A CPA for Miami"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Miami"
   body: |
-    Miami is one of the most dynamic markets in the country: a fast-growing business hub, an active real estate market, and the financial bridge between the United States and Latin America. We work with clients across **Miami-Dade County**, including Miami, Miami Beach, Coral Gables, Doral, Aventura, Brickell, Sunny Isles Beach, and Key Biscayne.
+    Miami is the financial bridge between the United States and Latin America: foreign capital in Miami-Dade real estate, Latin American companies opening U.S. operations, and families with income and accounts on both sides of the border. That cross-border reach is exactly where our work sits.
 
-    Florida's lack of a personal income tax is a real advantage, but it only pays off when the rest of your tax picture is built to capture it. The federal return, your entity structure, your real estate, and any cross-border exposure all have to work together. That is the difference between a once-a-year preparer and a CPA who plans ahead, and it is how we work with every Miami client, whether your situation is a single business or a family with interests in three countries.
+    We are a specialist firm in cross-border tax, based in South Florida and built for exactly this market. Whether you are a foreign investor buying in Brickell or Key Biscayne, a Latin American entrepreneur running a U.S. LLC out of Doral, or a family split between Aventura and abroad, this is the part of the tax code we focus on. We serve clients across Miami, Miami Beach, Coral Gables, Doral, Aventura, and Key Biscayne, with bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Miami"
-  intro: "Miami's economy is diverse, and so are the people we serve. Most do not fit a single box, and they do not need to."
+  title: "Who We Help in Miami"
+  intro: "Our Miami clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning for households that want more than a filed return, including equity compensation, investments, and multi-state situations."
-      url: "/services/individual-tax/"
-    - category: "Business Tax"
-      name: "Owner-Operated & Online Businesses"
-      desc: "Real tax strategy and clean compliance for local and online businesses growing across Miami-Dade."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate & Short-Term Rentals"
-      desc: "Tax planning for real estate investors and short-term rental operators across Miami-Dade."
-      url: "/services/business-tax/real-estate/"
-    - category: "Individual Tax"
-      name: "Professionals & High Earners"
-      desc: "Planning for equity compensation, bonuses, and investment complexity for Miami's professionals and executives."
-      url: "/services/individual-tax/"
     - category: "International Tax"
-      name: "Foreign Nationals & Cross-Border Families"
-      desc: "Cross-border planning for foreign owners, dual residents, and families with ties across the U.S. and abroad, including foreign-owned LLCs, Form 5472, and FIRPTA."
-      url: "/services/international-tax/"
+      name: "Foreign Investors in Miami Real Estate"
+      desc: "Cross-border structuring and planning for foreign nationals buying and holding property across Miami-Dade."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Latin American Business Owners"
+      desc: "U.S. entity strategy, compliance, and planning for Latin American entrepreneurs operating or expanding in Miami."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Miami?"
-    a: "No. Most of our Miami clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Miami-Dade. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Miami clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with foreign-owned businesses and international clients in Miami?"
-    a: "Yes. Cross-border tax is one of our deepest areas. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on real estate, U.S. subsidiaries, and pre-immigration planning, with bilingual service in English and Spanish."
+  - q: "Do you work with international clients in Miami?"
+    a: "Yes. Cross-border tax is the core of our practice, and Miami is our home market. We work with foreign investors, Latin American business owners, and cross-border families across Miami-Dade, with secure document exchange and bilingual service in English and Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

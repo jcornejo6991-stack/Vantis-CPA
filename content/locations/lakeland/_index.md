@@ -1,49 +1,49 @@
 ---
-title: "Lakeland CPA"
-description: "A Lakeland CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Polk County. One firm for your whole tax picture."
+title: "Lakeland International Tax CPA"
+description: "International and cross-border tax for Lakeland: foreign-owned logistics and distribution companies, Latin American business owners, Form 5472, and inbound investment structuring."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: lakeland
 cityName: "Lakeland"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Polk County"
-subtitle: "Proactive tax strategy and full-service accounting for Lakeland's business owners, families, and growing companies, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Lakeland's foreign-owned companies, Latin American business owners, and families with ties across borders."
 intro:
-  label: "Your CPA on the I-4 Corridor"
-  title: "A CPA for Lakeland"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Lakeland"
   body: |
-    Lakeland sits at the heart of the I-4 corridor between Tampa and Orlando, a fast-growing hub for logistics, distribution, manufacturing, and the service businesses that support them. We work with clients across **Polk County**, including Lakeland, Winter Haven, Auburndale, and Bartow.
+    Lakeland sits at the center of the I-4 corridor, one of the busiest logistics and distribution hubs in the Southeast, and the companies moving goods through it increasingly have owners, parents, or suppliers outside the United States. Add a growing base of Latin American business owners across Polk County and Central Florida, and there is a real cross-border layer here. That layer is exactly where our work sits.
 
-    Florida's lack of a personal income tax rewards owners who plan ahead, but the advantage only reaches your bottom line when entity structure, federal strategy, and books all work together. We plan across the whole picture rather than handling one piece in isolation.
+    We are a specialist firm in cross-border tax, not a generalist down the block. Whether you run the U.S. arm of a company based abroad, own a distribution business with foreign partners, or have income and accounts in more than one country, this is the part of the tax code we focus on, and we work with Lakeland clients with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Lakeland"
-  intro: "The I-4 corridor's growth brings a wide range of clients our way. Most have both a business and a personal return that interact."
+  title: "Who We Help in Lakeland"
+  intro: "Our Lakeland clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Business Tax"
-      name: "Logistics & Distribution"
-      desc: "Entity structure, owner compensation, and clean books for logistics, distribution, and manufacturing businesses."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Small & Growing Businesses"
-      desc: "Tax strategy and S-corp planning for small and growing businesses and professional practices."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Self-Employed & Trades"
-      desc: "Planning and accounting for self-employed professionals, trades, and consultants."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate Investors"
-      desc: "Tax planning for real estate investors and property-holding partnerships."
-      url: "/services/business-tax/real-estate/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning for households that want more than a once-a-year return."
-      url: "/services/individual-tax/"
+    - category: "International Tax"
+      name: "Foreign-Owned Logistics & Distribution"
+      desc: "Cross-border tax for logistics, distribution, and manufacturing businesses with owners or parent companies abroad."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Latin American Business Owners"
+      desc: "U.S. entity strategy, compliance, and planning for Latin American entrepreneurs operating in Central Florida."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Lakeland?"
-    a: "No. Most of our Lakeland clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Polk County. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Lakeland clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with logistics businesses and growing small businesses?"
-    a: "Yes. Both are central to our Lakeland work. We handle entity strategy, S-corp planning, and the bookkeeping and payroll that keep a distribution or service business running as it scales along the I-4 corridor."
+  - q: "Do I need a CPA with a Lakeland office for international tax?"
+    a: "No. Federal and international tax are the same across Florida, and we work with Lakeland clients remotely with secure document exchange and year-round communication. For cross-border matters especially, what matters is specialist expertise, not a nearby office."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

@@ -1,49 +1,49 @@
 ---
-title: "Jacksonville CPA"
-description: "A Jacksonville CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Duval County. One firm for your whole tax picture."
+title: "Jacksonville International Tax CPA"
+description: "International and cross-border tax for Jacksonville: military families with foreign income or accounts, foreign-owned businesses, FBAR and FATCA reporting, and foreign investors."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: jacksonville
 cityName: "Jacksonville"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Duval County"
-subtitle: "Proactive tax strategy and full-service accounting for Jacksonville's business owners, professionals, and families, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Jacksonville's military families, foreign-owned businesses, and families with ties across borders."
 intro:
-  label: "Your CPA on the First Coast"
-  title: "A CPA for Jacksonville"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Jacksonville"
   body: |
-    Jacksonville is the largest city in Florida by land and population, with an economy built on logistics, finance, insurance, healthcare, and a strong base of small business. We work with clients across **Duval County** and the surrounding First Coast, including Jacksonville, the Beaches, Orange Park, and Ponte Vedra.
+    Jacksonville's international ties run deeper than most people expect. One of the largest military communities in the country means families returning from overseas postings with foreign accounts, foreign spouses, and foreign income. The port and the First Coast's logistics and finance economy bring foreign-owned companies, and the Latin American community across Duval County keeps growing. That cross-border layer is exactly where our work sits.
 
-    Florida's lack of a personal income tax rewards owners and investors who plan ahead, but the advantage only reaches your bottom line when your entity structure, federal strategy, and books all work together. We plan across the whole picture rather than handling one piece in isolation.
+    We are a specialist firm in cross-border tax, not a generalist down the block. Whether you came home from a posting abroad with accounts that now need FBAR reporting, run the U.S. arm of a foreign company, or have family and assets in more than one country, this is the part of the tax code we focus on, and we work with Jacksonville clients with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Jacksonville"
-  intro: "Jacksonville's broad economy brings a wide range of clients our way. Most have both a business and a personal return that interact."
+  title: "Who We Help in Jacksonville"
+  intro: "Our Jacksonville clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Business Tax"
-      name: "Small & Growing Businesses"
-      desc: "Entity strategy, S-corp planning, and clean compliance for small and growing businesses that want a CPA who looks ahead."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Professional Practices & Consultants"
-      desc: "Tax planning and accounting for professional practices and self-employed consultants."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate Investors"
-      desc: "Tax planning for real estate investors and property-holding partnerships."
-      url: "/services/business-tax/real-estate/"
-    - category: "Individual Tax"
-      name: "Military & Veteran Families"
-      desc: "Residency and multi-state income planning for military and veteran families."
-      url: "/services/individual-tax/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning for households that want more than a once-a-year return."
-      url: "/services/individual-tax/"
+    - category: "International Tax"
+      name: "Military Families with Foreign Ties"
+      desc: "Foreign accounts, foreign spouses, and overseas income from postings abroad, and the FBAR and FATCA reporting that follows."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "Americans Stationed or Working Abroad"
+      desc: "Expat filing, the foreign earned income exclusion, and treaty questions for Americans posted overseas."
+      url: "/services/international-tax/expats/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Jacksonville?"
-    a: "No. Most of our Jacksonville clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across the Jacksonville area. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Jacksonville clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with small and growing businesses?"
-    a: "Yes. Small and growing businesses are a core part of our Jacksonville work. We handle entity strategy, S-corp planning, and the bookkeeping and payroll that keep things running as you scale."
+  - q: "I'm a military family with foreign accounts or a foreign spouse. Can you help?"
+    a: "Yes. This is common on the First Coast and squarely in our specialty. We handle FBAR and FATCA reporting for foreign accounts, filing decisions for foreign spouses, and foreign income from overseas postings, all remotely with secure document exchange."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

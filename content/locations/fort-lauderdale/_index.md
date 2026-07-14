@@ -1,49 +1,49 @@
 ---
-title: "Fort Lauderdale CPA"
-description: "A Fort Lauderdale CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Broward County. One firm for your whole tax picture."
+title: "Fort Lauderdale International Tax CPA"
+description: "International and cross-border tax for Fort Lauderdale: foreign real estate investors, foreign-owned businesses, international marine industry clients, FIRPTA, and Form 5472."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: fort-lauderdale
 cityName: "Fort Lauderdale"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Broward County"
-subtitle: "Proactive tax strategy and full-service accounting for Fort Lauderdale's business owners, professionals, and property owners, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Fort Lauderdale's foreign investors, foreign-owned businesses, international marine clients, and cross-border families."
 intro:
-  label: "Your CPA in Broward"
-  title: "A CPA for Fort Lauderdale"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Fort Lauderdale"
   body: |
-    Fort Lauderdale runs on a distinctive mix: a marine and yachting economy, a deep bench of professional practices, and a steady flow of relocation and second-home buyers. We work with clients across **Broward County**, including Fort Lauderdale, Hollywood, Pembroke Pines, Plantation, Davie, Weston, and Coral Springs.
+    Fort Lauderdale's international profile keeps growing: foreign buyers in the condo towers along Las Olas and the beach, Latin American families and business owners settling across Broward County, trade moving through Port Everglades, and a world-class marine industry where the yacht, the owner, and the holding company are often in three different countries. That cross-border layer is exactly where our work sits.
 
-    Florida's lack of a personal income tax is a genuine advantage, but it only reaches your bottom line when the rest of the picture is set up to capture it. Your entity structure, your federal strategy, your real estate, and your books all have to pull in the same direction. We work ahead of the year rather than reacting after it closes, and we do it for the whole picture, not one piece of it.
+    We are a specialist firm in cross-border tax, based in South Florida and built for this market. Whether you are a foreign national buying Broward real estate, a Latin American entrepreneur running a U.S. company, or a marine business with international ownership, this is the part of the tax code we focus on, with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Fort Lauderdale"
-  intro: "Broward's economy is broad, and our clients reflect that. Most have more than one of these going on at once."
+  title: "Who We Help in Fort Lauderdale"
+  intro: "Our Fort Lauderdale clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive planning, not just a filed return, including investments, rental property, and multi-state situations."
-      url: "/services/individual-tax/"
-    - category: "Business Tax"
-      name: "Marine Industry Businesses"
-      desc: "Entity structure, owner compensation, and clean books for brokerage, charter, service, and refit businesses."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Professional Practices"
-      desc: "Tax strategy and accounting for practices in law, medicine, design, and consulting."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate & Second Homes"
-      desc: "Planning for real estate investors and second-home owners managing property across state lines."
-      url: "/services/business-tax/real-estate/"
-    - category: "Business Tax"
-      name: "Relocated Owners & High Earners"
-      desc: "Owners and high earners who recently relocated and want a clean, properly structured tax picture."
-      url: "/services/business-tax/"
+    - category: "International Tax"
+      name: "Foreign Real Estate Investors"
+      desc: "Cross-border structuring and planning for foreign nationals buying and holding property across Broward County."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Marine Industry with Foreign Ownership"
+      desc: "Cross-border tax for charter, brokerage, and service businesses where vessels or owners sit outside the U.S."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Fort Lauderdale?"
-    a: "No. Most of our Fort Lauderdale clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Broward. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Fort Lauderdale clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with the marine industry and professional practices?"
-    a: "Yes. Both are common among our Fort Lauderdale clients. We handle entity structure, owner compensation, and clean books for marine businesses and for law, medical, and consulting practices across Broward."
+  - q: "Do you work with international clients in Fort Lauderdale?"
+    a: "Yes. Cross-border tax is the core of our practice, and Broward is part of our home market. We work with foreign real estate investors, Latin American business owners, and marine industry clients with international ownership, with secure document exchange and bilingual service in English and Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

@@ -32,6 +32,7 @@ groups:
       - { label: "Sarasota", url: "/locations/sarasota/" }
       - { label: "Fort Myers", url: "/locations/fort-myers/" }
       - { label: "Cape Coral", url: "/locations/cape-coral/" }
+      - { label: "Bonita Springs", url: "/locations/bonita-springs/" }
       - { label: "Naples", url: "/locations/naples/" }
   - label: "Northeast Florida"
     items:

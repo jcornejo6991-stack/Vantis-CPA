@@ -1,49 +1,49 @@
 ---
-title: "Boca Raton CPA"
-description: "A Boca Raton CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Palm Beach County. One firm for your whole tax picture."
+title: "Boca Raton International Tax CPA"
+description: "International and cross-border tax for Boca Raton: international families, foreign investors, Latin American professionals, FIRPTA, and foreign asset reporting from a specialist CPA."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: boca-raton
 cityName: "Boca Raton"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Palm Beach County"
-subtitle: "Proactive tax strategy and full-service accounting for Boca Raton's business owners, professionals, and families, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Boca Raton's international families, foreign investors, and professionals with ties across borders."
 intro:
-  label: "Your CPA in Boca"
-  title: "A CPA for Boca Raton"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Boca Raton"
   body: |
-    Boca Raton pairs a dense base of corporate headquarters and professional firms with an affluent, established residential community. We work with clients across southern **Palm Beach County**, including Boca Raton, Delray Beach, Boynton Beach, and Highland Beach.
+    Boca Raton draws wealth from around the world: affluent international families settling in southern Palm Beach County, foreign investors buying property from the beach to Mizner Park, and Latin American professionals and executives building careers and businesses here. When a family's assets, income, and relatives span more than one country, the tax picture changes, and that is exactly where our work sits.
 
-    Florida's lack of a personal income tax rewards owners and high earners who plan ahead, but only when entity structure, federal strategy, investments, and books all pull in the same direction. We work across the whole picture rather than reacting to one piece after the year closes.
+    We are a specialist firm in cross-border tax, based in South Florida and built for this market. Whether you are a foreign national investing in Boca real estate, a dual resident splitting the year between countries, or a family with accounts and holdings abroad, this is the part of the tax code we focus on, with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Boca Raton"
-  intro: "Boca's mix of business and wealth brings a wide range of clients our way. Most have both a business and a personal return that interact."
+  title: "Who We Help in Boca Raton"
+  intro: "Our Boca Raton clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Business Tax"
-      name: "Owners & Corporate Professionals"
-      desc: "Entity strategy and planning for business owners and corporate professionals with equity and bonus complexity."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Professional Practices"
-      desc: "Tax strategy, retirement planning, and clean books for practices in law, medicine, and consulting."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate & Second Homes"
-      desc: "Planning for real estate investors and second-home owners across southern Palm Beach County."
-      url: "/services/business-tax/real-estate/"
-    - category: "Individual Tax"
-      name: "Retirees & New Residents"
-      desc: "Residency planning and proactive tax work for retirees and families establishing Florida residency."
-      url: "/services/individual-tax/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning including equity compensation, investment income, and residency questions."
-      url: "/services/individual-tax/"
+    - category: "International Tax"
+      name: "International Families"
+      desc: "Cross-border planning for affluent families with income, assets, and relatives in more than one country."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "Foreign Investors in Real Estate"
+      desc: "Cross-border structuring and planning for foreign nationals buying and holding property in southern Palm Beach County."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Latin American Professionals"
+      desc: "Planning for Latin American executives, professionals, and business owners establishing a U.S. base in Boca."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Boca Raton?"
-    a: "No. Most of our Boca Raton clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Palm Beach County. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Boca Raton clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with business owners and professional practices?"
-    a: "Yes. Much of Boca Raton's economy runs on owner-operated businesses and professional practices. We handle entity choice, owner compensation, retirement planning, and clean books so you are not leaving money on the table."
+  - q: "Do you work with international families in Boca Raton?"
+    a: "Yes. Cross-border tax is the core of our practice, and Boca's international families sit squarely in it. We plan around residency, foreign assets, and U.S. investments together, with secure document exchange and bilingual service in English and Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

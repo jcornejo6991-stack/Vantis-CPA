@@ -1,49 +1,49 @@
 ---
-title: "West Palm Beach CPA"
-description: "A West Palm Beach CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Palm Beach County. One firm for your whole tax picture."
+title: "West Palm Beach International Tax CPA"
+description: "International and cross-border tax for West Palm Beach: wealthy international families, foreign real estate investors, Latin American business owners, FIRPTA, and foreign reporting."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: west-palm-beach
 cityName: "West Palm Beach"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Palm Beach County"
-subtitle: "Proactive tax strategy and full-service accounting for West Palm Beach's business owners, investors, and families, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for the Palm Beaches' international families, foreign investors, and Latin American business owners."
 intro:
-  label: "Your CPA in the Palm Beaches"
-  title: "A CPA for West Palm Beach"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for West Palm Beach"
   body: |
-    West Palm Beach anchors one of the wealthiest corners of the country, with a wave of finance, family offices, and high earners relocating from the Northeast in recent years. We work with clients across **Palm Beach County**, including West Palm Beach, Palm Beach, Palm Beach Gardens, Jupiter, and Wellington.
+    West Palm Beach anchors one of the wealthiest corners of the country, and an increasing share of that wealth is international: foreign families buying from the island of Palm Beach and Worth Avenue to the waterfront downtown, foreign investors holding Palm Beach County real estate, and Latin American business owners building U.S. operations here. When money and family cross borders, the tax picture changes, and that is exactly where our work sits.
 
-    Florida's lack of a personal income tax is a major reason that wealth keeps arriving, but the advantage only reaches you when the rest of the picture is built to capture it: residency, entity structure, investments, real estate, and any cross-border ties working together. We plan across the whole picture rather than handling one piece in isolation.
+    We are a specialist firm in cross-border tax, based in South Florida and built for this market. Whether you are a foreign national investing in Palm Beach County property, a family with assets in more than one country, or a Latin American entrepreneur running a U.S. company, this is the part of the tax code we focus on, with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in West Palm Beach"
-  intro: "The Palm Beach corridor brings a particular mix of clients, and we serve the full range. Most have several of these in play at once."
+  title: "Who We Help in West Palm Beach"
+  intro: "Our West Palm Beach clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Individual Tax"
-      name: "Relocating High Earners"
-      desc: "Residency, investment income, and entity structure planned together so Florida's no-income-tax advantage actually holds up."
-      url: "/services/individual-tax/"
-    - category: "Individual Tax"
-      name: "Finance & Family Offices"
-      desc: "Tax planning for finance professionals, fund principals, and family offices with capital gains and equity complexity."
-      url: "/services/individual-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate & Second Homes"
-      desc: "Planning for real estate investors and second-home owners across the Palm Beaches."
-      url: "/services/business-tax/real-estate/"
-    - category: "Business Tax"
-      name: "Owners & Professional Practices"
-      desc: "Entity strategy, S-corp planning, and clean compliance for business owners and professional practices."
-      url: "/services/business-tax/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning for households that want more than a once-a-year return."
-      url: "/services/individual-tax/"
+    - category: "International Tax"
+      name: "Wealthy International Families"
+      desc: "Cross-border planning for families with income, assets, and residences in more than one country."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "Foreign Real Estate Investors"
+      desc: "Cross-border structuring and planning for foreign nationals buying and holding property across Palm Beach County."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "Latin American Business Owners"
+      desc: "U.S. entity strategy, compliance, and planning for Latin American entrepreneurs operating in the Palm Beaches."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in West Palm Beach?"
-    a: "No. Most of our West Palm Beach clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Palm Beach County. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason West Palm Beach clients consolidate with us instead of juggling separate advisors."
-  - q: "Can you help me establish Florida residency and plan around it?"
-    a: "Yes. For high earners relocating to the Palm Beach area, we plan how residency, investment income, and entity structure fit together so Florida's lack of a personal income tax actually works in your favor."
+  - q: "Do you work with international families in the Palm Beaches?"
+    a: "Yes. Cross-border tax is the core of our practice. We work with wealthy international families, foreign investors, and Latin American business owners across Palm Beach County, with secure document exchange and bilingual service in English and Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

@@ -1,49 +1,49 @@
 ---
-title: "Coral Gables CPA"
-description: "A Coral Gables CPA firm offering proactive tax strategy, international and cross-border tax, business and individual tax, and full-service accounting in Miami-Dade. One firm for your whole tax picture."
+title: "Coral Gables International Tax CPA"
+description: "International and cross-border tax for Coral Gables: U.S. subsidiaries, regional headquarters, foreign investors, Form 5472, and FIRPTA. A specialist cross-border CPA, bilingual in English and Spanish."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: coral-gables
 cityName: "Coral Gables"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Miami-Dade County"
-subtitle: "Proactive tax strategy and full-service accounting for Coral Gables's international businesses, investors, and families, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Coral Gables's multinational headquarters, foreign-owned businesses, international professionals, and cross-border families."
 intro:
-  label: "Your CPA in the Gables"
-  title: "A CPA for Coral Gables"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Coral Gables"
   body: |
-    Coral Gables is one of the country's true gateways to Latin America, home to a dense concentration of multinational regional headquarters, international banks, and law and consulting firms. We work with clients across the city and the surrounding **Miami-Dade** area, including Coral Gables, Coconut Grove, South Miami, and Pinecrest.
+    Coral Gables is one of the country's true gateways to Latin America, home to a dense concentration of multinational regional headquarters, international banks, and the law and consulting firms that serve them. Cross-border business is not a niche here, it is the local economy, and it is exactly where our work sits.
 
-    Florida's lack of a personal income tax is part of the draw, but for the Gables the defining issue is cross-border: foreign ownership, inbound investment, and families and businesses with interests across several countries. We handle the whole picture, with the international pieces front and center, from Form 5472 and FIRPTA to the structuring of U.S. subsidiaries.
+    We are a specialist firm in cross-border tax, based in South Florida and built for this market. Whether you run the U.S. subsidiary of a company based abroad, advise international clients from an office off Miracle Mile, or hold assets in more than one country, this is the part of the tax code we focus on. We serve clients across the Gables and the surrounding area, including Coconut Grove, South Miami, and Pinecrest, with bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Coral Gables"
-  intro: "The Gables's international character shapes who we serve. Most clients have both a business and a personal return, often with a cross-border element tying them together."
+  title: "Who We Help in Coral Gables"
+  intro: "Our Coral Gables clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
     - category: "International Tax"
       name: "Regional HQs & U.S. Subsidiaries"
       desc: "Tax, structuring, and compliance for regional headquarters and U.S. subsidiaries of companies based abroad."
       url: "/services/international-tax/foreign-business-and-investors/"
     - category: "International Tax"
+      name: "International Professionals & Advisors"
+      desc: "Cross-border planning for the bankers, attorneys, and consultants who serve the Gables's international economy."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
       name: "Foreign Investors & Families"
       desc: "Cross-border planning for foreign nationals and families investing in U.S. real estate or businesses."
       url: "/services/international-tax/foreign-business-and-investors/"
-    - category: "Business Tax"
-      name: "Professional Practices"
-      desc: "Entity strategy, owner compensation, and clean compliance for the Gables's law, consulting, and professional firms."
-      url: "/services/business-tax/"
     - category: "International Tax"
-      name: "Dual Residents & New Arrivals"
-      desc: "Pre-immigration planning and residency structuring for dual residents and recent arrivals."
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
       url: "/services/international-tax/u-s-with-international-ties/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive, year-round planning including investment income, equity compensation, and residency questions."
-      url: "/services/individual-tax/"
 faqs:
-  - q: "Do I need a local CPA in Coral Gables?"
-    a: "No. Most of our Coral Gables clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Miami-Dade. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Coral Gables clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you handle international business and cross-border tax in Coral Gables?"
-    a: "Yes. It is one of our deepest areas. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA, U.S. subsidiaries of foreign companies, and inbound investment structuring, with bilingual service in English and Spanish."
+  - q: "Do you work with international businesses in Coral Gables?"
+    a: "Yes. Cross-border tax is the core of our practice, and the Gables sits at the center of it. We work with regional headquarters, U.S. subsidiaries, and the professionals who serve them, with secure document exchange and bilingual service in English and Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

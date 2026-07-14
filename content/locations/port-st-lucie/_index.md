@@ -1,49 +1,49 @@
 ---
-title: "Port St. Lucie CPA"
-description: "A Port St. Lucie CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across the Treasure Coast. One firm for your whole tax picture."
+title: "Port St. Lucie International Tax CPA"
+description: "International and cross-border tax for Port St. Lucie and the Treasure Coast: foreign real estate investors, Latin American families, FIRPTA, and foreign reporting from a specialist CPA."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: port-st-lucie
 cityName: "Port St. Lucie"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Treasure Coast"
-subtitle: "Proactive tax strategy and full-service accounting for Port St. Lucie's families, small business owners, and the self-employed, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for the Treasure Coast's foreign investors, Latin American families, and clients with ties across borders."
 intro:
-  label: "Your CPA on the Treasure Coast"
-  title: "A CPA for Port St. Lucie"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Port St. Lucie"
   body: |
-    Port St. Lucie is one of the fastest-growing cities in Florida, drawing families, small business owners, and retirees to the Treasure Coast with relative affordability and room to grow. We work with clients across **St. Lucie County** and the surrounding Treasure Coast, including Port St. Lucie, Fort Pierce, and Stuart.
+    Port St. Lucie's rapid growth has an international side: foreign investors buying homes and rentals across St. Lucie County as the Treasure Coast builds out, and Latin American families choosing the area for its affordability and room to grow. When the owner lives abroad or the family's finances span two countries, the tax picture changes, and that is exactly where our work sits.
 
-    Florida's lack of a personal income tax rewards owners and the self-employed who plan ahead, but only when entity structure, federal strategy, and books all work together. We focus on getting that right before it costs you, across your whole tax picture rather than one isolated piece.
+    We are a specialist firm in cross-border tax, not a generalist down the block. Whether you are a foreign national holding Treasure Coast property, a family newly arrived from abroad, or someone with income and accounts in more than one country, this is the part of the tax code we focus on, and we work with Port St. Lucie clients with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Port St. Lucie"
-  intro: "The Treasure Coast's growth brings a wide range of clients our way. Most have both a business and a personal return that interact."
+  title: "Who We Help in Port St. Lucie"
+  intro: "Our Port St. Lucie clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Business Tax"
-      name: "Small & Family Businesses"
-      desc: "Entity strategy, S-corp planning, and clean compliance for small and family-run businesses."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Self-Employed & Trades"
-      desc: "Tax strategy and accounting for self-employed professionals, trades, and consultants."
-      url: "/services/business-tax/"
-    - category: "Real Estate Tax"
-      name: "Real Estate & Rental Owners"
-      desc: "Planning and compliance for real estate investors and rental property owners."
-      url: "/services/business-tax/real-estate/"
-    - category: "Individual Tax"
-      name: "Retirees & New Residents"
-      desc: "Proactive planning for retirees and families establishing Florida residency."
-      url: "/services/individual-tax/"
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Year-round planning for households that want more than a once-a-year return."
-      url: "/services/individual-tax/"
+    - category: "International Tax"
+      name: "Foreign Real Estate Investors"
+      desc: "Nonresident filing, withholding, and structuring for foreign nationals buying and holding property across St. Lucie County."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Latin American Families"
+      desc: "Cross-border planning for Latin American families settling on the Treasure Coast or splitting time between countries."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Pre-Immigration & Dual Residents"
+      desc: "Structuring income and assets before a move makes someone a U.S. tax resident, while the options are still open."
+      url: "/services/international-tax/u-s-with-international-ties/"
 faqs:
-  - q: "Do I need a local CPA in Port St. Lucie?"
-    a: "No. Most of our Port St. Lucie clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across the Treasure Coast. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Port St. Lucie clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you work with small businesses and the self-employed?"
-    a: "Yes. Small and family-run businesses and self-employed professionals are a core part of our Port St. Lucie work. We handle entity strategy, S-corp planning, and the bookkeeping and payroll that keep it running."
+  - q: "Do I need a CPA with a Port St. Lucie office for international tax?"
+    a: "No. Federal and international tax are the same across Florida, and we work with Treasure Coast clients remotely with secure document exchange and year-round communication. For cross-border matters especially, what matters is specialist expertise, not a nearby office."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---

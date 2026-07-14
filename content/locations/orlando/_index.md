@@ -1,49 +1,49 @@
 ---
-title: "Orlando CPA"
-description: "An Orlando CPA firm offering proactive tax strategy, business and individual tax, international tax, and full-service accounting across Central Florida. One firm for your whole tax picture."
+title: "Orlando International Tax CPA"
+description: "International and cross-border tax for Orlando: foreign owners of vacation homes and short-term rentals, Latin American families, FIRPTA, and Form 5472 from a specialist CPA."
 layout: city
-serviceGrid: standard
+serviceGrid: international
 slug: orlando
 cityName: "Orlando"
-heroImage: "/images/locations/florida.jpg"
-heroEyebrow: "Florida Service Areas · Central Florida"
-subtitle: "Proactive tax strategy and full-service accounting for Orlando's business owners, rental operators, and families, all from one firm."
+heroImage: "/images/globe-hero.jpg"
+heroEyebrow: "International & Cross-Border Tax"
+subtitle: "Specialist international and cross-border tax for Orlando's foreign vacation-home owners, Latin American families, and international tourism businesses."
 intro:
-  label: "Your CPA in Central Florida"
-  title: "A CPA for Orlando"
+  label: "Specialist Cross-Border Tax"
+  title: "International Tax for Orlando"
   body: |
-    Orlando's economy is built on hospitality, tourism, and the businesses that serve them, from vacation rentals and franchises to the service firms that keep a visitor economy running. We work with clients across the **Orlando and Central Florida** area, including Orlando, Kissimmee, Winter Park, Lake Nona, and the surrounding communities.
+    Orlando is one of the most international real estate markets in the country. Foreign nationals from Latin America, Europe, and beyond own vacation homes and short-term rentals near the parks, Latin American families keep moving to Central Florida, and the tourism economy itself runs on international visitors and international owners. That cross-border layer is exactly where our work sits.
 
-    Florida's lack of a personal income tax is a real advantage, but a tourism-driven business has exposure a typical office business does not, especially around sales and tourist development tax. Getting the whole picture right from the start, structure, books, and filing together, is far cheaper than fixing it after a notice arrives.
+    We are a specialist firm in cross-border tax, not a generalist down the block. A foreign-owned rental home in Kissimmee is not just a rental: it carries nonresident filing, withholding, FIRPTA on the eventual sale, and often a foreign-owned LLC in the middle. This is the part of the tax code we focus on, and we work with Orlando clients with secure document exchange and bilingual service in English and Spanish.
 clients:
-  title: "Who We Work With in Orlando"
-  intro: "Central Florida's mix of industries brings a wide range of clients our way. Most owners have both a business and a personal return that interact."
+  title: "Who We Help in Orlando"
+  intro: "Our Orlando clients tend to fall into a few groups, and cross-border tax is where we go deepest."
   items:
-    - category: "Individual Tax"
-      name: "Individuals & Families"
-      desc: "Proactive planning, not just a filed return, including investments, rental property, and multi-state situations."
-      url: "/services/individual-tax/"
-    - category: "Real Estate Tax"
-      name: "Vacation & Short-Term Rentals"
-      desc: "Depreciation, structure, and sales tax planning for vacation and short-term rental operators near the parks."
-      url: "/services/business-tax/real-estate/"
-    - category: "Business Tax"
-      name: "Hospitality & Tourism"
-      desc: "Tax strategy and clean books for hospitality, food service, and tourism-facing businesses."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Franchise & Multi-Location"
-      desc: "Entity structure and accounting for franchise owners and multi-location operators."
-      url: "/services/business-tax/"
-    - category: "Business Tax"
-      name: "Service Businesses & Professionals"
-      desc: "Tax planning and compliance for service businesses and professionals across Central Florida."
-      url: "/services/business-tax/"
+    - category: "International Tax"
+      name: "Foreign Vacation-Home & Rental Owners"
+      desc: "Nonresident filing, withholding, and structuring for foreign nationals who own Florida vacation homes and short-term rentals."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "Latin American Families"
+      desc: "Cross-border planning for Latin American families settling in Central Florida or splitting time between countries."
+      url: "/services/international-tax/u-s-with-international-ties/"
+    - category: "International Tax"
+      name: "Foreign-Owned LLCs & Subsidiaries"
+      desc: "Form 5472, U.S. subsidiaries of companies based abroad, and inbound investment structuring."
+      url: "/services/international-tax/foreign-business-and-investors/"
+    - category: "International Tax"
+      name: "FIRPTA & U.S. Real Estate"
+      desc: "Withholding and planning when a foreign owner buys or sells U.S. property."
+      url: "/services/international-tax/us-real-estate-owned-by-foreign-investors/"
+    - category: "International Tax"
+      name: "International Tourism Businesses"
+      desc: "Cross-border tax for tourism-facing businesses with foreign owners or operations in more than one country."
+      url: "/services/international-tax/foreign-business-and-investors/"
 faqs:
-  - q: "Do I need a local CPA in Orlando?"
-    a: "No. Most of our Orlando clients work with us remotely, with secure document exchange and year-round communication, though we are happy to meet in person across Central Florida. What matters most is proactive service and the right expertise for your situation."
-  - q: "Can you handle both my business and personal taxes?"
-    a: "Yes. We are a full-service firm, so your business return, your personal return, and the planning that connects them are handled in one place. That is the main reason Orlando clients consolidate with us instead of juggling separate advisors."
-  - q: "Do you handle sales tax and short-term rental filings?"
-    a: "Yes. Vacation rentals and hospitality businesses sit squarely in Florida's sales and tourist development tax rules. We keep the sales tax clean, handle the day-to-day filing, and plan the depreciation and structure behind it."
+  - q: "I live abroad and own a rental home in Orlando. Can you handle my U.S. taxes?"
+    a: "Yes. This is one of the most common situations we handle: nonresident returns, withholding elections, foreign-owned LLCs with Form 5472, and FIRPTA when you eventually sell. We work with owners entirely remotely, in English or Spanish."
+  - q: "Do you work with foreign-owned LLCs and foreign investors?"
+    a: "Yes. This is core to our practice. We handle foreign-owned U.S. LLCs, Form 5472, FIRPTA on U.S. real estate, U.S. subsidiaries of foreign companies, and inbound investment structuring."
+  - q: "I have foreign accounts, income, or assets. Do I need to report them?"
+    a: "Almost certainly. U.S. persons must report foreign bank accounts (FBAR), foreign financial assets (FATCA), foreign income, and interests in foreign companies, and the penalties for missing these are steep. We handle the full range of foreign reporting and the planning that goes with it."
 ---
