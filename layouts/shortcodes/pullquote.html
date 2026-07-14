@@ -2,7 +2,7 @@
 
 <figure class="article-pullquote">
   <blockquote>
-    {{ .Inner | markdownify }}
+    {{ .Page.RenderString (dict "display" "block") .Inner }}
   </blockquote>
   {{ with $attribution }}<cite>{{ . }}</cite>{{ end }}
 </figure>

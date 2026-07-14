@@ -3,5 +3,5 @@
 
 <aside class="article-callout" data-tone="{{ $tone }}">
   <span class="article-callout-title">{{ $title }}</span>
-  {{ .Inner | markdownify }}
+  {{ .Page.RenderString (dict "display" "block") .Inner }}
 </aside>

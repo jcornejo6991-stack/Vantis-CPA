@@ -34,7 +34,7 @@ The FEIE often wins the quick tax calculation, but the FTC usually wins when you
 
 ## What Each One Does
 
-The **FEIE** ([Form 2555](https://www.irs.gov/forms-pubs/about-form-2555)) lets you exclude up to **$130,000** of foreign earned income from U.S. taxation in 2025. If your income is below that threshold, you may owe little or no U.S. tax. There's also a housing exclusion that can shield additional amounts spent on foreign housing above a base amount.
+The **FEIE** ([Form 2555](form-2555-feie.md)) lets you exclude up to **$130,000** of foreign earned income from U.S. taxation in 2025. If your income is below that threshold, you may owe little or no U.S. tax. There's also a housing exclusion that can shield additional amounts spent on foreign housing above a base amount.
 
 The **Foreign Tax Credit** ([Form 1116](https://www.irs.gov/forms-pubs/about-form-1116)) gives you a dollar-for-dollar credit for income taxes paid to a foreign government. If you paid $15,000 in taxes to Germany, you get a $15,000 credit against your U.S. tax liability. Excess credits can be carried forward up to 10 years.
 

@@ -70,7 +70,7 @@ The category is wider than a checking account. Reportable accounts generally inc
 | Many foreign pensions and retirement accounts | Direct ownership of a foreign business (reported elsewhere) |
 
 {{< callout title="Where FBAR and FATCA differ" tone="comparison" >}}
-The FBAR is not the same as `Form 8938` (FATCA). Form 8938 is filed with your tax return, has higher and residency-dependent thresholds, and covers a broader set of foreign assets. The FBAR is filed separately with FinCEN and triggers at the flat $10,000 mark. Many people have to file both, and reporting one does not satisfy the other.
+The FBAR is not the same as [Form 8938 (FATCA)](form-8938-fatca.md). Form 8938 is filed with your tax return, has higher and residency-dependent thresholds, and covers a broader set of foreign assets. The FBAR is filed separately with FinCEN and triggers at the flat $10,000 mark. Many people have to file both, and reporting one does not satisfy the other.
 {{< /callout >}}
 
 ## Deadline and How It Is Filed

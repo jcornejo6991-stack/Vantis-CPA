@@ -26,7 +26,7 @@ faqs:
     a: "That is a different analysis. A transfer from a foreign trust is not handled the same way as a direct gift from a foreign individual, and the trust-reporting rules can be much harsher."
 ---
 
-Receiving money from abroad is not automatically a tax problem, but it is often a reporting problem. U.S. persons are frequently surprised to learn that a large inheritance from a foreign parent, a cash gift from a non-U.S. relative, or a transfer routed through a family company can trigger `Form 3520` even when no current U.S. tax is due.
+Receiving money from abroad is not automatically a tax problem, but it is often a reporting problem. U.S. persons are frequently surprised to learn that a large inheritance from a foreign parent, a cash gift from a non-U.S. relative, or a transfer routed through a family company can trigger [Form 3520](form-3520.md) even when no current U.S. tax is due.
 
 {{< pullquote attribution="What usually matters most" >}}
 The IRS usually cares less about the label you gave the transfer and more about who the donor really was, what kind of entity made the transfer, and whether the paperwork matches the story.
