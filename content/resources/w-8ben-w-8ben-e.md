@@ -23,7 +23,7 @@ faqs:
   - q: "How long is a W-8BEN valid?"
     a: "Generally through the end of the third calendar year after signing, so a form signed in 2026 works through December 31, 2029. It dies earlier if any certification becomes incorrect, such as a move, a change in treaty country, or becoming a U.S. resident, and a new form is required then."
   - q: "Does a foreign freelancer working for a U.S. client need to pay U.S. tax?"
-    a: "Usually not, if the work is performed outside the United States. Compensation for services is sourced where the work is done, so a developer in Bogotá invoicing a U.S. company earns foreign-source income with no U.S. withholding. The W-8BEN is how the U.S. client documents that no withholding was required."
+    a: "Usually not, if the work is performed outside the United States. Compensation for services is sourced where the work is done, so a freelancer working from their home country and invoicing a U.S. company earns foreign-source income with no U.S. withholding. The W-8BEN is how the U.S. client documents that no withholding was required."
   - q: "My U.S. LLC is foreign-owned. Do I give clients a W-9 or a W-8?"
     a: "If the LLC is a single-member entity that has not elected corporate treatment, it is disregarded, and the owner's status controls: a W-8BEN or W-8BEN-E for the foreign owner, not a W-9. Signing a W-9 certifies U.S. status the entity's owner does not have. LLCs that elected corporate taxation are U.S. corporations and do provide a W-9."
 ---
@@ -62,11 +62,11 @@ A single-member LLC that has not elected corporate treatment is **disregarded**:
 
 Part II of the W-8BEN is where a tax treaty turns into cash flow. Without it, U.S.-source dividends carry 30% withholding; with a valid treaty claim, the rate drops to whatever the treaty provides (typically 5% to 15% on dividends, often 0% to 10% on interest and royalties, varying by country and ownership level). The claim requires a **foreign taxpayer identification number** from your home country (or an [ITIN](itin-application-form-w-7.md) in some cases), your country of residence matching the treaty, and the correct article and rate cited.
 
-Worth knowing for our Latin American clients: the U.S. has income tax treaties with **Mexico, Venezuela, and (as of 2024) Chile**, but not with Brazil, Colombia, Argentina, Peru, or most of the region. No treaty means the statutory 30% stands on FDAP income, which makes the sourcing analysis below matter even more.
+Treaty coverage is far from universal: the U.S. has income tax treaties with roughly seventy countries, and large parts of the world, including most of Latin America, much of Africa, and several major economies, are not on the list. No treaty means the statutory 30% stands on FDAP income, which makes the sourcing analysis below matter even more.
 
 ## When No Withholding Is Due at All
 
-The happiest and most misunderstood case: **compensation for services is sourced where the work is performed**. A designer in Buenos Aires or an agency in Medellín invoicing a U.S. client for work done entirely outside the U.S. earns **foreign-source income**, which is simply outside the U.S. withholding system. No 30%, no treaty needed, no U.S. return. The W-8BEN's role in that scenario is documentary: it is how the U.S. payer's file shows the payee was foreign and the income foreign-source, which is why clients insist on it even when nothing will be withheld. Days worked physically inside the U.S. break the analysis, pro rata, and platforms increasingly ask exactly that question.
+The happiest and most misunderstood case: **compensation for services is sourced where the work is performed**. A freelancer, developer, or agency anywhere in the world invoicing a U.S. client for work done entirely outside the U.S. earns **foreign-source income**, which is simply outside the U.S. withholding system. No 30%, no treaty needed, no U.S. return. The W-8BEN's role in that scenario is documentary: it is how the U.S. payer's file shows the payee was foreign and the income foreign-source, which is why clients insist on it even when nothing will be withheld. Days worked physically inside the U.S. break the analysis, pro rata, and platforms increasingly ask exactly that question.
 
 ## Validity, Expiration, and Housekeeping
 
