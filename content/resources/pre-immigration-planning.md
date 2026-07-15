@@ -75,7 +75,7 @@ If you have interests in foreign trusts, restructuring or distributing assets be
 
 ## Check-the-Box Elections for Foreign Corporations
 
-If you own a foreign corporation, the U.S. treats it as either a **corporation** (separate taxable entity with potential GILTI and Subpart F exposure) or, if you make a **check-the-box election**, as a disregarded entity or partnership.
+If you own a foreign corporation, the U.S. treats it as either a **corporation** (separate taxable entity with potential [GILTI](gilti-tax.md) and Subpart F exposure) or, if you make a **check-the-box election**, as a disregarded entity or partnership.
 
 A check-the-box election made before you become a U.S. resident can be treated as a **deemed liquidation** of the corporation that, in the right circumstances, steps up the basis of assets inside the corporation without triggering U.S. tax. After residency, the same election is a taxable event you pay for immediately.
 

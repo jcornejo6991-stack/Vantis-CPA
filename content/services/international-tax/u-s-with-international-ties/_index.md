@@ -37,7 +37,7 @@ sections:
     body: |
       Owning part of a company abroad can trigger some of the most demanding filings in the tax code, even when the position feels ordinary: a share of a family business, a stake in a foreign partnership, or a wholly owned entity used for local operations. Depending on the structure, that can mean [Form 5471](/resources/form-5471/) for foreign corporations, [Form 8865](/resources/form-8865/) for foreign partnerships, or [Form 8858](/resources/form-8858/) for foreign entities that are disregarded for U.S. purposes.
 
-      Ownership in a foreign corporation can also create GILTI, a U.S. tax on the company's earnings even when nothing is paid out to you. We identify which forms your ownership triggers, prepare them with the return, and plan around the elections that can soften the result.
+      Ownership in a foreign corporation can also create [GILTI](/resources/gilti-tax/), a U.S. tax on the company's earnings even when nothing is paid out to you. We identify which forms your ownership triggers, prepare them with the return, and plan around the elections that can soften the result.
   - title: "Foreign Gifts and Inheritances"
     body: |
       A gift or inheritance from a foreign person is generally not taxable income, but above certain thresholds it must be reported on [Form 3520](/resources/form-3520/). The penalty for missing it can reach 25 percent of the amount received, which makes this one of the most expensive forms to overlook. If money is on its way from abroad, the best time to plan the reporting is before it arrives. We handle the filing and keep it coordinated with the rest of your return.
