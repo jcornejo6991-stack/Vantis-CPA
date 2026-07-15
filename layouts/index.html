@@ -129,7 +129,8 @@
       font-size: 13px; font-weight: 600; color: #ffffff; text-decoration: none;
     }
     .hero-contact-item .value:hover { text-decoration: underline; color: #9CDCFE; }
-    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+    .hero-ctas { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .hero-ctas .btn-primary, .hero-ctas .btn-secondary { text-align: center; }
     .btn-primary {
       background: #569CD6; color: #fff; padding: 13px 26px; border-radius: 8px;
       font-size: 14px; font-weight: 600; text-decoration: none;
@@ -138,12 +139,12 @@
     }
     .btn-primary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
     .btn-secondary {
-      background: transparent; color: #ffffff; padding: 13px 26px; border-radius: 8px;
+      background: #569CD6; color: #fff; padding: 13px 26px; border-radius: 8px;
       font-size: 14px; font-weight: 600; text-decoration: none;
-      border: 2px solid rgba(255,255,255,0.5); display: inline-block;
-      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.15s;
+      border: 2px solid #569CD6; display: inline-block;
+      transition: background 0.2s, transform 0.15s;
     }
-    .btn-secondary:hover { background: rgba(255,255,255,0.12); border-color: #fff; color: #fff; transform: translateY(-1px); text-decoration: none; }
+    .btn-secondary:hover { background: #4a88be; border-color: #4a88be; transform: translateY(-1px); color: #fff; text-decoration: none; }
 
 
     /* ─── FLOATING CARD WRAPPER ─── */
@@ -476,6 +477,7 @@
       .faq-left, .faq-right { padding: 40px 24px; }
     }
     @media (max-width: 480px) {
+      .hero-ctas { grid-template-columns: 1fr; }
       .full-office-grid { grid-template-columns: 1fr; }
       .full-office-item { border-right: none; border-bottom: 1px solid rgba(26,26,46,0.08); }
       .full-office-item:last-child { border-bottom: none; }

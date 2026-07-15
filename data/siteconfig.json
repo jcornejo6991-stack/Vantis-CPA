@@ -48,7 +48,7 @@
       {"label": "Individuals and Families", "url": "/services/individual-tax/"},
       {"label": "Local and Online Business", "url": "/services/business-tax/"},
       {"label": "Real Estate Owners", "url": "/services/business-tax/real-estate/"},
-      {"label": "U.S. Individuals with International Ties", "url": "/services/international-tax/u-s-with-international-ties/"},
+      {"label": "U.S. Persons with International Ties", "url": "/services/international-tax/u-s-with-international-ties/"},
       {"label": "Foreign Business & Investors", "url": "/services/international-tax/foreign-business-and-investors/"},
       {"label": "U.S. Expats", "url": "/services/international-tax/expats/"}
     ],

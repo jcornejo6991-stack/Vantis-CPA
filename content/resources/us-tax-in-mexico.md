@@ -99,7 +99,7 @@ That review usually covers:
 - Estate exposure if the property is held the wrong way for the owner's goals
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
-If the issue is foreign accounts, Mexican entities, or cross-border ownership for a U.S. person, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).
+If the issue is foreign accounts, Mexican entities, or cross-border ownership for a U.S. person, start with [U.S. Persons with International Ties](/services/international-tax/u-s-with-international-ties/).
 
 If you are an American already living in Mexico and need annual filing plus planning support, start with [U.S. Expats Abroad](/services/international-tax/expats/).
 

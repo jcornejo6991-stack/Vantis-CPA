@@ -52,7 +52,7 @@ sections:
         description: "Rental property reporting, depreciation, REPS, short-term rentals, 1031 exchanges, and partnership returns."
         url: "/services/business-tax/real-estate/"
       - label: "International Tax"
-        description: "Foreign accounts, foreign corporations, inherited assets, dual citizenship, and ongoing reporting for U.S. individuals with international ties."
+        description: "Foreign accounts, foreign corporations, inherited assets, dual citizenship, and ongoing reporting for U.S. Persons with International Ties."
         url: "/services/international-tax/u-s-with-international-ties/"
       - label: "Full Suite"
         description: "Bookkeeping, payroll, and sales tax for businesses that want one firm for everything."

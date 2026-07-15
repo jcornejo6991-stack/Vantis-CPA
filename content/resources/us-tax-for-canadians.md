@@ -101,7 +101,7 @@ That usually means reviewing:
 This is one of the clearest examples of why a country guide belongs in the resource library: searchers often arrive with a property question, then discover the real issue is cross-border planning.
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
-If the main issue is foreign accounts, Canadian entities, or dual-citizen reporting, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).
+If the main issue is foreign accounts, Canadian entities, or dual-citizen reporting, start with [U.S. Persons with International Ties](/services/international-tax/u-s-with-international-ties/).
 
 If you are an American already living in Canada and need recurring filing help, use [U.S. Expats Abroad](/services/international-tax/expats/).
 

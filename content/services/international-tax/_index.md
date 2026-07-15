@@ -9,7 +9,7 @@ sections:
     body: |
       International tax is not one issue. A U.S. expat, a dual citizen with foreign accounts, a foreign owner opening a U.S. LLC, and a foreign national selling U.S. real estate all face different filing paths, different risks, and different planning decisions. We organize the work around those actual situations so the structure, filings, and strategy fit the facts from the beginning.
     cards:
-      - label: "U.S. Individuals with International Ties"
+      - label: "U.S. Persons with International Ties"
         url: "/services/international-tax/u-s-with-international-ties/"
         description: "Foreign accounts, inherited assets, foreign corporations, dual citizenship issues, and ongoing reporting for U.S. persons."
       - label: "U.S. Expats Abroad"

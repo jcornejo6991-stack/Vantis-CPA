@@ -99,7 +99,7 @@ That means reviewing:
 - Estate exposure if the property is held the wrong way for the owner's goals
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
-If the issue is U.S. reporting for Brazilian entities, accounts, or ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).
+If the issue is U.S. reporting for Brazilian entities, accounts, or ownership, start with [U.S. Persons with International Ties](/services/international-tax/u-s-with-international-ties/).
 
 If you are an American already living in Brazil and need recurring filing support, start with [U.S. Expats Abroad](/services/international-tax/expats/).
 

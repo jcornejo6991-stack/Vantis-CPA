@@ -79,7 +79,7 @@ By the time a reader finishes a country guide, they usually know which of three 
 - Inbound structuring for foreign owners and investors entering the U.S.
 
 {{< callout title="Move from research to the right service lane" tone="opportunity" >}}
-If the issue is mainly U.S. reporting for foreign assets or foreign entities, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).
+If the issue is mainly U.S. reporting for foreign assets or foreign entities, start with [U.S. Persons with International Ties](/services/international-tax/u-s-with-international-ties/).
 
 If the issue is ongoing filing for an American already living abroad, start with [U.S. Expats Abroad](/services/international-tax/expats/).
 

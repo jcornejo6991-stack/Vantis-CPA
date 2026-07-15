@@ -99,7 +99,7 @@ The main review areas are:
 - Estate exposure if U.S. situs assets are held in the wrong way
 
 {{< callout title="Best next step if you need advice" tone="opportunity" >}}
-If the issue is U.S. reporting for Argentine accounts, entities, or foreign ownership, start with [U.S. Individuals with International Ties](/services/international-tax/u-s-with-international-ties/).
+If the issue is U.S. reporting for Argentine accounts, entities, or foreign ownership, start with [U.S. Persons with International Ties](/services/international-tax/u-s-with-international-ties/).
 
 If you are an American already living in Argentina and need recurring filing support, start with [U.S. Expats Abroad](/services/international-tax/expats/).
 

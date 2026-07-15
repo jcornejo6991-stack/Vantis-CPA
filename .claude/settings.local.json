@@ -117,7 +117,8 @@
       "Bash(git commit -m ' *)",
       "Bash(git push *)",
       "Bash(git -C \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" log --oneline --all -- \"content/expats*\" \"content/local*\" \"content/realestate*\")",
-      "Bash(git -C \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" log --oneline --all)"
+      "Bash(git -C \"C:/Users/jcorn/Desktop/Claude/JC CPA LLC/website\" log --oneline --all)",
+      "Bash(python -)"
     ]
   }
 }
