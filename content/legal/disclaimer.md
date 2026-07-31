@@ -37,6 +37,8 @@ Before making any financial, tax, or legal decision, we encourage you to consult
 
 Questions about this Disclaimer can be directed to:
 
-**Vantis CPA**
-[info@vantiscpa.com](mailto:info@vantiscpa.com)
+**Vantis CPA**<br>
+7901 4th St N #35244<br>
+St. Petersburg, Florida 33702<br>
+[info@vantiscpa.com](mailto:info@vantiscpa.com)<br>
 (305) 563-5551

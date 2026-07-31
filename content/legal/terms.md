@@ -42,6 +42,8 @@ These Terms of Use are governed by and construed in accordance with the laws of 
 
 If you have questions about these Terms of Use, please contact us at:
 
-**Vantis CPA**
-[info@vantiscpa.com](mailto:info@vantiscpa.com)
+**Vantis CPA**<br>
+7901 4th St N #35244<br>
+St. Petersburg, Florida 33702<br>
+[info@vantiscpa.com](mailto:info@vantiscpa.com)<br>
 (305) 563-5551
