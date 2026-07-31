@@ -333,6 +333,24 @@
     .fi-br { background-image: url(/images/flags/br.svg); }
     .fi-fr { background-image: url(/images/flags/fr.svg); }
     .fi-de { background-image: url(/images/flags/de.svg); }
+    .fi-it { background-image: url(/images/flags/it.svg); }
+    .fi-cn { background-image: url(/images/flags/cn.svg); }
+    .fi-ae { background-image: url(/images/flags/ae.svg); }
+  </style>
+
+  <!-- Arabic: right-to-left text flow, applied to prose only so page layout
+       (nav, grids, flex rows) stays LTR and does not scramble. -->
+  <style>
+    .lang-ar p,
+    .lang-ar li,
+    .lang-ar h1, .lang-ar h2, .lang-ar h3, .lang-ar h4, .lang-ar h5, .lang-ar h6,
+    .lang-ar blockquote,
+    .lang-ar dt, .lang-ar dd,
+    .lang-ar th, .lang-ar td,
+    .lang-ar figcaption {
+      direction: rtl;
+      text-align: right;
+    }
   </style>
 
   <!-- Google Translate (language toggle) -->
@@ -340,7 +358,7 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'en,es,pt,fr,de',
+        includedLanguages: 'en,es,pt,fr,de,it,zh-CN,ar',
         autoDisplay: false
       }, 'google_translate_element');
     }
