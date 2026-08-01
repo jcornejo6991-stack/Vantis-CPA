@@ -55,7 +55,7 @@ The due date follows the standard corporate return deadline: April 15 for calend
 
 ## The $25,000 Penalty
 
-The penalty under [IRC Section 6038A](https://www.irs.gov/irm/part4/irm_04-061-019) is $25,000 per Form 5472 that is not filed, not timely filed, or is incomplete. The IRS has been actively enforcing this penalty, and courts have upheld it even for taxpayers who were unaware of the requirement.
+The penalty under IRC Section 6038A is $25,000 per Form 5472 that is not filed, not timely filed, or is incomplete. The IRS has been actively enforcing this penalty, and courts have upheld it even for taxpayers who were unaware of the requirement.
 
 There is a reasonable cause exception, but it requires proactive documentation and is not guaranteed.
 
