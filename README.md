@@ -51,9 +51,11 @@ content/
 - `/services/tax-strategy/` — Tax Strategy Consulting
 - `/services/tax-compliance/` — Tax Compliance & Filing
 - `/services/international-tax/` — International Tax Services
-- `/services/bookkeeping/` — Bookkeeping & Financial Reporting
-- `/services/payroll/` — Payroll Services
-- `/services/sales-tax/` — Sales Tax Services
+- `/services/full-suite/` — Full Suite (operating services hub)
+- `/services/full-suite/business-formation/` — Business Formation & Compliance
+- `/services/full-suite/bookkeeping/` — Bookkeeping & Financial Reporting
+- `/services/full-suite/payroll/` — Owner Payroll
+- `/services/full-suite/sales-tax/` — Sales Tax Services
 
 ### Resources
 Topic clusters covering international tax, real estate tax, business tax, individual tax, and more.

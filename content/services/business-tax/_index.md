@@ -55,16 +55,19 @@ sections:
       * Year-round tax planning as income and business needs change
   - title: "Operations and Accounting Support"
     body: |
-      Tax work is cleaner when the books behind it are clean. For business owners who want one firm handling everything, we offer operational support alongside the tax work: bookkeeping, payroll, and sales tax. Having the same team handle the operations and the returns means no year-end scramble and no gap between what the books say and what gets filed.
+      Tax work is cleaner when the books behind it are clean. For business owners who want one firm handling everything, we offer operational support alongside the tax work: business formation, bookkeeping, payroll, and sales tax. Having the same team handle the operations and the returns means no year-end scramble and no gap between what the books say and what gets filed.
     cards:
+      - label: "Business Formation & Compliance"
+        description: "Entity formation, EINs, elections, registered agent service, and annual report filings."
+        url: "/services/full-suite/business-formation/"
       - label: "Bookkeeping"
         description: "Monthly bookkeeping, reconciliations, and clean financials that feed directly into the tax return."
         url: "/services/full-suite/bookkeeping/"
       - label: "Payroll"
-        description: "Payroll processing, payroll tax deposits, and year-end W-2 and 1099 filings."
+        description: "Owner payroll, reasonable compensation, tax deposits, and year-end W-2 and 1099 filings."
         url: "/services/full-suite/payroll/"
       - label: "Sales Tax"
-        description: "Sales tax registration, filing, and nexus review for businesses selling across state lines."
+        description: "Florida sales tax registration, return filing, and payment coordination."
         url: "/services/full-suite/sales-tax/"
   - title: "Business Owners We Work With"
     body: |

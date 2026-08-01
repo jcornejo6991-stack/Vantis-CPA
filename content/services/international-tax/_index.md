@@ -55,14 +55,17 @@ sections:
     body: |
       International clients often need more than just tax filings. Foreign investors and business owners entering the U.S. frequently need operational support before the first return is ever due. Full Suite covers the services that keep the entity, the books, payroll, and the filing infrastructure organized so the setup and the tax work stay coordinated in one place.
     cards:
+      - label: "Business Formation & Compliance"
+        description: "U.S. entity formation in all 50 states, EIN and ITIN applications, and registered agent service for foreign owners."
+        url: "/services/full-suite/business-formation/"
       - label: "Bookkeeping"
         description: "Monthly bookkeeping, reconciliations, and clean financials for foreign-owned U.S. businesses and rental activity."
         url: "/services/full-suite/bookkeeping/"
       - label: "Payroll"
-        description: "Payroll setup, recurring runs, tax deposits, filings, and employee-pay support for U.S. operations."
+        description: "Owner payroll setup, tax deposits, filings, and year-end W-2s for U.S. operations."
         url: "/services/full-suite/payroll/"
       - label: "Sales Tax"
-        description: "Registration, filing, and multistate sales tax compliance for foreign-owned U.S. businesses selling into the U.S."
+        description: "Registration, filing, and sales tax compliance for foreign-owned U.S. businesses selling into the U.S."
         url: "/services/full-suite/sales-tax/"
   - title: "Why International Tax Needs Its Own Lane"
     body: |
