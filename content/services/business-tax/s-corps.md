@@ -20,14 +20,14 @@ sections:
 
       * Form 1120-S (annual S-corporation return)
       * Shareholder basis and loan schedules
-      * Form 2553 (S-corp election, including late elections)
+      * [Form 2553 (S-corp election)](/resources/s-corp-election/), including [late elections](/resources/late-s-corp-election-relief/)
   - title: "Wages, Distributions, and When It Works"
     body: |
       The savings come from splitting owner income between wages and distributions. Wages are subject to payroll taxes; distributions are not. When the business is profitable enough and the salary is defensible, the gap creates real savings. The election is often oversold though. It is a poor fit for low-profit businesses, real estate owners, and owners not ready to run payroll. When it does fit, ownership restrictions and basis tracking both require attention. The hub below pulls together the main planning and compliance issues in one place.
     cards:
-      - label: "S-Corporations"
-        description: "Election timing, reasonable salary, basis, ownership rules, shareholder loans, and when S-corp treatment is the right fit."
-        url: "/resources/s-corps/"
+      - label: "Business Tax Strategy Hub"
+        description: "Election timing, reasonable salary, basis, ownership rules, shareholder loans, and other business tax strategy guides."
+        url: "/resources/business-tax/"
   - title: "Full Suite"
     body: |
       S-corp work is cleaner when the books behind it are clean. For owners who want one firm handling payroll, bookkeeping, and the return, we offer full-service support alongside the tax work.
@@ -42,7 +42,7 @@ sectionTitle: "What We Handle"
 specializations:
   - label: "S-Corp Election Modeling and Timing"
   - label: "Reasonable Compensation Analysis"
-    url: "/resources/s-corps/"
+    url: "/resources/s-corp-reasonable-salary/"
   - label: "Wages vs. Distributions Strategy"
   - label: "Shareholder Basis and Loan Tracking"
   - label: "Ownership Eligibility and Structure Review"

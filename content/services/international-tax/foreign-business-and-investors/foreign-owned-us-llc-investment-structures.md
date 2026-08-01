@@ -37,7 +37,7 @@ sections:
     cards:
       - label: "Foreign Investors in U.S. Real Estate"
         description: "Section 871(d), FIRPTA, ownership structure, partnership withholding, and estate tax issues for foreign real estate investors."
-        url: "/resources/us-real-estate-owned-by-foreign-investors/"
+        url: "/resources/foreign-investors/"
   - title: "Common Mistakes"
     body: |
       Common mistakes include assuming a U.S. LLC solves estate tax exposure, using the same structure for active operations and passive investment without review, treating owner inflows and outflows casually, and forming the entity before the acquisition terms and long-term exit plan are mapped out.
@@ -52,7 +52,7 @@ specializations:
   - label: "Form 5472 Review"
     url: "/resources/international-tax/"
   - label: "Estate Tax Exposure Review"
-    url: "/resources/us-real-estate-owned-by-foreign-investors/"
+    url: "/resources/estate-planning-blockers-foreign-nationals/"
   - label: "Entity Classification Review"
     url: "/resources/international-tax/"
   - label: "International Tax Support"

@@ -26,14 +26,11 @@ sections:
       * Cleanup of owner draws, loans, and multi-owner issues
   - title: "Basis, Allocations, and Structure"
     body: |
-      Partnerships offer more structural flexibility than any other entity. Income, loss, depreciation, guaranteed payments, and distributions do not have to follow simple ownership percentages. That makes them useful for operating businesses, family ventures, investment entities, and deals where one owner brings capital and another brings management. It also means the returns get complex quickly. The hubs below go deeper on partnership mechanics and the S-corp comparison.
+      Partnerships offer more structural flexibility than any other entity. Income, loss, depreciation, guaranteed payments, and distributions do not have to follow simple ownership percentages. That makes them useful for operating businesses, family ventures, investment entities, and deals where one owner brings capital and another brings management. It also means the returns get complex quickly. The hub below goes deeper on partnership mechanics.
     cards:
       - label: "Business Tax Strategy Hub"
         description: "Partnership basis, allocations, capital accounts, entity structure, and other business tax planning guides."
         url: "/resources/business-tax/"
-      - label: "S-Corp vs. Partnership"
-        description: "S-corp election timing, reasonable salary, basis, and where partnership taxation is the better fit."
-        url: "/resources/s-corps/"
   - title: "Full Suite"
     body: |
       Partnership returns are only as good as the books behind them. For owners who want one firm handling bookkeeping and the return, we offer full-service support alongside the tax work.
@@ -55,7 +52,7 @@ specializations:
   - label: "Basis, Capital Account, and Partner Loan Tracking"
   - label: "K-1 Preparation and Owner Coordination"
   - label: "S-Corp vs. Partnership Analysis"
-    url: "/resources/s-corps/"
+    url: "/resources/s-corp-vs-partnership/"
   - label: "Operating Agreement and Tax Alignment Review"
   - label: "Cleanup of Owner Draws, Loans, and Multi-Owner Issues"
 ---

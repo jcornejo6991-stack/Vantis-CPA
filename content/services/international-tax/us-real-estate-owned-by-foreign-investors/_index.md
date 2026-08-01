@@ -29,7 +29,7 @@ sections:
     cards:
       - label: "Foreign Investors in U.S. Real Estate"
         description: "Section 871(d), partnership withholding, FIRPTA, ownership structure, and estate tax issues for foreign U.S. real estate investors."
-        url: "/resources/us-real-estate-owned-by-foreign-investors/"
+        url: "/resources/foreign-investors/"
   - title: "What Usually Goes Wrong"
     body: |
       Foreign owners are often taxed more harshly than necessary because the structure or election was never handled early. Gross-rent withholding, missed partnership withholding, late ITINs, and FIRPTA overwithholding are common problems. We help get the filing position right and keep the books and reporting clean enough to support it.
@@ -41,9 +41,9 @@ specializations:
   - label: "Net Income Election (IRC Section 871(d))"
   - label: "ITIN Application Support"
   - label: "Form 1040-NR (Nonresident Return)"
-    url: "/resources/us-real-estate-owned-by-foreign-investors/"
+    url: "/resources/form-1040-nr/"
   - label: "FIRPTA Withholding Certificates"
-    url: "/resources/us-real-estate-owned-by-foreign-investors/"
+    url: "/resources/firpta-us-real-estate-sales/"
   - label: "Gain, Basis, and Depreciation Recapture Analysis"
   - label: "Buyer FIRPTA Withholding Compliance"
   - label: "Section 1446 Withholding (Form 8804/8805)"

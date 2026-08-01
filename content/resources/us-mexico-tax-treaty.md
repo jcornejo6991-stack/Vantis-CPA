@@ -135,4 +135,4 @@ The treaty reduces taxes. It does not reduce paperwork. U.S. persons with signif
 
 - [Pre-Immigration Tax Planning: What to Do Before Moving to the U.S.](/resources/pre-immigration-planning/)
 - [Foreign-Owned U.S. LLC: Investment Structures and Tax Treatment](/resources/foreign-owned-us-llc-ecommerce-sellers/)
-- [U.S. Tax for Latin American Families with U.S. Ties](/resources/latam-inbound/)
+- [U.S. Tax for Latin American Families with U.S. Ties](/resources/latin-america-us-tax-planning/)
