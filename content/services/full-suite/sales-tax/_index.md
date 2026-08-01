@@ -10,7 +10,7 @@ heroImagePosition: "center center"
 heroImageSize: "cover"
 heroImageScale: 1
 sections:
-  - title: "Florida Sales Tax Compliance for Businesses, Rentals, and E-Commerce"
+  - title: "Florida Sales Tax Compliance for Businesses"
     body: |
       Florida sales tax looks simple until registration, return frequency, exempt sales, rental activity, and marketplace issues start overlapping. Businesses often do not realize they have a filing obligation until the Florida Department of Revenue sends a notice. We help identify the obligation, register correctly, and keep the filings current so sales tax does not turn into a growing liability.
   - title: "What We Handle"
@@ -20,11 +20,6 @@ sections:
       * Florida sales tax registration
       * Monthly, quarterly, and annual return filing
       * Sales tax payment coordination
-      * Exemption certificate support
-      * Commercial rental sales tax compliance
-      * Short-term rental tax compliance
-      * E-commerce and marketplace sales tax
-      * Back-filing and DOR cleanup
 
       We review your business activities to determine what is taxable, register you correctly, and keep the filings moving so nothing lapses.
   - title: "When Sales Tax Support Helps"
