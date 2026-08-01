@@ -22,7 +22,7 @@ sections:
         description: "Clean books, reconciliations, monthly closes, and reporting you can actually use."
       - label: "Payroll"
         url: "/services/full-suite/payroll/"
-        description: "Payroll setup, recurring runs, tax deposits, filings, and owner payroll coordination."
+        description: "Owner payroll for S-corps: reasonable compensation, deposits, filings, and W-2s."
       - label: "Sales Tax"
         url: "/services/full-suite/sales-tax/"
         description: "Registration, nexus review, filings, remittances, and multistate compliance."
